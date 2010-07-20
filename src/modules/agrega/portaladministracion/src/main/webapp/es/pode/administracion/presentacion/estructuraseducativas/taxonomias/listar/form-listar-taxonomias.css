@@ -1,0 +1,30 @@
+#buscar.action {}
+#buscar.action #form_submit {}
+
+#buscar.action .idiomaBuscador {}
+#buscar.action .idiomaBuscador .label {}
+#buscar.action .idiomaBuscador .field {}
+
+#alta.action {}
+#alta.action #form_submit {}
+
+
+#exportar.action {}
+#exportar.action #form_submit {}
+
+#exportar.action .nombre {}
+#exportar.action .nombre .label {}
+#exportar.action .nombre .field {}
+#exportar.action .tipo {}
+#exportar.action .tipo .label {}
+#exportar.action .tipo .field {}
+
+#taxonomias.table {}
+#taxonomias.table th {}
+#taxonomias.table td div {}
+
+#taxonomias.table th.nombre {}
+#taxonomias.table td div.nombre {}
+
+
+

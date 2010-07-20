@@ -1,0 +1,33 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'listar.tag.listado.tags.mostrar.odes.param.tag.title':'<formatting:escape language="javascript"><bean:message key="listar.tag.listado.tags.mostrar.odes.param.tag.title"/></formatting:escape>',
+                'listar.tag.listado.tags.modificar.param.tag.title':'<formatting:escape language="javascript"><bean:message key="listar.tag.listado.tags.modificar.param.tag.title"/></formatting:escape>',
+                'listar.tag.listado.tags.eliminar.param.tag.title':'<formatting:escape language="javascript"><bean:message key="listar.tag.listado.tags.eliminar.param.tag.title"/></formatting:escape>',
+                'MostrarOdes':'<formatting:escape language="javascript"><bean:message key="listar.tag.listado.tags.mostrar.odes.title"/></formatting:escape>',
+                'MostrarOdes_no':'<formatting:escape language="javascript"><bean:message key="listar.tag.listado.tags.mostrar.odes.title.notallowed"/></formatting:escape>',
+                'MostrarOdes_reset':'<formatting:escape language="javascript"><bean:message key="listar.tag.listado.tags.mostrar.odes.title.reset"/></formatting:escape>',
+                'MostrarOdes_noreset':'<formatting:escape language="javascript"><bean:message key="listar.tag.listado.tags.mostrar.odes.title.reset.not.allowed"/></formatting:escape>',
+                'Modificar':'<formatting:escape language="javascript"><bean:message key="listar.tag.listado.tags.modificar.title"/></formatting:escape>',
+                'Modificar_no':'<formatting:escape language="javascript"><bean:message key="listar.tag.listado.tags.modificar.title.notallowed"/></formatting:escape>',
+                'Modificar_reset':'<formatting:escape language="javascript"><bean:message key="listar.tag.listado.tags.modificar.title.reset"/></formatting:escape>',
+                'Modificar_noreset':'<formatting:escape language="javascript"><bean:message key="listar.tag.listado.tags.modificar.title.reset.not.allowed"/></formatting:escape>',
+                'Eliminar':'<formatting:escape language="javascript"><bean:message key="listar.tag.listado.tags.eliminar.title"/></formatting:escape>',
+                'Eliminar_no':'<formatting:escape language="javascript"><bean:message key="listar.tag.listado.tags.eliminar.title.notallowed"/></formatting:escape>',
+                'Eliminar_reset':'<formatting:escape language="javascript"><bean:message key="listar.tag.listado.tags.eliminar.title.reset"/></formatting:escape>',
+                'Eliminar_noreset':'<formatting:escape language="javascript"><bean:message key="listar.tag.listado.tags.eliminar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+</script>
+    </tiles:put>

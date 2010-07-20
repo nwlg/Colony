@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.15" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 2.2.1.r22a_v20071101 Build &lt;2.2.1.v20071101-1439></property>
+    <property name="units">in</property>
+    <property name="includeResource">birt-application-resources</property>
+    <property name="comments">Copyright (c) 2007 &lt;&lt;Your Company Name here>></property>
+    <html-property name="description">Creates a listing report with fields from the data source.</html-property>
+    <text-property name="displayName">Simple Listing</text-property>
+    <property name="iconFile">/templates/simple_listing.gif</property>
+    <property name="cheatSheet">org.eclipse.birt.report.designer.ui.cheatsheet.simplelisting</property>
+    <property name="layoutPreference">auto layout</property>
+    <parameters>
+        <scalar-parameter name="RP_NivelAgregacion" id="404">
+            <property name="valueType">static</property>
+            <property name="dataType">integer</property>
+            <property name="paramType">simple</property>
+            <property name="isRequired">true</property>
+            <property name="controlType">text-box</property>
+            <property name="defaultValue">1</property>
+            <property name="distinct">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.datatools.enablement.oda.ws" name="Data Source" id="288">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>wsdlURI</name>
+                    <value>http://localhost:8080/auditoria/services/SrvAuditoriaServicio?wsdl</value>
+                </ex-property>
+                <ex-property>
+                    <name>driverClassPath</name>
+                </ex-property>
+            </list-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.datatools.enablement.oda.ws.dataSet" name="Data Set" id="289">
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">descripcion</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">edad</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">fechaPublicacion</property>
+                        <property name="dataType">any</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">identificador</property>
+                        <property name="dataType">any</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">idioma</property>
+                        <property name="dataType">any</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">idiomaTexto</property>
+                        <property name="dataType">any</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">nivelAgregacion</property>
+                        <property name="dataType">any</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">objetivos</property>
+                        <property name="dataType">any</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">titulo</property>
+                        <property name="dataType">any</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">nivelAgregacion</property>
+                    <property name="paramName">RP_NivelAgregacion</property>
+                    <property name="nativeName">nivelAgregacion</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">1</property>
+                    <property name="position">1</property>
+                    <expression name="defaultValue">'1'</expression>
+                    <property name="isOptional">false</property>
+                    <property name="allowNull">true</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">descripcion</property>
+                    <property name="nativeName">descripcion</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">edad</property>
+                    <property name="nativeName">edad</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">fechaPublicacion</property>
+                    <property name="nativeName">fechaPublicacion</property>
+                    <property name="dataType">any</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">identificador</property>
+                    <property name="nativeName">identificador</property>
+                    <property name="dataType">any</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">idioma</property>
+                    <property name="nativeName">idioma</property>
+                    <property name="dataType">any</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">idiomaTexto</property>
+                    <property name="nativeName">idiomaTexto</property>
+                    <property name="dataType">any</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">nivelAgregacion</property>
+                    <property name="nativeName">nivelAgregacion</property>
+                    <property name="dataType">any</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">objetivos</property>
+                    <property name="nativeName">objetivos</property>
+                    <property name="dataType">any</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">titulo</property>
+                    <property name="nativeName">titulo</property>
+                    <property name="dataType">any</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <property name="queryText">&lt;?xml version="1.0"?>
+&lt;SOAP-ENV:Envelope
+xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	&lt;SOAP-ENV:Body>
+		&lt;m:repositorioNivelAgregacion xmlns:m="http://servicios.negocio.auditoria.pode.es">
+			&lt;m:nivelAgregacion xsi:type="xsd:int">&amp;?nivelAgregacion?&amp;&lt;/m:nivelAgregacion>
+		&lt;/m:repositorioNivelAgregacion>
+	&lt;/SOAP-ENV:Body>
+&lt;/SOAP-ENV:Envelope></property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>1.0</Version>
+  <design:DataSetParameters>
+    <design:parameterDefinitions>
+      <design:inOutMode>In</design:inOutMode>
+      <design:attributes>
+        <design:name>nivelAgregacion</design:name>
+        <design:position>1</design:position>
+        <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+        <design:nullability>Unknown</design:nullability>
+        <design:uiHints/>
+      </design:attributes>
+      <design:inputAttributes>
+        <design:elementAttributes>
+          <design:defaultScalarValue>1</design:defaultScalarValue>
+          <design:optional>false</design:optional>
+          <design:masksValue>false</design:masksValue>
+          <design:uiHints>
+            <design:promptStyle>TextField</design:promptStyle>
+          </design:uiHints>
+        </design:elementAttributes>
+      </design:inputAttributes>
+    </design:parameterDefinitions>
+  </design:DataSetParameters>
+</model:DesignValues>]]></xml-property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>xmlQueryText</name>
+                    <value>table0#-TNAME-#table0#:#[/soapenv:Envelope/soapenv:Body/repositorioNivelAgregacionResponse/repositorioNivelAgregacionReturn/repositorioNivelAgregacionReturn]#:#{descripcion;STRING;/descripcion},{edad;STRING;/edad},{fechaPublicacion;STRING;/fechaPublicacion},{identificador;STRING;/identificador},{idioma;STRING;/idioma},{idiomaTexto;STRING;/idiomaTexto},{nivelAgregacion;STRING;/nivelAgregacion},{objetivos;STRING;/objetivos},{titulo;STRING;/titulo}</value>
+                </ex-property>
+                <ex-property>
+                    <name>operationTrace</name>
+                    <value>SrvAuditoriaServicioService$-$SrvAuditoriaServicio$-$repositorioNivelAgregacion</value>
+                </ex-property>
+            </list-property>
+        </oda-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">a4</property>
+            <property name="topMargin">0.25mm</property>
+            <property name="leftMargin">4mm</property>
+            <property name="bottomMargin">0.25mm</property>
+            <property name="rightMargin">2.5mm</property>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <text id="262">
+            <property name="contentType">html</property>
+            <text-property name="content"><![CDATA[<BR><BR>]]></text-property>
+        </text>
+        <text id="231">
+            <property name="fontFamily">"Arial"</property>
+            <property name="fontSize">16px</property>
+            <property name="fontWeight">bold</property>
+            <property name="color">#333333</property>
+            <property name="paddingTop">1pt</property>
+            <property name="paddingLeft">10pt</property>
+            <property name="paddingRight">10pt</property>
+            <property name="contentType">html</property>
+            <text-property name="content" key="informeRepositorio"><![CDATA[OBJETOS CARGADOS EN LA PLATAFORMA]]></text-property>
+        </text>
+        <text id="415">
+            <property name="contentType">html</property>
+            <text-property name="content"><![CDATA[<br>]]></text-property>
+        </text>
+        <table id="421">
+            <property name="width">100%</property>
+            <property name="dataSet">Data Set</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">titulo</property>
+                    <expression name="expression">dataSetRow["titulo"]</expression>
+                    <property name="dataType">any</property>
+                </structure>
+                <structure>
+                    <property name="name">identificador</property>
+                    <expression name="expression">dataSetRow["identificador"]</expression>
+                    <property name="dataType">any</property>
+                </structure>
+                <structure>
+                    <property name="name">descripcion</property>
+                    <expression name="expression">dataSetRow["descripcion"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">idioma</property>
+                    <expression name="expression">dataSetRow["idioma"]</expression>
+                    <property name="dataType">any</property>
+                </structure>
+                <structure>
+                    <property name="name">nivelAgregacion</property>
+                    <expression name="expression">dataSetRow["nivelAgregacion"]</expression>
+                    <property name="dataType">any</property>
+                </structure>
+                <structure>
+                    <property name="name">fechaPublicacion</property>
+                    <expression name="expression">dataSetRow["fechaPublicacion"]</expression>
+                    <property name="dataType">any</property>
+                </structure>
+                <structure>
+                    <property name="name">objetivos</property>
+                    <expression name="expression">dataSetRow["objetivos"]</expression>
+                    <property name="dataType">any</property>
+                </structure>
+                <structure>
+                    <property name="name">idiomaTexto</property>
+                    <expression name="expression">dataSetRow["idiomaTexto"]</expression>
+                    <property name="dataType">any</property>
+                </structure>
+                <structure>
+                    <property name="name">edad</property>
+                    <expression name="expression">dataSetRow["edad"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="452"/>
+            <column id="453"/>
+            <column id="454"/>
+            <column id="455"/>
+            <column id="456"/>
+            <column id="457"/>
+            <column id="458"/>
+            <column id="459"/>
+            <column id="460"/>
+            <header>
+                <row id="422">
+                    <cell id="423">
+                        <label id="464">
+                            <property name="fontSize">14px</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">titulo</text-property>
+                        </label>
+                    </cell>
+                    <cell id="424">
+                        <label id="466">
+                            <property name="fontSize">14px</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">identificador</text-property>
+                        </label>
+                    </cell>
+                    <cell id="425">
+                        <label id="468">
+                            <property name="fontSize">14px</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">descripcion</text-property>
+                        </label>
+                    </cell>
+                    <cell id="426">
+                        <label id="470">
+                            <property name="fontSize">14px</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">idioma</text-property>
+                        </label>
+                    </cell>
+                    <cell id="427">
+                        <label id="472">
+                            <property name="fontSize">14px</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">nivelAgregacion</text-property>
+                        </label>
+                    </cell>
+                    <cell id="428">
+                        <label id="474">
+                            <property name="fontSize">14px</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">fechaPublicacion</text-property>
+                        </label>
+                    </cell>
+                    <cell id="429">
+                        <label id="477">
+                            <property name="fontSize">14px</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">objetivos</text-property>
+                        </label>
+                    </cell>
+                    <cell id="430">
+                        <label id="479">
+                            <property name="fontSize">14px</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">idiomaTexto</text-property>
+                        </label>
+                    </cell>
+                    <cell id="431">
+                        <label id="481">
+                            <property name="fontSize">14px</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">edad</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="432">
+                    <cell id="433">
+                        <data id="465">
+                            <property name="resultSetColumn">titulo</property>
+                        </data>
+                    </cell>
+                    <cell id="434">
+                        <data id="467">
+                            <property name="resultSetColumn">identificador</property>
+                        </data>
+                    </cell>
+                    <cell id="435">
+                        <data id="469">
+                            <property name="resultSetColumn">descripcion</property>
+                        </data>
+                    </cell>
+                    <cell id="436">
+                        <data id="471">
+                            <property name="resultSetColumn">idioma</property>
+                        </data>
+                    </cell>
+                    <cell id="437">
+                        <data id="473">
+                            <property name="resultSetColumn">nivelAgregacion</property>
+                        </data>
+                    </cell>
+                    <cell id="438">
+                        <data id="475">
+                            <property name="resultSetColumn">fechaPublicacion</property>
+                        </data>
+                    </cell>
+                    <cell id="439">
+                        <data id="478">
+                            <property name="resultSetColumn">objetivos</property>
+                        </data>
+                    </cell>
+                    <cell id="440">
+                        <data id="480">
+                            <property name="resultSetColumn">idiomaTexto</property>
+                        </data>
+                    </cell>
+                    <cell id="441">
+                        <data id="482">
+                            <property name="resultSetColumn">edad</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="442">
+                    <cell id="443"/>
+                    <cell id="444"/>
+                    <cell id="445"/>
+                    <cell id="446"/>
+                    <cell id="447"/>
+                    <cell id="448"/>
+                    <cell id="449"/>
+                    <cell id="450"/>
+                    <cell id="451"/>
+                </row>
+            </footer>
+        </table>
+        <text id="279">
+            <property name="contentType">html</property>
+            <text-property name="content"><![CDATA[<BR><BR><br><br>]]></text-property>
+        </text>
+    </body>
+</report>

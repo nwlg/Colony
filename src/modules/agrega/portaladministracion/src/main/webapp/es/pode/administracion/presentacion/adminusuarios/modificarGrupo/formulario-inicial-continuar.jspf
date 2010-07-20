@@ -1,0 +1,40 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="continuar" class="action">
+    <h3><bean:message key="modificar.grupo.formulario.inicial.continuar"/></h3>
+    <div class="trigger">
+        <html:form styleId="modificarGrupoFormularioInicialContinuarForm" action="/ModificarGrupo/FormularioInicialContinuar" method="post" enctype="multipart/form-data" onsubmit="return validateFormularioInicialContinuarForm(this);">
+            <table>
+                <tbody>
+                    <tr class="descripcion">
+                        <td class="label"><bean:message key="modificar.grupo.formulario.inicial.continuar.param.descripcion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.descripcion}"/>
+                           <input type="text" name="descripcion" value="${value}" onmouseover="hints.show('modificar.grupo.formulario.inicial.continuar.param.descripcion.title')" onmouseout="hints.hide()"  id="continuarDescripcion"/>
+                        </td>
+                    </tr>
+                    <tr class="id">
+                        <td class="label"><bean:message key="modificar.grupo.formulario.inicial.continuar.param.id"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.id}"/>
+                           <input type="text" name="id" value="${value}" onmouseover="hints.show('modificar.grupo.formulario.inicial.continuar.param.id.title')" onmouseout="hints.hide()"  id="continuarId"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Continuar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="modificar.grupo.formulario.inicial.continuar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

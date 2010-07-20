@@ -1,0 +1,8 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="tituloRelacion" value="${form.tituloRelacion}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="listadoRelacion" value="${form.listadoRelacion}"/>
+    </c:catch>
+</div>

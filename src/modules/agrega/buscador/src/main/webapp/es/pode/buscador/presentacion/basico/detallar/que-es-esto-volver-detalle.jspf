@@ -1,0 +1,31 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="volverDetalle" class="action">
+    <h3><bean:message key="detallar.odecu.que.es.esto.volver.detalle"/></h3>
+    <div class="trigger">
+        <html:form styleId="detallarODECUQueEsEstoVolverDetalleForm" action="/DetallarODECU/QueEsEstoVolverDetalle" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="mostrarVuelta">
+                        <td class="label"><bean:message key="detallar.odecu.que.es.esto.volver.detalle.param.mostrar.vuelta"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.mostrarVuelta}"/>
+                           <input type="checkbox" name="mostrarVuelta" value="on" <c:if test="${value}">checked="checked" </c:if>onmouseover="hints.show('detallar.odecu.que.es.esto.volver.detalle.param.mostrar.vuelta.title')" onmouseout="hints.hide()"  id="volverDetalleMostrarVuelta"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('volverDetalle')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="detallar.odecu.que.es.esto.volver.detalle"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

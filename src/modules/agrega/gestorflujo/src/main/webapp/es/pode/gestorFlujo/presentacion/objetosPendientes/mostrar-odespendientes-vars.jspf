@@ -1,0 +1,14 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="idUsuario" value="${form.idUsuario}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tipoUsuario" value="${form.tipoUsuario}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="esDespublicado" value="${form.esDespublicado}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="listaODES" value="${form.listaODES}"/>
+    </c:catch>
+</div>

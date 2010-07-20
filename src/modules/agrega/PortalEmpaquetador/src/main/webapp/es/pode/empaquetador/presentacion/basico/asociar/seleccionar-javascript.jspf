@@ -1,0 +1,31 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'asociar.seleccionar.submit.param.tipo.title':'<formatting:escape language="javascript"><bean:message key="asociar.seleccionar.submit.param.tipo.title"/></formatting:escape>',
+                'Submit':'<formatting:escape language="javascript"><bean:message key="asociar.seleccionar.submit.title"/></formatting:escape>',
+                'Submit_no':'<formatting:escape language="javascript"><bean:message key="asociar.seleccionar.submit.title.notallowed"/></formatting:escape>',
+                'Submit_reset':'<formatting:escape language="javascript"><bean:message key="asociar.seleccionar.submit.title.reset"/></formatting:escape>',
+                'Submit_noreset':'<formatting:escape language="javascript"><bean:message key="asociar.seleccionar.submit.title.reset.not.allowed"/></formatting:escape>',
+                'Estructura':'<formatting:escape language="javascript"><bean:message key="asociar.seleccionar.estructura.title"/></formatting:escape>',
+                'Estructura_no':'<formatting:escape language="javascript"><bean:message key="asociar.seleccionar.estructura.title.notallowed"/></formatting:escape>',
+                'Estructura_reset':'<formatting:escape language="javascript"><bean:message key="asociar.seleccionar.estructura.title.reset"/></formatting:escape>',
+                'Estructura_noreset':'<formatting:escape language="javascript"><bean:message key="asociar.seleccionar.estructura.title.reset.not.allowed"/></formatting:escape>',
+                'Archivos':'<formatting:escape language="javascript"><bean:message key="asociar.seleccionar.archivos.title"/></formatting:escape>',
+                'Archivos_no':'<formatting:escape language="javascript"><bean:message key="asociar.seleccionar.archivos.title.notallowed"/></formatting:escape>',
+                'Archivos_reset':'<formatting:escape language="javascript"><bean:message key="asociar.seleccionar.archivos.title.reset"/></formatting:escape>',
+                'Archivos_noreset':'<formatting:escape language="javascript"><bean:message key="asociar.seleccionar.archivos.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+</script>
+    </tiles:put>

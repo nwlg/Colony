@@ -1,0 +1,49 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="detalleUsoEdu" class="action">
+    <h3><bean:message key="uso.educativo.usos.educativos.form.detalle.uso.edu"/></h3>
+    <div class="trigger">
+        <html:form styleId="usoEducativoUsosEducativosFormDetalleUsoEduForm" action="/UsoEducativo/UsosEducativosFormDetalleUsoEdu" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="identificadorOde">
+                        <td class="label"><bean:message key="uso.educativo.usos.educativos.form.detalle.uso.edu.param.identificador.ode"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.identificadorOde}"/>
+                           <input type="text" name="identificadorOde" value="${value}" onmouseover="hints.show('uso.educativo.usos.educativos.form.detalle.uso.edu.param.identificador.ode.title')" onmouseout="hints.hide()"  id="detalleUsoEduIdentificadorOde"/>
+                        </td>
+                    </tr>
+                    <tr class="tituloUsoEducativo">
+                        <td class="label"><bean:message key="uso.educativo.usos.educativos.form.detalle.uso.edu.param.titulo.uso.educativo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tituloUsoEducativo}"/>
+                           <input type="text" name="tituloUsoEducativo" value="${value}" onmouseover="hints.show('uso.educativo.usos.educativos.form.detalle.uso.edu.param.titulo.uso.educativo.title')" onmouseout="hints.hide()"  id="detalleUsoEduTituloUsoEducativo"/>
+                        </td>
+                    </tr>
+                    <tr class="botonPulsado">
+                        <td class="label"><bean:message key="uso.educativo.usos.educativos.form.detalle.uso.edu.param.boton.pulsado"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.botonPulsado}"/>
+                           <input type="text" name="botonPulsado" value="${value}" onmouseover="hints.show('uso.educativo.usos.educativos.form.detalle.uso.edu.param.boton.pulsado.title')" onmouseout="hints.hide()"  id="detalleUsoEduBotonPulsado"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('DetalleUsoEdu')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="uso.educativo.usos.educativos.form.detalle.uso.edu"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

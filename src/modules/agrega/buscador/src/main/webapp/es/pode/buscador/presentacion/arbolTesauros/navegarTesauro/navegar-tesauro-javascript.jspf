@@ -1,0 +1,81 @@
+
+    <tiles:put name="javascript" type="string">
+        <script type="text/javascript" language="Javascript1.1" src="<html:rewrite action="/formValidation"/>"></script>
+        <html:javascript formName="navegarTesauroCUNavegarTesauroSeleccionarHijoForm" method="validateNavegarTesauroSeleccionarHijoForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+        <html:javascript formName="navegarTesauroCUNavegarTesauroSeleccionarPadreForm" method="validateNavegarTesauroSeleccionarPadreForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+        <html:javascript formName="navegarTesauroCUNavegarTesauroListarODETesauroForm" method="validateNavegarTesauroListarODETesauroForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+        <html:javascript formName="navegarTesauroCUNavegarTesauroBuscarTerminosForm" method="validateNavegarTesauroBuscarTerminosForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'navegar.tesauro.cu.navegar.tesauro.seleccionar.hijo.param.idioma.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.seleccionar.hijo.param.idioma.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.seleccionar.hijo.param.taxones.vo.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.seleccionar.hijo.param.taxones.vo.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.seleccionar.hijo.param.ruta.padre.vo.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.seleccionar.hijo.param.ruta.padre.vo.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.seleccionar.hijo.param.id.tesauro.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.seleccionar.hijo.param.id.tesauro.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.seleccionar.hijo.param.es.ruta.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.seleccionar.hijo.param.es.ruta.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.seleccionar.hijo.param.tipo.layout.buscador.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.seleccionar.hijo.param.tipo.layout.buscador.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.seleccionar.hijo.param.numero.resultados.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.seleccionar.hijo.param.numero.resultados.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.seleccionar.hijo.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.seleccionar.hijo.param.idioma.buscador.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.seleccionar.hijo.param.tipo.busqueda.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.seleccionar.hijo.param.tipo.busqueda.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.seleccionar.hijo.param.tipo.busqueda.arbol.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.seleccionar.hijo.param.tipo.busqueda.arbol.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.seleccionar.hijo.param.titulo.tesauro.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.seleccionar.hijo.param.titulo.tesauro.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.seleccionar.padre.param.idioma.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.seleccionar.padre.param.idioma.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.seleccionar.padre.param.taxones.vo.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.seleccionar.padre.param.taxones.vo.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.seleccionar.padre.param.ruta.padre.vo.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.seleccionar.padre.param.ruta.padre.vo.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.seleccionar.padre.param.id.tesauro.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.seleccionar.padre.param.id.tesauro.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.seleccionar.padre.param.es.ruta.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.seleccionar.padre.param.es.ruta.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.seleccionar.padre.param.tipo.layout.buscador.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.seleccionar.padre.param.tipo.layout.buscador.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.seleccionar.padre.param.numero.resultados.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.seleccionar.padre.param.numero.resultados.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.seleccionar.padre.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.seleccionar.padre.param.idioma.buscador.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.seleccionar.padre.param.tipo.busqueda.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.seleccionar.padre.param.tipo.busqueda.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.seleccionar.padre.param.tipo.busqueda.arbol.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.seleccionar.padre.param.tipo.busqueda.arbol.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.seleccionar.padre.param.titulo.tesauro.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.seleccionar.padre.param.titulo.tesauro.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.listar.odetesauro.param.id.tesauro.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.listar.odetesauro.param.id.tesauro.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.listar.odetesauro.param.ruta.padre.vo.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.listar.odetesauro.param.ruta.padre.vo.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.listar.odetesauro.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.listar.odetesauro.param.idioma.buscador.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.listar.odetesauro.param.idioma.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.listar.odetesauro.param.idioma.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.listar.odetesauro.param.titulo.tesauro.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.listar.odetesauro.param.titulo.tesauro.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.listar.odetesauro.param.num.max.resultados.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.listar.odetesauro.param.num.max.resultados.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.buscar.terminos.param.taxones.vo.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.buscar.terminos.param.taxones.vo.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.buscar.terminos.param.idioma.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.buscar.terminos.param.idioma.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.buscar.terminos.param.ruta.padre.vo.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.buscar.terminos.param.ruta.padre.vo.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.buscar.terminos.param.id.tesauro.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.buscar.terminos.param.id.tesauro.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.buscar.terminos.param.texto.busqueda.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.buscar.terminos.param.texto.busqueda.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.buscar.terminos.param.es.ruta.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.buscar.terminos.param.es.ruta.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.buscar.terminos.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.buscar.terminos.param.idioma.buscador.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.buscar.terminos.param.numero.resultados.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.buscar.terminos.param.numero.resultados.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.buscar.terminos.param.tipo.busqueda.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.buscar.terminos.param.tipo.busqueda.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.buscar.terminos.param.tipo.busqueda.arbol.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.buscar.terminos.param.tipo.busqueda.arbol.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.buscar.terminos.param.tipo.layoutbuscador.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.buscar.terminos.param.tipo.layoutbuscador.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.buscar.terminos.param.nom.tesauro.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.buscar.terminos.param.nom.tesauro.title"/></formatting:escape>',
+                'navegar.tesauro.cu.navegar.tesauro.buscar.terminos.param.titulo.tesauro.title':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.buscar.terminos.param.titulo.tesauro.title"/></formatting:escape>',
+                'seleccionarHijo':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.seleccionar.hijo.title"/></formatting:escape>',
+                'seleccionarHijo_no':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.seleccionar.hijo.title.notallowed"/></formatting:escape>',
+                'seleccionarHijo_reset':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.seleccionar.hijo.title.reset"/></formatting:escape>',
+                'seleccionarHijo_noreset':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.seleccionar.hijo.title.reset.not.allowed"/></formatting:escape>',
+                'seleccionarPadre':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.seleccionar.padre.title"/></formatting:escape>',
+                'seleccionarPadre_no':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.seleccionar.padre.title.notallowed"/></formatting:escape>',
+                'seleccionarPadre_reset':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.seleccionar.padre.title.reset"/></formatting:escape>',
+                'seleccionarPadre_noreset':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.seleccionar.padre.title.reset.not.allowed"/></formatting:escape>',
+                'listarODETesauro':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.listar.odetesauro.title"/></formatting:escape>',
+                'listarODETesauro_no':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.listar.odetesauro.title.notallowed"/></formatting:escape>',
+                'listarODETesauro_reset':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.listar.odetesauro.title.reset"/></formatting:escape>',
+                'listarODETesauro_noreset':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.listar.odetesauro.title.reset.not.allowed"/></formatting:escape>',
+                'buscarTerminos':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.buscar.terminos.title"/></formatting:escape>',
+                'buscarTerminos_no':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.buscar.terminos.title.notallowed"/></formatting:escape>',
+                'buscarTerminos_reset':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.buscar.terminos.title.reset"/></formatting:escape>',
+                'buscarTerminos_noreset':'<formatting:escape language="javascript"><bean:message key="navegar.tesauro.cu.navegar.tesauro.buscar.terminos.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+</script>
+    </tiles:put>

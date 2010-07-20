@@ -1,0 +1,22 @@
+#submit.action {}
+#submit.action #form_submit {}
+
+#submit.action .action {}
+#submit.action .action .label {}
+#submit.action .action .field {}
+#submit.action .url {}
+#submit.action .url .label {}
+#submit.action .url .field {}
+#submit.action .tipo {}
+#submit.action .tipo .label {}
+#submit.action .tipo .field {}
+
+#estructura.action {}
+#estructura.action #form_submit {}
+
+
+#archivos.action {}
+#archivos.action #form_submit {}
+
+
+

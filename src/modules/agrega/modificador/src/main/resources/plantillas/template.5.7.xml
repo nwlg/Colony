@@ -1,0 +1,4 @@
+<typicalAgeRange>
+${load:string.xml}
+<!-- Mas string -->
+</typicalAgeRange>

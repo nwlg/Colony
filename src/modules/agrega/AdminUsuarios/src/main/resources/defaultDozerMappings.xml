@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN" "http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+	<mapping wildcard="true" map-id="DEF_MAPPING_GRUPO_GRUPOVO">
+		<class-a>es.pode.adminusuarios.negocio.dominio.GrupoImpl</class-a>
+		<class-b>es.pode.adminusuarios.negocio.servicios.GrupoVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_GRUPOVO_GRUPO">
+		<class-a>es.pode.adminusuarios.negocio.servicios.GrupoVO</class-a>
+		<class-b>es.pode.adminusuarios.negocio.dominio.GrupoImpl</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_ROL_ROLVO">
+		<class-a>es.pode.adminusuarios.negocio.dominio.RolImpl</class-a>
+		<class-b>es.pode.adminusuarios.negocio.servicios.RolVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_ROLVO_ROL">
+		<class-a>es.pode.adminusuarios.negocio.servicios.RolVO</class-a>
+		<class-b>es.pode.adminusuarios.negocio.dominio.RolImpl</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_USUARIO_USUARIOVO">
+		<class-a>es.pode.adminusuarios.negocio.dominio.UsuarioImpl</class-a>
+		<class-b>es.pode.adminusuarios.negocio.servicios.UsuarioVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_USUARIOVO_USUARIO">
+		<class-a>es.pode.adminusuarios.negocio.servicios.UsuarioVO</class-a>
+		<class-b>es.pode.adminusuarios.negocio.dominio.UsuarioImpl</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_GRUPOTRABAJO_GRUPOTRABAJOVO">
+		<class-a>es.pode.adminusuarios.negocio.dominio.GrupoTrabajoImpl</class-a>
+		<class-b>es.pode.adminusuarios.negocio.servicios.GrupoTrabajoVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_GRUPOTRABAJOVO_GRUPOTRABAJO">
+		<class-a>es.pode.adminusuarios.negocio.servicios.GrupoTrabajoVO</class-a>
+		<class-b>es.pode.adminusuarios.negocio.dominio.GrupoTrabajoImpl</class-b>
+	</mapping>	
+</mappings>

@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.15" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 2.2.1.r22a_v20071101 Build &lt;2.2.1.v20071101-1439></property>
+    <property name="units">in</property>
+    <property name="includeResource">birt-application-resources</property>
+    <property name="comments">Copyright (c) 2007 &lt;&lt;Your Company Name here>></property>
+    <html-property name="description">Creates a listing report with fields from the data source.</html-property>
+    <text-property name="displayName">Simple Listing</text-property>
+    <property name="iconFile">/templates/simple_listing.gif</property>
+    <property name="cheatSheet">org.eclipse.birt.report.designer.ui.cheatsheet.simplelisting</property>
+    <property name="layoutPreference">auto layout</property>
+    <parameters>
+        <scalar-parameter name="RP_fechaDesde" id="52">
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="paramType">simple</property>
+            <text-property name="promptText">fechaDesde</text-property>
+            <property name="controlType">text-box</property>
+            <property name="defaultValue">2007-12-12T09:30:47-00:00</property>
+            <property name="distinct">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="RP_fechaHasta" id="53">
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="paramType">simple</property>
+            <text-property name="promptText">fechaHasta</text-property>
+            <property name="controlType">text-box</property>
+            <property name="defaultValue">2008-12-31T09:30:47-00:00</property>
+            <property name="distinct">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="RP_Rango" id="144">
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <property name="defaultValue">10</property>
+            <property name="distinct">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="RP_rangoFechas" id="168">
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <property name="defaultValue">2007-01-01 - 2007-01-31</property>
+            <property name="distinct">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="RP_UrlFicha" id="324">
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <property name="defaultValue">http://redes.agrega.indra.es/buscador/buscador.do</property>
+            <property name="distinct">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.datatools.enablement.oda.ws" name="masPrevisualizadorDataSource" id="26">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>wsdlURI</name>
+                    <value>http://localhost:8080/auditoria/services/SrvAuditoriaServicio?wsdl</value>
+                </ex-property>
+                <ex-property>
+                    <name>driverClassPath</name>
+                </ex-property>
+            </list-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.datatools.enablement.oda.ws.dataSet" name="masPrevisualizados" id="333">
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">idOde</property>
+                        <property name="dataType">any</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">idioma</property>
+                        <property name="dataType">any</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">numVeces</property>
+                        <property name="dataType">any</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">tituloOde</property>
+                        <property name="dataType">any</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">urlImagen</property>
+                        <property name="dataType">any</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">masPrevisualizadorDataSource</property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">fechaDesde</property>
+                    <property name="paramName">RP_fechaDesde</property>
+                    <property name="nativeName">fechaDesde</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                    <property name="position">1</property>
+                    <expression name="defaultValue">'2007-12-12T09:30:47-00:00'</expression>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">fechaHasta</property>
+                    <property name="paramName">RP_fechaHasta</property>
+                    <property name="nativeName">fechaHasta</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                    <property name="position">2</property>
+                    <expression name="defaultValue">'2008-12-31T09:30:47-00:00'</expression>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">rango</property>
+                    <property name="paramName">RP_Rango</property>
+                    <property name="nativeName">rango</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                    <property name="position">3</property>
+                    <expression name="defaultValue">'10'</expression>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">idOde</property>
+                    <property name="nativeName">idOde</property>
+                    <property name="dataType">any</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">idioma</property>
+                    <property name="nativeName">idioma</property>
+                    <property name="dataType">any</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">numVeces</property>
+                    <property name="nativeName">numVeces</property>
+                    <property name="dataType">any</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">tituloOde</property>
+                    <property name="nativeName">tituloOde</property>
+                    <property name="dataType">any</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">urlImagen</property>
+                    <property name="nativeName">urlImagen</property>
+                    <property name="dataType">any</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <property name="queryText">&lt;?xml version="1.0"?>
+&lt;SOAP-ENV:Envelope
+xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+	&lt;SOAP-ENV:Body>
+		&lt;m:informeMasPrevisualizados xmlns:m="http://servicios.negocio.auditoria.pode.es">
+			&lt;m:parametrosInformeVO>
+				&lt;m:fechaDesde>&amp;?fechaDesde?&amp;&lt;/m:fechaDesde>
+				&lt;m:fechaHasta>&amp;?fechaHasta?&amp;&lt;/m:fechaHasta>
+				&lt;m:rango xsi:type="xsd:int">&amp;?rango?&amp;&lt;/m:rango>
+			&lt;/m:parametrosInformeVO>
+		&lt;/m:informeMasPrevisualizados>
+	&lt;/SOAP-ENV:Body>
+&lt;/SOAP-ENV:Envelope></property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>1.0</Version>
+  <design:DataSetParameters>
+    <design:parameterDefinitions>
+      <design:inOutMode>In</design:inOutMode>
+      <design:attributes>
+        <design:name>fechaDesde</design:name>
+        <design:position>1</design:position>
+        <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+        <design:precision>-1</design:precision>
+        <design:scale>-1</design:scale>
+        <design:nullability>Unknown</design:nullability>
+      </design:attributes>
+      <design:inputAttributes>
+        <design:elementAttributes>
+          <design:defaultScalarValue>2007-12-12T09:30:47-00:00</design:defaultScalarValue>
+        </design:elementAttributes>
+      </design:inputAttributes>
+    </design:parameterDefinitions>
+    <design:parameterDefinitions>
+      <design:inOutMode>In</design:inOutMode>
+      <design:attributes>
+        <design:name>fechaHasta</design:name>
+        <design:position>2</design:position>
+        <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+        <design:precision>-1</design:precision>
+        <design:scale>-1</design:scale>
+        <design:nullability>Unknown</design:nullability>
+      </design:attributes>
+      <design:inputAttributes>
+        <design:elementAttributes>
+          <design:defaultScalarValue>2008-12-31T09:30:47-00:00</design:defaultScalarValue>
+        </design:elementAttributes>
+      </design:inputAttributes>
+    </design:parameterDefinitions>
+    <design:parameterDefinitions>
+      <design:inOutMode>In</design:inOutMode>
+      <design:attributes>
+        <design:name>rango</design:name>
+        <design:position>3</design:position>
+        <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+        <design:precision>-1</design:precision>
+        <design:scale>-1</design:scale>
+        <design:nullability>Unknown</design:nullability>
+      </design:attributes>
+      <design:inputAttributes>
+        <design:elementAttributes>
+          <design:defaultScalarValue>10</design:defaultScalarValue>
+        </design:elementAttributes>
+      </design:inputAttributes>
+    </design:parameterDefinitions>
+  </design:DataSetParameters>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>idOde</design:name>
+            <design:position>1</design:position>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>idOde</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>idioma</design:name>
+            <design:position>2</design:position>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>idioma</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>numVeces</design:name>
+            <design:position>3</design:position>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>numVeces</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>tituloOde</design:name>
+            <design:position>4</design:position>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>tituloOde</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:name>urlImagen</design:name>
+            <design:position>5</design:position>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>urlImagen</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>xmlQueryText</name>
+                    <value>table0#-TNAME-#table0#:#[/soapenv:Envelope/soapenv:Body/informeMasPrevisualizadosResponse/informeMasPrevisualizadosReturn/informeMasPrevisualizadosReturn]#:#{idOde;STRING;/idOde},{idioma;STRING;/idioma},{numVeces;STRING;/numVeces},{tituloOde;STRING;/tituloOde},{urlImagen;STRING;/urlImagen}</value>
+                </ex-property>
+                <ex-property>
+                    <name>operationTrace</name>
+                    <value>SrvAuditoriaServicioService$-$SrvAuditoriaServicio$-$informeMasPrevisualizados</value>
+                </ex-property>
+            </list-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="crosstab" id="24">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab-cell" id="25">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="Titulos" id="36">
+            <property name="backgroundColor">#C0C0C0</property>
+            <property name="fontSize">small</property>
+            <property name="fontWeight">bold</property>
+            <property name="fontStyle">normal</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">medium</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">thin</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">thin</property>
+            <property name="borderTopStyle">solid</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2"/>
+    </page-setup>
+    <body>
+        <grid id="316">
+            <property name="width">100%</property>
+            <column id="317">
+                <property name="width">35%</property>
+            </column>
+            <column id="318">
+                <property name="width">30%</property>
+            </column>
+            <column id="319">
+                <property name="width">35%</property>
+            </column>
+            <row id="320">
+                <property name="verticalAlign">bottom</property>
+                <cell id="321">
+                    <image id="278">
+                        <property name="source">file</property>
+                        <expression name="uri">"img/logo_ndrb.gif"</expression>
+                    </image>
+                </cell>
+                <cell id="322">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <label id="336">
+                        <property name="fontFamily">sans-serif</property>
+                        <property name="fontSize">11pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="color">#666666</property>
+                        <property name="textAlign">right</property>
+                        <text-property name="text">national digital resource bank</text-property>
+                    </label>
+                </cell>
+            </row>
+        </grid>
+        <text id="288">
+            <property name="contentType">html</property>
+            <text-property name="content"><![CDATA[<BR><BR><BR>]]></text-property>
+        </text>
+        <text id="289">
+            <property name="fontFamily">"Arial"</property>
+            <property name="fontSize">16px</property>
+            <property name="fontWeight">bold</property>
+            <property name="color">#333333</property>
+            <property name="paddingTop">1pt</property>
+            <property name="paddingLeft">10pt</property>
+            <property name="paddingRight">10pt</property>
+            <property name="contentType">html</property>
+            <text-property name="content" key="informeMasPrevisualizados"><![CDATA[]]></text-property>
+        </text>
+        <text id="290">
+            <property name="contentType">html</property>
+            <text-property name="content"><![CDATA[<br>]]></text-property>
+        </text>
+        <grid id="302">
+            <property name="marginTop">0pt</property>
+            <property name="marginLeft">10pt</property>
+            <property name="marginRight">10pt</property>
+            <property name="width">100%</property>
+            <column id="303">
+                <property name="width">15%</property>
+            </column>
+            <column id="304"/>
+            <row id="305">
+                <cell id="306">
+                    <text id="311">
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="fontSize">12px</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="fontStyle">normal</property>
+                        <property name="color">#333333</property>
+                        <property name="paddingTop">1pt</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content" key="rangoFechas"><![CDATA[]]></text-property>
+                    </text>
+                </cell>
+                <cell id="307">
+                    <text-data id="312">
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="fontSize">12px</property>
+                        <property name="fontStyle">normal</property>
+                        <property name="color">#333333</property>
+                        <expression name="valueExpr">params["RP_rangoFechas"]</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
+                </cell>
+            </row>
+            <row id="308">
+                <cell id="309">
+                    <text id="313">
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="fontSize">12px</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="fontStyle">normal</property>
+                        <property name="color">#333333</property>
+                        <property name="paddingTop">1pt</property>
+                        <property name="contentType">html</property>
+                        <text-property name="content" key="rango"><![CDATA[rango]]></text-property>
+                    </text>
+                </cell>
+                <cell id="310">
+                    <text-data id="314">
+                        <property name="fontFamily">"Arial"</property>
+                        <property name="fontSize">12px</property>
+                        <property name="fontStyle">normal</property>
+                        <property name="color">#333333</property>
+                        <expression name="valueExpr">params["RP_Rango"]</expression>
+                        <property name="contentType">html</property>
+                    </text-data>
+                </cell>
+            </row>
+        </grid>
+        <text id="189">
+            <property name="contentType">html</property>
+            <text-property name="content"><![CDATA[<br><br>]]></text-property>
+        </text>
+        <table id="145">
+            <property name="borderBottomColor">#D8E5F2</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1px</property>
+            <property name="borderLeftColor">#D8E5F2</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1px</property>
+            <property name="borderRightColor">#D8E5F2</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1px</property>
+            <property name="borderTopColor">#D8E5F2</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1px</property>
+            <property name="marginTop">0pt</property>
+            <property name="marginLeft">10pt</property>
+            <property name="marginRight">10pt</property>
+            <property name="textAlign">center</property>
+            <property name="verticalAlign">middle</property>
+            <property name="height">0.771in</property>
+            <property name="width">100%</property>
+            <property name="dataSet">masPrevisualizados</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">idOde</property>
+                    <expression name="expression">dataSetRow["idOde"]</expression>
+                    <property name="dataType">any</property>
+                </structure>
+                <structure>
+                    <property name="name">idioma</property>
+                    <expression name="expression">dataSetRow["idioma"]</expression>
+                    <property name="dataType">any</property>
+                </structure>
+                <structure>
+                    <property name="name">numVeces</property>
+                    <expression name="expression">dataSetRow["numVeces"]</expression>
+                    <property name="dataType">any</property>
+                </structure>
+                <structure>
+                    <property name="name">tituloOde</property>
+                    <expression name="expression">dataSetRow["tituloOde"]</expression>
+                    <property name="dataType">any</property>
+                </structure>
+                <structure>
+                    <property name="name">urlImagen</property>
+                    <expression name="expression">dataSetRow["urlImagen"]</expression>
+                    <property name="dataType">any</property>
+                </structure>
+            </list-property>
+            <column id="329">
+                <property name="width">1.5in</property>
+                <list-property name="visibility">
+                    <structure>
+                        <property name="format">xls</property>
+                        <expression name="valueExpr">true</expression>
+                    </structure>
+                </list-property>
+                <property name="verticalAlign">middle</property>
+            </column>
+            <column id="158">
+                <property name="width">4.1145833333in</property>
+            </column>
+            <column id="160">
+                <property name="width">1.2708333333in</property>
+            </column>
+            <header>
+                <row id="146">
+                    <property name="backgroundColor">#D2E9FF</property>
+                    <property name="borderBottomColor">#EBF2F8</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <cell id="326">
+                        <property name="backgroundColor">#EBF2F8</property>
+                    </cell>
+                    <cell id="147">
+                        <property name="backgroundColor">#EBF2F8</property>
+                        <text id="166">
+                            <property name="backgroundColor">#EBF2F8</property>
+                            <property name="fontFamily">"Verdana"</property>
+                            <property name="fontSize">10px</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="color">#333333</property>
+                            <property name="contentType">html</property>
+                            <text-property name="content" key="tituloOde"><![CDATA[Título del Ode]]></text-property>
+                        </text>
+                    </cell>
+                    <cell id="149">
+                        <property name="backgroundColor">#EBF2F8</property>
+                        <text id="167">
+                            <property name="backgroundColor">#EBF2F8</property>
+                            <property name="fontFamily">"Verdana"</property>
+                            <property name="fontSize">10px</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="color">#333333</property>
+                            <property name="contentType">html</property>
+                            <text-property name="content" key="numeroVeces"><![CDATA[Número de Veces]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="150">
+                    <property name="height">1.5in</property>
+                    <property name="fontVariant">normal</property>
+                    <property name="verticalAlign">middle</property>
+                    <list-property name="highlightRules">
+                        <structure>
+                            <property name="operator">eq</property>
+                            <property name="backgroundColor">#EFEFEF</property>
+                            <expression name="testExpr">row[0]%2</expression>
+                            <expression name="value1">0</expression>
+                        </structure>
+                    </list-property>
+                    <cell id="327">
+                        <property name="backgroundColor">white</property>
+                        <property name="borderBottomColor">#EFEFEF</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#EFEFEF</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#EFEFEF</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#EFEFEF</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <property name="paddingTop">1pt</property>
+                        <property name="paddingLeft">0pt</property>
+                        <property name="paddingRight">0pt</property>
+                        <list-property name="highlightRules">
+                            <structure>
+                                <property name="operator">eq</property>
+                                <property name="backgroundColor">#EFEFEF</property>
+                                <expression name="testExpr">row[0]%2</expression>
+                                <expression name="value1">0</expression>
+                            </structure>
+                        </list-property>
+                        <image id="330">
+                            <property name="borderBottomColor">#EFEFEF</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">medium</property>
+                            <property name="borderLeftColor">#EFEFEF</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">medium</property>
+                            <property name="borderRightColor">#EFEFEF</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">medium</property>
+                            <property name="borderTopColor">#EFEFEF</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">medium</property>
+                            <list-property name="highlightRules">
+                                <structure>
+                                    <property name="operator">eq</property>
+                                    <property name="backgroundColor">#EFEFEF</property>
+                                    <expression name="testExpr">row[0]%2</expression>
+                                    <expression name="value1">0</expression>
+                                </structure>
+                            </list-property>
+                            <property name="height">100px</property>
+                            <property name="width">100px</property>
+                            <list-property name="visibility">
+                                <structure>
+                                    <property name="format">xls</property>
+                                    <expression name="valueExpr">true</expression>
+                                </structure>
+                            </list-property>
+                            <property name="source">url</property>
+                            <expression name="uri">row["urlImagen"]</expression>
+                        </image>
+                    </cell>
+                    <cell id="151">
+                        <data id="163">
+                            <property name="fontFamily">"Verdana"</property>
+                            <property name="fontSize">10px</property>
+                            <property name="color">#333333</property>
+                            <property name="marginTop">0pt</property>
+                            <property name="marginLeft">25pt</property>
+                            <property name="textAlign">left</property>
+                            <property name="resultSetColumn">tituloOde</property>
+                            <structure name="action">
+                                <property name="linkType">hyperlink</property>
+                                <expression name="uri">params["RP_UrlFicha"]+"/"+row["idioma"]+"/"+row["idOde"]</expression>
+                                <property name="targetWindow">_blank</property>
+                            </structure>
+                        </data>
+                    </cell>
+                    <cell id="153">
+                        <data id="165">
+                            <property name="fontFamily">"Verdana"</property>
+                            <property name="fontSize">10px</property>
+                            <property name="color">#333333</property>
+                            <property name="resultSetColumn">numVeces</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="154">
+                    <cell id="328"/>
+                    <cell id="155"/>
+                    <cell id="157"/>
+                </row>
+            </footer>
+        </table>
+        <text id="315">
+            <property name="contentType">html</property>
+            <text-property name="content"><![CDATA[<BR><BR>]]></text-property>
+        </text>
+        <grid id="334">
+            <property name="style">NewStyle</property>
+            <property name="marginTop">auto</property>
+            <property name="marginLeft">10pt</property>
+            <property name="marginBottom">auto</property>
+            <property name="marginRight">10pt</property>
+            <property name="paddingBottom">1pt</property>
+            <property name="pageBreakAfter">auto</property>
+            <property name="pageBreakBefore">auto</property>
+            <property name="height">0.5315315315in</property>
+            <property name="width">5.8918918919in</property>
+            <column id="335">
+                <property name="width">0.9in</property>
+            </column>
+            <column id="291">
+                <property name="width">0.95in</property>
+                <property name="verticalAlign">middle</property>
+            </column>
+            <column id="292">
+                <property name="width">0.9in</property>
+                <property name="verticalAlign">middle</property>
+            </column>
+            <column id="293">
+                <property name="width">0.7in</property>
+                <property name="marginTop">auto</property>
+                <property name="marginLeft">0pt</property>
+                <property name="marginBottom">auto</property>
+            </column>
+            <column id="248">
+                <property name="width">0.9375in</property>
+            </column>
+            <column id="249">
+                <property name="width">1in</property>
+            </column>
+            <row id="294">
+                <property name="verticalAlign">middle</property>
+                <cell id="295">
+                    <image id="241">
+                        <property name="borderRightStyle">none</property>
+                        <property name="marginLeft">0pt</property>
+                        <property name="marginBottom">1pt</property>
+                        <property name="source">file</property>
+                        <expression name="uri">"img/logo_nwlg.gif"</expression>
+                    </image>
+                </cell>
+                <cell id="296">
+                    <image id="297">
+                        <property name="source">file</property>
+                        <expression name="uri">"img/logo_nen.gif"</expression>
+                    </image>
+                </cell>
+                <cell id="253">
+                    <image id="257">
+                        <property name="source">file</property>
+                        <expression name="uri">"img/footer_text.png"</expression>
+                    </image>
+                </cell>
+                <cell id="254">
+                    <property name="colSpan">3</property>
+                    <property name="rowSpan">1</property>
+                    <property name="borderBottomStyle">none</property>
+                    <property name="marginLeft">0pt</property>
+                    <property name="marginBottom">auto</property>
+                    <property name="paddingBottom">1pt</property>
+                    <property name="textAlign">right</property>
+                    <property name="verticalAlign">middle</property>
+                    <property name="widows">2</property>
+                    <property name="pageBreakBefore">auto</property>
+                    <image id="299">
+                        <property name="style">NewStyle1</property>
+                        <property name="size">size-to-image</property>
+                        <property name="scale">0.1</property>
+                        <property name="source">file</property>
+                        <expression name="uri">"img/powered_by_agrega.jpg"</expression>
+                    </image>
+                </cell>
+            </row>
+        </grid>
+    </body>
+</report>

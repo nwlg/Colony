@@ -1,0 +1,49 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="baja.catalogadores.confirmacion.eliminacion.catalogadores.aceptar"/></h3>
+    <div class="trigger">
+        <html:form styleId="bajaCatalogadoresConfirmacionEliminacionCatalogadoresAceptarForm" action="/BajaCatalogadores/ConfirmacionEliminacionCatalogadoresAceptar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="gruposTrabajoBorrados">
+                        <td class="label"><bean:message key="baja.catalogadores.confirmacion.eliminacion.catalogadores.aceptar.param.grupos.trabajo.borrados"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.gruposTrabajoBorrados}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.gruposTrabajoBorradosBackingList}">
+                                  <html:select name="form" property="gruposTrabajoBorrados" onmouseover="hints.show('baja.catalogadores.confirmacion.eliminacion.catalogadores.aceptar.param.grupos.trabajo.borrados.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="aceptarGruposTrabajoBorrados">
+                                      <html:optionsCollection name="form" property="gruposTrabajoBorradosBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="gruposTrabajoBorrados" onmouseover="hints.show('baja.catalogadores.confirmacion.eliminacion.catalogadores.aceptar.param.grupos.trabajo.borrados.title')" onmouseout="hints.hide()"  styleId="aceptarGruposTrabajoBorrados"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="listaId">
+                        <td class="label"><bean:message key="baja.catalogadores.confirmacion.eliminacion.catalogadores.aceptar.param.lista.id"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.listaId}"/>
+                           <input type="text" name="listaId" value="${value}" onmouseover="hints.show('baja.catalogadores.confirmacion.eliminacion.catalogadores.aceptar.param.lista.id.title')" onmouseout="hints.hide()"  id="aceptarListaId"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="baja.catalogadores.confirmacion.eliminacion.catalogadores.aceptar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

@@ -1,0 +1,17 @@
+#selectAction.action {}
+#selectAction.action #form_submit {}
+
+#selectAction.action .nombre {}
+#selectAction.action .nombre .label {}
+#selectAction.action .nombre .field {}
+#selectAction.action .destino {}
+#selectAction.action .destino .label {}
+#selectAction.action .destino .field {}
+#selectAction.action .action {}
+#selectAction.action .action .label {}
+#selectAction.action .action .field {}
+#selectAction.action .recursosVO {}
+#selectAction.action .recursosVO .label {}
+#selectAction.action .recursosVO .field {}
+
+

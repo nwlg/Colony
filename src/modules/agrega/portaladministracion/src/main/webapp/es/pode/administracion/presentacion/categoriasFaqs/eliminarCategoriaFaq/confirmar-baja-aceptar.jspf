@@ -1,0 +1,49 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="eliminar.categoria.faq.confirmar.baja.aceptar"/></h3>
+    <div class="trigger">
+        <html:form styleId="eliminarCategoriaFaqConfirmarBajaAceptarForm" action="/EliminarCategoriaFaq/ConfirmarBajaAceptar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="categoriasBorradas">
+                        <td class="label"><bean:message key="eliminar.categoria.faq.confirmar.baja.aceptar.param.categorias.borradas"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.categoriasBorradas}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.categoriasBorradasBackingList}">
+                                  <html:select name="form" property="categoriasBorradasAsArray" onmouseover="hints.show('eliminar.categoria.faq.confirmar.baja.aceptar.param.categorias.borradas.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="aceptarCategoriasBorradas">
+                                      <html:optionsCollection name="form" property="categoriasBorradasBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="categoriasBorradasAsArray" onmouseover="hints.show('eliminar.categoria.faq.confirmar.baja.aceptar.param.categorias.borradas.title')" onmouseout="hints.hide()"  styleId="aceptarCategoriasBorradas"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="listaIds">
+                        <td class="label"><bean:message key="eliminar.categoria.faq.confirmar.baja.aceptar.param.lista.ids"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.listaIds}"/>
+                           <input type="text" name="listaIds" value="${value}" onmouseover="hints.show('eliminar.categoria.faq.confirmar.baja.aceptar.param.lista.ids.title')" onmouseout="hints.hide()"  id="aceptarListaIds"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="eliminar.categoria.faq.confirmar.baja.aceptar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

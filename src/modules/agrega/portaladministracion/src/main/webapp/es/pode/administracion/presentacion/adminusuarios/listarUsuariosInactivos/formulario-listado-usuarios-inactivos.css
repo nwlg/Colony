@@ -1,0 +1,58 @@
+#verUsuarioInactivo.action {}
+#verUsuarioInactivo.action #form_submit {}
+
+#verUsuarioInactivo.action .id {}
+#verUsuarioInactivo.action .id .label {}
+#verUsuarioInactivo.action .id .field {}
+
+#listarUsuarios.action {}
+#listarUsuarios.action #form_submit {}
+
+
+#activarUsuario.action {}
+#activarUsuario.action #form_submit {}
+
+#activarUsuario.action .id {}
+#activarUsuario.action .id .label {}
+#activarUsuario.action .id .field {}
+
+#listarUsuariosPendientes.action {}
+#listarUsuariosPendientes.action #form_submit {}
+
+
+#usuarios.table {}
+#usuarios.table th {}
+#usuarios.table td div {}
+
+#usuarios.table th.apellido2 {}
+#usuarios.table td div.apellido2 {}
+
+#usuarios.table th.usuario {}
+#usuarios.table td div.usuario {}
+
+#usuarios.table th.apellido1 {}
+#usuarios.table td div.apellido1 {}
+
+#usuarios.table th.idioma {}
+#usuarios.table td div.idioma {}
+
+#usuarios.table th.nombre {}
+#usuarios.table td div.nombre {}
+
+#usuarios.table th.id {}
+#usuarios.table td div.id {}
+
+#usuarios.table th.tipoEmpaquetador {}
+#usuarios.table td div.tipoEmpaquetador {}
+
+#usuarios.table th.email {}
+#usuarios.table td div.email {}
+
+#usuarios.table th.idiomaBusqueda {}
+#usuarios.table td div.idiomaBusqueda {}
+
+#usuarios.table th.NIF {}
+#usuarios.table td div.NIF {}
+
+
+

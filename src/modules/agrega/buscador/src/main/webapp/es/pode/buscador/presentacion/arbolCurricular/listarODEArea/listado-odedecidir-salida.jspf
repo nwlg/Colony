@@ -1,0 +1,105 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="decidirSalida" class="action">
+    <h3><bean:message key="listar.odearea.cu.listado.ode.decidir.salida"/></h3>
+    <div class="trigger">
+        <html:form styleId="listarODEAreaCUListadoODEDecidirSalidaForm" action="/ListarODEAreaCU/ListadoODEDecidirSalida" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="areaCurricularBusqueda">
+                        <td class="label"><bean:message key="listar.odearea.cu.listado.ode.decidir.salida.param.area.curricular.busqueda"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.areaCurricularBusqueda}"/>
+                           <input type="text" name="areaCurricularBusqueda" value="${value}" onmouseover="hints.show('listar.odearea.cu.listado.ode.decidir.salida.param.area.curricular.busqueda.title')" onmouseout="hints.hide()"  id="decidirSalidaAreaCurricularBusqueda"/>
+                        </td>
+                    </tr>
+                    <tr class="idioma">
+                        <td class="label"><bean:message key="listar.odearea.cu.listado.ode.decidir.salida.param.idioma"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idioma}"/>
+                           <input type="text" name="idioma" value="${value}" onmouseover="hints.show('listar.odearea.cu.listado.ode.decidir.salida.param.idioma.title')" onmouseout="hints.hide()"  id="decidirSalidaIdioma"/>
+                        </td>
+                    </tr>
+                    <tr class="idiomaBuscador">
+                        <td class="label"><bean:message key="listar.odearea.cu.listado.ode.decidir.salida.param.idioma.buscador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idiomaBuscador}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.idiomaBuscadorBackingList}">
+                                  <html:select name="form" property="idiomaBuscador" onmouseover="hints.show('listar.odearea.cu.listado.ode.decidir.salida.param.idioma.buscador.title')" onmouseout="hints.hide()"  styleId="decidirSalidaIdiomaBuscador">
+                                      <html:optionsCollection name="form" property="idiomaBuscadorBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="idiomaBuscador" onmouseover="hints.show('listar.odearea.cu.listado.ode.decidir.salida.param.idioma.buscador.title')" onmouseout="hints.hide()"  styleId="decidirSalidaIdiomaBuscador"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="identificadorODE">
+                        <td class="label"><bean:message key="listar.odearea.cu.listado.ode.decidir.salida.param.identificador.ode"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.identificadorODE}"/>
+                           <input type="text" name="identificadorODE" value="${value}" onmouseover="hints.show('listar.odearea.cu.listado.ode.decidir.salida.param.identificador.ode.title')" onmouseout="hints.hide()"  id="decidirSalidaIdentificadorODE"/>
+                        </td>
+                    </tr>
+                    <tr class="pagina">
+                        <td class="label"><bean:message key="listar.odearea.cu.listado.ode.decidir.salida.param.pagina"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.pagina}"/>
+                           <input type="text" name="pagina" value="${value}" onmouseover="hints.show('listar.odearea.cu.listado.ode.decidir.salida.param.pagina.title')" onmouseout="hints.hide()"  id="decidirSalidaPagina"/>
+                        </td>
+                    </tr>
+                    <tr class="rutaArbol">
+                        <td class="label"><bean:message key="listar.odearea.cu.listado.ode.decidir.salida.param.ruta.arbol"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.rutaArbol}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.rutaArbolBackingList}">
+                                  <html:select name="form" property="rutaArbolAsArray" onmouseover="hints.show('listar.odearea.cu.listado.ode.decidir.salida.param.ruta.arbol.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="decidirSalidaRutaArbol">
+                                      <html:optionsCollection name="form" property="rutaArbolBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="rutaArbolAsArray" onmouseover="hints.show('listar.odearea.cu.listado.ode.decidir.salida.param.ruta.arbol.title')" onmouseout="hints.hide()"  styleId="decidirSalidaRutaArbol"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="nodo">
+                        <td class="label"><bean:message key="listar.odearea.cu.listado.ode.decidir.salida.param.nodo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.nodo}"/>
+                           <input type="text" name="nodo" value="${value}" onmouseover="hints.show('listar.odearea.cu.listado.ode.decidir.salida.param.nodo.title')" onmouseout="hints.hide()"  id="decidirSalidaNodo"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_DOCENTE,ROLE_EMPAQUETADOR,ROLE_CATALOGADOR,ROLE_PUBLICADOR,ROLE_ADMINISTRADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('decidirSalida')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="listar.odearea.cu.listado.ode.decidir.salida"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

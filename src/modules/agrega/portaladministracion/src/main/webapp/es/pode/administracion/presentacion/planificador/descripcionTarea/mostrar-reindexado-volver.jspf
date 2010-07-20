@@ -1,0 +1,150 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="volver" class="action">
+    <h3><bean:message key="descripcion.tarea.mostrar.reindexado.volver"/></h3>
+    <div class="trigger">
+        <html:form styleId="descripcionTareaMostrarReindexadoVolverForm" action="/DescripcionTarea/MostrarReindexadoVolver" method="post" enctype="multipart/form-data" onsubmit="return validateMostrarReindexadoVolverForm(this);">
+            <table>
+                <tbody>
+                    <tr class="grupoTrabajo">
+                        <td class="label"><bean:message key="descripcion.tarea.mostrar.reindexado.volver.param.grupo.trabajo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.grupoTrabajo}"/>
+                           <input type="text" name="grupoTrabajo" value="${value}" onmouseover="hints.show('descripcion.tarea.mostrar.reindexado.volver.param.grupo.trabajo.title')" onmouseout="hints.hide()"  id="volverGrupoTrabajo"/>
+                        </td>
+                    </tr>
+                    <tr class="trigger">
+                        <td class="label"><bean:message key="descripcion.tarea.mostrar.reindexado.volver.param.trigger"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.trigger}"/>
+                           <input type="text" name="trigger" value="${value}" onmouseover="hints.show('descripcion.tarea.mostrar.reindexado.volver.param.trigger.title')" onmouseout="hints.hide()"  id="volverTrigger"/>
+                        </td>
+                    </tr>
+                    <tr class="grupoTrigger">
+                        <td class="label"><bean:message key="descripcion.tarea.mostrar.reindexado.volver.param.grupo.trigger"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.grupoTrigger}"/>
+                           <input type="text" name="grupoTrigger" value="${value}" onmouseover="hints.show('descripcion.tarea.mostrar.reindexado.volver.param.grupo.trigger.title')" onmouseout="hints.hide()"  id="volverGrupoTrigger"/>
+                        </td>
+                    </tr>
+                    <tr class="periodicidad">
+                        <td class="label"><bean:message key="descripcion.tarea.mostrar.reindexado.volver.param.periodicidad"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.periodicidad}"/>
+                           <input type="text" name="periodicidad" value="${value}" onmouseover="hints.show('descripcion.tarea.mostrar.reindexado.volver.param.periodicidad.title')" onmouseout="hints.hide()"  id="volverPeriodicidad"/>
+                        </td>
+                    </tr>
+                    <tr class="repositorio">
+                        <td class="label"><bean:message key="descripcion.tarea.mostrar.reindexado.volver.param.repositorio"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.repositorio}"/>
+                           <input type="text" name="repositorio" value="${value}" onmouseover="hints.show('descripcion.tarea.mostrar.reindexado.volver.param.repositorio.title')" onmouseout="hints.hide()"  id="volverRepositorio"/>
+                        </td>
+                    </tr>
+                    <tr class="dia">
+                        <td class="label"><bean:message key="descripcion.tarea.mostrar.reindexado.volver.param.dia"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.dia}"/>
+                           <input type="text" name="dia" value="${value}" onmouseover="hints.show('descripcion.tarea.mostrar.reindexado.volver.param.dia.title')" onmouseout="hints.hide()"  id="volverDia"/>
+                        </td>
+                    </tr>
+                    <tr class="mes">
+                        <td class="label"><bean:message key="descripcion.tarea.mostrar.reindexado.volver.param.mes"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.mes}"/>
+                           <input type="text" name="mes" value="${value}" onmouseover="hints.show('descripcion.tarea.mostrar.reindexado.volver.param.mes.title')" onmouseout="hints.hide()"  id="volverMes"/>
+                        </td>
+                    </tr>
+                    <tr class="anio">
+                        <td class="label"><bean:message key="descripcion.tarea.mostrar.reindexado.volver.param.anio"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.anio}"/>
+                           <input type="text" name="anio" value="${value}" onmouseover="hints.show('descripcion.tarea.mostrar.reindexado.volver.param.anio.title')" onmouseout="hints.hide()"  id="volverAnio"/>
+                        </td>
+                    </tr>
+                    <tr class="hora">
+                        <td class="label"><bean:message key="descripcion.tarea.mostrar.reindexado.volver.param.hora"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.hora}"/>
+                           <input type="text" name="hora" value="${value}" onmouseover="hints.show('descripcion.tarea.mostrar.reindexado.volver.param.hora.title')" onmouseout="hints.hide()"  id="volverHora"/>
+                        </td>
+                    </tr>
+                    <tr class="minutos">
+                        <td class="label"><bean:message key="descripcion.tarea.mostrar.reindexado.volver.param.minutos"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.minutos}"/>
+                           <input type="text" name="minutos" value="${value}" onmouseover="hints.show('descripcion.tarea.mostrar.reindexado.volver.param.minutos.title')" onmouseout="hints.hide()"  id="volverMinutos"/>
+                        </td>
+                    </tr>
+                    <tr class="tipoTarea">
+                        <td class="label"><bean:message key="descripcion.tarea.mostrar.reindexado.volver.param.tipo.tarea"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipoTarea}"/>
+                           <input type="text" name="tipoTarea" value="${value}" onmouseover="hints.show('descripcion.tarea.mostrar.reindexado.volver.param.tipo.tarea.title')" onmouseout="hints.hide()"  id="volverTipoTarea"/>
+                        </td>
+                    </tr>
+                    <tr class="msgReindexado">
+                        <td class="label"><bean:message key="descripcion.tarea.mostrar.reindexado.volver.param.msg.reindexado"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.msgReindexado}"/>
+                           <input type="text" name="msgReindexado" value="${value}" onmouseover="hints.show('descripcion.tarea.mostrar.reindexado.volver.param.msg.reindexado.title')" onmouseout="hints.hide()"  id="volverMsgReindexado"/>
+                        </td>
+                    </tr>
+                    <tr class="msgNoReindexado">
+                        <td class="label"><bean:message key="descripcion.tarea.mostrar.reindexado.volver.param.msg.no.reindexado"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.msgNoReindexado}"/>
+                           <input type="text" name="msgNoReindexado" value="${value}" onmouseover="hints.show('descripcion.tarea.mostrar.reindexado.volver.param.msg.no.reindexado.title')" onmouseout="hints.hide()"  id="volverMsgNoReindexado"/>
+                        </td>
+                    </tr>
+                    <tr class="msgDescReindexado">
+                        <td class="label"><bean:message key="descripcion.tarea.mostrar.reindexado.volver.param.msg.desc.reindexado"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.msgDescReindexado}"/>
+                           <input type="text" name="msgDescReindexado" value="${value}" onmouseover="hints.show('descripcion.tarea.mostrar.reindexado.volver.param.msg.desc.reindexado.title')" onmouseout="hints.hide()"  id="volverMsgDescReindexado"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Volver')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="descripcion.tarea.mostrar.reindexado.volver"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

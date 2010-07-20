@@ -1,0 +1,51 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="rechazar.cu.rechazar.aceptar"/></h3>
+    <div class="trigger">
+        <html:form styleId="rechazarCURechazarAceptarForm" action="/RechazarCU/RechazarAceptar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="idODE">
+                        <td class="label"><bean:message key="rechazar.cu.rechazar.aceptar.param.id.ode"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idODE}"/>
+                           <input type="text" name="idODE" value="${value}" onmouseover="hints.show('rechazar.cu.rechazar.aceptar.param.id.ode.title')" onmouseout="hints.hide()"  id="aceptarIdODE"/>
+                        </td>
+                    </tr>
+                    <tr class="comentarios">
+                        <td class="label"><bean:message key="rechazar.cu.rechazar.aceptar.param.comentarios"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.comentarios}"/>
+                           <input type="text" name="comentarios" value="${value}" onmouseover="hints.show('rechazar.cu.rechazar.aceptar.param.comentarios.title')" onmouseout="hints.hide()"  id="aceptarComentarios"/>
+                        </td>
+                    </tr>
+                    <tr class="titulo">
+                        <td class="label"><bean:message key="rechazar.cu.rechazar.aceptar.param.titulo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.titulo}"/>
+                           <input type="text" name="titulo" value="${value}" onmouseover="hints.show('rechazar.cu.rechazar.aceptar.param.titulo.title')" onmouseout="hints.hide()"  id="aceptarTitulo"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR,ROLE_CATALOGADOR,ROLE_PUBLICADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="rechazar.cu.rechazar.aceptar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

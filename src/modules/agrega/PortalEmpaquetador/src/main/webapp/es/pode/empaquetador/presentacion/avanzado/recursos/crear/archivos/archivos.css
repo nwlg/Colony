@@ -1,0 +1,48 @@
+#vista.action {}
+#vista.action #form_submit {}
+
+#vista.action .vistaArbol {}
+#vista.action .vistaArbol .label {}
+#vista.action .vistaArbol .field {}
+
+#aAdir.action {}
+#aAdir.action #form_submit {}
+
+
+#eliminarTodos.action {}
+#eliminarTodos.action #form_submit {}
+
+
+#recursos.action {}
+#recursos.action #form_submit {}
+
+
+#submanifiestos.action {}
+#submanifiestos.action #form_submit {}
+
+
+#organizaciones.action {}
+#organizaciones.action #form_submit {}
+
+
+#archivos.action {}
+#archivos.action #form_submit {}
+
+
+#archivos.table {}
+#archivos.table th {}
+#archivos.table td div {}
+
+#archivos.table th.nombre {}
+#archivos.table td div.nombre {}
+
+
+#archivosSeleccionados.table {}
+#archivosSeleccionados.table th {}
+#archivosSeleccionados.table td div {}
+
+#archivosSeleccionados.table th.href {}
+#archivosSeleccionados.table td div.href {}
+
+
+

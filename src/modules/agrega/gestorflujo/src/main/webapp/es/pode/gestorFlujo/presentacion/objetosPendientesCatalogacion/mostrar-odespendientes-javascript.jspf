@@ -1,0 +1,38 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'objetos.pendientes.catalogacion.cu.mostrar.odespendientes.ver.historial.param.titulo.title':'<formatting:escape language="javascript"><bean:message key="objetos.pendientes.catalogacion.cu.mostrar.odespendientes.ver.historial.param.titulo.title"/></formatting:escape>',
+                'objetos.pendientes.catalogacion.cu.mostrar.odespendientes.ver.historial.param.id.ode.title':'<formatting:escape language="javascript"><bean:message key="objetos.pendientes.catalogacion.cu.mostrar.odespendientes.ver.historial.param.id.ode.title"/></formatting:escape>',
+                'objetos.pendientes.catalogacion.cu.mostrar.odespendientes.proponer.publicacion.ode.param.id.usuario.title':'<formatting:escape language="javascript"><bean:message key="objetos.pendientes.catalogacion.cu.mostrar.odespendientes.proponer.publicacion.ode.param.id.usuario.title"/></formatting:escape>',
+                'objetos.pendientes.catalogacion.cu.mostrar.odespendientes.proponer.publicacion.ode.param.id.ode.title':'<formatting:escape language="javascript"><bean:message key="objetos.pendientes.catalogacion.cu.mostrar.odespendientes.proponer.publicacion.ode.param.id.ode.title"/></formatting:escape>',
+                'objetos.pendientes.catalogacion.cu.mostrar.odespendientes.proponer.publicacion.ode.param.titulo.title':'<formatting:escape language="javascript"><bean:message key="objetos.pendientes.catalogacion.cu.mostrar.odespendientes.proponer.publicacion.ode.param.titulo.title"/></formatting:escape>',
+                'objetos.pendientes.catalogacion.cu.mostrar.odespendientes.rechazar.param.id.ode.title':'<formatting:escape language="javascript"><bean:message key="objetos.pendientes.catalogacion.cu.mostrar.odespendientes.rechazar.param.id.ode.title"/></formatting:escape>',
+                'objetos.pendientes.catalogacion.cu.mostrar.odespendientes.rechazar.param.titulo.title':'<formatting:escape language="javascript"><bean:message key="objetos.pendientes.catalogacion.cu.mostrar.odespendientes.rechazar.param.titulo.title"/></formatting:escape>',
+                'objetos.pendientes.catalogacion.cu.mostrar.odespendientes.rechazar.param.id.usuario.title':'<formatting:escape language="javascript"><bean:message key="objetos.pendientes.catalogacion.cu.mostrar.odespendientes.rechazar.param.id.usuario.title"/></formatting:escape>',
+                'VerHistorial':'<formatting:escape language="javascript"><bean:message key="objetos.pendientes.catalogacion.cu.mostrar.odespendientes.ver.historial.title"/></formatting:escape>',
+                'VerHistorial_no':'<formatting:escape language="javascript"><bean:message key="objetos.pendientes.catalogacion.cu.mostrar.odespendientes.ver.historial.title.notallowed"/></formatting:escape>',
+                'VerHistorial_reset':'<formatting:escape language="javascript"><bean:message key="objetos.pendientes.catalogacion.cu.mostrar.odespendientes.ver.historial.title.reset"/></formatting:escape>',
+                'VerHistorial_noreset':'<formatting:escape language="javascript"><bean:message key="objetos.pendientes.catalogacion.cu.mostrar.odespendientes.ver.historial.title.reset.not.allowed"/></formatting:escape>',
+                'ProponerPublicacionODE':'<formatting:escape language="javascript"><bean:message key="objetos.pendientes.catalogacion.cu.mostrar.odespendientes.proponer.publicacion.ode.title"/></formatting:escape>',
+                'ProponerPublicacionODE_no':'<formatting:escape language="javascript"><bean:message key="objetos.pendientes.catalogacion.cu.mostrar.odespendientes.proponer.publicacion.ode.title.notallowed"/></formatting:escape>',
+                'ProponerPublicacionODE_reset':'<formatting:escape language="javascript"><bean:message key="objetos.pendientes.catalogacion.cu.mostrar.odespendientes.proponer.publicacion.ode.title.reset"/></formatting:escape>',
+                'ProponerPublicacionODE_noreset':'<formatting:escape language="javascript"><bean:message key="objetos.pendientes.catalogacion.cu.mostrar.odespendientes.proponer.publicacion.ode.title.reset.not.allowed"/></formatting:escape>',
+                'rechazar':'<formatting:escape language="javascript"><bean:message key="objetos.pendientes.catalogacion.cu.mostrar.odespendientes.rechazar.title"/></formatting:escape>',
+                'rechazar_no':'<formatting:escape language="javascript"><bean:message key="objetos.pendientes.catalogacion.cu.mostrar.odespendientes.rechazar.title.notallowed"/></formatting:escape>',
+                'rechazar_reset':'<formatting:escape language="javascript"><bean:message key="objetos.pendientes.catalogacion.cu.mostrar.odespendientes.rechazar.title.reset"/></formatting:escape>',
+                'rechazar_noreset':'<formatting:escape language="javascript"><bean:message key="objetos.pendientes.catalogacion.cu.mostrar.odespendientes.rechazar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+</script>
+    </tiles:put>

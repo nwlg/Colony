@@ -1,0 +1,46 @@
+#asociar.action {}
+#asociar.action #form_submit {}
+
+#asociar.action .rutaPadrevo {}
+#asociar.action .rutaPadrevo .label {}
+#asociar.action .rutaPadrevo .field {}
+#asociar.action .idioma {}
+#asociar.action .idioma .label {}
+#asociar.action .idioma .field {}
+#asociar.action .nomTaxonomia {}
+#asociar.action .nomTaxonomia .label {}
+#asociar.action .nomTaxonomia .field {}
+#asociar.action .id {}
+#asociar.action .id .label {}
+#asociar.action .id .field {}
+#asociar.action .vocabName {}
+#asociar.action .vocabName .label {}
+#asociar.action .vocabName .field {}
+
+#cancelar.action {}
+#cancelar.action #form_submit {}
+
+
+#rutaPadrevo.table {}
+#rutaPadrevo.table th {}
+#rutaPadrevo.table td div {}
+
+#rutaPadrevo.table th.id {}
+#rutaPadrevo.table td div.id {}
+
+#rutaPadrevo.table th.valorTax {}
+#rutaPadrevo.table td div.valorTax {}
+
+
+#taxonesvo.table {}
+#taxonesvo.table th {}
+#taxonesvo.table td div {}
+
+#taxonesvo.table th.id {}
+#taxonesvo.table td div.id {}
+
+#taxonesvo.table th.valorTax {}
+#taxonesvo.table td div.valorTax {}
+
+
+

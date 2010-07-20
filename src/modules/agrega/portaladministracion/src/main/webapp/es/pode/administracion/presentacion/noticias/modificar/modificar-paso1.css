@@ -1,0 +1,29 @@
+#aceptar.action {}
+#aceptar.action #form_submit {}
+
+#aceptar.action .idNoticia {}
+#aceptar.action .idNoticia .label {}
+#aceptar.action .idNoticia .field {}
+#aceptar.action .imagen {}
+#aceptar.action .imagen .label {}
+#aceptar.action .imagen .field {}
+#aceptar.action .alineamiento {}
+#aceptar.action .alineamiento .label {}
+#aceptar.action .alineamiento .field {}
+#aceptar.action .estado {}
+#aceptar.action .estado .label {}
+#aceptar.action .estado .field {}
+#aceptar.action .categoria {}
+#aceptar.action .categoria .label {}
+#aceptar.action .categoria .field {}
+#aceptar.action .nombreImagen {}
+#aceptar.action .nombreImagen .label {}
+#aceptar.action .nombreImagen .field {}
+#aceptar.action .activarImagen {}
+#aceptar.action .activarImagen .label {}
+#aceptar.action .activarImagen .field {}
+#aceptar.action .nombreImagenVO {}
+#aceptar.action .nombreImagenVO .label {}
+#aceptar.action .nombreImagenVO .field {}
+
+

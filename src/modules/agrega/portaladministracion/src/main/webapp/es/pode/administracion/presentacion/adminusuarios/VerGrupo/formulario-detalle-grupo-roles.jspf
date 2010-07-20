@@ -1,0 +1,25 @@
+<div id="roles" class="table">
+    <display:table name="${form.roles}" uid="row"
+        export="false" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+
+
+        <display:column media="html"
+            headerClass="id" paramId="id"
+            sortProperty="id" sortable="true"
+            titleKey="ver.grupo.formulario.detalle.grupo.param.roles.id"
+            property="id" />
+   
+
+
+        <display:column media="html"
+            headerClass="descripcion" paramId="descripcion"
+            sortProperty="descripcion" sortable="true"
+            titleKey="ver.grupo.formulario.detalle.grupo.param.roles.descripcion"
+            property="descripcion" />
+   
+    </display:table>
+</div>
+

@@ -1,0 +1,47 @@
+#volver.action {}
+#volver.action #form_submit {}
+
+#volver.action .grupoTrabajo {}
+#volver.action .grupoTrabajo .label {}
+#volver.action .grupoTrabajo .field {}
+#volver.action .trigger {}
+#volver.action .trigger .label {}
+#volver.action .trigger .field {}
+#volver.action .grupoTrigger {}
+#volver.action .grupoTrigger .label {}
+#volver.action .grupoTrigger .field {}
+#volver.action .periodicidad {}
+#volver.action .periodicidad .label {}
+#volver.action .periodicidad .field {}
+#volver.action .repositorio {}
+#volver.action .repositorio .label {}
+#volver.action .repositorio .field {}
+#volver.action .dia {}
+#volver.action .dia .label {}
+#volver.action .dia .field {}
+#volver.action .mes {}
+#volver.action .mes .label {}
+#volver.action .mes .field {}
+#volver.action .anio {}
+#volver.action .anio .label {}
+#volver.action .anio .field {}
+#volver.action .hora {}
+#volver.action .hora .label {}
+#volver.action .hora .field {}
+#volver.action .minutos {}
+#volver.action .minutos .label {}
+#volver.action .minutos .field {}
+#volver.action .tipoTarea {}
+#volver.action .tipoTarea .label {}
+#volver.action .tipoTarea .field {}
+#volver.action .msgReindexado {}
+#volver.action .msgReindexado .label {}
+#volver.action .msgReindexado .field {}
+#volver.action .msgNoReindexado {}
+#volver.action .msgNoReindexado .label {}
+#volver.action .msgNoReindexado .field {}
+#volver.action .msgDescReindexado {}
+#volver.action .msgDescReindexado .label {}
+#volver.action .msgDescReindexado .field {}
+
+

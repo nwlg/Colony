@@ -1,0 +1,43 @@
+<%@ include file="/taglib-imports.jspf" %>
+
+<tiles:insert definition="help.layout">
+
+    <tiles:put name="title" type="string">
+        <bean:message key="online.help.title"/>
+        <bean:message key="gestor.elementos.gestor.elementos"/>
+    </tiles:put>
+
+    <tiles:put name="body" type="string">
+        <h1><bean:message key="gestor.elementos.gestor.elementos"/></h1>
+        <p>
+            <bean:message key="gestor.elementos.gestor.elementos.online.help"/>
+        </p>
+        <h2><bean:message key="gestor.elementos.gestor.elementos.vista"/></h2>
+        <p>
+            <bean:message key="gestor.elementos.gestor.elementos.vista.online.help"/>
+        </p>
+        <br/>
+            <table>
+                <tr class="even">
+                    <th><bean:message key="online.help.inputfield"/></th>
+                    <th><bean:message key="online.help.description"/></th>
+                </tr>
+                <tr class="odd">
+                    <td><bean:message key="gestor.elementos.gestor.elementos.vista.param.vista.arbol"/></td>
+                    <td><bean:message key="gestor.elementos.gestor.elementos.vista.param.vista.arbol.online.help"/></td>
+                </tr>
+            </table>
+        <h2><bean:message key="gestor.elementos.gestor.elementos.secuencia"/></h2>
+        <p>
+            <bean:message key="gestor.elementos.gestor.elementos.secuencia.online.help"/>
+        </p>
+        <br/>
+        <h2><bean:message key="gestor.elementos.gestor.elementos.vaciar.portapapeles"/></h2>
+        <p>
+            <bean:message key="gestor.elementos.gestor.elementos.vaciar.portapapeles.online.help"/>
+        </p>
+        <br/>
+    </tiles:put>
+
+</tiles:insert>
+

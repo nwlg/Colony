@@ -1,0 +1,37 @@
+<div id="listaODES" class="table">
+    <display:table name="${form.listaODES}" uid="row"
+        export="true" 
+		requestURI="${requestURI}"
+		defaultsort="1" partialList="true" size="${resultSize}"
+		pagesize="${pageSize}" sort="external">
+        
+        <display:setProperty name="export.pdf.filename" value="mostrar-odespublicados-lista-odes.pdf" />
+
+        <display:column media="xml csv excel pdf"
+            titleKey="objetos.publicados.cu.mostrar.odespublicados.param.lista.odes.id.ode"
+            autolink="true" paramId="idODE"
+            property="idODE">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="idODE" paramId="idODE"
+            sortProperty="idODE" sortable="true"
+            titleKey="objetos.publicados.cu.mostrar.odespublicados.param.lista.odes.id.ode"
+            property="idODE" />
+   
+
+        <display:column media="xml csv excel pdf"
+            titleKey="objetos.publicados.cu.mostrar.odespublicados.param.lista.odes.titulo"
+            autolink="true" paramId="titulo"
+            property="titulo">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="titulo" paramId="titulo"
+            sortProperty="titulo" sortable="true"
+            titleKey="objetos.publicados.cu.mostrar.odespublicados.param.lista.odes.titulo"
+            property="titulo" />
+   
+    </display:table>
+</div>
+

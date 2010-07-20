@@ -1,0 +1,20 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="actionComboValues" value="${form.actionComboValues}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="organizacion" value="${form.organizacion}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="controlMode" value="${form.controlMode}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="portapapeles" value="${form.portapapeles}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idCollection" value="${form.idCollection}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="grupos" value="${form.grupos}"/>
+    </c:catch>
+</div>

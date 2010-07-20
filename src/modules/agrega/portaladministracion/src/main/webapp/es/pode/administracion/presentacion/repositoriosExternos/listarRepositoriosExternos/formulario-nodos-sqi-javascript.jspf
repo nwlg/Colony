@@ -1,0 +1,41 @@
+
+    <tiles:put name="javascript" type="string">
+        <script type="text/javascript" language="Javascript1.1" src="<html:rewrite action="/formValidation"/>"></script>
+        <html:javascript formName="listarNodosSQIFormularioNodosSQIModificarNodoSQIForm" method="validateFormularioNodosSQIModificarNodoSQIForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+        <html:javascript formName="listarNodosSQIFormularioNodosSQIVerNodoSQIForm" method="validateFormularioNodosSQIVerNodoSQIForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'listar.nodos.sqi.formulario.nodos.sqi.eliminar.nodo.sqi.param.id.nodo.title':'<formatting:escape language="javascript"><bean:message key="listar.nodos.sqi.formulario.nodos.sqi.eliminar.nodo.sqi.param.id.nodo.title"/></formatting:escape>',
+                'listar.nodos.sqi.formulario.nodos.sqi.modificar.nodo.sqi.param.id.title':'<formatting:escape language="javascript"><bean:message key="listar.nodos.sqi.formulario.nodos.sqi.modificar.nodo.sqi.param.id.title"/></formatting:escape>',
+                'listar.nodos.sqi.formulario.nodos.sqi.ver.nodo.sqi.param.id.title':'<formatting:escape language="javascript"><bean:message key="listar.nodos.sqi.formulario.nodos.sqi.ver.nodo.sqi.param.id.title"/></formatting:escape>',
+                'CrearNodoSQI':'<formatting:escape language="javascript"><bean:message key="listar.nodos.sqi.formulario.nodos.sqi.crear.nodo.sqi.title"/></formatting:escape>',
+                'CrearNodoSQI_no':'<formatting:escape language="javascript"><bean:message key="listar.nodos.sqi.formulario.nodos.sqi.crear.nodo.sqi.title.notallowed"/></formatting:escape>',
+                'CrearNodoSQI_reset':'<formatting:escape language="javascript"><bean:message key="listar.nodos.sqi.formulario.nodos.sqi.crear.nodo.sqi.title.reset"/></formatting:escape>',
+                'CrearNodoSQI_noreset':'<formatting:escape language="javascript"><bean:message key="listar.nodos.sqi.formulario.nodos.sqi.crear.nodo.sqi.title.reset.not.allowed"/></formatting:escape>',
+                'EliminarNodoSQI':'<formatting:escape language="javascript"><bean:message key="listar.nodos.sqi.formulario.nodos.sqi.eliminar.nodo.sqi.title"/></formatting:escape>',
+                'EliminarNodoSQI_no':'<formatting:escape language="javascript"><bean:message key="listar.nodos.sqi.formulario.nodos.sqi.eliminar.nodo.sqi.title.notallowed"/></formatting:escape>',
+                'EliminarNodoSQI_reset':'<formatting:escape language="javascript"><bean:message key="listar.nodos.sqi.formulario.nodos.sqi.eliminar.nodo.sqi.title.reset"/></formatting:escape>',
+                'EliminarNodoSQI_noreset':'<formatting:escape language="javascript"><bean:message key="listar.nodos.sqi.formulario.nodos.sqi.eliminar.nodo.sqi.title.reset.not.allowed"/></formatting:escape>',
+                'ModificarNodoSQI':'<formatting:escape language="javascript"><bean:message key="listar.nodos.sqi.formulario.nodos.sqi.modificar.nodo.sqi.title"/></formatting:escape>',
+                'ModificarNodoSQI_no':'<formatting:escape language="javascript"><bean:message key="listar.nodos.sqi.formulario.nodos.sqi.modificar.nodo.sqi.title.notallowed"/></formatting:escape>',
+                'ModificarNodoSQI_reset':'<formatting:escape language="javascript"><bean:message key="listar.nodos.sqi.formulario.nodos.sqi.modificar.nodo.sqi.title.reset"/></formatting:escape>',
+                'ModificarNodoSQI_noreset':'<formatting:escape language="javascript"><bean:message key="listar.nodos.sqi.formulario.nodos.sqi.modificar.nodo.sqi.title.reset.not.allowed"/></formatting:escape>',
+                'VerNodoSQI':'<formatting:escape language="javascript"><bean:message key="listar.nodos.sqi.formulario.nodos.sqi.ver.nodo.sqi.title"/></formatting:escape>',
+                'VerNodoSQI_no':'<formatting:escape language="javascript"><bean:message key="listar.nodos.sqi.formulario.nodos.sqi.ver.nodo.sqi.title.notallowed"/></formatting:escape>',
+                'VerNodoSQI_reset':'<formatting:escape language="javascript"><bean:message key="listar.nodos.sqi.formulario.nodos.sqi.ver.nodo.sqi.title.reset"/></formatting:escape>',
+                'VerNodoSQI_noreset':'<formatting:escape language="javascript"><bean:message key="listar.nodos.sqi.formulario.nodos.sqi.ver.nodo.sqi.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+</script>
+    </tiles:put>

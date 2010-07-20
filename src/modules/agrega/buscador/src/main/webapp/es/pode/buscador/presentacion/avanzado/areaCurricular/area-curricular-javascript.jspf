@@ -1,0 +1,42 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'area.curricular.cu.area.curricular.selecciona.hijo.param.id.title':'<formatting:escape language="javascript"><bean:message key="area.curricular.cu.area.curricular.selecciona.hijo.param.id.title"/></formatting:escape>',
+                'area.curricular.cu.area.curricular.selecciona.hijo.param.buscador.empaquetador.title':'<formatting:escape language="javascript"><bean:message key="area.curricular.cu.area.curricular.selecciona.hijo.param.buscador.empaquetador.title"/></formatting:escape>',
+                'area.curricular.cu.area.curricular.selecciona.padre.param.id.title':'<formatting:escape language="javascript"><bean:message key="area.curricular.cu.area.curricular.selecciona.padre.param.id.title"/></formatting:escape>',
+                'area.curricular.cu.area.curricular.selecciona.padre.param.buscador.empaquetador.title':'<formatting:escape language="javascript"><bean:message key="area.curricular.cu.area.curricular.selecciona.padre.param.buscador.empaquetador.title"/></formatting:escape>',
+                'area.curricular.cu.area.curricular.volcar.area.curricular.param.area.curricular.title':'<formatting:escape language="javascript"><bean:message key="area.curricular.cu.area.curricular.volcar.area.curricular.param.area.curricular.title"/></formatting:escape>',
+                'area.curricular.cu.area.curricular.volcar.area.curricular.param.tipo.layout.buscador.title':'<formatting:escape language="javascript"><bean:message key="area.curricular.cu.area.curricular.volcar.area.curricular.param.tipo.layout.buscador.title"/></formatting:escape>',
+                'area.curricular.cu.area.curricular.cancelar.param.tipo.layout.buscador.title':'<formatting:escape language="javascript"><bean:message key="area.curricular.cu.area.curricular.cancelar.param.tipo.layout.buscador.title"/></formatting:escape>',
+                'seleccionaHijo':'<formatting:escape language="javascript"><bean:message key="area.curricular.cu.area.curricular.selecciona.hijo.title"/></formatting:escape>',
+                'seleccionaHijo_no':'<formatting:escape language="javascript"><bean:message key="area.curricular.cu.area.curricular.selecciona.hijo.title.notallowed"/></formatting:escape>',
+                'seleccionaHijo_reset':'<formatting:escape language="javascript"><bean:message key="area.curricular.cu.area.curricular.selecciona.hijo.title.reset"/></formatting:escape>',
+                'seleccionaHijo_noreset':'<formatting:escape language="javascript"><bean:message key="area.curricular.cu.area.curricular.selecciona.hijo.title.reset.not.allowed"/></formatting:escape>',
+                'seleccionaPadre':'<formatting:escape language="javascript"><bean:message key="area.curricular.cu.area.curricular.selecciona.padre.title"/></formatting:escape>',
+                'seleccionaPadre_no':'<formatting:escape language="javascript"><bean:message key="area.curricular.cu.area.curricular.selecciona.padre.title.notallowed"/></formatting:escape>',
+                'seleccionaPadre_reset':'<formatting:escape language="javascript"><bean:message key="area.curricular.cu.area.curricular.selecciona.padre.title.reset"/></formatting:escape>',
+                'seleccionaPadre_noreset':'<formatting:escape language="javascript"><bean:message key="area.curricular.cu.area.curricular.selecciona.padre.title.reset.not.allowed"/></formatting:escape>',
+                'volcarAreaCurricular':'<formatting:escape language="javascript"><bean:message key="area.curricular.cu.area.curricular.volcar.area.curricular.title"/></formatting:escape>',
+                'volcarAreaCurricular_no':'<formatting:escape language="javascript"><bean:message key="area.curricular.cu.area.curricular.volcar.area.curricular.title.notallowed"/></formatting:escape>',
+                'volcarAreaCurricular_reset':'<formatting:escape language="javascript"><bean:message key="area.curricular.cu.area.curricular.volcar.area.curricular.title.reset"/></formatting:escape>',
+                'volcarAreaCurricular_noreset':'<formatting:escape language="javascript"><bean:message key="area.curricular.cu.area.curricular.volcar.area.curricular.title.reset.not.allowed"/></formatting:escape>',
+                'cancelar':'<formatting:escape language="javascript"><bean:message key="area.curricular.cu.area.curricular.cancelar.title"/></formatting:escape>',
+                'cancelar_no':'<formatting:escape language="javascript"><bean:message key="area.curricular.cu.area.curricular.cancelar.title.notallowed"/></formatting:escape>',
+                'cancelar_reset':'<formatting:escape language="javascript"><bean:message key="area.curricular.cu.area.curricular.cancelar.title.reset"/></formatting:escape>',
+                'cancelar_noreset':'<formatting:escape language="javascript"><bean:message key="area.curricular.cu.area.curricular.cancelar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+</script>
+    </tiles:put>

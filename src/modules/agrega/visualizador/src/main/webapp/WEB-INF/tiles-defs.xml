@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+    "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+    "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+	   
+  	<definition name="menu.cabecera.vacio" page="/layout/menu-cabecera-vacio.html"/>
+
+    <definition name="menu.tile" page="/layout/menu.jsp"/>
+
+    <definition name="messages.tile" page="/layout/messages.jsp"/>
+
+    <definition name="breadcrumbs.tile" page="/layout/breadcrumbs.jsp"/>
+
+    <definition name="help.layout" page="/layout/help-layout.jsp"/>
+
+	<!-- LAYOUT PARA PREVISUALIZADOR -->
+
+	<definition name="layout-visualizaprincipal" page="/layout/layout_visualiza/layout-visualizaprincipal.jsp">
+    	<put name="title" type="string" value=""/>
+    	<put name="menu-principal" type="string" value=""/>
+    	<put name="body-vis" type="string" value=""/>
+    	<put name="messages" type="definition" value="messages.tile"/>
+    </definition>
+
+ 	
+</tiles-definitions>

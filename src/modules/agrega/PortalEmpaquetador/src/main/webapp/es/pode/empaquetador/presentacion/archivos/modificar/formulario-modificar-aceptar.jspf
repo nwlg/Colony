@@ -1,0 +1,60 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="modificar.archivo.formulario.modificar.aceptar"/></h3>
+    <div class="trigger">
+        <html:form styleId="modificarArchivoFormularioModificarAceptarForm" action="/ModificarArchivo/FormularioModificarAceptar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="nuevoNombre">
+                        <td class="label"><bean:message key="modificar.archivo.formulario.modificar.aceptar.param.nuevo.nombre"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.nuevoNombre}"/>
+                           <input type="text" name="nuevoNombre" value="${value}" onmouseover="hints.show('modificar.archivo.formulario.modificar.aceptar.param.nuevo.nombre.title')" onmouseout="hints.hide()"  id="aceptarNuevoNombre"/>
+                        </td>
+                    </tr>
+                    <tr class="archivoVO">
+                        <td class="label"><bean:message key="modificar.archivo.formulario.modificar.aceptar.param.archivo.vo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.archivoVO}"/>
+                           <input type="text" name="archivoVO" value="${value}" onmouseover="hints.show('modificar.archivo.formulario.modificar.aceptar.param.archivo.vo.title')" onmouseout="hints.hide()"  id="aceptarArchivoVO"/>
+                        </td>
+                    </tr>
+                    <tr class="action">
+                        <td class="label"><bean:message key="modificar.archivo.formulario.modificar.aceptar.param.action"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.action}"/>
+                           <input type="text" name="action" value="${value}" onmouseover="hints.show('modificar.archivo.formulario.modificar.aceptar.param.action.title')" onmouseout="hints.hide()"  id="aceptarAction"/>
+                        </td>
+                    </tr>
+                    <tr class="extension">
+                        <td class="label"><bean:message key="modificar.archivo.formulario.modificar.aceptar.param.extension"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.extension}"/>
+                           <input type="text" name="extension" value="${value}" onmouseover="hints.show('modificar.archivo.formulario.modificar.aceptar.param.extension.title')" onmouseout="hints.hide()"  id="aceptarExtension"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_DOCENTE,ROLE_ADMINISTRADOR,ROLE_CATALOGADOR,ROLE_PUBLICADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="modificar.archivo.formulario.modificar.aceptar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

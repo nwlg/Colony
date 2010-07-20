@@ -1,0 +1,5 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="espacioLibre" value="${form.espacioLibre}"/>
+    </c:catch>
+</div>

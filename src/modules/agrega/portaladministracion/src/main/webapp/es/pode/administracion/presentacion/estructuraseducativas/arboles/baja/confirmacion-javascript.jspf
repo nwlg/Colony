@@ -1,0 +1,27 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'baja.arboles.confirmacion.buscar.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="baja.arboles.confirmacion.buscar.param.idioma.buscador.title"/></formatting:escape>',
+                'baja.arboles.confirmacion.submit.param.action.title':'<formatting:escape language="javascript"><bean:message key="baja.arboles.confirmacion.submit.param.action.title"/></formatting:escape>',
+                'Buscar':'<formatting:escape language="javascript"><bean:message key="baja.arboles.confirmacion.buscar.title"/></formatting:escape>',
+                'Buscar_no':'<formatting:escape language="javascript"><bean:message key="baja.arboles.confirmacion.buscar.title.notallowed"/></formatting:escape>',
+                'Buscar_reset':'<formatting:escape language="javascript"><bean:message key="baja.arboles.confirmacion.buscar.title.reset"/></formatting:escape>',
+                'Buscar_noreset':'<formatting:escape language="javascript"><bean:message key="baja.arboles.confirmacion.buscar.title.reset.not.allowed"/></formatting:escape>',
+                'Submit':'<formatting:escape language="javascript"><bean:message key="baja.arboles.confirmacion.submit.title"/></formatting:escape>',
+                'Submit_no':'<formatting:escape language="javascript"><bean:message key="baja.arboles.confirmacion.submit.title.notallowed"/></formatting:escape>',
+                'Submit_reset':'<formatting:escape language="javascript"><bean:message key="baja.arboles.confirmacion.submit.title.reset"/></formatting:escape>',
+                'Submit_noreset':'<formatting:escape language="javascript"><bean:message key="baja.arboles.confirmacion.submit.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+</script>
+    </tiles:put>

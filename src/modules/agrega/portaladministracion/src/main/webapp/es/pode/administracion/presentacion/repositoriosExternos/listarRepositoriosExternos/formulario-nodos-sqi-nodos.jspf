@@ -1,0 +1,26 @@
+<div id="nodos" class="table">
+    <form id="nodos" name="" action="" method="post" enctype="multipart/form-data">
+    <display:table name="${form.nodos}" uid="row"
+        export="false" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:column media="html">
+            <input type="checkbox" name="idNodoRowSelectionAsArray" value="${row.idNodo}" title='<bean:message key="select.deselect.this.row"/>'/>
+        </display:column>
+
+
+        <display:column media="html"
+            headerClass="id" paramId="id"
+            sortProperty="id" sortable="true"
+            titleKey="listar.nodos.sqi.formulario.nodos.sqi.param.nodos.id"
+            property="id" />
+   
+    </display:table>
+    <c:if test="${!empty form.nodos}">
+            <input type="submit" value="<bean:message key="listar.nodos.sqi.formulario.nodos.sqi.eliminar.nodo.sqi"/>" onclick="this.form.name='listarNodosSQIFormularioNodosSQIEliminarNodoSQIForm';this.form.action='<html:rewrite action="/ListarNodosSQI/FormularioNodosSQIEliminarNodoSQI"/>';" onmouseover="hints.show('EliminarNodoSQI')" onmouseout="hints.hide()"/>
+            <input type="button" value="<bean:message key="select.deselect.all"/>" onclick="var boxes=this.form.elements['idNodoRowSelectionAsArray'];var setChecked=(boxes.length==0)?false:!boxes[0].checked;for(var i=0;i<boxes.length;i++)boxes[i].checked=setChecked;"/>
+    </c:if>
+    </form>
+</div>
+

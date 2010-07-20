@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" xmlns:lomes="http://ltsc.ieee.org/xsd/LOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3" xmlns:imsss="http://www.imsglobal.org/xsd/imsss" xmlns:adlseq="http://www.adlnet.org/xsd/adlseq_v1p3" xmlns:adlnav="http://www.adlnet.org/xsd/adlnav_v1p3" identifier="MANIFEST-9AFF8BAC67A819C826E54E040640DBFE" xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd http://ltsc.ieee.org/xsd/LOM lomCustom.xsd  http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd http://www.adlnet.org/xsd/adlseq_v1p3 adlseq_v1p3.xsd http://www.adlnet.org/xsd/adlnav_v1p3 adlnav_v1p3.xsd">
+	<metadata>
+		<schema>ADL SCORM</schema>
+		<schemaversion>2004 3rd Edition</schemaversion>
+		<lomes:lom xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="lomes:lom">
+			<lomes:general uniqueElementName="general">
+				<lomes:identifier>
+					<lomes:catalog uniqueElementName="catalog">Catálogo unificado mec-red.es-ccaa de identificación de ODE</lomes:catalog>
+					<lomes:entry uniqueElementName="entry">es_20070518_2_0030711</lomes:entry>
+				</lomes:identifier>
+				<lomes:title uniqueElementName="title">
+					<lomes:string>Los Virus</lomes:string>
+				</lomes:title>
+				<lomes:language>es</lomes:language>
+				<lomes:description>
+					<lomes:string>Se trabaja el concepto de virus, su estructura y los efectos que producen las células. Así mismo, se estudian los mecanismos defensa frente a una infección vírica haciendo mención especial en las vacunas.</lomes:string>
+				</lomes:description>
+				<lomes:keyword>
+					<lomes:string>Virus, biología, biosfera</lomes:string>
+				</lomes:keyword>
+				<lomes:coverage>
+					<lomes:string>Universal</lomes:string>
+				</lomes:coverage>
+				<lomes:structure uniqueElementName="structure">
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">hierarchical</lomes:value>
+				</lomes:structure>
+				<lomes:aggregationLevel uniqueElementName="aggregationLevel">
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">hola</lomes:value>
+				</lomes:aggregationLevel>
+			</lomes:general>
+			<lomes:lifeCycle uniqueElementName="lifeCycle">
+				<lomes:version uniqueElementName="version">
+					<lomes:string>V1.0</lomes:string>
+				</lomes:version>
+				<lomes:status uniqueElementName="status">
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">final</lomes:value>
+				</lomes:status>
+				<lomes:contribute>
+					<lomes:role uniqueElementName="role">
+						<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+						<lomes:value uniqueElementName="value">author</lomes:value>
+					</lomes:role>
+					<lomes:entity>BEGIN:VCARD VERSION:3.0 FN: Juan Antonio Muñoz López, Alfonso de Mier del Saz, Mª Rosa Leva López, Fernando Bort Misol, Carlos Muñoz Romero, Ana Belén Jiménez Sánchez EMAIL;TYPE=INTERNET:ORG:END:VCARD</lomes:entity>
+					<lomes:date uniqueElementName="date">
+						<lomes:dateTime uniqueElementName="dateTime">2006-12-01</lomes:dateTime>
+						<lomes:description>
+							<lomes:string>Fecha de creación del objeto educativo</lomes:string>
+						</lomes:description>
+					</lomes:date>
+				</lomes:contribute>
+				<lomes:contribute>
+					<lomes:role uniqueElementName="role">
+						<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+						<lomes:value uniqueElementName="value">editor</lomes:value>
+					</lomes:role>
+					<lomes:entity>BEGIN:VCARD VERSION:3.0 FN: Centro Nacional de Información y Comunicación Educativa EMAIL;TYPE=INTERNET: webmaster@cnice.mec.es ORG:Ministerio de Educación y Ciencia de España END:VCARD</lomes:entity>
+					<lomes:date uniqueElementName="date">
+						<lomes:dateTime uniqueElementName="dateTime">2006-12-01</lomes:dateTime>
+						<lomes:description>
+							<lomes:string>Fecha de publicación del objeto educativo</lomes:string>
+						</lomes:description>
+					</lomes:date>
+				</lomes:contribute>
+			</lomes:lifeCycle>
+			<lomes:metaMetadata uniqueElementName="metaMetadata">
+				<lomes:identifier>
+					<lomes:catalog uniqueElementName="catalog">Catálogo unificado mec-red.es-ccaa de identificación de ODE</lomes:catalog>
+					<lomes:entry uniqueElementName="entry">es_20070518_2_0030711-meta</lomes:entry>
+				</lomes:identifier>
+				<lomes:contribute>
+					<lomes:role uniqueElementName="role">
+						<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+						<lomes:value uniqueElementName="value">creator</lomes:value>
+					</lomes:role>
+					<lomes:entity>BEGIN:VCARD VERSION:3.0 FN: EMAIL;TYPE=INTERNET:ORG: Santillana Educación S.L. e Indra Sistemas S.A. END:VCARD</lomes:entity>
+					<lomes:date uniqueElementName="date">
+						<lomes:dateTime uniqueElementName="dateTime">2007-05-18</lomes:dateTime>
+						<lomes:description>
+							<lomes:string>Fecha de catalogación del objeto educativo</lomes:string>
+						</lomes:description>
+					</lomes:date>
+				</lomes:contribute>
+				<lomes:metadataSchema>LOM-ES V1.0</lomes:metadataSchema>
+				<lomes:language>es</lomes:language>
+			</lomes:metaMetadata>
+			<lomes:technical uniqueElementName="technical">
+				<lomes:format>application/javascript</lomes:format>
+				<lomes:format>image/gif</lomes:format>
+				<lomes:format>image/jpeg</lomes:format>
+				<lomes:format>text/css</lomes:format>
+				<lomes:format>text/html</lomes:format>
+				<lomes:size uniqueElementName="size">1540096</lomes:size>
+				<lomes:requirement>
+					<lomes:orComposite>
+						<lomes:type uniqueElementName="type">
+							<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+							<lomes:value uniqueElementName="value">browser</lomes:value>
+						</lomes:type>
+						<lomes:name uniqueElementName="name">
+							<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+							<lomes:value uniqueElementName="value">any</lomes:value>
+						</lomes:name>
+					</lomes:orComposite>
+				</lomes:requirement>
+			</lomes:technical>
+			<lomes:educational>
+				<lomes:interactivityType uniqueElementName="interactivityType">
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">mixed</lomes:value>
+				</lomes:interactivityType>
+				<lomes:learningResourceType>
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">master class</lomes:value>
+				</lomes:learningResourceType>
+				<lomes:learningResourceType>
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">photograph</lomes:value>
+				</lomes:learningResourceType>
+				<lomes:learningResourceType>
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">narrative text</lomes:value>
+				</lomes:learningResourceType>
+				<lomes:learningResourceType>
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">closed exercise or problem</lomes:value>
+				</lomes:learningResourceType>
+				<lomes:learningResourceType>
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">illustration</lomes:value>
+				</lomes:learningResourceType>
+				<lomes:interactivityLevel uniqueElementName="interactivityLevel">
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">medium</lomes:value>
+				</lomes:interactivityLevel>
+				<lomes:semanticDensity uniqueElementName="semanticDensity">
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">high</lomes:value>
+				</lomes:semanticDensity>
+				<lomes:intendedEndUserRole>
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">general public</lomes:value>
+				</lomes:intendedEndUserRole>
+				<lomes:intendedEndUserRole>
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">individual</lomes:value>
+				</lomes:intendedEndUserRole>
+				<lomes:context>
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">mixed</lomes:value>
+				</lomes:context>
+				<lomes:context>
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">mixed</lomes:value>
+				</lomes:context>
+				<lomes:context>
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">distance</lomes:value>
+				</lomes:context>
+				<lomes:typicalAgeRange>
+					<lomes:string>Para alumnos entre 12-13 años</lomes:string>
+				</lomes:typicalAgeRange>
+				<lomes:difficulty uniqueElementName="difficulty">
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">medium</lomes:value>
+				</lomes:difficulty>
+				<lomes:description>
+					<lomes:string>Que el alumno sea consciente de la necesidad de ordenar y clasificar a los seres vivos para poder estudiarlos.</lomes:string>
+				</lomes:description>
+				<lomes:language>es</lomes:language>
+			</lomes:educational>
+			<lomes:rights uniqueElementName="rights">
+				<lomes:cost uniqueElementName="cost">
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">no</lomes:value>
+				</lomes:cost>
+				<lomes:copyrightAndOtherRestrictions uniqueElementName="copyrightAndOtherRestrictions">
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">creative commons: attribution - non commercial - share alike</lomes:value>
+				</lomes:copyrightAndOtherRestrictions>
+				<lomes:description>
+					<lomes:string>La utilización de estos contenidos es universal, gratuita y abierta, siempre y cuando se trate de un uso educativo no comercial. Las acciones, productos y utilidades derivadas de su utilización no podrán, en consecuencia, generar ningún tipo de lucro. Asimismo, es obligada la referencia a la fuente.</lomes:string>
+				</lomes:description>
+				<lomes:access uniqueElementName="access">
+					<lomes:accessType uniqueElementName="accessType">
+						<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+						<lomes:value uniqueElementName="value">universal</lomes:value>
+					</lomes:accessType>
+					<lomes:description>
+						<lomes:string>No existen restricciones</lomes:string>
+					</lomes:description>
+				</lomes:access>
+			</lomes:rights>
+			<lomes:classification>
+				<lomes:purpose uniqueElementName="purpose">
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">discipline</lomes:value>
+				</lomes:purpose>
+			</lomes:classification>
+			<lomes:classification>
+				<lomes:purpose uniqueElementName="purpose">
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">educational level</lomes:value>
+				</lomes:purpose>
+			</lomes:classification>
+		</lomes:lom>
+	</metadata>
+	<organizations default="ORG-D65A0F4BB8BE011D69F39305BA1542E9">
+		<organization identifier="ORG-D65A0F4BB8BE011D69F39305BA1542E9" structure="hierarchical">
+			<title>biosfera</title>
+			<item identifier="ITEM-A7F872475E990E3FA13ECCAA204A1FAB" identifierref="RES-6ADE4171B16B41EFBDE788EA38D5EE23" isvisible="true">
+				<title>Los Virus</title>
+			</item>
+		</organization>
+	</organizations>
+	<resources>
+		<resource identifier="RES-6ADE4171B16B41EFBDE788EA38D5EE23" type="webcontent" adlcp:scormType="asset" href="contenido/contenidos7.htm">
+			<file href="contenido/contenidos7.htm"/>
+			<file href="contenido/act7.htm"/>
+			<file href="contenido/css/estilo.css"/>
+			<file href="contenido/imagenes/cuad7_small.jpg"/>
+			<file href="contenido/imagenes/vacuna3.jpg"/>
+			<file href="contenido/imagenes/virus1.gif"/>
+			<file href="contenido/imagenes/virus5.jpg"/>
+			<file href="contenido/js/animate.js"/>
+		</resource>
+	</resources>
+</manifest>

@@ -1,0 +1,33 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="modificar.grupo.resultado.modificar.grupo.aceptar"/></h3>
+    <div class="trigger">
+        <html:form styleId="modificarGrupoResultadoModificarGrupoAceptarForm" action="/ModificarGrupo/ResultadoModificarGrupoAceptar" method="post" enctype="multipart/form-data" onsubmit="return validateResultadoModificarGrupoAceptarForm(this);">
+            <table>
+                <tbody>
+                    <tr class="idModificado">
+                        <td class="label"><bean:message key="modificar.grupo.resultado.modificar.grupo.aceptar.param.id.modificado"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idModificado}"/>
+                           <input type="text" name="idModificado" value="${value}" onmouseover="hints.show('modificar.grupo.resultado.modificar.grupo.aceptar.param.id.modificado.title')" onmouseout="hints.hide()"  id="aceptarIdModificado"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="modificar.grupo.resultado.modificar.grupo.aceptar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

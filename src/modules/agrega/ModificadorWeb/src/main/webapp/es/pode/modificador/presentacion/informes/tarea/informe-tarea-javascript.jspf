@@ -1,0 +1,41 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'informe.tarea.informe.tarea.traza.param.id.title':'<formatting:escape language="javascript"><bean:message key="informe.tarea.informe.tarea.traza.param.id.title"/></formatting:escape>',
+                'informe.tarea.informe.tarea.traza.param.id.modificacion.title':'<formatting:escape language="javascript"><bean:message key="informe.tarea.informe.tarea.traza.param.id.modificacion.title"/></formatting:escape>',
+                'informe.tarea.informe.tarea.buscar.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="informe.tarea.informe.tarea.buscar.param.idioma.buscador.title"/></formatting:escape>',
+                'informe.tarea.informe.tarea.restaurar.param.id.title':'<formatting:escape language="javascript"><bean:message key="informe.tarea.informe.tarea.restaurar.param.id.title"/></formatting:escape>',
+                'informe.tarea.informe.tarea.restaurar.param.action.title':'<formatting:escape language="javascript"><bean:message key="informe.tarea.informe.tarea.restaurar.param.action.title"/></formatting:escape>',
+                'informe.tarea.informe.tarea.restaurar.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="informe.tarea.informe.tarea.restaurar.param.idioma.buscador.title"/></formatting:escape>',
+                'Traza':'<formatting:escape language="javascript"><bean:message key="informe.tarea.informe.tarea.traza.title"/></formatting:escape>',
+                'Traza_no':'<formatting:escape language="javascript"><bean:message key="informe.tarea.informe.tarea.traza.title.notallowed"/></formatting:escape>',
+                'Traza_reset':'<formatting:escape language="javascript"><bean:message key="informe.tarea.informe.tarea.traza.title.reset"/></formatting:escape>',
+                'Traza_noreset':'<formatting:escape language="javascript"><bean:message key="informe.tarea.informe.tarea.traza.title.reset.not.allowed"/></formatting:escape>',
+                'Buscar':'<formatting:escape language="javascript"><bean:message key="informe.tarea.informe.tarea.buscar.title"/></formatting:escape>',
+                'Buscar_no':'<formatting:escape language="javascript"><bean:message key="informe.tarea.informe.tarea.buscar.title.notallowed"/></formatting:escape>',
+                'Buscar_reset':'<formatting:escape language="javascript"><bean:message key="informe.tarea.informe.tarea.buscar.title.reset"/></formatting:escape>',
+                'Buscar_noreset':'<formatting:escape language="javascript"><bean:message key="informe.tarea.informe.tarea.buscar.title.reset.not.allowed"/></formatting:escape>',
+                'Restaurar':'<formatting:escape language="javascript"><bean:message key="informe.tarea.informe.tarea.restaurar.title"/></formatting:escape>',
+                'Restaurar_no':'<formatting:escape language="javascript"><bean:message key="informe.tarea.informe.tarea.restaurar.title.notallowed"/></formatting:escape>',
+                'Restaurar_reset':'<formatting:escape language="javascript"><bean:message key="informe.tarea.informe.tarea.restaurar.title.reset"/></formatting:escape>',
+                'Restaurar_noreset':'<formatting:escape language="javascript"><bean:message key="informe.tarea.informe.tarea.restaurar.title.reset.not.allowed"/></formatting:escape>',
+                'selectOrigin':'<formatting:escape language="javascript"><bean:message key="informe.tarea.informe.tarea.select.origin.title"/></formatting:escape>',
+                'selectOrigin_no':'<formatting:escape language="javascript"><bean:message key="informe.tarea.informe.tarea.select.origin.title.notallowed"/></formatting:escape>',
+                'selectOrigin_reset':'<formatting:escape language="javascript"><bean:message key="informe.tarea.informe.tarea.select.origin.title.reset"/></formatting:escape>',
+                'selectOrigin_noreset':'<formatting:escape language="javascript"><bean:message key="informe.tarea.informe.tarea.select.origin.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+</script>
+    </tiles:put>

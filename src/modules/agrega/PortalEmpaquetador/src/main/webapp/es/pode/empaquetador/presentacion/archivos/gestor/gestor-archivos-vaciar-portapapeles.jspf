@@ -1,0 +1,13 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="vaciarPortapapeles" class="action">
+    <h3><bean:message key="gestor.archivos.gestor.archivos.vaciar.portapapeles"/></h3>
+    <div class="trigger">
+        <form id="gestorArchivosGestorArchivosVaciarPortapapelesForm" action='<html:rewrite action="/GestorArchivos/GestorArchivosVaciarPortapapeles"/>' method="post">
+               <html:submit onmouseover="hints.show('Vaciar Portapapeles')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="gestor.archivos.gestor.archivos.vaciar.portapapeles"/>
+               </html:submit>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

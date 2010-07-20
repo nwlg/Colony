@@ -1,0 +1,13 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="vuelveDeClasificaciones" class="action">
+    <h3><bean:message key="ver.metadatos.clasificaciones.form.vuelve.de.clasificaciones"/></h3>
+    <div class="trigger">
+        <form id="verMetadatosClasificacionesFormVuelveDeClasificacionesForm" action='<html:rewrite action="/VerMetadatos/ClasificacionesFormVuelveDeClasificaciones"/>' method="post">
+               <html:submit onmouseover="hints.show('vuelveDeClasificaciones')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="ver.metadatos.clasificaciones.form.vuelve.de.clasificaciones"/>
+               </html:submit>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

@@ -1,0 +1,74 @@
+#cancelar.action {}
+#cancelar.action #form_submit {}
+
+
+#asociarTesauro.action {}
+#asociarTesauro.action #form_submit {}
+
+#asociarTesauro.action .id {}
+#asociarTesauro.action .id .label {}
+#asociarTesauro.action .id .field {}
+#asociarTesauro.action .nomTesauro {}
+#asociarTesauro.action .nomTesauro .label {}
+#asociarTesauro.action .nomTesauro .field {}
+#asociarTesauro.action .idioma {}
+#asociarTesauro.action .idioma .label {}
+#asociarTesauro.action .idioma .field {}
+#asociarTesauro.action .rutaPadrevo {}
+#asociarTesauro.action .rutaPadrevo .label {}
+#asociarTesauro.action .rutaPadrevo .field {}
+#asociarTesauro.action .taxonesvo {}
+#asociarTesauro.action .taxonesvo .label {}
+#asociarTesauro.action .taxonesvo .field {}
+#asociarTesauro.action .textoBusqueda {}
+#asociarTesauro.action .textoBusqueda .label {}
+#asociarTesauro.action .textoBusqueda .field {}
+
+#buscar.action {}
+#buscar.action #form_submit {}
+
+#buscar.action .taxonesvo {}
+#buscar.action .taxonesvo .label {}
+#buscar.action .taxonesvo .field {}
+#buscar.action .idioma {}
+#buscar.action .idioma .label {}
+#buscar.action .idioma .field {}
+#buscar.action .nomTesauro {}
+#buscar.action .nomTesauro .label {}
+#buscar.action .nomTesauro .field {}
+#buscar.action .rutaPadrevo {}
+#buscar.action .rutaPadrevo .label {}
+#buscar.action .rutaPadrevo .field {}
+#buscar.action .id {}
+#buscar.action .id .label {}
+#buscar.action .id .field {}
+#buscar.action .textoBusqueda {}
+#buscar.action .textoBusqueda .label {}
+#buscar.action .textoBusqueda .field {}
+#buscar.action .vocabName {}
+#buscar.action .vocabName .label {}
+#buscar.action .vocabName .field {}
+
+#rutaPadrevo.table {}
+#rutaPadrevo.table th {}
+#rutaPadrevo.table td div {}
+
+#rutaPadrevo.table th.id {}
+#rutaPadrevo.table td div.id {}
+
+#rutaPadrevo.table th.valorTax {}
+#rutaPadrevo.table td div.valorTax {}
+
+
+#taxonesvo.table {}
+#taxonesvo.table th {}
+#taxonesvo.table td div {}
+
+#taxonesvo.table th.id {}
+#taxonesvo.table td div.id {}
+
+#taxonesvo.table th.valorTax {}
+#taxonesvo.table td div.valorTax {}
+
+
+

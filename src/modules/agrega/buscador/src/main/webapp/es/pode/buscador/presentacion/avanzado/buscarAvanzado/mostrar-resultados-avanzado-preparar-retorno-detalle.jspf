@@ -1,0 +1,310 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="prepararRetornoDetalle" class="action">
+    <h3><bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle"/></h3>
+    <div class="trigger">
+        <html:form styleId="buscarAvanzadoCUMostrarResultadosAvanzadoPrepararRetornoDetalleForm" action="/BuscarAvanzadoCU/MostrarResultadosAvanzadoPrepararRetornoDetalle" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="anyoPublicacion">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.anyo.publicacion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.anyoPublicacion}"/>
+                           <input type="text" name="anyoPublicacion" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.anyo.publicacion.title')" onmouseout="hints.hide()"  id="prepararRetornoDetalleAnyoPublicacion"/>
+                        </td>
+                    </tr>
+                    <tr class="areaCurricular">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.area.curricular"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.areaCurricular}"/>
+                           <input type="text" name="areaCurricular" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.area.curricular.title')" onmouseout="hints.hide()"  id="prepararRetornoDetalleAreaCurricular"/>
+                        </td>
+                    </tr>
+                    <tr class="autor">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.autor"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.autor}"/>
+                           <input type="text" name="autor" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.autor.title')" onmouseout="hints.hide()"  id="prepararRetornoDetalleAutor"/>
+                        </td>
+                    </tr>
+                    <tr class="buscadorContenido">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.buscador.contenido"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.buscadorContenido}"/>
+                           <input type="text" name="buscadorContenido" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.buscador.contenido.title')" onmouseout="hints.hide()"  id="prepararRetornoDetalleBuscadorContenido"/>
+                        </td>
+                    </tr>
+                    <tr class="busquedaSimpleAvanzada">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.busqueda.simple.avanzada"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.busquedaSimpleAvanzada}"/>
+                           <input type="text" name="busquedaSimpleAvanzada" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.busqueda.simple.avanzada.title')" onmouseout="hints.hide()"  id="prepararRetornoDetalleBusquedaSimpleAvanzada"/>
+                        </td>
+                    </tr>
+                    <tr class="c_s_secuencia">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.c.s.secuencia"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.c_s_secuencia}"/>
+                           <input type="text" name="c_s_secuencia" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.c.s.secuencia.title')" onmouseout="hints.hide()"  id="prepararRetornoDetalleCSSecuencia"/>
+                        </td>
+                    </tr>
+                    <tr class="comunidadesSeleccionadas">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.comunidades.seleccionadas"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.comunidadesSeleccionadas}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.comunidadesSeleccionadasBackingList}">
+                                  <html:select name="form" property="comunidadesSeleccionadas" onmouseover="hints.show('buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.comunidades.seleccionadas.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="prepararRetornoDetalleComunidadesSeleccionadas">
+                                      <html:optionsCollection name="form" property="comunidadesSeleccionadasBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="comunidadesSeleccionadas" onmouseover="hints.show('buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.comunidades.seleccionadas.title')" onmouseout="hints.hide()"  styleId="prepararRetornoDetalleComunidadesSeleccionadas"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="contexto">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.contexto"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.contexto}"/>
+                           <input type="text" name="contexto" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.contexto.title')" onmouseout="hints.hide()"  id="prepararRetornoDetalleContexto"/>
+                        </td>
+                    </tr>
+                    <tr class="diaPublicacion">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.dia.publicacion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.diaPublicacion}"/>
+                           <input type="text" name="diaPublicacion" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.dia.publicacion.title')" onmouseout="hints.hide()"  id="prepararRetornoDetalleDiaPublicacion"/>
+                        </td>
+                    </tr>
+                    <tr class="edad">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.edad"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.edad}"/>
+                           <input type="text" name="edad" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.edad.title')" onmouseout="hints.hide()"  id="prepararRetornoDetalleEdad"/>
+                        </td>
+                    </tr>
+                    <tr class="enlaceComunidadesSeleccionadas">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.enlace.comunidades.seleccionadas"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.enlaceComunidadesSeleccionadas}"/>
+                           <input type="text" name="enlaceComunidadesSeleccionadas" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.enlace.comunidades.seleccionadas.title')" onmouseout="hints.hide()"  id="prepararRetornoDetalleEnlaceComunidadesSeleccionadas"/>
+                        </td>
+                    </tr>
+                    <tr class="enlaceTodoAgrega">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.enlace.todo.agrega"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.enlaceTodoAgrega}"/>
+                           <input type="text" name="enlaceTodoAgrega" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.enlace.todo.agrega.title')" onmouseout="hints.hide()"  id="prepararRetornoDetalleEnlaceTodoAgrega"/>
+                        </td>
+                    </tr>
+                    <tr class="formato">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.formato"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.formato}"/>
+                           <input type="text" name="formato" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.formato.title')" onmouseout="hints.hide()"  id="prepararRetornoDetalleFormato"/>
+                        </td>
+                    </tr>
+                    <tr class="idTesauro">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.id.tesauro"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idTesauro}"/>
+                           <input type="text" name="idTesauro" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.id.tesauro.title')" onmouseout="hints.hide()"  id="prepararRetornoDetalleIdTesauro"/>
+                        </td>
+                    </tr>
+                    <tr class="idTesauroSugerencia">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.id.tesauro.sugerencia"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idTesauroSugerencia}"/>
+                           <input type="text" name="idTesauroSugerencia" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.id.tesauro.sugerencia.title')" onmouseout="hints.hide()"  id="prepararRetornoDetalleIdTesauroSugerencia"/>
+                        </td>
+                    </tr>
+                    <tr class="identificadorODE">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.identificador.ode"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.identificadorODE}"/>
+                           <input type="text" name="identificadorODE" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.identificador.ode.title')" onmouseout="hints.hide()"  id="prepararRetornoDetalleIdentificadorODE"/>
+                        </td>
+                    </tr>
+                    <tr class="idiomaBuscador">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.idioma.buscador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idiomaBuscador}"/>
+                           <input type="text" name="idiomaBuscador" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.idioma.buscador.title')" onmouseout="hints.hide()"  id="prepararRetornoDetalleIdiomaBuscador"/>
+                        </td>
+                    </tr>
+                    <tr class="keyword">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.keyword"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.keyword}"/>
+                           <input type="text" name="keyword" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.keyword.title')" onmouseout="hints.hide()"  id="prepararRetornoDetalleKeyword"/>
+                        </td>
+                    </tr>
+                    <tr class="listaIds">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.lista.ids"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.listaIds}"/>
+                           <input type="text" name="listaIds" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.lista.ids.title')" onmouseout="hints.hide()"  id="prepararRetornoDetalleListaIds"/>
+                        </td>
+                    </tr>
+                    <tr class="mesPublicacion">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.mes.publicacion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.mesPublicacion}"/>
+                           <input type="text" name="mesPublicacion" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.mes.publicacion.title')" onmouseout="hints.hide()"  id="prepararRetornoDetalleMesPublicacion"/>
+                        </td>
+                    </tr>
+                    <tr class="nivelAgregacion">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.nivel.agregacion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.nivelAgregacion}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.nivelAgregacionBackingList}">
+                                  <html:select name="form" property="nivelAgregacion" onmouseover="hints.show('buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.nivel.agregacion.title')" onmouseout="hints.hide()"  styleId="prepararRetornoDetalleNivelAgregacion">
+                                      <html:optionsCollection name="form" property="nivelAgregacionBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="nivelAgregacion" onmouseover="hints.show('buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.nivel.agregacion.title')" onmouseout="hints.hide()"  styleId="prepararRetornoDetalleNivelAgregacion"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="nodoDestino">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.nodo.destino"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.nodoDestino}"/>
+                           <input type="text" name="nodoDestino" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.nodo.destino.title')" onmouseout="hints.hide()"  id="prepararRetornoDetalleNodoDestino"/>
+                        </td>
+                    </tr>
+                    <tr class="nomTesauros">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.nom.tesauros"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.nomTesauros}"/>
+                           <input type="text" name="nomTesauros" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.nom.tesauros.title')" onmouseout="hints.hide()"  id="prepararRetornoDetalleNomTesauros"/>
+                        </td>
+                    </tr>
+                    <tr class="pagina">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.pagina"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.pagina}"/>
+                           <input type="text" name="pagina" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.pagina.title')" onmouseout="hints.hide()"  id="prepararRetornoDetallePagina"/>
+                        </td>
+                    </tr>
+                    <tr class="procesoCognitivo">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.proceso.cognitivo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.procesoCognitivo}"/>
+                           <input type="text" name="procesoCognitivo" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.proceso.cognitivo.title')" onmouseout="hints.hide()"  id="prepararRetornoDetalleProcesoCognitivo"/>
+                        </td>
+                    </tr>
+                    <tr class="recurso">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.recurso"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.recurso}"/>
+                           <input type="text" name="recurso" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.recurso.title')" onmouseout="hints.hide()"  id="prepararRetornoDetalleRecurso"/>
+                        </td>
+                    </tr>
+                    <tr class="tipoBusqueda">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.tipo.busqueda"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipoBusqueda}"/>
+                           <input type="text" name="tipoBusqueda" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.tipo.busqueda.title')" onmouseout="hints.hide()"  id="prepararRetornoDetalleTipoBusqueda"/>
+                        </td>
+                    </tr>
+                    <tr class="tipoLayoutBuscador">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.tipo.layout.buscador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipoLayoutBuscador}"/>
+                           <input type="text" name="tipoLayoutBuscador" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.tipo.layout.buscador.title')" onmouseout="hints.hide()"  id="prepararRetornoDetalleTipoLayoutBuscador"/>
+                        </td>
+                    </tr>
+                    <tr class="tipoVisualizacion">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.tipo.visualizacion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipoVisualizacion}"/>
+                           <input type="text" name="tipoVisualizacion" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.tipo.visualizacion.title')" onmouseout="hints.hide()"  id="prepararRetornoDetalleTipoVisualizacion"/>
+                        </td>
+                    </tr>
+                    <tr class="valoracion">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.valoracion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.valoracion}"/>
+                           <input type="text" name="valoracion" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.param.valoracion.title')" onmouseout="hints.hide()"  id="prepararRetornoDetalleValoracion"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('prepararRetornoDetalle')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

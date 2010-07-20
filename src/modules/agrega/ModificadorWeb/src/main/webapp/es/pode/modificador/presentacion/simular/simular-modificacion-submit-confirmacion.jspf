@@ -1,0 +1,60 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="submitConfirmacion" class="action">
+    <h3><bean:message key="simular.modificacion.simular.modificacion.submit.confirmacion"/></h3>
+    <div class="trigger">
+        <html:form styleId="simularModificacionSimularModificacionSubmitConfirmacionForm" action="/SimularModificacion/SimularModificacionSubmitConfirmacion" method="post" enctype="multipart/form-data" onsubmit="return validateSimularModificacionSubmitConfirmacionForm(this);">
+            <table>
+                <tbody>
+                    <tr class="action">
+                        <td class="label"><bean:message key="simular.modificacion.simular.modificacion.submit.confirmacion.param.action"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.action}"/>
+                           <input type="text" name="action" value="${value}" onmouseover="hints.show('simular.modificacion.simular.modificacion.submit.confirmacion.param.action.title')" onmouseout="hints.hide()"  id="submitConfirmacionAction"/>
+                        </td>
+                    </tr>
+                    <tr class="idModificacion">
+                        <td class="label"><bean:message key="simular.modificacion.simular.modificacion.submit.confirmacion.param.id.modificacion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idModificacion}"/>
+                           <input type="text" name="idModificacion" value="${value}" onmouseover="hints.show('simular.modificacion.simular.modificacion.submit.confirmacion.param.id.modificacion.title')" onmouseout="hints.hide()"  id="submitConfirmacionIdModificacion"/>
+                        </td>
+                    </tr>
+                    <tr class="resultados">
+                        <td class="label"><bean:message key="simular.modificacion.simular.modificacion.submit.confirmacion.param.resultados"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.resultados}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.resultadosBackingList}">
+                                  <html:select name="form" property="resultados" onmouseover="hints.show('simular.modificacion.simular.modificacion.submit.confirmacion.param.resultados.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="submitConfirmacionResultados">
+                                      <html:optionsCollection name="form" property="resultadosBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="resultados" onmouseover="hints.show('simular.modificacion.simular.modificacion.submit.confirmacion.param.resultados.title')" onmouseout="hints.hide()"  styleId="submitConfirmacionResultados"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR,ROLE_ADMINISTRADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('submitConfirmacion')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="simular.modificacion.simular.modificacion.submit.confirmacion"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

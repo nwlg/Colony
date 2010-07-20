@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<MenuConfig>
+
+    <Displayers>
+        <Displayer name="listMenu" type="net.sf.navigator.displayer.ListMenuDisplayer"/>
+    </Displayers>
+
+    <Menus>
+        <Menu name="inicio.catalogador.title" title="inicio.catalogador.title" tooltip="inicio.catalogador.online.help">
+            <Item name="catalogador.basico.title" title="catalogador.basico.title" tooltip="catalogador.basico.online.help">
+                            <Item name="taxonomias.title" title="taxonomias.title" tooltip="taxonomias.online.help">
+                                    <Item name="detalle.clasificacion.title" title="detalle.clasificacion.title" tooltip="detalle.clasificacion.online.help">
+                                            <Item name="clasificacion.title" title="clasificacion.title" tooltip="clasificacion.online.help">
+                                                    <Item name="catalogador.avanzado.title" title="catalogador.avanzado.title" tooltip="catalogador.avanzado.online.help">
+                                                            <Item name="general.title" title="general.title" tooltip="general.online.help">
+                                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                    </Item>
+                                </Item>
+                                                            <Item name="anotacion.title" title="anotacion.title" tooltip="anotacion.online.help">
+                                                                    <Item name="detalle.anotacion.cu.title" title="detalle.anotacion.cu.title" tooltip="detalle.anotacion.cu.online.help">
+                                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                        </Item>
+                                    </Item>
+                                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                    </Item>
+                                </Item>
+                                                            <Item name="relacion.title" title="relacion.title" tooltip="relacion.online.help">
+                                                                    <Item name="detalle.relacion.cu.title" title="detalle.relacion.cu.title" tooltip="detalle.relacion.cu.online.help">
+                                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                        </Item>
+                                    </Item>
+                                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                    </Item>
+                                </Item>
+                                                            <Item name="derechos.title" title="derechos.title" tooltip="derechos.online.help">
+                                                                    <Item name="tesauros.title" title="tesauros.title" tooltip="tesauros.online.help" action="/Tesauros/Tesauros">
+                                    </Item>
+                                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                    </Item>
+                                </Item>
+                                                            <Item name="uso.educativo.title" title="uso.educativo.title" tooltip="uso.educativo.online.help">
+                                                                    <Item name="detalle.uso.edu.title" title="detalle.uso.edu.title" tooltip="detalle.uso.edu.online.help">
+                                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                        </Item>
+                                    </Item>
+                                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                    </Item>
+                                </Item>
+                                                            <Item name="tecnica.title" title="tecnica.title" tooltip="tecnica.online.help">
+                                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                    </Item>
+                                </Item>
+                                                            <Item name="meta.metadatos.title" title="meta.metadatos.title" tooltip="meta.metadatos.online.help">
+                                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                    </Item>
+                                </Item>
+                                                            <Item name="ciclo.de.vida.title" title="ciclo.de.vida.title" tooltip="ciclo.de.vida.online.help">
+                                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                    </Item>
+                                </Item>
+                                                            <Item name="volver.title" title="volver.title" tooltip="volver.online.help">
+                                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                    </Item>
+                                                                    <Item name="catalogador.basic.plus.title" title="catalogador.basic.plus.title" tooltip="catalogador.basic.plus.online.help">
+                                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                        </Item>
+                                    </Item>
+                                </Item>
+                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                </Item>
+                            </Item>
+                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                            </Item>
+                        </Item>
+                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                        </Item>
+                                            <Item name="catalogador.avanzado.title" title="catalogador.avanzado.title" tooltip="catalogador.avanzado.online.help">
+                                                    <Item name="general.title" title="general.title" tooltip="general.online.help">
+                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                </Item>
+                            </Item>
+                                                    <Item name="clasificacion.title" title="clasificacion.title" tooltip="clasificacion.online.help">
+                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                </Item>
+                            </Item>
+                                                    <Item name="anotacion.title" title="anotacion.title" tooltip="anotacion.online.help">
+                                                            <Item name="detalle.anotacion.cu.title" title="detalle.anotacion.cu.title" tooltip="detalle.anotacion.cu.online.help">
+                                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                    </Item>
+                                </Item>
+                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                </Item>
+                            </Item>
+                                                    <Item name="relacion.title" title="relacion.title" tooltip="relacion.online.help">
+                                                            <Item name="detalle.relacion.cu.title" title="detalle.relacion.cu.title" tooltip="detalle.relacion.cu.online.help">
+                                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                    </Item>
+                                </Item>
+                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                </Item>
+                            </Item>
+                                                    <Item name="derechos.title" title="derechos.title" tooltip="derechos.online.help">
+                                                            <Item name="tesauros.title" title="tesauros.title" tooltip="tesauros.online.help" action="/Tesauros/Tesauros">
+                                </Item>
+                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                </Item>
+                            </Item>
+                                                    <Item name="uso.educativo.title" title="uso.educativo.title" tooltip="uso.educativo.online.help">
+                                                            <Item name="detalle.uso.edu.title" title="detalle.uso.edu.title" tooltip="detalle.uso.edu.online.help">
+                                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                    </Item>
+                                </Item>
+                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                </Item>
+                            </Item>
+                                                    <Item name="tecnica.title" title="tecnica.title" tooltip="tecnica.online.help">
+                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                </Item>
+                            </Item>
+                                                    <Item name="meta.metadatos.title" title="meta.metadatos.title" tooltip="meta.metadatos.online.help">
+                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                </Item>
+                            </Item>
+                                                    <Item name="ciclo.de.vida.title" title="ciclo.de.vida.title" tooltip="ciclo.de.vida.online.help">
+                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                </Item>
+                            </Item>
+                                                    <Item name="volver.title" title="volver.title" tooltip="volver.online.help">
+                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                </Item>
+                                                            <Item name="catalogador.basic.plus.title" title="catalogador.basic.plus.title" tooltip="catalogador.basic.plus.online.help">
+                                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                    </Item>
+                                </Item>
+                            </Item>
+                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                            </Item>
+                        </Item>
+                    </Item>
+                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                    </Item>
+                                    <Item name="catalogador.basic.plus.title" title="catalogador.basic.plus.title" tooltip="catalogador.basic.plus.online.help">
+                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                        </Item>
+                    </Item>
+                </Item>
+                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                </Item>
+            </Item>
+            <Item name="catalogador.avanzado.title" title="catalogador.avanzado.title" tooltip="catalogador.avanzado.online.help">
+                            <Item name="general.title" title="general.title" tooltip="general.online.help">
+                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                    </Item>
+                </Item>
+                            <Item name="clasificacion.title" title="clasificacion.title" tooltip="clasificacion.online.help">
+                                    <Item name="detalle.clasificacion.title" title="detalle.clasificacion.title" tooltip="detalle.clasificacion.online.help">
+                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                        </Item>
+                    </Item>
+                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                    </Item>
+                </Item>
+                            <Item name="anotacion.title" title="anotacion.title" tooltip="anotacion.online.help">
+                                    <Item name="detalle.anotacion.cu.title" title="detalle.anotacion.cu.title" tooltip="detalle.anotacion.cu.online.help">
+                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                        </Item>
+                    </Item>
+                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                    </Item>
+                </Item>
+                            <Item name="relacion.title" title="relacion.title" tooltip="relacion.online.help">
+                                    <Item name="detalle.relacion.cu.title" title="detalle.relacion.cu.title" tooltip="detalle.relacion.cu.online.help">
+                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                        </Item>
+                    </Item>
+                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                    </Item>
+                </Item>
+                            <Item name="derechos.title" title="derechos.title" tooltip="derechos.online.help">
+                                    <Item name="tesauros.title" title="tesauros.title" tooltip="tesauros.online.help">
+                                            <Item name="detalle.clasificacion.title" title="detalle.clasificacion.title" tooltip="detalle.clasificacion.online.help">
+                                                    <Item name="clasificacion.title" title="clasificacion.title" tooltip="clasificacion.online.help">
+                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                </Item>
+                            </Item>
+                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                            </Item>
+                        </Item>
+                    </Item>
+                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                    </Item>
+                </Item>
+                            <Item name="uso.educativo.title" title="uso.educativo.title" tooltip="uso.educativo.online.help">
+                                    <Item name="detalle.uso.edu.title" title="detalle.uso.edu.title" tooltip="detalle.uso.edu.online.help">
+                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                        </Item>
+                    </Item>
+                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                    </Item>
+                </Item>
+                            <Item name="tecnica.title" title="tecnica.title" tooltip="tecnica.online.help">
+                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                    </Item>
+                </Item>
+                            <Item name="meta.metadatos.title" title="meta.metadatos.title" tooltip="meta.metadatos.online.help">
+                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                    </Item>
+                </Item>
+                            <Item name="ciclo.de.vida.title" title="ciclo.de.vida.title" tooltip="ciclo.de.vida.online.help">
+                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                    </Item>
+                </Item>
+                            <Item name="volver.title" title="volver.title" tooltip="volver.online.help">
+                                    <Item name="catalogador.basico.title" title="catalogador.basico.title" tooltip="catalogador.basico.online.help">
+                                            <Item name="taxonomias.title" title="taxonomias.title" tooltip="taxonomias.online.help">
+                                                    <Item name="detalle.clasificacion.title" title="detalle.clasificacion.title" tooltip="detalle.clasificacion.online.help">
+                                                            <Item name="clasificacion.title" title="clasificacion.title" tooltip="clasificacion.online.help">
+                                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                    </Item>
+                                </Item>
+                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                </Item>
+                            </Item>
+                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                            </Item>
+                                                    <Item name="catalogador.basic.plus.title" title="catalogador.basic.plus.title" tooltip="catalogador.basic.plus.online.help">
+                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                </Item>
+                            </Item>
+                        </Item>
+                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                        </Item>
+                    </Item>
+                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                    </Item>
+                                    <Item name="catalogador.basic.plus.title" title="catalogador.basic.plus.title" tooltip="catalogador.basic.plus.online.help">
+                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                        </Item>
+                                            <Item name="taxonomias.title" title="taxonomias.title" tooltip="taxonomias.online.help">
+                                                    <Item name="catalogador.basico.title" title="catalogador.basico.title" tooltip="catalogador.basico.online.help">
+                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                </Item>
+                            </Item>
+                                                    <Item name="detalle.clasificacion.title" title="detalle.clasificacion.title" tooltip="detalle.clasificacion.online.help">
+                                                            <Item name="clasificacion.title" title="clasificacion.title" tooltip="clasificacion.online.help">
+                                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                    </Item>
+                                </Item>
+                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                </Item>
+                            </Item>
+                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                            </Item>
+                        </Item>
+                    </Item>
+                </Item>
+                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                </Item>
+            </Item>
+            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+            </Item>
+            <Item name="catalogador.basic.plus.title" title="catalogador.basic.plus.title" tooltip="catalogador.basic.plus.online.help">
+                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                </Item>
+                            <Item name="taxonomias.title" title="taxonomias.title" tooltip="taxonomias.online.help">
+                                    <Item name="catalogador.basico.title" title="catalogador.basico.title" tooltip="catalogador.basico.online.help">
+                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                        </Item>
+                    </Item>
+                                    <Item name="detalle.clasificacion.title" title="detalle.clasificacion.title" tooltip="detalle.clasificacion.online.help">
+                                            <Item name="clasificacion.title" title="clasificacion.title" tooltip="clasificacion.online.help">
+                                                    <Item name="catalogador.avanzado.title" title="catalogador.avanzado.title" tooltip="catalogador.avanzado.online.help">
+                                                            <Item name="general.title" title="general.title" tooltip="general.online.help">
+                                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                    </Item>
+                                </Item>
+                                                            <Item name="anotacion.title" title="anotacion.title" tooltip="anotacion.online.help">
+                                                                    <Item name="detalle.anotacion.cu.title" title="detalle.anotacion.cu.title" tooltip="detalle.anotacion.cu.online.help">
+                                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                        </Item>
+                                    </Item>
+                                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                    </Item>
+                                </Item>
+                                                            <Item name="relacion.title" title="relacion.title" tooltip="relacion.online.help">
+                                                                    <Item name="detalle.relacion.cu.title" title="detalle.relacion.cu.title" tooltip="detalle.relacion.cu.online.help">
+                                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                        </Item>
+                                    </Item>
+                                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                    </Item>
+                                </Item>
+                                                            <Item name="derechos.title" title="derechos.title" tooltip="derechos.online.help">
+                                                                    <Item name="tesauros.title" title="tesauros.title" tooltip="tesauros.online.help" action="/Tesauros/Tesauros">
+                                    </Item>
+                                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                    </Item>
+                                </Item>
+                                                            <Item name="uso.educativo.title" title="uso.educativo.title" tooltip="uso.educativo.online.help">
+                                                                    <Item name="detalle.uso.edu.title" title="detalle.uso.edu.title" tooltip="detalle.uso.edu.online.help">
+                                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                        </Item>
+                                    </Item>
+                                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                    </Item>
+                                </Item>
+                                                            <Item name="tecnica.title" title="tecnica.title" tooltip="tecnica.online.help">
+                                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                    </Item>
+                                </Item>
+                                                            <Item name="meta.metadatos.title" title="meta.metadatos.title" tooltip="meta.metadatos.online.help">
+                                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                    </Item>
+                                </Item>
+                                                            <Item name="ciclo.de.vida.title" title="ciclo.de.vida.title" tooltip="ciclo.de.vida.online.help">
+                                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                    </Item>
+                                </Item>
+                                                            <Item name="volver.title" title="volver.title" tooltip="volver.online.help">
+                                                                    <Item name="catalogador.basico.title" title="catalogador.basico.title" tooltip="catalogador.basico.online.help">
+                                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                        </Item>
+                                    </Item>
+                                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                    </Item>
+                                </Item>
+                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                </Item>
+                            </Item>
+                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                            </Item>
+                        </Item>
+                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                        </Item>
+                                            <Item name="catalogador.avanzado.title" title="catalogador.avanzado.title" tooltip="catalogador.avanzado.online.help">
+                                                    <Item name="general.title" title="general.title" tooltip="general.online.help">
+                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                </Item>
+                            </Item>
+                                                    <Item name="clasificacion.title" title="clasificacion.title" tooltip="clasificacion.online.help">
+                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                </Item>
+                            </Item>
+                                                    <Item name="anotacion.title" title="anotacion.title" tooltip="anotacion.online.help">
+                                                            <Item name="detalle.anotacion.cu.title" title="detalle.anotacion.cu.title" tooltip="detalle.anotacion.cu.online.help">
+                                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                    </Item>
+                                </Item>
+                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                </Item>
+                            </Item>
+                                                    <Item name="relacion.title" title="relacion.title" tooltip="relacion.online.help">
+                                                            <Item name="detalle.relacion.cu.title" title="detalle.relacion.cu.title" tooltip="detalle.relacion.cu.online.help">
+                                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                    </Item>
+                                </Item>
+                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                </Item>
+                            </Item>
+                                                    <Item name="derechos.title" title="derechos.title" tooltip="derechos.online.help">
+                                                            <Item name="tesauros.title" title="tesauros.title" tooltip="tesauros.online.help" action="/Tesauros/Tesauros">
+                                </Item>
+                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                </Item>
+                            </Item>
+                                                    <Item name="uso.educativo.title" title="uso.educativo.title" tooltip="uso.educativo.online.help">
+                                                            <Item name="detalle.uso.edu.title" title="detalle.uso.edu.title" tooltip="detalle.uso.edu.online.help">
+                                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                    </Item>
+                                </Item>
+                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                </Item>
+                            </Item>
+                                                    <Item name="tecnica.title" title="tecnica.title" tooltip="tecnica.online.help">
+                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                </Item>
+                            </Item>
+                                                    <Item name="meta.metadatos.title" title="meta.metadatos.title" tooltip="meta.metadatos.online.help">
+                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                </Item>
+                            </Item>
+                                                    <Item name="ciclo.de.vida.title" title="ciclo.de.vida.title" tooltip="ciclo.de.vida.online.help">
+                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                </Item>
+                            </Item>
+                                                    <Item name="volver.title" title="volver.title" tooltip="volver.online.help">
+                                                            <Item name="catalogador.basico.title" title="catalogador.basico.title" tooltip="catalogador.basico.online.help">
+                                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                    </Item>
+                                </Item>
+                                                            <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                                </Item>
+                            </Item>
+                                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                            </Item>
+                        </Item>
+                    </Item>
+                                    <Item name="inicio.portal.title" title="inicio.portal.title" tooltip="inicio.portal.online.help" action="/InicioPortal/InicioPortal">
+                    </Item>
+                </Item>
+            </Item>
+        </Menu>
+    </Menus>
+
+</MenuConfig>

@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="organizaciones" class="action">
+    <h3><bean:message key="gestor.archivos.gestor.archivos.organizaciones"/></h3>
+    <div class="trigger">
+        <form id="gestorArchivosGestorArchivosOrganizacionesForm" action='<html:rewrite action="/GestorArchivos/GestorArchivosOrganizaciones"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_DOCENTE,ROLE_ADMINISTRADOR,ROLE_CATALOGADOR,ROLE_PUBLICADOR">
+               <html:submit onmouseover="hints.show('Organizaciones')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="gestor.archivos.gestor.archivos.organizaciones"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

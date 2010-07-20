@@ -1,0 +1,23 @@
+<div id="modificaciones" class="table">
+    <display:table name="${form.modificaciones}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="listado-modificaciones.pdf" />
+
+        <display:column media="xml csv excel pdf"
+            titleKey="modificaciones.ejecutandose.listado.param.modificaciones.nombre"
+            autolink="true" paramId="nombre"
+            property="nombre">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="nombre" paramId="nombre"
+            sortProperty="nombre" sortable="true"
+            titleKey="modificaciones.ejecutandose.listado.param.modificaciones.nombre"
+            property="nombre" />
+   
+    </display:table>
+</div>
+

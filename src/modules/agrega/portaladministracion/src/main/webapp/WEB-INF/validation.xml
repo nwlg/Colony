@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE form-validation PUBLIC
+    "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1//EN"
+    "http://jakarta.apache.org/commons/dtds/validator_1_1.dtd">
+
+<form-validation>
+
+    <formset>
+    
+
+        <form name="noticiasNoticiasModificarForm">
+            <field property="idNoticia" depends="long">
+
+                <arg position="0" key="noticias.noticias.modificar.param.id.noticia" />
+            </field>
+        </form>
+        <form name="noticiasNoticiasVerNotiForm">
+            <field property="idNoticia" depends="long">
+
+                <arg position="0" key="noticias.noticias.ver.noti.param.id.noticia" />
+            </field>
+        </form>
+        <form name="crearNoticiaFormularioValidaForm">
+            <field property="alineamiento" depends="integer">
+
+                <arg position="0" key="crear.noticia.formulario.valida.param.alineamiento" />
+            </field>
+            <field property="activarImagen" depends="integer">
+
+                <arg position="0" key="crear.noticia.formulario.valida.param.activar.imagen" />
+            </field>
+            <field property="categoria" depends="long">
+
+                <arg position="0" key="crear.noticia.formulario.valida.param.categoria" />
+            </field>
+        </form>
+        <form name="crearNoticiaFormularioCrearValidarFormuForm">
+            <field property="alineamiento" depends="integer">
+
+                <arg position="0" key="crear.noticia.formulario.crear.validar.formu.param.alineamiento" />
+            </field>
+            <field property="activarImagen" depends="integer">
+
+                <arg position="0" key="crear.noticia.formulario.crear.validar.formu.param.activar.imagen" />
+            </field>
+            <field property="categoria" depends="long">
+
+                <arg position="0" key="crear.noticia.formulario.crear.validar.formu.param.categoria" />
+            </field>
+        </form>
+        <form name="crearNoticiaFormularioCrearVolverForm">
+            <field property="alineamiento" depends="integer">
+
+                <arg position="0" key="crear.noticia.formulario.crear.volver.param.alineamiento" />
+            </field>
+            <field property="categoria" depends="long">
+
+                <arg position="0" key="crear.noticia.formulario.crear.volver.param.categoria" />
+            </field>
+            <field property="activarImagen" depends="integer">
+
+                <arg position="0" key="crear.noticia.formulario.crear.volver.param.activar.imagen" />
+            </field>
+        </form>
+        <form name="modificarNoticiaModificarPaso2VolverForm">
+            <field property="categoria" depends="long">
+
+                <arg position="0" key="modificar.noticia.modificar.paso2.volver.param.categoria" />
+            </field>
+            <field property="alineamiento" depends="integer">
+
+                <arg position="0" key="modificar.noticia.modificar.paso2.volver.param.alineamiento" />
+            </field>
+            <field property="activarImagen" depends="integer">
+
+                <arg position="0" key="modificar.noticia.modificar.paso2.volver.param.activar.imagen" />
+            </field>
+        </form>
+        <form name="modificarNoticiaModificarPaso2ValidarFormularioForm">
+            <field property="alineamiento" depends="integer">
+
+                <arg position="0" key="modificar.noticia.modificar.paso2.validar.formulario.param.alineamiento" />
+            </field>
+            <field property="idNoticia" depends="long">
+
+                <arg position="0" key="modificar.noticia.modificar.paso2.validar.formulario.param.id.noticia" />
+            </field>
+            <field property="activarImagen" depends="integer">
+
+                <arg position="0" key="modificar.noticia.modificar.paso2.validar.formulario.param.activar.imagen" />
+            </field>
+            <field property="categoria" depends="long">
+
+                <arg position="0" key="modificar.noticia.modificar.paso2.validar.formulario.param.categoria" />
+            </field>
+        </form>
+        <form name="modificarNoticiaModificarPaso1AceptarForm">
+            <field property="alineamiento" depends="integer">
+
+                <arg position="0" key="modificar.noticia.modificar.paso1.aceptar.param.alineamiento" />
+            </field>
+            <field property="idNoticia" depends="long">
+
+                <arg position="0" key="modificar.noticia.modificar.paso1.aceptar.param.id.noticia" />
+            </field>
+            <field property="activarImagen" depends="integer">
+
+                <arg position="0" key="modificar.noticia.modificar.paso1.aceptar.param.activar.imagen" />
+            </field>
+            <field property="categoria" depends="long">
+
+                <arg position="0" key="modificar.noticia.modificar.paso1.aceptar.param.categoria" />
+            </field>
+        </form>
+        <form name="verNoticiaFormularioUnoSiguienteForm">
+            <field property="categoria" depends="long">
+
+                <arg position="0" key="ver.noticia.formulario.uno.siguiente.param.categoria" />
+            </field>
+            <field property="idNoticia" depends="long">
+
+                <arg position="0" key="ver.noticia.formulario.uno.siguiente.param.id.noticia" />
+            </field>
+        </form>
+        <form name="listarTareasEjecutadasListarInformeForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="listar.tareas.ejecutadas.listar.informe.param.id" />
+            </field>
+        </form>
+        <form name="crearTareaFormularioInicioCrearTareaForm">
+            <field property="trabajo" depends="required">
+
+                <arg position="0" key="crear.tarea.formulario.inicio.crear.tarea.param.trabajo" />
+            </field>
+        </form>
+        <form name="crearTareaFormularioReindexadoAceptarForm">
+            <field property="repositorioIndices" depends="required">
+
+                <arg position="0" key="crear.tarea.formulario.reindexado.aceptar.param.repositorio.indices" />
+            </field>
+        </form>
+        <form name="crearTareaFormularioInformeFechasRangoAceptarForm">
+            <field property="rango" depends="integer">
+
+                <arg position="0" key="crear.tarea.formulario.informe.fechas.rango.aceptar.param.rango" />
+            </field>
+        </form>
+        <form name="crearTareaFormularioTareaCargaODEsAceptarForm">
+            <field property="pathODEsNoCarg" depends="required">
+
+                <arg position="0" key="crear.tarea.formulario.tarea.carga.odes.aceptar.param.path.odes.no.carg" />
+            </field>
+            <field property="pathODEsCarg" depends="required">
+
+                <arg position="0" key="crear.tarea.formulario.tarea.carga.odes.aceptar.param.path.odes.carg" />
+            </field>
+            <field property="pathODEs" depends="required">
+
+                <arg position="0" key="crear.tarea.formulario.tarea.carga.odes.aceptar.param.path.odes" />
+            </field>
+        </form>
+        <form name="informeListarDescripcionForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="informe.listar.descripcion.param.id" />
+            </field>
+        </form>
+        <form name="informeMostrarDescripcionVolverForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="informe.mostrar.descripcion.volver.param.id" />
+            </field>
+        </form>
+        <form name="obtenerTCargaODEsFormularioInformesFechaRangoIContinuarForm">
+            <field property="rango" depends="integer">
+
+                <arg position="0" key="obtener.tcarga.odes.formulario.informes.fecha.rango.i.continuar.param.rango" />
+            </field>
+        </form>
+        <form name="obtenerTCargaODEsFormularioReindexadoIContinuarForm">
+            <field property="anio" depends="required">
+
+                <arg position="0" key="obtener.tcarga.odes.formulario.reindexado.i.continuar.param.anio" />
+            </field>
+            <field property="minutos" depends="required">
+
+                <arg position="0" key="obtener.tcarga.odes.formulario.reindexado.i.continuar.param.minutos" />
+            </field>
+            <field property="dia" depends="required">
+
+                <arg position="0" key="obtener.tcarga.odes.formulario.reindexado.i.continuar.param.dia" />
+            </field>
+            <field property="hora" depends="required">
+
+                <arg position="0" key="obtener.tcarga.odes.formulario.reindexado.i.continuar.param.hora" />
+            </field>
+            <field property="mes" depends="required">
+
+                <arg position="0" key="obtener.tcarga.odes.formulario.reindexado.i.continuar.param.mes" />
+            </field>
+        </form>
+        <form name="obtenerTCargaODEsFormularioIIAceptarForm">
+            <field property="pathODEsNoCarg" depends="required">
+
+                <arg position="0" key="obtener.tcarga.odes.formulario.ii.aceptar.param.path.odes.no.carg" />
+            </field>
+            <field property="pathODEsCarg" depends="required">
+
+                <arg position="0" key="obtener.tcarga.odes.formulario.ii.aceptar.param.path.odes.carg" />
+            </field>
+            <field property="pathODEs" depends="required">
+
+                <arg position="0" key="obtener.tcarga.odes.formulario.ii.aceptar.param.path.odes" />
+            </field>
+        </form>
+        <form name="obtenerTCargaODEsFormularioIContinuarForm">
+            <field property="minutos" depends="required">
+
+                <arg position="0" key="obtener.tcarga.odes.formulario.i.continuar.param.minutos" />
+            </field>
+            <field property="anio" depends="required">
+
+                <arg position="0" key="obtener.tcarga.odes.formulario.i.continuar.param.anio" />
+            </field>
+            <field property="dia" depends="required">
+
+                <arg position="0" key="obtener.tcarga.odes.formulario.i.continuar.param.dia" />
+            </field>
+            <field property="hora" depends="required">
+
+                <arg position="0" key="obtener.tcarga.odes.formulario.i.continuar.param.hora" />
+            </field>
+            <field property="mes" depends="required">
+
+                <arg position="0" key="obtener.tcarga.odes.formulario.i.continuar.param.mes" />
+            </field>
+        </form>
+        <form name="obtenerTCargaODEsFormularioInformeFechaRangoIIAceptarForm">
+            <field property="rango" depends="integer">
+
+                <arg position="0" key="obtener.tcarga.odes.formulario.informe.fecha.rango.ii.aceptar.param.rango" />
+            </field>
+        </form>
+        <form name="descripcionTareaMostrarInformeCatalogoVolverForm">
+            <field property="anio" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.catalogo.volver.param.anio" />
+            </field>
+            <field property="minutos" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.catalogo.volver.param.minutos" />
+            </field>
+            <field property="dia" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.catalogo.volver.param.dia" />
+            </field>
+            <field property="hora" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.catalogo.volver.param.hora" />
+            </field>
+            <field property="mes" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.catalogo.volver.param.mes" />
+            </field>
+        </form>
+        <form name="descripcionTareaMostrarCargaODEsVolverForm">
+            <field property="anio" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.carga.odes.volver.param.anio" />
+            </field>
+            <field property="minutos" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.carga.odes.volver.param.minutos" />
+            </field>
+            <field property="dia" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.carga.odes.volver.param.dia" />
+            </field>
+            <field property="hora" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.carga.odes.volver.param.hora" />
+            </field>
+            <field property="mes" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.carga.odes.volver.param.mes" />
+            </field>
+        </form>
+        <form name="descripcionTareaMostrarInformeFechaVolverForm">
+            <field property="anioHasta" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.volver.param.anio.hasta" />
+            </field>
+            <field property="anio" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.volver.param.anio" />
+            </field>
+            <field property="minutos" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.volver.param.minutos" />
+            </field>
+            <field property="dia" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.volver.param.dia" />
+            </field>
+            <field property="diaHasta" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.volver.param.dia.hasta" />
+            </field>
+            <field property="anioDesde" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.volver.param.anio.desde" />
+            </field>
+            <field property="hora" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.volver.param.hora" />
+            </field>
+            <field property="mes" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.volver.param.mes" />
+            </field>
+            <field property="mesHasta" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.volver.param.mes.hasta" />
+            </field>
+            <field property="diaDesde" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.volver.param.dia.desde" />
+            </field>
+            <field property="mesDesde" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.volver.param.mes.desde" />
+            </field>
+        </form>
+        <form name="descripcionTareaMostrarReindexadoVolverForm">
+            <field property="anio" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.reindexado.volver.param.anio" />
+            </field>
+            <field property="minutos" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.reindexado.volver.param.minutos" />
+            </field>
+            <field property="dia" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.reindexado.volver.param.dia" />
+            </field>
+            <field property="hora" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.reindexado.volver.param.hora" />
+            </field>
+            <field property="mes" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.reindexado.volver.param.mes" />
+            </field>
+        </form>
+        <form name="descripcionTareaMostrarInformeFederadoVolverForm">
+            <field property="anio" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.federado.volver.param.anio" />
+            </field>
+            <field property="minutos" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.federado.volver.param.minutos" />
+            </field>
+            <field property="dia" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.federado.volver.param.dia" />
+            </field>
+            <field property="hora" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.federado.volver.param.hora" />
+            </field>
+            <field property="mes" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.federado.volver.param.mes" />
+            </field>
+        </form>
+        <form name="descripcionTareaMostrarInformeFechaUsuarioVolverForm">
+            <field property="anioHasta" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.usuario.volver.param.anio.hasta" />
+            </field>
+            <field property="anio" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.usuario.volver.param.anio" />
+            </field>
+            <field property="minutos" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.usuario.volver.param.minutos" />
+            </field>
+            <field property="dia" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.usuario.volver.param.dia" />
+            </field>
+            <field property="diaHasta" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.usuario.volver.param.dia.hasta" />
+            </field>
+            <field property="anioDesde" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.usuario.volver.param.anio.desde" />
+            </field>
+            <field property="hora" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.usuario.volver.param.hora" />
+            </field>
+            <field property="mes" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.usuario.volver.param.mes" />
+            </field>
+            <field property="mesHasta" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.usuario.volver.param.mes.hasta" />
+            </field>
+            <field property="diaDesde" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.usuario.volver.param.dia.desde" />
+            </field>
+            <field property="mesDesde" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.usuario.volver.param.mes.desde" />
+            </field>
+        </form>
+        <form name="descripcionTareaMostrarEliminarOdesVolverForm">
+            <field property="anioHasta" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.eliminar.odes.volver.param.anio.hasta" />
+            </field>
+            <field property="anio" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.eliminar.odes.volver.param.anio" />
+            </field>
+            <field property="dia" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.eliminar.odes.volver.param.dia" />
+            </field>
+            <field property="diaHasta" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.eliminar.odes.volver.param.dia.hasta" />
+            </field>
+            <field property="anioDesde" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.eliminar.odes.volver.param.anio.desde" />
+            </field>
+            <field property="mes" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.eliminar.odes.volver.param.mes" />
+            </field>
+            <field property="mesHasta" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.eliminar.odes.volver.param.mes.hasta" />
+            </field>
+            <field property="diaDesde" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.eliminar.odes.volver.param.dia.desde" />
+            </field>
+            <field property="mesDesde" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.eliminar.odes.volver.param.mes.desde" />
+            </field>
+        </form>
+        <form name="descripcionTareaMostrarInformeFechaRangoVolverForm">
+            <field property="anioHasta" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.rango.volver.param.anio.hasta" />
+            </field>
+            <field property="anio" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.rango.volver.param.anio" />
+            </field>
+            <field property="minutos" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.rango.volver.param.minutos" />
+            </field>
+            <field property="dia" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.rango.volver.param.dia" />
+            </field>
+            <field property="diaHasta" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.rango.volver.param.dia.hasta" />
+            </field>
+            <field property="anioDesde" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.rango.volver.param.anio.desde" />
+            </field>
+            <field property="hora" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.rango.volver.param.hora" />
+            </field>
+            <field property="mes" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.rango.volver.param.mes" />
+            </field>
+            <field property="mesHasta" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.rango.volver.param.mes.hasta" />
+            </field>
+            <field property="rango" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.rango.volver.param.rango" />
+            </field>
+            <field property="diaDesde" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.rango.volver.param.dia.desde" />
+            </field>
+            <field property="mesDesde" depends="integer">
+
+                <arg position="0" key="descripcion.tarea.mostrar.informe.fecha.rango.volver.param.mes.desde" />
+            </field>
+        </form>
+        <form name="modificarUsuarioFormularioInicialContinuarForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="modificar.usuario.formulario.inicial.continuar.param.id" />
+            </field>
+        </form>
+        <form name="modificarUsuarioFormularioResultadoModificacionGrupoAceptarForm">
+            <field property="idModificado" depends="long">
+
+                <arg position="0" key="modificar.usuario.formulario.resultado.modificacion.grupo.aceptar.param.id.modificado" />
+            </field>
+        </form>
+        <form name="modificarGrupoFormularioInicialContinuarForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="modificar.grupo.formulario.inicial.continuar.param.id" />
+            </field>
+        </form>
+        <form name="modificarGrupoResultadoModificarGrupoAceptarForm">
+            <field property="idModificado" depends="long">
+
+                <arg position="0" key="modificar.grupo.resultado.modificar.grupo.aceptar.param.id.modificado" />
+            </field>
+        </form>
+        <form name="listarUsuariosFormularioListadoUsuariosModificarForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="listar.usuarios.formulario.listado.usuarios.modificar.param.id" />
+            </field>
+        </form>
+        <form name="listarUsuariosFormularioListadoUsuariosVerUsuarioForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="listar.usuarios.formulario.listado.usuarios.ver.usuario.param.id" />
+            </field>
+        </form>
+        <form name="listarUsuariosFormularioListadoUsuariosDesactivarUsuarioForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="listar.usuarios.formulario.listado.usuarios.desactivar.usuario.param.id" />
+            </field>
+        </form>
+        <form name="listarGruposFormularioListadoVerGrupoForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="listar.grupos.formulario.listado.ver.grupo.param.id" />
+            </field>
+        </form>
+        <form name="listarGruposFormularioListadoModificarForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="listar.grupos.formulario.listado.modificar.param.id" />
+            </field>
+        </form>
+        <form name="altaUsuarioPendienteFormularioInicialContinuarForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="alta.usuario.pendiente.formulario.inicial.continuar.param.id" />
+            </field>
+        </form>
+        <form name="listarUsuariosPendientesFormularioListadoUsuariosPendientesVerUsuarioPendienteForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="listar.usuarios.pendientes.formulario.listado.usuarios.pendientes.ver.usuario.pendiente.param.id" />
+            </field>
+        </form>
+        <form name="listarUsuariosPendientesFormularioListadoUsuariosPendientesAltaForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="listar.usuarios.pendientes.formulario.listado.usuarios.pendientes.alta.param.id" />
+            </field>
+        </form>
+        <form name="listarUsuariosInactivosFormularioListadoUsuariosInactivosActivarUsuarioForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="listar.usuarios.inactivos.formulario.listado.usuarios.inactivos.activar.usuario.param.id" />
+            </field>
+        </form>
+        <form name="listarUsuariosInactivosFormularioListadoUsuariosInactivosVerUsuarioInactivoForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="listar.usuarios.inactivos.formulario.listado.usuarios.inactivos.ver.usuario.inactivo.param.id" />
+            </field>
+        </form>
+        <form name="activarUsuarioConfirmacionActivarUsuarioAceptarForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="activar.usuario.confirmacion.activar.usuario.aceptar.param.id" />
+            </field>
+        </form>
+        <form name="desactivarUsuarioConfirmacionDesactivarUsuarioAceptarForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="desactivar.usuario.confirmacion.desactivar.usuario.aceptar.param.id" />
+            </field>
+        </form>
+        <form name="altaNodoFormularioAceptarForm">
+            <field property="comunidad" depends="long">
+
+                <arg position="0" key="alta.nodo.formulario.aceptar.param.comunidad" />
+            </field>
+        </form>
+        <form name="modificarNodoFormularioModificarNodoAceptarForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="modificar.nodo.formulario.modificar.nodo.aceptar.param.id" />
+            </field>
+            <field property="ccaa" depends="long">
+
+                <arg position="0" key="modificar.nodo.formulario.modificar.nodo.aceptar.param.ccaa" />
+            </field>
+        </form>
+        <form name="listarNodosFormularioListarNodosModificarNodoForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="listar.nodos.formulario.listar.nodos.modificar.nodo.param.id" />
+            </field>
+        </form>
+        <form name="listarNodosFormularioListarNodosVerNodoForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="listar.nodos.formulario.listar.nodos.ver.nodo.param.id" />
+            </field>
+        </form>
+        <form name="noActivasNoActivasActivarForm">
+            <field property="identificador" depends="long">
+
+                <arg position="0" key="no.activas.no.activas.activar.param.identificador" />
+            </field>
+        </form>
+        <form name="categoriasNoticiasCUCategoriasNoticiasVerCateForm">
+            <field property="idCategoriaNoticia" depends="long">
+
+                <arg position="0" key="categorias.noticias.cu.categorias.noticias.ver.cate.param.id.categoria.noticia" />
+            </field>
+        </form>
+        <form name="categoriasNoticiasCUCategoriasNoticiasModificarForm">
+            <field property="idCategoriaNoticia" depends="long">
+
+                <arg position="0" key="categorias.noticias.cu.categorias.noticias.modificar.param.id.categoria.noticia" />
+            </field>
+        </form>
+        <form name="modificarCategoriaNoticiaCUFormularioModCategoriasNotiValidarFormularioForm">
+            <field property="idCategoriaNoticia" depends="long">
+
+                <arg position="0" key="modificar.categoria.noticia.cu.formulario.mod.categorias.noti.validar.formulario.param.id.categoria.noticia" />
+            </field>
+        </form>
+        <form name="listarCatalogadoresFormularioListadoCatalogadoresModificarCatalogadoresForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="listar.catalogadores.formulario.listado.catalogadores.modificar.catalogadores.param.id" />
+            </field>
+        </form>
+        <form name="listarCatalogadoresFormularioListadoCatalogadoresVerCatalogadoresForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="listar.catalogadores.formulario.listado.catalogadores.ver.catalogadores.param.id" />
+            </field>
+        </form>
+        <form name="modificarCatalogadoresModificarCatalogadoresAceptarForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="modificar.catalogadores.modificar.catalogadores.aceptar.param.id" />
+            </field>
+        </form>
+        <form name="modificarCatalogadoresResultadoModificarCatalogadoresVolverForm">
+            <field property="idModificado" depends="long">
+
+                <arg position="0" key="modificar.catalogadores.resultado.modificar.catalogadores.volver.param.id.modificado" />
+            </field>
+        </form>
+        <form name="altaNodoSQIFormularioAltaNodoSQIAceptarForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="alta.nodo.sqi.formulario.alta.nodo.sqi.aceptar.param.id" />
+            </field>
+        </form>
+        <form name="listarNodosSQIFormularioNodosSQIModificarNodoSQIForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="listar.nodos.sqi.formulario.nodos.sqi.modificar.nodo.sqi.param.id" />
+            </field>
+        </form>
+        <form name="listarNodosSQIFormularioNodosSQIVerNodoSQIForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="listar.nodos.sqi.formulario.nodos.sqi.ver.nodo.sqi.param.id" />
+            </field>
+        </form>
+        <form name="modificarNodosSQIResultadoModificacionNodoSQIAceptarForm">
+            <field property="idModificado" depends="long">
+
+                <arg position="0" key="modificar.nodos.sqi.resultado.modificacion.nodo.sqi.aceptar.param.id.modificado" />
+            </field>
+        </form>
+        <form name="modificarNodosSQIFormularioNodoSQIAceptarForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="modificar.nodos.sqi.formulario.nodo.sqi.aceptar.param.id" />
+            </field>
+        </form>
+        <form name="categoriasFaqsCategoriasFaqsVerCategoriaForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="categorias.faqs.categorias.faqs.ver.categoria.param.id" />
+            </field>
+        </form>
+        <form name="categoriasFaqsCategoriasFaqsModificarForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="categorias.faqs.categorias.faqs.modificar.param.id" />
+            </field>
+        </form>
+        <form name="modificarCategoriaFaqFormularioModificarCategoriaFaqValidarFormularioForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="modificar.categoria.faq.formulario.modificar.categoria.faq.validar.formulario.param.id" />
+            </field>
+        </form>
+        <form name="faqsFaqsModificarForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="faqs.faqs.modificar.param.id" />
+            </field>
+        </form>
+        <form name="faqsFaqsVerFaqForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="faqs.faqs.ver.faq.param.id" />
+            </field>
+        </form>
+        <form name="crearFAQFormularioCategoriaValidaForm">
+            <field property="categoria" depends="long">
+
+                <arg position="0" key="crear.faq.formulario.categoria.valida.param.categoria" />
+            </field>
+        </form>
+        <form name="crearFAQFormularioCrearValidarFormuForm">
+            <field property="categoria" depends="long">
+
+                <arg position="0" key="crear.faq.formulario.crear.validar.formu.param.categoria" />
+            </field>
+        </form>
+        <form name="crearFAQFormularioCrearVolverForm">
+            <field property="categoria" depends="long">
+
+                <arg position="0" key="crear.faq.formulario.crear.volver.param.categoria" />
+            </field>
+        </form>
+        <form name="modificarFAQModificarDosValidarFormuForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="modificar.faq.modificar.dos.validar.formu.param.id" />
+            </field>
+            <field property="categoria" depends="long">
+
+                <arg position="0" key="modificar.faq.modificar.dos.validar.formu.param.categoria" />
+            </field>
+        </form>
+        <form name="modificarFAQModificarDosVolverForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="modificar.faq.modificar.dos.volver.param.id" />
+            </field>
+            <field property="categoria" depends="long">
+
+                <arg position="0" key="modificar.faq.modificar.dos.volver.param.categoria" />
+            </field>
+        </form>
+        <form name="modificarFAQModificarUnoAceptarForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="modificar.faq.modificar.uno.aceptar.param.id" />
+            </field>
+            <field property="categoria" depends="long">
+
+                <arg position="0" key="modificar.faq.modificar.uno.aceptar.param.categoria" />
+            </field>
+        </form>
+        <form name="verFaqFormularioUnoSiguienteForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="ver.faq.formulario.uno.siguiente.param.id" />
+            </field>
+            <field property="categoria" depends="long">
+
+                <arg position="0" key="ver.faq.formulario.uno.siguiente.param.categoria" />
+            </field>
+        </form>
+<!--RLA-->
+
+<!--/RLA-->
+    </formset>
+
+</form-validation>

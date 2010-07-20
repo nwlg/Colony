@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <bean id="propiedadesConstantes" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+	        <list>
+		  	    <value>classpath:spring_buscar.properties</value>
+	        </list>
+	    </property>
+	  <property name="ignoreUnresolvablePlaceholders">
+	  		<value>true</value>
+	  </property>	  
+    </bean>  
+    <!--
+	    <bean id="pojoDescriptor" class="es.indra.sawa.support.logging.PlainPojoDescriptor"></bean>
+	    <bean id="loggingInterceptor" class="es.indra.sawa.support.logging.ServiceLoggingInterceptor">
+	         <property name="pojoDescriptor" ref="pojoDescriptor"></property>
+	    </bean>
+    -->
+	
+    <bean id="registradorInterceptor" class="es.pode.soporte.auditoria.registrar.ServiceRegistrarInterceptor"></bean>
+
+    <!--
+	    <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+	        <property name="beanNames"><value>*Service*</value></property>
+	        <property name="interceptorNames">
+	             <list>
+	                    <value>loggingInterceptor</value>
+	             </list>
+	        </property>
+        </bean>
+    -->
+	<bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+	      <property name="beanNames"><value>*SrvBuscarServiceImpl*</value></property>
+	      <property name="interceptorNames">
+	             <list>
+	                    <value>registradorInterceptor</value>
+	             </list>
+	      </property>
+      </bean>
+</beans>

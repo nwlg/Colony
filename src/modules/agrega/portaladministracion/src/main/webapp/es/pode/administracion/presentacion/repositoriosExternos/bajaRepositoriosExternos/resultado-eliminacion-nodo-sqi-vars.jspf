@@ -1,0 +1,5 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="nodosSQIEliminar" value="${form.nodosSQIEliminar}"/>
+    </c:catch>
+</div>

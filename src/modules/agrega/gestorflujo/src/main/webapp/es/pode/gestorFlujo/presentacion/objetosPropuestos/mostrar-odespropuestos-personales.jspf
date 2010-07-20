@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="personales" class="action">
+    <h3><bean:message key="objetos.propuestos.cu.mostrar.odespropuestos.personales"/></h3>
+    <div class="trigger">
+        <form id="objetosPropuestosCUMostrarODESPropuestosPersonalesForm" action='<html:rewrite action="/ObjetosPropuestosCU/MostrarODESPropuestosPersonales"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_CATALOGADOR,ROLE_ADMINISTRADOR,ROLE_DOCENTE">
+               <html:submit onmouseover="hints.show('Personales')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="objetos.propuestos.cu.mostrar.odespropuestos.personales"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

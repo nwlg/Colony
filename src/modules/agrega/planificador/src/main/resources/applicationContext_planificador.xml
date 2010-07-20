@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <!-- ========================= GENERAL DEFINITIONS ========================= -->
+    <!-- Message source for this context, loaded from localized "messages_xx" files -->
+
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename"><value>messages</value></property>
+    </bean>
+
+	<bean id="beanMapper" class="net.sf.dozer.util.mapping.DozerBeanMapper" singleton="true">
+		<property name="mappingFiles">
+			<list>
+				<value>defaultDozerMappings_planificador.xml</value>
+				<value>customDozerMappings_planificador.xml</value>
+			</list>
+		</property>
+	</bean>
+
+    <!-- applicationContext merge-point -->
+
+    <!-- Hibernate SessionFactory -->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource"><ref bean="dataSource"/></property>
+        <property name="mappingResources">
+            <list>
+                <value>es/pode/planificador/negocio/dominio/TareaEjecutada.hbm.xml</value>
+                <value>es/pode/planificador/negocio/dominio/RegistroTareaEjecutada.hbm.xml</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
+                <prop key="hibernate.cache.use_query_cache">false</prop>
+                <prop key="hibernate.cache.provider_class">org.hibernate.cache.NoCacheProvider</prop>
+                <prop key="hibernate.cache.query_cache_factory">org.hibernate.cache.StandardQueryCacheFactory</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- The Hibernate interceptor -->
+    <bean id="hibernateInterceptor" class="org.springframework.orm.hibernate3.HibernateInterceptor">
+        <property name="sessionFactory"><ref bean="sessionFactory"/></property>
+    </bean>
+
+    <!-- TareaEjecutada Entity Proxy with inner TareaEjecutada Entity implementation -->
+    <bean id="tareaEjecutadaDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.planificador.negocio.dominio.TareaEjecutadaDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.planificador.negocio.dominio.TareaEjecutadaDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+    <!-- RegistroTareaEjecutada Entity Proxy with inner RegistroTareaEjecutada Entity implementation -->
+    <bean id="registroTareaEjecutadaDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.planificador.negocio.dominio.RegistroTareaEjecutadaDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.planificador.negocio.dominio.RegistroTareaEjecutadaDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+    <!-- ========================= Start of SERVICE DEFINITIONS ========================= -->
+
+      <!-- Service Transactional Interceptor -->
+    <bean id="serviceTransactionInterceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor">
+        <property name="transactionManager"><ref bean="transactionManager"/></property>
+        <property name="transactionAttributeSource">
+            <value>
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.obtenerTareaModificarCargaODEs=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.obtenerTareaReindexado=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.crearTareaCargaODEs=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.crearTareaReindexado=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.obtenerInformeTrabajo=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.obtenerInformeTrabajoErroneos=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.eliminarTrabajoEjecutado=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.obtenerTrabajoEjecutado=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.obtenerTrabajosEjecutados=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.obtenerTrabajosEjecutadosDesdeHasta=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.eliminarTareas=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.eliminarTareasAdm=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.obtenerTareasPendientesTodas=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.lanzarTarea=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.obtenerTareasEnEjecucion=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.obtenerTareasPendientes=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.pararTarea=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.reiniciarPlanificador=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.iniciarPlanificador=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.pararPlanificador=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.estaIniciado=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.publicarPIF=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.reindexado=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.obtenerTipoTarea=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.existeTrabajo=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.modificarTareaCargaODEs=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.modificarTareaReindexado=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.crearTareaEliminarNoDisponibles=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.modificarTareaEliminarNoDisponibles=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.obtenerTareaEliminarrNoDisponibles=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.eliminarNoDisponibles=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.crearTareaInformes=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.obtenerTareaInformes=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.modificarTareaInformes=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.generarInforme=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.crearTareaModificacion=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.modificarTareaModificacion=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.lanzarRSS=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.informesPortada=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.portadaODE=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.generarSitemaps=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.generarCatalogo=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.generarInformeFederado=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.crearTareaInformesFederado=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.crearTareaInformesCatalogo=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.modificarTareaInformesCatalogo=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvPlanificadorService.modificarTareaInformesFederado=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvRegistroPlanificadorService.registrarTrabajo=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvRegistroPlanificadorService.registrarTrabajoHijo=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvRegistroPlanificadorService.registrarTrabajoFechaFin=PROPAGATION_REQUIRED
+                es.pode.planificador.negocio.servicios.SrvRegistroPlanificadorService.registrarTrabajoInterrumpido=PROPAGATION_REQUIRED
+            </value>
+        </property>
+    </bean>
+
+    <!-- SrvPlanificadorService Service Proxy with inner SrvPlanificadorService Service Implementation -->
+    <bean id="srvPlanificadorService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.planificador.negocio.servicios.SrvPlanificadorServiceImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                <property name="registroTareaEjecutadaDao"><ref bean="registroTareaEjecutadaDao"/></property>
+                <property name="tareaEjecutadaDao"><ref bean="tareaEjecutadaDao"/></property>
+	                <property name="srvRegistroPlanificadorService"><ref bean="srvRegistroPlanificadorService"/></property>
+    						            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.planificador.negocio.servicios.SrvPlanificadorService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceSecurityInterceptor</value>
+                  <value>serviceTransactionInterceptor</value>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvRegistroPlanificadorService Service Proxy with inner SrvRegistroPlanificadorService Service Implementation -->
+    <bean id="srvRegistroPlanificadorService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.planificador.negocio.servicios.SrvRegistroPlanificadorServiceImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                <property name="registroTareaEjecutadaDao"><ref bean="registroTareaEjecutadaDao"/></property>
+                <property name="tareaEjecutadaDao"><ref bean="tareaEjecutadaDao"/></property>
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.planificador.negocio.servicios.SrvRegistroPlanificadorService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceSecurityInterceptor</value>
+                  <value>serviceTransactionInterceptor</value>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- ========================= End of SERVICE DEFINITIONS ========================= -->
+
+</beans>

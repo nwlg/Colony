@@ -1,0 +1,29 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="idCategoria" value="${form.idCategoria}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="noticiavo" value="${form.noticiavo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="categoria" value="${form.categoria}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="titulo" value="${form.titulo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="nombreCategoriaCodex" value="${form.nombreCategoriaCodex}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="alineamientoImg" value="${form.alineamientoImg}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="cuerpo" value="${form.cuerpo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="resumen" value="${form.resumen}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="URLImagen" value="${form.URLImagen}"/>
+    </c:catch>
+</div>

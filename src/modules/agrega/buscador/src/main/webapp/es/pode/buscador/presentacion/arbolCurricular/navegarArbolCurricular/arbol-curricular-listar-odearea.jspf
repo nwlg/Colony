@@ -1,0 +1,87 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="listarODEArea" class="action">
+    <h3><bean:message key="navegar.arbol.curricular.cu.arbol.curricular.listar.odearea"/></h3>
+    <div class="trigger">
+        <html:form styleId="navegarArbolCurricularCUArbolCurricularListarODEAreaForm" action="/NavegarArbolCurricularCU/ArbolCurricularListarODEArea" method="post" enctype="multipart/form-data" onsubmit="return validateArbolCurricularListarODEAreaForm(this);">
+            <table>
+                <tbody>
+                    <tr class="areaCurricularBusqueda">
+                        <td class="label"><bean:message key="navegar.arbol.curricular.cu.arbol.curricular.listar.odearea.param.area.curricular.busqueda"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.areaCurricularBusqueda}"/>
+                           <input type="text" name="areaCurricularBusqueda" value="${value}" onmouseover="hints.show('navegar.arbol.curricular.cu.arbol.curricular.listar.odearea.param.area.curricular.busqueda.title')" onmouseout="hints.hide()"  id="listarODEAreaAreaCurricularBusqueda"/>
+                        </td>
+                    </tr>
+                    <tr class="rutaArbol">
+                        <td class="label"><bean:message key="navegar.arbol.curricular.cu.arbol.curricular.listar.odearea.param.ruta.arbol"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.rutaArbol}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.rutaArbolBackingList}">
+                                  <html:select name="form" property="rutaArbolAsArray" onmouseover="hints.show('navegar.arbol.curricular.cu.arbol.curricular.listar.odearea.param.ruta.arbol.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="listarODEAreaRutaArbol">
+                                      <html:optionsCollection name="form" property="rutaArbolBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="rutaArbolAsArray" onmouseover="hints.show('navegar.arbol.curricular.cu.arbol.curricular.listar.odearea.param.ruta.arbol.title')" onmouseout="hints.hide()"  styleId="listarODEAreaRutaArbol"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="idiomaBuscador">
+                        <td class="label"><bean:message key="navegar.arbol.curricular.cu.arbol.curricular.listar.odearea.param.idioma.buscador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idiomaBuscador}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.idiomaBuscadorBackingList}">
+                                  <html:select name="form" property="idiomaBuscador" onmouseover="hints.show('navegar.arbol.curricular.cu.arbol.curricular.listar.odearea.param.idioma.buscador.title')" onmouseout="hints.hide()"  styleId="listarODEAreaIdiomaBuscador">
+                                      <html:optionsCollection name="form" property="idiomaBuscadorBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="idiomaBuscador" onmouseover="hints.show('navegar.arbol.curricular.cu.arbol.curricular.listar.odearea.param.idioma.buscador.title')" onmouseout="hints.hide()"  styleId="listarODEAreaIdiomaBuscador"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="idioma">
+                        <td class="label"><bean:message key="navegar.arbol.curricular.cu.arbol.curricular.listar.odearea.param.idioma"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idioma}"/>
+                           <input type="text" name="idioma" value="${value}" onmouseover="hints.show('navegar.arbol.curricular.cu.arbol.curricular.listar.odearea.param.idioma.title')" onmouseout="hints.hide()"  id="listarODEAreaIdioma"/>
+                        </td>
+                    </tr>
+                    <tr class="numMaxResultados">
+                        <td class="label"><bean:message key="navegar.arbol.curricular.cu.arbol.curricular.listar.odearea.param.num.max.resultados"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.numMaxResultados}"/>
+                           <input type="text" name="numMaxResultados" value="${value}" onmouseover="hints.show('navegar.arbol.curricular.cu.arbol.curricular.listar.odearea.param.num.max.resultados.title')" onmouseout="hints.hide()"  id="listarODEAreaNumMaxResultados"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_PUBLICADOR,ROLE_CATALOGADOR,ROLE_EMPAQUETADOR,ROLE_DOCENTE,ROLE_ADMINISTRADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('listarODEArea')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="navegar.arbol.curricular.cu.arbol.curricular.listar.odearea"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

@@ -1,0 +1,32 @@
+<div id="dependencias" class="table">
+    <form id="dependencias" name="" action="" method="post" enctype="multipart/form-data">
+    <display:table name="${form.dependencias}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="recurso-dependencias.pdf" />
+        <display:column media="html">
+            <input type="checkbox" name="identifierRowSelectionAsArray" value="${row.identifier}" title='<bean:message key="select.deselect.this.row"/>'/>
+        </display:column>
+
+        <display:column media="xml csv excel pdf"
+            titleKey="crear.recurso.avanzado.elementos.recurso.param.dependencias.identifier"
+            autolink="true" paramId="identifier"
+            property="identifier">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="identifier" paramId="identifier"
+            sortProperty="identifier" sortable="true"
+            titleKey="crear.recurso.avanzado.elementos.recurso.param.dependencias.identifier"
+            property="identifier" />
+   
+    </display:table>
+    <c:if test="${!empty form.dependencias}">
+            <input type="submit" value="<bean:message key="crear.recurso.avanzado.elementos.recurso.submit.dependencias"/>" onclick="this.form.name='crearRecursoAvanzadoElementosRecursoSubmitDependenciasForm';this.form.action='<html:rewrite action="/CrearRecursoAvanzadoElementos/RecursoSubmitDependencias"/>';" onmouseover="hints.show('SubmitDependencias')" onmouseout="hints.hide()"/>
+            <input type="button" value="<bean:message key="select.deselect.all"/>" onclick="var boxes=this.form.elements['identifierRowSelectionAsArray'];var setChecked=(boxes.length==0)?false:!boxes[0].checked;for(var i=0;i<boxes.length;i++)boxes[i].checked=setChecked;"/>
+    </c:if>
+    </form>
+</div>
+

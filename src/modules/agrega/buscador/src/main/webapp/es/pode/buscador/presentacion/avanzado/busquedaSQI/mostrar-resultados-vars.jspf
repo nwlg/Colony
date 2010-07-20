@@ -1,0 +1,32 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="resultadosDesde" value="${form.resultadosDesde}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="mostrarAmbito" value="${form.mostrarAmbito}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="lomESVO" value="${form.lomESVO}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="numMaxRes" value="${form.numMaxRes}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="buscadorContenido" value="${form.buscadorContenido}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="resultadosHasta" value="${form.resultadosHasta}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="buscadorContenidoEnlace" value="${form.buscadorContenidoEnlace}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tipoLayoutBuscador" value="${form.tipoLayoutBuscador}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tipoBusqueda" value="${form.tipoBusqueda}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="paginas" value="${form.paginas}"/>
+    </c:catch>
+</div>

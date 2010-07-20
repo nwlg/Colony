@@ -1,0 +1,11 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="title" value="${form.title}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="esModificar" value="${form.esModificar}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="identifier" value="${form.identifier}"/>
+    </c:catch>
+</div>

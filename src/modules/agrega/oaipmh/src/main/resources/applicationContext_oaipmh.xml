@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <!-- ========================= GENERAL DEFINITIONS ========================= -->
+    <!-- Message source for this context, loaded from localized "messages_xx" files -->
+
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename"><value>messages</value></property>
+    </bean>
+
+	<bean id="beanMapper" class="net.sf.dozer.util.mapping.DozerBeanMapper" singleton="true">
+		<property name="mappingFiles">
+			<list>
+				<value>defaultDozerMappings_oaipmh.xml</value>
+				<value>customDozerMappings_oaipmh.xml</value>
+			</list>
+		</property>
+	</bean>
+
+    <!-- applicationContext merge-point -->
+
+    <!-- ========================= Start of SERVICE DEFINITIONS ========================= -->
+
+
+    <!-- SrvOaiPmhService Service Proxy with inner SrvOaiPmhService Service Implementation -->
+    <bean id="srvOaiPmhService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.oaipmh.negocio.servicios.SrvOaiPmhServiceImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+	            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.oaipmh.negocio.servicios.SrvOaiPmhService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvSitemapService Service Proxy with inner SrvSitemapService Service Implementation -->
+    <bean id="srvSitemapService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.sitemap.negocio.servicios.SrvSitemapServiceImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+	            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.sitemap.negocio.servicios.SrvSitemapService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+            </list>
+        </property>
+    </bean>
+
+    <!-- ========================= End of SERVICE DEFINITIONS ========================= -->
+
+</beans>

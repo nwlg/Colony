@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="Agrega" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="Agrega"  elementFormDefault="qualified">
+	<xs:element name="modification-task">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="changes" type="changesType"/>
+				<xs:element name="objects" type="objectsType" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="odeType">
+		<xs:sequence>
+			<xs:element name="published" type="xs:boolean"/>
+			<xs:element name="path" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="folderType">
+		<xs:sequence>
+			<xs:element name="path" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="modificationType">
+		<xs:sequence>
+			<xs:element name="lom-term" type="xs:string"/>
+			<xs:element name="value" type="xs:string" minOccurs="0"/>
+			<xs:element name="language" type="xs:string" minOccurs="0"/>
+			<xs:element name="new-value" type="xs:string"/>
+			<xs:element name="reg-exp" type="xs:boolean"/>
+			<xs:element name="replace-all" type="xs:boolean"/>
+			<xs:element name="main-lom-only" type="xs:boolean" default="true"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="removalType">
+		<xs:sequence>
+			<xs:element name="lom-term" type="xs:string"/>
+			<xs:element name="value" type="xs:string" minOccurs="0"/>
+			<xs:element name="language" type="xs:string" minOccurs="0"/>
+			<xs:element name="reg-exp" type="xs:boolean"/>
+			<xs:element name="main-lom-only" type="xs:boolean" default="true"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="checkType">
+		<xs:sequence>
+			<xs:element name="lom-term" type="xs:string"/>
+			<xs:element name="value" type="xs:string" minOccurs="0"/>
+			<xs:element name="language" type="xs:string" minOccurs="0"/>
+			<xs:element name="reg-exp" type="xs:boolean"/>
+			<xs:element name="main-lom-only" type="xs:boolean" default="true"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="additionType">
+		<xs:sequence>
+			<xs:element name="lom-term" type="xs:string"/>
+			<xs:element name="new-value" type="xs:string" minOccurs="0"/>
+			<xs:element name="term-type" type="termType" default="otro"/>
+			<xs:element name="main-lom-only" type="xs:boolean" default="true"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="validationType">
+		<xs:attribute name="id" type="xs:string"/>
+	</xs:complexType>
+	<xs:simpleType name="termType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="arbol-curricular"/>
+			<xs:enumeration value="etb"/>
+			<xs:enumeration value="otro"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="objectsType">
+		<xs:choice minOccurs="0">
+			<xs:element name="ode" type="odeType" maxOccurs="unbounded"/>
+			<xs:element name="folder" type="folderType" maxOccurs="unbounded"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="changesType">
+		<xs:choice minOccurs="1" maxOccurs="unbounded">
+			<xs:element name="validation" type="validationType"/>
+			<xs:element name="modification" type="modificationType"/>
+			<xs:element name="addition" type="additionType"/>
+			<xs:element name="check" type="checkType"/>
+			<xs:element name="removal" type="removalType"/>
+		</xs:choice>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,27 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'visualizar.adl.lmsmain.datos.borrar.param.usuario.title':'<formatting:escape language="javascript"><bean:message key="visualizar.adl.lmsmain.datos.borrar.param.usuario.title"/></formatting:escape>',
+                'visualizar.adl.lmsmain.datos.borrar.param.identificador.title':'<formatting:escape language="javascript"><bean:message key="visualizar.adl.lmsmain.datos.borrar.param.identificador.title"/></formatting:escape>',
+                'Fin':'<formatting:escape language="javascript"><bean:message key="visualizar.adl.lmsmain.fin.title"/></formatting:escape>',
+                'Fin_no':'<formatting:escape language="javascript"><bean:message key="visualizar.adl.lmsmain.fin.title.notallowed"/></formatting:escape>',
+                'Fin_reset':'<formatting:escape language="javascript"><bean:message key="visualizar.adl.lmsmain.fin.title.reset"/></formatting:escape>',
+                'Fin_noreset':'<formatting:escape language="javascript"><bean:message key="visualizar.adl.lmsmain.fin.title.reset.not.allowed"/></formatting:escape>',
+                'datosBorrar':'<formatting:escape language="javascript"><bean:message key="visualizar.adl.lmsmain.datos.borrar.title"/></formatting:escape>',
+                'datosBorrar_no':'<formatting:escape language="javascript"><bean:message key="visualizar.adl.lmsmain.datos.borrar.title.notallowed"/></formatting:escape>',
+                'datosBorrar_reset':'<formatting:escape language="javascript"><bean:message key="visualizar.adl.lmsmain.datos.borrar.title.reset"/></formatting:escape>',
+                'datosBorrar_noreset':'<formatting:escape language="javascript"><bean:message key="visualizar.adl.lmsmain.datos.borrar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+</script>
+    </tiles:put>

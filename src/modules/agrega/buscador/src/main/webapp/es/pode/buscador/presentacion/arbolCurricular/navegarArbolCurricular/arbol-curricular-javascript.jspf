@@ -1,0 +1,41 @@
+
+    <tiles:put name="javascript" type="string">
+        <script type="text/javascript" language="Javascript1.1" src="<html:rewrite action="/formValidation"/>"></script>
+        <html:javascript formName="navegarArbolCurricularCUArbolCurricularListarODEAreaForm" method="validateArbolCurricularListarODEAreaForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'navegar.arbol.curricular.cu.arbol.curricular.seleccionar.hijo.param.id.title':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.cu.arbol.curricular.seleccionar.hijo.param.id.title"/></formatting:escape>',
+                'navegar.arbol.curricular.cu.arbol.curricular.seleccionar.hijo.param.tipo.layout.buscador.title':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.cu.arbol.curricular.seleccionar.hijo.param.tipo.layout.buscador.title"/></formatting:escape>',
+                'navegar.arbol.curricular.cu.arbol.curricular.seleccionar.padre.param.id.title':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.cu.arbol.curricular.seleccionar.padre.param.id.title"/></formatting:escape>',
+                'navegar.arbol.curricular.cu.arbol.curricular.seleccionar.padre.param.tipo.layout.buscador.title':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.cu.arbol.curricular.seleccionar.padre.param.tipo.layout.buscador.title"/></formatting:escape>',
+                'navegar.arbol.curricular.cu.arbol.curricular.listar.odearea.param.area.curricular.busqueda.title':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.cu.arbol.curricular.listar.odearea.param.area.curricular.busqueda.title"/></formatting:escape>',
+                'navegar.arbol.curricular.cu.arbol.curricular.listar.odearea.param.ruta.arbol.title':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.cu.arbol.curricular.listar.odearea.param.ruta.arbol.title"/></formatting:escape>',
+                'navegar.arbol.curricular.cu.arbol.curricular.listar.odearea.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.cu.arbol.curricular.listar.odearea.param.idioma.buscador.title"/></formatting:escape>',
+                'navegar.arbol.curricular.cu.arbol.curricular.listar.odearea.param.idioma.title':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.cu.arbol.curricular.listar.odearea.param.idioma.title"/></formatting:escape>',
+                'navegar.arbol.curricular.cu.arbol.curricular.listar.odearea.param.num.max.resultados.title':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.cu.arbol.curricular.listar.odearea.param.num.max.resultados.title"/></formatting:escape>',
+                'seleccionarHijo':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.cu.arbol.curricular.seleccionar.hijo.title"/></formatting:escape>',
+                'seleccionarHijo_no':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.cu.arbol.curricular.seleccionar.hijo.title.notallowed"/></formatting:escape>',
+                'seleccionarHijo_reset':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.cu.arbol.curricular.seleccionar.hijo.title.reset"/></formatting:escape>',
+                'seleccionarHijo_noreset':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.cu.arbol.curricular.seleccionar.hijo.title.reset.not.allowed"/></formatting:escape>',
+                'seleccionarPadre':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.cu.arbol.curricular.seleccionar.padre.title"/></formatting:escape>',
+                'seleccionarPadre_no':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.cu.arbol.curricular.seleccionar.padre.title.notallowed"/></formatting:escape>',
+                'seleccionarPadre_reset':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.cu.arbol.curricular.seleccionar.padre.title.reset"/></formatting:escape>',
+                'seleccionarPadre_noreset':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.cu.arbol.curricular.seleccionar.padre.title.reset.not.allowed"/></formatting:escape>',
+                'listarODEArea':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.cu.arbol.curricular.listar.odearea.title"/></formatting:escape>',
+                'listarODEArea_no':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.cu.arbol.curricular.listar.odearea.title.notallowed"/></formatting:escape>',
+                'listarODEArea_reset':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.cu.arbol.curricular.listar.odearea.title.reset"/></formatting:escape>',
+                'listarODEArea_noreset':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.cu.arbol.curricular.listar.odearea.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+</script>
+    </tiles:put>

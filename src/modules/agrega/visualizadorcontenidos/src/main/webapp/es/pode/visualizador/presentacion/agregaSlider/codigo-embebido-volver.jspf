@@ -1,0 +1,13 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="volver" class="action">
+    <h3><bean:message key="agrega.slider.codigo.embebido.volver"/></h3>
+    <div class="trigger">
+        <form id="agregaSliderCodigoEmbebidoVolverForm" action='<html:rewrite action="/AgregaSlider/CodigoEmbebidoVolver"/>' method="post">
+               <html:submit onmouseover="hints.show('Volver')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="agrega.slider.codigo.embebido.volver"/>
+               </html:submit>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

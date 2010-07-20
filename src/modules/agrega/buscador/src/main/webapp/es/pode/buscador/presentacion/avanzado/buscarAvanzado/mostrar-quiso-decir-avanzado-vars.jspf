@@ -1,0 +1,11 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="tipoLayoutBuscador" value="${form.tipoLayoutBuscador}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="nodosSQI" value="${form.nodosSQI}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idiomaBuscador" value="${form.idiomaBuscador}"/>
+    </c:catch>
+</div>

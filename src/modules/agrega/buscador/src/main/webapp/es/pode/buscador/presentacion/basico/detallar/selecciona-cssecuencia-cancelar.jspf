@@ -1,0 +1,13 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="cancelar" class="action">
+    <h3><bean:message key="detallar.odecu.selecciona.cssecuencia.cancelar"/></h3>
+    <div class="trigger">
+        <form id="detallarODECUSeleccionaCSSecuenciaCancelarForm" action='<html:rewrite action="/DetallarODECU/SeleccionaCSSecuenciaCancelar"/>' method="post">
+               <html:submit onmouseover="hints.show('cancelar')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="detallar.odecu.selecciona.cssecuencia.cancelar"/>
+               </html:submit>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

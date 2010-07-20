@@ -1,0 +1,12 @@
+#cancelar.action {}
+#cancelar.action #form_submit {}
+
+
+#aceptar.action {}
+#aceptar.action #form_submit {}
+
+#aceptar.action .listaTrabajoPlana {}
+#aceptar.action .listaTrabajoPlana .label {}
+#aceptar.action .listaTrabajoPlana .field {}
+
+

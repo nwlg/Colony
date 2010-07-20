@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This is a Reload version 2.5.4 SCORM 2004 Content Package document-->
+<!--Spawned from the Reload Content Package Generator - http://www.reload.ac.uk-->
+<manifest xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" xmlns:imsmd="http://ltsc.ieee.org/xsd/LOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3" xmlns:imsss="http://www.imsglobal.org/xsd/imsss" xmlns:adlseq="http://www.adlnet.org/xsd/adlseq_v1p3" xmlns:adlnav="http://www.adlnet.org/xsd/adlnav_v1p3" identifier="MANIFEST-A09C57BFD9E2313044F1D6AC99DD31C9" xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd http://ltsc.ieee.org/xsd/LOM lom.xsd http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd http://www.adlnet.org/xsd/adlseq_v1p3 adlseq_v1p3.xsd http://www.adlnet.org/xsd/adlnav_v1p3 adlnav_v1p3.xsd">
+	<metadata>
+		<schema>ADL SCORM</schema>
+		<schemaversion>2004 3rd Edition</schemaversion>
+		<imsmd:lom>
+			<imsmd:general>
+				<imsmd:identifier>
+					<imsmd:catalog>Catálogo unificado mec-red.es-ccaa de identificación de ODE</imsmd:catalog>
+					<imsmd:entry>es_20070518_2_0040204</imsmd:entry>
+				</imsmd:identifier>
+				<imsmd:title>
+					<imsmd:string>Actividad Flash sobre planificación de campañas publicitarias</imsmd:string>
+				</imsmd:title>
+				<imsmd:language>es</imsmd:language>
+				<imsmd:description>
+					<imsmd:string>Actividad en la que se guía al alumno en el conocimiento de las fases que componen una campaña de publicidad, sus peculiaridades y los objetivos específicos de cada una de ellas.</imsmd:string>
+				</imsmd:description>
+				<imsmd:keyword>
+					<imsmd:string>Campaña, Publicidad, Medios de Comunicación</imsmd:string>
+				</imsmd:keyword>
+				<imsmd:coverage>
+					<imsmd:string>Universal</imsmd:string>
+				</imsmd:coverage>
+				<imsmd:structure>
+					<imsmd:source>LOM-ESv1.0</imsmd:source>
+					<imsmd:value>hierarchical</imsmd:value>
+				</imsmd:structure>
+				<imsmd:aggregationLevel>
+					<imsmd:source>LOM-ESv1.0</imsmd:source>
+					<imsmd:value>2</imsmd:value>
+				</imsmd:aggregationLevel>
+			</imsmd:general>
+			<imsmd:lifeCycle>
+				<imsmd:version>
+					<imsmd:string>V1.0</imsmd:string>
+				</imsmd:version>
+				<imsmd:status>
+					<imsmd:source>LOM-ESv1.0</imsmd:source>
+					<imsmd:value>final</imsmd:value>
+				</imsmd:status>
+				<imsmd:contribute>
+					<imsmd:role>
+						<imsmd:source>LOM-ESv1.0</imsmd:source>
+						<imsmd:value>author</imsmd:value>
+					</imsmd:role>
+					<imsmd:entity>BEGIN:VCARD VERSION:3.0 FN:Juan Carlos Alfeo Álvarez, María Isabel Reyes Moreno, Inmaculada Bernal Fernández, Servipinto S.L. EMAIL;TYPE=INTERNET:ORG:END:VCARD</imsmd:entity>
+					<imsmd:date>
+						<imsmd:dateTime>2004-10-31</imsmd:dateTime>
+						<imsmd:description>
+							<imsmd:string>Fecha de creación del objeto educativo</imsmd:string>
+						</imsmd:description>
+					</imsmd:date>
+				</imsmd:contribute>
+				<imsmd:contribute>
+					<imsmd:role>
+						<imsmd:source>LOM-ESv1.0</imsmd:source>
+						<imsmd:value>editor</imsmd:value>
+					</imsmd:role>
+					<imsmd:entity>BEGIN:VCARD VERSION:3.0 FN: Centro Nacional de Información y Comunicación Educativa EMAIL;TYPE=INTERNET: webmaster@cnice.mec.es ORG:Ministerio de Educación y Ciencia de España END:VCARD</imsmd:entity>
+					<imsmd:date>
+						<imsmd:dateTime>2004-10-31</imsmd:dateTime>
+						<imsmd:description>
+							<imsmd:string>Fecha de publicación del objeto educativo</imsmd:string>
+						</imsmd:description>
+					</imsmd:date>
+				</imsmd:contribute>
+			</imsmd:lifeCycle>
+			<imsmd:metaMetadata>
+				<imsmd:identifier>
+					<imsmd:catalog>Catálogo unificado mec-red.es-ccaa-meta de identificación de instancias de metadatos de ODE</imsmd:catalog>
+					<imsmd:entry>es_20070518_2_0040204-meta</imsmd:entry>
+				</imsmd:identifier>
+				<imsmd:contribute>
+					<imsmd:role>
+						<imsmd:source>LOM-ESv1.0</imsmd:source>
+						<imsmd:value>creator</imsmd:value>
+					</imsmd:role>
+					<imsmd:entity>BEGIN:VCARD VERSION:3.0 FN: EMAIL;TYPE=INTERNET:ORG: Santillana Educación S.L. e Indra Sistemas S.A. END:VCARD</imsmd:entity>
+					<imsmd:date>
+						<imsmd:dateTime>2007-05-18</imsmd:dateTime>
+						<imsmd:description>
+							<imsmd:string>Fecha de catalogación del objeto educativo</imsmd:string>
+						</imsmd:description>
+					</imsmd:date>
+				</imsmd:contribute>
+				<imsmd:metadataSchema>LOM-ES V1.0</imsmd:metadataSchema>
+				<imsmd:language>es</imsmd:language>
+			</imsmd:metaMetadata>
+			<imsmd:technical>
+				<imsmd:format>image/gif</imsmd:format>
+				<imsmd:format>application/x-shockwave-flash</imsmd:format>
+				<imsmd:format>text/css</imsmd:format>
+				<imsmd:format>text/html</imsmd:format>
+				<imsmd:size>523264</imsmd:size>
+				<imsmd:requirement>
+					<imsmd:orComposite>
+						<imsmd:type>
+							<imsmd:source>LOM-ESv1.0</imsmd:source>
+							<imsmd:value>browser</imsmd:value>
+						</imsmd:type>
+						<imsmd:name>
+							<imsmd:source>LOM-ESv1.0</imsmd:source>
+							<imsmd:value>any</imsmd:value>
+						</imsmd:name>
+						<imsmd:minimumVersion>Flash Player 5</imsmd:minimumVersion>
+					</imsmd:orComposite>
+				</imsmd:requirement>
+				<imsmd:otherPlatformRequirements>
+					<imsmd:string>Plugin de Flash Player</imsmd:string>
+				</imsmd:otherPlatformRequirements>
+			</imsmd:technical>
+			<imsmd:educational>
+				<imsmd:interactivityType>
+					<imsmd:source>LOM-ESv1.0</imsmd:source>
+					<imsmd:value>active</imsmd:value>
+				</imsmd:interactivityType>
+				<imsmd:learningResourceType>
+					<imsmd:source>LOM-ESv1.0</imsmd:source>
+					<imsmd:value>real or virtual learning environment</imsmd:value>
+				</imsmd:learningResourceType>
+				<imsmd:learningResourceType>
+					<imsmd:source>LOM-ESv1.0</imsmd:source>
+					<imsmd:value>narrative text</imsmd:value>
+				</imsmd:learningResourceType>
+				<imsmd:learningResourceType>
+					<imsmd:source>LOM-ESv1.0</imsmd:source>
+					<imsmd:value>self assessment</imsmd:value>
+				</imsmd:learningResourceType>
+				<imsmd:learningResourceType>
+					<imsmd:source>LOM-ESv1.0</imsmd:source>
+					<imsmd:value>closed exercise or problem</imsmd:value>
+				</imsmd:learningResourceType>
+				<imsmd:interactivityLevel>
+					<imsmd:source>LOM-ESv1.0</imsmd:source>
+					<imsmd:value>high</imsmd:value>
+				</imsmd:interactivityLevel>
+				<imsmd:semanticDensity>
+					<imsmd:source>LOM-ESv1.0</imsmd:source>
+					<imsmd:value>high</imsmd:value>
+				</imsmd:semanticDensity>
+				<imsmd:intendedEndUserRole>
+					<imsmd:source>LOM-ESv1.0</imsmd:source>
+					<imsmd:value>general public</imsmd:value>
+				</imsmd:intendedEndUserRole>
+				<imsmd:intendedEndUserRole>
+					<imsmd:source>LOM-ESv1.0</imsmd:source>
+					<imsmd:value>group</imsmd:value>
+				</imsmd:intendedEndUserRole>
+				<imsmd:context>
+					<imsmd:source>LOM-ESv1.0</imsmd:source>
+					<imsmd:value>mixed</imsmd:value>
+				</imsmd:context>
+				<imsmd:context>
+					<imsmd:source>LOM-ESv1.0</imsmd:source>
+					<imsmd:value>mixed</imsmd:value>
+				</imsmd:context>
+				<imsmd:context>
+					<imsmd:source>LOM-ESv1.0</imsmd:source>
+					<imsmd:value>distance</imsmd:value>
+				</imsmd:context>
+				<imsmd:typicalAgeRange>
+					<imsmd:string>Para alumnos entre 12-16 años</imsmd:string>
+				</imsmd:typicalAgeRange>
+				<imsmd:difficulty>
+					<imsmd:source>LOM-ESv1.0</imsmd:source>
+					<imsmd:value>difficult</imsmd:value>
+				</imsmd:difficulty>
+				<imsmd:description>
+					<imsmd:string>Conocer diferentes aspectos de la elaboración del mensaje publicitario.</imsmd:string>
+				</imsmd:description>
+				<imsmd:language>es</imsmd:language>
+				<imsmd:cognitiveProcess>
+					<imsmd:source>LOM-ESv1.0</imsmd:source>
+					<imsmd:value>consider</imsmd:value>
+				</imsmd:cognitiveProcess>
+				<imsmd:cognitiveProcess>
+					<imsmd:source>LOM-ESv1.0</imsmd:source>
+					<imsmd:value>decide</imsmd:value>
+				</imsmd:cognitiveProcess>
+				<imsmd:cognitiveProcess>
+					<imsmd:source>LOM-ESv1.0</imsmd:source>
+					<imsmd:value>create</imsmd:value>
+				</imsmd:cognitiveProcess>
+			</imsmd:educational>
+			<imsmd:rights>
+				<imsmd:cost>
+					<imsmd:source>LOM-ESv1.0</imsmd:source>
+					<imsmd:value>no</imsmd:value>
+				</imsmd:cost>
+				<imsmd:copyrightAndOtherRestrictions>
+					<imsmd:source>LOM-ESv1.0</imsmd:source>
+					<imsmd:value>creative commons: attribution - non commercial - share alike</imsmd:value>
+				</imsmd:copyrightAndOtherRestrictions>
+				<imsmd:description>
+					<imsmd:string>La utilización de estos contenidos es universal, gratuita y abierta, siempre y cuando se trate de un uso educativo no comercial. Las acciones, productos y utilidades derivadas de su utilización no podrán, en consecuencia, generar ningún tipo de lucro. Asimismo, es obligada la referencia a la fuente.</imsmd:string>
+				</imsmd:description>
+				<imsmd:access>
+					<imsmd:accessType>
+						<imsmd:source>LOM-ESv1.0</imsmd:source>
+						<imsmd:value>universal</imsmd:value>
+					</imsmd:accessType>
+					<imsmd:description>
+						<imsmd:string>No existen restricciones</imsmd:string>
+					</imsmd:description>
+				</imsmd:access>
+			</imsmd:rights>
+			<imsmd:relation>
+				<imsmd:kind>
+					<imsmd:source>LOM-ESv1.0</imsmd:source>
+					<imsmd:value>ispartof</imsmd:value>
+				</imsmd:kind>
+				<imsmd:resource>
+					<imsmd:identifier>
+						<imsmd:catalog>Catálogo unificado mec-red.es-ccaa de identificación de ODE</imsmd:catalog>
+						<imsmd:entry>es_20070518_3_0040200</imsmd:entry>
+					</imsmd:identifier>
+					<imsmd:description>
+						<imsmd:string>Secuencia didáctica en la que se abordan cuestiones como la estrategia publicitaria, la planificación de campañas y los diferentes medios de los que se vale el mensaje publicitario para llegar a su destinatario.</imsmd:string>
+					</imsmd:description>
+				</imsmd:resource>
+			</imsmd:relation>
+			<!-- <imsmd:classification>
+				<imsmd:purpose>
+					<imsmd:source>LOM-ESv1.0</imsmd:source>
+					<imsmd:value>discipline</imsmd:value>
+				</imsmd:purpose>
+			</imsmd:classification>
+			<imsmd:classification>
+				<imsmd:purpose>
+					<imsmd:source>LOM-ESv1.0</imsmd:source>
+					<imsmd:value>educational level</imsmd:value>
+				</imsmd:purpose>
+			</imsmd:classification> -->
+		</imsmd:lom>
+	</metadata>
+	<organizations default="ORG-1407CA53DF6A0791B2C82466F69C4BB1">
+		<organization identifier="ORG-1407CA53DF6A0791B2C82466F69C4BB1" structure="hierarchical">
+			<title>Media - Publicidad</title>
+			<item identifier="ITEM-C0B1ECC9ADE44FDDBB72F0E4871DD699" identifierref="RES-E131D7E3599ADADFE152B32F39EF4698" isvisible="true">
+				<title>Actividad Flash sobre planificación de campañas publicitarias</title>
+			</item>
+		</organization>
+	</organizations>
+	<resources>
+		<resource identifier="RES-E131D7E3599ADADFE152B32F39EF4698" adlcp:scormType="asset" type="webcontent" href="contenido/actividad.html">
+			<file href="contenido/actividad.html"/>
+			<file href="contenido/actividad/5.swf"/>
+			<file href="contenido/css/radio_estilo.css"/>
+			<file href="contenido/imagenes/fondo_amarillo.gif"/>
+			<file href="contenido/imagenes/index_17.gif"/>
+		</resource>
+	</resources>
+</manifest>

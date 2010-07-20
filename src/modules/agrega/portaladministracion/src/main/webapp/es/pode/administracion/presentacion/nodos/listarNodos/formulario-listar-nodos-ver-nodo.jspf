@@ -1,0 +1,33 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="verNodo" class="action">
+    <h3><bean:message key="listar.nodos.formulario.listar.nodos.ver.nodo"/></h3>
+    <div class="trigger">
+        <html:form styleId="listarNodosFormularioListarNodosVerNodoForm" action="/ListarNodos/FormularioListarNodosVerNodo" method="post" enctype="multipart/form-data" onsubmit="return validateFormularioListarNodosVerNodoForm(this);">
+            <table>
+                <tbody>
+                    <tr class="id">
+                        <td class="label"><bean:message key="listar.nodos.formulario.listar.nodos.ver.nodo.param.id"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.id}"/>
+                           <input type="text" name="id" value="${value}" onmouseover="hints.show('listar.nodos.formulario.listar.nodos.ver.nodo.param.id.title')" onmouseout="hints.hide()"  id="verNodoId"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('verNodo')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="listar.nodos.formulario.listar.nodos.ver.nodo"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

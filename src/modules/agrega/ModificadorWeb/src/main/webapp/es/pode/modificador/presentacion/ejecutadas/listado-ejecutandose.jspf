@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="ejecutandose" class="action">
+    <h3><bean:message key="modificaciones.ejecutadas.listado.ejecutandose"/></h3>
+    <div class="trigger">
+        <form id="modificacionesEjecutadasListadoEjecutandoseForm" action='<html:rewrite action="/ModificacionesEjecutadas/ListadoEjecutandose"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+               <html:submit onmouseover="hints.show('Ejecutandose')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="modificaciones.ejecutadas.listado.ejecutandose"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

@@ -1,0 +1,27 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'baja.catalogadores.confirmacion.eliminacion.catalogadores.aceptar.param.grupos.trabajo.borrados.title':'<formatting:escape language="javascript"><bean:message key="baja.catalogadores.confirmacion.eliminacion.catalogadores.aceptar.param.grupos.trabajo.borrados.title"/></formatting:escape>',
+                'baja.catalogadores.confirmacion.eliminacion.catalogadores.aceptar.param.lista.id.title':'<formatting:escape language="javascript"><bean:message key="baja.catalogadores.confirmacion.eliminacion.catalogadores.aceptar.param.lista.id.title"/></formatting:escape>',
+                'Aceptar':'<formatting:escape language="javascript"><bean:message key="baja.catalogadores.confirmacion.eliminacion.catalogadores.aceptar.title"/></formatting:escape>',
+                'Aceptar_no':'<formatting:escape language="javascript"><bean:message key="baja.catalogadores.confirmacion.eliminacion.catalogadores.aceptar.title.notallowed"/></formatting:escape>',
+                'Aceptar_reset':'<formatting:escape language="javascript"><bean:message key="baja.catalogadores.confirmacion.eliminacion.catalogadores.aceptar.title.reset"/></formatting:escape>',
+                'Aceptar_noreset':'<formatting:escape language="javascript"><bean:message key="baja.catalogadores.confirmacion.eliminacion.catalogadores.aceptar.title.reset.not.allowed"/></formatting:escape>',
+                'Cancelar':'<formatting:escape language="javascript"><bean:message key="baja.catalogadores.confirmacion.eliminacion.catalogadores.cancelar.title"/></formatting:escape>',
+                'Cancelar_no':'<formatting:escape language="javascript"><bean:message key="baja.catalogadores.confirmacion.eliminacion.catalogadores.cancelar.title.notallowed"/></formatting:escape>',
+                'Cancelar_reset':'<formatting:escape language="javascript"><bean:message key="baja.catalogadores.confirmacion.eliminacion.catalogadores.cancelar.title.reset"/></formatting:escape>',
+                'Cancelar_noreset':'<formatting:escape language="javascript"><bean:message key="baja.catalogadores.confirmacion.eliminacion.catalogadores.cancelar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+</script>
+    </tiles:put>

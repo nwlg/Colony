@@ -1,0 +1,20 @@
+#secuenciaBoton.action {}
+#secuenciaBoton.action #form_submit {}
+
+#secuenciaBoton.action .contador {}
+#secuenciaBoton.action .contador .label {}
+#secuenciaBoton.action .contador .field {}
+
+#salir.action {}
+#salir.action #form_submit {}
+
+
+#datosSalida.table {}
+#datosSalida.table th {}
+#datosSalida.table td div {}
+
+#datosSalida.table th.idNodo {}
+#datosSalida.table td div.idNodo {}
+
+
+

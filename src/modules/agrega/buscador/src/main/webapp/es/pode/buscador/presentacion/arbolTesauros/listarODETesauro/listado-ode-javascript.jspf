@@ -1,0 +1,28 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'listar.odetesauro.cu.listado.ode.decidir.salida.param.tesauro.busqueda.title':'<formatting:escape language="javascript"><bean:message key="listar.odetesauro.cu.listado.ode.decidir.salida.param.tesauro.busqueda.title"/></formatting:escape>',
+                'listar.odetesauro.cu.listado.ode.decidir.salida.param.idioma.title':'<formatting:escape language="javascript"><bean:message key="listar.odetesauro.cu.listado.ode.decidir.salida.param.idioma.title"/></formatting:escape>',
+                'listar.odetesauro.cu.listado.ode.decidir.salida.param.identificador.ode.title':'<formatting:escape language="javascript"><bean:message key="listar.odetesauro.cu.listado.ode.decidir.salida.param.identificador.ode.title"/></formatting:escape>',
+                'listar.odetesauro.cu.listado.ode.decidir.salida.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="listar.odetesauro.cu.listado.ode.decidir.salida.param.idioma.buscador.title"/></formatting:escape>',
+                'listar.odetesauro.cu.listado.ode.decidir.salida.param.pagina.title':'<formatting:escape language="javascript"><bean:message key="listar.odetesauro.cu.listado.ode.decidir.salida.param.pagina.title"/></formatting:escape>',
+                'listar.odetesauro.cu.listado.ode.decidir.salida.param.nodo.title':'<formatting:escape language="javascript"><bean:message key="listar.odetesauro.cu.listado.ode.decidir.salida.param.nodo.title"/></formatting:escape>',
+                'listar.odetesauro.cu.listado.ode.decidir.salida.param.ruta.tesauro.title':'<formatting:escape language="javascript"><bean:message key="listar.odetesauro.cu.listado.ode.decidir.salida.param.ruta.tesauro.title"/></formatting:escape>',
+                'listar.odetesauro.cu.listado.ode.decidir.salida.param.es.hoja.title':'<formatting:escape language="javascript"><bean:message key="listar.odetesauro.cu.listado.ode.decidir.salida.param.es.hoja.title"/></formatting:escape>',
+                'decidirSalida':'<formatting:escape language="javascript"><bean:message key="listar.odetesauro.cu.listado.ode.decidir.salida.title"/></formatting:escape>',
+                'decidirSalida_no':'<formatting:escape language="javascript"><bean:message key="listar.odetesauro.cu.listado.ode.decidir.salida.title.notallowed"/></formatting:escape>',
+                'decidirSalida_reset':'<formatting:escape language="javascript"><bean:message key="listar.odetesauro.cu.listado.ode.decidir.salida.title.reset"/></formatting:escape>',
+                'decidirSalida_noreset':'<formatting:escape language="javascript"><bean:message key="listar.odetesauro.cu.listado.ode.decidir.salida.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

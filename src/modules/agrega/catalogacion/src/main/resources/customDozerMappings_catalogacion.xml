@@ -1,0 +1,1373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN" "http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+	<mapping wildcard="true">
+		<class-a>
+			es.pode.parseadorXML.lomes.lomesAgrega.LomAgrega
+		</class-a>
+		<class-b>
+			es.pode.catalogacion.negocio.servicios.LomBasicoVO
+		</class-b>
+		<field relationship-type="cumulative">
+			<a>General</a>
+			<b>General</b>
+			<a-hint>es.pode.parseadorXML.lomes.lomesAgrega.GeneralAgrega</a-hint>
+			<b-hint>es.pode.entregar.negocio.servicios.GeneralVO</b-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>Educational</a>
+			<b>Educational</b>
+			<a-hint>es.pode.parseadorXML.lomes.lomesAgrega.EducationalAgrega</a-hint>
+			<b-hint>es.pode.entregar.negocio.servicios.EducationalVO</b-hint>
+		</field>
+	</mapping>
+	<mapping wildcard="true">
+		<class-a>
+         es.pode.catalogacion.negocio.servicios.CBTaxonVO
+   	 </class-a>
+		<class-b>
+            es.pode.fuentestaxonomicas.negocio.servicio.TaxonVO
+      </class-b>
+	</mapping>
+	<!-- MAPEO PARA LA CATEGORIA GENERAL -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+         es.pode.parseadorXML.castor.ComplexTypeGeneral
+   	 </class-a>
+		<class-b>
+          es.pode.catalogacion.negocio.servicios.AvGeneralVO
+      </class-b>
+		<field relationship-type="cumulative">
+			<a>aggregationLevel</a>
+			<b>nivelAgregacion</b>
+			<a-hint>es.pode.parseadorXML.castor.AggregationLevel</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.SourceValueVO</b-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>title</a>
+			<b>titulo</b>
+			<a-hint>es.pode.parseadorXML.castor.Title</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.TituloVO</b-hint>
+		</field>
+		<field relationship-type="non-cumulative">
+			<a>identifier</a>
+			<b>identificadores</b>
+			<a-hint>es.pode.parseadorXML.castor.Identifier</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.IdentificadorVO</b-hint>
+		</field>
+		<field relationship-type="non-cumulative">
+			<a>language</a>
+			<b>idiomas</b>
+			<a-hint>es.pode.parseadorXML.castor.Language</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.IdiomaVO</b-hint>
+		</field>
+		<field relationship-type="non-cumulative">
+			<a>descriptionUnbounded</a>
+			<b>descripciones</b>
+			<a-hint>es.pode.parseadorXML.castor.DescriptionUnbounded</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.DescripcionVO</b-hint>
+		</field>
+		<field relationship-type="non-cumulative">
+			<a>keyword</a>
+			<b>palabrasClave</b>
+			<a-hint>es.pode.parseadorXML.castor.Keyword</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.PalabraClaveVO</b-hint>
+		</field>
+		<field relationship-type="non-cumulative">
+			<a>coverage</a>
+			<b>ambitos</b>
+			<a-hint>es.pode.parseadorXML.castor.Coverage</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.AmbitoVO</b-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>structure</a>
+			<b>estructura</b>
+			<a-hint>es.pode.parseadorXML.castor.Structure</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.SourceValueVO</b-hint>
+		</field>
+	</mapping>
+	
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.Structure
+   	  </class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.SourceValueVO
+      </class-b>
+		<field relationship-type="cumulative">
+			<a>groupStructureStructure.complexTypeStructureVocabSource.content</a>
+			<b>source</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>groupStructureStructure.complexTypeStructureVocabValue.content</a>
+			<b>valor</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+	</mapping>
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.AggregationLevel
+   	  </class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.SourceValueVO
+      </class-b>
+		<field relationship-type="cumulative">
+			<a>groupAggregationLevelAggregationLevel.complexTypeAggregationLevelVocabSource.content</a>
+			<b>source</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>groupAggregationLevelAggregationLevel.complexTypeAggregationLevelVocabValue.content</a>
+			<b>valor</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+	</mapping>
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.Keyword
+   	  </class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.PalabraClaveVO
+      </class-b>
+		<field relationship-type="cumulative">
+			<a>groupKeywordKeyword.languageStringItem</a>
+			<b>textos</b>
+			<a-hint>es.pode.parseadorXML.castor.LanguageStringItem</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.LangStringVO</b-hint>
+		</field>
+	</mapping>
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.Title
+   	  </class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.TituloVO
+      </class-b>
+		<field relationship-type="non-cumulative">
+			<a>groupTitleTitle.languageStringItem</a>
+			<b>textos</b>
+			<a-hint>es.pode.parseadorXML.castor.LanguageStringItem</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.LangStringVO</b-hint>
+		</field>
+	</mapping>
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.Coverage
+   	  </class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.AmbitoVO
+      </class-b>
+		<field relationship-type="non-cumulative">
+			<a>groupCoverageCoverage.languageStringItem</a>
+			<b>textos</b>
+			<a-hint>es.pode.parseadorXML.castor.LanguageStringItem</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.LangStringVO</b-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO DE DescriptionUnbounded A DescripcionVO -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.DescriptionUnbounded
+   	  </class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.DescripcionVO
+      </class-b>
+		<field relationship-type="non-cumulative">
+			<a>groupDescriptionUnboundedDescription.languageStringItem</a>
+			<b>textos</b>
+			<a-hint>es.pode.parseadorXML.castor.LanguageStringItem</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.LangStringVO</b-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO IDIOMAS -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.Language
+   	  </class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.IdiomaVO
+      </class-b>
+		<field relationship-type="cumulative">
+			<a>groupLanguageLanguage.content</a>
+			<b>texto</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO DE LanguageStringItem A LangStringVO -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.LanguageStringItem
+   	  </class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.LangStringVO
+      </class-b>
+		<field relationship-type="cumulative">
+			<a>string.content</a>
+			<b>texto</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>string.language</a>
+			<b>idioma</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO IDENTIFIER CON CATENTRADAVO -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.Identifier
+   	  </class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.IdentificadorVO
+      </class-b>
+		<field relationship-type="cumulative">
+			<a>groupIdentifierIdentifier.catalog.groupCatalogCatalog.content</a>
+			<b>catalogo</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>groupIdentifierIdentifier.entry.groupEntryEntry.content</a>
+			<b>entrada</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+	</mapping>
+	<!-- 																			 -->
+	<!-- MAPEO PARA LA CATEGORIA EDUCATIONAL -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.ComplexTypeEducational
+	   	</class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.AvEducationalVO
+     	</class-b>
+		<field relationship-type="cumulative">
+			<a>interactivityType</a>
+			<b>tipoDeInteractividad</b>
+			<a-hint>es.pode.parseadorXML.castor.InteractivityType</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.SourceValueVO</b-hint>
+		</field>
+		<field relationship-type="non-cumulative">
+			<a>learningResourceType</a>
+			<b>tiposrecursoedu</b>
+			<a-hint>es.pode.parseadorXML.castor.LearningResourceType</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.SourceValueVO</b-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>interactivityLevel</a>
+			<b>nivelInteractividad</b>
+			<a-hint>es.pode.parseadorXML.castor.InteractivityLevel</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.SourceValueVO</b-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>semanticDensity</a>
+			<b>densidadSemantica</b>
+			<a-hint>es.pode.parseadorXML.castor.SemanticDensity</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.SourceValueVO</b-hint>
+		</field>
+		<field relationship-type="non-cumulative">
+			<a>intendedEndUserRole</a>
+			<b>destinatarios</b>
+			<a-hint>es.pode.parseadorXML.castor.IntendedEndUserRole</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.SourceValueVO</b-hint>
+		</field>
+		<field relationship-type="non-cumulative">
+			<a>context</a>
+			<b>contextos</b>
+			<a-hint>es.pode.parseadorXML.castor.Context</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.SourceValueVO</b-hint>
+		</field>
+		<field relationship-type="non-cumulative">
+			<a>typicalAgeRange</a>
+			<b>rangoedades</b>
+			<a-hint>es.pode.parseadorXML.castor.TypicalAgeRange</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.RangoEdadVO</b-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>difficulty</a>
+			<b>dificultad</b>
+			<a-hint>es.pode.parseadorXML.castor.Difficulty</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.SourceValueVO</b-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>typicalLearningTime</a>
+			<b>tiempoAprendizaje</b>
+			<a-hint>es.pode.parseadorXML.castor.TypicalLearningTime</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.DuracionVO</b-hint>
+		</field>
+		<field relationship-type="non-cumulative">
+			<a>descriptionUnbounded</a>
+			<b>descripciones</b>
+			<a-hint>es.pode.parseadorXML.castor.DescriptionUnbounded</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.DescripcionVO</b-hint>
+		</field>
+		<field relationship-type="non-cumulative">
+			<a>language</a>
+			<b>idiomas</b>
+			<a-hint>es.pode.parseadorXML.castor.Language</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.IdiomaVO</b-hint>
+		</field>
+		<field relationship-type="non-cumulative">
+			<a>cognitiveProcess</a>
+			<b>procesoscognitivos</b>
+			<a-hint>es.pode.parseadorXML.castor.CognitiveProcess</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.SourceValueVO</b-hint>
+		</field>
+	</mapping>
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.InteractivityType
+   	  </class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.SourceValueVO
+      </class-b>
+		<field relationship-type="cumulative">
+			<a>groupInteractivityTypeInteractivityType.complexTypeInteractivityTypeVocabSource.content</a>
+			<b>source</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>groupInteractivityTypeInteractivityType.complexTypeInteractivityTypeVocabValue.content</a>
+			<b>valor</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+	</mapping>
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.InteractivityLevel
+   	  </class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.SourceValueVO
+      </class-b>
+		<field relationship-type="cumulative">
+			<a>groupInteractivityLevelInteractivityLevel.complexTypeInteractivityLevelVocabSource.content</a>
+			<b>source</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>groupInteractivityLevelInteractivityLevel.complexTypeInteractivityLevelVocabValue.content</a>
+			<b>valor</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+	</mapping>
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.SemanticDensity
+   	  </class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.SourceValueVO
+      </class-b>
+		<field relationship-type="cumulative">
+			<a>groupSemanticDensitySemanticDensity.complexTypeSemanticDensityVocabSource.content</a>
+			<b>source</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>groupSemanticDensitySemanticDensity.complexTypeSemanticDensityVocabValue.content</a>
+			<b>valor</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+	</mapping>
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.CognitiveProcess
+   	  </class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.SourceValueVO
+      </class-b>
+		<field relationship-type="cumulative">
+			<a>groupCognitiveProcessCognitiveProcess.complexTypeCognitiveProcessVocabSource.content</a>
+			<b>source</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>groupCognitiveProcessCognitiveProcess.complexTypeCognitiveProcessVocabValue.content</a>
+			<b>valor</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+	</mapping>
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.Difficulty
+   	  </class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.SourceValueVO
+      </class-b>
+		<field relationship-type="cumulative">
+			<a>groupDifficultyDifficulty.complexTypeDifficultyVocabSource.content</a>
+			<b>source</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>groupDifficultyDifficulty.complexTypeDifficultyVocabValue.content</a>
+			<b>valor</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+	</mapping>
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.TypicalLearningTime
+   	  </class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.DuracionVO
+      </class-b>
+		<field relationship-type="cumulative">
+			<a>groupTypicalLearningTimeTypicalLearningTime.complexTypeDurationDescription</a>
+			<b>descripcion</b>
+			<a-hint>es.pode.parseadorXML.castor.ComplexTypeDurationDescription</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.DescripcionVO</b-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>groupTypicalLearningTimeTypicalLearningTime.complexTypeDurationDuration.content</a>
+			<b>duracion</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+	</mapping>
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.ComplexTypeDurationDescription
+   	  </class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.DescripcionVO
+      </class-b>
+		<field relationship-type="non-cumulative">
+			<a>languageStringItem</a>
+			<b>textos</b>
+			<a-hint>es.pode.parseadorXML.castor.LanguageStringItem</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.LangStringVO</b-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO DE RANGO EDADES -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.TypicalAgeRange
+   	  </class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.RangoEdadVO
+      </class-b>
+		<field relationship-type="non-cumulative">
+			<a>groupTypicalAgeRangeTypicalAgeRange.languageStringItem</a>
+			<b>textos</b>
+			<a-hint>es.pode.parseadorXML.castor.LanguageStringItem</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.LangStringVO</b-hint>
+		</field>
+	</mapping>
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.Context
+   	  </class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.SourceValueVO
+      </class-b>
+		<field relationship-type="cumulative">
+			<a>groupContextContext.complexTypeContextVocabSource.content</a>
+			<b>source</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>groupContextContext.complexTypeContextVocabValue.content</a>
+			<b>valor</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+	</mapping>
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.IntendedEndUserRole
+   	  </class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.SourceValueVO
+      </class-b>
+		<field relationship-type="cumulative">
+			<a>groupIntendedEndUserRoleIntendedEndUserRole.complexTypeIntendedEndUserRoleVocabSource.content</a>
+			<b>source</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>groupIntendedEndUserRoleIntendedEndUserRole.complexTypeIntendedEndUserRoleVocabValue.content</a>
+			<b>valor</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+	</mapping>
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.LearningResourceType
+   	  </class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.SourceValueVO
+      </class-b>
+		<field relationship-type="cumulative">
+			<a>groupLearningResourceTypeLearningResourceType.complexTypeLearningResourceTypeVocabSource.content</a>
+			<b>source</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>groupLearningResourceTypeLearningResourceType.complexTypeLearningResourceTypeVocabValue.content</a>
+			<b>valor</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO PARA LA CATEGORIA LIFECYCLE -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+         es.pode.parseadorXML.castor.ComplexTypeLifeCycle
+   	 </class-a>
+		<class-b>
+          es.pode.catalogacion.negocio.servicios.AvLifeCycleVO
+      </class-b>
+		<field relationship-type="cumulative">
+			<a>version</a>
+			<b>version</b>
+			<a-hint>es.pode.parseadorXML.castor.Version</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.VersionVO</b-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>status</a>
+			<b>estado</b>
+			<a-hint>es.pode.parseadorXML.castor.Status</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.SourceValueVO</b-hint>
+		</field>
+		<field relationship-type="non-cumulative">
+			<a>contribute</a>
+			<b>contribuciones</b>
+			<a-hint>es.pode.parseadorXML.castor.Contribute</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.ContribucionVO</b-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO DE VERSION -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.Version
+   	    </class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.VersionVO
+      	</class-b>
+		<field relationship-type="non-cumulative">
+			<a>groupVersionVersion.languageStringItem</a>
+			<b>textos</b>
+			<a-hint>es.pode.parseadorXML.castor.LanguageStringItem</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.LangStringVO</b-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO DE STATUS -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.Status
+   	  </class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.SourceValueVO
+      </class-b>
+		<field relationship-type="cumulative">
+			<a>groupStatusStatus.complexTypeStatusVocabSource.content</a>
+			<b>source</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>groupStatusStatus.complexTypeStatusVocabValue.content</a>
+			<b>valor</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO DE CONTRIBUTE -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.Contribute
+   	  </class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.ContribucionVO
+      </class-b>
+		<field relationship-type="cumulative">
+			<a>groupContributeContribute.role</a>
+			<b>tipo</b>
+			<a-hint>es.pode.parseadorXML.castor.Role</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.SourceValueVO</b-hint>
+		</field>
+		<field relationship-type="non-cumulative">
+			<a>groupContributeContribute.entityUnbounded</a>
+			<b>entidades</b>
+			<a-hint>es.pode.parseadorXML.castor.EntityUnbounded</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.EntidadVO</b-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>groupContributeContribute.date</a>
+			<b>fecha</b>
+			<a-hint>es.pode.parseadorXML.castor.Date</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.FechaVO</b-hint>
+		</field>
+	</mapping>
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+	        	 es.pode.parseadorXML.castor.Date
+	   	  </class-a>
+		<class-b>
+	            es.pode.catalogacion.negocio.servicios.FechaVO
+	      </class-b>
+		<field relationship-type="cumulative">
+			<a>groupDateDate.complexTypeDateTimeDateTime.content</a>
+			<b>fecha</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>groupDateDate.ComplexTypeDateTimeDescription</a>
+			<b>descripcion</b>
+			<a-hint>es.pode.parseadorXML.castor.ComplexTypeDateTimeDescription</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.DescripcionVO</b-hint>
+		</field>
+	</mapping>
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.ComplexTypeDateTimeDescription
+   	    </class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.DescripcionVO
+      	</class-b>
+		<field relationship-type="non-cumulative">
+			<a>languageStringItem</a>
+			<b>textos</b>
+			<a-hint>es.pode.parseadorXML.castor.LanguageStringItem</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.LangStringVO</b-hint>
+		</field>
+	</mapping>
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.Role
+   	  	</class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.SourceValueVO
+      	</class-b>
+		<field relationship-type="cumulative">
+			<a>groupRoleRole.complexTypeRoleVocabSource.content</a>
+			<b>source</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>groupRoleRole.complexTypeRoleVocabValue.content</a>
+			<b>valor</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+	</mapping>
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+	        	 es.pode.parseadorXML.castor.EntityUnbounded
+	   	  </class-a>
+		<class-b>
+	            es.pode.catalogacion.negocio.servicios.EntidadVO
+	      </class-b>
+		<field relationship-type="cumulative">
+			<a>groupEntityUnboundedEntity.content</a>
+			<b>texto</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO PARA LA CATEGORIA METAMETADATOS -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+         es.pode.parseadorXML.castor.ComplexTypeMetaMetadata
+   	 </class-a>
+		<class-b>
+          es.pode.catalogacion.negocio.servicios.AvMetametadataVO
+      </class-b>
+		<field relationship-type="non-cumulative">
+			<a>identifier</a>
+			<b>identificadores</b>
+			<a-hint>es.pode.parseadorXML.castor.Identifier</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.IdentificadorVO</b-hint>
+		</field>
+		<field relationship-type="non-cumulative">
+			<a>contributeMeta</a>
+			<b>contribuciones</b>
+			<a-hint>es.pode.parseadorXML.castor.ContributeMeta</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.ContribucionVO</b-hint>
+		</field>
+		<field relationship-type="non-cumulative">
+			<a>metadataSchema</a>
+			<b>esquemas</b>
+			<a-hint>es.pode.parseadorXML.castor.MetadataSchema</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.EsquemaDeMetadatosVO</b-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>language</a>
+			<b>idioma</b>
+			<a-hint>es.pode.parseadorXML.castor.Language</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.IdiomaVO</b-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO DE CONTRIBUTEMETA -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.ContributeMeta
+   	  </class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.ContribucionVO
+      </class-b>
+		<field relationship-type="cumulative">
+			<a>groupContributeMetaContribute.roleMeta</a>
+			<b>tipo</b>
+			<a-hint>es.pode.parseadorXML.castor.RoleMeta</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.SourceValueVO</b-hint>
+		</field>
+		<field relationship-type="non-cumulative">
+			<a>groupContributeMetaContribute.entityUnbounded</a>
+			<b>entidades</b>
+			<a-hint>es.pode.parseadorXML.castor.EntityUnbounded</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.EntidadVO</b-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>groupContributeMetaContribute.date</a>
+			<b>fecha</b>
+			<a-hint>es.pode.parseadorXML.castor.Date</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.FechaVO</b-hint>
+		</field>
+	</mapping>
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.RoleMeta
+   	  	</class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.SourceValueVO
+      	</class-b>
+		<field relationship-type="cumulative">
+			<a>groupRoleMetaRole.complexTypeRoleMetaVocabSource.content</a>
+			<b>source</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>groupRoleMetaRole.complexTypeRoleMetaVocabValue.content</a>
+			<b>valor</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO DE METADATASCHEMA -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+	        	 es.pode.parseadorXML.castor.MetadataSchema
+	   	  </class-a>
+		<class-b>
+	            es.pode.catalogacion.negocio.servicios.EsquemaDeMetadatosVO
+	      </class-b>
+		<field relationship-type="cumulative">
+			<a>groupMetadataSchemaMetadataSchema.content</a>
+			<b>texto</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO PARA LA CATEGORIA TECHNICAL -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	es.pode.parseadorXML.castor.ComplexTypeTechnical
+		 </class-a>
+		<class-b>
+        	es.pode.catalogacion.negocio.servicios.AvTechnicalVO
+		</class-b>
+		<field relationship-type="non-cumulative">
+			<a>format</a>
+			<b>formatos</b>
+			<a-hint>es.pode.parseadorXML.castor.Format</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.FormatoVO</b-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>size</a>
+			<b>tamanio</b>
+			<a-hint>es.pode.parseadorXML.castor.Size</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.TamanioVO</b-hint>
+		</field>
+		<field relationship-type="non-cumulative">
+			<a>location</a>
+			<b>localizaciones</b>
+			<a-hint>es.pode.parseadorXML.castor.LocationLomes</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.LocalizacionVO</b-hint>
+		</field>
+		<field relationship-type="non-cumulative">
+			<a>requirement</a>
+			<b>requisitos</b>
+			<a-hint>es.pode.parseadorXML.castor.Requirement</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.RequisitoVO</b-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>installationRemarks</a>
+			<b>pautasInstalacion</b>
+			<a-hint>es.pode.parseadorXML.castor.InstallationRemarks</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.PautasInstalacionVO</b-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>otherPlatformRequirements</a>
+			<b>otrosRequisitos</b>
+			<a-hint>es.pode.parseadorXML.castor.OtherPlatformRequirements</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.OtrosRequisitosVO</b-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>duration</a>
+			<b>duracion</b>
+			<a-hint>es.pode.parseadorXML.castor.Duration</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.DuracionVO</b-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO FORMATO -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+	    	es.pode.parseadorXML.castor.Format
+		</class-a>
+		<class-b>
+	    	es.pode.catalogacion.negocio.servicios.FormatoVO
+	    </class-b>
+		<field relationship-type="cumulative">
+			<a>groupFormatFormat.content</a>
+			<b>texto</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO TAMAÑO -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+	    	es.pode.parseadorXML.castor.Size
+		</class-a>
+		<class-b>
+	    	es.pode.catalogacion.negocio.servicios.TamanioVO
+	    </class-b>
+		<field relationship-type="cumulative">
+			<a>groupSizeSize.content</a>
+			<b>texto</b>
+			<a-hint>java.math.BigDecimal</a-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO LOCALIZACION -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+	    	es.pode.parseadorXML.castor.LocationLomes
+		</class-a>
+		<class-b>
+	    	es.pode.catalogacion.negocio.servicios.LocalizacionVO
+	    </class-b>
+		<field relationship-type="cumulative">
+			<a>groupLocationLocation.content</a>
+			<b>texto</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO REQUISITOS -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+	    	es.pode.parseadorXML.castor.Requirement
+		</class-a>
+		<class-b>
+	    	es.pode.catalogacion.negocio.servicios.RequisitoVO
+	    </class-b>
+		<field relationship-type="non-cumulative">
+			<a>groupRequirementRequirement.orComposite</a>
+			<b>agregadoresOR</b>
+			<a-hint>es.pode.parseadorXML.castor.OrComposite</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.AgregadorORVO</b-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO AGREGADOR OR -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+	    	es.pode.parseadorXML.castor.OrComposite
+		</class-a>
+		<class-b>
+	    	es.pode.catalogacion.negocio.servicios.AgregadorORVO
+	    </class-b>
+		<field relationship-type="cumulative">
+			<a>groupOrCompositeOrComposite.type</a>
+			<b>tipo</b>
+			<a-hint>es.pode.parseadorXML.castor.Type</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.SourceValueVO</b-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>groupOrCompositeOrComposite.name</a>
+			<b>nombre</b>
+			<a-hint>es.pode.parseadorXML.castor.Name</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.SourceValueVO</b-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>groupOrCompositeOrComposite.minimumVersion</a>
+			<b>versionMin</b>
+			<a-hint>es.pode.parseadorXML.castor.MinimumVersion</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.VersionMinVO</b-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>groupOrCompositeOrComposite.maximumVersion</a>
+			<b>versionMax</b>
+			<a-hint>es.pode.parseadorXML.castor.MaximumVersion</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.VersionMaxVO</b-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO TIPO REQUISITO -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+	    	es.pode.parseadorXML.castor.Type
+		</class-a>
+		<class-b>
+	    	es.pode.catalogacion.negocio.servicios.SourceValueVO
+	    </class-b>
+		<field relationship-type="cumulative">
+			<a>groupTypeType.complexTypeTypeVocabSource.content</a>
+			<b>source</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>groupTypeType.complexTypeTypeVocabValue.content</a>
+			<b>valor</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO NOMBRE REQUISITO -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+	    	es.pode.parseadorXML.castor.Name
+		</class-a>
+		<class-b>
+	    	es.pode.catalogacion.negocio.servicios.SourceValueVO
+	    </class-b>
+		<field relationship-type="cumulative">
+			<a>groupNameName.complexTypeNameVocabSource.content</a>
+			<b>source</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>groupNameName.complexTypeNameVocabValue.content</a>
+			<b>valor</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO MINIMA VERSION -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+	    	es.pode.parseadorXML.castor.MinimumVersion
+		</class-a>
+		<class-b>
+	    	es.pode.catalogacion.negocio.servicios.VersionMinVO
+	    </class-b>
+		<field relationship-type="cumulative">
+			<a>groupMinimumVersionMinimumVersion.content</a>
+			<b>texto</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO MAXIMA VERSION -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+	    	es.pode.parseadorXML.castor.MaximumVersion
+		</class-a>
+		<class-b>
+	    	es.pode.catalogacion.negocio.servicios.VersionMaxVO
+	    </class-b>
+		<field relationship-type="cumulative">
+			<a>groupMaximumVersionMaximumVersion.content</a>
+			<b>texto</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO PAUTAS DE INSTALACION -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+	    	es.pode.parseadorXML.castor.InstallationRemarks
+		</class-a>
+		<class-b>
+	    	es.pode.catalogacion.negocio.servicios.PautasInstalacionVO
+	    </class-b>
+		<field relationship-type="non-cumulative">
+			<a>groupInstallationRemarksInstallationRemarks.LanguageStringItem</a>
+			<b>textos</b>
+			<a-hint>es.pode.parseadorXML.castor.LanguageStringItem</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.LangStringVO</b-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO OTROS REQUISITOS DE INSTALACION -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+	    	es.pode.parseadorXML.castor.OtherPlatformRequirements
+		</class-a>
+		<class-b>
+	    	es.pode.catalogacion.negocio.servicios.OtrosRequisitosVO
+	    </class-b>
+		<field relationship-type="non-cumulative">
+			<a>groupOtherPlatformRequirementsOtherPlatformRequirements.LanguageStringItem</a>
+			<b>textos</b>
+			<a-hint>es.pode.parseadorXML.castor.LanguageStringItem</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.LangStringVO</b-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO DURACION -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+	    	es.pode.parseadorXML.castor.Duration
+		</class-a>
+		<class-b>
+	    	es.pode.catalogacion.negocio.servicios.DuracionVO
+	    </class-b>
+		<field relationship-type="cumulative">
+			<a>groupDurationDuration.complexTypeDurationDuration.content</a>
+			<b>duracion</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>groupDurationDuration.complexTypeDurationDescription</a>
+			<b>descripcion</b>
+			<a-hint>es.pode.parseadorXML.castor.ComplexTypeDurationDescription</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.DescripcionVO</b-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO PARA LA CATEGORIA RIGHTS -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+         es.pode.parseadorXML.castor.ComplexTypeRights
+   	 </class-a>
+		<class-b>
+          es.pode.catalogacion.negocio.servicios.AvRightsVO
+      </class-b>
+		<field relationship-type="cumulative">
+			<a>cost</a>
+			<b>coste</b>
+			<a-hint>es.pode.parseadorXML.castor.Cost</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.SourceValueVO</b-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>copyrightAndOtherRestrictions</a>
+			<b>derechosDeAutor</b>
+			<a-hint>es.pode.parseadorXML.castor.CopyrightAndOtherRestrictions</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.SourceValueVO</b-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>description</a>
+			<b>descripcion</b>
+			<a-hint>es.pode.parseadorXML.castor.Description</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.DescripcionVO</b-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>access</a>
+			<b>acceso</b>
+			<a-hint>es.pode.parseadorXML.castor.Access</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.AccesoVO</b-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO DE COST -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.Cost
+   	  	</class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.SourceValueVO
+      	</class-b>
+		<field relationship-type="cumulative">
+			<a>groupCostCost.complexTypeCostVocabSource.content</a>
+			<b>source</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>groupCostCost.complexTypeCostVocabValue.content</a>
+			<b>valor</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO DE COPYRIGHTANDOTHERRESTRICTIONS -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.CopyrightAndOtherRestrictions
+   	  	</class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.SourceValueVO
+      	</class-b>
+		<field relationship-type="cumulative">
+			<a>groupCopyrightAndOtherRestrictionsCopyrightAndOtherRestrictions.complexTypeCopyrightAndOtherRestrictionsVocabSource.content</a>
+			<b>source</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>groupCopyrightAndOtherRestrictionsCopyrightAndOtherRestrictions.complexTypeCopyrightAndOtherRestrictionsVocabValue.content</a>
+			<b>valor</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO DE DESCRIPTION -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.Description
+   	  </class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.DescripcionVO
+      </class-b>
+		<field relationship-type="non-cumulative">
+			<a>groupDescriptionDescription.languageStringItem</a>
+			<b>textos</b>
+			<a-hint>es.pode.parseadorXML.castor.LanguageStringItem</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.LangStringVO</b-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO DE ACCESS -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.Access
+   	  </class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.AccesoVO
+      </class-b>
+		<field relationship-type="cumulative">
+			<a>groupAccessAccess.accessType</a>
+			<b>tipo</b>
+			<a-hint>es.pode.parseadorXML.castor.AccessType</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.SourceValueVO</b-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>groupAccessAccess.description</a>
+			<b>descripcion</b>
+			<a-hint>es.pode.parseadorXML.castor.Description</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.DescripcionVO</b-hint>
+		</field>
+	</mapping>
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.AccessType
+   	  	</class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.SourceValueVO
+      	</class-b>
+		<field relationship-type="cumulative">
+			<a>groupAccessTypeAccessType.complexTypeAccessTypeVocabSource.content</a>
+			<b>source</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>groupAccessTypeAccessType.complexTypeAccessTypeVocabValue.content</a>
+			<b>valor</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO PARA LA CATEGORIA RELATION -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.ComplexTypeRelation
+	   	</class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.AvRelationVO
+     	</class-b>
+		<field relationship-type="cumulative">
+			<a>kind</a>
+			<b>tipo</b>
+			<a-hint>es.pode.parseadorXML.castor.Kind</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.SourceValueVO</b-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>resource</a>
+			<b>recurso</b>
+			<a-hint>es.pode.parseadorXML.castor.ResourceLomes</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.RecursoVO</b-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO DE KIND -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.Kind
+   	  	</class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.SourceValueVO
+      	</class-b>
+		<field relationship-type="cumulative">
+			<a>groupKindKind.complexTypeKindVocabSource.content</a>
+			<b>source</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>groupKindKind.complexTypeKindVocabValue.content</a>
+			<b>valor</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO DE RESOURCELOMES -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.ResourceLomes
+   	  </class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.RecursoVO
+      </class-b>
+		<field relationship-type="cumulative">
+			<a>groupResourceResource.identifier</a>
+			<b>identificador</b>
+			<a-hint>es.pode.parseadorXML.castor.Identifier</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.IdentificadorVO</b-hint>
+		</field>
+		<field relationship-type="non-cumulative">
+			<a>groupResourceResource.descriptionUnbounded</a>
+			<b>descripciones</b>
+			<a-hint>es.pode.parseadorXML.castor.DescriptionUnbounded</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.DescripcionVO</b-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO PARA LA CATEGORIA ANNOTATION -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	es.pode.parseadorXML.castor.ComplexTypeAnnotation
+		 </class-a>
+		<class-b>
+        	es.pode.catalogacion.negocio.servicios.AvAnnotationVO
+		</class-b>
+		<field relationship-type="cumulative">
+			<a>entity</a>
+			<b>entidad</b>
+			<a-hint>es.pode.parseadorXML.castor.Entity</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.EntidadVO</b-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>date</a>
+			<b>fecha</b>
+			<a-hint>es.pode.parseadorXML.castor.Date</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.FechaVO</b-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>description</a>
+			<b>descripcion</b>
+			<a-hint>es.pode.parseadorXML.castor.Description</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.DescripcionVO</b-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO ENTIDAD -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+	    	es.pode.parseadorXML.castor.Entity
+		</class-a>
+		<class-b>
+	    	es.pode.catalogacion.negocio.servicios.EntidadVO
+	    </class-b>
+		<field relationship-type="cumulative">
+			<a>groupEntityEntity.content</a>
+			<b>texto</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+	</mapping>
+	<!--MAPEO PARA LA CATEGORIA CLASSIFICATION  -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.ComplexTypeClassification
+	   	</class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.AvClassificationVO
+     	</class-b>
+		<field relationship-type="cumulative">
+			<a>purpose</a>
+			<b>proposito</b>
+			<a-hint>es.pode.parseadorXML.castor.Purpose</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.SourceValueVO</b-hint>
+		</field>
+		<field relationship-type="non-cumulative">
+			<a>taxonPath</a>
+			<b>rutasTaxonomicas</b>
+			<a-hint>es.pode.parseadorXML.castor.TaxonPath</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.RutaTaxonomicaVO</b-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>description</a>
+			<b>descripcion</b>
+			<a-hint>es.pode.parseadorXML.castor.Description</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.DescripcionVO</b-hint>
+		</field>
+		<field relationship-type="non-cumulative">
+			<a>keyword</a>
+			<b>palabrasClave</b>
+			<a-hint>es.pode.parseadorXML.castor.Keyword</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.PalabraClaveVO</b-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO DE PURPOSE -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.Purpose
+   	  	</class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.SourceValueVO
+      	</class-b>
+		<field relationship-type="cumulative">
+			<a>groupPurposePurpose.complexTypePurposeVocabSource.content</a>
+			<b>source</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>groupPurposePurpose.complexTypePurposeVocabValue.content</a>
+			<b>valor</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO DE TAXONPATH -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.TaxonPath
+   	  </class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.RutaTaxonomicaVO
+      </class-b>
+		<field relationship-type="cumulative">
+			<a>groupTaxonPathTaxonPath.source</a>
+			<b>fuente</b>
+			<a-hint>es.pode.parseadorXML.castor.Source</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.FuenteVO</b-hint>
+		</field>
+		<field relationship-type="non-cumulative">
+			<a>groupTaxonPathTaxonPath.Taxon</a>
+			<b>taxones</b>
+			<a-hint>es.pode.parseadorXML.castor.Taxon</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.TaxonVO</b-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO DE SOURCE -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+	    	es.pode.parseadorXML.castor.Source
+		</class-a>
+		<class-b>
+	    	es.pode.catalogacion.negocio.servicios.FuenteVO
+	    </class-b>
+		<field relationship-type="non-cumulative">
+			<a>groupSourceSource.languageStringItem</a>
+			<b>textos</b>
+			<a-hint>es.pode.parseadorXML.castor.LanguageStringItem</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.LangStringVO</b-hint>
+		</field>
+	</mapping>
+	<!-- MAPEO DE TAXON -->
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.Taxon
+   	  </class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.TaxonVO
+      </class-b>
+		<field relationship-type="cumulative">
+			<a>groupTaxonTaxon.id</a>
+			<b>id</b>
+			<a-hint>es.pode.parseadorXML.castor.Id</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.IdVO</b-hint>
+		</field>
+		<field relationship-type="cumulative">
+			<a>groupTaxonTaxon.entryTaxon</a>
+			<b>entry</b>
+			<a-hint>es.pode.parseadorXML.castor.EntryTaxon</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.EntryVO</b-hint>
+		</field>
+	</mapping>
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.Id
+   	  </class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.IdVO
+      </class-b>
+		<field relationship-type="cumulative">
+			<a>groupIdId.content</a>
+			<b>texto</b>
+			<a-hint>es.pode.parseadorXML.castor.String</a-hint>
+		</field>
+	</mapping>
+	<mapping wildcard="true" type="bi-directional" map-null="false">
+		<class-a>
+        	 es.pode.parseadorXML.castor.EntryTaxon
+   	  </class-a>
+		<class-b>
+            es.pode.catalogacion.negocio.servicios.EntryVO
+      </class-b>
+		<field relationship-type="non-cumulative">
+			<a>groupEntryTaxonEntry.languageStringItem</a>
+			<b>textos</b>
+			<a-hint>es.pode.parseadorXML.castor.LanguageStringItem</a-hint>
+			<b-hint>es.pode.catalogacion.negocio.servicios.LangStringVO</b-hint>
+		</field>
+	</mapping>
+</mappings>

@@ -1,0 +1,68 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>agrega</groupId>
+  <artifactId>buscador</artifactId>
+  <version>1.1</version>
+  <packaging>war</packaging>
+
+  <name>buscador</name>
+
+  <parent>
+    <groupId>agrega</groupId>
+    <artifactId>agrega-war</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.ajaxtags</groupId>
+      <artifactId>ajaxtags</artifactId>
+      <version>1.2-beta3</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+    	<groupId>javax.servlet</groupId>
+    	<artifactId>servlet-api</artifactId>
+    	<version>2.4</version>
+    	<type>jar</type>
+    	<scope>provided</scope>
+    </dependency>
+    <dependency>
+    	<groupId>javax.servlet</groupId>
+    	<artifactId>jsp-api</artifactId>
+    	<version>2.0</version>
+    	<type>jar</type>
+    	<scope>provided</scope>
+    </dependency>
+  </dependencies>
+
+  <!-- Copy plantillas (templates) into module -->
+  <build>
+  <plugins>
+    <plugin>
+      <artifactId>maven-antrun-plugin</artifactId>
+      <executions>
+        <execution>
+          <id>install-templates</id>
+          <phase>compile</phase>
+          <configuration>
+            <tasks>
+              <copy todir="${project.build.directory}/${project.build.finalName}">
+                <fileset dir="../../plantillas/jsp"/>
+              </copy>
+            </tasks>
+          </configuration>
+          <goals>
+            <goal>run</goal>
+          </goals>
+        </execution>
+      </executions>
+    </plugin>
+  </plugins>
+  </build>
+
+</project>

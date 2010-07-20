@@ -1,0 +1,151 @@
+<VirtualHost *:80>
+
+  UseCanonicalName On
+
+  ServerName  www.ndrb.org.uk
+  ServerAlias www.bracknell.ndrb.org.uk
+  #ServerAlias test.agrega.siriusit.co.uk
+  TimeOut 300
+
+  DocumentRoot /var/www/
+
+  # MCA: Used for multi-site things...
+  #Alias /static/css     /opt/static/ccaa/test/css
+  Alias /static         /export/ccaa/test/uploads/html/static/common
+
+  Alias /taller         /export/ccaa/test/uploads/taller
+  Alias /noticias       /export/ccaa/test/uploads/noticias
+  Alias /repositorio    /export/ccaa/test/uploads/repositorio
+  Alias /galeriaimg     /export/ccaa/test/uploads/galeriaimg/test
+  Alias /imgcommon      /export/ccaa/test/uploads/galeriaimg/common
+  Alias /imagenesInformes /export/ccaa/test/uploads/imagenesInformes
+  Alias /rss /export/ccaa/test/uploads/rss
+  Alias /utilidades /export/ccaa/test/uploads/utilidades
+  Alias /searchPlugin /export/ccaa/test/uploads/searchPlugin
+  Alias /sitemaps /export/ccaa/test/uploads/sitemaps
+  Alias /informesPortada /export/ccaa/test/uploads/informesPortada
+  Alias /descargas      /export/ccaa/test/uploads/descargas
+
+  # security
+  # forbid default access to filesystem locations
+  <Directory /> 
+   Order Deny,Allow 
+   Deny from all
+   AllowOverride None 
+  </Directory> 
+
+  <Directory "/var/www/">
+    Order Deny,Allow
+    Allow from all
+    AllowOverride None
+  </Directory>
+
+  <Directory "/opt/static">
+    Order Deny,Allow
+    Allow from all
+    AllowOverride None
+  </Directory>
+
+  <Directory "/export/ccaa/test/uploads">
+    Order Deny,Allow
+    Allow from all
+    AllowOverride None
+  </Directory>
+
+  #
+  # Wiki directives removed since wiki content is hosted on the helpwiki
+  # server which is handled by the reverse proxy.
+  #
+
+  # Shibboleth Config -- Begin
+
+  <Location /shibboleth-sp>
+    Allow from all
+  </Location>
+  Alias /shibboleth-sp/main.css /usr/share/shibboleth/main.css
+  Alias /shibboleth-sp/logo.jpg /usr/share/shibboleth/logo.jpg
+
+  JkEnvVar Shib-Session-ID
+  JkEnvVar uid
+  JkEnvVar givenName
+  JkEnvVar sn
+  JkEnvVar mail
+  JkEnvVar persistent-id
+
+  <LocationMatch /(visualizadorcontenidos|PortalEmpaquetador|catalogadorWeb|visualizador|portaladministracion|buscador|dri|gestorFlujo|buscar|auditoria|ModificadorWeb|oaipmh|TaggingWeb)/j_acegi_shibboleth_security_check>
+    AuthType shibboleth
+    ShibRequireSession On
+    require valid-user
+  </LocationMatch>
+
+  # Shibboleth Config -- End
+
+  RewriteEngine on
+  RewriteRule ^/robots.txt$ /sitemaps/estatico/robots.txt [L,PT]
+  RewriteRule ^/sitemap.xml$ /sitemaps/sitemap-index.xml [L,PT]
+  RewriteRule ^/sitemap(.*).xml$ /sitemaps/sitemap$1.xml [L,PT]
+  RewriteRule ^/$ /visualizadorcontenidos/ [R=permanent,L]
+  RewriteRule ^/layout/(.*) /visualizador-1/layout/$1 [L,PT]
+  RewriteRule ^/idODE/(.*) /visualizador-1/Visualizar/Visualizar.do?identificador=$1&secuencia=false [L,PT]
+
+  RewriteRule ^/ODE/(.+)/(.+)$ /buscador/DetallarODECU/DetallarODECU.do?idioma=$1&identificadorODE=$2 [L,PT]
+
+  RewriteRule ^/visualizar/es/(.+)\.jsp$ /visualizador/$1\.jsp [PT,L]
+  RewriteRule ^/visualizar/es/(.+)\.html$ /visualizador/$1\.html [PT,L]
+  RewriteRule ^/visualizar/es/(.+)\.js$ /visualizador/$1\.js [PT,L]
+  RewriteRule ^/visualizar/es/(.+)\.swf$ /visualizador/$1\.swf [PT,L]
+  RewriteRule ^/visualizar/en/(.+)\.jsp$ /visualizador/$1\.jsp [PT,L]
+  RewriteRule ^/visualizar/en/(.+)\.html$ /visualizador/$1\.html [PT,L]
+  RewriteRule ^/visualizar/en/(.+)\.js$ /visualizador/$1\.js [PT,L]
+  RewriteRule ^/visualizar/en/(.+)\.swf$ /visualizador/$1\.swf [PT,L]
+  RewriteRule ^/visualizar/eu/(.+)\.jsp$ /visualizador/$1\.jsp [PT,L]
+  RewriteRule ^/visualizar/eu/(.+)\.html$ /visualizador/$1\.html [PT,L]
+  RewriteRule ^/visualizar/eu/(.+)\.js$ /visualizador/$1\.js [PT,L]
+  RewriteRule ^/visualizar/eu/(.+)\.swf$ /visualizador/$1\.swf [PT,L]
+  RewriteRule ^/visualizar/ca/(.+)\.jsp$ /visualizador/$1\.jsp [PT,L]
+  RewriteRule ^/visualizar/ca/(.+)\.html$ /visualizador/$1\.html [PT,L]
+  RewriteRule ^/visualizar/ca/(.+)\.js$ /visualizador/$1\.js [PT,L]
+  RewriteRule ^/visualizar/ca/(.+)\.swf$ /visualizador/$1\.swf [PT,L]
+  RewriteRule ^/visualizar/va/(.+)\.jsp$ /visualizador/$1\.jsp [PT,L]
+  RewriteRule ^/visualizar/va/(.+)\.html$ /visualizador/$1\.html [PT,L]
+  RewriteRule ^/visualizar/va/(.+)\.js$ /visualizador/$1\.js [PT,L]
+  RewriteRule ^/visualizar/va/(.+)\.swf$ /visualizador/$1\.swf [PT,L]
+  RewriteRule ^/visualizar/gl/(.+)\.jsp$ /visualizador/$1\.jsp [PT,L]
+  RewriteRule ^/visualizar/gl/(.+)\.html$ /visualizador/$1\.html [PT,L]
+  RewriteRule ^/visualizar/gl/(.+)\.js$ /visualizador/$1\.js [PT,L]
+  RewriteRule ^/visualizar/gl/(.+)\.swf$ /visualizador/$1\.swf [PT,L]
+  RewriteRule ^/visualizar/(.+)/(.+)/(.+)$ /visualizador/Visualizar/Visualizar.do?idioma=$1&identificador=$2&secuencia=$3 [L,PT]
+
+  # Reglas de rewriting para las NOTICIAS
+  RewriteRule ^/portada/noticias/(.+)/(.+)$ /visualizadorcontenidos/Portada/NoticiasVer.do?id=$2 [PT,L]
+  RewriteRule ^/portada/noticiasCategorias/(.+)/(.+)$ /visualizadorcontenidos/Portada/NoticiasCategoria.do?idCategoria=$2 [PT,L]
+  RewriteRule ^/noticias$ /visualizadorcontenidos/Noticias/Noticias.do [PT,L]
+  RewriteCond %{QUERY_STRING} ^idCategoria(.+)&(.+)$
+  RewriteRule ^/noticias/categorias/(.+)/(.+)$ /visualizadorcontenidos/Noticia/NoticiaCategoria.do?idCategoria%1&%2 [PT,L]
+  RewriteCond %{QUERY_STRING} ^(.+)&idCategoria(.+)$
+  RewriteRule ^/noticias/categorias/(.+)/(.+)$ /visualizadorcontenidos/Noticia/NoticiaCategoria.do?%1&idCategoria%2 [PT,L]
+  RewriteRule ^/noticias/categorias/(.+)/(.+)$ /visualizadorcontenidos/Noticia/NoticiaCategoria.do?idCategoria=$2 [PT,L]
+  #JkLogLevel debug
+  
+  RewriteRule ^(.+)\\(.+)$ $1/$2 [PT]
+
+  JkMount       /visualizadorcontenidos/*      	  test 
+  JkMount       /PortalEmpaquetador/*          test 
+  JkMount       /catalogadorWeb/*              test 
+  JkMount       /visualizador/*              test 
+  JkMount       /portaladministracion/*        test 
+  JkMount       /buscador/*                    test 
+  JkMount       /dri/*                       test 
+  JkMount       /gestorFlujo/*                 test 
+  JkMount       /buscar/*                    test 
+  JkMount       /auditoria/*                   test 
+  JkMount       /ModificadorWeb/*              test 
+  JkMount       /oaipmh/*                      test 
+  JkMount       /TaggingWeb/*                  test 
+  JkMount	/RemotingGalleryServer/*	test
+
+  LogFormat "%h %l %u %t \"%r\" %>s %b" extendedlog
+  CustomLog /var/log/apache2/www.ndrb.org.uk_access.log extendedlog
+  ErrorLog  /var/log/apache2/www.ndrb.org.uk_error.log
+</VirtualHost>
+

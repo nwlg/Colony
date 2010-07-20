@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN" "http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+	<mapping wildcard="true">
+		<class-a>
+			es.pode.parseadorXML.castor.Organization
+		</class-a>
+		<class-b>
+			es.pode.entregar.negocio.servicios.OrganizacionVO
+		</class-b>
+		<field>
+			<a>identifier</a>
+			<b>idOrg</b>
+		</field>
+		<field>
+			<a>title</a>
+			<b>tituloOrg</b>
+		</field>
+		<field relationship-type="cumulative">
+			<a>item</a>
+			<b>items</b>
+			<a-hint>es.pode.parseadorXML.castor.Item</a-hint>
+			<b-hint>es.pode.entregar.negocio.servicios.ItemVO</b-hint>
+		</field>
+	</mapping>
+		<mapping wildcard="true">
+		<class-a>
+			es.pode.parseadorXML.castor.Item
+		</class-a>
+		<class-b>
+			es.pode.entregar.negocio.servicios.ItemVO
+		</class-b>
+		<field>
+			<a>identifier</a>
+			<b>idItem</b>
+		</field>
+		<field>
+			<a>title</a>
+			<b>titulo</b>
+		</field>
+		<field>
+			<a>identifierref</a>
+			<b>idItem_ref</b>
+		</field>
+		<field>
+			<a>isvisible</a>
+			<b>visible</b>
+		</field>
+		<field relationship-type="cumulative">
+			<a>item</a>
+			<b>itemHijos</b>
+			<a-hint>es.pode.parseadorXML.castor.Item</a-hint>
+			<b-hint>es.pode.entregar.negocio.servicios.ItemVO</b-hint>
+		</field>
+	</mapping>
+	<mapping wildcard="true">
+		<class-a>
+			es.pode.parseadorXML.castor.Resource
+		</class-a>
+		<class-b>
+			es.pode.entregar.negocio.servicios.RecursoVO
+		</class-b>
+		<field>
+			<a>identifier</a>
+			<b>idRec</b>
+		</field>
+		<field>
+			<a>href</a>
+			<b>hrefRec</b>
+		</field>
+	</mapping>
+</mappings>

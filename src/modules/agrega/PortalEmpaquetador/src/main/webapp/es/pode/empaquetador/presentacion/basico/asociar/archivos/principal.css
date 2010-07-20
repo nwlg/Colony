@@ -1,0 +1,19 @@
+#submit.action {}
+#submit.action #form_submit {}
+
+#submit.action .principal {}
+#submit.action .principal .label {}
+#submit.action .principal .field {}
+#submit.action .action {}
+#submit.action .action .label {}
+#submit.action .action .field {}
+
+#ficheros.table {}
+#ficheros.table th {}
+#ficheros.table td div {}
+
+#ficheros.table th.ficheros.href {}
+#ficheros.table td div.ficheros.href {}
+
+
+

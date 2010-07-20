@@ -1,0 +1,42 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'crear.organizacion.organizacion.submit.param.title.title':'<formatting:escape language="javascript"><bean:message key="crear.organizacion.organizacion.submit.param.title.title"/></formatting:escape>',
+                'crear.organizacion.organizacion.submit.param.action.title':'<formatting:escape language="javascript"><bean:message key="crear.organizacion.organizacion.submit.param.action.title"/></formatting:escape>',
+                'Submit':'<formatting:escape language="javascript"><bean:message key="crear.organizacion.organizacion.submit.title"/></formatting:escape>',
+                'Submit_no':'<formatting:escape language="javascript"><bean:message key="crear.organizacion.organizacion.submit.title.notallowed"/></formatting:escape>',
+                'Submit_reset':'<formatting:escape language="javascript"><bean:message key="crear.organizacion.organizacion.submit.title.reset"/></formatting:escape>',
+                'Submit_noreset':'<formatting:escape language="javascript"><bean:message key="crear.organizacion.organizacion.submit.title.reset.not.allowed"/></formatting:escape>',
+                'Archivos':'<formatting:escape language="javascript"><bean:message key="crear.organizacion.organizacion.archivos.title"/></formatting:escape>',
+                'Archivos_no':'<formatting:escape language="javascript"><bean:message key="crear.organizacion.organizacion.archivos.title.notallowed"/></formatting:escape>',
+                'Archivos_reset':'<formatting:escape language="javascript"><bean:message key="crear.organizacion.organizacion.archivos.title.reset"/></formatting:escape>',
+                'Archivos_noreset':'<formatting:escape language="javascript"><bean:message key="crear.organizacion.organizacion.archivos.title.reset.not.allowed"/></formatting:escape>',
+                'Recursos':'<formatting:escape language="javascript"><bean:message key="crear.organizacion.organizacion.recursos.title"/></formatting:escape>',
+                'Recursos_no':'<formatting:escape language="javascript"><bean:message key="crear.organizacion.organizacion.recursos.title.notallowed"/></formatting:escape>',
+                'Recursos_reset':'<formatting:escape language="javascript"><bean:message key="crear.organizacion.organizacion.recursos.title.reset"/></formatting:escape>',
+                'Recursos_noreset':'<formatting:escape language="javascript"><bean:message key="crear.organizacion.organizacion.recursos.title.reset.not.allowed"/></formatting:escape>',
+                'Submanifiestos':'<formatting:escape language="javascript"><bean:message key="crear.organizacion.organizacion.submanifiestos.title"/></formatting:escape>',
+                'Submanifiestos_no':'<formatting:escape language="javascript"><bean:message key="crear.organizacion.organizacion.submanifiestos.title.notallowed"/></formatting:escape>',
+                'Submanifiestos_reset':'<formatting:escape language="javascript"><bean:message key="crear.organizacion.organizacion.submanifiestos.title.reset"/></formatting:escape>',
+                'Submanifiestos_noreset':'<formatting:escape language="javascript"><bean:message key="crear.organizacion.organizacion.submanifiestos.title.reset.not.allowed"/></formatting:escape>',
+                'Organizaciones':'<formatting:escape language="javascript"><bean:message key="crear.organizacion.organizacion.organizaciones.title"/></formatting:escape>',
+                'Organizaciones_no':'<formatting:escape language="javascript"><bean:message key="crear.organizacion.organizacion.organizaciones.title.notallowed"/></formatting:escape>',
+                'Organizaciones_reset':'<formatting:escape language="javascript"><bean:message key="crear.organizacion.organizacion.organizaciones.title.reset"/></formatting:escape>',
+                'Organizaciones_noreset':'<formatting:escape language="javascript"><bean:message key="crear.organizacion.organizacion.organizaciones.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+
+</script>
+    </tiles:put>

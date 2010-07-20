@@ -1,0 +1,13 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="listar" class="action">
+    <h3><bean:message key="agregador.feeds.cu.formulario.agregador.feeds.listar"/></h3>
+    <div class="trigger">
+        <form id="agregadorFeedsCUFormularioAgregadorFeedsListarForm" action='<html:rewrite action="/AgregadorFeedsCU/FormularioAgregadorFeedsListar"/>' method="post">
+               <html:submit onmouseover="hints.show('listar')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="agregador.feeds.cu.formulario.agregador.feeds.listar"/>
+               </html:submit>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

@@ -1,0 +1,42 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="submit" class="action">
+    <h3><bean:message key="catalogador.basico.importar.lomes.submit"/></h3>
+    <div class="trigger">
+        <html:form styleId="catalogadorBasicoImportarLomesSubmitForm" action="/CatalogadorBasico/ImportarLomesSubmit" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="accion">
+                        <td class="label"><bean:message key="catalogador.basico.importar.lomes.submit.param.accion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.accion}"/>
+                           <input type="text" name="accion" value="${value}" onmouseover="hints.show('catalogador.basico.importar.lomes.submit.param.accion.title')" onmouseout="hints.hide()"  id="submitAccion"/>
+                        </td>
+                    </tr>
+                    <tr class="fichero">
+                        <td class="label"><bean:message key="catalogador.basico.importar.lomes.submit.param.fichero"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.fichero}"/>
+                           <html:file name="form" property="fichero" onmouseover="hints.show('catalogador.basico.importar.lomes.submit.param.fichero.title')" onmouseout="hints.hide()"  styleId="submitFichero"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR,ROLE_CATALOGADOR,ROLE_DOCENTE,ROLE_PUBLICADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('submit')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="catalogador.basico.importar.lomes.submit"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

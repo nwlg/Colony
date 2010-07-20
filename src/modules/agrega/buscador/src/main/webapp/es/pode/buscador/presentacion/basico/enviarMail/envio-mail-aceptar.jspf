@@ -1,0 +1,148 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="enviar.mail.cu.envio.mail.aceptar"/></h3>
+    <div class="trigger">
+        <html:form styleId="enviarMailCUEnvioMailAceptarForm" action="/EnviarMailCU/EnvioMailAceptar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="correosHasta">
+                        <td class="label"><bean:message key="enviar.mail.cu.envio.mail.aceptar.param.correos.hasta"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.correosHasta}"/>
+                           <input type="text" name="correosHasta" value="${value}" onmouseover="hints.show('enviar.mail.cu.envio.mail.aceptar.param.correos.hasta.title')" onmouseout="hints.hide()"  id="aceptarCorreosHasta"/>
+                        </td>
+                    </tr>
+                    <tr class="nombresHasta">
+                        <td class="label"><bean:message key="enviar.mail.cu.envio.mail.aceptar.param.nombres.hasta"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.nombresHasta}"/>
+                           <input type="text" name="nombresHasta" value="${value}" onmouseover="hints.show('enviar.mail.cu.envio.mail.aceptar.param.nombres.hasta.title')" onmouseout="hints.hide()"  id="aceptarNombresHasta"/>
+                        </td>
+                    </tr>
+                    <tr class="correoDesde">
+                        <td class="label"><bean:message key="enviar.mail.cu.envio.mail.aceptar.param.correo.desde"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.correoDesde}"/>
+                           <input type="text" name="correoDesde" value="${value}" onmouseover="hints.show('enviar.mail.cu.envio.mail.aceptar.param.correo.desde.title')" onmouseout="hints.hide()"  id="aceptarCorreoDesde"/>
+                        </td>
+                    </tr>
+                    <tr class="nombreDesde">
+                        <td class="label"><bean:message key="enviar.mail.cu.envio.mail.aceptar.param.nombre.desde"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.nombreDesde}"/>
+                           <input type="text" name="nombreDesde" value="${value}" onmouseover="hints.show('enviar.mail.cu.envio.mail.aceptar.param.nombre.desde.title')" onmouseout="hints.hide()"  id="aceptarNombreDesde"/>
+                        </td>
+                    </tr>
+                    <tr class="enviarRemitente">
+                        <td class="label"><bean:message key="enviar.mail.cu.envio.mail.aceptar.param.enviar.remitente"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.enviarRemitente}"/>
+                           <input type="checkbox" name="enviarRemitente" value="on" <c:if test="${value}">checked="checked" </c:if>onmouseover="hints.show('enviar.mail.cu.envio.mail.aceptar.param.enviar.remitente.title')" onmouseout="hints.hide()"  id="aceptarEnviarRemitente"/>
+                        </td>
+                    </tr>
+                    <tr class="resumen">
+                        <td class="label"><bean:message key="enviar.mail.cu.envio.mail.aceptar.param.resumen"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.resumen}"/>
+                           <input type="text" name="resumen" value="${value}" onmouseover="hints.show('enviar.mail.cu.envio.mail.aceptar.param.resumen.title')" onmouseout="hints.hide()"  id="aceptarResumen"/>
+                        </td>
+                    </tr>
+                    <tr class="urlODE">
+                        <td class="label"><bean:message key="enviar.mail.cu.envio.mail.aceptar.param.url.ode"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.urlODE}"/>
+                           <input type="text" name="urlODE" value="${value}" onmouseover="hints.show('enviar.mail.cu.envio.mail.aceptar.param.url.ode.title')" onmouseout="hints.hide()"  id="aceptarUrlODE"/>
+                        </td>
+                    </tr>
+                    <tr class="identificadorODE">
+                        <td class="label"><bean:message key="enviar.mail.cu.envio.mail.aceptar.param.identificador.ode"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.identificadorODE}"/>
+                           <input type="text" name="identificadorODE" value="${value}" onmouseover="hints.show('enviar.mail.cu.envio.mail.aceptar.param.identificador.ode.title')" onmouseout="hints.hide()"  id="aceptarIdentificadorODE"/>
+                        </td>
+                    </tr>
+                    <tr class="idioma">
+                        <td class="label"><bean:message key="enviar.mail.cu.envio.mail.aceptar.param.idioma"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idioma}"/>
+                           <input type="text" name="idioma" value="${value}" onmouseover="hints.show('enviar.mail.cu.envio.mail.aceptar.param.idioma.title')" onmouseout="hints.hide()"  id="aceptarIdioma"/>
+                        </td>
+                    </tr>
+                    <tr class="titulo">
+                        <td class="label"><bean:message key="enviar.mail.cu.envio.mail.aceptar.param.titulo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.titulo}"/>
+                           <input type="text" name="titulo" value="${value}" onmouseover="hints.show('enviar.mail.cu.envio.mail.aceptar.param.titulo.title')" onmouseout="hints.hide()"  id="aceptarTitulo"/>
+                        </td>
+                    </tr>
+                    <tr class="resultadoValidacion">
+                        <td class="label"><bean:message key="enviar.mail.cu.envio.mail.aceptar.param.resultado.validacion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.resultadoValidacion}"/>
+                           <input type="text" name="resultadoValidacion" value="${value}" onmouseover="hints.show('enviar.mail.cu.envio.mail.aceptar.param.resultado.validacion.title')" onmouseout="hints.hide()"  id="aceptarResultadoValidacion"/>
+                        </td>
+                    </tr>
+                    <tr class="idiomaBuscador">
+                        <td class="label"><bean:message key="enviar.mail.cu.envio.mail.aceptar.param.idioma.buscador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idiomaBuscador}"/>
+                           <input type="text" name="idiomaBuscador" value="${value}" onmouseover="hints.show('enviar.mail.cu.envio.mail.aceptar.param.idioma.buscador.title')" onmouseout="hints.hide()"  id="aceptarIdiomaBuscador"/>
+                        </td>
+                    </tr>
+                    <tr class="urlImagen">
+                        <td class="label"><bean:message key="enviar.mail.cu.envio.mail.aceptar.param.url.imagen"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.urlImagen}"/>
+                           <input type="text" name="urlImagen" value="${value}" onmouseover="hints.show('enviar.mail.cu.envio.mail.aceptar.param.url.imagen.title')" onmouseout="hints.hide()"  id="aceptarUrlImagen"/>
+                        </td>
+                    </tr>
+                    <tr class="mostrarVuelta">
+                        <td class="label"><bean:message key="enviar.mail.cu.envio.mail.aceptar.param.mostrar.vuelta"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.mostrarVuelta}"/>
+                           <input type="checkbox" name="mostrarVuelta" value="on" <c:if test="${value}">checked="checked" </c:if>onmouseover="hints.show('enviar.mail.cu.envio.mail.aceptar.param.mostrar.vuelta.title')" onmouseout="hints.hide()"  id="aceptarMostrarVuelta"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="enviar.mail.cu.envio.mail.aceptar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

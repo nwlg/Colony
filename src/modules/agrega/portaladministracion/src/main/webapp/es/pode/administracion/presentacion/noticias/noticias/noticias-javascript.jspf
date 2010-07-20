@@ -1,0 +1,46 @@
+
+    <tiles:put name="javascript" type="string">
+        <script type="text/javascript" language="Javascript1.1" src="<html:rewrite action="/formValidation"/>"></script>
+        <html:javascript formName="noticiasNoticiasModificarForm" method="validateNoticiasModificarForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+        <html:javascript formName="noticiasNoticiasVerNotiForm" method="validateNoticiasVerNotiForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'noticias.noticias.modificar.param.id.noticia.title':'<formatting:escape language="javascript"><bean:message key="noticias.noticias.modificar.param.id.noticia.title"/></formatting:escape>',
+                'noticias.noticias.eliminar.param.id.noticia.title':'<formatting:escape language="javascript"><bean:message key="noticias.noticias.eliminar.param.id.noticia.title"/></formatting:escape>',
+                'noticias.noticias.ver.noti.param.id.noticia.title':'<formatting:escape language="javascript"><bean:message key="noticias.noticias.ver.noti.param.id.noticia.title"/></formatting:escape>',
+                'Crear Noticia':'<formatting:escape language="javascript"><bean:message key="noticias.noticias.crear.noticia.title"/></formatting:escape>',
+                'Crear Noticia_no':'<formatting:escape language="javascript"><bean:message key="noticias.noticias.crear.noticia.title.notallowed"/></formatting:escape>',
+                'Crear Noticia_reset':'<formatting:escape language="javascript"><bean:message key="noticias.noticias.crear.noticia.title.reset"/></formatting:escape>',
+                'Crear Noticia_noreset':'<formatting:escape language="javascript"><bean:message key="noticias.noticias.crear.noticia.title.reset.not.allowed"/></formatting:escape>',
+                'Modificar':'<formatting:escape language="javascript"><bean:message key="noticias.noticias.modificar.title"/></formatting:escape>',
+                'Modificar_no':'<formatting:escape language="javascript"><bean:message key="noticias.noticias.modificar.title.notallowed"/></formatting:escape>',
+                'Modificar_reset':'<formatting:escape language="javascript"><bean:message key="noticias.noticias.modificar.title.reset"/></formatting:escape>',
+                'Modificar_noreset':'<formatting:escape language="javascript"><bean:message key="noticias.noticias.modificar.title.reset.not.allowed"/></formatting:escape>',
+                'GestionCategorias':'<formatting:escape language="javascript"><bean:message key="noticias.noticias.gestion.categorias.title"/></formatting:escape>',
+                'GestionCategorias_no':'<formatting:escape language="javascript"><bean:message key="noticias.noticias.gestion.categorias.title.notallowed"/></formatting:escape>',
+                'GestionCategorias_reset':'<formatting:escape language="javascript"><bean:message key="noticias.noticias.gestion.categorias.title.reset"/></formatting:escape>',
+                'GestionCategorias_noreset':'<formatting:escape language="javascript"><bean:message key="noticias.noticias.gestion.categorias.title.reset.not.allowed"/></formatting:escape>',
+                'Eliminar':'<formatting:escape language="javascript"><bean:message key="noticias.noticias.eliminar.title"/></formatting:escape>',
+                'Eliminar_no':'<formatting:escape language="javascript"><bean:message key="noticias.noticias.eliminar.title.notallowed"/></formatting:escape>',
+                'Eliminar_reset':'<formatting:escape language="javascript"><bean:message key="noticias.noticias.eliminar.title.reset"/></formatting:escape>',
+                'Eliminar_noreset':'<formatting:escape language="javascript"><bean:message key="noticias.noticias.eliminar.title.reset.not.allowed"/></formatting:escape>',
+                'verNoti':'<formatting:escape language="javascript"><bean:message key="noticias.noticias.ver.noti.title"/></formatting:escape>',
+                'verNoti_no':'<formatting:escape language="javascript"><bean:message key="noticias.noticias.ver.noti.title.notallowed"/></formatting:escape>',
+                'verNoti_reset':'<formatting:escape language="javascript"><bean:message key="noticias.noticias.ver.noti.title.reset"/></formatting:escape>',
+                'verNoti_noreset':'<formatting:escape language="javascript"><bean:message key="noticias.noticias.ver.noti.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+
+</script>
+    </tiles:put>

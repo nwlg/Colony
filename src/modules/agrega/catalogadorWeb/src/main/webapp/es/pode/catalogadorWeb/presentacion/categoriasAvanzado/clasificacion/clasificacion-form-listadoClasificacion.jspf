@@ -1,0 +1,32 @@
+<div id="listadoClasificacion" class="table">
+    <form id="listadoClasificacion" name="" action="" method="post" enctype="multipart/form-data">
+    <display:table name="${form.listadoClasificacion}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="clasificacion-form-listado-clasificacion.pdf" />
+        <display:column media="html">
+            <input type="checkbox" name="tituloClasificacionRowSelectionAsArray" value="${row.tituloClasificacion}" title='<bean:message key="select.deselect.this.row"/>'/>
+        </display:column>
+
+        <display:column media="xml csv excel pdf"
+            titleKey="clasificacion.clasificacion.form.param.listado.clasificacion.titulo.clasificacion"
+            autolink="true" paramId="tituloClasificacion"
+            property="tituloClasificacion">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="tituloClasificacion" paramId="tituloClasificacion"
+            sortProperty="tituloClasificacion" sortable="true"
+            titleKey="clasificacion.clasificacion.form.param.listado.clasificacion.titulo.clasificacion"
+            property="tituloClasificacion" />
+   
+    </display:table>
+    <c:if test="${!empty form.listadoClasificacion}">
+            <input type="submit" value="<bean:message key="clasificacion.clasificacion.form.eliminar"/>" onclick="this.form.name='clasificacionClasificacionFormEliminarForm';this.form.action='<html:rewrite action="/Clasificacion/ClasificacionFormEliminar"/>';" onmouseover="hints.show('Eliminar')" onmouseout="hints.hide()"/>
+            <input type="button" value="<bean:message key="select.deselect.all"/>" onclick="var boxes=this.form.elements['tituloClasificacionRowSelectionAsArray'];var setChecked=(boxes.length==0)?false:!boxes[0].checked;for(var i=0;i<boxes.length;i++)boxes[i].checked=setChecked;"/>
+    </c:if>
+    </form>
+</div>
+

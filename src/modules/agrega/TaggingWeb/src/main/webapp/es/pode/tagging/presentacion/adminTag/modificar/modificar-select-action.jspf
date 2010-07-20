@@ -1,0 +1,51 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="selectAction" class="action">
+    <h3><bean:message key="modificar.modificar.select.action"/></h3>
+    <div class="trigger">
+        <html:form styleId="modificarModificarSelectActionForm" action="/Modificar/ModificarSelectAction" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="accion">
+                        <td class="label"><bean:message key="modificar.modificar.select.action.param.accion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.accion}"/>
+                           <input type="text" name="accion" value="${value}" onmouseover="hints.show('modificar.modificar.select.action.param.accion.title')" onmouseout="hints.hide()"  id="selectActionAccion"/>
+                        </td>
+                    </tr>
+                    <tr class="tagOld">
+                        <td class="label"><bean:message key="modificar.modificar.select.action.param.tag.old"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tagOld}"/>
+                           <input type="text" name="tagOld" value="${value}" onmouseover="hints.show('modificar.modificar.select.action.param.tag.old.title')" onmouseout="hints.hide()"  id="selectActionTagOld"/>
+                        </td>
+                    </tr>
+                    <tr class="newTag">
+                        <td class="label"><bean:message key="modificar.modificar.select.action.param.new.tag"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.newTag}"/>
+                           <input type="text" name="newTag" value="${value}" onmouseover="hints.show('modificar.modificar.select.action.param.new.tag.title')" onmouseout="hints.hide()"  id="selectActionNewTag"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('selectAction')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="modificar.modificar.select.action"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

@@ -1,0 +1,58 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="modificarCicloDeVida" class="action">
+    <h3><bean:message key="catalogador.avanzado.categorias.form.modificar.ciclo.de.vida"/></h3>
+    <div class="trigger">
+        <html:form styleId="catalogadorAvanzadoCategoriasFormModificarCicloDeVidaForm" action="/CatalogadorAvanzado/CategoriasFormModificarCicloDeVida" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="identificador">
+                        <td class="label"><bean:message key="catalogador.avanzado.categorias.form.modificar.ciclo.de.vida.param.identificador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.identificador}"/>
+                           <input type="text" name="identificador" value="${value}" onmouseover="hints.show('catalogador.avanzado.categorias.form.modificar.ciclo.de.vida.param.identificador.title')" onmouseout="hints.hide()"  id="modificarCicloDeVidaIdentificador"/>
+                        </td>
+                    </tr>
+                    <tr class="returnURL">
+                        <td class="label"><bean:message key="catalogador.avanzado.categorias.form.modificar.ciclo.de.vida.param.return.url"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.returnURL}"/>
+                           <input type="text" name="returnURL" value="${value}" onmouseover="hints.show('catalogador.avanzado.categorias.form.modificar.ciclo.de.vida.param.return.url.title')" onmouseout="hints.hide()"  id="modificarCicloDeVidaReturnURL"/>
+                        </td>
+                    </tr>
+                    <tr class="datos">
+                        <td class="label"><bean:message key="catalogador.avanzado.categorias.form.modificar.ciclo.de.vida.param.datos"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.datos}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.datosBackingList}">
+                                  <html:select name="form" property="datosAsArray" onmouseover="hints.show('catalogador.avanzado.categorias.form.modificar.ciclo.de.vida.param.datos.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="modificarCicloDeVidaDatos">
+                                      <html:optionsCollection name="form" property="datosBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="datosAsArray" onmouseover="hints.show('catalogador.avanzado.categorias.form.modificar.ciclo.de.vida.param.datos.title')" onmouseout="hints.hide()"  styleId="modificarCicloDeVidaDatos"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('modificarCicloDeVida')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="catalogador.avanzado.categorias.form.modificar.ciclo.de.vida"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

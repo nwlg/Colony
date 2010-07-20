@@ -1,0 +1,31 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="descarga" class="action">
+    <h3><bean:message key="descargas.descargas.descarga"/></h3>
+    <div class="trigger">
+        <html:form styleId="descargasDescargasDescargaForm" action="/Descargas/DescargasDescarga" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="identificador">
+                        <td class="label"><bean:message key="descargas.descargas.descarga.param.identificador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.identificador}"/>
+                           <input type="text" name="identificador" value="${value}" onmouseover="hints.show('descargas.descargas.descarga.param.identificador.title')" onmouseout="hints.hide()"  id="descargaIdentificador"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Descarga')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="descargas.descargas.descarga"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

@@ -1,0 +1,65 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="resultadosDesde" value="${form.resultadosDesde}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="rutaTesauro" value="${form.rutaTesauro}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="nodoOrigen" value="${form.nodoOrigen}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="busquedaSimpleAvanzada" value="${form.busquedaSimpleAvanzada}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="siguiente" value="${form.siguiente}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tituloTesauro" value="${form.tituloTesauro}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tipoLayoutBuscador" value="${form.tipoLayoutBuscador}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tipoBusqueda" value="${form.tipoBusqueda}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idBusqueda" value="${form.idBusqueda}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="resultadosVO" value="${form.resultadosVO}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idiomaBuscador" value="${form.idiomaBuscador}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tesauroBusqueda" value="${form.tesauroBusqueda}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="esHoja" value="${form.esHoja}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="esRuta" value="${form.esRuta}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="anterior" value="${form.anterior}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="pagina" value="${form.pagina}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="numMaxResultados" value="${form.numMaxResultados}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="nodoDestino" value="${form.nodoDestino}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="resultadosHasta" value="${form.resultadosHasta}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tipoBusquedaArbol" value="${form.tipoBusquedaArbol}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="paginas" value="${form.paginas}"/>
+    </c:catch>
+</div>

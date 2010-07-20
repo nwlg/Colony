@@ -1,0 +1,71 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="anioHasta" value="${form.anioHasta}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="minutos" value="${form.minutos}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="anio" value="${form.anio}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="trigger" value="${form.trigger}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="grupoTrigger" value="${form.grupoTrigger}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="grupoTrabajo" value="${form.grupoTrabajo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tipoTarea" value="${form.tipoTarea}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="usuario" value="${form.usuario}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="informe" value="${form.informe}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="dia" value="${form.dia}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="formato" value="${form.formato}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="diaHasta" value="${form.diaHasta}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="anioDesde" value="${form.anioDesde}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="hora" value="${form.hora}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="msgNoInforme" value="${form.msgNoInforme}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="msgDescTrabajo" value="${form.msgDescTrabajo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="trabajo" value="${form.trabajo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="msgInforme" value="${form.msgInforme}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="mes" value="${form.mes}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="periodicidad" value="${form.periodicidad}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="mesHasta" value="${form.mesHasta}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="diaDesde" value="${form.diaDesde}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="mesDesde" value="${form.mesDesde}"/>
+    </c:catch>
+</div>

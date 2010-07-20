@@ -1,0 +1,30 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'ver.metadatos.detalle.uso.educativo.form.vuelve.de.detalle.uso.educativo.param.idiomas.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.detalle.uso.educativo.form.vuelve.de.detalle.uso.educativo.param.idiomas.title"/></formatting:escape>',
+                'ver.metadatos.detalle.uso.educativo.form.vuelve.de.detalle.uso.educativo.param.combo.idioma.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.detalle.uso.educativo.form.vuelve.de.detalle.uso.educativo.param.combo.idioma.title"/></formatting:escape>',
+                'ver.metadatos.detalle.uso.educativo.form.vuelve.de.detalle.uso.educativo.param.combo.tipo.recurso.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.detalle.uso.educativo.form.vuelve.de.detalle.uso.educativo.param.combo.tipo.recurso.title"/></formatting:escape>',
+                'ver.metadatos.detalle.uso.educativo.form.vuelve.de.detalle.uso.educativo.param.combo.rol.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.detalle.uso.educativo.form.vuelve.de.detalle.uso.educativo.param.combo.rol.title"/></formatting:escape>',
+                'ver.metadatos.detalle.uso.educativo.form.vuelve.de.detalle.uso.educativo.param.combo.contexto.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.detalle.uso.educativo.form.vuelve.de.detalle.uso.educativo.param.combo.contexto.title"/></formatting:escape>',
+                'ver.metadatos.detalle.uso.educativo.form.vuelve.de.detalle.uso.educativo.param.combo.proceso.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.detalle.uso.educativo.form.vuelve.de.detalle.uso.educativo.param.combo.proceso.title"/></formatting:escape>',
+                'ver.metadatos.detalle.uso.educativo.form.vuelve.de.detalle.uso.educativo.param.tipo.interactividad.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.detalle.uso.educativo.form.vuelve.de.detalle.uso.educativo.param.tipo.interactividad.title"/></formatting:escape>',
+                'ver.metadatos.detalle.uso.educativo.form.vuelve.de.detalle.uso.educativo.param.nivel.interactividad.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.detalle.uso.educativo.form.vuelve.de.detalle.uso.educativo.param.nivel.interactividad.title"/></formatting:escape>',
+                'ver.metadatos.detalle.uso.educativo.form.vuelve.de.detalle.uso.educativo.param.densidad.semantica.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.detalle.uso.educativo.form.vuelve.de.detalle.uso.educativo.param.densidad.semantica.title"/></formatting:escape>',
+                'ver.metadatos.detalle.uso.educativo.form.vuelve.de.detalle.uso.educativo.param.dificultad.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.detalle.uso.educativo.form.vuelve.de.detalle.uso.educativo.param.dificultad.title"/></formatting:escape>',
+                'vuelveDeDetalleUsoEducativo':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.detalle.uso.educativo.form.vuelve.de.detalle.uso.educativo.title"/></formatting:escape>',
+                'vuelveDeDetalleUsoEducativo_no':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.detalle.uso.educativo.form.vuelve.de.detalle.uso.educativo.title.notallowed"/></formatting:escape>',
+                'vuelveDeDetalleUsoEducativo_reset':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.detalle.uso.educativo.form.vuelve.de.detalle.uso.educativo.title.reset"/></formatting:escape>',
+                'vuelveDeDetalleUsoEducativo_noreset':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.detalle.uso.educativo.form.vuelve.de.detalle.uso.educativo.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

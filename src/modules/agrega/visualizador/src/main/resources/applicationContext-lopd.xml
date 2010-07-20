@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+    <!-- ========================= LOPD DATASOURCE DEFINITION ========================= -->
+
+    <bean id="lopdDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName"><value>${lopd.ds.driverClassName}</value></property>
+        <property name="username"><value>${lopd.ds.username}</value></property>
+        <property name="password"><value>${lopd.ds.password}</value></property>
+        <property name="url"><value>${lopd.ds.url}</value></property>
+    </bean>
+		<!--
+			<bean id="lopdDataSource"
+				class="org.springframework.jndi.JndiObjectFactoryBean">
+				<property name="jndiName">
+					<value>${lopd.ds.jndiName}</value>
+				</property>
+			</bean>   
+		-->    
+    <!-- ====================== End of LOPD DATASOURCE DEFINITION ====================== -->
+
+    <!-- ===================== LOPD TRANSACTION MANAGER DEFINITION ========================= -->
+
+	<bean id="lopdTransactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref bean="lopdSessionFactory" />
+		</property>
+	</bean>    
+
+    <!-- ===================== END OF LOPD TRANSACTION MANAGER DEFINITION ========================= -->
+
+    <!-- ===================== LOPD SESSION FACTORY ========================= -->
+
+	<!-- LOPD Hibernate SessionFactory -->
+	<bean id="lopdSessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="lopdDataSource" />
+		</property>
+		<property name="mappingResources">
+			<list>
+                <value>EventData.hbm.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.show_sql">${lopd.hsf.hibernate.show_sql}</prop>
+				<prop key="hibernate.dialect">${lopd.hsf.hibernate.dialect}</prop>
+				<prop key="hibernate.cache.use_query_cache">${lopd.hsf.hibernate.cache.use_query_cache}</prop>
+				<prop key="hibernate.cache.provider_class">${lopd.hsf.hibernate.cache.provider_class}</prop>
+				<prop key="hibernate.cache.query_cache_factory">${lopd.hsf.hibernate.cache.query_cache_factory}</prop>
+			</props>
+		</property>
+	</bean>
+
+    <bean id="lopdTransactionInterceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor">
+        <property name="transactionManager"><ref bean="lopdTransactionManager"/></property>
+        <property name="transactionAttributeSource">
+            <value>
+                es.indra.ibuilder.lopd.dao.EventDataDao.create=PROPAGATION_REQUIRED
+            </value>
+        </property>
+    </bean>
+
+    <bean id="eventDataDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.indra.ibuilder.lopd.dao.EventDataDaoImpl">
+                <property name="sessionFactory"><ref local="lopdSessionFactory"/></property>
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.indra.ibuilder.lopd.dao.EventDataDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+            	<value>lopdTransactionInterceptor</value> 
+            </list>
+        </property>
+        
+    </bean>
+
+
+    <!-- ========================= END of LOPD SESSION FACTORY ========================= -->
+ 
+	<!-- ========================= Start of LOPD properties definitions ========================= -->
+ 
+		<bean id="lopdProperties" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+			<property name="locations">
+				<list>
+					<value>classpath:lopd.properties</value>
+				</list>
+			</property>
+		  <property name="ignoreUnresolvablePlaceholders">
+		  		<value>true</value>
+		  </property>	  
+		</bean>
+
+    <!-- ========================= End of LOPD properties definitions ========================= -->
+
+	<!-- ========================= Start of LOPD general definitions ========================= -->
+
+	<bean id="beanLocator" class="es.indra.ibuilder.lopd.util.BeanLocator">
+		<property name="beanRefFactory" value="beanRefFactory.xml"/>
+	</bean>
+	
+	<!-- Method Interceptor -->    
+	<bean id="serviceInvocationInterceptor" class="es.indra.ibuilder.lopd.interceptor.ServiceInvocationInterceptor"> 
+        <property name="eventDataDao"><ref bean="eventDataDao"/></property>		  	
+	</bean>
+
+	<!-- Data encrypter -->
+    <bean id="cipherImpl" class="es.indra.ibuilder.lopd.cryptography.CipherImpl">
+    		<property name="keyFileName" value="${lopd.keyFileName}"/>
+    		<property name="algorithm" value="${lopd.algorithm}"/>
+    </bean>
+    
+    <!-- Auditory data factory -->
+    <bean id="auditoryDataFactory" class="es.indra.ibuilder.lopd.auditable.EventDataFactoryImpl"/>
+    
+    <!-- Entity Auditor -->
+    <bean id="auditor" class="es.indra.ibuilder.lopd.auditory.AuditorImplDb" >
+    	<property name="sessionFactory"><ref bean="lopdSessionFactory"/></property>
+    	<property name="eventDataCreator"><ref bean="auditoryDataFactory"/></property>
+    </bean>
+    
+    <!-- Interceptor for auditory and data encryption -->
+    <bean id="auditorEncrypterInterceptor" class="es.indra.ibuilder.lopd.interceptor.AuditorEncrypterInterceptor">
+    		<property name="auditor"><ref bean="auditor"/></property>
+    		<property name="dataEncrypter"><ref bean="cipherImpl"/></property>
+        	<property name="eventDataDao"><ref bean="eventDataDao"/></property>    		
+			<!-- Encriptable attributes -->
+    		<property name="encryptedAttr">
+				<map>
+				</map>
+			</property>
+			<!-- Auditable entities -->			
+			<property name="auditableEntities">
+    				<set>
+    				</set>
+    	</property>
+    	<property name="auditReadings" value="${lopd.auditLevel}"/>
+    </bean>
+    
+	<!-- ========================= End of LOPD general definitions ========================= -->
+
+
+</beans>

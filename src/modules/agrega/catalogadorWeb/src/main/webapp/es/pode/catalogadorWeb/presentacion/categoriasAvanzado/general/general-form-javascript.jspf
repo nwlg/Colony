@@ -1,0 +1,45 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'general.general.form.submit.param.titulos.title':'<formatting:escape language="javascript"><bean:message key="general.general.form.submit.param.titulos.title"/></formatting:escape>',
+                'general.general.form.submit.param.textos.title':'<formatting:escape language="javascript"><bean:message key="general.general.form.submit.param.textos.title"/></formatting:escape>',
+                'general.general.form.submit.param.texto.title':'<formatting:escape language="javascript"><bean:message key="general.general.form.submit.param.texto.title"/></formatting:escape>',
+                'general.general.form.submit.param.palabras.clave.title':'<formatting:escape language="javascript"><bean:message key="general.general.form.submit.param.palabras.clave.title"/></formatting:escape>',
+                'general.general.form.submit.param.nivel.agregacion.title':'<formatting:escape language="javascript"><bean:message key="general.general.form.submit.param.nivel.agregacion.title"/></formatting:escape>',
+                'general.general.form.submit.param.idiomas.title':'<formatting:escape language="javascript"><bean:message key="general.general.form.submit.param.idiomas.title"/></formatting:escape>',
+                'general.general.form.submit.param.idioma.title':'<formatting:escape language="javascript"><bean:message key="general.general.form.submit.param.idioma.title"/></formatting:escape>',
+                'general.general.form.submit.param.identificadores.title':'<formatting:escape language="javascript"><bean:message key="general.general.form.submit.param.identificadores.title"/></formatting:escape>',
+                'general.general.form.submit.param.identificador.ode.title':'<formatting:escape language="javascript"><bean:message key="general.general.form.submit.param.identificador.ode.title"/></formatting:escape>',
+                'general.general.form.submit.param.estructura.title':'<formatting:escape language="javascript"><bean:message key="general.general.form.submit.param.estructura.title"/></formatting:escape>',
+                'general.general.form.submit.param.entrada.title':'<formatting:escape language="javascript"><bean:message key="general.general.form.submit.param.entrada.title"/></formatting:escape>',
+                'general.general.form.submit.param.descripciones.title':'<formatting:escape language="javascript"><bean:message key="general.general.form.submit.param.descripciones.title"/></formatting:escape>',
+                'general.general.form.submit.param.caracteristicas.title':'<formatting:escape language="javascript"><bean:message key="general.general.form.submit.param.caracteristicas.title"/></formatting:escape>',
+                'general.general.form.submit.param.combo.idioma.title':'<formatting:escape language="javascript"><bean:message key="general.general.form.submit.param.combo.idioma.title"/></formatting:escape>',
+                'general.general.form.submit.param.combo.caract.tipo.plano.title':'<formatting:escape language="javascript"><bean:message key="general.general.form.submit.param.combo.caract.tipo.plano.title"/></formatting:escape>',
+                'general.general.form.submit.param.combo.caract.luz.title':'<formatting:escape language="javascript"><bean:message key="general.general.form.submit.param.combo.caract.luz.title"/></formatting:escape>',
+                'general.general.form.submit.param.combo.caract.formato.title':'<formatting:escape language="javascript"><bean:message key="general.general.form.submit.param.combo.caract.formato.title"/></formatting:escape>',
+                'general.general.form.submit.param.combo.caract.estructura.formal.title':'<formatting:escape language="javascript"><bean:message key="general.general.form.submit.param.combo.caract.estructura.formal.title"/></formatting:escape>',
+                'general.general.form.submit.param.combo.caract.dimension.title':'<formatting:escape language="javascript"><bean:message key="general.general.form.submit.param.combo.caract.dimension.title"/></formatting:escape>',
+                'general.general.form.submit.param.combo.caract.color.title':'<formatting:escape language="javascript"><bean:message key="general.general.form.submit.param.combo.caract.color.title"/></formatting:escape>',
+                'general.general.form.submit.param.combo.caract.banda.sonora.title':'<formatting:escape language="javascript"><bean:message key="general.general.form.submit.param.combo.caract.banda.sonora.title"/></formatting:escape>',
+                'general.general.form.submit.param.combo.caract.angulacion.title':'<formatting:escape language="javascript"><bean:message key="general.general.form.submit.param.combo.caract.angulacion.title"/></formatting:escape>',
+                'general.general.form.submit.param.catalogo.title':'<formatting:escape language="javascript"><bean:message key="general.general.form.submit.param.catalogo.title"/></formatting:escape>',
+                'general.general.form.submit.param.ambitos.title':'<formatting:escape language="javascript"><bean:message key="general.general.form.submit.param.ambitos.title"/></formatting:escape>',
+                'general.general.form.submit.param.accion.title':'<formatting:escape language="javascript"><bean:message key="general.general.form.submit.param.accion.title"/></formatting:escape>',
+                'submit':'<formatting:escape language="javascript"><bean:message key="general.general.form.submit.title"/></formatting:escape>',
+                'submit_no':'<formatting:escape language="javascript"><bean:message key="general.general.form.submit.title.notallowed"/></formatting:escape>',
+                'submit_reset':'<formatting:escape language="javascript"><bean:message key="general.general.form.submit.title.reset"/></formatting:escape>',
+                'submit_noreset':'<formatting:escape language="javascript"><bean:message key="general.general.form.submit.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

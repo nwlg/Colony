@@ -1,0 +1,60 @@
+#aceptar.action {}
+#aceptar.action #form_submit {}
+
+#aceptar.action .trabajo {}
+#aceptar.action .trabajo .label {}
+#aceptar.action .trabajo .field {}
+#aceptar.action .trigger {}
+#aceptar.action .trigger .label {}
+#aceptar.action .trigger .field {}
+#aceptar.action .dia {}
+#aceptar.action .dia .label {}
+#aceptar.action .dia .field {}
+#aceptar.action .mes {}
+#aceptar.action .mes .label {}
+#aceptar.action .mes .field {}
+#aceptar.action .anio {}
+#aceptar.action .anio .label {}
+#aceptar.action .anio .field {}
+#aceptar.action .hora {}
+#aceptar.action .hora .label {}
+#aceptar.action .hora .field {}
+#aceptar.action .minutos {}
+#aceptar.action .minutos .label {}
+#aceptar.action .minutos .field {}
+#aceptar.action .periodicidad {}
+#aceptar.action .periodicidad .label {}
+#aceptar.action .periodicidad .field {}
+#aceptar.action .pathODEs {}
+#aceptar.action .pathODEs .label {}
+#aceptar.action .pathODEs .field {}
+#aceptar.action .pathODEsCarg {}
+#aceptar.action .pathODEsCarg .label {}
+#aceptar.action .pathODEsCarg .field {}
+#aceptar.action .pathODEsNoCarg {}
+#aceptar.action .pathODEsNoCarg .label {}
+#aceptar.action .pathODEsNoCarg .field {}
+#aceptar.action .tipoTarea {}
+#aceptar.action .tipoTarea .label {}
+#aceptar.action .tipoTarea .field {}
+#aceptar.action .msgPublicado {}
+#aceptar.action .msgPublicado .label {}
+#aceptar.action .msgPublicado .field {}
+#aceptar.action .msgNoPublicado {}
+#aceptar.action .msgNoPublicado .label {}
+#aceptar.action .msgNoPublicado .field {}
+#aceptar.action .msgDescTrabajo {}
+#aceptar.action .msgDescTrabajo .label {}
+#aceptar.action .msgDescTrabajo .field {}
+#aceptar.action .sobrescribir {}
+#aceptar.action .sobrescribir .label {}
+#aceptar.action .sobrescribir .field {}
+#aceptar.action .tareaModificada {}
+#aceptar.action .tareaModificada .label {}
+#aceptar.action .tareaModificada .field {}
+
+#cancelar.action {}
+#cancelar.action #form_submit {}
+
+
+

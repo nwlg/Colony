@@ -1,0 +1,30 @@
+<binding xmlns="http://www.castor.org/SourceGenerator/Binding" 
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+            xsi:schemaLocation="http://www.castor.org/SourceGenerator/Binding D:\castorlomes\esquemas_dc\binding.xsd" 
+            >
+
+  <elementBinding name="/complexType:ListIdentifiersType/header">
+      <java-class name="ListIdentifiersTypeHeader"/>
+   </elementBinding>
+   <elementBinding name="/complexType:recordType/header">
+      <java-class name="RecordTypeHeader"/>
+   </elementBinding>
+   
+   <elementBinding name="/complexType:ListIdentifiersType/resumptionToken">
+      <java-class name="ListIdentifiersTypeResumptionToken"/>
+   </elementBinding>
+   <elementBinding name="/complexType:ListSetsType/resumptionToken">
+      <java-class name="ListSetsTypeResumptionToken"/>
+   </elementBinding>
+   <elementBinding name="/complexType:ListRecordsType/resumptionToken">
+      <java-class name="ListRecordsTypeResumptionToken"/>
+   </elementBinding>
+   <elementBinding name="/complexType:ListRecordsType/record">
+      <java-class name="ListRecordsTypeRecord"/>
+   </elementBinding>
+   
+   <elementBinding name="/complexType:GetRecordType/record">
+      <java-class name="GetRecordTypeRecord"/>
+   </elementBinding>
+
+</binding>

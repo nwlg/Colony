@@ -1,0 +1,220 @@
+/*#criteria {}
+
+#entitySwitcher { display: inline; margin-left: 20px; }
+
+#content { padding-top: 30px; }*/
+#criteria {
+	width:100%; 
+	border:none 1px #d5d5d5;
+	padding: 10px; 
+	rem_background-color: #ececec; 
+	rem_color:#575654; 
+	padding-bottom: 10px;
+}
+
+
+#criteria td {
+float:left; 
+padding:2px 0px 1px 8px;
+font: normal 11px "Trebuchet MS", Arial, Tahoma, Verdana;
+color: #424679;
+
+}
+
+
+.criteriaField{
+	font: normal 11px "Trebuchet MS", Arial, Tahoma, Verdana;
+	color: #000000;
+	background-color: #FFFFFF;
+	border: 1px solid #c4c2ce;
+	height: 21px;
+	padding-left: 4px;
+
+	}
+
+#entitySwitcher { display: inline; 
+margin-left: 20px;
+font: bold 11px "Trebuchet MS", Arial, Tahoma, Verdana;
+color: #8386a4; 
+position: absolute;
+	top: 43px;
+	left: 16px;
+ }
+ 
+select {
+	font: normal 11px "Trebuchet MS", Arial, Tahoma, Verdana;
+	color: #000000;
+	background-color: #FFFFFF;
+	border: 1px solid #c4c2ce;
+	height: 21px;
+	padding-left: 4px;
+}
+
+#content { padding-top: 30px; }
+
+h1{
+	position: absolute;
+	top: 43px;
+	left: 40px;
+	font: bold 11px "Trebuchet MS", Arial, Tahoma, Verdana;
+	color: #8386a4;
+	height: 24px;
+	width: 100%;
+	padding-top: 6px;
+	padding-bottom: 3px;
+	display: none;
+}
+.button{
+float:left; 
+	font: normal 11px "Trebuchet MS", Tahoma, Arial, Verdana;
+	color: #464365;
+	background-color: #f0efef;
+	border-bottom: 1px solid #8d97a8;
+	border-right: 1px solid #8d97a8;
+	border-left: 1px solid #d1d5dc;
+	border-top: 1px solid #d1d5dc;
+	background-image: url(images/BtnF.gif);
+	height: 23px;
+	cursor: hand;
+	padding: 0px 0px 0px 0px;
+	margin: 0 5 0 5px;
+}
+
+
+
+span.excel {background-image: url(excel.gif); background-repeat: no-repeat; color: #0A389D;}
+span.csv { background-image: url(csv.gif); background-repeat: no-repeat; color: #0A389D;}
+span.xml { background-image: url(xml.gif); background-repeat: no-repeat; color: #0A389D;}
+span.pdf { background-image: url(pdf.gif); background-repeat: no-repeat; color: #0A389D;}
+
+
+
+
+
+/*table*/
+#manageableList	{width: 100%; margin-left:10px; margin-right:10px; font-family:Arial, Helvetica, sans-serif; font-size:11px;}
+#manageableList tr {pading: 0px;}
+
+
+#formulario table{width:100%;}	
+
+#formulario {
+	overflow:auto;
+	background-color: #ececec;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #d5d5d5;
+	border-right-color: #d5d5d5;
+	border-bottom-color: #d5d5d5;
+	border-left-color: #d5d5d5;	
+	padding: 10px 10px 0px 10px;
+	margin: 10px 0px 0px 0px;
+	width: 100%;
+	height: 150px;
+	font: normal 11px "Trebuchet MS", Arial, Tahoma, Verdana;
+	color: #575654;}
+	
+#pageHelpSection {display: none;}
+
+#readButton {
+	position:absolute;
+	top: 229px;
+	left:593px;
+	font: normal 11px "Trebuchet MS", Tahoma, Arial, Verdana;
+	color: #464365;
+	background-color: #f0efef;
+	border-bottom: 1px solid #8d97a8;
+	border-right: 1px solid #8d97a8;
+	border-left: 1px solid #d1d5dc;
+	border-top: 1px solid #d1d5dc;
+	background-image: url(images/btnFiltrarF.gif);
+	height: 24px;
+	cursor: hand;
+	padding: 0px 4px 0px 14px;
+}
+
+#createButton {
+	position:absolute;
+	top: 0px;
+	left:79px;
+	z-index:999;
+	border:0;
+	font: normal 11px "Trebuchet MS", Tahoma, Arial, Verdana;
+	color: #464365;
+	background-image: url(images/btnGuardarNuevoF.gif);
+	height: 31px;
+	width: 110px;
+	cursor: hand;
+	padding: 40px 4px 0px 14px;
+	}
+
+#deleteButton{
+	position:absolute;
+	top: 0px;
+	left:290px;
+	z-index:999;
+	border:0;
+	font: normal 11px "Trebuchet MS", Tahoma, Arial, Verdana;
+	color: #464365;
+	background-image: url(images/bhsec_EliminarN.gif);
+	height: 31px;
+	cursor: hand;
+	padding: 40px 4px 0px 14px;}
+
+#updateButton{
+	position:absolute;
+	top: 0px;
+	left:200px;
+	z-index:999;
+	border:0;
+	font: normal 11px "Trebuchet MS", Tahoma, Arial, Verdana;
+	color: #464365;
+	background-image: url(images/bhsec_ActualizarN.gif);
+	height: 31px;
+	width: 80px;
+	cursor: hand;
+	padding: 40px 4px 0px 14px;}
+
+#clearButton {
+	position:absolute;
+	top: 229px;
+	left:680px;
+	
+	font: normal 11px "Trebuchet MS", Tahoma, Arial, Verdana;
+	color: #464365;
+	background-color: #f0efef;
+	border-bottom: 1px solid #8d97a8;
+	border-right: 1px solid #8d97a8;
+	border-left: 1px solid #d1d5dc;
+	border-top: 1px solid #d1d5dc;
+	background-image: url(images/btnLimpiarFormF.gif);
+	height: 24px;
+	cursor: hand;
+	padding: 0px 4px 0px 14px;}
+#translateButton {
+	position:absolute;
+	top: 0px;
+	left:378px;
+	z-index:999;
+	border:0;
+	font: normal 11px "Trebuchet MS", Tahoma, Arial, Verdana;
+	color: #464365;
+	background-image: url(images/bhsec_TraducirN.gif);
+	height: 31px;
+	cursor: hand;
+	padding: 40px 4px 0px 14px;}
+
+#tabla {position: absolute;
+	top: 258px;
+	width:99%;
+	padding_right: 15px; 
+	overflow: auto;
+	}
+.separaIdioma {background-color:#DCDCE3;}
+

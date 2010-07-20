@@ -1,0 +1,35 @@
+#submit.action {}
+#submit.action #form_submit {}
+
+#submit.action .accion {}
+#submit.action .accion .label {}
+#submit.action .accion .field {}
+#submit.action .arboles {}
+#submit.action .arboles .label {}
+#submit.action .arboles .field {}
+#submit.action .contexto {}
+#submit.action .contexto .label {}
+#submit.action .contexto .field {}
+#submit.action .descripcion {}
+#submit.action .descripcion .label {}
+#submit.action .descripcion .field {}
+#submit.action .edad {}
+#submit.action .edad .label {}
+#submit.action .edad .field {}
+#submit.action .idioma {}
+#submit.action .idioma .label {}
+#submit.action .idioma .field {}
+#submit.action .idiomaDestinatario {}
+#submit.action .idiomaDestinatario .label {}
+#submit.action .idiomaDestinatario .field {}
+#submit.action .procesoCognitivo {}
+#submit.action .procesoCognitivo .label {}
+#submit.action .procesoCognitivo .field {}
+#submit.action .tipoRecurso {}
+#submit.action .tipoRecurso .label {}
+#submit.action .tipoRecurso .field {}
+#submit.action .titulo {}
+#submit.action .titulo .label {}
+#submit.action .titulo .field {}
+
+

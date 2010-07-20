@@ -1,0 +1,63 @@
+/*
+ * IE6 compatibility hack
+ *
+ * For some reason, MS seem incapable of writing a browser that follows the standards
+ * set by everyone. Fortunately IE7 and IE8 mostly work, however IE6 is just *bad*.
+ * We separate the quirks into a separate file in the hope that we can get rid of
+ * them one day...
+ */
+
+/*
+.lb_bubble_content {
+        padding: 12px;
+	width: auto;
+}
+*/
+
+/*
+.db_bubble_content {
+	float:left;
+	padding-top: 4px;
+	display:inline;
+	background-color: transparent;
+	width: auto;
+	background-color: #257fb3;
+	color: #ffffff;
+	font-size: 80%;	
+	height: 24px;
+}
+*/
+
+/* Grey arrow (used throughout site) */
+#arrow_grey_right {
+	width: 5px;
+	height: 8px;
+	padding-left: 16px;
+	padding-right: 8px;
+	padding-top: 0px;
+	display: inline;	/* Because IE6 is broken */
+	float: left;
+	background: url('../img/arrow_grey_right.gif') no-repeat center center;
+}
+
+
+#noticia {
+	width: 94%;
+}
+
+#results_ie6_hack {
+        float: left;
+	width: auto;
+}
+
+.header_bar {
+        margin-bottom: 12px;
+        border-top: #aaaaaa solid 1px;
+        border-bottom: #aaaaaa solid 1px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        margin-left: 12px;
+        margin-right: 12px;
+	display:inline-block;
+}
+ 

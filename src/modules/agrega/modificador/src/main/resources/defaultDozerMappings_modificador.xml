@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN" "http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+	<mapping wildcard="true" map-id="DEF_MAPPING_MODIFICACION_MODIFICACIONVO">
+		<class-a>es.pode.modificador.negocio.dominio.ModificacionImpl</class-a>
+		<class-b>es.pode.modificador.negocio.servicio.ModificacionVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_MODIFICACIONVO_MODIFICACION">
+		<class-a>es.pode.modificador.negocio.servicio.ModificacionVO</class-a>
+		<class-b>es.pode.modificador.negocio.dominio.ModificacionImpl</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_RESULTADOMODIFICACION_RESULTADOMODIFICACIONVO">
+		<class-a>es.pode.modificador.negocio.dominio.ResultadoModificacionImpl</class-a>
+		<class-b>es.pode.modificador.negocio.servicio.ResultadoModificacionVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_RESULTADOMODIFICACIONVO_RESULTADOMODIFICACION">
+		<class-a>es.pode.modificador.negocio.servicio.ResultadoModificacionVO</class-a>
+		<class-b>es.pode.modificador.negocio.dominio.ResultadoModificacionImpl</class-b>
+	</mapping>	
+</mappings>

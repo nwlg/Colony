@@ -1,0 +1,36 @@
+#cancelar.action {}
+#cancelar.action #form_submit {}
+
+
+#aceptar.action {}
+#aceptar.action #form_submit {}
+
+#aceptar.action .anioHasta {}
+#aceptar.action .anioHasta .label {}
+#aceptar.action .anioHasta .field {}
+#aceptar.action .mesHasta {}
+#aceptar.action .mesHasta .label {}
+#aceptar.action .mesHasta .field {}
+#aceptar.action .diaHasta {}
+#aceptar.action .diaHasta .label {}
+#aceptar.action .diaHasta .field {}
+#aceptar.action .anioDesde {}
+#aceptar.action .anioDesde .label {}
+#aceptar.action .anioDesde .field {}
+#aceptar.action .mesDesde {}
+#aceptar.action .mesDesde .label {}
+#aceptar.action .mesDesde .field {}
+#aceptar.action .diaDesde {}
+#aceptar.action .diaDesde .label {}
+#aceptar.action .diaDesde .field {}
+#aceptar.action .rango {}
+#aceptar.action .rango .label {}
+#aceptar.action .rango .field {}
+#aceptar.action .informe {}
+#aceptar.action .informe .label {}
+#aceptar.action .informe .field {}
+#aceptar.action .formato {}
+#aceptar.action .formato .label {}
+#aceptar.action .formato .field {}
+
+

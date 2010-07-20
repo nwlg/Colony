@@ -1,0 +1,4 @@
+<relation>
+	${load:template.7.1.xml}
+	${load:template.7.2.xml}
+</relation>

@@ -1,0 +1,5 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="url" value="${form.url}"/>
+    </c:catch>
+</div>

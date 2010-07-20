@@ -1,0 +1,94 @@
+<%@ include file="/taglib-imports.jspf" %>
+
+<tiles:insert definition="help.layout">
+
+    <tiles:put name="title" type="string">
+        <bean:message key="online.help.title"/>
+        <bean:message key="crear.tarea.formulario.informe.federado"/>
+    </tiles:put>
+
+    <tiles:put name="body" type="string">
+        <h1><bean:message key="crear.tarea.formulario.informe.federado"/></h1>
+        <p>
+            <bean:message key="crear.tarea.formulario.informe.federado.online.help"/>
+        </p>
+        <h2><bean:message key="crear.tarea.formulario.informe.federado.aceptar"/></h2>
+        <p>
+            <bean:message key="crear.tarea.formulario.informe.federado.aceptar.online.help"/>
+        </p>
+        <br/>
+            <table>
+                <tr class="even">
+                    <th><bean:message key="online.help.inputfield"/></th>
+                    <th><bean:message key="online.help.description"/></th>
+                </tr>
+                <tr class="odd">
+                    <td><bean:message key="crear.tarea.formulario.informe.federado.aceptar.param.tipo.tarea"/></td>
+                    <td><bean:message key="crear.tarea.formulario.informe.federado.aceptar.param.tipo.tarea.online.help"/></td>
+                </tr>
+                <tr class="even">
+                    <td><bean:message key="crear.tarea.formulario.informe.federado.aceptar.param.formato"/></td>
+                    <td><bean:message key="crear.tarea.formulario.informe.federado.aceptar.param.formato.online.help"/></td>
+                </tr>
+                <tr class="odd">
+                    <td><bean:message key="crear.tarea.formulario.informe.federado.aceptar.param.anio"/></td>
+                    <td><bean:message key="crear.tarea.formulario.informe.federado.aceptar.param.anio.online.help"/></td>
+                </tr>
+                <tr class="even">
+                    <td><bean:message key="crear.tarea.formulario.informe.federado.aceptar.param.mes"/></td>
+                    <td><bean:message key="crear.tarea.formulario.informe.federado.aceptar.param.mes.online.help"/></td>
+                </tr>
+                <tr class="odd">
+                    <td><bean:message key="crear.tarea.formulario.informe.federado.aceptar.param.dia"/></td>
+                    <td><bean:message key="crear.tarea.formulario.informe.federado.aceptar.param.dia.online.help"/></td>
+                </tr>
+                <tr class="even">
+                    <td><bean:message key="crear.tarea.formulario.informe.federado.aceptar.param.hora"/></td>
+                    <td><bean:message key="crear.tarea.formulario.informe.federado.aceptar.param.hora.online.help"/></td>
+                </tr>
+                <tr class="odd">
+                    <td><bean:message key="crear.tarea.formulario.informe.federado.aceptar.param.minutos"/></td>
+                    <td><bean:message key="crear.tarea.formulario.informe.federado.aceptar.param.minutos.online.help"/></td>
+                </tr>
+                <tr class="even">
+                    <td><bean:message key="crear.tarea.formulario.informe.federado.aceptar.param.trabajo"/></td>
+                    <td><bean:message key="crear.tarea.formulario.informe.federado.aceptar.param.trabajo.online.help"/></td>
+                </tr>
+                <tr class="odd">
+                    <td><bean:message key="crear.tarea.formulario.informe.federado.aceptar.param.trigger"/></td>
+                    <td><bean:message key="crear.tarea.formulario.informe.federado.aceptar.param.trigger.online.help"/></td>
+                </tr>
+                <tr class="even">
+                    <td><bean:message key="crear.tarea.formulario.informe.federado.aceptar.param.informe"/></td>
+                    <td><bean:message key="crear.tarea.formulario.informe.federado.aceptar.param.informe.online.help"/></td>
+                </tr>
+                <tr class="odd">
+                    <td><bean:message key="crear.tarea.formulario.informe.federado.aceptar.param.msg.desc.trabajo"/></td>
+                    <td><bean:message key="crear.tarea.formulario.informe.federado.aceptar.param.msg.desc.trabajo.online.help"/></td>
+                </tr>
+                <tr class="even">
+                    <td><bean:message key="crear.tarea.formulario.informe.federado.aceptar.param.msg.informe"/></td>
+                    <td><bean:message key="crear.tarea.formulario.informe.federado.aceptar.param.msg.informe.online.help"/></td>
+                </tr>
+                <tr class="odd">
+                    <td><bean:message key="crear.tarea.formulario.informe.federado.aceptar.param.msg.no.informe"/></td>
+                    <td><bean:message key="crear.tarea.formulario.informe.federado.aceptar.param.msg.no.informe.online.help"/></td>
+                </tr>
+                <tr class="even">
+                    <td><bean:message key="crear.tarea.formulario.informe.federado.aceptar.param.periodicidad"/></td>
+                    <td><bean:message key="crear.tarea.formulario.informe.federado.aceptar.param.periodicidad.online.help"/></td>
+                </tr>
+                <tr class="odd">
+                    <td><bean:message key="crear.tarea.formulario.informe.federado.aceptar.param.tarea.modificada"/></td>
+                    <td><bean:message key="crear.tarea.formulario.informe.federado.aceptar.param.tarea.modificada.online.help"/></td>
+                </tr>
+            </table>
+        <h2><bean:message key="crear.tarea.formulario.informe.federado.cancelar"/></h2>
+        <p>
+            <bean:message key="crear.tarea.formulario.informe.federado.cancelar.online.help"/>
+        </p>
+        <br/>
+    </tiles:put>
+
+</tiles:insert>
+

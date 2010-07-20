@@ -1,0 +1,44 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'objetos.despublicados.cu.mostrar.odesdespublicados.ver.historial.param.id.ode.title':'<formatting:escape language="javascript"><bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.ver.historial.param.id.ode.title"/></formatting:escape>',
+                'objetos.despublicados.cu.mostrar.odesdespublicados.ver.historial.param.titulo.title':'<formatting:escape language="javascript"><bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.ver.historial.param.titulo.title"/></formatting:escape>',
+                'objetos.despublicados.cu.mostrar.odesdespublicados.publicar.param.id.usuario.title':'<formatting:escape language="javascript"><bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.publicar.param.id.usuario.title"/></formatting:escape>',
+                'objetos.despublicados.cu.mostrar.odesdespublicados.publicar.param.titulo.title':'<formatting:escape language="javascript"><bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.publicar.param.titulo.title"/></formatting:escape>',
+                'objetos.despublicados.cu.mostrar.odesdespublicados.publicar.param.id.ode.title':'<formatting:escape language="javascript"><bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.publicar.param.id.ode.title"/></formatting:escape>',
+                'objetos.despublicados.cu.mostrar.odesdespublicados.publicar.param.es.despublicado.title':'<formatting:escape language="javascript"><bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.publicar.param.es.despublicado.title"/></formatting:escape>',
+                'objetos.despublicados.cu.mostrar.odesdespublicados.pendientes.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.pendientes.param.idioma.buscador.title"/></formatting:escape>',
+                'objetos.despublicados.cu.mostrar.odesdespublicados.pendientes.param.tipo.buscador.title':'<formatting:escape language="javascript"><bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.pendientes.param.tipo.buscador.title"/></formatting:escape>',
+                'objetos.despublicados.cu.mostrar.odesdespublicados.eliminar.param.id.ode.title':'<formatting:escape language="javascript"><bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.eliminar.param.id.ode.title"/></formatting:escape>',
+                'VerHistorial':'<formatting:escape language="javascript"><bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.ver.historial.title"/></formatting:escape>',
+                'VerHistorial_no':'<formatting:escape language="javascript"><bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.ver.historial.title.notallowed"/></formatting:escape>',
+                'VerHistorial_reset':'<formatting:escape language="javascript"><bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.ver.historial.title.reset"/></formatting:escape>',
+                'VerHistorial_noreset':'<formatting:escape language="javascript"><bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.ver.historial.title.reset.not.allowed"/></formatting:escape>',
+                'Publicar':'<formatting:escape language="javascript"><bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.publicar.title"/></formatting:escape>',
+                'Publicar_no':'<formatting:escape language="javascript"><bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.publicar.title.notallowed"/></formatting:escape>',
+                'Publicar_reset':'<formatting:escape language="javascript"><bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.publicar.title.reset"/></formatting:escape>',
+                'Publicar_noreset':'<formatting:escape language="javascript"><bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.publicar.title.reset.not.allowed"/></formatting:escape>',
+                'Pendientes':'<formatting:escape language="javascript"><bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.pendientes.title"/></formatting:escape>',
+                'Pendientes_no':'<formatting:escape language="javascript"><bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.pendientes.title.notallowed"/></formatting:escape>',
+                'Pendientes_reset':'<formatting:escape language="javascript"><bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.pendientes.title.reset"/></formatting:escape>',
+                'Pendientes_noreset':'<formatting:escape language="javascript"><bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.pendientes.title.reset.not.allowed"/></formatting:escape>',
+                'Eliminar':'<formatting:escape language="javascript"><bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.eliminar.title"/></formatting:escape>',
+                'Eliminar_no':'<formatting:escape language="javascript"><bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.eliminar.title.notallowed"/></formatting:escape>',
+                'Eliminar_reset':'<formatting:escape language="javascript"><bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.eliminar.title.reset"/></formatting:escape>',
+                'Eliminar_noreset':'<formatting:escape language="javascript"><bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.eliminar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+</script>
+    </tiles:put>

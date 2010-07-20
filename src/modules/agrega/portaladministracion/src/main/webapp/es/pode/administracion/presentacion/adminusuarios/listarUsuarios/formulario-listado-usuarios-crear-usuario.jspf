@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="crearUsuario" class="action">
+    <h3><bean:message key="listar.usuarios.formulario.listado.usuarios.crear.usuario"/></h3>
+    <div class="trigger">
+        <form id="listarUsuariosFormularioListadoUsuariosCrearUsuarioForm" action='<html:rewrite action="/ListarUsuarios/FormularioListadoUsuariosCrearUsuario"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+               <html:submit onmouseover="hints.show('CrearUsuario')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="listar.usuarios.formulario.listado.usuarios.crear.usuario"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

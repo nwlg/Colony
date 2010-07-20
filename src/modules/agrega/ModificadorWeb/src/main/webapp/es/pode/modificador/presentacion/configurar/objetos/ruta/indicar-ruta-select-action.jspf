@@ -1,0 +1,42 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="selectAction" class="action">
+    <h3><bean:message key="indicar.ruta.indicar.ruta.select.action"/></h3>
+    <div class="trigger">
+        <html:form styleId="indicarRutaIndicarRutaSelectActionForm" action="/IndicarRuta/IndicarRutaSelectAction" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="action">
+                        <td class="label"><bean:message key="indicar.ruta.indicar.ruta.select.action.param.action"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.action}"/>
+                           <input type="text" name="action" value="${value}" onmouseover="hints.show('indicar.ruta.indicar.ruta.select.action.param.action.title')" onmouseout="hints.hide()"  id="selectActionAction"/>
+                        </td>
+                    </tr>
+                    <tr class="path">
+                        <td class="label"><bean:message key="indicar.ruta.indicar.ruta.select.action.param.path"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.path}"/>
+                           <input type="text" name="path" value="${value}" onmouseover="hints.show('indicar.ruta.indicar.ruta.select.action.param.path.title')" onmouseout="hints.hide()"  id="selectActionPath"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR,ROLE_ADMINISTRADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('selectAction')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="indicar.ruta.indicar.ruta.select.action"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

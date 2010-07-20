@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="alta.usuario.pendiente.confirmacion.fallo.alta.usuario.pendiente.aceptar"/></h3>
+    <div class="trigger">
+        <form id="altaUsuarioPendienteConfirmacionFalloAltaUsuarioPendienteAceptarForm" action='<html:rewrite action="/AltaUsuarioPendiente/ConfirmacionFalloAltaUsuarioPendienteAceptar"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+               <html:submit onmouseover="hints.show('Aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="alta.usuario.pendiente.confirmacion.fallo.alta.usuario.pendiente.aceptar"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

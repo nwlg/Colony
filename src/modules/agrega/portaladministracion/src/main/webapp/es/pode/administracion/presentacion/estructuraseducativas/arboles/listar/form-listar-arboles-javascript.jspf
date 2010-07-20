@@ -1,0 +1,38 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'listar.arboles.form.listar.arboles.buscar.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="listar.arboles.form.listar.arboles.buscar.param.idioma.buscador.title"/></formatting:escape>',
+                'listar.arboles.form.listar.arboles.validar.param.seleccionado.title':'<formatting:escape language="javascript"><bean:message key="listar.arboles.form.listar.arboles.validar.param.seleccionado.title"/></formatting:escape>',
+                'listar.arboles.form.listar.arboles.exportar.param.nombre.title':'<formatting:escape language="javascript"><bean:message key="listar.arboles.form.listar.arboles.exportar.param.nombre.title"/></formatting:escape>',
+                'Buscar':'<formatting:escape language="javascript"><bean:message key="listar.arboles.form.listar.arboles.buscar.title"/></formatting:escape>',
+                'Buscar_no':'<formatting:escape language="javascript"><bean:message key="listar.arboles.form.listar.arboles.buscar.title.notallowed"/></formatting:escape>',
+                'Buscar_reset':'<formatting:escape language="javascript"><bean:message key="listar.arboles.form.listar.arboles.buscar.title.reset"/></formatting:escape>',
+                'Buscar_noreset':'<formatting:escape language="javascript"><bean:message key="listar.arboles.form.listar.arboles.buscar.title.reset.not.allowed"/></formatting:escape>',
+                'Alta':'<formatting:escape language="javascript"><bean:message key="listar.arboles.form.listar.arboles.alta.title"/></formatting:escape>',
+                'Alta_no':'<formatting:escape language="javascript"><bean:message key="listar.arboles.form.listar.arboles.alta.title.notallowed"/></formatting:escape>',
+                'Alta_reset':'<formatting:escape language="javascript"><bean:message key="listar.arboles.form.listar.arboles.alta.title.reset"/></formatting:escape>',
+                'Alta_noreset':'<formatting:escape language="javascript"><bean:message key="listar.arboles.form.listar.arboles.alta.title.reset.not.allowed"/></formatting:escape>',
+                'Validar':'<formatting:escape language="javascript"><bean:message key="listar.arboles.form.listar.arboles.validar.title"/></formatting:escape>',
+                'Validar_no':'<formatting:escape language="javascript"><bean:message key="listar.arboles.form.listar.arboles.validar.title.notallowed"/></formatting:escape>',
+                'Validar_reset':'<formatting:escape language="javascript"><bean:message key="listar.arboles.form.listar.arboles.validar.title.reset"/></formatting:escape>',
+                'Validar_noreset':'<formatting:escape language="javascript"><bean:message key="listar.arboles.form.listar.arboles.validar.title.reset.not.allowed"/></formatting:escape>',
+                'exportar':'<formatting:escape language="javascript"><bean:message key="listar.arboles.form.listar.arboles.exportar.title"/></formatting:escape>',
+                'exportar_no':'<formatting:escape language="javascript"><bean:message key="listar.arboles.form.listar.arboles.exportar.title.notallowed"/></formatting:escape>',
+                'exportar_reset':'<formatting:escape language="javascript"><bean:message key="listar.arboles.form.listar.arboles.exportar.title.reset"/></formatting:escape>',
+                'exportar_noreset':'<formatting:escape language="javascript"><bean:message key="listar.arboles.form.listar.arboles.exportar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+</script>
+    </tiles:put>

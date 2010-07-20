@@ -1,0 +1,30 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'derechos.derechos.form.submit.form.param.identificador.ode.title':'<formatting:escape language="javascript"><bean:message key="derechos.derechos.form.submit.form.param.identificador.ode.title"/></formatting:escape>',
+                'derechos.derechos.form.submit.form.param.coste.title':'<formatting:escape language="javascript"><bean:message key="derechos.derechos.form.submit.form.param.coste.title"/></formatting:escape>',
+                'derechos.derechos.form.submit.form.param.copy.restricciones.title':'<formatting:escape language="javascript"><bean:message key="derechos.derechos.form.submit.form.param.copy.restricciones.title"/></formatting:escape>',
+                'derechos.derechos.form.submit.form.param.descripciones.title':'<formatting:escape language="javascript"><bean:message key="derechos.derechos.form.submit.form.param.descripciones.title"/></formatting:escape>',
+                'derechos.derechos.form.submit.form.param.combo.idioma.title':'<formatting:escape language="javascript"><bean:message key="derechos.derechos.form.submit.form.param.combo.idioma.title"/></formatting:escape>',
+                'derechos.derechos.form.submit.form.param.accion.title':'<formatting:escape language="javascript"><bean:message key="derechos.derechos.form.submit.form.param.accion.title"/></formatting:escape>',
+                'derechos.derechos.form.submit.form.param.id.eliminado.title':'<formatting:escape language="javascript"><bean:message key="derechos.derechos.form.submit.form.param.id.eliminado.title"/></formatting:escape>',
+                'derechos.derechos.form.submit.form.param.listado.comunidades.title':'<formatting:escape language="javascript"><bean:message key="derechos.derechos.form.submit.form.param.listado.comunidades.title"/></formatting:escape>',
+                'derechos.derechos.form.submit.form.param.tipo.acceso.title':'<formatting:escape language="javascript"><bean:message key="derechos.derechos.form.submit.form.param.tipo.acceso.title"/></formatting:escape>',
+                'derechos.derechos.form.submit.form.param.listado.nodos.title':'<formatting:escape language="javascript"><bean:message key="derechos.derechos.form.submit.form.param.listado.nodos.title"/></formatting:escape>',
+                'submitForm':'<formatting:escape language="javascript"><bean:message key="derechos.derechos.form.submit.form.title"/></formatting:escape>',
+                'submitForm_no':'<formatting:escape language="javascript"><bean:message key="derechos.derechos.form.submit.form.title.notallowed"/></formatting:escape>',
+                'submitForm_reset':'<formatting:escape language="javascript"><bean:message key="derechos.derechos.form.submit.form.title.reset"/></formatting:escape>',
+                'submitForm_noreset':'<formatting:escape language="javascript"><bean:message key="derechos.derechos.form.submit.form.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

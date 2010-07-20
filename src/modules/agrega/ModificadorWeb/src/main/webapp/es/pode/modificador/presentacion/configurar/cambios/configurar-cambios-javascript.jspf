@@ -1,0 +1,30 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'configurar.cambios.configurar.cambios.select.action.param.action.title':'<formatting:escape language="javascript"><bean:message key="configurar.cambios.configurar.cambios.select.action.param.action.title"/></formatting:escape>',
+                'configurar.cambios.configurar.cambios.select.action.param.option.title':'<formatting:escape language="javascript"><bean:message key="configurar.cambios.configurar.cambios.select.action.param.option.title"/></formatting:escape>',
+                'configurar.cambios.configurar.cambios.select.action.param.id.termino.title':'<formatting:escape language="javascript"><bean:message key="configurar.cambios.configurar.cambios.select.action.param.id.termino.title"/></formatting:escape>',
+                'configurar.cambios.configurar.cambios.buscar.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="configurar.cambios.configurar.cambios.buscar.param.idioma.buscador.title"/></formatting:escape>',
+                'configurar.cambios.configurar.cambios.buscar.param.tipo.busqueda.title':'<formatting:escape language="javascript"><bean:message key="configurar.cambios.configurar.cambios.buscar.param.tipo.busqueda.title"/></formatting:escape>',
+                'Select Action':'<formatting:escape language="javascript"><bean:message key="configurar.cambios.configurar.cambios.select.action.title"/></formatting:escape>',
+                'Select Action_no':'<formatting:escape language="javascript"><bean:message key="configurar.cambios.configurar.cambios.select.action.title.notallowed"/></formatting:escape>',
+                'Select Action_reset':'<formatting:escape language="javascript"><bean:message key="configurar.cambios.configurar.cambios.select.action.title.reset"/></formatting:escape>',
+                'Select Action_noreset':'<formatting:escape language="javascript"><bean:message key="configurar.cambios.configurar.cambios.select.action.title.reset.not.allowed"/></formatting:escape>',
+                'buscar':'<formatting:escape language="javascript"><bean:message key="configurar.cambios.configurar.cambios.buscar.title"/></formatting:escape>',
+                'buscar_no':'<formatting:escape language="javascript"><bean:message key="configurar.cambios.configurar.cambios.buscar.title.notallowed"/></formatting:escape>',
+                'buscar_reset':'<formatting:escape language="javascript"><bean:message key="configurar.cambios.configurar.cambios.buscar.title.reset"/></formatting:escape>',
+                'buscar_noreset':'<formatting:escape language="javascript"><bean:message key="configurar.cambios.configurar.cambios.buscar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+</script>
+    </tiles:put>

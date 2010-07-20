@@ -1,0 +1,47 @@
+#buscar.action {}
+#buscar.action #form_submit {}
+
+#buscar.action .idiomaBuscador {}
+#buscar.action .idiomaBuscador .label {}
+#buscar.action .idiomaBuscador .field {}
+
+#selectAction.action {}
+#selectAction.action #form_submit {}
+
+#selectAction.action .action {}
+#selectAction.action .action .label {}
+#selectAction.action .action .field {}
+#selectAction.action .posiciones {}
+#selectAction.action .posiciones .label {}
+#selectAction.action .posiciones .field {}
+#selectAction.action .idiomaBuscador {}
+#selectAction.action .idiomaBuscador .label {}
+#selectAction.action .idiomaBuscador .field {}
+
+#guardar.action {}
+#guardar.action #form_submit {}
+
+#guardar.action .action {}
+#guardar.action .action .label {}
+#guardar.action .action .field {}
+
+#cambios.table {}
+#cambios.table th {}
+#cambios.table td div {}
+
+#cambios.table th.type {}
+#cambios.table td div.type {}
+
+#cambios.table th.value {}
+#cambios.table td div.value {}
+
+
+#objetos.table {}
+#objetos.table th {}
+#objetos.table td div {}
+
+#objetos.table th.path {}
+#objetos.table td div.path {}
+
+
+

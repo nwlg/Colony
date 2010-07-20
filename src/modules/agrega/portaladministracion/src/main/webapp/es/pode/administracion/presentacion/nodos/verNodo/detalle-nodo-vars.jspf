@@ -1,0 +1,26 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="id" value="${form.id}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idNodo" value="${form.idNodo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="ccaa" value="${form.ccaa}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="puerto" value="${form.puerto}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="nodo" value="${form.nodo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="comunidad" value="${form.comunidad}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="url" value="${form.url}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="urlWS" value="${form.urlWS}"/>
+    </c:catch>
+</div>

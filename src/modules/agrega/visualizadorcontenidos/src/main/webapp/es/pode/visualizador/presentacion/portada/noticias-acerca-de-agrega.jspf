@@ -1,0 +1,13 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="acercaDeAgrega" class="action">
+    <h3><bean:message key="portada.noticias.acerca.de.agrega"/></h3>
+    <div class="trigger">
+        <form id="portadaNoticiasAcercaDeAgregaForm" action='<html:rewrite action="/Portada/NoticiasAcercaDeAgrega"/>' method="post">
+               <html:submit onmouseover="hints.show('AcercaDeAgrega')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="portada.noticias.acerca.de.agrega"/>
+               </html:submit>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

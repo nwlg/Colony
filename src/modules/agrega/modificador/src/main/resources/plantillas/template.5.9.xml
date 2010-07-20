@@ -1,0 +1,4 @@
+<typicalLearningTime>
+${load:duration.xml}
+${load:description.xml}
+</typicalLearningTime>

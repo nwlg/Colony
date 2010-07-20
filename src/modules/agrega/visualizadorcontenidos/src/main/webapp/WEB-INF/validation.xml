@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE form-validation PUBLIC
+    "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1//EN"
+    "http://jakarta.apache.org/commons/dtds/validator_1_1.dtd">
+
+<form-validation>
+
+    <formset>
+    
+
+        <form name="portadaNoticiasCategoriaForm">
+            <field property="idCategoria" depends="long">
+
+                <arg position="0" key="portada.noticias.categoria.param.id.categoria" />
+            </field>
+        </form>
+        <form name="portadaNoticiasVerForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="portada.noticias.ver.param.id" />
+            </field>
+        </form>
+        <form name="noticiaNoticiaCategoriaForm">
+            <field property="idCategoria" depends="long">
+
+                <arg position="0" key="noticia.noticia.categoria.param.id.categoria" />
+            </field>
+        </form>
+        <form name="noticiasNoticiasVerForm">
+            <field property="id" depends="long">
+
+                <arg position="0" key="noticias.noticias.ver.param.id" />
+            </field>
+        </form>
+        <form name="noticiasNoticiasPorCategoriaForm">
+            <field property="idCategoria" depends="long">
+
+                <arg position="0" key="noticias.noticias.por.categoria.param.id.categoria" />
+            </field>
+        </form>
+        <form name="modificarPerfilFormularioIniciaAceptarForm">
+            <field property="cuota" depends="long">
+
+                <arg position="0" key="modificar.perfil.formulario.inicia.aceptar.param.cuota" />
+            </field>
+            <field property="id" depends="long">
+
+                <arg position="0" key="modificar.perfil.formulario.inicia.aceptar.param.id" />
+            </field>
+        </form>
+        <form name="descargasDescargasDescargaForm">
+            <field property="identificador" depends="long">
+
+                <arg position="0" key="descargas.descargas.descarga.param.identificador" />
+            </field>
+        </form>
+<!--RLA-->
+
+<!--/RLA-->
+    </formset>
+
+</form-validation>

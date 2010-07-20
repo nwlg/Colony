@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="$action.styleId" class="action">
+    <h3><bean:message key="${actionTrigger.triggerKey}"/></h3>
+    <div class="trigger">
+        <form id="verNoticiaFormularioDosNullForm" action='<html:rewrite action="/VerNoticia/FormularioDosNull"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+               <html:submit onmouseover="hints.show('${trigger.name}')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="$trigger.triggerKey"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

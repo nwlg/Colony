@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<MenuConfig>
+
+    <Displayers>
+        <Displayer name="listMenu" type="net.sf.navigator.displayer.ListMenuDisplayer"/>
+    </Displayers>
+
+    <Menus>
+        <Menu name="inicio.tagging.title" title="inicio.tagging.title" tooltip="inicio.tagging.online.help">
+            <Item name="listar.agrega.tags.title" title="listar.agrega.tags.title" tooltip="listar.agrega.tags.online.help">
+                            <Item name="mostrar.odes.agrega.tags.title" title="mostrar.odes.agrega.tags.title" tooltip="mostrar.odes.agrega.tags.online.help" action="/MostrarOdesAgregaTags/MostrarOdesAgregaTags">
+                </Item>
+            </Item>
+            <Item name="listar.mis.tags.title" title="listar.mis.tags.title" tooltip="listar.mis.tags.online.help">
+                            <Item name="mostrar.odes.mis.tags.title" title="mostrar.odes.mis.tags.title" tooltip="mostrar.odes.mis.tags.online.help" action="/MostrarOdesMisTags/MostrarOdesMisTags">
+                </Item>
+                            <Item name="modificar.tag.title" title="modificar.tag.title" tooltip="modificar.tag.online.help" action="/ModificarTag/ModificarTag">
+                </Item>
+            </Item>
+        </Menu>
+    </Menus>
+
+</MenuConfig>

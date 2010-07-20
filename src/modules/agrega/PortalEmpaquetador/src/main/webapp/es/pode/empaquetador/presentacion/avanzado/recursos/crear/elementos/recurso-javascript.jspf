@@ -1,0 +1,65 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'crear.recurso.avanzado.elementos.recurso.submit.dependencias.param.identifier.title':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.submit.dependencias.param.identifier.title"/></formatting:escape>',
+                'crear.recurso.avanzado.elementos.recurso.submit.archivos.param.href.title':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.submit.archivos.param.href.title"/></formatting:escape>',
+                'crear.recurso.avanzado.elementos.recurso.crear.param.action.title':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.crear.param.action.title"/></formatting:escape>',
+                'crear.recurso.avanzado.elementos.recurso.metadato.param.href.title':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.metadato.param.href.title"/></formatting:escape>',
+                'crear.recurso.avanzado.elementos.recurso.submit.principal.param.action.title':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.submit.principal.param.action.title"/></formatting:escape>',
+                'SubmitDependencias':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.submit.dependencias.title"/></formatting:escape>',
+                'SubmitDependencias_no':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.submit.dependencias.title.notallowed"/></formatting:escape>',
+                'SubmitDependencias_reset':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.submit.dependencias.title.reset"/></formatting:escape>',
+                'SubmitDependencias_noreset':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.submit.dependencias.title.reset.not.allowed"/></formatting:escape>',
+                'SubmitArchivos':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.submit.archivos.title"/></formatting:escape>',
+                'SubmitArchivos_no':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.submit.archivos.title.notallowed"/></formatting:escape>',
+                'SubmitArchivos_reset':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.submit.archivos.title.reset"/></formatting:escape>',
+                'SubmitArchivos_noreset':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.submit.archivos.title.reset.not.allowed"/></formatting:escape>',
+                'Crear':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.crear.title"/></formatting:escape>',
+                'Crear_no':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.crear.title.notallowed"/></formatting:escape>',
+                'Crear_reset':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.crear.title.reset"/></formatting:escape>',
+                'Crear_noreset':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.crear.title.reset.not.allowed"/></formatting:escape>',
+                'Metadato':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.metadato.title"/></formatting:escape>',
+                'Metadato_no':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.metadato.title.notallowed"/></formatting:escape>',
+                'Metadato_reset':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.metadato.title.reset"/></formatting:escape>',
+                'Metadato_noreset':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.metadato.title.reset.not.allowed"/></formatting:escape>',
+                'Organizaciones':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.organizaciones.title"/></formatting:escape>',
+                'Organizaciones_no':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.organizaciones.title.notallowed"/></formatting:escape>',
+                'Organizaciones_reset':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.organizaciones.title.reset"/></formatting:escape>',
+                'Organizaciones_noreset':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.organizaciones.title.reset.not.allowed"/></formatting:escape>',
+                'Archivos':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.archivos.title"/></formatting:escape>',
+                'Archivos_no':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.archivos.title.notallowed"/></formatting:escape>',
+                'Archivos_reset':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.archivos.title.reset"/></formatting:escape>',
+                'Archivos_noreset':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.archivos.title.reset.not.allowed"/></formatting:escape>',
+                'Submanifiestos':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.submanifiestos.title"/></formatting:escape>',
+                'Submanifiestos_no':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.submanifiestos.title.notallowed"/></formatting:escape>',
+                'Submanifiestos_reset':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.submanifiestos.title.reset"/></formatting:escape>',
+                'Submanifiestos_noreset':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.submanifiestos.title.reset.not.allowed"/></formatting:escape>',
+                'Recursos':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.recursos.title"/></formatting:escape>',
+                'Recursos_no':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.recursos.title.notallowed"/></formatting:escape>',
+                'Recursos_reset':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.recursos.title.reset"/></formatting:escape>',
+                'Recursos_noreset':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.recursos.title.reset.not.allowed"/></formatting:escape>',
+                'SubmitPrincipal':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.submit.principal.title"/></formatting:escape>',
+                'SubmitPrincipal_no':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.submit.principal.title.notallowed"/></formatting:escape>',
+                'SubmitPrincipal_reset':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.submit.principal.title.reset"/></formatting:escape>',
+                'SubmitPrincipal_noreset':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.elementos.recurso.submit.principal.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+
+
+
+
+
+</script>
+    </tiles:put>

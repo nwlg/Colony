@@ -1,0 +1,2597 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<document>
+
+<body>
+
+<section name="FAQ-I-BUILDER">
+        <li><strong><a href="FAQ.html#ind_1">Sistema Gestor de Ficheros</a></strong></li>
+        <li><strong><a href="FAQ.html#ind_2">Modelado UML</a></strong></li>
+        <li><strong><a href="FAQ.html#ind_3">Modelado de Servicios</a></strong></li>
+        <li><strong><a href="FAQ.html#ind_4">Modelado de la B.D.</a></strong></li>
+        <li><strong><a href="FAQ.html#ind_5">Entorno de Desarrollo</a></strong></li>
+        <li><strong><a href="FAQ.html#ind_6">Construir un proyecto desde cero</a></strong></li>
+        <a name="ind_1"></a>
+</section>
+
+
+<section name="Sistema Gestor de Ficheros">
+
+	<p><strong>1.1 QUÉ NOMBRES DE DIRECTORIOS USAR, ESPACIOS EN LOS NOMBRES DE DIRECTORIO</strong></p>
+
+        <p>Nada de espacios en los directorios donde instalamos el JBOSS_HOME,
+        ni en el directorios superiores al directorio donde creemos nuestros proyectos,
+        es decir, desde donde ejecutamos: Maven andromdapp:generate</p>
+
+        <p><strong>Qué consola/ventana MSDOS</strong></p>
+
+        <p>Hay que utilizar un cmd, y no un command.com, ya que limita
+        a 8 caracteres los nombres de ficheros y directorios.</p>
+
+        <a name="ind_2"></a>
+</section>
+
+
+<section name="Modelado UML">
+
+        <p><strong>2.1 CÓMO EVITAR INDICAR EL PATH DEL FICHERO ANDROMDA-PROFILEX.X AL MAGICDRAW UNA Y OTRA VEZ</strong></p>
+
+        <p>En …\Tecnología\SOA\NPA\Guias
+        Técnicas\anexosDeLasGuias\utilidades\junction2andromda-profile-X.X.xml.zip
+        tenéis la utilidad doJunction.bat que crea un link simbólico,
+        también llamado junction, si el sistema de archivos es NTFS, sino copia los
+        ficheros xml.zips del andromda profile a un directorio donde todo proyecto
+        busca antes de preguntar dónde se haya el fichero andromda-profileX.X.xml.zip.</p>
+
+        <p><strong>Aviso:</strong></p>
+
+        <p>Cuando cambiemos de versión de Andromda, hay que volver a ejecutar la utilidad, si y
+        sólo si nuestro sistema de ficheros no es tipo NTFS. Dicha utilidad crea un
+        link simbólico si nuestro sistema gestor de ficheros es NTFS, en caso contrario
+        copia los ficheros andromda-profileX.X.xml.zip a un determinado directorio, por
+        tanto, en este segundo caso hay que volver a ejecutar la utilidad cada vez que
+        dichos ficheros sufran cambio, p.ej., cuando cambiamos de versión de andromda.</p>
+
+        <p><strong>2.2 CÓMO MIGRAR UN MODELO UML DE UNA VERSIÓN ANTERIOR A LA ACTUAL</strong></p>
+
+        <p>Editar el fichero *Model.xmi con un editor de texto y
+        reemplazar las alusiones a los ficheros andromda-profile-*<b style='mso-bidi-font-weight:
+        normal'>X,X</b>.xml.zip, donde X.X simbolizan la versión, por la nueva versión.</p>
+
+        <p><strong>2.3 CÓMO DOCUMENTAR UN MODELO UML, ACENTOS</strong></p>
+
+        <p>No utilizar ningún acento cuando documentemos el modelo
+        UML, ya que ciertas exportaciones a xml utilizan UTF-8, con lo cual, luego en
+        tiempo de compilación dará un error del tipo: No puedo entender el 2 ó 3 byte.
+        La localización</p>
+
+        <p><strong>2.4 CÓMO DUPLICAR CLASES</strong></p>
+
+	<p>Cuando queramos crear una clase nueva a partir de otra ya
+	existente podemos desde un diagrama de clases copiar dicha clase existente
+	seleccionando Edición|Copiar o utilizando el acelerador Ctrl+c, para seguidamente
+	crear una clase nueva utilizando Edicion|Pegar con nuevos datos, o su
+	acelerador Ctrl.+e También podemos seleccionar en el árbol la clases, copiarla
+	con el botón dercho, y pegarla en otro paquete.</p>
+
+	<p><strong>2.5 CÓMO MODELAR GRAFICAMENTE LOS DISEÑOS DE ESTILO</strong></p>
+
+	<p>Si se diseñan estilos gráficos personalizados, hay que crear una carperta nueva jsp en
+	../web/src, donde colocar todos los recursos gráficos: .css, .jsp…etc. No
+	olvidar descomentar las siguientes líneas del fichero ../web/maven.xml</p>
+
+	<p>&lt;!-- uncomment this section and put files in src/jsp to have them copied over the generated ones--&gt;</p>
+
+	<p><span lang='EN-GB' style='mso-ansi-language:EN-GB'><span
+	style='mso-spacerun:yes'></span>&lt;preGoal name=&quot;war:init&quot;&gt;</span></p>
+
+	<p><span lang='EN-GB' style='mso-ansi-language:EN-GB'><span
+	style='mso-spacerun:yes'></span>&lt;ant:copy
+	todir=&quot;${maven.war.webapp.dir}&quot; overwrite=&quot;true&quot;&gt;</span></p>
+
+	<p><span lang='EN-GB' style='mso-ansi-language:EN-GB'><span
+	style='mso-spacerun:yes'></span>&lt;ant:fileset dir=&quot;${maven.src.dir}/jsp&quot;&gt;</span></p>
+
+	<p><span lang='EN-GB' style='mso-ansi-language:EN-GB'><span
+	style='mso-spacerun:yes'></span>&lt;include
+	name=&quot;**/*&quot;/&gt;</span></p>
+
+	<p><span lang='EN-GB' style='mso-ansi-language:EN-GB'><span
+	style='mso-spacerun:yes'></span>&lt;/ant:fileset&gt;</span></p>
+
+	<p><span lang='EN-GB' style='mso-ansi-language:EN-GB'><span
+	style='mso-spacerun:yes'></span>&lt;/ant:copy&gt;</span></p>
+
+	<p><span lang='EN-GB' style='mso-ansi-language:EN-GB'><span
+	style='mso-spacerun:yes'></span>&lt;/preGoal&gt;</span></p>
+
+	<p><span lang='EN-GB' style='mso-ansi-language:EN-GB'></span></p>
+
+	<p>Copiar en nuestro projecto .../web/jsp la línea gráfica
+	p.ej. la línea gráfica de ej de la red:<span style='mso-spacerun:yes'> 
+	</span>…Tecnología\SOA\NPA\Guias Técnicas\anexosDeLasGuias\ejemploLineaGrafica</p>
+
+	<p>Para personalizar el menú, copiar de nuestro proyecto en
+	local del fichero<span style='mso-spacerun:yes'>  </span><span lang='ES'
+	style='mso-ansi-language:ES'>...\web\target\src\layout\jsp\layout\menu.jsp<span
+	style='mso-spacerun:yes'>  </span></span>las líneas comprendidas entre las
+	etiquetas: &lt;ul&gt;...&lt;/ul&gt; a l fichero ...\web\src\jsp\layout\menu.jsp</p>
+
+	<p><strong>2.6 CÓMO TRABAJAR EN EQUIPO,  EN PARALELO Y RAPIDO</strong></p>
+	
+	<blockquote>
+	<p><strong>2.6.1 Cómo particionar/exportar un modelo uml en varios módulos</strong></p>
+
+	<p>Cuando un modelo UML es grande, o queremos trabajar en paralelo varias
+	personas, es necesario particionarlo. Para ello, exportaremos los paquetes base
+	como módulos externos. Así tendremos un fichero p.ej. MyProjectModel.xmi que
+	hace referencia a otros ficheros .xml ó .xml.zip, p.ej.: MyModule1.xml.zip
+	Mymodule2.xml.zip..MymoduleN.xml.zip. Donde hay que entender paquete base como
+	un paquete que solamente utiliza referencia a sus elementos. P.ej.: las clases
+	entidad que definan nuestro modelo de dominio puede ser claramente un buen
+	ejemplo de paquete base, ya que dicho paquete contendría todas las clases
+	entidad y sus relaciones de asociación, sin tener relación con otros elementos
+	mas que los suyos.</p>
+
+	<p>Se recuerda que las exportaciones deben ser jerárquicas, como lo son los paquetes
+	en UML, por ende, las relaciones entre distintos elementos han de hacerse en el
+	moduloPadre, de los modulosHijos extrarelacionados; el editor UML empleado,
+	realizará el control sobre las relaciones externas del modulo a exportar con
+	terceros módulos.</p>
+
+	<p>Cada editor UML tiene sus peculiaridades, pero generalmente todos
+	permiten exportar paquetes de la forma siguiente:</p>
+
+	<p>Seleccionar el paquete que queremos exportar, luego elegir
+	Archivo|Exportar&gt;Perfil/Módulo, y guardar dicho paquete como un xml, xml.zip
+	externo.</p>
+
+	<p>De este modo, utilizando un repositorio varias personas pueden trabajar en paralelo.</p>
+
+	<p><strong>2.6.2 Cómo reducir tiempos de generación con el Maven</strong></p>
+
+	<p>Podemos disminuir
+	los tiempos de respuesta de validación y generación de código, empleando el
+	servidor Andromda, Andromda Server, para que detecte los cambios en el modelo
+	xmi que hagamos desde el editor UML, y cargue en memoria el árbol xmi. Así se
+	reduce el tiempo de ejecución de la herramienta Maven a un tercio, ya que lo
+	más costoso es leer el fichero xmi y generar su árbol en memoria.</p>
+
+	<blockquote>
+	<p><strong>2.6.2.1 Cómo usar Andromda Server</strong></p>
+
+	<p>La forma de ejecutar dicho servidor es utilizando la
+	herramienta maven, e invocarlo con la siguiente orden:</p>
+
+	<p><blockquote>Maven start-andromda-server</blockquote></p>
+	</blockquote></blockquote>
+
+        <a name="ind_3"></a>
+</section>
+
+<section name="3. MODELADO DE SERVICIOS">
+
+	<p><strong>3.1 AYUDA PARA GENERAR CLASES CLIENTE PARA INVOCAR A UN SERVICIO REMOTO</strong></p>
+
+	<p>Esta utilidad generar automáticamente todas las clases
+	cliente necesarias para invocar a un servicio remoto a partir de la definición de
+	dicho servicio remoto. Tenemos que instalar Axis, o el producto que estemos
+	utilizando para publicar los servicios, ya que casi todos suministran la clase
+	WSDL2Java, que implementa la presente ayuda. </p>
+
+	<p>También se puede usar Spring para que nos cree una factoría
+	local que realice la función de Proxy a los servicios remotos.</p>
+
+	<p><strong><blockquote>3.1.-1 Cómo usar WSDL2Java</blockquote></strong></p>
+
+	<blockquote>
+	<p>Para generar las clases a partir del wsdl del servicio:</p>
+
+	<p>java -cp %AXISCLASSPATH% org.apache.axis.wsdl.WSDL2Java<span style='mso-spacerun:yes'></span>NombreDelServicio.wsdl</p>
+
+	<p>En este punto, se han generado automáticamente todas las clases cliente necesarias para poder escribir ya nuestro programa cliente, que
+	le llamaremos InvokeService:</p>
+
+	<p>Para compilar el programa cliente InvokeService:</p>
+
+	<p>javac -classpath %AXISCLASSPATH%;.<span style='mso-spacerun:yes'></span>InvokeService.java</p>
+
+	<p>Para ejecutar el programa cliente:</p>
+
+	<p>java -classpath %AXISCLASSPATH%;. InvokeService</p>
+
+	<p>Su programa cliente, InvokeService en nuestro caso,tendrá un código muy similar al siguiente:</p>
+
+	<p>import nombrePaquete.com.*;</p>
+
+	<p>public class InvokeService {</p>
+
+	<p>public static void main(String[] args) {</p>
+
+	<p>try{</p>
+
+	<p>NombreDelServicioServiceLocator locator = new NombreDelServicioServiceLocator();</p>
+
+	<p>NombreDelServicio service = locator.getNombreDelServicio ();</p>
+
+	<p>System.out.println(&quot;Des=&quot;+</p>
+
+	<p>service.nombreDelMetodoDelServicio().getNombreAtributoDelObjetoResultadoDelMetodo() );</p>
+
+	<p>}</p>
+
+	<p>catch (Exception any) {</p>
+
+	<p>any.printStackTrace();</p>
+
+	<p>}</p>
+
+	<p>}</p>
+
+	<p>}</p>
+
+	<p><strong>Nota:</strong></p>
+
+	<p>También podemos utilizar los clásicos wizards o asistentes mucho más visuales que realizan un trabajo
+	identico. P.ej.: Eclipse 2.1 + plugin wsdl2javawizard</p>
+	</blockquote>
+
+	<p><strong><blockquote>3.1.-2 Cómo usar Spring/Proxy-Factory</blockquote></strong></p>
+
+	<blockquote>
+	<p>Para acceder desde nuestra aplicación de presentación a
+	servicios remotos de terceras aplicaciones de otros equipos de desarrollo,
+	podemos utilizar Spring para que nos sea transparente la utilización de dichos
+	servicios remotos.</p>
+
+	<p>Spring realiza una función de Proxy para con dichos
+	servicios remotos, con lo cual para nuestra aplicación, es como invoca a servicios
+	locales.</p>
+	</blockquote>
+
+	<p><strong>3.2 SERVLET DE SERVICIOS</strong></p>
+
+	<p>Los servicios son publicados mediante un servlet, que serializan nuestras clases servicios.</p>
+
+	<p><strong><blockquote>3.2.1 AXIS</blockquote></strong></p>
+
+	<blockquote>
+	<p>Un servlet open source que solemos utilizar es el de AXIS. </p>
+	</blockquote>
+
+	<p><strong>3.3 EJEMPLO MODELO SERVIOS WEB CON EJBS</strong></p>
+
+	<p>Seguidamente se presenta un modelo de servicios web basados en EJBs que realiza una consulta maestro-detalle a 
+	una base de datos con un cierto criterio.</p>
+
+	<p align='center'><img src="images/FAQ_image005.jpg"></img></p>
+
+	<p>La clase DocumentoMasTipo consta de los atributos tanto propios de la tabla/clase TpaDocumento como TpaTipoDocumento, 
+	ya que se quiere devolver tanto la información de la tabla padre como de la hija.</p>
+
+	<p>Las etiquetas del tipo @andromda.persistence.* indican los nombres de las tablas y columnas asociados en la 
+	base de dato; ya que se ha utilizado la utilidad Schema2XMI.</p>
+
+	<p>La clase CriterioBusquedaDocMasTipo, consta de un único atributo sobre el cual realizaremos la consulta.</p>
+
+	<p><span lang='ES'>Dicho modelo de ejemplo está disponible en <a
+	href="../tecnologiaDDP$/Tecnología/SOA/NPA/Guias%20Técnicas/anexosDeLasGuias/ejemplosXMIs/WebServicesEJBModel.xmi">\\madarrnas02\tecnologiaDDP$\Tecnología\SOA\NPA\Guias
+	Técnicas\anexosDeLasGuias\ejemplosXMIs\WebServicesEJBModel.xmi</a></span></p>
+
+	<p><span lang='ES'></span></p>
+
+	<p><strong>3.4 EJEMPLO MODELO SERVICIOS WEB CON POJOS</strong></p>
+
+	<p>Seguidamente se presenta un modelo de servicios web basados en POJOs que realiza dos consulta a una base de 
+	datos con un criterio.</p>
+
+	<p align='center'><img src="images/FAQ_image007.jpg"></img></p>
+
+	<p>La clase PersonListItem consta de los atributos propios de la tabla/clase Person,ya que solamente se desea 
+	consultar sobre ella.</p>
+
+	<p>El método getCustomerByName devuelve la primera ocurrencia que se encuentra en la base de datos, mientras que 
+	getCustomersByname devuelve todas las ocurrencias que se encuentre en la base de datos.</p>
+
+	<p>La clase PersonSerachCriteria, consta de un único atributo sobre el cual realizamos la consulta.</p>
+
+	<p>Dicha utilidad está disponible en <a
+	href="../tecnologiaDDP$/Tecnología/SOA/NPA/Guias%20Técnicas/anexosDeLasGuias/ejemplosXMIs/WebServicesPOJOModel.xmi">\\madarrnas02\tecnologiaDDP$\Tecnología\SOA\NPA\Guias
+	Técnicas\anexosDeLasGuias\ejemplosXMIs\WebServicesPOJOModel.xmi</a></p>
+	
+	<a name="ind_4"></a>
+</section>
+
+
+<section name="4. MODELADO DE LA B.D.">
+
+	<p><strong>4.1 CÓMO CONFIGURAR UN DATA SOURCE DE B.D. EN UN PROYECTO</strong></p>
+
+	<p>En el fichero …/project.properties podemos cambiar las propiedades siguientes a su valor adecuado, según el 
+	tipo de la base de datos:</p>
+
+	<p><blockquote>dataSource.name</blockquote></p>
+
+	<p><blockquote>sql.mappings</blockquote></p>
+
+	<p><blockquote>hibernate.db.dialect</blockquote></p>
+
+	<p><strong>Nota:</strong></p>
+	
+	<p>Las propiedades dataSource.* son sólo necesarias para poder utilizar las órdenes maven propias de borrado 
+	del modelo de datos, creación y carga de datos:</p>
+
+	<p><blockquote>drop-schema</blockquote></p>
+
+	<p><blockquote>create-schema</blockquote></p>
+
+	<p><blockquote>load-dummy-data</blockquote></p>
+	
+	<p>En el cuadro siguiente se muestran los valores adecuados para las base de datos más habituales:</p>
+	
+	<table border="1" cellspacing="0" cellpadding="0">
+ 	<tr>
+  	  <td valign='top'>
+  	  <p><b style='mso-bidi-font-weight:normal'>Bases de datos</b></p>
+  	  <p><b style='mso-bidi-font-weight:normal'>Propiedades</b></p>
+  	  </td>
+  	  
+  	  <td valign='top'>
+  	  <p><b style='mso-bidi-font-weight:normal'>DB2</b></p>
+  	  </td>
+  	  
+  	  <td valign='top'>
+  	  <p><b style='mso-bidi-font-weight:normal'>Hypersonic</b></p>
+  	  </td>
+  	  
+  	  <td valign='top'>
+	  <p><b style='mso-bidi-font-weight:normal'>Oracle9i/10g</b></p>
+  	  </td>
+  	  
+  	  <td valign='top'>
+	  <p><b style='mso-bidi-font-weight:normal'>SQLServer 2000</b></p>
+  	  </td>
+ 	</tr>
+ 	
+ 	<tr>
+  	  <td valign='top'>
+	  <p><b style='mso-bidi-font-weight:normal'>dataSource.name</b></p>
+  	  </td>
+  
+  	  <td valign='top'>
+	  <p>DB2DS</p>
+  	  </td>
+  
+  	  <td valign='top'>
+	  <p>DefaultDS</p>
+  	  </td>
+  
+  	  <td valign='top'>
+	  <p>OracleDS</p>
+  	  </td>
+  
+  	  <td valign='top'>
+	  <p>MSSQLDS</p>
+  	  </td>
+ 	</tr>
+ 	
+ 	<tr>
+ 	  <td valign='top'>
+	  <p><b style='mso-bidi-font-weight:normal'>sql.mappings</b></p>
+  	  </td>
+  
+  	  <td valign='top'>
+	  <p>DB2</p>
+  	  </td>
+
+  	  <td valign='top'>
+	  <p>HypersonicSql</p>
+  	  </td>
+  
+  	  <td valign='top'>
+	  <p>Oracle9i</p>
+  	  </td>
+
+ 	  <td valign='top'>
+	  <p>MSSQL</p>
+  	  </td>
+ 	</tr>
+ 	
+ 	<tr>
+ 	  <td valign='top'>
+	  <p><b style='mso-bidi-font-weight:normal'>hibernate.db.dialect</b></p>
+  	  </td>
+  
+ 	  <td valign='top'>
+	  <p>org.hibernate.dialect.DB2Dialect</p>
+  	  </td>
+
+ 	  <td valign='top'>
+	  <p>org.hibernate.dialect.HSQLDialect</p>
+  	  </td>
+  
+ 	  <td valign='top'>
+	  <p>org.hibernate.dialect.HSQLDialect</p>
+  	  </td>
+
+ 	  <td valign='top'>
+	  <p>org.hibernate.dialect.<strong>SQLServer</strong> Dialect</p>
+  	  </td>
+ 	</tr>
+ 	
+ 	<tr>
+ 	  <td valign='top'>
+	  <p><b style='mso-bidi-font-weight:normal'>dataSource.driver.jar</b></p>
+  	  </td>
+  
+ 	  <td valign='top'>
+	  <p>${env.JBOSS_HOME}/server/default/lib/db2jcc.jar*</p>
+  	  </td>
+  
+ 	  <td valign='top'>
+	  <p>${env.JBOSS_HOME}/server/default/lib/hsqldb.jar</p>
+  	  </td>
+  
+ 	  <td valign='top'>
+	  <p>${env.JBOSS_HOME}/server/default/lib/classes12.jar</p>
+  	  </td>
+  
+ 	  <td valign='top'>
+	  <p>${env.JBOSS_HOME}/server/default/lib/mssqlserver.jar</p>
+  	  </td>
+ 	</tr>
+ 	
+ 	
+ 	<tr>
+ 	  <td valign='top'>
+	  <p><b style='mso-bidi-font-weight:normal'>dataSource.driver.class</b></p>
+  	  </td>
+  
+ 	  <td valign='top'>
+	  <p>com.ibm.db2.jcc.DB2Driver</p>
+  	  </td>
+  
+ 	  <td valign='top'>
+	  <p>org.hsqldb.jdbcDriver</p>
+  	  </td>
+  
+ 	  <td valign='top'>
+	  <p>oracle.jdbc.driver.OracleDriver</p>
+  	  </td>
+  
+ 	  <td valign='top'>
+	  <p>com.microsoft.jdbc.sqlserver.SQLServerDriver</p>
+  	  </td>
+ 	</tr>
+ 	
+ 	
+ 	<tr>
+ 	  <td valign='top'>
+	  <p><b style='mso-bidi-font-weight:normal'>dataSource.url</b></p>
+  	  </td>
+  
+ 	  <td valign='top'>
+	  <p>jdbc:db2://host:port/dbname</p>
+  	  </td>
+  
+ 	  <td valign='top'>
+	  <p>jdbc:hsqldb:hsql://127.0.0.1:1701</p>
+  	  </td>
+
+ 	  <td valign='top'>
+	  <p>jdbc:oracle:thin:@host:port:sid</p>
+  	  </td>
+
+ 	  <td valign='top'>
+	  <p>jdbc:microsoft:sqlserver://host:1433;DatabaseName=myDB;SelectMethod=cursor</p>
+  	  </td>
+ 	</tr>
+	</table>
+
+	<p><span>* Este .jar suele necesitar otro .jar para la licencia.</span></p>
+
+	<p><strong>4.2 CÓMO CONFIGURAR VARIOS POOL DE B.D.</strong></p>
+
+	<p><span>Una vez tengamos
+	generado nuestro fichero xxx.war (se haría de igual manera para un fichero
+	xxx.ear), procederemos a descomprimirlo. El fichero xxx.war, podremos
+	encontrarlo en la carpeta web/target de nuestro proyecto (en el caso de un
+	xxx.ear, este se encontrara bajo la carpeta app/target de nuestra aplicación).
+	Una vez descomprimido, buscaremos la carpeta WEB-INF/lib, y buscaremos el archivo xxx-core-version.jar (en el caso
+	del xxx.ear se encontrará directamente bajo el raiz), y procederemos también a
+	descomprimirlo. Una vez descomprimido, deberemos modificar los ficheros</span></p>
+
+	<p><span><blockquote>applicationContext.xml,</blockquote></span></p>
+
+	<p><span><blockquote>applicationContext-dataSource.xml</blockquote></span></p>
+
+	<p><span><blockquote>applicationContext-localDataSource.xml</blockquote></span></p>
+
+	<p><span>que se encuentran en el raíz.</span></p>
+
+	<p><span>Vamos a suponer para
+	nuestro ejemplo, que tenemos tres instancias (corresponderán a tres tablas en
+	base de datos), dos de ellas, van a estar almacenadas en una base de datos
+	Hipersonic y la tercera, va a estar almacenada en una base de datos Oracle10g.
+	Por lo tanto, vamos a tener que definir dos dataSources. A continuación vamos a
+	proceder a explicar el tipo de modificaciones que deben hacerse en cada uno de
+	los ficheros, anteriormente reseñados:</span></p>
+
+	<p><b style='mso-bidi-font-weight:normal'><span>applicationContext.xml</span></b></p>
+
+	<p><span style='mso-ansi-language:ES-TRAD'>Andromda, después
+	del modelado, nos define una SessionFactory que apunta a un dataSource.
+	Nosotros deberemos duplicar esta SessionFactory, haciendo que cada una de las
+	SessionFactory que definamos, apunte al datasource que también habremos de definir.
+	Esto se puede apreciar en el siguiente extracto del fichero</span></p>
+
+	<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+	mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;background:#FFFF99'>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='ES'>&lt;!-- </span><span
+	lang='EN-GB' style='mso-ansi-language:EN-GB'>Hibernate SessionFactory --&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>   
+	</span>&lt;bean id=&quot;sessionFactory&quot;
+	class=&quot;org.springframework.orm.hibernate3.LocalSessionFactoryBean&quot;&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>       
+	</span>&lt;property name=&quot;dataSource&quot;&gt;&lt;ref bean=&quot;dataSource&quot;/&gt;&lt;/property&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>       
+	</span>&lt;property name=&quot;mappingResources&quot;&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>           
+	</span>&lt;list&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>               
+	</span>&lt;value&gt;com/indra/pojo/Car.hbm.xml&lt;/value&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>               
+	</span></span><span lang='PT' style='mso-ansi-language:PT'>&lt;value&gt;com/indra/pojo/Person.hbm.xml&lt;/value&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='PT'
+	style='mso-ansi-language:PT'><span style='mso-spacerun:yes'></span></span><span
+	lang='EN-GB' style='mso-ansi-language:EN-GB'>&lt;/list&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>       
+	</span>&lt;/property&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>       
+	</span>&lt;property name=&quot;hibernateProperties&quot;&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>           
+	</span>&lt;props&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>               
+	</span>&lt;prop key=&quot;hibernate.show_sql&quot;&gt;true&lt;/prop&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'></span>&lt;prop
+	key=&quot;hibernate.dialect&quot;&gt;org.hibernate.dialect.HSQLDialect&lt;/prop&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>               
+	</span>&lt;prop key=&quot;hibernate.cache.use_query_cache&quot;&gt;false&lt;/prop&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'></span>&lt;prop
+	key=&quot;hibernate.cache.provider_class&quot;&gt;org.hibernate.cache.EhCacheProvider&lt;/prop&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'></span>&lt;prop
+	key=&quot;hibernate.cache.query_cache_factory&quot;&gt;org.hibernate.cache.StandardQueryCacheFactory&lt;/prop&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>           
+	</span>&lt;/props&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'></span><span
+	style='mso-spacerun:yes'></span>&lt;/property&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>   
+	</span>&lt;/bean&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>   
+	</span>&lt;bean id=&quot;oraclesessionFactory&quot;
+	class=&quot;org.springframework.orm.hibernate3.LocalSessionFactoryBean&quot;&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>       
+	</span>&lt;property name=&quot;dataSource&quot;&gt;&lt;ref
+	bean=&quot;oracledataSource&quot;/&gt;&lt;/property&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>       
+	</span>&lt;property name=&quot;mappingResources&quot;&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'></span><span
+	style='mso-spacerun:yes'></span>&lt;list&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>               
+	</span>&lt;value&gt;com/indra/pojo/Moto.hbm.xml&lt;/value&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'></span>&lt;/list&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>       
+	</span>&lt;/property&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>       
+	</span>&lt;property name=&quot;hibernateProperties&quot;&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>           
+	</span>&lt;props&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>               
+	</span>&lt;prop key=&quot;hibernate.show_sql&quot;&gt;true&lt;/prop&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'></span>&lt;prop
+	key=&quot;hibernate.dialect&quot;&gt;org.hibernate.dialect.Oracle9Dialect&lt;/prop&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'></span>&lt;prop
+	key=&quot;hibernate.cache.use_query_cache&quot;&gt;false&lt;/prop&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'></span>&lt;prop
+	key=&quot;hibernate.cache.provider_class&quot;&gt;org.hibernate.cache.EhCacheProvider&lt;/prop&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'></span><span
+	style='mso-spacerun:yes'></span>&lt;prop
+	key=&quot;hibernate.cache.query_cache_factory&quot;&gt;org.hibernate.cache.StandardQueryCacheFactory&lt;/prop&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>           
+	</span></span><span style='mso-ansi-language:ES-TRAD'>&lt;/props&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span style='mso-ansi-language:
+	ES-TRAD'><span style='mso-spacerun:yes'></span>&lt;/property&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span style='mso-ansi-language:
+	ES-TRAD'><span style='mso-spacerun:yes'></span>&lt;/bean&gt;</span></p>
+	</div>
+	
+	<p><span>También deberán mapearse como “mappingResources”, el fichero o ficheros xxx.hbm.xml, que es el
+	que describe las instancias de cara a hibernate. Además de esto, deberemos
+	definir algunas propiedades para Hibernate, tales como el dialecto de las
+	consultas, si las mismas usan o no cache, la clase que implementará este cache, etc.</span></p>
+
+	<p><span>En este mismo fichero, también deberemos definir interceptores, que estarán asociados a la
+	sessionFactory, por lo que habrá uno por cada una de ellas.</span></p>
+	
+	<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+	mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;background:#FFFF99'>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'>&lt;!-- The Hibernate interceptor --&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>   
+	</span>&lt;bean id=&quot;hibernateInterceptor&quot;
+	class=&quot;org.springframework.orm.hibernate3.HibernateInterceptor&quot;&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>       
+	</span>&lt;property name=&quot;sessionFactory&quot;&gt;&lt;ref
+	bean=&quot;sessionFactory&quot;/&gt;&lt;/property&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>   
+	</span>&lt;/bean&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>   
+	</span>&lt;bean id=&quot;oraclehibernateInterceptor&quot;
+	class=&quot;org.springframework.orm.hibernate3.HibernateInterceptor&quot;&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>       
+	</span>&lt;property name=&quot;sessionFactory&quot;&gt;&lt;ref bean=&quot;oraclesessionFactory&quot;/&gt;&lt;/property&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'></span></span><span
+	style='mso-ansi-language:ES-TRAD'>&lt;/bean&gt;</span></p>
+	</div>
+
+	<p><span>Por último en este fichero también, tal y como se puede ver en el
+	siguiente extracto de código, definiremos el mapeo a las distintas Dao’s.</span></p>
+
+	<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+	mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+	background:#FFFF99'>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'>&lt;!-- Person Entity Proxy with inner Person
+	Entity implementation --&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>   
+	</span>&lt;bean id=&quot;personDao&quot;
+	class=&quot;org.springframework.aop.framework.ProxyFactoryBean&quot;&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'></span>&lt;property
+	name=&quot;target&quot;&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>           
+	</span>&lt;bean class=&quot;com.indra.pojo.PersonDaoImpl&quot;&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>               
+	</span>&lt;property name=&quot;sessionFactory&quot;&gt;&lt;ref
+	local=&quot;sessionFactory&quot;/&gt;&lt;/property&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>           
+	</span>&lt;/bean&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>       
+	</span>&lt;/property&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>       
+	</span>&lt;property name=&quot;proxyInterfaces&quot;&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>           
+	</span>&lt;value&gt;com.indra.pojo.PersonDao&lt;/value&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>       
+	</span>&lt;/property&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>       
+	</span>&lt;property name=&quot;interceptorNames&quot;&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>           
+	</span>&lt;list&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>               
+	</span>&lt;value&gt;hibernateInterceptor&lt;/value&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>           
+	</span>&lt;/list&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>       
+	</span>&lt;/property&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>   
+	</span>&lt;/bean&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'></span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>   
+	</span>&lt;!-- Moto Entity Proxy with inner Moto Entity implementation --&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>   
+	</span>&lt;bean id=&quot;motoDao&quot;
+	class=&quot;org.springframework.aop.framework.ProxyFactoryBean&quot;&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>       
+	</span>&lt;property name=&quot;target&quot;&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>           
+	</span>&lt;bean class=&quot;com.indra.pojo.MotoDaoImpl&quot;&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>               
+	</span>&lt;property name=&quot;sessionFactory&quot;&gt;&lt;ref
+	local=&quot;oraclesessionFactory&quot;/&gt;&lt;/property&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>           
+	</span>&lt;/bean&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>       
+	</span>&lt;/property&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>       
+	</span>&lt;property name=&quot;proxyInterfaces&quot;&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>           
+	</span>&lt;value&gt;com.indra.pojo.MotoDao&lt;/value&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>       
+	</span>&lt;/property&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>       
+	</span>&lt;property name=&quot;interceptorNames&quot;&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>           
+	</span>&lt;list&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>               
+	</span>&lt;value&gt;oraclehibernateInterceptor&lt;/value&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>           
+	</span>&lt;/list&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>       
+	</span>&lt;/property&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'></span></span><span
+	style='mso-ansi-language:ES-TRAD'>&lt;/bean&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span style='mso-ansi-language:
+	ES-TRAD'></span></p>
+	</div>
+	
+	<p><strong>applicationContext-dataSource.xml</strong></p>
+
+	<p><span>En este fichero, se asocia el datasource, con su nombre jndi (cuyo nombre será igual al que
+	tengamos definido en el servidor de aplicaciones). Habrá tantas entradas como
+	datasources queramos tener en la aplicación. Así mismo, también relacionamos el
+	bean sessionFactory, con el TransactionManager, tal y como podemos ver en el
+	extracto de fichero que tenemos a continuación.</span></p>
+
+	<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+	mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+	background:#FFFF99'>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'>&lt;beans&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>   
+	</span>&lt;!--=================== DATASOURCE DEFINITION =========================
+	--&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'></span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>   
+	</span>&lt;!-- JNDI DataSource for J2EE environments --&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>   
+	</span>&lt;bean id=&quot;dataSource&quot;
+	class=&quot;org.springframework.jndi.JndiObjectFactoryBean&quot;&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>       
+	</span>&lt;property
+	name=&quot;jndiName&quot;&gt;&lt;value&gt;java:/DefaultDS&lt;/value&gt;&lt;/property&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>   
+	</span>&lt;/bean&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>    
+	</span>&lt;bean id=&quot;oracledataSource&quot;
+	class=&quot;org.springframework.jndi.JndiObjectFactoryBean&quot;&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>       
+	</span>&lt;property
+	name=&quot;jndiName&quot;&gt;&lt;value&gt;java:/OracleDS&lt;/value&gt;&lt;/property&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>   
+	</span>&lt;/bean&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>    </span></span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>   
+	</span>&lt;!--================= End of DATASOURCE DEFINITION
+	====================== --&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'></span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>   
+	</span>&lt;!--===============TRANSACTION MANAGER DEFINITION ====================
+	--&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'></span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>   
+	</span>&lt;bean id=&quot;transactionManager&quot;
+	class=&quot;org.springframework.orm.hibernate3.HibernateTransactionManager&quot;&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>       
+	</span>&lt;property name=&quot;sessionFactory&quot;&gt;&lt;ref
+	bean=&quot;sessionFactory&quot;/&gt;&lt;/property&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>   
+	</span>&lt;/bean&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>   
+	</span>&lt;bean id=&quot;oracletransactionManager&quot; class=&quot;org.springframework.orm.hibernate3.HibernateTransactionManager&quot;&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>       
+	</span>&lt;property name=&quot;sessionFactory&quot;&gt;&lt;ref
+	bean=&quot;oraclesessionFactory&quot;/&gt;&lt;/property&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>    </span></span><span
+	lang='ES'>&lt;/bean&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='ES'></span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='ES'><span
+	style='mso-spacerun:yes'></span>&lt;!--=============== TRANSACTION MANAGER
+	DEFINITION =================== --&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='ES'></span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='ES'>&lt;/beans&gt;</span></p>
+	</div>
+	
+	<p><strong>applicationContext-localDataSource.xml</strong></p>
+
+	<p><span>En este fichero, también se define igual que en el anterior, los datasources y los transactionManager,
+	pero en este caso, en lugar de estar enlazandolo con su nombre jndi declarado
+	en el servidor de aplicaciones, estamos definiendo las propiedades de la 
+	conexión. Los TransactionManager, se enlazan de igual manera con los datasources correspondientes. </span></p>
+	
+	<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+	mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;background:#FFFF99'>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'>&lt;beans&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'></span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>   
+	</span>&lt;!--====================== DATASOURCE DEFINITION
+	====================== --&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'></span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>   
+	</span>&lt;!-- Local DataSource that works in any environment --&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>   
+	</span>&lt;bean id=&quot;oracledataSource&quot;
+	class=&quot;org.springframework.jdbc.datasource.DriverManagerDataSource&quot;&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'></span>&lt;property
+	name=&quot;driverClassName&quot;&gt;&lt;value&gt;oracle.jdbc.driver.OracleDriver&lt;/value&gt;&lt;/property&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>       
+	</span>&lt;property name=&quot;username&quot;&gt;&lt;value&gt;fvillarejo&lt;/value&gt;&lt;/property&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'></span>&lt;property
+	name=&quot;password&quot;&gt;&lt;value&gt;fvillarejo&lt;/value&gt;&lt;/property&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'></span>&lt;property
+	name=&quot;url&quot;&gt;&lt;value&gt;jdbc:oracle:oci:@(DESCRIPTION =(ADDRESS =
+	(PROTOCOL = TCP)(HOST = fvillarejoport.indra.es)(PORT = 1521))(CONNECT_DATA
+	=(SERVER = DEDICATED) (SERVICE_NAME = orcl)))&lt;/value&gt;&lt;/property&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>   
+	</span>&lt;/bean&gt;<span style='mso-spacerun:yes'></span></span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>    </span></span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>    
+	</span>&lt;bean id=&quot;dataSource&quot;
+	class=&quot;org.springframework.jdbc.datasource.DriverManagerDataSource&quot;&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'></span>&lt;property
+	name=&quot;driverClassName&quot;&gt;&lt;value&gt;org.hsqldb.jdbcDriver&lt;/value&gt;&lt;/property&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'></span>&lt;property
+	name=&quot;username&quot;&gt;&lt;value&gt;sa&lt;/value&gt;&lt;/property&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'></span>&lt;property
+	name=&quot;password&quot;&gt;&lt;value&gt;&lt;/value&gt;&lt;/property&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'></span>&lt;property
+	name=&quot;url&quot;&gt;&lt;value&gt;jdbc:hsqldb:hsql://127.0.0.1:1701&lt;/value&gt;&lt;/property&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'></span>&lt;/bean&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'></span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>    </span>&lt;!--====================
+	End of DATASOURCE DEFINITION =================== --&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>   </span></span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>   
+	</span>&lt;!--============ TRANSACTION MANAGER DEFINITION ====================== --&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'></span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>   
+	</span>&lt;!-- (local) Transaction Manager --&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>   
+	</span>&lt;bean id=&quot;transactionManager&quot; class=&quot;org.springframework.orm.hibernate3.HibernateTransactionManager&quot;&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>       
+	</span>&lt;property name=&quot;sessionFactory&quot;&gt;&lt;ref 
+	bean=&quot;sessionFactory&quot;/&gt;&lt;/property&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'></span>&lt;/bean&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>    </span></span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>   
+	</span>&lt;bean id=&quot;oracletransactionManager&quot;
+	class=&quot;org.springframework.orm.hibernate3.HibernateTransactionManager&quot;&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>       
+	</span>&lt;property name=&quot;sessionFactory&quot;&gt;&lt;ref
+	bean=&quot;oraclesessionFactory&quot;/&gt;&lt;/property&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'></span>&lt;/bean&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB' 
+	style='mso-ansi-language:EN-GB'></span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'><span style='mso-spacerun:yes'>   
+	</span>&lt;!--============ TRANSACTION MANAGER DEFINITION ====================== --&gt;</span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'></span></p>
+
+	<p style='background:#FFFF99;border:none;mso-border-alt:solid windowtext .5pt;
+	padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span lang='EN-GB'
+	style='mso-ansi-language:EN-GB'>&lt;/beans&gt;</span></p>
+	</div>
+
+	<p><strong>4.3 CÓMO HACER LAS SELECTS</strong></p>
+
+	<p><span>Las consultas, selects, según si tienen joins o condiciones 
+	deben hacer con una técnica adecuada, a saber:</span></p>
+
+	<blockquote>
+	<p><strong>4.3.1 Técnica basada en DAO</strong></p>
+
+	<p><span>Ideal para recuperar todas las filas de una única tablas, es decir, ideal para realizar
+	<strong>select, sin condiciones, ni joins con otras tablas.</strong></span></p>
+
+	<p><span>This.get*Dao.loadAll(nombreDeTransformación) Sin especificar criterio alguno.</span></p>
+
+	<p><span>P.ej.: Select * from tabla.</span></p>
+	</blockquote>
+
+	<blockquote>
+	<p><strong>4.3.2 Técnica basada en OCL</strong></p>
+	
+	<p><span>Ideal para realizar consultas, <strong>select, con condiciones</strong>. También se puede usar
+	sin condiciones, pero entonces mejor utilizar el DAO si es una tabla solo,
+	claro que si es un join mejor este, es decir, ideal para consultas con
+	condiciones, <strong>y con o sin joins con otras tablas.</strong></span></p>
+
+	<p><span>Ver pestaña de restricciones de la clase &lt;&lt;Entity&gt;&gt;.</span></p>
+	</blockquote>
+	
+	<blockquote>
+	<p><strong>4.3.3 Técnica basada en Criteria</strong></p>
+
+	<p><span>Ideal para buscadores con varios campos de búsqueda. Al ser todos ellos <strong>campos de búsquedas 
+	opcionales</strong>, tendremos 2<sup>n</sup>posibilidades, donde n es el número de campos. Si en el
+	Value Object hacemos referencia al campo de otra entidad, hay que utilizar el tag values, p.ej.:</span></p>
+	
+	<blockquote>
+	<p><span lang='ES'>@andromda.hibernate.criteria.atribute=nombreEntidad2.campoE2A1</span></p>
+
+	<p><span lang='ES'>@andromda.hibernate.criteria.atribute=nombreEntidad2.nombreEntidad3.campoE3A3</span></p>
+	</blockquote>
+
+	<p><span lang='ES'>Donde:</span></p>
+
+	<blockquote>
+	<p><span>nombreEntidad2 es la entidad asociada a la entidad1, observar que la primera letra de su nombre es en minúsculas!</span></p>
+	
+	<p><span>nombreEntidad3 es la entidad asociada a la entidad2.</span></p>
+	</blockquote></blockquote>
+
+	<p><strong>4.4 CÓMO HACER LOS INSERT/UPDATE/DELETE</strong></p>
+	
+	<p><span>Los insert/updadte/delete se hacen utilizando las técnica DAO así:</span></p>
+
+	<p><span><strong>Insert:</strong></span></p>
+
+	<p><span>Es necesario indicar los valores de los identificadores de las entidades
+	asociadas, es decir, aquellas entidades referenciadas:</span></p>
+	
+	<p><span><blockquote>This.get*Dao.create(objetoEntidad,valorFK1,valorFK2);</blockquote></span></p>
+
+	<p><span><strong>Update:</strong></span></p>
+
+	<p><span>El argumento que se pasa, es un objeto de la entidad que queremos actualizar con
+	todos sus atributos:</span></p>
+
+	<p><span><blockquote>This.get*Dao.update(objeto);</blockquote></span></p>
+
+	<p><span><strong>Delete:</strong></span></p>
+	
+	<p><span>Para eliminar el objeto en la b.d., podemos utilizar la siguiente línea, indicando el identificador del 
+	objeto que representa la entidad en la b.d.:</span></p>
+
+	<p><span><blockquote>This.get*Dao.remove(identificador);</blockquote></span></p>
+
+	<p><span>Nota:</span></p>
+
+	<p><span>También podemos acceder/cargar un objeto, conociendo su identificador:</span></p>
+
+	<p><span><blockquote>miObjeto = this.get*Dao().load(identificador);</blockquote></span></p>
+	
+	<p><strong>4.5 CÓMO REALIZAR UNA TRANSACIÓN</strong></p>
+
+	<p>Por defecto, el autocommit está activado en Hibernate, por
+	lo que cuando queramos controlar una transacción será necesario desactivarlo a
+	nivel de entidad, &lt;&lt;Entity&gt;&gt;, utilizando los valores etiquetados:
+	andromda.hibernate.entity.dynamicInsert y
+	andromda.hibernate.entity.dynamicUpdate. Ambos por defecto están activados.
+	Recordar que es a nivel de entidad, y no de Diagrama de Actividad.</p>
+
+	<p><strong>4.6 CÓMO REALIZAR EL MANTENIMIENTO</strong></p>
+
+	<p><span>Con añadir el estereotipo &lt;&lt;Manageable&gt;&gt; a la entidad, se crea automáticamente las paginas 
+	de mantenimiento.</span></p>
+
+	<p><span>Recomendaciones:</span></p>
+	
+	<p><span>Utilizar el &lt;&lt;Unique&gt;&gt; sobre un atributo para que en la página de
+	manetenimiento salga dicho campo, en vez de la pk.</span></p>
+
+	<p><span>Si queremos poder realizar búsquedas sin especificar un determinado atributo, este debe ser una
+	clase, no un dato primitivo.</span></p>
+
+	<p><strong>4.7 CÓMO INVOCACIÓN A LOS PROCEDIMIENTOS ALMACENADOS EN SQLSERVER</strong></p>
+
+	<p><span>La invocación directa de Hibernate funciona correctamente, por lo que basta definir en el fichero .hbm.xml
+	asociado a la entidad la llamada del procedimiento almacenado en el SQLServer. P.ej.:</span></p>
+
+	<p align='center'><img src="images/FAQ_001.jpg"></img></p>
+	
+	<p><span>Seguidamente se expone a modo de ejemplo el procedimiento getHospitalizacionByIdPaciente:</span></p>
+
+	<p align='center'><img src="images/FAQ_002.jpg"></img></p>
+	
+	<p><strong>4.8 CÓMO INVOCACIÓN A LOS PROCEDIMIENTOS ALMACENADOS EN ORACLE</strong></p>
+
+	<p>La invocación directa de Hibernate no funciona como
+	debiera, así que alternativamente podemos crearnos una tabla de intercambio de
+	datos, a la cual asociaremos un disparador que invocará al procedimiento por
+	nosotros. Así desde nuestro aplicativo realizaremos un simple insert, y si
+	necesitamos consultar la salida del procedimiento, realizaríamos un simple
+	select sobre la tabla de intercambio.</p>
+
+	<p><span>Seguidamente se expone a modo de ejemplo la tabla de intercambio SETPRESTACIONESBYIDPACIENTETAB,
+	que dispara el trigger SETPRESTACIONESBYIDPACIENTEIN para cada fila antes de
+	insertarla. El disparador invoca al procedimiento y escribe en las columnas
+	adecuadas de la tabla la salida del propio procedimiento setPrestacionesByIdPaciente.</span></p>
+
+	<p align='center'><img src="images/FAQ_003.jpg"></img></p>
+	<p align='center'><img src="images/FAQ_004.jpg"></img></p>
+	<p align='center'><img src="images/FAQ_005.jpg"></img></p>
+	<p align='center'><img src="images/FAQ_006.jpg"></img></p>
+	
+	<p>Desde nuestro aplicativo realizaríamos un insert así:</p>
+	
+	<p align='center'><img src="images/FAQ_007.jpg"></img></p>
+	<p align='center'><img src="images/FAQ_008.jpg"></img></p>
+	
+	<p><strong>4.9 CÓMO INVOCACIÓN A LOS PROCEDIMIENTOS ALMACENADOS EN DB2</strong></p>
+
+	<p>La invocación directa de Hibernate no funciona como
+	debiera, así que alternativamente podemos crearnos una tabla de intercambio de
+	datos, a la cual asociaremos un disparador que invocará al procedimiento por
+	nosotros. Así desde nuestro aplicativo realizaremos un simple insert, y si
+	necesitamos consultar la salida del procedimiento, realizaríamos un simple
+	select sobre la tabla de intercambio. El código necesario es análogo al código de ejemplo para Oracle.</p>
+
+	<p><strong>4.10 CÓMO PERSONALIZAR LA CARGA DE DATOS/FILAS</strong></p>
+
+	<p><span>En el fichero ./project.properties debemos cambiar la ruta
+	del fichero de carga de datos si vamos a mantener manualmente dicho fichero, ya
+	que si lo dejamos debajo de un directorio target, será borrado cuando
+	ejecutemos la orden del Maven clean. Por tanto, p.ej.:</span></p>
+
+	<p><span><blockquote><blockquote>dataSource.sql.load=core/db/create-dummy-load.sql</blockquote></blockquote></span></p>
+
+	<p><span>Así la orden maven load-dummy-data ejecutará el
+	fichero anterior. Mantener dicho fichero con los inserts necesarios para las
+	tablas del aplicativo.</span></p>
+
+	<p><strong>4.11 CÓMO MANTENER UNA ENTIDAD</strong></p>
+
+	<p>Basta añadir el estereotipo &lt;&lt;Manegeable&gt;&gt; a
+	una entidad, para que se genere automáticamente su mantenimiento. Para evitar
+	visualizar su primary key en los campos foreign, se recomienda utilizar el
+	estereotipo &lt;&lt;Unique&gt;&gt; en algún campo, p.ej. nombre ó descripción,
+	para que figure un campo descriptivo.</p>
+
+	<p><strong>4.12 PROBLEMAS AL BUSCAR DESDE EL MANTENIMIENTO</strong></p>
+
+	<p>Los atributos de la clases &lt;&lt;Entity&gt;&gt; deben ser
+	clases y no datos primitivos. P.ej.: el atributo numeroEntero debe ser
+	declarado como un Integer y no un int. Si lo declaramos como un int, en las
+	búsquedas de su mantenimiento habría que especificar un valor, y por tanto, no
+	podríamos buscar todas las filas de datos con cualquier valor en numeroEntero.
+	En cambio al utilizar clases el Dao si permite dejarlo a null en la búsqueda.</p>
+
+	<p>Por ello, los ficheros de mapping de la utilidad Schema2XMI, mapean a las clases y no a los datos primitivos.</p>
+	
+	<p><strong>4.13 CÓMO UTILIZAR UNA RELACIÓN N A N</strong></p>
+	
+	<p>Una relación N a N exige tener una entidad intermedia. Así
+	la relación N a N se transforma en dos relaciones 1 a N. Seguidamente se muestra un ejemplo.</p>
+	
+	<p align='center'><img src="images/FAQ_image009.jpg"></img></p>
+
+	<p>Se recomienda utilizar las siguientes etiquetas:</p>
+
+	<p><span><blockquote>@andromda.persistence.column, para determinar los nombres de los campos en la tabla 
+	intermedia, en nuestro caso Cargo.</blockquote></span></p>
+
+	<p><span><blockquote>@andromda.persistence.foreignkey.constraint, para fijar el nombre del foreign key en la tabla 
+	intermedia, en nuestro caso Cargo.</blockquote></span></p>
+
+	<p><strong>Nota:</strong></p>
+
+	<p><span><blockquote>Si no se emplean estas etiquetas los nombre son impuesto por Andromda, con su formato y
+	truncado a un número máximo de caracteres; por lo que es posible que varias fks conincidan.</blockquote></span></p>
+
+	<p><strong>Aviso:</strong></p>
+
+	<p><span><blockquote>Toda entidad tiene una primary key, bien se crea automáticamente o se toma el atributo
+	marcado con el estereotipo &lt;&lt;Identifier&gt;&gt;. De todas formas la
+	primary key siempre es simple, es decir, sobre un único campo.</blockquote></span></p>
+
+	<p><span>La primary key compuesta de la tabla intermedia no es generada correctamente en en
+	create-schema.sql. También se crean campos &lt;nombreTablaIntermedia&gt;_FK, en
+	ambas tablas maestras… por ello, el dba o modelador debe corregir estos casos,
+	del mismo modeo que debe proporcionar unas longitudes de campos adecuadas, ya
+	que las generadas en el create-schema.sql son valores por defecto.</span></p>
+	
+	<p><strong>4.14 MATRIZ DE COMPATIBILIDAD CON DISTINTAS BASE DE DATOS</strong></p>
+	
+	<p>Seguidamente se muestra una matriz de compatibilidad con ciertas b.d. probadas:</p>
+	
+	
+	<table border="1" cellspacing="0" cellpadding="0">
+ 	<tr>
+  	  <td>
+  	  <p align='center'>SGBD</p>
+  	  </td>
+  	
+  	  <td>
+  	  <p align='center'>USO DE SQL</p>
+  	  </td>
+  	  
+  	  <td>
+  	  <p align='center'>LLAMADA A <span style='mso-spacerun:yes'> </span>PROCEDIMIENTOS ALMACENADOS</p>
+  	  </td>
+ 	</tr>
+ 	
+ 	<tr>
+  	  <td>
+  	  <p>DB2</p>
+  	  </td>
+  	  
+  	  <td>
+	  <p align='center'><img src="images/FAQ_image011.jpg"></img></p>
+  	  </td>
+  	
+  	  <td>
+  	  <p align='center'><img src="images/FAQ_image011.jpg"></img></p>
+  	  </td>
+ 	</tr>
+ 	
+ 	<tr>
+  	  <td>
+  	  <p>Hypersonic SQL</p>
+  	  </td>
+  	  
+  	  <td>
+  	  <p align='center'><img src="images/FAQ_image011.jpg"></img></p>
+  	  </td>
+  	  
+  	  <td>
+  	  <p align='center'><img src="images/FAQ_image013.jpg"></img></p>
+  	  </td>
+ 	</tr>
+ 	
+ 	<tr>
+  	  <td>
+  	  <p>Oracle9i/10g</p>
+  	  </td>
+  	  
+  	  <td>
+  	  <p align='center'><img src="images/FAQ_image011.jpg"></img></p>
+  	  </td>
+  	  
+  	  <td>
+  	  <p align='center'><img src="images/FAQ_image011.jpg"></img></p>
+  	  </td>
+ 	</tr>
+ 
+ 	<tr>
+  	  <td>
+  	  <p>MS SQL Server 2000</p>
+  	  </td>
+  	  
+  	  <td>
+  	  <p align='center'><img src="images/FAQ_image011.jpg"></img></p>
+  	  </td>
+  	  
+  	  <td>
+  	  <p align='center'><img src="images/FAQ_image011.jpg"></img></p>
+  	  </td>
+  	</tr>
+	</table>
+	
+	<p>Hypersonic SQL no soporta procedimientos almacenados como
+	tales, sino que permite utilizar llamadas a funciones java estáticas.</p>
+
+	<p>Tanto DB2 como Oracle consta desde siempre con funciones y
+	procedimientos propios, pero se han encontrado dificultades en su invocación
+	directa, por lo que se recomienda crear una tabla ficticia con tantos
+	argumentos de entrada y/o salida como tenga dicha función o procedimiento, y
+	crear un disparador que realice la llama a dicha función o procedimiento,
+	grabando los argumentos de salida en la tabla ficticia. Para más información
+	leer el apartado: Cómo invocar a los procedimientos almacenados con Oracle, y/o
+	Cómo invocar a los procedimientos almacenados con DB2.</p>
+
+	<p><strong>4.15 INGENIERÍA INVERSA/EXPORTAR ESQUEMA DE BASE DE DATOS A UN MODELO XMI</strong></p>
+
+	<p>Esta utilidad es muy útil cuando el esquema de base de
+	datos, también llamado modelo Entidad/Relación, es diseñado por otro equipo, o
+	sencillamente ya existe. Dicha utilidad nos permite interrogar automáticamente
+	a la base de datos y extraer la definiciones de las tablas y sus relaciones
+	para generar un modelo XMI que contendrá las clases y relaciones de asociación análogas.</p>
+
+	<p><strong><blockquote>4.15.1 Cómo usar Schema2XMI</blockquote></strong></p>
+
+	<p><blockquote>Existen varias formas de ejecutar la clase java org.andromda.schema2xmi.Schema2XMI:</blockquote></p>
+	
+	<p><span><blockquote>1. Invocación directa con el interprete java,
+	especificando todos los parámetros de configuración como argumentos, es decir,
+	escribiendo en la línea de comandos:</blockquote></span></p>
+
+	<p><span><blockquote><blockquote>Java org.andromda.schema2xmi.Schema2XMI [options]</blockquote></blockquote></span></p>
+
+
+	<p><span><blockquote>2. Invocación con la herramienta Maven, es decir, escribiendo en la 
+	línea de comandos:</blockquote></span></p>
+
+
+	<p><span><blockquote><blockquote>Maven andromda:schema2xmi</blockquote></blockquote></span></p>
+	
+	<p><span><blockquote>3. Invocación como tarea Ant con la propia herramienta Ant, es decir, escribiendo 
+	en la línea de comandos:</blockquote></span></p>	
+	
+	<a name="Ant"></a>
+	<blockquote><blockquote>
+	<p>Ant <a href="#_ftn1" name="_ftnref1">[1]</a></p>
+	</blockquote></blockquote>
+	
+	<p><span><blockquote>4. Invocación de la tarea Ant con la herramienta Maven, es decir, escribiendo 
+	en la línea de comandos:</blockquote></span></p>
+
+	<a name="Maven"></a>
+	<blockquote><blockquote>
+	<p>Maven <a href="#_ftn2" name="_ftnref2">[2]</a></p>
+	</blockquote></blockquote>
+
+	<blockquote>
+	<a name="Seguidamente"></a>
+	<p><span>Seguidamente se presenta un cuadro de ventajas y desventajas de cada forma
+	de ejecución, al margen de la utilización de un fichero de proceso por lotes
+	.bat:</span></p>
+	
+	<table border="1" cellspacing="0" cellpadding="0">
+ 	<tr>
+  	  <td>
+  	  <p><b style='mso-bidi-font-weight:normal'><span>Forma de invocación</span></b></p>
+  	  </td>
+  	  
+  	  <td>
+  	  <p><b style='mso-bidi-font-weight:normal'><span>Ventaja</span></b></p>
+  	  </td>
+  	  
+  	  <td>
+  	  <p><b style='mso-bidi-font-weight:normal'><span>Desventaja</span></b></p>
+  	  </td>
+ 	</tr>
+ 	
+ 	<tr>
+  	  <td>
+  	  <p><span>Invocación directa con el interprete java</span></p>
+  	  </td>
+  	
+  	  <td>
+  	  <p><span>Rapidez de carga de la clase java</span></p>
+  	  </td>
+  	
+  	  <td>
+  	  <p><span>Difícil lectura y escritura de los parámetros de configuración</span></p>
+  	  </td>
+ 	</tr>
+ 	
+ 	<tr>
+  	  <td>
+  	  <p><span>Invocación con la herramienta Maven</span></p>
+  	  </td>
+  	  
+  	  <td>
+  	  <p><span>Facilidad de invocación</span></p>
+  	  </td>
+  	  
+  	  <td>
+  	  <p>Dependencia con el proyecto <a href="#_ftn3" name="_ftnref3">[3]</a></p>
+  	  
+  	  <p>Uni-esquema <a href="#_ftn4" name="_ftnref4">[4]</a></p>
+  	  </td>
+ 	</tr>
+ 
+ 
+ 	<tr>
+ 	  <td>
+  	  <p><span>Invocación como tarea Ant con la propia herramienta Ant</span></p>
+  	  </td>
+  	  
+  	  <td>
+  	  <p><span>Facilidad de configuración vía xml</span></p>
+  	  </td>
+  	  
+  	  <td>
+  	  <p><span>Hay que instalar la herramienta Ant</span></p>
+  	  </td>
+ 	</tr>
+ 	
+ 	<tr>
+  	  <td>
+  	  <p><span>Invocación de la tarea Ant con la herramienta Maven</span></p>
+  	  </td>
+  	  
+  	  <td>
+  	  <p>Facilidad de configuración vía xml</p>
+  	  
+  	  <p>Multi-esquema <a href="#_ftn5" name="_ftnref5">[5]</a></p>
+  	  </td>
+  
+  	  <td>
+  	  <p><span></span></p>
+  	  </td>
+ 	</tr>
+	</table>
+
+	<p><span>Se recomienda utilizar la invocación como tarea Ant con la herramienta
+	Maven, ya que no necesita instalar la herramienta Ant, ya que el propio Maven
+	que tenemos que tener instalado ya contiene el paquete Ant, y los ficheros de
+	configuración con independientes del proyecto en el cual estemos trabajando.</span></p>
+	</blockquote>
+
+
+	<p><strong><blockquote>4.15.2 Problemas con las tablas relacionadas</blockquote></strong></p>
+
+	<blockquote>
+	<p><span>Si realizamos la ingeniería inversa de una tabla que está relacionada con otra que no hemos
+	incluido en nuestra lista, obtendremos la siguiente excepcion:</span></p>
+
+	<p><span>org.andromda.schema2xmi.SchemaTransformerException:
+	The associated table NOMBRE_TABLA_MAESTRA must be available in order to create the association</span></p>
+
+	<p><span>Sabiendo que es
+	tedioso la incorporación iterativa de dichas tablas, se ha pensado incluir en
+	la lista de tablas un nombre ficticio de tabla llamado AUTO-COMPLETAR, que
+	realiza esta operación automáticamente. O sea, si nos encontramos en este caso,
+	debemos incluir dicha tabla ficticia en nuestra lista en la propiedad
+	siguientes del fichero de configuración .xml:</span></p>
+
+	<p><span>&lt;!-- Especificando un patron --&gt;</span></p>
+	
+	<p><span>&lt;!--Ejemplo de expresion regular con un or:--&gt;</span></p>
+
+	<p><span>&lt;ant:arg value=&quot;-t&quot;/&gt;</span></p>
+
+	<p><span>&lt;ant:arg value=&quot;(TABLA1|TABLA2|AUTO-COMPLETAR)&quot;/&gt;
+	&lt;!-- los nombres de tablas EN MAYUSCULAS! --&gt;</span></p>
+
+	<p><span>&lt;!-- --&gt;</span></p>
+
+	<p><span lang='ES' style='mso-ansi-language:ES'></span></p>
+	</blockquote>
+
+	<blockquote>
+	<p><strong>4.15.3 Problemas con los decimales</strong></p>
+
+	<p>Cuando se realiza una ingeniería inversa, es posible que las columnas con decimales no sean mapeadas
+	correctamente a los tipos Float ó Double. Seguidamente se presenta una consulta
+	sobre Oracle para facilitar la comprobación de tipos sobre aquellas columnas con decimales:</p>
+
+	<p align='center'><img src="images/FAQ_009.jpg"></img></p>
+	
+	<p>Es necesario actualizar los datatype manualmente de los
+	atributos con los tipos que la query anterior indica.</p>
+
+	<p>Seguidamente se presenta otra consulta interesante cuando
+	queremos actualizar los campos de la b.d. a un determinado tipo de NUMBER,
+	p.ej.: NUMBER(38,7)</p>
+	
+	<p align='center'><img src="images/FAQ_010.jpg"></img></p>
+	</blockquote>
+	
+	<blockquote>
+	<p><strong>4.15.4 Error de compilación: StackOverflowError</strong></p>
+	
+	<p><span>Cuando se realiza una ingeniería inversa, es posible que al
+	ejecutar un maven mda obtengamos el siguiente error:</span></p>
+
+	<p><span><blockquote>pom:install:</blockquote></span></p>
+
+	<p><span><blockquote>andromda:run:</blockquote></span></p>
+
+	<blockquote><blockquote>
+	<p><span lang='ES' style='mso-ansi-language:ES'><span
+	style='mso-spacerun:yes'>    </span>[echo]
+	+--------------------------------------------+</span></p>
+
+	<p><span lang='ES' style='mso-ansi-language:ES'><span
+	style='mso-spacerun:yes'>    </span>[echo] |<span
+	style='mso-spacerun:yes'>      </span>R u n n i n g<span
+	style='mso-spacerun:yes'>    </span>A n d r o M D A<span
+	style='mso-spacerun:yes'>      </span>|</span></p>
+
+	<p><span lang='ES' style='mso-ansi-language:ES'><span
+	style='mso-spacerun:yes'>    </span>[echo]
+	+--------------------------------------------+</span></p>
+	</blockquote></blockquote>
+
+	<p><span>java.lang.<strong>StackOverflowError</strong></span></p>
+	
+	<blockquote>
+	<p><span>at java.lang.StringBuffer.capacity(StringBuffer.java:152)</span></p>
+
+	<p><span>at org.apache.log4j.PatternLayout.format(PatternLayout.java:486)</span></p>
+
+	<p><span>at org.apache.log4j.WriterAppender.subAppend(WriterAppender.java:292)</span></p>
+
+	<p><span>at org.apache.log4j.WriterAppender.append(WriterAppender.java:150)</span></p>
+
+	<p><span>at org.apache.log4j.AppenderSkeleton.doAppend(AppenderSkeleton.java:221)</span></p>
+	</blockquote>
+	
+	<p><span>[…]</span></p>
+
+	<p><span>Esto suele ser debido a que no hemos exportado los Perfiles/Módulos: datatype y
+	org.andromda.profile. Para exportarlo necesitamos disponer de 
+	ProductID="la MagicDraw Professional" 
+ 	ProductID="la MagicDraw" la MagicDraw Professional
+	Edition, para seleccionar Archivo|Exportar|Perfil/Modulo con los nombres: andromda-profile-datatype-X.X.xml.zip
+	y andromda-profile-X.X.xml.zip respectivamente, donde X.X es la versión de
+	andromda, p.ej. 3.1-RC1</span></p>	
+	</blockquote>
+	
+	<blockquote>
+	<p><strong>4.15.5 Error de compilación: DebugException: Content is not allowed in prolog</strong></p>
+
+	<p>Cuando se realiza una ingeniería inversa, es posible que al
+	ejecutar un maven mda obtengamos el siguiente error:</p>
+
+	<p><span>INFO [AndroMDA] loading model --&gt;
+	'file:D:/tmp/myApp/mda/src/uml/miAppModel.xmi'</span></p>
+
+	<p><span>INFO[AndroMDA] referenced model --&gt;
+	'file:D:/tmp/myApp/mda/src/uml/andromda-profile-3.1-RC1.xml.zip'</span></p>
+
+	<p><span>org.netbeans.lib.jmi.util.<b
+	style='mso-bidi-font-weight:normal'>DebugException: Content is not allowed in
+	prolog.</b></span></p>
+
+	<p><span><blockquote>at org.netbeans.lib.jmi.xmi.XmiContext.readExternalDocument(XmiContext.java:931)</blockquote></span></p>
+
+	<p><span><blockquote>at org.netbeans.lib.jmi.xmi.XmiContext.resolve(XmiContext.java:750)</blockquote></span></p>
+	
+	<p><span><blockquote>at org.netbeans.lib.jmi.xmi.XmiContext.resolveExternalReferences(XmiContext.java:839)</blockquote></span></p>
+
+	<p><span><blockquote>at org.netbeans.lib.jmi.xmi.XmiElement$Content.endElement(XmiElement.java:394)</blockquote></span></p>
+
+	<p><span><blockquote>at org.netbeans.lib.jmi.xmi.XmiSAXReader.endElement(XmiSAXReader.java:25</blockquote></span></p>
+
+	<p><span>[…]</span></p>
+
+	<p><span>Esto suele ser
+	debido a que cuando hemos exportado los Perfiles/Módulos los hemos guardado en
+	el directorio …\mda\src\uml junto a nuestro nombreAplicacionModel.xmi. Basta
+	borrar dichos dos .xml.zip de dicho directorios ya que son subproductos que no
+	se utilizan, ni se deben utilizar.</span></p>
+	
+	<p><strong>4.15.6 Error de compilación:</strong></p>
+	
+	<p>Cuando se realiza una ingeniería inversa, es posible que al
+	ejecutar un maven mda obtengamos el siguiente error:</p>
+
+	<p><span>Es un bug de Hibernate. Ciertos nombres de los atributos de las clases
+	&lt;&lt;Entity&gt;&gt; que cumplen el patrón: [a-z][A-Z]* provocan dicho bud,
+	por tanto, hay que evitar dicho patrón, para lo cual bastará con utilizar el
+	carácter ‘_’ entre la primera letra en minúscula y la segunda letra en mayúsculas.</span></p>
+	</blockquote>
+
+	<p><strong>4.16 INGENIERÍA DE ESTRUCTURACIÓN/RE-ESTRUCTURACIÓN DE LAS TABLAS DE B.D.</strong></p>
+	
+	<p>Esta práctica es necesaria cuando las tablas de la b.d. no
+	han sido diseñadas con los criterios de las entidades en UML.</p>
+
+	<p>Seguidamente se enumeran algunos criterios principales de las entidades en UML:</p>
+	
+	<blockquote>
+	<ul>
+	  <li>Toda entidad tiene una clave simple, es decir, no se admiten claves compuestas.</li>
+	  <p></p>
+	  <li>No existen las relaciones, sólo se representan
+	      las entidades, por ello, una relación debe ser representada como una entidad, o
+	      sea, que las relaciones identificativas deben representarse como no identificativas.</li>
+	</ul>
+	</blockquote>
+
+	<p>Si las tablas de la b.d. no cumplen todos los criterios de
+	las entidades en UML, nos encontraremos en el caso de haber realizado una
+	ingeniería inversa exitosa, pero nuestras entidades no reconocerán a las tablas
+	de b.d. En tal caso, hay que realizar una ingeniería de estructuración.</p>
+	
+	<blockquote>
+	<a name="estructuración"></a>
+	<p><strong>4.16.1 Cómo realizar una ingeniería de estructuración</strong></p>
+
+	<p>Seguidamente se enumeran los pasos habituales para obtener
+	las nuevas tablas de b.d. del prototipo:</p>
+
+	<p  style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:
+	l3 level1 lfo8;tab-stops:-36.0pt 0cm list 36.0pt'><span
+	lang='ES' style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial;
+	mso-ansi-language:ES'><span style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>
+	</span></span></span>Realizar la ingeniería inversa sin especificar
+	el estereotipo &lt;&lt;Identifier&gt;&gt;, así por defecto la clave se
+	establece sobre un campo llamado ID. Se puede establecer el estereotipo
+	&lt;&lt;Unique&gt;&gt; para identificar alternativamente.<span lang='ES'
+	style='mso-ansi-language:ES'></span></p>
+
+	<p  style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:
+	l3 level1 lfo8;tab-stops:-36.0pt 0cm list 36.0pt'><span
+	lang='ES' style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial;
+	mso-ansi-language:ES'><span style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>
+	</span></span></span><span lang='ES' style='mso-ansi-language:ES'>El
+	modelo xmi obtenido adolecerá de ciertos posibles efectos colaterales:</span></p>
+
+	<p  style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:
+	l3 level2 lfo8;tab-stops:-36.0pt 0cm 36.0pt list 72.0pt'><span
+	lang='ES' style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial;
+	mso-ansi-language:ES'><span style='mso-list:Ignore'>a.<span style='font:7.0pt "Times New Roman"'>
+	</span></span></span><span lang='ES' style='mso-ansi-language:ES'>Si
+	tenemos dos atributos con el estereotipo &lt;&lt;Unique&gt;&gt;, es porque la
+	clave primaria era compuesta, por tanto, eliminar los dos estereotipos
+	&lt;&lt;Unique&gt;&gt;.</span></p>
+	
+	<p style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:
+	l3 level1 lfo8;tab-stops:-36.0pt 0cm list 36.0pt'>
+	b. Si una entidad hija, tiene dos o más referencias a otra entidad padre, maestra,
+	hay que nombrar los extremos próximos a la entidad padre de todas las
+	relaciones <a href="#_ftn6" name="_ftnref6">[6]</a>. 
+	Este caso, es el propio de los roles. El otro extremos también hay que nombrarlo.</p>
+
+	<p  style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:
+	l3 level2 lfo8;tab-stops:-36.0pt 0cm 36.0pt list 72.0pt'><span
+	lang='ES' style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial;
+	mso-ansi-language:ES'><span style='mso-list:Ignore'>c.<span style='font:7.0pt "Times New Roman"'>
+	</span></span></span><span lang='ES' style='mso-ansi-language:ES'>Si
+	una entidad hija, tiene referencia a una entidad padre, y dicha entidad padre
+	tenía una clave primaria compuesta, hay que dejar solamente una asociación y
+	eliminar el valor etiquetado que indica el nombre de la columna.</span></p>
+	
+	<p  style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:
+	l3 level1 lfo8'><span lang='ES' style='mso-fareast-font-family:
+	Arial;mso-bidi-font-family:Arial;mso-ansi-language:ES'><span style='mso-list:
+	Ignore'>3.<span style='font:7.0pt "Times New Roman"'>
+	</span></span></span><span lang='ES' style='mso-ansi-language:ES'>Una
+	vez que tenemos un modelo xmi de Entidades, debemos cambiar los nombres de las
+	tablas de persistencia, para que convivan en el mismo esquema que las tablas
+	originales. P.ej. anteponer el prefijo PT_, de prototipo.</span></p>
+
+	<p  style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:
+	l3 level2 lfo8;tab-stops:-36.0pt 0cm 36.0pt list 72.0pt'><span
+	lang='ES' style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial;
+	mso-ansi-language:ES'><span style='mso-list:Ignore'>a.<span style='font:7.0pt "Times New Roman"'>
+	</span></span></span><span lang='ES' style='mso-ansi-language:ES'>Cerrar
+	el editor UML.</span></p>
+
+	<p  style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:
+	l3 level2 lfo8;tab-stops:-36.0pt 0cm 36.0pt list 72.0pt'><span
+	lang='ES' style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial;
+	mso-ansi-language:ES'><span style='mso-list:Ignore'>b.<span style='font:7.0pt "Times New Roman"'>
+	</span></span></span><span lang='ES' style='mso-ansi-language:ES'>Editar
+	el fichero .xmi con un editor de texto, y buscar el patrón “name='@andromda.persistence.table'&gt;*&lt;UML:TaggedValue.dataValue&gt;”
+	para re-emplazarlos como: “name='@andromda.persistence.table'&gt;*&lt;UML:TaggedValue.dataValue&gt;PT_”.<span
+	style='mso-spacerun:yes'>  </span>Así el fichero schema-create.sql tendrá los
+	nuevos nombres de las tablas.</span></p>
+
+	<p  style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:
+	l3 level2 lfo8;tab-stops:-36.0pt 0cm 36.0pt list 72.0pt'><span
+	lang='ES' style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial;
+	mso-ansi-language:ES'><span style='mso-list:Ignore'>c.<span style='font:7.0pt "Times New Roman"'>
+	</span></span></span><span lang='ES' style='mso-ansi-language:ES'>Ejecutar maven install</span></p>
+
+	<p  style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:
+	l3 level2 lfo8;tab-stops:-36.0pt 0cm 36.0pt list 72.0pt'><span
+	lang='ES' style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial;
+	mso-ansi-language:ES'><span style='mso-list:Ignore'>d.<span style='font:7.0pt "Times New Roman"'>
+	</span></span></span><span lang='ES' style='mso-ansi-language:ES'>Ejecutar
+	las sentencias de creación de las tablas PT_* en la b.d. que corresponda.</span></p>
+
+	<p  style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:
+	l3 level2 lfo8;tab-stops:-36.0pt 0cm 36.0pt list 72.0pt'><span
+	lang='ES' style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial;
+	mso-ansi-language:ES'><span style='mso-list:Ignore'>e.<span style='font:7.0pt "Times New Roman"'>
+	</span></span></span><span lang='ES' style='mso-ansi-language:ES'>Cargar
+	los datos en las tablas nuevas PT_*, con los datos de las tablas originales. P.ej.:</span></p>
+
+	<p  style='margin-left:54.0pt;tab-stops:-36.0pt 0cm'><span
+	lang='ES' style='mso-ansi-language:ES'><span style='mso-tab-count:2'>
+	</span><blockquote><blockquote>INSERT INTO PT_nombre_tabla SELECT * from nombre_tabla;</blockquote></blockquote></span></p>
+	</blockquote>
+	
+	<a name="ind_5"></a>
+</section>
+	
+<section name="Entorno de Desarrollo">
+
+	<p>El entorno de desarrollo suele basarse en una herramienta
+	de edición/compilación con un interfaz gráfico adecuado a un trabajo de
+	programación. Cada proyecto tiene sus particularidades, y por tanto, tiene
+	cierta querencia por un IDE en concreto. Seguidamente se comenta herramientas
+	open source a modo de ilustración.</p>
+	
+	<p><strong>5.1 RESPOSITORIO MAVEN</strong></p>
+
+	<p>Para obtener el repositorio Maven copiar todos los
+	directorios <a href="file:///\\172.22.44.105\andromda\Maven">\\172.22.44.105\andromda\Maven</a>
+	al repositorio local de Maven en su PC en C:\Documents and Settings\%username%\.maven\repository.</p>
+
+	<p><strong>5.2 ENTORNO DE DESARROLLO INTEGRADO, ECLIPSE</strong></p>
+	
+	<p>Para obtener la versión de Eclipse copiar el directorio
+	ECLIPSE de<span style='mso-spacerun:yes'>  </span><a
+	href="file:///\\172.22.44.105\andromda\Entorno">\\172.22.44.105\andromda\Entorno</a>
+	al hd local. Dicha versión de Eclipse contiene los siguientes plugins: </p>
+
+	<p  style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:
+	l8 level1 lfo15;tab-stops:-36.0pt 0cm list 36.0pt'><span
+	style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+	style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>
+	</span></span></span>JBossIde1.5All, contiene facilidades como:
+	depuración del proyecto desplegado sobre un JBoss,<span
+	style='mso-spacerun:yes'>  </span>comprobador de HQL y a la vez traductor de
+	HQL a SQL, motor de ingeniería inversa de b.d. a Hibernate, y generación de
+	mappings desde tag values de xdoclet.</p>
+
+	<p  style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:
+	l8 level1 lfo15;tab-stops:-36.0pt 0cm list 36.0pt'><span
+	style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+	style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>
+	</span></span></span>Quantum, permite la exploración de las tablas,
+	vistas…etc de cualquier b.d. a partir del driver jdbc, también tiene un
+	analizador de consultas sql.</p>
+
+	<p  style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:
+	l8 level1 lfo15;tab-stops:-36.0pt 0cm list 36.0pt'><span
+	style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+	style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>
+	</span></span></span>Tomcat, contiene la facilidad de depuración del
+	proyecto desplegado sobre un Tomcat.</p>
+	
+	<p><strong>Nota:</strong></p>
+
+	<p><span><blockquote>Eclipse proporciona también los plugins que utilizaremos en el entorno, para pruebas unitarias
+	el JUnit, y para el control de versiones, el CVS.</blockquote></span></p>
+	
+	<p><strong>5.3 PRUEBAS UNITARIAS, JUNIT</strong></p>
+
+	<p><span>Las pruebas unitarias son excelentes para probar las clases
+	desarrolladas, y dotan de calidad al producto final. Dichas pruebas son 
+	ejecutadas manualmente desde el entorno de
+	desarrollo integrado, y también pueden ser ejecutadas automáticamente desde el
+	Maven al utilizar la órden install. Para más información ver 
+	ProductID="la Gu&#65517;a" la Guía de Pruebas
+	Unitarias.</span></p>
+	
+	<p><strong>5.4 SERVIDOR DE APLICACIONES, JBOSS</strong></p>
+
+	<p>Para obtener el JBoss copiar el directorio jboss-4.0.2
+	de<span style='mso-spacerun:yes'></span>
+	<a href="file:///\\172.22.44.105\andromda\Entorno">\\172.22.44.105\andromda\Entorno</a>
+	al hd local.</p>
+	
+	<a name="ind_6"></a>
+</section>
+
+<section name="Construir un proyecto desde cero">
+	<p>Seguidamente se detallan los pasos necesarios para crear
+	desde cero un proyecto Andromda que modela un servicio con EJB.</p>
+
+	<p>Dicho proyecto está disponible en:</p>
+
+	<blockquote>
+	<p><span lang='ES'><a
+	href="../tecnologiaDDP$/Tecnología/SOA/NPA/Guias%20Técnicas/anexosDeLasGuias/ejemplosProyectos/WebServicesEJBProject/ejemploDesdeCero">\\madarrnas02\tecnologiaDDP$\Tecnología\SOA\NPA\Guias
+	Técnicas\anexosDeLasGuias\ejemplosProyectos\WebServicesEJBProject\ejemploDesdeCero</a></span></p>
+	
+
+	<p><strong>6.1.1 Generar un proyecto Andromda</strong></p>
+
+	<p>Abrir una consola, y situarse en el directorio donde
+	queramos crear nuestro proyecto.</p>
+
+	<p>Ejecutar la herramienta maven con la orden
+	andromdapp:generate</p>
+	
+	<p align='center'><img src="images/FAQ_image015.jpg"></img></p>
+
+	<p>Contestar las preguntas.</p>
+	
+	<p align='center'><img src="images/FAQ_image017.jpg"></img></p>
+
+	<p>Seguidamente se genera nuestro proyecto.</p>
+
+	<p align='center'><img src="images/FAQ_image019.jpg"></img></p>
+
+	<p>[…]</p>
+
+	<p align='center'><img src="images/FAQ_image021.jpg"></img></p>
+
+	<a name="Perses"></a>
+	<p>En este momento se ha creado un directorio llamado Perses 
+	<a href="#_ftn7" name="_ftnref7">[7] </a>
+	que contiene la estructura de directorios y ficheros necesarios para empezar.</p>
+
+	<p align='center'><img src="images/FAQ_image023.jpg"></img></p>
+	
+	<p><strong>6.1.2 Empezando a modelar</strong></p>
+
+	<p>Abrir el fichero UML D:\Perses\mda\src\uml\PerseoEJBServicesModel.xmi
+	con el editor UML, en nuestro caso MagicDraw.</p>
+
+	<p align='center'><img src="images/FAQ_image025.jpg"></img></p>
+
+	<p>Nos preguntará que no ha podido encontrar el fichero
+	andromda-profile-3.1-RC1.xml.zip, propio de Andromda, donde se definen todos
+	los estereotipos y valores etiquetados. </p>
+
+	<p align='center'><img src="images/FAQ_image027.jpg"></img></p>
+
+	<p>Dicho fichero se encuentra en C:\Documents and
+	Settings\%username%\.maven\repository\andromda\xml.zips</p>
+	
+	<p align='center'><img src="images/FAQ_image029.jpg"></img></p>
+
+	<p>Una vez llegado este momento, ya podemos empezar a modelar.
+	Observar que el proyecto está vació, salvo los estereotipos y valores
+	etiquetados de Andromda que se ha precargado anteriormente.</p>
+
+	<p align='center'><img src="images/FAQ_image031.jpg"></img></p>
+
+	<p>Crear un paquete, que llamaremos com.perseo.services y
+	crear un Diagrama de Clases que bien podemos llamarle Diagrama de clases
+	principal. En dicho diagrama de clases modelamos una clase, MiPrimerServicio
+	que estereotiparemos como &lt;&lt;Service&gt;&gt; y &lt;&lt;WebService&gt;&gt;.</p>
+	
+	<p align='center'><img src="images/FAQ_image033.jpg"></img></p>
+
+	<p>Ahora cada método que creemos se publicará como web
+	services. Por tanto, vamos a crear el método público darFechayHora, que
+	devolverá un objeto de la clase FechayHora, con tales atributos públicos.</p>
+
+	<p align='center'><img src="images/FAQ_image035.jpg"></img></p>
+
+	<p>Prestar atención a que hemos estereotipado la clase
+	FechayHora como ValueObject, para que dicha clase sea generada automáticamente,
+	si no se estereotipa, pues no se genera automáticamente.</p>
+
+	<p><strong>6.1.3 Validando el modelo</strong></p>
+
+	<p>En estos momentos ya podemos proceder a la validación del
+	odelo UML, es decir, controlar si nuestro modelo UML se ha escrito según los patrones de Andromda.</p>
+
+	<p align='center'><img src="images/FAQ_image037.jpg"></img></p>
+
+	<p><span>[…]</span></p>
+
+	<p align='center'><img src="images/FAQ_image039.jpg"></img></p>
+
+	<a name="código"></a>	
+	<p><strong>6.1.4 Generando código</strong></p>
+
+	<p>También podemos ya generar nuestro primer código
+	automáticamente, para ello, desde la consola, invocar al maven 
+	<a href="#_ftn8" name="_ftnref8">[8]</a>:</p>
+
+	<p align='center'><img src="images/FAQ_image041.jpg"></img></p>
+
+	<p>[…]</p>
+
+	<p align='center'><img src="images/FAQ_image042.png"></img></p>
+	
+	<p><strong>6.1.5 Desplegando nuestro servicio</strong></p>
+
+	<p>Para desplegar nuestro servicio en un JBoss en local,
+	bastará invocar al maven con la orden deploy:</p>
+
+	<p>maven deploy, si no copiar el fichero D:\Perses\app\target\Perses-app-1.0.ear
+	en el directorio adecuado del servidor de aplicaciones.</p>
+
+	<p align='center'><img src="images/FAQ_image045.jpg"></img></p>
+
+	<p>[…]</p>
+
+	<p align='center'><img src="images/FAQ_image046.png"></img></p>
+	
+	<a name="servicio"></a>
+	<p><strong>6.1.6 Accediendo al servicio</strong></p>
+
+	<p>Como no hemos personalizado el código del método, nos
+	aparece un xml con un return null<a href="#_ftn9" name="_ftnref9">
+	[9]</a></p>
+
+	<p align='center'><img src="images/FAQ_image049.jpg"></img></p>
+	
+	<p><strong>6.1.7 Personalizando el servicio</strong></p>
+
+	<p>Podemos especificar el resultado de nuestro primer
+	servicio, editando el fichero MiPrimerServicioImpl.java en el directorio D:\Perses\core\src\java\com\perseo\services.</p>
+
+	<p align='center'><img src="images/FAQ_image051.jpg"></img></p>
+
+	<p>Así podemos cambiar el resultado y adecuarlo a nuestras necesidades.</p>
+
+	<p align='center'><img src="images/FAQ_image053.jpg"></img></p>
+
+	<p>Ahora el servicio devolverá una fecha y la hora con
+	precisión de minutos, para regenerar y desplegar nuestra aplicación ejecutar: 
+	maven install deploy</p>
+	
+	<p>Refrescando el contenido del navegador obtendremos:</p>
+
+	<p align='center'><img src="images/FAQ_image055.jpg"></img></p>
+	
+	<p><strong>6.1.8 Añadir un servicio con acceso a b.d.</strong></p>
+
+	<p>Vamos a crear un servicio que realice una query sobre la
+	b.d. Hypersonic integrada en el propio JBoss. Para ello creamos dos clases
+	entidades relacionadas en el paquete com.perseo.schema.hypersonic, como se puede ver:</p>
+
+	<p align='center'><img src="images/FAQ_image057.jpg"></img></p>
+
+	<p>Seguidamente nos creamos los métodos en la clase servicio MiPrimerServicio:</p>
+	
+	<blockquote>
+	<ul>
+	  <li>
+	  buscarProyectos, que busca en la tabla Proyecto
+	  con o sin filtrar por el nombre del proyecto para devolver un array de objetos DetalleProyecto.
+	  </li>
+	  
+	  <p></p>
+	  
+	  <li>
+	  buscarEmpleadosDeUnProyecto, que busca en la
+	  tabla Proyecto con o sin filtrar por el nombre del proyecto para devolver el
+	  primer empleado que encuentre asociado a dicho nombre de proyecto, es decir,
+	  por cada proyecto solo se visualiza a un empleado aunque hay más asociados a él.
+	  </li>
+	  
+	  <p></p>
+
+	  <li>buscarEmpleados, que busca en la tabla Empleado
+	  con o sin filtrar por el nombre del empleado para devolver un array de objectos
+	  MaestroDetalleProyectoEmpleado.
+	  </li>
+	</ul>
+	</blockquote>
+
+	<p>Se han creado dos nuevos value object para transformar la salida de las queries:</p>
+	
+	<blockquote>
+	<ul>
+	  <li>
+	  DetalleProyecto, utilizado por el método buscarProyectos.
+	  </li>
+
+	  <p></p>
+
+	  <li>
+	  MaestroDetalleProyectoEmpleado, utilizado por
+	  los métodos buscarEmpleadosProyecto de la clase Proyecto, y buscarEmpleadosProyecto de la clase Empleado.
+	  </li>
+	</ul>
+	</blockquote>
+
+	<p>Hay que crear las relaciones de dependencia
+	correspondientes para permitir la accesibilidad del servicio a las entidades, y
+	de las entidades a los value objects.</p>
+
+	<p>Se ha creado un único criterio llamado CriterioBusquedaProyecto
+	que es utilizado por los dos métodos buscarEmpleadosProyecto de las dos
+	entidades, para ilustrar que los criterios pueden ser uno o muchos, basta que
+	los nombres de sus atributos coincidan con los atributos de nuestra entidad para poder utilizarlos.</p>
+	
+	<p>Nos hemos creado las siguientes dos clases ficticias para
+	facilitar la especificación de array de los métodos de la clase servicio, así
+	aparece en la lista desplegables de clases del proyecto:</p>
+
+	<blockquote>
+	<ul>
+	  <li>
+	  DetalleProyecto[]
+	  </li>
+	  
+	  <p></p>
+	  
+	  <li>
+	  MaestroDetalleProyectoEmpleado[]
+	  </li>
+	</ul>
+	</blockquote>
+
+	<p>En el diagrama de clases del paquete con.perses.service se
+	ilustra las clases nombradas con anterioridad.</p>
+
+	<p align='center'><img src="images/FAQ_image059.jpg"></img></p>
+
+	<p><strong>6.1.9 Personalizando los métodos de búsqueda</strong></p>
+
+	<p>Editar el fichero MiPrimerServicioImpl.java del directorio D:\Perses\core\src\java\com\perseo\services
+	para personalizar los métodos.</p>
+
+	<p><span>// license-header java merge-point</span></p>
+
+	<p><span>/**</span></p>
+
+	<p><span>* This is only generated once! It will never be overwritten.</span></p>
+
+	<p><span>* You can (and have to!) safely modify it by hand.</span></p>
+
+	<p><span>*/</span></p>
+
+	<p><span>package com.perseo.services;</span></p>
+	
+	<p><span lang='FR' style='mso-ansi-language:FR'></span></p>
+
+	<p><span>import  java.util.Date;</span></p>
+
+	<p>/**</p>
+
+	<p><span>* @see com.perseo.services.MiPrimerServicio</span></p>
+
+	<p><span>*/</span></p>
+
+	<p>public class MiPrimerServicioImpl</p>
+
+	<p><span>extends com.perseo.services.MiPrimerServicioBase</span></p>
+
+	<p>{</p>
+
+	<p>/**</p>
+
+	<p>* @see com.perseo.services.MiPrimerServicio#darFechayHora()</p>
+
+	<p>*/</p>
+
+	<p>protected com.perseo.services.FechayHora handleDarFechayHora()</p>
+
+	<p>throws java.lang.Exception</p>
+
+	<p>{</p>
+
+	<p>//@todo implement protected com.perseo.services.FechayHora handleDarFechayHora()</p>
+
+	<p><span>Date miFecha = new Date();</span></p>
+
+	<p><span>return new FechayHora(miFecha.toString(),miFecha.getHours()+&quot;:&quot;+miFecha.getMinutes());</span></p>
+
+	<p>}</p>
+
+	<p>/**</p>
+
+	<p>* @see com.perseo.services.MiPrimerServicio#buscarUnProyecto(java.lang.String)</p>
+
+	<p>*/</p>
+
+	<p>protected com.perseo.services.DetalleProyecto[] handleBuscarProyectos(java.lang.String nombre)</p>
+
+	<p>throws java.lang.Exception</p>
+
+	<p>{</p>
+	
+	<p>//@todo implement protected com.perseo.services.DetalleProyecto[]
+	handleBuscarUnProyecto(java.lang.String nombre)</p>
+
+	<p>CriterioBusquedaProyecto miCriterioBusqueda = new CriterioBusquedaProyecto(nombre);</p>
+
+	<p>return
+	(DetalleProyecto[]) this.getProyectoDao().buscarProyectos(com.perseo.schema.hypersonic.ProyectoDao.TRANSFORM_DETALLEPROYECTO,miCriterioBusqueda).toArray(new
+	DetalleProyecto[0]);</p>
+
+	<p>}</p>
+
+	<p>/**</p>
+
+	<p>* @see com.perseo.services.MiPrimerServicio#buscarEmpleadosDeUnProyecto(java.lang.String)</p>
+
+	<p>*/</p>
+
+	<p>protected com.perseo.services.MaestroDetalleProyectoEmpleado[]
+	handleBuscarEmpleadosDeUnProyecto(java.lang.String nombre)</p>
+
+	<p>throws java.lang.Exception</p>
+
+	<p>{</p>
+
+	<p>//@todo implement protected com.perseo.services.MaestroDetalleProyectoEmpleado[]
+	handleBuscarEmpleadosDeUnProyecto(java.lang.String nombre)</p>
+
+	<p>CriterioBusquedaProyecto miCriterioBusqueda = new CriterioBusquedaProyecto(nombre);</p>
+
+	<p>return (MaestroDetalleProyectoEmpleado[])
+	this.getProyectoDao().buscarEmpleadosProyecto(com.perseo.schema.hypersonic.ProyectoDao.TRANSFORM_MAESTRODETALLEPROYECTOEMPLEADO,miCriterioBusqueda).toArray(new
+	MaestroDetalleProyectoEmpleado[0]);</p>
+
+	<p>}</p>
+
+	<p>/**</p>
+	
+	<p>* @see com.perseo.services.MiPrimerServicio#buscarEmpleados(java.lang.String)</p>
+
+	<p>*/</p>
+
+	<p>protected com.perseo.services.MaestroDetalleProyectoEmpleado[] handleBuscarEmpleados(java.lang.String nombre)</p>
+
+	<p>throws java.lang.Exception</p>
+
+	<p>{</p>
+
+	<p>//@todo implement protected com.perseo.services.MaestroDetalleProyectoEmpleado[]
+	handleBuscarEmpleados(java.lang.String nombre)</p>
+
+	<p>CriterioBusquedaProyecto miCriterioBusqueda=new CriterioBusquedaProyecto(nombre);</p>
+
+	<p>return (MaestroDetalleProyectoEmpleado[])
+	this.getEmpleadoDao().buscarEmpleadosProyecto(com.perseo.schema.hypersonic.EmpleadoDao.TRANSFORM_MAESTRODETALLEPROYECTOEMPLEADO,miCriterioBusqueda).toArray(new
+	MaestroDetalleProyectoEmpleado[0]);</p>
+
+	<p>}</p>
+
+	<p>}</p>
+	
+	<p>También es necesario editar los ficheros: EmpleadoDaoImpl.java
+	y ProyectoDaoImpl.java del directorio D:\Perses\core\src\java\com\perseo\schema\hypersonic
+	para realizar las transformaciones necesarias que permitan generar los
+	atributos de loas clases value object a partir de los atributos de las entidades.</p>
+
+	<p>Fichero ProyectoDaoImpl.java</p>
+
+	<p>package com.perseo.schema.hypersonic;</p>
+
+	<p>/**</p>
+
+	<p>* @see com.perseo.schema.hypersonic.Proyecto</p>
+
+	<p>*/</p>
+
+	<p>public class ProyectoDaoImpl</p>
+
+	<p>extends com.perseo.schema.hypersonic.ProyectoDaoBase</p>
+
+	<p>{</p>
+
+	<p>/**</p>
+
+	<p>* @see com.perseo.schema.hypersonic.ProyectoDao#toDetalleProyecto(com.perseo.schema.hypersonic.Proyecto)</p>
+
+	<p>*/</p>
+
+	<p>public com.perseo.services.DetalleProyecto toDetalleProyecto(final
+	com.perseo.schema.hypersonic.Proyecto entity)</p>
+
+	<p>{</p>
+
+	<p>// put your implementation here</p>
+
+	<p>return new com.perseo.services.DetalleProyecto(entity.getCodigo(),entity.getNombre());</p>
+
+	<p><span>}</span></p>
+
+	<p><span>/**</span></p>
+	
+	<p>* @see com.perseo.schema.hypersonic.ProyectoDao#toMaestroDetalleProyectoEmpleado(com.perseo.schema.hypersonic.Proyecto)</p>
+
+	<p>*/</p>
+
+	<p>public com.perseo.services.MaestroDetalleProyectoEmpleado
+	toMaestroDetalleProyectoEmpleado(final com.perseo.schema.hypersonic.Proyecto entity)</p>
+
+	<p>{</p>
+
+	<p>// put your implementation here</p>
+
+	<p>return new
+	com.perseo.services.MaestroDetalleProyectoEmpleado(entity.getNombre(),((Empleado)entity.getEmpleados().toArray(new
+	Empleado[0])[0]).getNombre(),&quot;91 480 &quot;+((Empleado)entity.getEmpleados().toArray(new
+	Empleado[0])[0]).getExtension());</p>
+
+	<p>}</p>
+
+	<p>}</p>
+
+	<p>Fichero EmpleadoDaoImpl.java:</p>
+
+	<p>//license-header java merge-point</p>
+
+	<p>/**</p>
+
+	<p>* This is only generated once! It will never be overwritten.</p>
+
+	<p>* You can (and have to!) safely modify it by hand.</p>
+
+	<p>*/</p>
+
+	<p>package com.perseo.schema.hypersonic;</p>
+
+	<p>/**</p>
+
+	<p>* @see com.perseo.schema.hypersonic.Empleado</p>
+
+	<p>*/</p>
+
+	<p>public class EmpleadoDaoImpl</p>
+
+	<p>extends com.perseo.schema.hypersonic.EmpleadoDaoBase</p>
+	
+	<p>{</p>
+
+	<p>/**</p>
+
+	<p>* @see com.perseo.schema.hypersonic.EmpleadoDao#toMaestroDetalleProyectoEmpleado(com.perseo.schema.hypersonic.Empleado)</p>
+
+	<p>*/</p>
+
+	<p>public com.perseo.services.MaestroDetalleProyectoEmpleado
+	toMaestroDetalleProyectoEmpleado(final com.perseo.schema.hypersonic.Empleado entity)</p>
+
+	<p>{</p>
+
+	<p>// put your implementation here</p>
+
+	<p>return new
+	com.perseo.services.MaestroDetalleProyectoEmpleado(entity.getProyecto().getNombre(),entity.getNombre(),entity.getExtension());</p>
+
+	<p>}</p>
+	
+	<p><strong>6.1.10 Regenerando la aplicación</strong></p>
+
+	<p><span>Para regenerar la aplicación y desplegarla basta ejecutar: Maven install deploy</span></p>
+
+	<p><span>Así habremos incorporado los últimos cambios personalizables a nuestra aplicación</span></p>
+
+	<p><strong>6.1.11 Creando el modelo Entidad/Relación</strong></p>
+
+	<p>Para crear las tablas y secuencias necesarias basta ejecutar la orden create-schema:</p>
+
+	<blockquote>
+	<p>Maven create-schema</p>
+	</blockquote>
+	
+	<p><strong>Nota:</strong></p>
+
+	<p>También podemos ejecutar Maven drop-schema para borrar el modelo, se recomienda jugar con estas posibilidades.</p>
+
+
+	<p><strong>6.1.12 Cargando datos en la b.d.</strong></p>
+
+	<p>Ejecutar el gestor de Hypersonic, para realizar los siguientes insert en la b.d.. Para ello abrir
+	una consola y escribir:</p>
+
+	<p>java -cp &quot;%CLASSPATH%;%JBOSS_HOME%\server\default\lib\hsqldb.jar;.&quot;org.hsqldb.util.DatabaseManager</p>
+
+	<p>Elegir, para establecer la sesión:</p>
+
+	<p>Type: HSQL Database Engine Server</p>
+
+	<p>URL: jdbc:hsqldb:hsql://localhost:1701 el puerto lo podemos ver en el fichero
+	hsqldb-ds.xml del servidor JBoss, en .../server/default/deploy/</p>
+
+	<p><span>Ejecutar los siguientes inserts para tener una bateria de casos de prueba:</span></p>
+	
+	<blockquote>
+	<p>INSERT INTO PROYECTO(NUMERO,CODIGO,NOMBRE) VALUES (1,'I-BUILDER','Nueva arquitectura');</p>
+
+	<p>INSERT INTO PROYECTO(NUMERO,CODIGO,NOMBRE) VALUES (2,'Andromda','Arquitectura conducida por el modelo');</p>
+
+	<p>INSERT INTO EMPLEADO(NUMERO,NOMBRE,EXTENSION,PROYECTO_FK) VALUES (1,'Luis','9120','1');</p>
+
+	<p>INSERT INTO EMPLEADO(NUMERO,NOMBRE,EXTENSION,PROYECTO_FK) VALUES (2,'Fran',' 9108','1');</p>
+
+	<p>INSERT INTO EMPLEADO(NUMERO,NOMBRE,EXTENSION,PROYECTO_FK) VALUES (3,'José',' 0000','2');</p>
+	</blockquote>
+
+	<p><strong>6.1.13 Accediendo al servicio</strong></p>
+
+	<p align='center'><img src="images/FAQ_image061.jpg"></img></p>
+	<p align='center'><img src="images/FAQ_image063.jpg"></img></p>
+	<p align='center'><img src="images/FAQ_image065.jpg"></img></p>
+	<p align='center'><img src="images/FAQ_image067.jpg"></img></p>
+	<p align='center'><img src="images/FAQ_image069.jpg"></img></p>
+	<p align='center'><img src="images/FAQ_image071.jpg"></img></p>
+	</blockquote>
+</section>
+
+
+<section name="Notas Aclaratorias">
+
+	<p><a name="_ftn1">
+	[1] La herramienta Ant busca el fichero build.xml que especifica la tarea
+	Ant que invoca a la clase java org.andromda.schema2xmi.Schema2XMI.
+	<a href="FAQ.html#Ant">Volver a [1]</a></a></p>	
+
+	<p><a name="_ftn2">
+	[2] La herramienta Maven busca el fichero de configuración maven.xml que especifica la tarea Ant.
+	<a href="FAQ.html#Maven">Volver a [2]</a></a></p>
+
+	<p> <a name="_ftn3">
+	[3] Hay que especificar los parámetros de configuración bien
+	interactivamente o utilizando las propiedades del tipo
+	maven.andromda.schema2xmi.* en el fichero build.properties de nuestro propio proyecto.
+	<a href="FAQ.html#Seguidamente">Volver a [3]</a></a></p>
+
+	<p><a name="_ftn4">
+	[4] Sólo podemos configurar un esquema de base de datos a la vez para exportarlo.
+	<a href="FAQ.html#Seguidamente">Volver a [4]</a></a></p>
+
+	<p><a name="_ftn5">
+	[5] Se puede configurar múltiples esquemas de base de datos a la vez para exportarlos uno a uno.
+	<a href="FAQ.html#Seguidamente">Volver a [5]</a></a></p>
+
+	<p><a name="_ftn6">
+	[6] El error que nos avisa es del tipo:
+	<blockquote>
+	ERROR:The name of each navigable connecting association end must be unique.  
+	<a href="FAQ.html#estructuración">Volver a [6]</a>
+	</blockquote>
+	</a></p>
+
+	<p><a name="_ftn7">
+	[7] Perses es el hijo de Andrómeda y Perseo.
+	<a href="FAQ.html#Perses">Volver a [7]</a></a></p>
+
+	<p><a name="_ftn8">
+	[8] Invocar al maven sin órden es equivalente a invocarle con la órden install: maven install.
+	<a href="FAQ.html#código">Volver a [8]</a></a></p>
+
+	<p><a name="_ftn9">
+	[9] Nil equivale a Null.
+	<a href="FAQ.html#servicio">Volver a [9]</a></a></p>
+
+</section>
+
+</body>
+
+</document>

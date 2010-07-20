@@ -1,0 +1,42 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="importar" class="action">
+    <h3><bean:message key="importar.modificacion.importar.modificacion.importar"/></h3>
+    <div class="trigger">
+        <html:form styleId="importarModificacionImportarModificacionImportarForm" action="/ImportarModificacion/ImportarModificacionImportar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="fichero">
+                        <td class="label"><bean:message key="importar.modificacion.importar.modificacion.importar.param.fichero"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.fichero}"/>
+                           <html:file name="form" property="fichero" onmouseover="hints.show('importar.modificacion.importar.modificacion.importar.param.fichero.title')" onmouseout="hints.hide()"  styleId="importarFichero"/>
+                        </td>
+                    </tr>
+                    <tr class="action">
+                        <td class="label"><bean:message key="importar.modificacion.importar.modificacion.importar.param.action"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.action}"/>
+                           <input type="text" name="action" value="${value}" onmouseover="hints.show('importar.modificacion.importar.modificacion.importar.param.action.title')" onmouseout="hints.hide()"  id="importarAction"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR,ROLE_ADMINISTRADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Importar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="importar.modificacion.importar.modificacion.importar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This is a Reload CRT version 2.3.5 Metadata document-->
+<!--Spawned from the Reload Metadata Generator - http://www.reload.ac.uk-->
+<lom xmlns="http://ltsc.ieee.org/xsd/LOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM lom.xsd">
+  <general>
+    <identifier>
+      <catalog>Catálogo unificado mec-red.es-ccaa de identificación de ODE</catalog>
+      <entry>
+       <entry>
+       es_20070129_1_1000001
+       </entry>
+      </entry>
+    </identifier>
+    <title>
+<langstring>
+Acoplamiento a media madera
+</langstring>
+    </title>
+    <language>es</language>
+    <description>
+      <langstring>Representación del acoplamiento horizontal de dos piezas a media madera</langstring>
+      <langstring>Dimensión: 640X480; Formato: horizontal; Estructura formal: figura exenta</langstring>
+    </description>
+    <keyword>
+<langstring>
+carpintería,madera,tabla,acoplamiento,acoplar,unir,unión,media,madera
+</langstring>
+      <langstring />
+      <langstring />
+      <langstring />
+    </keyword>
+    <coverage>
+      <langstring />
+    </coverage>
+    <structure>
+      <value>atómica</value>
+    </structure>
+    <aggregationLevel>
+      <value>1</value>
+    </aggregationLevel>
+  </general>
+  <lifeCycle>
+    <version>
+      <langstring>v1.0</langstring>
+    </version>
+    <status>
+      <value>final</value>
+    </status>
+    <contribute>
+      <role>
+        <value>editor</value>
+      </role>
+      <entity>BEGIN:VCARD VERSION:3.0 FN: Centro Nacional de Información y Comunicación Educativa. Ministerio de Educación y Ciencia de España EMAIL;TYPE=INTERNET: webmaster@cnice.mec.es ORG: Ministerio de Educación y Ciencia de España END:VCARD</entity>
+      <date>
+        <dateTime>2006-01-29</dateTime>
+      </date>
+    </contribute>
+  </lifeCycle>
+  <metaMetadata>
+    <identifier>
+      <catalog>Catálogo unificado mec-red.es-ccaa-meta de identificación de instancias de metadatos de ODE</catalog>
+      <entry>
+       <entry>
+       es_20070129_1_1000001_meta
+       </entry>
+      </entry>
+    </identifier>
+    <contribute>
+      <role>
+        <value>creador</value>
+      </role>
+      <entity>BEGIN:VCARD VERSION:3.0 FN: EMAIL;TYPE=INTERNET:  ORG: Santillana Educación S.L. e Indra Sistemas S.A. END:VCARD</entity>
+      <date>
+        <dateTime>2007-01-29</dateTime>
+      </date>
+    </contribute>
+    <metadataSchema>LOM-ES v1.0</metadataSchema>
+    <language>es</language>
+  </metaMetadata>
+  <technical>
+    <format>application/x-shockwave-flash</format>
+    <size>189120</size>
+    <location />
+    <requirement>
+      <orComposite>
+        <type>
+          <value>navegador</value>
+        </type>
+        <name>
+          <value>cualquiera</value>
+        </name>
+        <minimumVersion>Flash Payer 7</minimumVersion>
+        <maximumVersion />
+      </orComposite>
+    </requirement>
+    <installationRemarks>
+      <langstring />
+    </installationRemarks>
+    <otherPlatformRequirements>
+      <langstring>Plugin de Flash Player</langstring>
+    </otherPlatformRequirements>
+    <duration>
+      <duration>PT2S</duration>
+    </duration>
+  </technical>
+  <educational>
+    <interactivityType>
+      <value>expositivo</value>
+    </interactivityType>
+    <learningResourceType>
+      <value>animación</value>
+    </learningResourceType>
+    <interactivityLevel>
+      <value>bajo</value>
+    </interactivityLevel>
+    <semanticDensity>
+      <value>baja</value>
+    </semanticDensity>
+    <intendedEndUserRole>
+      <value />
+    </intendedEndUserRole>
+    <context>
+      <value />
+    </context>
+    <typicalAgeRange>
+      <langstring>Edad mínima 16 años</langstring>
+    </typicalAgeRange>
+    <difficulty>
+      <value>fácil</value>
+    </difficulty>
+    <typicalLearningTime>
+      <duration />
+    </typicalLearningTime>
+    <description>
+      <langstring />
+    </description>
+    <language>es</language>
+    <cognitiveProcess>
+      <value>comprender</value>
+    </cognitiveProcess>
+    <cognitiveProcess>
+      <value>comprobar</value>
+    </cognitiveProcess>
+  </educational>
+  <rights>
+    <cost>
+      <value>no</value>
+    </cost>
+    <copyrightAndOtherRestrictions>
+      <value>creative commons: reconocimiento - no comercial - compartir igual</value>
+    </copyrightAndOtherRestrictions>
+    <description>
+      <langstring>La utilización de estos contenidos es universal, gratuita y abierta, siempre y cuando se trate de un uso educativo no comercial. Las acciones, productos y utilidades derivadas de su utilización no podrán, en consecuencia, generar ningún tipo de lucro. Asimismo, es obligada la referencia a la fuente</langstring>
+    </description>
+    <access>
+      <accessType>
+        <value>universal</value>
+      </accessType>
+      <description>
+        <langstring>No existen restricciones</langstring>
+      </description>
+    </access>
+  </rights>
+  <classification>
+    <purpose>
+      <value>nivel educativo</value>
+    </purpose>
+    <taxonPath>
+      <taxon>
+        <id />
+      </taxon>
+    </taxonPath>
+    <description>
+      <langstring />
+    </description>
+    <keyword>
+      <langstring />
+    </keyword>
+  </classification>
+  <classification>
+    <purpose>
+      <value>disciplina</value>
+    </purpose>
+    <taxonPath>
+      <taxon>
+        <id />
+      </taxon>
+    </taxonPath>
+    <description>
+      <langstring />
+    </description>
+    <keyword>
+      <langstring />
+    </keyword>
+  </classification>
+</lom>
+

@@ -1,0 +1,153 @@
+This document is a brief walk through on converting an agrega war module from Andomda to "normal" code and maven2 build system.
+
+$ cd <module>
+$ LANG=eu_ES maven clean bootstrap
+$ rm andromda*
+
+Check contents of web/webtest - every one I've seen so far has only had default, empty files in:
+
+$ svn rm web/webtest
+
+$ cat hibernate.properties
+
+This file seems always be empty:
+
+$ svn rm hibernate.properties
+
+Start to make the new (maven2) structure:
+
+$ mkdir -p src/main
+$ mkdir -p src/test
+
+Move the first set of files into place (these pretty much always exist)
+
+$ mv core/target/src src/main/java
+$ mv web/target/src src/main/webapp
+
+Tidy up a bit:
+
+$ rmdir web/target
+$ rmdir core/target
+
+Add the new structure to svn:
+
+$ svn add src
+
+Move some of the non-generated files that seem to be "safe" ie never conflict with generated ones (these paths don't exists for all projects):
+
+$ svn mv core/src/resources src/main/
+$ svn mv core/src/test src/test/java
+$ svn mv core/src/test-resources src/test/resources
+
+Now is a good time to commit, before anything in the new structure could get overwritten:
+
+$ svn commit -m "Start migration"
+
+Copy in the "common" generated code:
+
+$ cp -a common/target/src/* src/main/java/
+$ rm -r common/target
+
+Check for any conflicts/overwrites:
+
+$ svn status
+
+I've not found any that do you, so add the files and commit:
+
+$ svn status | awk '{ print $2; }' | xargs svn add
+$ svn commit -m "Add common/target"
+
+Move generated *code* out of the webapp tree, into the java (and hence compiled) tree (so far I've seen no conflicts at this point):
+
+$ for i in `find src/main/webapp/ -name \*.java`; do NEW=`echo $i|perl -pe's/webapp/java/'`; svn mv --parents $i $NEW; done
+$ svn commit -m "Move code into correct dir"
+
+Integrate common/src (mostly there isn't any)
+
+$ TODO
+
+Clean up common, which should now have no other interesting files in it ("find common -type f|grep -v .svn" to check):
+
+$ svn rm common
+$ svn commit -m "Clean up"
+
+Merge all code from core/src/java (so far no conflicts - any conflicts will fail to be migrated with this command):
+
+$ for i in `find core/src/java ! -path "*.svn*" -type f`; do NEW=`echo $i|perl -pe's!core/src!src/main!'`; svn mv --parents $i $NEW; done
+$ svn commit -m "Merge core/src"
+
+Check core/src/java is empty and clean it up:
+
+$ find core/src/java/ -type f|grep -v .svn
+$ svn rm core/src/java
+$ svn up
+$ svn commit -m "Clean up"
+
+Merge all code from web/src/java (sometimes conflicts, this command will skip those files (with an error)):
+
+$ for i in `find web/src/java ! -path "*.svn*" -type f`; do NEW=`echo $i|perl -pe's!web/src!src/main!'`; svn mv --parents $i $NEW; done
+
+Merge the non-conflicting webapp files while we're here:
+
+$ for i in `find web/src/jsp ! -path "*.svn*" -type f`; do NEW=`echo $i|perl -pe's!web/src/jsp!src/main/webapp!'`; svn mv --parents $i $NEW; done
+$ svn commit -m "Merge non-conflicting web/src files"
+
+Now deal with the files that conflicted in each of the above (if there were any), giving priority to the new, non-generated file:
+
+$ for i in `find web/src/java ! -path "*.svn*" -type f`; do NEW=`echo $i|perl -pe's!web/src!src/main!'`; svn rm $NEW; svn mv $i $NEW; done
+$ for i in `find web/src/jsp ! -path "*.svn*" -type f`; do NEW=`echo $i|perl -pe's!web/src/jsp!src/main/webapp!'`; svn rm $NEW; svn mv $i $NEW; done
+$ svn commit -m "Overwrite generated files with human written ones"
+
+Check the old dirs are empty and clean them up:
+
+$ find web/src/java/ -type f|grep -v .svn
+$ find web/src/jsp/ -type f|grep -v .svn
+$ svn rm web/src/jsp web/src/java
+$ svn up
+$ svn commit -m "Clean up"
+
+
+That should be all of the code moved into a new location, now to make it build...
+
+Copy a mostly empty pom:
+
+$ cp ../AdminUsuarios/pom.xml .
+$ vi build.properties -c "split pom.xml"
+
+Update:-
+- artifactId (pom) to match application.id (build.properties)
+- name to match application.name
+- version to match application.version
+
+Save the updated pom.
+
+Try compiling the new maven2 module:
+
+$ mvn compile
+
+(Two modules have so far required 'MAVEN_OPTS="-Xmx512m" mvn compile' to avoid Java OutOfMemoryErrors)
+
+Read the errors, add the missing dependencies (details normally in web/project.xml with version numbers in build.properties) to the pom and repeat until it compiles!  Then add the pom to svn:
+
+$ svn add pom.xml
+
+Fix the svn:ignore on the module directory:
+
+$ svn propset svn:ignore target .
+
+Add the new module to the top level agrega pom:
+
+$ cd ..
+$ vi pom.xml
+$ svn up
+$ svn commit -m "Add module"
+
+(The svn up shouldn't change anything but is required, otherwise svn will complain directories are out of date)
+
+
+To make it do something...
+
+(This needs some work, but basically...)
+$ mvn -Dmaven.test.skip jboss:harddeploy
+
+...will build the war and copy the file into the jboss deploy path.

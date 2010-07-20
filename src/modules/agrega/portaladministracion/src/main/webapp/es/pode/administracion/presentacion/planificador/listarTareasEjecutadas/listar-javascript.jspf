@@ -1,0 +1,34 @@
+
+    <tiles:put name="javascript" type="string">
+        <script type="text/javascript" language="Javascript1.1" src="<html:rewrite action="/formValidation"/>"></script>
+        <html:javascript formName="listarTareasEjecutadasListarInformeForm" method="validateListarInformeForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'listar.tareas.ejecutadas.listar.informe.param.id.title':'<formatting:escape language="javascript"><bean:message key="listar.tareas.ejecutadas.listar.informe.param.id.title"/></formatting:escape>',
+                'listar.tareas.ejecutadas.listar.eliminar.param.id.title':'<formatting:escape language="javascript"><bean:message key="listar.tareas.ejecutadas.listar.eliminar.param.id.title"/></formatting:escape>',
+                'listarTareasEjecutadas':'<formatting:escape language="javascript"><bean:message key="listar.tareas.ejecutadas.listar.listar.tareas.ejecutadas.title"/></formatting:escape>',
+                'listarTareasEjecutadas_no':'<formatting:escape language="javascript"><bean:message key="listar.tareas.ejecutadas.listar.listar.tareas.ejecutadas.title.notallowed"/></formatting:escape>',
+                'listarTareasEjecutadas_reset':'<formatting:escape language="javascript"><bean:message key="listar.tareas.ejecutadas.listar.listar.tareas.ejecutadas.title.reset"/></formatting:escape>',
+                'listarTareasEjecutadas_noreset':'<formatting:escape language="javascript"><bean:message key="listar.tareas.ejecutadas.listar.listar.tareas.ejecutadas.title.reset.not.allowed"/></formatting:escape>',
+                'Informe':'<formatting:escape language="javascript"><bean:message key="listar.tareas.ejecutadas.listar.informe.title"/></formatting:escape>',
+                'Informe_no':'<formatting:escape language="javascript"><bean:message key="listar.tareas.ejecutadas.listar.informe.title.notallowed"/></formatting:escape>',
+                'Informe_reset':'<formatting:escape language="javascript"><bean:message key="listar.tareas.ejecutadas.listar.informe.title.reset"/></formatting:escape>',
+                'Informe_noreset':'<formatting:escape language="javascript"><bean:message key="listar.tareas.ejecutadas.listar.informe.title.reset.not.allowed"/></formatting:escape>',
+                'Eliminar':'<formatting:escape language="javascript"><bean:message key="listar.tareas.ejecutadas.listar.eliminar.title"/></formatting:escape>',
+                'Eliminar_no':'<formatting:escape language="javascript"><bean:message key="listar.tareas.ejecutadas.listar.eliminar.title.notallowed"/></formatting:escape>',
+                'Eliminar_reset':'<formatting:escape language="javascript"><bean:message key="listar.tareas.ejecutadas.listar.eliminar.title.reset"/></formatting:escape>',
+                'Eliminar_noreset':'<formatting:escape language="javascript"><bean:message key="listar.tareas.ejecutadas.listar.eliminar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+</script>
+    </tiles:put>

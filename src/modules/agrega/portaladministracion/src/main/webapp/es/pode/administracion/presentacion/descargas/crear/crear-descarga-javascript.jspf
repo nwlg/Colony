@@ -1,0 +1,34 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'crear.descarga.crear.descarga.submit.param.path.title':'<formatting:escape language="javascript"><bean:message key="crear.descarga.crear.descarga.submit.param.path.title"/></formatting:escape>',
+                'crear.descarga.crear.descarga.submit.param.action.title':'<formatting:escape language="javascript"><bean:message key="crear.descarga.crear.descarga.submit.param.action.title"/></formatting:escape>',
+                'crear.descarga.crear.descarga.submit.param.descripcion.es.title':'<formatting:escape language="javascript"><bean:message key="crear.descarga.crear.descarga.submit.param.descripcion.es.title"/></formatting:escape>',
+                'crear.descarga.crear.descarga.submit.param.titulo.es.title':'<formatting:escape language="javascript"><bean:message key="crear.descarga.crear.descarga.submit.param.titulo.es.title"/></formatting:escape>',
+                'crear.descarga.crear.descarga.submit.param.descripcion.ca.title':'<formatting:escape language="javascript"><bean:message key="crear.descarga.crear.descarga.submit.param.descripcion.ca.title"/></formatting:escape>',
+                'crear.descarga.crear.descarga.submit.param.descripcion.en.title':'<formatting:escape language="javascript"><bean:message key="crear.descarga.crear.descarga.submit.param.descripcion.en.title"/></formatting:escape>',
+                'crear.descarga.crear.descarga.submit.param.descripcion.eu.title':'<formatting:escape language="javascript"><bean:message key="crear.descarga.crear.descarga.submit.param.descripcion.eu.title"/></formatting:escape>',
+                'crear.descarga.crear.descarga.submit.param.descripcion.gl.title':'<formatting:escape language="javascript"><bean:message key="crear.descarga.crear.descarga.submit.param.descripcion.gl.title"/></formatting:escape>',
+                'crear.descarga.crear.descarga.submit.param.descripcion.va.title':'<formatting:escape language="javascript"><bean:message key="crear.descarga.crear.descarga.submit.param.descripcion.va.title"/></formatting:escape>',
+                'crear.descarga.crear.descarga.submit.param.titulo.ca.title':'<formatting:escape language="javascript"><bean:message key="crear.descarga.crear.descarga.submit.param.titulo.ca.title"/></formatting:escape>',
+                'crear.descarga.crear.descarga.submit.param.titulo.en.title':'<formatting:escape language="javascript"><bean:message key="crear.descarga.crear.descarga.submit.param.titulo.en.title"/></formatting:escape>',
+                'crear.descarga.crear.descarga.submit.param.titulo.eu.title':'<formatting:escape language="javascript"><bean:message key="crear.descarga.crear.descarga.submit.param.titulo.eu.title"/></formatting:escape>',
+                'crear.descarga.crear.descarga.submit.param.titulo.gl.title':'<formatting:escape language="javascript"><bean:message key="crear.descarga.crear.descarga.submit.param.titulo.gl.title"/></formatting:escape>',
+                'crear.descarga.crear.descarga.submit.param.titulo.va.title':'<formatting:escape language="javascript"><bean:message key="crear.descarga.crear.descarga.submit.param.titulo.va.title"/></formatting:escape>',
+                'Submit':'<formatting:escape language="javascript"><bean:message key="crear.descarga.crear.descarga.submit.title"/></formatting:escape>',
+                'Submit_no':'<formatting:escape language="javascript"><bean:message key="crear.descarga.crear.descarga.submit.title.notallowed"/></formatting:escape>',
+                'Submit_reset':'<formatting:escape language="javascript"><bean:message key="crear.descarga.crear.descarga.submit.title.reset"/></formatting:escape>',
+                'Submit_noreset':'<formatting:escape language="javascript"><bean:message key="crear.descarga.crear.descarga.submit.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

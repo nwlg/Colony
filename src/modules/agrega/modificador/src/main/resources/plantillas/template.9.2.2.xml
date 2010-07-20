@@ -1,0 +1,4 @@
+<taxon>
+	${load:template.9.2.2.1.xml}
+	${load:template.9.2.2.2.xml}
+</taxon>

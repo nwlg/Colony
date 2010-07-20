@@ -1,0 +1,17 @@
+CREATE TABLE EVENT_DATA 
+(
+    ID             NUMBER        NOT NULL,
+    USERNAME       VARCHAR2(256)     NULL,
+    OPERATION_DATE DATE              NULL,
+    OPERATION_TYPE VARCHAR2(256)     NULL,
+    SERVICE        VARCHAR2(256)     NULL,
+    METHOD         VARCHAR2(256)     NULL,
+    NEW_DATA       VARCHAR2(256)     NULL,
+    OLD_DATA       VARCHAR2(256)     NULL,
+    ENTITY_NAME    VARCHAR2(256)     NULL,
+    BEGIN_TIME     DATE              NULL,
+    END_TIME       DATE              NULL,
+    ELAPSED_TIME   VARCHAR2(256)     NULL,
+    SQL_QUERY      VARCHAR2(256)     NULL,
+    XML_DATE       VARCHAR2(256)     NULL
+)

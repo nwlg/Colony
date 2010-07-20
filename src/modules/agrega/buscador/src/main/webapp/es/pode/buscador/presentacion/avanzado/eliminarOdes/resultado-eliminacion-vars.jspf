@@ -1,0 +1,20 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="busquedaSimpleAvanzada" value="${form.busquedaSimpleAvanzada}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idioma" value="${form.idioma}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="odesDeleted" value="${form.odesDeleted}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tipoLayoutBuscador" value="${form.tipoLayoutBuscador}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="numeroResultados" value="${form.numeroResultados}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idiomaBuscador" value="${form.idiomaBuscador}"/>
+    </c:catch>
+</div>

@@ -1,0 +1,230 @@
+########## Variables de configuracion del correo ##########
+hostSmtp=mta.bracknell.ndrb.org.uk
+debug=true
+#Direccion de correo del sistema, se utilizara como from en el servicio Recuerdo Clave
+fromSender=webmaster@www.ndrb.org.uk
+ldapExternal=false
+########## Correo del administrador del servidor ldap externo ######
+adminLdapExternal=support@siriusit.co.uk
+########## Autenticacion de correo ####
+autentication=false
+userSmtp=usuario
+passwordSmtp=pass
+########## Idioma
+idioma.selected=en
+zona_horaria=CEST
+
+##########################################
+#######	Roles de usuarios	##############
+##########################################
+# Usuario administrador que no podra ser eliminado
+rol_administrador=ADMINISTRADOR
+#Nombre del rol que tiene permiso para publicar
+rol_publicador=PUBLICADOR
+#Nombre del rol que tiene permiso para catalogar
+rol_catalogador=CATALOGADOR
+#Nombre del rol que tiene permiso para empaquetar
+rol_empaquetador=DOCENTE
+
+########## Ip del servicio de auditoria
+auditoria.host=localhost
+auditoria.puerto=8080
+########## Ip del servicio de administración de usuarios
+admin.ws.host=localhost
+admin.ws.puerto=8080
+admin.ws.subdominio=
+admin.host=www.ndrb.org.uk
+admin.puerto=8080
+admin.subdominio=
+path_logs=/opt/jboss-nodo/server/default/log
+logs_no_borrar=server.log,agrega.log,boot.log
+# Parametro que indica si queremos o no queremos auditoria
+auditoria=SI
+
+########################################################
+###### Configuración para los informes            ######
+########################################################
+#Librerías de Birt
+birtDir=informes/birt-runtime-2_2_1_1/ReportEngine/
+#Plantillas de los informes
+informesDir=informes/plantillasInformes/
+#Directorio donde se guardarán todos los informes federados
+destinoInformesFederadosDir=uploads/destinoInformesFederadosDir/
+#Directorio donde se guardarán todos los informes
+destinoInformesDir=uploads/destinoInformesDir/
+#Directorio donde se copiaran las imagenes de los diagramas
+imgBirtDir=uploads/imagenesInformes/
+#path del servidor que enlazara al directorio de las imagenes
+staticImgDir=/imagenesInformes/
+#Path de los informes 'Mas' de la portada
+pathInformesPortada=informesPortada/
+##### Configuración de los informes 'Mas' de la Portada ######
+destinoInformesMasDir=uploads/informesPortada/
+#Número máximo de elementos que presentará cada tipo de informe
+rangoInformesPortada=10
+#Número de días para los cuales se quiere calcular los informes 'Mas' de la portada 
+diasAnterioresInformesPortada=7
+#Primer sufijo que se añadirá al nombre de los informes 'Mas' de la Portada que contienen información de más de un día (relacionado con diasAnterioresInformesPortada)
+
+# ----------
+#  Configuration for report file names
+# ----------
+
+# Suffixes
+nombreInformesPortadaSemanales=-weekly
+dias=-daily
+
+# Prefixes
+estadoOdes=Status of Resources
+operacionesRealizadas=Site Activity
+nivelAgregacion=Resources by Content Type
+coberturaCurricular=Curricular Coverage
+terminosBusqueda=Most Commonly Searched on Terms
+odesUsuario=User Activity
+odesLicencias=Resources by Licence Type
+usuarios=Users
+procesosPlanificados=Planned Processes
+masValorado=Most Highly Rated Resources
+masMostrado=Most Returned Results
+masPrevisualizado=Most Previewed Resources
+masDescargado=Most Downloaded Resources
+tamanio=Resources by Resource Size
+informeCatalogo=Catalogue
+odesIdiomaFederada=Federated Resources by Language
+odesPublicadosFederada=Federated Resources - Published
+nivelAgregacionFederada=Federated Resources by Content Type
+coberturaCurricularFederada=Federated Resources - Curricular Coverage
+
+#########################################################
+####### Configuración para la galería de imágenes #######
+#########################################################
+
+#host o IP de la máquina en la que se encuentra el servico que genera las imagenes
+#galeriaimg.server.ip=10.175.0.5:8080
+galeriaimg.server.ip=localhost:8080
+#URL del servicio
+galeriaimg.service.url=RemotingGalleryServer/remoting/RemotingGalleryService
+#Inicio de la ruta relativa (alias de apache) donde se encuentran accesibles las imágenes del nodo
+galeriaimg.path.image=/galeriaimg
+#Inicio de la ruta relativa (alias de apache) donde se encuentran accesibles las imágenes comunes
+galeriaimg.common.image=/imgcommon
+#Extensión de la imagen que se genera
+galeriaimg.image.ext=.png
+#Extensiones con icono por defecto
+galeriaimg.image.common.ext=MP3,WAV,WMA,AIFF,OGG,TAR,RAR,ZIP,TGZ,PPT,PDF,XLS,DOC,PPS
+#Extensiones fotografiables, para sacar la foto
+galeriaimg.image.common.ext.fot=AVS,BMP,CUR,DCX,GIF,ICO,JNG,JPEG,JPG,PBM,PCL,PCX,PIX,PNG,TGA,TIFF,3g2,3gp,MTV,asf,avi,avs,dv,dvd,ffm,flac,flic,flv,gxf,h264,m4v,matroska,mjpeg,mov,mp4,mpeg,mpeg1video,mpeg2video,mpegvideo,mxf,svcd,vcd,html,swf,htm
+#Ruta disco imagenes icono por defecto relativa al path del nodo
+galeriaimg.image.common.path=uploads/galeriaimg/common
+
+
+# Ruta relativa donde se generan las imagenes
+# Se usa para chequear si la imagen se ha generado o no
+path.generatedimgs=uploads/galeriaimg/test
+# ruta relativa del fichero de generacion imagenes
+script.html.generatedimgs=./generateimg.sh
+# ruta relativa del fichero de generacion imagenes
+script.img.generatedimgs=./resizeimg.sh
+# Lista de extensiones que no deben abrir el firefox
+img.resize.extension=gif,jpg,jpeg,jpe,tiff,tif,cmu,pnm,pbm,pgm,ppm,rgb,xbm,xpm,bmp
+
+#Lista de rutas a concatenar al localizador
+#NOTA:Recordar que la ruta del localizador es relativa al servidor 
+#en el que se encuentra
+nodo.path=/export/ccaa/test
+
+###############################
+####### Catalogos Agrega #######
+###############################
+catalogo.agrega=NDRB
+catalogo.mec=Catálogo unificado mec-red.es-ccaa de identificación de ODE
+
+#################################
+######Configuración RSS##########
+#################################
+rss=/rss
+host=www.ndrb.org.uk
+rss.path=uploads/rss/
+
+#######################################
+###Configuración Plugin de búsqueda####
+#######################################
+searchPlugin=/searchPlugin
+
+#######################################
+#####Identificador único de nodo#######
+#######################################
+idNodo=NODO20080422102550
+
+#######################################
+########Flag para nodo neutro##########
+#######################################
+neutro=false
+
+###################################
+########## Generacion Dinamica#####
+###################################
+#URL de la imagen dinamica 
+urlImagenDefecto=utilidades/contenidoDinamico/noThumbnail_100x63px.jpg
+urlImagenDefecto100x100=utilidades/contenidoDinamico/noThumbnail_100x63px.jpg
+urlImagenDefectoGrande=utilidades/imagenPorDefectoGrande.jpg
+urlImagenDinamicaDefecto=utilidades/imagenPorDefectoDinamica.png
+urlImagenDinamicaDisco=utilidades/contenidoDinamico/imagenDinamica.png
+pathImagenDinamicaDisco=uploads/utilidades/contenidoDinamico/imagenDinamica.png
+pathImagenDefectoGrande=uploads/utilidades/imagenPorDefectoGrande.jpg
+############enlace al logo de agrega para el agregaSlider
+urlLogoAgrega=static/img/logo_ndrb_54x29.png
+######## Correo de registro del cas ############################
+# Correo del usuario que se encargará de dar de alta a los usuarios una vez reciban el curso del cenice
+correoCas=admin@nwlg.org
+
+######### Tiempo extendido de sesion para empaquetador (segundos ) ################
+timeout.extendido=86400
+######### Esquema de metadatos LOM-ES ##############################
+esquemaDeMetadatos=LOM-NDRBv1.0
+
+######## Atributos de configuracion del servidor oai-pmh #########
+urlRepositorio=http://www.ndrb.org.uk/oaipmh/OaiPmhRequest/OaiPmhRequest.do
+nombreRepositorio=ndrb
+emailAdmin=admin@nwlg.org
+
+######## configuracion entregar #########
+#  tiempo, en milisegundos, que se mantiene un ode publicado y empaquetado para exportar sin volver a generarlo
+#  604800000 = una semana
+tiempolimite=604800000
+
+########### enlace a changeLog
+pathChangeLog=/utilidades/changelog.html
+
+#############################
+########## Contacto #########
+#############################
+contacto_mail=admin@nwlg.org
+contacto_telefono=01744 819438
+##########Activar opcion de incidencias de contacto(true-activar,false-desactivar)
+contacto_incidencias_activar=false
+
+###### configuracion del cas ##########
+#si su valor es 'no' no se va a sacar la informacion del registro
+registroCas=si
+
+
+######### Configuración del proxy de la máquina donde se instale Agrega #####################
+usaProxy=false
+hostProxy=proxy.nodo.es
+portProxy=8080
+usuarioProxy=usuarioproxy
+claveProxy=passproxy
+
+######## Timeout de la cookie de OpenId (segundos) ##############
+timeoutCookieOpenId=1800
+
+
+######### valor cuota defecto ############
+valorCuotaDefecto=5
+
+######### Shibboleth ##########
+shibbolethDefaultEmail=autogenerated@ndrb.org.uk
+
+##########Version de la aplicacion
+version=1.1.1

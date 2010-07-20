@@ -1,0 +1,4 @@
+<purpose>
+	${load:source.xml}
+	${load:value.xml}
+</purpose>

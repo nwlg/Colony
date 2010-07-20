@@ -1,0 +1,31 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="navegar" class="action">
+    <h3><bean:message key="navegar.lom.navegar.lom.navegar"/></h3>
+    <div class="trigger">
+        <html:form styleId="navegarLomNavegarLOMNavegarForm" action="/NavegarLom/NavegarLOMNavegar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="idTermino">
+                        <td class="label"><bean:message key="navegar.lom.navegar.lom.navegar.param.id.termino"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idTermino}"/>
+                           <input type="text" name="idTermino" value="${value}" onmouseover="hints.show('navegar.lom.navegar.lom.navegar.param.id.termino.title')" onmouseout="hints.hide()"  id="navegarIdTermino"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('navegar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="navegar.lom.navegar.lom.navegar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

@@ -1,0 +1,49 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="submit" class="action">
+    <h3><bean:message key="navegar.etb.seleccionar.ruta.submit"/></h3>
+    <div class="trigger">
+        <html:form styleId="navegarETBSeleccionarRutaSubmitForm" action="/NavegarETB/SeleccionarRutaSubmit" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="posicion">
+                        <td class="label"><bean:message key="navegar.etb.seleccionar.ruta.submit.param.posicion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.posicion}"/>
+                           <input type="text" name="posicion" value="${value}" onmouseover="hints.show('navegar.etb.seleccionar.ruta.submit.param.posicion.title')" onmouseout="hints.hide()"  id="submitPosicion"/>
+                        </td>
+                    </tr>
+                    <tr class="idTermino">
+                        <td class="label"><bean:message key="navegar.etb.seleccionar.ruta.submit.param.id.termino"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idTermino}"/>
+                           <input type="text" name="idTermino" value="${value}" onmouseover="hints.show('navegar.etb.seleccionar.ruta.submit.param.id.termino.title')" onmouseout="hints.hide()"  id="submitIdTermino"/>
+                        </td>
+                    </tr>
+                    <tr class="action">
+                        <td class="label"><bean:message key="navegar.etb.seleccionar.ruta.submit.param.action"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.action}"/>
+                           <input type="text" name="action" value="${value}" onmouseover="hints.show('navegar.etb.seleccionar.ruta.submit.param.action.title')" onmouseout="hints.hide()"  id="submitAction"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Submit')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="navegar.etb.seleccionar.ruta.submit"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

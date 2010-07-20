@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE form-validation PUBLIC
+    "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1//EN"
+    "http://jakarta.apache.org/commons/dtds/validator_1_1.dtd">
+
+<form-validation>
+
+    <formset>
+    
+
+        <form name="editarSecuenciaSecuenciaAceptarForm">
+            <field property="forwardOnly" depends="required">
+
+                <arg position="0" key="editar.secuencia.secuencia.aceptar.param.forward.only" />
+            </field>
+            <field property="choice" depends="required">
+
+                <arg position="0" key="editar.secuencia.secuencia.aceptar.param.choice" />
+            </field>
+            <field property="choiceExit" depends="required">
+
+                <arg position="0" key="editar.secuencia.secuencia.aceptar.param.choice.exit" />
+            </field>
+            <field property="flow" depends="required">
+
+                <arg position="0" key="editar.secuencia.secuencia.aceptar.param.flow" />
+            </field>
+        </form>
+<!--RLA-->
+
+<!--/RLA-->
+    </formset>
+
+</form-validation>

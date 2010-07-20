@@ -1,0 +1,25 @@
+
+    <tiles:put name="javascript" type="string">
+        <script type="text/javascript" language="Javascript1.1" src="<html:rewrite action="/formValidation"/>"></script>
+        <html:javascript formName="modificarCategoriaFaqFormularioModificarCategoriaFaqValidarFormularioForm" method="validateFormularioModificarCategoriaFaqValidarFormularioForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'modificar.categoria.faq.formulario.modificar.categoria.faq.validar.formulario.param.id.title':'<formatting:escape language="javascript"><bean:message key="modificar.categoria.faq.formulario.modificar.categoria.faq.validar.formulario.param.id.title"/></formatting:escape>',
+                'modificar.categoria.faq.formulario.modificar.categoria.faq.validar.formulario.param.nombre.categoria.title':'<formatting:escape language="javascript"><bean:message key="modificar.categoria.faq.formulario.modificar.categoria.faq.validar.formulario.param.nombre.categoria.title"/></formatting:escape>',
+                'modificar.categoria.faq.formulario.modificar.categoria.faq.validar.formulario.param.idiomas.title':'<formatting:escape language="javascript"><bean:message key="modificar.categoria.faq.formulario.modificar.categoria.faq.validar.formulario.param.idiomas.title"/></formatting:escape>',
+                'validarFormulario':'<formatting:escape language="javascript"><bean:message key="modificar.categoria.faq.formulario.modificar.categoria.faq.validar.formulario.title"/></formatting:escape>',
+                'validarFormulario_no':'<formatting:escape language="javascript"><bean:message key="modificar.categoria.faq.formulario.modificar.categoria.faq.validar.formulario.title.notallowed"/></formatting:escape>',
+                'validarFormulario_reset':'<formatting:escape language="javascript"><bean:message key="modificar.categoria.faq.formulario.modificar.categoria.faq.validar.formulario.title.reset"/></formatting:escape>',
+                'validarFormulario_noreset':'<formatting:escape language="javascript"><bean:message key="modificar.categoria.faq.formulario.modificar.categoria.faq.validar.formulario.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

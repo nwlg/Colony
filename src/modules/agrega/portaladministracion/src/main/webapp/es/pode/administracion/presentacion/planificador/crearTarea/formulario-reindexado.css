@@ -1,0 +1,54 @@
+#aceptar.action {}
+#aceptar.action #form_submit {}
+
+#aceptar.action .trabajo {}
+#aceptar.action .trabajo .label {}
+#aceptar.action .trabajo .field {}
+#aceptar.action .periodicidad {}
+#aceptar.action .periodicidad .label {}
+#aceptar.action .periodicidad .field {}
+#aceptar.action .dia {}
+#aceptar.action .dia .label {}
+#aceptar.action .dia .field {}
+#aceptar.action .mes {}
+#aceptar.action .mes .label {}
+#aceptar.action .mes .field {}
+#aceptar.action .anio {}
+#aceptar.action .anio .label {}
+#aceptar.action .anio .field {}
+#aceptar.action .hora {}
+#aceptar.action .hora .label {}
+#aceptar.action .hora .field {}
+#aceptar.action .minutos {}
+#aceptar.action .minutos .label {}
+#aceptar.action .minutos .field {}
+#aceptar.action .repositorioIndices {}
+#aceptar.action .repositorioIndices .label {}
+#aceptar.action .repositorioIndices .field {}
+#aceptar.action .trigger {}
+#aceptar.action .trigger .label {}
+#aceptar.action .trigger .field {}
+#aceptar.action .tipoTarea {}
+#aceptar.action .tipoTarea .label {}
+#aceptar.action .tipoTarea .field {}
+#aceptar.action .msgReindexado {}
+#aceptar.action .msgReindexado .label {}
+#aceptar.action .msgReindexado .field {}
+#aceptar.action .msgNoReindexado {}
+#aceptar.action .msgNoReindexado .label {}
+#aceptar.action .msgNoReindexado .field {}
+#aceptar.action .msgDescTrabajo {}
+#aceptar.action .msgDescTrabajo .label {}
+#aceptar.action .msgDescTrabajo .field {}
+#aceptar.action .idioma {}
+#aceptar.action .idioma .label {}
+#aceptar.action .idioma .field {}
+#aceptar.action .tareaModificada {}
+#aceptar.action .tareaModificada .label {}
+#aceptar.action .tareaModificada .field {}
+
+#cancelar.action {}
+#cancelar.action #form_submit {}
+
+
+

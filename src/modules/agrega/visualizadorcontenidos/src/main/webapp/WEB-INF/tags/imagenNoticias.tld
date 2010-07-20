@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN" 
+"http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+<taglib>
+	<tlibversion>1.0</tlibversion>
+	<jspversion>1.1</jspversion>
+	<shortname>validacion</shortname>
+	<info>Validacion Sample Tag library</info>
+  <!-- A Simple tag -->
+  <tag>
+    <name>imagenNoticias</name>
+    <tagclass>es.pode.visualizador.presentacion.tag.imagenNoticias.ImagenNoticiasTag</tagclass>
+  <!--Body content can have a value of 
+  	 empty: no body 
+      JSP: body that is evaluated by container, then possibly processed by the tag 
+      tagdependent: body is only processed by tag; JSP in body is not evaluated.
+   -->
+    <bodycontent>empty</bodycontent>
+    <info>
+	This is a simple tag.
+    </info>
+  <!-- Optional attributes  -->
+  <!-- personalized name -->   
+  <attribute>
+      <name>alineamiento</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+  </attribute> 
+  <attribute>
+      <name>cuerpo</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+  </attribute> 
+  <attribute>
+      <name>imagen</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+  </attribute>    
+</tag>
+</taglib>

@@ -1,0 +1,29 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'configurar.modificacion.confirmacion.objetos.submit.confirmacion.objetos.param.action.title':'<formatting:escape language="javascript"><bean:message key="configurar.modificacion.confirmacion.objetos.submit.confirmacion.objetos.param.action.title"/></formatting:escape>',
+                'configurar.modificacion.confirmacion.objetos.submit.confirmacion.objetos.param.paths.title':'<formatting:escape language="javascript"><bean:message key="configurar.modificacion.confirmacion.objetos.submit.confirmacion.objetos.param.paths.title"/></formatting:escape>',
+                'configurar.modificacion.confirmacion.objetos.buscar.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="configurar.modificacion.confirmacion.objetos.buscar.param.idioma.buscador.title"/></formatting:escape>',
+                'configurar.modificacion.confirmacion.objetos.buscar.param.tipo.busqueda.title':'<formatting:escape language="javascript"><bean:message key="configurar.modificacion.confirmacion.objetos.buscar.param.tipo.busqueda.title"/></formatting:escape>',
+                'submitConfirmacionObjetos':'<formatting:escape language="javascript"><bean:message key="configurar.modificacion.confirmacion.objetos.submit.confirmacion.objetos.title"/></formatting:escape>',
+                'submitConfirmacionObjetos_no':'<formatting:escape language="javascript"><bean:message key="configurar.modificacion.confirmacion.objetos.submit.confirmacion.objetos.title.notallowed"/></formatting:escape>',
+                'submitConfirmacionObjetos_reset':'<formatting:escape language="javascript"><bean:message key="configurar.modificacion.confirmacion.objetos.submit.confirmacion.objetos.title.reset"/></formatting:escape>',
+                'submitConfirmacionObjetos_noreset':'<formatting:escape language="javascript"><bean:message key="configurar.modificacion.confirmacion.objetos.submit.confirmacion.objetos.title.reset.not.allowed"/></formatting:escape>',
+                'Buscar':'<formatting:escape language="javascript"><bean:message key="configurar.modificacion.confirmacion.objetos.buscar.title"/></formatting:escape>',
+                'Buscar_no':'<formatting:escape language="javascript"><bean:message key="configurar.modificacion.confirmacion.objetos.buscar.title.notallowed"/></formatting:escape>',
+                'Buscar_reset':'<formatting:escape language="javascript"><bean:message key="configurar.modificacion.confirmacion.objetos.buscar.title.reset"/></formatting:escape>',
+                'Buscar_noreset':'<formatting:escape language="javascript"><bean:message key="configurar.modificacion.confirmacion.objetos.buscar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+</script>
+    </tiles:put>

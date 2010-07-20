@@ -1,0 +1,4 @@
+<html:hidden name="form" property="identifier" styleId="submitIdentifier"/>
+<html:hidden name="form" property="esModificar" styleId="submitEsModificar"/>
+<html:hidden name="form" property="action" styleId="submitAction"/>
+ 

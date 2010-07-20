@@ -1,0 +1,24 @@
+
+    <tiles:put name="javascript" type="string">
+        <script type="text/javascript" language="Javascript1.1" src="<html:rewrite action="/formValidation"/>"></script>
+        <html:javascript formName="informeMostrarDescripcionVolverForm" method="validateMostrarDescripcionVolverForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'informe.mostrar.descripcion.volver.param.descripcion.title':'<formatting:escape language="javascript"><bean:message key="informe.mostrar.descripcion.volver.param.descripcion.title"/></formatting:escape>',
+                'informe.mostrar.descripcion.volver.param.id.title':'<formatting:escape language="javascript"><bean:message key="informe.mostrar.descripcion.volver.param.id.title"/></formatting:escape>',
+                'Volver':'<formatting:escape language="javascript"><bean:message key="informe.mostrar.descripcion.volver.title"/></formatting:escape>',
+                'Volver_no':'<formatting:escape language="javascript"><bean:message key="informe.mostrar.descripcion.volver.title.notallowed"/></formatting:escape>',
+                'Volver_reset':'<formatting:escape language="javascript"><bean:message key="informe.mostrar.descripcion.volver.title.reset"/></formatting:escape>',
+                'Volver_noreset':'<formatting:escape language="javascript"><bean:message key="informe.mostrar.descripcion.volver.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

@@ -1,0 +1,5 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="misTags" value="${form.misTags}"/>
+    </c:catch>
+</div>

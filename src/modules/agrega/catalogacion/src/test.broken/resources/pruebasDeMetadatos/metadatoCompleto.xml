@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<lom xmlns="http://ltsc.ieee.org/xsd/LOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM C:\LOM-ES_XSD\lomCustom.xsd">
+	<general>
+		<identifier>
+			<catalog>DOI</catalog>
+			<!--catalog>ATENEX</catalog-->
+			<entry>10.1000/ISBN1-900512-44-0</entry>
+			<!--entry>AT/ET0001</entry-->
+		</identifier>
+		<title>
+			<string>Título del objeto digital</string>
+		</title>
+		<language>eu</language>
+		<description>
+			<string>Unidad didáctica introductoria a la Ética en la que se tratan los conceptos básicos de esta disciplina, especialmente su especificidad humana y su fundamento antropológico</string>
+		</description>
+		<keyword>
+			<string>Ética</string>
+			<string>Moral</string>
+		</keyword>
+		<coverage>
+			<string>Cultura Occidental</string>
+		</coverage>
+		<structure>
+			<source>LOM-ES V1.0</source>
+			<value>atomic</value>
+		</structure>
+		<aggregationLevel>
+			<source>LOM-ES V1.0</source>
+			<value>3</value>
+		</aggregationLevel>
+	</general>
+	<lifeCycle>
+		<version>
+			<string>V.1.0</string>
+		</version>
+		<status>
+			<source>LOM-ES V1.0</source>
+			<value>final</value>
+		</status>
+		<contribute>
+			<role>
+				<source>LOM-ES V1.0</source>
+				<value>author</value>
+				<source>LOM-ES V1.0</source>
+				<value>editor</value>
+			</role>
+			<entity>BEGIN:VCARD VERSION 3.0 FN:GT8/SC36/CT71 EMAIL;TYPE=INTERNET:GT8@AENOR.ES ORG:AENOR END:VCARD</entity>
+			<entity>>BEGIN:VCARD VERSION:3.0 FN: Centro Nacional de Información y Comunicación Educativa. Ministerio de Educación y Ciencia de España EMAIL;TYPE=INTERNET: webmaster@cnice.mec.es ORG: Ministerio de Educación y Ciencia de España END:VCARD</entity>
+			<date>
+				<dateTime>2007-05-03</dateTime>
+				<description>
+					<string>Se añade un esquema conceptual</string>
+				</description>
+				<dateTime>2006-10-03</dateTime>
+				<description>
+					<string>Se valida el esquema conceptual</string>
+				</description>
+			</date>
+		</contribute>
+	</lifeCycle>
+	<metaMetadata>
+		<identifier>
+			<catalog>DOI-META</catalog>
+			<!--catalog>ATENEX-META</catalog-->
+			<entry>10.1000/ISBN1-900512-44-0-META</entry>
+			<!--entry>AT/ET0001-META</entry-->
+		</identifier>
+		<contribute>
+			<role>
+				<source>LOM-ES V1.0</source>
+				<value>creator</value>
+				<source>LOM-ES V1.0</source>
+				<value>validator</value>
+			</role>
+			<entity>BEGIN:VCARD VERSION 3.0 FN:GT8/SC36/CT71 EMAIL;TYPE=INTERNET:GT8@AENOR.ES ORG:AENOR END:VCARD</entity>
+			<entity>BEGIN:VCARD VERSION:3.0 FN: Centro Nacional de Información y Comunicación Educativa. Ministerio de Educación y Ciencia de España EMAIL;TYPE=INTERNET: webmaster@cnice.mec.es ORG: Ministerio de Educación y Ciencia de España END:VCARD</entity>
+			<date>
+				<dateTime>2007-08-10</dateTime>
+				<description>
+					<string>Se crea la instancia de metadatos</string>
+				</description>
+				<dateTime>2007-12-03</dateTime>
+				<description>
+					<string>Se revisa la instancia de metadatos.Ninguna modificación</string>
+				</description>
+			</date>
+		</contribute>
+		<metadataSchema>LOM-ES</metadataSchema>
+		<language>ca</language>
+	</metaMetadata>
+	<technical>
+		<format>text/html</format>
+		<size>3145</size>
+		<location>http://www.educarex.es/atenex</location>
+		<location>http://www.aenor.es/LOMES</location>
+		<requirement>
+			<orComposite>
+				<type>
+					<source>LOM-ES V1.0</source>
+					<value>operating system</value>
+					<source>LOM-ES V1.0</source>
+					<value>browser</value>
+				</type>
+				<name>
+					<source>LOM-ES V1.0</source>
+					<value>linux</value>
+					<source>LOM-ES V1.0</source>
+					<value>ms-windows</value>
+				</name>
+				<minimumVersion>Mandrake 6</minimumVersion>
+				<!--minimumVersion>Windows 98</minimumVersion-->
+				<maximumVersion>Mandrake 12</maximumVersion>
+				<!--maximumVersion>Windows XP</maximumVersion-->
+			</orComposite>
+		</requirement>
+		<installationRemarks>
+			<string>No se requiere ningún requisito especial</string>
+		</installationRemarks>
+		<otherPlatformRequirements>
+			<string>Plugings de Macromedia Flash Player</string>
+			<string>Compatible con SCORM 2004</string>
+		</otherPlatformRequirements>
+	</technical>
+	<educational>
+		<interactivityType>
+			<source>LOM-ES V1.0</source>
+			<value>mixed</value>
+		</interactivityType>
+		<learningResourceType>
+			<source>LOM-ES V1.0</source>
+			<value>narrative text</value>
+			<source>LOM-ES V1.0</source>
+			<value>self assessment</value>
+		</learningResourceType>
+		<interactivityLevel>
+			<source>LOM-ES V1.0</source>
+			<value>medium</value>
+		</interactivityLevel>
+		<semanticDensity>
+			<source>LOM-ES V1.0</source>
+			<value>medium</value>
+		</semanticDensity>
+		<intendedEndUserRole>
+			<source>LOM-ES V1.0</source>
+			<value>learner</value>
+			<source>LOM-ES V1.0</source>
+			<value>individual</value>
+		</intendedEndUserRole>
+		<context>
+			<source>LOM-ES V1.0</source>
+			<value>classroom</value>
+			<source>LOM-ES V1.0</source>
+			<value>teacher</value>
+		</context>
+		<typicalAgeRange>
+			<string>Edad mínima:14 años, Edad máxima: 18 años, Descripción: Se trata de una secuencia didáctica de introducción a conceptos abstractos como la ética</string>
+		</typicalAgeRange>
+		<difficulty>
+			<source>LOM-ES V1.0</source>
+			<value>medium</value>
+		</difficulty>
+		<typicalLearningTime>
+			<duration>P7DT</duration>
+			<description>
+				<string>Puede ser necesario más tiempo</string>
+			</description>
+		</typicalLearningTime>
+		<description>
+			<string>Se puede usar después de explicar los conceptos claves o se puede dejar que los alumnos realicen la unidad y posteriormente repasar o aclarar los contenidos en clase</string>
+			<string>CONOCIMIENTO PREVIO: los conocimientos típicos al finalizar 3º de ESO</string>
+		</description>
+		<language>es</language>
+		<cognitiveProcess>
+			<source>LOM-ES V1.0</source>
+			<value>analyse</value>
+			<source>LOM-ES V1.0</source>
+			<value>implement</value>
+		</cognitiveProcess>
+	</educational>
+	<rights>
+		<cost>
+			<source>LOM-ES V1.0</source>
+			<value>no</value>
+		</cost>
+		<copyrightAndOtherRestrictions>
+			<source>LOM-ES V1.0</source>
+			<value>propietary license</value>
+		</copyrightAndOtherRestrictions>
+		<description>
+			<string>Esta licencia permite usar, reproducir, discutir y generar obras</string>
+		</description>
+		<access>
+			<accessType>
+				<source>LOM-ES V1.0</source>
+				<value>universal</value>
+			</accessType>
+			<description>
+				<string>Se puede usar de forma concurrente por varios usuarios</string>
+			</description>
+		</access>
+	</rights>
+	<relation>
+		<kind>
+			<source>LOM-ES V1.0</source>
+			<value>ispartof</value>
+			<!--source>LOM-ES V1.0</source>
+			<value>isreferencedby</value-->
+		</kind>
+		<resource>
+          <identifier>
+            <catalog>Catálogo unificado mec-red.es-ccaa de identificación de ODE</catalog>
+            <entry>es_20070518_3_0040100</entry>
+          </identifier>
+          <description>
+            <string>Secuencia didáctica sobre el origen y el desarrollo del medio publicitario.</string>
+          </description>
+        </resource>
+	</relation>
+	<annotation>
+		<entity>BEGIN:VCARD VERSION 3.0 FN:GT8/SC36/CT71 EMAIL;TYPE=INTERNET:GT8@aenor.es ORG:AENOR END:VCARD</entity>
+		<!--entity>BEGIN:VCARD VERSION:3.0 FN: Centro Nacional de Información y Comunicación Educativa. Ministerio de Educación y Ciencia de España EMAIL;TYPE=INTERNET: webmaster@cnice.mec.es ORG: Ministerio de Educación y Ciencia de España END:VCARD</entity-->
+		<date>
+			<dateTime>2007-06-09</dateTime>
+			<description>
+				<string>Se ha usado el campus virtual</string>
+			</description>
+			<dateTime>2007-09-13</dateTime>
+			<description>
+				<string>Se uso en un grupo de integración</string>
+			</description>
+		</date>
+		<description>
+			<string>Esta unidad didáctica digital resulta muy útil</string>
+			<string>Participaron activamente los alumnos</string>
+		</description>
+	</annotation>
+	<classification>
+		<purpose>
+			<source>LOM-ES V1.0</source>
+			<value>discipline</value>
+			<source>LOM-ES V1.0</source>
+			<value>competency</value>
+		</purpose>
+		<taxonPath>
+			<source>
+				<string>ETB MEC-CCAA v.1.0</string>
+				<string>LOM-ES</string>
+			</source>
+			<taxon>
+				<id>70.90</id>
+				<!--id>70.90</id>
+				<id>70.90</id>
+				<id>1</id>
+				<id>1.1</id>
+				<id>1.1.3</id>
+				<id>1.1.3.2</id-->
+				<entry>
+					<string>Ética/Religion/Ideología</string>
+					<string>Ética</string>
+					<string>Acción moral</string>
+					<string>Ámbito</string>
+					<string>Declaración del modo de acceso al siguiente nivel(para la actividad de aprendizaje u objeto)</string>
+					<string>Modo de presentación de la información en el acceso</string>
+					<string>textual</string>
+				</entry>
+			</taxon>
+		</taxonPath>
+		<description>
+			<string>Recurso sobre el Ámbito, fundamento y especificidad de la Ética como disciplina filosófica</string>
+			<string>Se trata de un recurso con adaptibilidad medio-baja</string>
+		</description>
+		<keyword>
+			<string>Fundamento de la moral, Especificidad de la moral, Filosofía moral</string>
+			<string>Visual, táctil</string>
+		</keyword>
+	</classification>
+</lom>

@@ -1,0 +1,17 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="mostrarAmbito" value="${form.mostrarAmbito}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tipoNavegacion" value="${form.tipoNavegacion}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tituloTesauro" value="${form.tituloTesauro}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tipoBusquedaArbol" value="${form.tipoBusquedaArbol}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tipoLayoutBuscador" value="${form.tipoLayoutBuscador}"/>
+    </c:catch>
+</div>

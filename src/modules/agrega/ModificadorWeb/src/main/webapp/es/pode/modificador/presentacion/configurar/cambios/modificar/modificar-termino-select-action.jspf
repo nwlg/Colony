@@ -1,0 +1,96 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="selectAction" class="action">
+    <h3><bean:message key="modificar.termino.modificar.termino.select.action"/></h3>
+    <div class="trigger">
+        <html:form styleId="modificarTerminoModificarTerminoSelectActionForm" action="/ModificarTermino/ModificarTerminoSelectAction" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="alcanceTermino">
+                        <td class="label"><bean:message key="modificar.termino.modificar.termino.select.action.param.alcance.termino"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.alcanceTermino}"/>
+                           <input type="text" name="alcanceTermino" value="${value}" onmouseover="hints.show('modificar.termino.modificar.termino.select.action.param.alcance.termino.title')" onmouseout="hints.hide()"  id="selectActionAlcanceTermino"/>
+                        </td>
+                    </tr>
+                    <tr class="alcanceMetadatos">
+                        <td class="label"><bean:message key="modificar.termino.modificar.termino.select.action.param.alcance.metadatos"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.alcanceMetadatos}"/>
+                           <input type="text" name="alcanceMetadatos" value="${value}" onmouseover="hints.show('modificar.termino.modificar.termino.select.action.param.alcance.metadatos.title')" onmouseout="hints.hide()"  id="selectActionAlcanceMetadatos"/>
+                        </td>
+                    </tr>
+                    <tr class="action">
+                        <td class="label"><bean:message key="modificar.termino.modificar.termino.select.action.param.action"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.action}"/>
+                           <input type="text" name="action" value="${value}" onmouseover="hints.show('modificar.termino.modificar.termino.select.action.param.action.title')" onmouseout="hints.hide()"  id="selectActionAction"/>
+                        </td>
+                    </tr>
+                    <tr class="exprReg">
+                        <td class="label"><bean:message key="modificar.termino.modificar.termino.select.action.param.expr.reg"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.exprReg}"/>
+                           <input type="text" name="exprReg" value="${value}" onmouseover="hints.show('modificar.termino.modificar.termino.select.action.param.expr.reg.title')" onmouseout="hints.hide()"  id="selectActionExprReg"/>
+                        </td>
+                    </tr>
+                    <tr class="valorViejo">
+                        <td class="label"><bean:message key="modificar.termino.modificar.termino.select.action.param.valor.viejo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.valorViejo}"/>
+                           <input type="text" name="valorViejo" value="${value}" onmouseover="hints.show('modificar.termino.modificar.termino.select.action.param.valor.viejo.title')" onmouseout="hints.hide()"  id="selectActionValorViejo"/>
+                        </td>
+                    </tr>
+                    <tr class="valorNuevo">
+                        <td class="label"><bean:message key="modificar.termino.modificar.termino.select.action.param.valor.nuevo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.valorNuevo}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.valorNuevoBackingList}">
+                                  <html:select name="form" property="valorNuevo" onmouseover="hints.show('modificar.termino.modificar.termino.select.action.param.valor.nuevo.title')" onmouseout="hints.hide()"  styleId="selectActionValorNuevo">
+                                      <html:optionsCollection name="form" property="valorNuevoBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="valorNuevo" onmouseover="hints.show('modificar.termino.modificar.termino.select.action.param.valor.nuevo.title')" onmouseout="hints.hide()"  styleId="selectActionValorNuevo"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="idioma">
+                        <td class="label"><bean:message key="modificar.termino.modificar.termino.select.action.param.idioma"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idioma}"/>
+                           <input type="text" name="idioma" value="${value}" onmouseover="hints.show('modificar.termino.modificar.termino.select.action.param.idioma.title')" onmouseout="hints.hide()"  id="selectActionIdioma"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('selectAction')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="modificar.termino.modificar.termino.select.action"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

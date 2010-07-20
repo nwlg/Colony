@@ -1,0 +1,328 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="analizaPulsacion" class="action">
+    <h3><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion"/></h3>
+    <div class="trigger">
+        <html:form styleId="buscarAvanzadoCUMostrarFormularioAvanzadoAnalizaPulsacionForm" action="/BuscarAvanzadoCU/MostrarFormularioAvanzadoAnalizaPulsacion" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="anyoPublicacion">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.anyo.publicacion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.anyoPublicacion}"/>
+                           <input type="text" name="anyoPublicacion" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.anyo.publicacion.title')" onmouseout="hints.hide()"  id="analizaPulsacionAnyoPublicacion"/>
+                        </td>
+                    </tr>
+                    <tr class="autor">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.autor"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.autor}"/>
+                           <input type="text" name="autor" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.autor.title')" onmouseout="hints.hide()"  id="analizaPulsacionAutor"/>
+                        </td>
+                    </tr>
+                    <tr class="buscadorContenido">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.buscador.contenido"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.buscadorContenido}"/>
+                           <input type="text" name="buscadorContenido" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.buscador.contenido.title')" onmouseout="hints.hide()"  id="analizaPulsacionBuscadorContenido"/>
+                        </td>
+                    </tr>
+                    <tr class="c_s_secuencia">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.c.s.secuencia"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.c_s_secuencia}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.c_s_secuenciaBackingList}">
+                                  <html:select name="form" property="c_s_secuencia" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.c.s.secuencia.title')" onmouseout="hints.hide()"  styleId="analizaPulsacionCSSecuencia">
+                                      <html:optionsCollection name="form" property="c_s_secuenciaBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="c_s_secuencia" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.c.s.secuencia.title')" onmouseout="hints.hide()"  styleId="analizaPulsacionCSSecuencia"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="comunidadesSeleccionadas">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.comunidades.seleccionadas"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.comunidadesSeleccionadas}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.comunidadesSeleccionadasBackingList}">
+                                  <html:select name="form" property="comunidadesSeleccionadas" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.comunidades.seleccionadas.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="analizaPulsacionComunidadesSeleccionadas">
+                                      <html:optionsCollection name="form" property="comunidadesSeleccionadasBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="comunidadesSeleccionadas" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.comunidades.seleccionadas.title')" onmouseout="hints.hide()"  styleId="analizaPulsacionComunidadesSeleccionadas"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="contexto">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.contexto"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.contexto}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.contextoBackingList}">
+                                  <html:select name="form" property="contexto" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.contexto.title')" onmouseout="hints.hide()"  styleId="analizaPulsacionContexto">
+                                      <html:optionsCollection name="form" property="contextoBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="contexto" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.contexto.title')" onmouseout="hints.hide()"  styleId="analizaPulsacionContexto"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="descripcion">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.descripcion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.descripcion}"/>
+                           <input type="text" name="descripcion" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.descripcion.title')" onmouseout="hints.hide()"  id="analizaPulsacionDescripcion"/>
+                        </td>
+                    </tr>
+                    <tr class="diaPublicacion">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.dia.publicacion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.diaPublicacion}"/>
+                           <input type="text" name="diaPublicacion" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.dia.publicacion.title')" onmouseout="hints.hide()"  id="analizaPulsacionDiaPublicacion"/>
+                        </td>
+                    </tr>
+                    <tr class="edad">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.edad"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.edad}"/>
+                           <input type="text" name="edad" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.edad.title')" onmouseout="hints.hide()"  id="analizaPulsacionEdad"/>
+                        </td>
+                    </tr>
+                    <tr class="formato">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.formato"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.formato}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.formatoBackingList}">
+                                  <html:select name="form" property="formato" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.formato.title')" onmouseout="hints.hide()"  styleId="analizaPulsacionFormato">
+                                      <html:optionsCollection name="form" property="formatoBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="formato" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.formato.title')" onmouseout="hints.hide()"  styleId="analizaPulsacionFormato"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="idiomaBuscador">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.idioma.buscador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idiomaBuscador}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.idiomaBuscadorBackingList}">
+                                  <html:select name="form" property="idiomaBuscador" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.idioma.buscador.title')" onmouseout="hints.hide()"  styleId="analizaPulsacionIdiomaBuscador">
+                                      <html:optionsCollection name="form" property="idiomaBuscadorBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="idiomaBuscador" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.idioma.buscador.title')" onmouseout="hints.hide()"  styleId="analizaPulsacionIdiomaBuscador"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="mesPublicacion">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.mes.publicacion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.mesPublicacion}"/>
+                           <input type="text" name="mesPublicacion" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.mes.publicacion.title')" onmouseout="hints.hide()"  id="analizaPulsacionMesPublicacion"/>
+                        </td>
+                    </tr>
+                    <tr class="areaCurricular">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.area.curricular"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.areaCurricular}"/>
+                           <input type="text" name="areaCurricular" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.area.curricular.title')" onmouseout="hints.hide()"  id="analizaPulsacionAreaCurricular"/>
+                        </td>
+                    </tr>
+                    <tr class="procesoCognitivo">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.proceso.cognitivo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.procesoCognitivo}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.procesoCognitivoBackingList}">
+                                  <html:select name="form" property="procesoCognitivo" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.proceso.cognitivo.title')" onmouseout="hints.hide()"  styleId="analizaPulsacionProcesoCognitivo">
+                                      <html:optionsCollection name="form" property="procesoCognitivoBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="procesoCognitivo" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.proceso.cognitivo.title')" onmouseout="hints.hide()"  styleId="analizaPulsacionProcesoCognitivo"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="nivelAgregacion">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.nivel.agregacion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.nivelAgregacion}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.nivelAgregacionBackingList}">
+                                  <html:select name="form" property="nivelAgregacion" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.nivel.agregacion.title')" onmouseout="hints.hide()"  styleId="analizaPulsacionNivelAgregacion">
+                                      <html:optionsCollection name="form" property="nivelAgregacionBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="nivelAgregacion" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.nivel.agregacion.title')" onmouseout="hints.hide()"  styleId="analizaPulsacionNivelAgregacion"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="recurso">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.recurso"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.recurso}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.recursoBackingList}">
+                                  <html:select name="form" property="recurso" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.recurso.title')" onmouseout="hints.hide()"  styleId="analizaPulsacionRecurso">
+                                      <html:optionsCollection name="form" property="recursoBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="recurso" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.recurso.title')" onmouseout="hints.hide()"  styleId="analizaPulsacionRecurso"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="titulo">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.titulo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.titulo}"/>
+                           <input type="text" name="titulo" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.titulo.title')" onmouseout="hints.hide()"  id="analizaPulsacionTitulo"/>
+                        </td>
+                    </tr>
+                    <tr class="valoracion">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.valoracion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.valoracion}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.valoracionBackingList}">
+                                  <html:select name="form" property="valoracion" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.valoracion.title')" onmouseout="hints.hide()"  styleId="analizaPulsacionValoracion">
+                                      <html:optionsCollection name="form" property="valoracionBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="valoracion" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.valoracion.title')" onmouseout="hints.hide()"  styleId="analizaPulsacionValoracion"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="contadorAmbito">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.contador.ambito"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.contadorAmbito}"/>
+                           <input type="text" name="contadorAmbito" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.contador.ambito.title')" onmouseout="hints.hide()"  id="analizaPulsacionContadorAmbito"/>
+                        </td>
+                    </tr>
+                    <tr class="contadorAreasCurriculares">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.contador.areas.curriculares"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.contadorAreasCurriculares}"/>
+                           <input type="text" name="contadorAreasCurriculares" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.contador.areas.curriculares.title')" onmouseout="hints.hide()"  id="analizaPulsacionContadorAreasCurriculares"/>
+                        </td>
+                    </tr>
+                    <tr class="contadorPropiedadesContenido">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.contador.propiedades.contenido"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.contadorPropiedadesContenido}"/>
+                           <input type="text" name="contadorPropiedadesContenido" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.contador.propiedades.contenido.title')" onmouseout="hints.hide()"  id="analizaPulsacionContadorPropiedadesContenido"/>
+                        </td>
+                    </tr>
+                    <tr class="validado">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.validado"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.validado}"/>
+                           <input type="text" name="validado" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.validado.title')" onmouseout="hints.hide()"  id="analizaPulsacionValidado"/>
+                        </td>
+                    </tr>
+                    <tr class="horaPublicacion">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.hora.publicacion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.horaPublicacion}"/>
+                           <input type="text" name="horaPublicacion" value="${value}" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.hora.publicacion.title')" onmouseout="hints.hide()"  id="analizaPulsacionHoraPublicacion"/>
+                        </td>
+                    </tr>
+                    <tr class="destinatarios">
+                        <td class="label"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.destinatarios"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.destinatarios}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.destinatariosBackingList}">
+                                  <html:select name="form" property="destinatarios" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.destinatarios.title')" onmouseout="hints.hide()"  styleId="analizaPulsacionDestinatarios">
+                                      <html:optionsCollection name="form" property="destinatariosBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="destinatarios" onmouseover="hints.show('buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.destinatarios.title')" onmouseout="hints.hide()"  styleId="analizaPulsacionDestinatarios"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('analizaPulsacion')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

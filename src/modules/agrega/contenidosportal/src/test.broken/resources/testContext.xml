@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+
+
+    <!-- ========================= DATASOURCE DEFINITION ========================= -->
+
+    <!-- Local DataSource that works in any environment -->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName"><value>com.mysql.jdbc.Driver</value></property>
+        <property name="username"><value>root</value></property>
+        <property name="password"><value>admin</value></property>
+        <property name="url"><value>jdbc:mysql://localhost:3306/unit</value></property>
+    </bean>
+
+    <!-- ====================== End of DATASOURCE DEFINITION ====================== -->
+
+    <!-- ===================== TRANSACTION MANAGER DEFINITION ========================= -->
+
+    <!-- (local) Transaction Manager -->
+    <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <property name="sessionFactory"><ref bean="sessionFactory"/></property>
+    </bean>
+
+    <!-- ===================== TRANSACTION MANAGER DEFINITION ========================= -->
+
+
+    <!-- ========================= GENERAL DEFINITIONS ========================= -->
+
+    <!-- Message source for this context, loaded from localized "messages_xx" files -->
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename"><value>messages</value></property>
+    </bean>
+
+	<bean id="beanMapper" class="net.sf.dozer.util.mapping.DozerBeanMapper" singleton="true">
+		<property name="mappingFiles">
+			<list>
+				<value>defaultDozerMappings.xml</value>
+				<value>customDozerMappings.xml</value>				
+				<!-- dozer mappings merge-point -->
+			</list>
+		</property>
+	</bean>
+    <!-- applicationContext merge-point -->
+
+    <!-- Hibernate SessionFactory -->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource"><ref bean="dataSource"/></property>
+        <property name="mappingResources">
+            <list>
+                <value>es/pode/contenidos/negocio/faqs/dominio/Faq.hbm.xml</value>
+                <value>es/pode/contenidos/negocio/faqs/dominio/CategoriaFaq.hbm.xml</value>
+                <value>es/pode/contenidos/negocio/faqs/dominio/DescripcionFaq.hbm.xml</value>
+                <value>es/pode/contenidos/negocio/faqs/dominio/CategoriaIdiomaFaq.hbm.xml</value>
+                <value>es/pode/contenidos/negocio/descargas/dominio/DescDescarga.hbm.xml</value>
+                <value>es/pode/contenidos/negocio/descargas/dominio/Descarga.hbm.xml</value>
+                <value>es/pode/contenidos/negocio/generacionDinamica/dominio/ContenidoODE.hbm.xml</value>
+                <value>es/pode/contenidos/negocio/noticias/dominio/CategoriaNoticia.hbm.xml</value>
+                <value>es/pode/contenidos/negocio/noticias/dominio/Noticia.hbm.xml</value>
+                <value>es/pode/contenidos/negocio/noticias/dominio/CategoriaIdiomaNoticia.hbm.xml</value>
+                <value>es/pode/contenidos/negocio/noticias/dominio/DescripcionNoticia.hbm.xml</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+                <prop key="hibernate.cache.use_query_cache">false</prop>
+                <prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+                <prop key="hibernate.cache.query_cache_factory">org.hibernate.cache.StandardQueryCacheFactory</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- The Hibernate interceptor -->
+    <bean id="hibernateInterceptor" class="org.springframework.orm.hibernate3.HibernateInterceptor">
+        <property name="sessionFactory"><ref bean="sessionFactory"/></property>
+    </bean>
+
+    <!-- Faq Entity Proxy with inner Faq Entity implementation -->
+    <bean id="faqDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.contenidos.negocio.faqs.dominio.FaqDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                
+                <property name="categoriaFaqDao"><ref bean="categoriaFaqDao"/></property>
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.contenidos.negocio.faqs.dominio.FaqDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- CategoriaFaq Entity Proxy with inner CategoriaFaq Entity implementation -->
+    <bean id="categoriaFaqDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.contenidos.negocio.faqs.dominio.CategoriaFaqDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.contenidos.negocio.faqs.dominio.CategoriaFaqDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- DescripcionFaq Entity Proxy with inner DescripcionFaq Entity implementation -->
+    <bean id="descripcionFaqDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.contenidos.negocio.faqs.dominio.DescripcionFaqDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.contenidos.negocio.faqs.dominio.DescripcionFaqDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- CategoriaIdiomaFaq Entity Proxy with inner CategoriaIdiomaFaq Entity implementation -->
+    <bean id="categoriaIdiomaFaqDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.contenidos.negocio.faqs.dominio.CategoriaIdiomaFaqDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.contenidos.negocio.faqs.dominio.CategoriaIdiomaFaqDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- DescDescarga Entity Proxy with inner DescDescarga Entity implementation -->
+    <bean id="descDescargaDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.contenidos.negocio.descargas.dominio.DescDescargaDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.contenidos.negocio.descargas.dominio.DescDescargaDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- Descarga Entity Proxy with inner Descarga Entity implementation -->
+    <bean id="descargaDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.contenidos.negocio.descargas.dominio.DescargaDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.contenidos.negocio.descargas.dominio.DescargaDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- ContenidoODE Entity Proxy with inner ContenidoODE Entity implementation -->
+    <bean id="contenidoODEDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.contenidos.negocio.generacionDinamica.dominio.ContenidoODEDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.contenidos.negocio.generacionDinamica.dominio.ContenidoODEDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- CategoriaNoticia Entity Proxy with inner CategoriaNoticia Entity implementation -->
+    <bean id="categoriaNoticiaDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.contenidos.negocio.noticias.dominio.CategoriaNoticiaDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.contenidos.negocio.noticias.dominio.CategoriaNoticiaDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- Noticia Entity Proxy with inner Noticia Entity implementation -->
+    <bean id="noticiaDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.contenidos.negocio.noticias.dominio.NoticiaDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.contenidos.negocio.noticias.dominio.NoticiaDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- CategoriaIdiomaNoticia Entity Proxy with inner CategoriaIdiomaNoticia Entity implementation -->
+    <bean id="categoriaIdiomaNoticiaDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.contenidos.negocio.noticias.dominio.CategoriaIdiomaNoticiaDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.contenidos.negocio.noticias.dominio.CategoriaIdiomaNoticiaDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- DescripcionNoticia Entity Proxy with inner DescripcionNoticia Entity implementation -->
+    <bean id="descripcionNoticiaDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.contenidos.negocio.noticias.dominio.DescripcionNoticiaDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.contenidos.negocio.noticias.dominio.DescripcionNoticiaDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- ========================= Start of SERVICE DEFINITIONS ========================= -->
+
+    <!-- Service Transactional Interceptor -->
+    <bean id="serviceTransactionInterceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor">
+        <property name="transactionManager"><ref bean="transactionManager"/></property>
+        <property name="transactionAttributeSource">
+            <value>
+                es.pode.contenidos.negocio.faqs.servicio.SrvFaqService.obtenerFaqs=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.faqs.servicio.SrvFaqService.crearFaq=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.faqs.servicio.SrvFaqService.modificarFaq=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.faqs.servicio.SrvFaqService.eliminarFaqs=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.faqs.servicio.SrvFaqService.consultaFaq=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.faqs.servicio.SrvFaqService.obtenerFaqsPorIdioma=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.faqs.servicio.SrvFaqService.obtenCategoriasFaqs=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.faqs.servicio.SrvFaqService.obtenFaqsPorIdiomaCategoria=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.faqs.servicio.SrvFaqService.obtenerFaqTraducida=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.faqs.servicio.SrvFaqService.crearCategoria=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.faqs.servicio.SrvFaqService.modificarCategoria=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.faqs.servicio.SrvFaqService.eliminarCategoria=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.faqs.servicio.SrvFaqService.eliminarCategorias=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.faqs.servicio.SrvFaqService.listarCategorias=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.faqs.servicio.SrvFaqService.obtenerCategoria=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.faqs.servicio.SrvFaqService.limpiarCategoria=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.faqs.servicio.SrvFaqService.limpiarFaq=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.faqs.servicio.SrvFaqService.obtenerCategorias=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.faqs.servicio.SrvFaqService.obtenerCategoriasTraducidas=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.faqs.servicio.SrvFaqService.obtenerFaqsFromIdCategoria=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.faqs.servicio.SrvFaqService.obtenerFaqsTraducidas=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.faqs.servicio.SrvFaqService.eliminarFaq=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.faqs.servicio.SrvFaqService.obtenerFaqsBloquesIdiomas=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.logs.servicio.SrvLogService.listarFicherosLog=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.logs.servicio.SrvLogService.eliminarFicheroLog=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.logs.servicio.SrvLogService.recuperarFicheroLog=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.informes.servicio.SrvInformeService.listarInformes=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.informes.servicio.SrvInformeService.eliminarInforme=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.informes.servicio.SrvInformeService.recuperarInforme=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.informes.servicio.SrvInformeService.listarInformesMas=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.informes.servicio.SrvInformeService.recuperarInformeMas=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.informes.servicio.SrvInformeService.listarInformesFederados=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.informes.servicio.SrvInformeService.eliminarInformeFederado=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.informes.servicio.SrvInformeService.recuperarInformesFederados=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.descargas.servicio.SrvDescargas.modificarDescarga=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.descargas.servicio.SrvDescargas.obtenerDescargasActivas=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.descargas.servicio.SrvDescargas.obtenerDescargasNoActivas=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.descargas.servicio.SrvDescargas.obtenerDescarga=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.descargas.servicio.SrvDescargas.obtenerDescDescargas=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.descargas.servicio.SrvDescargas.insertarDescDescarga=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.descargas.servicio.SrvDescargas.insertarDescDescargas=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.descargas.servicio.SrvDescargas.descargar=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.descargas.servicio.SrvDescargas.obtenerDescDescargasIdioma=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.descargas.servicio.SrvDescargas.eliminarDescargas=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.generacionDinamica.servicio.SrvGeneracionDinamicaService.obtenODEDiario=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.generacionDinamica.servicio.SrvGeneracionDinamicaService.generaODEDiario=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.noticias.servicio.SrvNoticiasService.crearNoticia=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.noticias.servicio.SrvNoticiasService.modificarNoticia=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.noticias.servicio.SrvNoticiasService.obtenerNoticias=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.noticias.servicio.SrvNoticiasService.obtenerNoticia=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.noticias.servicio.SrvNoticiasService.eliminarNoticia=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.noticias.servicio.SrvNoticiasService.obtenerCategoria=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.noticias.servicio.SrvNoticiasService.obtenerCategorias=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.noticias.servicio.SrvNoticiasService.eliminarNoticias=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.noticias.servicio.SrvNoticiasService.obtenerNoticiasActivasPorIdiomayCategoria=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.noticias.servicio.SrvNoticiasService.almacenarImagenNoticia=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.noticias.servicio.SrvNoticiasService.listarNoticiasActivasPorIdioma=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.noticias.servicio.SrvNoticiasService.obtenerNoticiasActivas=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.noticias.servicio.SrvNoticiasService.crearCategoria=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.noticias.servicio.SrvNoticiasService.eliminarCategoria=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.noticias.servicio.SrvNoticiasService.eliminarCategorias=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.noticias.servicio.SrvNoticiasService.modificarCategoria=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.noticias.servicio.SrvNoticiasService.limpiarCategoria=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.noticias.servicio.SrvNoticiasService.limpiarNoticia=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.noticias.servicio.SrvNoticiasService.obtenerNoticiaTraducida=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.noticias.servicio.SrvNoticiasService.obtenerNoticiasTraducidas=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.noticias.servicio.SrvNoticiasService.obtenerCategoriasTraducidas=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.noticias.servicio.SrvNoticiasService.obtenerCategoriaTraducida=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.noticias.servicio.SrvNoticiasService.obtenerNoticiasFromIdCategoria=PROPAGATION_REQUIRED
+                es.pode.contenidos.negocio.noticias.servicio.SrvNoticiasService.eliminarImagenNoticia=PROPAGATION_REQUIRED
+            </value>
+        </property>
+    </bean>
+
+    <!-- SrvFaqService Service Proxy with inner SrvFaqService Service Implementation -->
+    <bean id="srvFaqService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.contenidos.negocio.faqs.servicio.SrvFaqServiceImpl">
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                <property name="faqDao"><ref bean="faqDao"/></property>
+                <property name="categoriaFaqDao"><ref bean="categoriaFaqDao"/></property>
+                <property name="descripcionFaqDao"><ref bean="descripcionFaqDao"/></property>
+                <property name="categoriaIdiomaFaqDao"><ref bean="categoriaIdiomaFaqDao"/></property>
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.contenidos.negocio.faqs.servicio.SrvFaqService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceTransactionInterceptor</value>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvLogService Service Proxy with inner SrvLogService Service Implementation -->
+    <bean id="srvLogService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.contenidos.negocio.logs.servicio.SrvLogServiceImpl">
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.contenidos.negocio.logs.servicio.SrvLogService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceTransactionInterceptor</value>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvInformeService Service Proxy with inner SrvInformeService Service Implementation -->
+    <bean id="srvInformeService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.contenidos.negocio.informes.servicio.SrvInformeServiceImpl">
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.contenidos.negocio.informes.servicio.SrvInformeService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceTransactionInterceptor</value>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvDescargas Service Proxy with inner SrvDescargas Service Implementation -->
+    <bean id="srvDescargas" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.contenidos.negocio.descargas.servicio.SrvDescargasImpl">
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                <property name="descargaDao"><ref bean="descargaDao"/></property>
+                <property name="descDescargaDao"><ref bean="descDescargaDao"/></property>
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.contenidos.negocio.descargas.servicio.SrvDescargas</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceTransactionInterceptor</value>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvGeneracionDinamicaService Service Proxy with inner SrvGeneracionDinamicaService Service Implementation -->
+    <bean id="srvGeneracionDinamicaService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.contenidos.negocio.generacionDinamica.servicio.SrvGeneracionDinamicaServiceImpl">
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                <property name="contenidoODEDao"><ref bean="contenidoODEDao"/></property>
+	            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.contenidos.negocio.generacionDinamica.servicio.SrvGeneracionDinamicaService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceTransactionInterceptor</value>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvNoticiasService Service Proxy with inner SrvNoticiasService Service Implementation -->
+    <bean id="srvNoticiasService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.contenidos.negocio.noticias.servicio.SrvNoticiasServiceImpl">
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                <property name="categoriaIdiomaNoticiaDao"><ref bean="categoriaIdiomaNoticiaDao"/></property>
+                <property name="descripcionNoticiaDao"><ref bean="descripcionNoticiaDao"/></property>
+                <property name="categoriaNoticiaDao"><ref bean="categoriaNoticiaDao"/></property>
+                <property name="noticiaDao"><ref bean="noticiaDao"/></property>
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.contenidos.negocio.noticias.servicio.SrvNoticiasService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceTransactionInterceptor</value>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- ========================= End of SERVICE DEFINITIONS ========================= -->
+
+    <!-- ========================= CONSTANTS PROPERTIES BEAN ========================= -->    
+    <bean id="propiedadesConstantes" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	      <property name="locations">
+		  <list>
+			  <value>classpath:spring.properties</value>
+		  </list>
+		  </property>
+    </bean>
+    <!-- ========================= END CONSTANTS PROPERTIES BEAN ========================= -->    
+</beans>

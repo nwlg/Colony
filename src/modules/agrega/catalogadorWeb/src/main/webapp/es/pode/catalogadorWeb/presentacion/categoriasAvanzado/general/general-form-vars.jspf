@@ -1,0 +1,62 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="descripciones" value="${form.descripciones}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="comboCaractEstructuraFormal" value="${form.comboCaractEstructuraFormal}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="ambitos" value="${form.ambitos}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="identificadores" value="${form.identificadores}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="palabrasClave" value="${form.palabrasClave}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="estructura" value="${form.estructura}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="comboCaractAngulacion" value="${form.comboCaractAngulacion}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="comboCaractTipoPlano" value="${form.comboCaractTipoPlano}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="nivelAgregacion" value="${form.nivelAgregacion}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="comboCaractBandaSonora" value="${form.comboCaractBandaSonora}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="comboCaractLuz" value="${form.comboCaractLuz}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="comboCaractFormato" value="${form.comboCaractFormato}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idiomas" value="${form.idiomas}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="comboIdioma" value="${form.comboIdioma}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="caracteristicas" value="${form.caracteristicas}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="comboCaractDimension" value="${form.comboCaractDimension}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="comboCaractColor" value="${form.comboCaractColor}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="titulos" value="${form.titulos}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="mensajesError" value="${form.mensajesError}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="identificadorOde" value="${form.identificadorOde}"/>
+    </c:catch>
+</div>

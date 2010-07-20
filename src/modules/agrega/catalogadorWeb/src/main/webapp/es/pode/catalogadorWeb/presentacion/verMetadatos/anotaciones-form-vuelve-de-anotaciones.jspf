@@ -1,0 +1,13 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="vuelveDeAnotaciones" class="action">
+    <h3><bean:message key="ver.metadatos.anotaciones.form.vuelve.de.anotaciones"/></h3>
+    <div class="trigger">
+        <form id="verMetadatosAnotacionesFormVuelveDeAnotacionesForm" action='<html:rewrite action="/VerMetadatos/AnotacionesFormVuelveDeAnotaciones"/>' method="post">
+               <html:submit onmouseover="hints.show('vuelveDeAnotaciones')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="ver.metadatos.anotaciones.form.vuelve.de.anotaciones"/>
+               </html:submit>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

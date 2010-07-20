@@ -1,0 +1,69 @@
+#continuar.action {}
+#continuar.action #form_submit {}
+
+#continuar.action .trabajo {}
+#continuar.action .trabajo .label {}
+#continuar.action .trabajo .field {}
+#continuar.action .grupoTrabajo {}
+#continuar.action .grupoTrabajo .label {}
+#continuar.action .grupoTrabajo .field {}
+#continuar.action .trigger {}
+#continuar.action .trigger .label {}
+#continuar.action .trigger .field {}
+#continuar.action .grupoTrigger {}
+#continuar.action .grupoTrigger .label {}
+#continuar.action .grupoTrigger .field {}
+#continuar.action .periodicidad {}
+#continuar.action .periodicidad .label {}
+#continuar.action .periodicidad .field {}
+#continuar.action .tipoTarea {}
+#continuar.action .tipoTarea .label {}
+#continuar.action .tipoTarea .field {}
+#continuar.action .dia {}
+#continuar.action .dia .label {}
+#continuar.action .dia .field {}
+#continuar.action .mes {}
+#continuar.action .mes .label {}
+#continuar.action .mes .field {}
+#continuar.action .anio {}
+#continuar.action .anio .label {}
+#continuar.action .anio .field {}
+#continuar.action .hora {}
+#continuar.action .hora .label {}
+#continuar.action .hora .field {}
+#continuar.action .minutos {}
+#continuar.action .minutos .label {}
+#continuar.action .minutos .field {}
+#continuar.action .diaDesde {}
+#continuar.action .diaDesde .label {}
+#continuar.action .diaDesde .field {}
+#continuar.action .mesDesde {}
+#continuar.action .mesDesde .label {}
+#continuar.action .mesDesde .field {}
+#continuar.action .anioDesde {}
+#continuar.action .anioDesde .label {}
+#continuar.action .anioDesde .field {}
+#continuar.action .diaHasta {}
+#continuar.action .diaHasta .label {}
+#continuar.action .diaHasta .field {}
+#continuar.action .mesHasta {}
+#continuar.action .mesHasta .label {}
+#continuar.action .mesHasta .field {}
+#continuar.action .anioHasta {}
+#continuar.action .anioHasta .label {}
+#continuar.action .anioHasta .field {}
+#continuar.action .msgDescTrabajo {}
+#continuar.action .msgDescTrabajo .label {}
+#continuar.action .msgDescTrabajo .field {}
+#continuar.action .msgEliminado {}
+#continuar.action .msgEliminado .label {}
+#continuar.action .msgEliminado .field {}
+#continuar.action .msgNoEliminado {}
+#continuar.action .msgNoEliminado .label {}
+#continuar.action .msgNoEliminado .field {}
+
+#cancelar.action {}
+#cancelar.action #form_submit {}
+
+
+

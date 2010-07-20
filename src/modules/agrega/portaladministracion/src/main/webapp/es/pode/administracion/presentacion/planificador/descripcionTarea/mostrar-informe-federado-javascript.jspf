@@ -1,0 +1,37 @@
+
+    <tiles:put name="javascript" type="string">
+        <script type="text/javascript" language="Javascript1.1" src="<html:rewrite action="/formValidation"/>"></script>
+        <html:javascript formName="descripcionTareaMostrarInformeFederadoVolverForm" method="validateMostrarInformeFederadoVolverForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'descripcion.tarea.mostrar.informe.federado.volver.param.grupo.trabajo.title':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.param.grupo.trabajo.title"/></formatting:escape>',
+                'descripcion.tarea.mostrar.informe.federado.volver.param.trigger.title':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.param.trigger.title"/></formatting:escape>',
+                'descripcion.tarea.mostrar.informe.federado.volver.param.grupo.trigger.title':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.param.grupo.trigger.title"/></formatting:escape>',
+                'descripcion.tarea.mostrar.informe.federado.volver.param.tipo.tarea.title':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.param.tipo.tarea.title"/></formatting:escape>',
+                'descripcion.tarea.mostrar.informe.federado.volver.param.periodicidad.title':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.param.periodicidad.title"/></formatting:escape>',
+                'descripcion.tarea.mostrar.informe.federado.volver.param.formato.title':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.param.formato.title"/></formatting:escape>',
+                'descripcion.tarea.mostrar.informe.federado.volver.param.informe.title':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.param.informe.title"/></formatting:escape>',
+                'descripcion.tarea.mostrar.informe.federado.volver.param.anio.title':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.param.anio.title"/></formatting:escape>',
+                'descripcion.tarea.mostrar.informe.federado.volver.param.mes.title':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.param.mes.title"/></formatting:escape>',
+                'descripcion.tarea.mostrar.informe.federado.volver.param.dia.title':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.param.dia.title"/></formatting:escape>',
+                'descripcion.tarea.mostrar.informe.federado.volver.param.hora.title':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.param.hora.title"/></formatting:escape>',
+                'descripcion.tarea.mostrar.informe.federado.volver.param.minutos.title':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.param.minutos.title"/></formatting:escape>',
+                'descripcion.tarea.mostrar.informe.federado.volver.param.msg.desc.trabajo.title':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.param.msg.desc.trabajo.title"/></formatting:escape>',
+                'descripcion.tarea.mostrar.informe.federado.volver.param.msg.informe.title':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.param.msg.informe.title"/></formatting:escape>',
+                'descripcion.tarea.mostrar.informe.federado.volver.param.msg.no.informe.title':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.param.msg.no.informe.title"/></formatting:escape>',
+                'Volver':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.title"/></formatting:escape>',
+                'Volver_no':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.title.notallowed"/></formatting:escape>',
+                'Volver_reset':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.title.reset"/></formatting:escape>',
+                'Volver_noreset':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

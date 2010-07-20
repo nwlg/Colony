@@ -1,0 +1,60 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="validaFormulario" class="action">
+    <h3><bean:message key="crear.categoria.faq.formulario.alta.valida.formulario"/></h3>
+    <div class="trigger">
+        <html:form styleId="crearCategoriaFaqFormularioAltaValidaFormularioForm" action="/CrearCategoriaFaq/FormularioAltaValidaFormulario" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="nombreCategoria">
+                        <td class="label"><bean:message key="crear.categoria.faq.formulario.alta.valida.formulario.param.nombre.categoria"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.nombreCategoria}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.nombreCategoriaBackingList}">
+                                  <html:select name="form" property="nombreCategoriaAsArray" onmouseover="hints.show('crear.categoria.faq.formulario.alta.valida.formulario.param.nombre.categoria.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="validaFormularioNombreCategoria">
+                                      <html:optionsCollection name="form" property="nombreCategoriaBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="nombreCategoriaAsArray" onmouseover="hints.show('crear.categoria.faq.formulario.alta.valida.formulario.param.nombre.categoria.title')" onmouseout="hints.hide()"  styleId="validaFormularioNombreCategoria"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="idiomas">
+                        <td class="label"><bean:message key="crear.categoria.faq.formulario.alta.valida.formulario.param.idiomas"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idiomas}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.idiomasBackingList}">
+                                  <html:select name="form" property="idiomasAsArray" onmouseover="hints.show('crear.categoria.faq.formulario.alta.valida.formulario.param.idiomas.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="validaFormularioIdiomas">
+                                      <html:optionsCollection name="form" property="idiomasBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="idiomasAsArray" onmouseover="hints.show('crear.categoria.faq.formulario.alta.valida.formulario.param.idiomas.title')" onmouseout="hints.hide()"  styleId="validaFormularioIdiomas"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('validaFormulario')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="crear.categoria.faq.formulario.alta.valida.formulario"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

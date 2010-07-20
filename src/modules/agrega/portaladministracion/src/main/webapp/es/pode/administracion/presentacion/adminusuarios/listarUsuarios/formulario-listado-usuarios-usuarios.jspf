@@ -1,0 +1,109 @@
+<div id="usuarios" class="table">
+    <form id="usuarios" name="" action="" method="post" enctype="multipart/form-data">
+    <display:table name="${form.usuarios}" uid="row"
+        export="false" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:column media="html">
+            <input type="checkbox" name="idRowSelectionAsArray" value="${row.id}" title='<bean:message key="select.deselect.this.row"/>'/>
+        </display:column>
+
+
+        <display:column media="html"
+            headerClass="id" paramId="id"
+            sortProperty="id" sortable="true"
+            titleKey="listar.usuarios.formulario.listado.usuarios.param.usuarios.id"
+            >
+            <div class="id">
+		
+ <c:set var="value" value="${row.id}"/>
+ <html:link action="/ListarUsuarios/FormularioListadoUsuariosVerUsuario?id=${row.id}" onmouseover="hints.show('listar.usuarios.formulario.listado.usuarios.ver.usuario.param.id.title')" onmouseout="hints.hide()">${row.id}</html:link>
+ <input type="hidden" name="id" value="${value}" id="usuariosId${row_rowNum}"/>
+            </div>
+       </display:column>
+   
+
+
+        <display:column media="html"
+            headerClass="nombre" paramId="nombre"
+            sortProperty="nombre" sortable="true"
+            titleKey="listar.usuarios.formulario.listado.usuarios.param.usuarios.nombre"
+            >
+ <html:link action="/ListarUsuarios/FormularioListadoUsuariosModificar?id=${row.id}" onmouseover="hints.show('Modificar')" onmouseout="hints.hide()">
+     ${row.nombre}
+ </html:link>
+            </display:column>
+   
+
+
+        <display:column media="html"
+            headerClass="apellido1" paramId="apellido1"
+            sortProperty="apellido1" sortable="true"
+            titleKey="listar.usuarios.formulario.listado.usuarios.param.usuarios.apellido1"
+            property="apellido1" />
+   
+
+
+        <display:column media="html"
+            headerClass="apellido2" paramId="apellido2"
+            sortProperty="apellido2" sortable="true"
+            titleKey="listar.usuarios.formulario.listado.usuarios.param.usuarios.apellido2"
+            property="apellido2" />
+   
+
+
+        <display:column media="html"
+            headerClass="email" paramId="email"
+            sortProperty="email" sortable="true"
+            titleKey="listar.usuarios.formulario.listado.usuarios.param.usuarios.email"
+            property="email" />
+   
+
+
+        <display:column media="html"
+            headerClass="NIF" paramId="NIF"
+            sortProperty="NIF" sortable="true"
+            titleKey="listar.usuarios.formulario.listado.usuarios.param.usuarios.nif"
+            property="NIF" />
+   
+
+
+        <display:column media="html"
+            headerClass="usuario" paramId="usuario"
+            sortProperty="usuario" sortable="true"
+            titleKey="listar.usuarios.formulario.listado.usuarios.param.usuarios.usuario"
+            property="usuario" />
+   
+
+
+        <display:column media="html"
+            headerClass="idioma" paramId="idioma"
+            sortProperty="idioma" sortable="true"
+            titleKey="listar.usuarios.formulario.listado.usuarios.param.usuarios.idioma"
+            property="idioma" />
+   
+
+
+        <display:column media="html"
+            headerClass="idiomaBusqueda" paramId="idiomaBusqueda"
+            sortProperty="idiomaBusqueda" sortable="true"
+            titleKey="listar.usuarios.formulario.listado.usuarios.param.usuarios.idioma.busqueda"
+            property="idiomaBusqueda" />
+   
+
+
+        <display:column media="html"
+            headerClass="tipoEmpaquetador" paramId="tipoEmpaquetador"
+            sortProperty="tipoEmpaquetador" sortable="true"
+            titleKey="listar.usuarios.formulario.listado.usuarios.param.usuarios.tipo.empaquetador"
+            property="tipoEmpaquetador" />
+   
+    </display:table>
+    <c:if test="${!empty form.usuarios}">
+            <input type="submit" value="<bean:message key="listar.usuarios.formulario.listado.usuarios.baja"/>" onclick="this.form.name='listarUsuariosFormularioListadoUsuariosBajaForm';this.form.action='<html:rewrite action="/ListarUsuarios/FormularioListadoUsuariosBaja"/>';" onmouseover="hints.show('Baja')" onmouseout="hints.hide()"/>
+            <input type="button" value="<bean:message key="select.deselect.all"/>" onclick="var boxes=this.form.elements['idRowSelectionAsArray'];var setChecked=(boxes.length==0)?false:!boxes[0].checked;for(var i=0;i<boxes.length;i++)boxes[i].checked=setChecked;"/>
+    </c:if>
+    </form>
+</div>
+

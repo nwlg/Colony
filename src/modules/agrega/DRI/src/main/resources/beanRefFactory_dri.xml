@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans
+    PUBLIC "-//SPRING//DTD BEAN//EN"
+           "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+    <bean id="beanRefFactory"
+         class="org.springframework.context.support.ClassPathXmlApplicationContext">
+        <constructor-arg>
+           <list>
+                <value>user-applicationContext_dri.xml</value>
+                <value>applicationContext-acegiSecurity_dri.xml</value>
+		<value>applicationContext-acegiSecurity-frontend_dri.xml</value>
+                <value>applicationContext_dri.xml</value>
+                <value>applicationContext-dataSource_dri.xml</value>                
+                    <!-- beanRefFactory merge-point -->
+
+           </list>
+        </constructor-arg>
+    </bean>
+
+</beans>

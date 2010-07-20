@@ -1,0 +1,37 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'anotacion.listado.anotaciones.form.eliminar.param.titulo.anotacion.title':'<formatting:escape language="javascript"><bean:message key="anotacion.listado.anotaciones.form.eliminar.param.titulo.anotacion.title"/></formatting:escape>',
+                'anotacion.listado.anotaciones.form.detalles.param.titulo.anotacion.title':'<formatting:escape language="javascript"><bean:message key="anotacion.listado.anotaciones.form.detalles.param.titulo.anotacion.title"/></formatting:escape>',
+                'anotacion.listado.anotaciones.form.detalles.param.identificador.ode.title':'<formatting:escape language="javascript"><bean:message key="anotacion.listado.anotaciones.form.detalles.param.identificador.ode.title"/></formatting:escape>',
+                'anotacion.listado.anotaciones.form.detalles.param.boton.pulsado.title':'<formatting:escape language="javascript"><bean:message key="anotacion.listado.anotaciones.form.detalles.param.boton.pulsado.title"/></formatting:escape>',
+                'anotacion.listado.anotaciones.form.inicio.avanzado.param.identificador.ode.title':'<formatting:escape language="javascript"><bean:message key="anotacion.listado.anotaciones.form.inicio.avanzado.param.identificador.ode.title"/></formatting:escape>',
+                'anotacion.listado.anotaciones.form.inicio.avanzado.param.titulo.anotacion.title':'<formatting:escape language="javascript"><bean:message key="anotacion.listado.anotaciones.form.inicio.avanzado.param.titulo.anotacion.title"/></formatting:escape>',
+                'anotacion.listado.anotaciones.form.inicio.avanzado.param.listado.anotaciones.title':'<formatting:escape language="javascript"><bean:message key="anotacion.listado.anotaciones.form.inicio.avanzado.param.listado.anotaciones.title"/></formatting:escape>',
+                'Eliminar':'<formatting:escape language="javascript"><bean:message key="anotacion.listado.anotaciones.form.eliminar.title"/></formatting:escape>',
+                'Eliminar_no':'<formatting:escape language="javascript"><bean:message key="anotacion.listado.anotaciones.form.eliminar.title.notallowed"/></formatting:escape>',
+                'Eliminar_reset':'<formatting:escape language="javascript"><bean:message key="anotacion.listado.anotaciones.form.eliminar.title.reset"/></formatting:escape>',
+                'Eliminar_noreset':'<formatting:escape language="javascript"><bean:message key="anotacion.listado.anotaciones.form.eliminar.title.reset.not.allowed"/></formatting:escape>',
+                'Detalles':'<formatting:escape language="javascript"><bean:message key="anotacion.listado.anotaciones.form.detalles.title"/></formatting:escape>',
+                'Detalles_no':'<formatting:escape language="javascript"><bean:message key="anotacion.listado.anotaciones.form.detalles.title.notallowed"/></formatting:escape>',
+                'Detalles_reset':'<formatting:escape language="javascript"><bean:message key="anotacion.listado.anotaciones.form.detalles.title.reset"/></formatting:escape>',
+                'Detalles_noreset':'<formatting:escape language="javascript"><bean:message key="anotacion.listado.anotaciones.form.detalles.title.reset.not.allowed"/></formatting:escape>',
+                'InicioAvanzado':'<formatting:escape language="javascript"><bean:message key="anotacion.listado.anotaciones.form.inicio.avanzado.title"/></formatting:escape>',
+                'InicioAvanzado_no':'<formatting:escape language="javascript"><bean:message key="anotacion.listado.anotaciones.form.inicio.avanzado.title.notallowed"/></formatting:escape>',
+                'InicioAvanzado_reset':'<formatting:escape language="javascript"><bean:message key="anotacion.listado.anotaciones.form.inicio.avanzado.title.reset"/></formatting:escape>',
+                'InicioAvanzado_noreset':'<formatting:escape language="javascript"><bean:message key="anotacion.listado.anotaciones.form.inicio.avanzado.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+</script>
+    </tiles:put>

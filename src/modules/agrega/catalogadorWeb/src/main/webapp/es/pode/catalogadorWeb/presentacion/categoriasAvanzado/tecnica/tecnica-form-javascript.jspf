@@ -1,0 +1,42 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'tecnica.tecnica.form.accion.submit.param.accion.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.form.accion.submit.param.accion.title"/></formatting:escape>',
+                'tecnica.tecnica.form.accion.submit.param.identificador.ode.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.form.accion.submit.param.identificador.ode.title"/></formatting:escape>',
+                'tecnica.tecnica.form.accion.submit.param.formatos.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.form.accion.submit.param.formatos.title"/></formatting:escape>',
+                'tecnica.tecnica.form.accion.submit.param.combo.formato.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.form.accion.submit.param.combo.formato.title"/></formatting:escape>',
+                'tecnica.tecnica.form.accion.submit.param.tamanio.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.form.accion.submit.param.tamanio.title"/></formatting:escape>',
+                'tecnica.tecnica.form.accion.submit.param.localizacion.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.form.accion.submit.param.localizacion.title"/></formatting:escape>',
+                'tecnica.tecnica.form.accion.submit.param.requerimiento.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.form.accion.submit.param.requerimiento.title"/></formatting:escape>',
+                'tecnica.tecnica.form.accion.submit.param.agregador.or.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.form.accion.submit.param.agregador.or.title"/></formatting:escape>',
+                'tecnica.tecnica.form.accion.submit.param.combo.tipo.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.form.accion.submit.param.combo.tipo.title"/></formatting:escape>',
+                'tecnica.tecnica.form.accion.submit.param.combo.nombre.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.form.accion.submit.param.combo.nombre.title"/></formatting:escape>',
+                'tecnica.tecnica.form.accion.submit.param.descripcion.instalacion.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.form.accion.submit.param.descripcion.instalacion.title"/></formatting:escape>',
+                'tecnica.tecnica.form.accion.submit.param.combo.idioma.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.form.accion.submit.param.combo.idioma.title"/></formatting:escape>',
+                'tecnica.tecnica.form.accion.submit.param.descripcion.requerimientos.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.form.accion.submit.param.descripcion.requerimientos.title"/></formatting:escape>',
+                'tecnica.tecnica.form.accion.submit.param.descripcion.duracion.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.form.accion.submit.param.descripcion.duracion.title"/></formatting:escape>',
+                'tecnica.tecnica.form.accion.submit.param.duracion.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.form.accion.submit.param.duracion.title"/></formatting:escape>',
+                'tecnica.tecnica.form.accion.submit.param.anyo.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.form.accion.submit.param.anyo.title"/></formatting:escape>',
+                'tecnica.tecnica.form.accion.submit.param.mes.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.form.accion.submit.param.mes.title"/></formatting:escape>',
+                'tecnica.tecnica.form.accion.submit.param.dia.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.form.accion.submit.param.dia.title"/></formatting:escape>',
+                'tecnica.tecnica.form.accion.submit.param.hora.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.form.accion.submit.param.hora.title"/></formatting:escape>',
+                'tecnica.tecnica.form.accion.submit.param.minutos.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.form.accion.submit.param.minutos.title"/></formatting:escape>',
+                'tecnica.tecnica.form.accion.submit.param.segundos.p1.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.form.accion.submit.param.segundos.p1.title"/></formatting:escape>',
+                'tecnica.tecnica.form.accion.submit.param.segundos.p2.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.form.accion.submit.param.segundos.p2.title"/></formatting:escape>',
+                'accionSubmit':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.form.accion.submit.title"/></formatting:escape>',
+                'accionSubmit_no':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.form.accion.submit.title.notallowed"/></formatting:escape>',
+                'accionSubmit_reset':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.form.accion.submit.title.reset"/></formatting:escape>',
+                'accionSubmit_noreset':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.form.accion.submit.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

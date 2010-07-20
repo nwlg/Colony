@@ -1,0 +1,40 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="crear.recurso.avanzado.elementos.archivo.principal.aceptar"/></h3>
+    <div class="trigger">
+        <html:form styleId="crearRecursoAvanzadoElementosArchivoPrincipalAceptarForm" action="/CrearRecursoAvanzadoElementos/ArchivoPrincipalAceptar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="action">
+                        <td class="label"><bean:message key="crear.recurso.avanzado.elementos.archivo.principal.aceptar.param.action"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.action}"/>
+                           <input type="text" name="action" value="${value}" onmouseover="hints.show('crear.recurso.avanzado.elementos.archivo.principal.aceptar.param.action.title')" onmouseout="hints.hide()"  id="aceptarAction"/>
+                        </td>
+                    </tr>
+                    <tr class="principal">
+                        <td class="label"><bean:message key="crear.recurso.avanzado.elementos.archivo.principal.aceptar.param.principal"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.principal}"/>
+                           <input type="text" name="principal" value="${value}" onmouseover="hints.show('crear.recurso.avanzado.elementos.archivo.principal.aceptar.param.principal.title')" onmouseout="hints.hide()"  id="aceptarPrincipal"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="crear.recurso.avanzado.elementos.archivo.principal.aceptar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

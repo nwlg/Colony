@@ -1,0 +1,4 @@
+<copyrightAndOtherRestrictions>
+	${load:source.xml}
+	${load:value.xml}
+</copyrightAndOtherRestrictions>

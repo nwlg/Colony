@@ -1,0 +1,33 @@
+<div id="noticias" class="table">
+    <form id="noticias" name="" action="" method="post" enctype="multipart/form-data">
+    <display:table name="${form.noticias}" uid="row"
+        export="false" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:column media="html">
+            <input type="checkbox" name="idNoticiaRowSelectionAsArray" value="${row.idNoticia}" title='<bean:message key="select.deselect.this.row"/>'/>
+        </display:column>
+
+
+        <display:column media="html"
+            headerClass="idNoticia" paramId="idNoticia"
+            sortProperty="idNoticia" sortable="true"
+            titleKey="noticias.noticias.param.noticias.id.noticia"
+            >
+            <div class="idNoticia">
+		
+ <c:set var="value" value="${row.idNoticia}"/>
+ <html:link action="/Noticias/NoticiasVerNoti?idNoticia=${row.idNoticia}" onmouseover="hints.show('noticias.noticias.ver.noti.param.id.noticia.title')" onmouseout="hints.hide()">${row.idNoticia}</html:link>
+ <input type="hidden" name="idNoticia" value="${value}" id="noticiasIdNoticia${row_rowNum}"/>
+            </div>
+       </display:column>
+   
+    </display:table>
+    <c:if test="${!empty form.noticias}">
+            <input type="submit" value="<bean:message key="noticias.noticias.eliminar"/>" onclick="this.form.name='noticiasNoticiasEliminarForm';this.form.action='<html:rewrite action="/Noticias/NoticiasEliminar"/>';" onmouseover="hints.show('Eliminar')" onmouseout="hints.hide()"/>
+            <input type="button" value="<bean:message key="select.deselect.all"/>" onclick="var boxes=this.form.elements['idNoticiaRowSelectionAsArray'];var setChecked=(boxes.length==0)?false:!boxes[0].checked;for(var i=0;i<boxes.length;i++)boxes[i].checked=setChecked;"/>
+    </c:if>
+    </form>
+</div>
+

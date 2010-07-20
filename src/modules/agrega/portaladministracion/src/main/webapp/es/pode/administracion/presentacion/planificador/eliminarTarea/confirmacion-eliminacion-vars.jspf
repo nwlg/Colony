@@ -1,0 +1,8 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="listaTrabajo" value="${form.listaTrabajo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="listaTrabajoPlana" value="${form.listaTrabajoPlana}"/>
+    </c:catch>
+</div>

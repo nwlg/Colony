@@ -1,0 +1,16 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="submit" class="action">
+    <h3><bean:message key="gestor.archivos.gestor.archivos.submit"/></h3>
+    <div class="trigger">
+			<authz:authorize  ifAnyGranted="ROLE_DOCENTE,ROLE_ADMINISTRADOR,ROLE_CATALOGADOR,ROLE_PUBLICADOR,ROLE_DOCENTE,ROLE_ADMINISTRADOR,ROLE_CATALOGADOR,ROLE_PUBLICADOR">
+        <html:form styleId="gestorArchivosGestorArchivosSubmitForm" action="/GestorArchivos/GestorArchivosSubmit" method="post" enctype="multipart/form-data">
+            <%@ include file="/es/pode/empaquetador/presentacion/archivos/gestor/gestor-archivos-listado.jspf" %>
+               <html:submit onmouseover="hints.show('Submit')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="gestor.archivos.gestor.archivos.submit"/>
+               </html:submit>	
+        </html:form>
+			</authz:authorize>	
+    </div>
+
+</div>
+ <br class="clr"/>

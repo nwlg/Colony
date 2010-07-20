@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN" "http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+	<mapping wildcard="true" map-id="DEF_MAPPING_ESTADO_ESTADOVO">
+		<class-a>es.pode.publicacion.negocio.dominio.EstadoImpl</class-a>
+		<class-b>es.pode.publicacion.negocio.servicios.EstadoVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_ESTADOVO_ESTADO">
+		<class-a>es.pode.publicacion.negocio.servicios.EstadoVO</class-a>
+		<class-b>es.pode.publicacion.negocio.dominio.EstadoImpl</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_TRANSICION_TRANSICIONVO">
+		<class-a>es.pode.publicacion.negocio.dominio.TransicionImpl</class-a>
+		<class-b>es.pode.publicacion.negocio.servicios.TransicionVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_TRANSICIONVO_TRANSICION">
+		<class-a>es.pode.publicacion.negocio.servicios.TransicionVO</class-a>
+		<class-b>es.pode.publicacion.negocio.dominio.TransicionImpl</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_TRANSICION_IDUSUARIOVO">
+		<class-a>es.pode.publicacion.negocio.dominio.TransicionImpl</class-a>
+		<class-b>es.pode.publicacion.negocio.servicios.IdUsuarioVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_IDUSUARIOVO_TRANSICION">
+		<class-a>es.pode.publicacion.negocio.servicios.IdUsuarioVO</class-a>
+		<class-b>es.pode.publicacion.negocio.dominio.TransicionImpl</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_TRANSICION_TRANSICIONAUTORVO">
+		<class-a>es.pode.publicacion.negocio.dominio.TransicionImpl</class-a>
+		<class-b>es.pode.publicacion.negocio.servicios.TransicionAutorVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_TRANSICIONAUTORVO_TRANSICION">
+		<class-a>es.pode.publicacion.negocio.servicios.TransicionAutorVO</class-a>
+		<class-b>es.pode.publicacion.negocio.dominio.TransicionImpl</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_ODEPUBLICADO_PESOODEVO">
+		<class-a>es.pode.publicacion.negocio.dominio.OdePublicadoImpl</class-a>
+		<class-b>es.pode.publicacion.negocio.servicios.PesoODEVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_PESOODEVO_ODEPUBLICADO">
+		<class-a>es.pode.publicacion.negocio.servicios.PesoODEVO</class-a>
+		<class-b>es.pode.publicacion.negocio.dominio.OdePublicadoImpl</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_ODEPUBLICADO_DETALLEPUBLICADOODEVO">
+		<class-a>es.pode.publicacion.negocio.dominio.OdePublicadoImpl</class-a>
+		<class-b>es.pode.publicacion.negocio.servicios.DetallePublicadoODEVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_DETALLEPUBLICADOODEVO_ODEPUBLICADO">
+		<class-a>es.pode.publicacion.negocio.servicios.DetallePublicadoODEVO</class-a>
+		<class-b>es.pode.publicacion.negocio.dominio.OdePublicadoImpl</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_ODEPUBLICADO_ODEPUBLICADOVO">
+		<class-a>es.pode.publicacion.negocio.dominio.OdePublicadoImpl</class-a>
+		<class-b>es.pode.publicacion.negocio.servicios.OdePublicadoVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_ODEPUBLICADOVO_ODEPUBLICADO">
+		<class-a>es.pode.publicacion.negocio.servicios.OdePublicadoVO</class-a>
+		<class-b>es.pode.publicacion.negocio.dominio.OdePublicadoImpl</class-b>
+	</mapping>	
+</mappings>

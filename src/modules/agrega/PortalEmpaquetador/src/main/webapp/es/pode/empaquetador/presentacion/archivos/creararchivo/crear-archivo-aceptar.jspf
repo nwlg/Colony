@@ -1,0 +1,100 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="crear.archivo.crear.archivo.aceptar"/></h3>
+    <div class="trigger">
+        <html:form styleId="crearArchivoCrearArchivoAceptarForm" action="/CrearArchivo/CrearArchivoAceptar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="tipo1">
+                        <td class="label"><bean:message key="crear.archivo.crear.archivo.aceptar.param.tipo1"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipo1}"/>
+                           <table>
+                               <tr>
+                                   <td>
+                                       <html:radio name="form" property="tipo1" value="0" onmouseover="hints.show('crear.archivo.crear.archivo.aceptar.param.tipo1.title')" onmouseout="hints.hide()"  styleId="aceptarTipo1"/>
+                                       <bean:message key="crear.archivo.crear.archivo.aceptar.param.tipo1.0"/>
+                                   </td>
+                               </tr>
+                               <tr>
+                                   <td>
+                                       <html:radio name="form" property="tipo1" value="1" onmouseover="hints.show('crear.archivo.crear.archivo.aceptar.param.tipo1.title')" onmouseout="hints.hide()"  styleId="aceptarTipo1"/>
+                                       <bean:message key="crear.archivo.crear.archivo.aceptar.param.tipo1.1"/>
+                                   </td>
+                               </tr>
+                           </table>
+                        </td>
+                    </tr>
+                    <tr class="fichero1">
+                        <td class="label"><bean:message key="crear.archivo.crear.archivo.aceptar.param.fichero1"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.fichero1}"/>
+                           <html:file name="form" property="fichero1" onmouseover="hints.show('crear.archivo.crear.archivo.aceptar.param.fichero1.title')" onmouseout="hints.hide()"  styleId="aceptarFichero1"/>
+                        </td>
+                    </tr>
+                    <tr class="action">
+                        <td class="label"><bean:message key="crear.archivo.crear.archivo.aceptar.param.action"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.action}"/>
+                           <input type="text" name="action" value="${value}" onmouseover="hints.show('crear.archivo.crear.archivo.aceptar.param.action.title')" onmouseout="hints.hide()"  id="aceptarAction"/>
+                        </td>
+                    </tr>
+                    <tr class="fichero2">
+                        <td class="label"><bean:message key="crear.archivo.crear.archivo.aceptar.param.fichero2"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.fichero2}"/>
+                           <html:file name="form" property="fichero2" onmouseover="hints.show('crear.archivo.crear.archivo.aceptar.param.fichero2.title')" onmouseout="hints.hide()"  styleId="aceptarFichero2"/>
+                        </td>
+                    </tr>
+                    <tr class="fichero3">
+                        <td class="label"><bean:message key="crear.archivo.crear.archivo.aceptar.param.fichero3"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.fichero3}"/>
+                           <html:file name="form" property="fichero3" onmouseover="hints.show('crear.archivo.crear.archivo.aceptar.param.fichero3.title')" onmouseout="hints.hide()"  styleId="aceptarFichero3"/>
+                        </td>
+                    </tr>
+                    <tr class="tipo2">
+                        <td class="label"><bean:message key="crear.archivo.crear.archivo.aceptar.param.tipo2"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipo2}"/>
+                           <input type="text" name="tipo2" value="${value}" onmouseover="hints.show('crear.archivo.crear.archivo.aceptar.param.tipo2.title')" onmouseout="hints.hide()"  id="aceptarTipo2"/>
+                        </td>
+                    </tr>
+                    <tr class="tipo3">
+                        <td class="label"><bean:message key="crear.archivo.crear.archivo.aceptar.param.tipo3"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipo3}"/>
+                           <input type="text" name="tipo3" value="${value}" onmouseover="hints.show('crear.archivo.crear.archivo.aceptar.param.tipo3.title')" onmouseout="hints.hide()"  id="aceptarTipo3"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_DOCENTE,ROLE_ADMINISTRADOR,ROLE_CATALOGADOR,ROLE_PUBLICADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="crear.archivo.crear.archivo.aceptar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

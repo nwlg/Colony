@@ -1,0 +1,15 @@
+#fin.action {}
+#fin.action #form_submit {}
+
+
+#datosBorrar.action {}
+#datosBorrar.action #form_submit {}
+
+#datosBorrar.action .usuario {}
+#datosBorrar.action .usuario .label {}
+#datosBorrar.action .usuario .field {}
+#datosBorrar.action .identificador {}
+#datosBorrar.action .identificador .label {}
+#datosBorrar.action .identificador .field {}
+
+

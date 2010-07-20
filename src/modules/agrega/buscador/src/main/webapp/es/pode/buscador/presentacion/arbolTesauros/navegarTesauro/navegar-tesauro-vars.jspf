@@ -1,0 +1,29 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="taxonesVO" value="${form.taxonesVO}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tituloTesauro" value="${form.tituloTesauro}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idioma" value="${form.idioma}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tipoBusquedaArbol" value="${form.tipoBusquedaArbol}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tipoLayoutBuscador" value="${form.tipoLayoutBuscador}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="rutaPadreVO" value="${form.rutaPadreVO}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tipoBusqueda" value="${form.tipoBusqueda}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="numeroResultados" value="${form.numeroResultados}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idiomaBuscador" value="${form.idiomaBuscador}"/>
+    </c:catch>
+</div>

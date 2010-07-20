@@ -1,0 +1,21 @@
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+	version="2.0">
+	<tlibversion>2.0</tlibversion>
+	<jspversion>1.1</jspversion>
+	<shortname>idiomasBanderasTag</shortname>
+	<info>Tag banderas de los idiomas de la plataforma</info>
+	<!-- A Simple tag -->
+  <tag>
+    <name>idiomasBanderasTag</name>
+    <tagclass>es.agrega.soporte.tag.idiomasBanderas.IdiomasBanderasTag</tagclass>
+  <!--Body content can have a value of 
+  	 empty: no body 
+      JSP: body that is evaluated by container, then possibly processed by the tag 
+      tagdependent: body is only processed by tag; JSP in body is not evaluated.
+   -->
+    <bodycontent>empty</bodycontent>
+    <info>This is a tag for creating links with a specific URL or taking a request attribute.</info>		
+	</tag>
+	</taglib>

@@ -1,0 +1,87 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="listarODETesauro" class="action">
+    <h3><bean:message key="navegar.tesauro.cu.navegar.tesauro.listar.odetesauro"/></h3>
+    <div class="trigger">
+        <html:form styleId="navegarTesauroCUNavegarTesauroListarODETesauroForm" action="/NavegarTesauroCU/NavegarTesauroListarODETesauro" method="post" enctype="multipart/form-data" onsubmit="return validateNavegarTesauroListarODETesauroForm(this);">
+            <table>
+                <tbody>
+                    <tr class="idTesauro">
+                        <td class="label"><bean:message key="navegar.tesauro.cu.navegar.tesauro.listar.odetesauro.param.id.tesauro"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idTesauro}"/>
+                           <input type="text" name="idTesauro" value="${value}" onmouseover="hints.show('navegar.tesauro.cu.navegar.tesauro.listar.odetesauro.param.id.tesauro.title')" onmouseout="hints.hide()"  id="listarODETesauroIdTesauro"/>
+                        </td>
+                    </tr>
+                    <tr class="rutaPadreVO">
+                        <td class="label"><bean:message key="navegar.tesauro.cu.navegar.tesauro.listar.odetesauro.param.ruta.padre.vo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.rutaPadreVO}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.rutaPadreVOBackingList}">
+                                  <html:select name="form" property="rutaPadreVOAsArray" onmouseover="hints.show('navegar.tesauro.cu.navegar.tesauro.listar.odetesauro.param.ruta.padre.vo.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="listarODETesauroRutaPadreVO">
+                                      <html:optionsCollection name="form" property="rutaPadreVOBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="rutaPadreVOAsArray" onmouseover="hints.show('navegar.tesauro.cu.navegar.tesauro.listar.odetesauro.param.ruta.padre.vo.title')" onmouseout="hints.hide()"  styleId="listarODETesauroRutaPadreVO"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="idiomaBuscador">
+                        <td class="label"><bean:message key="navegar.tesauro.cu.navegar.tesauro.listar.odetesauro.param.idioma.buscador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idiomaBuscador}"/>
+                           <input type="text" name="idiomaBuscador" value="${value}" onmouseover="hints.show('navegar.tesauro.cu.navegar.tesauro.listar.odetesauro.param.idioma.buscador.title')" onmouseout="hints.hide()"  id="listarODETesauroIdiomaBuscador"/>
+                        </td>
+                    </tr>
+                    <tr class="idioma">
+                        <td class="label"><bean:message key="navegar.tesauro.cu.navegar.tesauro.listar.odetesauro.param.idioma"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idioma}"/>
+                           <input type="text" name="idioma" value="${value}" onmouseover="hints.show('navegar.tesauro.cu.navegar.tesauro.listar.odetesauro.param.idioma.title')" onmouseout="hints.hide()"  id="listarODETesauroIdioma"/>
+                        </td>
+                    </tr>
+                    <tr class="tituloTesauro">
+                        <td class="label"><bean:message key="navegar.tesauro.cu.navegar.tesauro.listar.odetesauro.param.titulo.tesauro"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tituloTesauro}"/>
+                           <input type="text" name="tituloTesauro" value="${value}" onmouseover="hints.show('navegar.tesauro.cu.navegar.tesauro.listar.odetesauro.param.titulo.tesauro.title')" onmouseout="hints.hide()"  id="listarODETesauroTituloTesauro"/>
+                        </td>
+                    </tr>
+                    <tr class="numMaxResultados">
+                        <td class="label"><bean:message key="navegar.tesauro.cu.navegar.tesauro.listar.odetesauro.param.num.max.resultados"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.numMaxResultados}"/>
+                           <input type="text" name="numMaxResultados" value="${value}" onmouseover="hints.show('navegar.tesauro.cu.navegar.tesauro.listar.odetesauro.param.num.max.resultados.title')" onmouseout="hints.hide()"  id="listarODETesauroNumMaxResultados"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_DOCENTE,ROLE_CATALOGADOR,ROLE_ADMINISTRADOR,ROLE_PUBLICADOR,ROLE_EMPAQUETADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('listarODETesauro')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="navegar.tesauro.cu.navegar.tesauro.listar.odetesauro"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

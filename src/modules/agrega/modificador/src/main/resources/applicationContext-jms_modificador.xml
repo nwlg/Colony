@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//Spring//DTD Bean//EN" 
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<!-- Application Context -->
+<beans>
+
+    
+    <!--          JMS Spring Beans               -->
+    
+    
+    
+    
+    
+      
+      <!-- JNDI Environment Template -->
+    <bean id="jndiTemplateSrvTareasModificacionService" class="org.springframework.jndi.JndiTemplate">
+        <property name="environment">
+            <props>
+                <prop key="java.naming.factory.initial">org.jnp.interfaces.NamingContextFactory</prop>
+                <prop key="java.naming.provider.url">localhost</prop>
+           </props>
+        </property>
+    </bean>
+
+    <!-- JMS Queue Connection Factory -->
+    <bean id="internalJmsQueueConnectionFactorySrvTareasModificacionService"
+        	class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiTemplate">
+            <ref bean="jndiTemplateSrvTareasModificacionService"/>
+        </property>
+        <property name="jndiName">
+            <value>UIL2ConnectionFactory</value>
+        </property>
+    </bean>
+
+    <!-- JMS Destination -->
+    <bean id="destinationSrvTareasModificacionService"
+        class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiTemplate">
+            <ref bean="jndiTemplateSrvTareasModificacionService"/>
+        </property>
+        <property name="jndiName">
+            <value>queue/modificador</value>
+        </property>
+    </bean>
+  
+  <!-- JMS Listener and ListenerContainer-->
+  
+       <bean id="messageListenerSrvTareasModificacionService" class="es.pode.modificador.negocio.servicio.SrvTareasModificacionServiceImpl" />	
+
+        <bean id="listenerContainerSrvTareasModificacionService"
+                class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+                <property name="connectionFactory" ref="internalJmsQueueConnectionFactorySrvTareasModificacionService" />
+                <property name="destination" ref="destinationSrvTareasModificacionService" />
+                <property name="messageListener" ref="messageListenerSrvTareasModificacionService" />
+                <property name="concurrentConsumers" value="1"/>
+<!-- MCA: needs to be removed for new build system
+                <property name="maxConcurrentConsumers" value="1"/>                
+-->
+        </bean>
+  
+  
+  
+  
+  
+  
+     </beans>
+

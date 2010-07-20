@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN" "http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+	<!-- Put your custom dozer mappings here -->
+	<mapping wildcard="true" map-id="DEF_MAPPING_LOCALIZADOR_LOCALIZADORVOPRIME">
+		<class-a>es.pode.localizador.negocio.servicios.LocalizadorVO</class-a>
+		<class-b>es.pode.localizador.negocio.dominio.LocalizadorImpl</class-b>
+	</mapping>	
+</mappings>

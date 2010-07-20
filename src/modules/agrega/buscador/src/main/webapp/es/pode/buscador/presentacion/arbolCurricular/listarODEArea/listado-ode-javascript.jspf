@@ -1,0 +1,27 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'listar.odearea.cu.listado.ode.decidir.salida.param.area.curricular.busqueda.title':'<formatting:escape language="javascript"><bean:message key="listar.odearea.cu.listado.ode.decidir.salida.param.area.curricular.busqueda.title"/></formatting:escape>',
+                'listar.odearea.cu.listado.ode.decidir.salida.param.idioma.title':'<formatting:escape language="javascript"><bean:message key="listar.odearea.cu.listado.ode.decidir.salida.param.idioma.title"/></formatting:escape>',
+                'listar.odearea.cu.listado.ode.decidir.salida.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="listar.odearea.cu.listado.ode.decidir.salida.param.idioma.buscador.title"/></formatting:escape>',
+                'listar.odearea.cu.listado.ode.decidir.salida.param.identificador.ode.title':'<formatting:escape language="javascript"><bean:message key="listar.odearea.cu.listado.ode.decidir.salida.param.identificador.ode.title"/></formatting:escape>',
+                'listar.odearea.cu.listado.ode.decidir.salida.param.pagina.title':'<formatting:escape language="javascript"><bean:message key="listar.odearea.cu.listado.ode.decidir.salida.param.pagina.title"/></formatting:escape>',
+                'listar.odearea.cu.listado.ode.decidir.salida.param.ruta.arbol.title':'<formatting:escape language="javascript"><bean:message key="listar.odearea.cu.listado.ode.decidir.salida.param.ruta.arbol.title"/></formatting:escape>',
+                'listar.odearea.cu.listado.ode.decidir.salida.param.nodo.title':'<formatting:escape language="javascript"><bean:message key="listar.odearea.cu.listado.ode.decidir.salida.param.nodo.title"/></formatting:escape>',
+                'decidirSalida':'<formatting:escape language="javascript"><bean:message key="listar.odearea.cu.listado.ode.decidir.salida.title"/></formatting:escape>',
+                'decidirSalida_no':'<formatting:escape language="javascript"><bean:message key="listar.odearea.cu.listado.ode.decidir.salida.title.notallowed"/></formatting:escape>',
+                'decidirSalida_reset':'<formatting:escape language="javascript"><bean:message key="listar.odearea.cu.listado.ode.decidir.salida.title.reset"/></formatting:escape>',
+                'decidirSalida_noreset':'<formatting:escape language="javascript"><bean:message key="listar.odearea.cu.listado.ode.decidir.salida.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

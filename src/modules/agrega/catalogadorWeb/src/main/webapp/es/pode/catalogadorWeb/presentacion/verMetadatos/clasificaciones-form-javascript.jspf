@@ -1,0 +1,28 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'ver.metadatos.clasificaciones.form.detalle.clasificacion.param.identificador.ode.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.clasificaciones.form.detalle.clasificacion.param.identificador.ode.title"/></formatting:escape>',
+                'ver.metadatos.clasificaciones.form.detalle.clasificacion.param.listado.clasificaciones.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.clasificaciones.form.detalle.clasificacion.param.listado.clasificaciones.title"/></formatting:escape>',
+                'ver.metadatos.clasificaciones.form.detalle.clasificacion.param.boton.pulsado.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.clasificaciones.form.detalle.clasificacion.param.boton.pulsado.title"/></formatting:escape>',
+                'detalleClasificacion':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.clasificaciones.form.detalle.clasificacion.title"/></formatting:escape>',
+                'detalleClasificacion_no':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.clasificaciones.form.detalle.clasificacion.title.notallowed"/></formatting:escape>',
+                'detalleClasificacion_reset':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.clasificaciones.form.detalle.clasificacion.title.reset"/></formatting:escape>',
+                'detalleClasificacion_noreset':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.clasificaciones.form.detalle.clasificacion.title.reset.not.allowed"/></formatting:escape>',
+                'vuelveDeClasificaciones':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.clasificaciones.form.vuelve.de.clasificaciones.title"/></formatting:escape>',
+                'vuelveDeClasificaciones_no':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.clasificaciones.form.vuelve.de.clasificaciones.title.notallowed"/></formatting:escape>',
+                'vuelveDeClasificaciones_reset':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.clasificaciones.form.vuelve.de.clasificaciones.title.reset"/></formatting:escape>',
+                'vuelveDeClasificaciones_noreset':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.clasificaciones.form.vuelve.de.clasificaciones.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+</script>
+    </tiles:put>

@@ -1,0 +1,3358 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<document>
+    <properties>
+        <author email="harias@indra.es">Hector Arias</author>
+        <title>Introducción </title>
+    </properties>
+    <body>
+	<section name="Ejemplo funcional">
+		<li><strong><a href="funcional.html#ind_1">Diagrama de contexto</a></strong></li>
+		<li><strong><a href="funcional.html#ind_2">Estructura de paquetes</a></strong></li>		
+		<li><strong><a href="funcional.html#ind_3">Contratación de un seguro</a></strong></li>				
+		<li><strong><a href="funcional.html#ind_4">Jerarquía de actores</a></strong></li>						
+		<li><strong><a href="funcional.html#ind_5">Diagramas de casos de Uso</a></strong></li>								
+		<li><strong><a href="funcional.html#ind_6">Modelos de Dominio</a></strong></li>										
+		<li><strong><a href="funcional.html#ind_7">Arquitectura del Ejemplo</a></strong></li>												
+		<a name="ind_1"></a>
+	</section>
+
+	<section name="Diagrama de contexto">
+		<p>El siguiente diagrama presenta el diagrama de contexto correspondiente al sistema elegido 
+		como ejemplo: una plataforma de contratación de seguros.
+		</p>
+		<p align='center'><img src="images/image003.jpg"></img></p>
+		<p> El objetivo de este diagrama es triple: </p>
+		<p><span><strong>1.-</strong></span> 
+		<span>Establecer los objetivos (funcionales) a cumplir por el sistema</span></p>
+		<p><span><strong>2.-</strong></span> 
+		<span>Presentar los actores involucrados en el sistema (stakeholders, otros sistemas, etc.)</span></p>
+		<p><span><strong>3.-</strong></span> 
+		<span>Presentar las relaciones entre todos estos elementos, indicando los actores involucrados en cada objetivo (caso de uso)</span></p>				
+		<a name="ind_2"></a>		
+	</section>
+
+	<section name="Estructura de paquetes">
+		<p>A partir de la identificación de objetivos realizada en el diagrama anterior, deberíamos 
+		asignar un paquete a cada uno de ellos para facilitar su posterior descomposición funcional. 
+		Para acotar el ejemplo,  vamos a centrarnos en el objetivo denominado como Contratación. 
+		En este apartado se presenta la estructura de paquetes propuesta para realizar la descomposición 
+		funcional del mismo:		
+		</p>
+		<a name="ind_3"></a>
+	</section>
+
+	<section name="Contratación de un seguro">
+		<p>De estos paquetes, se va a dotar de contenido en el ejemplo solamente a los de documentar, 
+		emitir, tarificar y contratar, y solamente para la modalidad de seguros de automóvil.
+		</p>
+		<table border="1" cellspacing="0" cellpadding="0">
+		 <tr>
+		  <td>
+		    <p><span>documentar</span></p>
+		  </td>
+		  <td>
+		  <p><span ></span></p>
+		  </td>
+		  <td>
+		  <p><span ></span></p>
+		  </td>
+		  <td>
+		  <p><span ></span></p>
+		  </td>
+		 </tr>
+		 <tr>
+		  <td>
+		  <p><span >venta</span></p>
+		  </td>
+		  <td>
+		  <p><span >venta</span></p>
+		  </td>
+		  <td>
+		  <p><span >generales</span></p>
+		  </td>
+		  <td>
+		  <p><span >autos</span></p>
+		  </td>
+		 </tr>
+		 <tr>
+		  <td>	  
+		  <p><span ></span></p>
+		  </td>
+		  <td>	  
+		  <p><span ></span></p>
+		  </td>
+		  <td>	  
+		  <p><span ></span></p>
+		  </td>
+		  <td>	  
+		  <p><span >hogar</span></p>
+		  </td>
+		 
+		 </tr>
+		 <tr>
+		  <td>	  
+		  <p><span ></span></p>
+		  </td>
+		  <td>	  
+		  <p><span ></span></p>
+		  </td>
+		  <td>	  
+		  <p><span ></span></p>
+		  </td>
+		  <td>  
+		  <p><span >…</span></p>
+		  </td>
+		 </tr>
+		 <tr>
+		  <td>	  
+		  <p><span ></span></p>
+		  </td>
+		  <td>	  
+		  <p><span ></span></p>
+		  </td>
+		  <td>
+		  <p><span >vida</span></p>
+		  </td>
+		  <td>
+		  <p><span ></span></p>
+		  </td>
+		 </tr>
+		 <tr>
+		  <td>	  
+		  <p><span ></span></p>
+		  </td>
+		  <td>	  
+		  <p><span ></span></p>
+		  </td>
+		  <td>
+		  <p><span >ahorro</span></p>
+		  </td>
+		  <td>
+		  <p><span ></span></p>
+		  </td>
+		 </tr>
+		 <tr>
+		  <td>
+		  <p><span ></span></p>
+		  </td>
+		  <td>
+		  <p><span >postventa</span></p>
+		  </td>
+		  <td>
+		  <p><span ></span></p>
+		  </td>
+		  <td>
+		  <p><span ></span></p>
+		  </td>
+		 </tr>
+		 <tr>
+		  <td>
+		  <p><span >emitir</span></p>
+		  </td>
+		  <td>
+		  <p><span ></span></p>
+		  </td>
+		  <td>
+		  <p><span ></span></p>
+		  </td>
+		  <td>
+		  <p><span ></span></p>
+		  </td>
+		 </tr>
+		 <tr>
+		  <td>
+		  <p><span >tarificar</span></p>
+		  </td>
+		  <td>
+		  <p><span ></span></p>
+		  </td>
+		  <td>
+		  <p><span ></span></p>
+		  </td>
+		  <td>
+		  <p><span ></span></p>
+		  </td>
+		 </tr>
+		 <tr>
+		  <td>
+		  <p><span >contratar</span></p>
+		  </td>
+		  <td>
+		  <p><span ></span></p>
+		  </td>
+		  <td>
+		  <p><span ></span></p>
+		  </td>
+		  <td>
+		  <p><span ></span></p>
+		  </td>
+		 </tr>
+		</table>
+
+		<a name="ind_4"></a>
+	</section>
+	
+	<section name="Jerarquía de Actores">
+
+		<p>A partir de los actores identificados en el diagrama de contexto, se realiza una definición 
+		más detallada de los mismo, identificando aquellos que especializan el rol. Este ejercicio 
+		se limita en el ejemplo al caso de contratación.		
+		</p>
+		<p align='center'><img src="images/image004.jpg"></img></p>
+		<p>En todos los casos el canal representa al Cliente. Excepto en el caso del CanalWeb en el que el 
+		Cliente interactúa de forma directa con el sistema, en el resto de canales será un Agente perteneciente 
+		al canal el encargado de interactuar con el sistema.
+		</p>
+		<p>La estructura de agentes no está representada dado que la misma será considerada como un conjunto 
+		de niveles de acceso que capacitarán a un agente concreto de cara a poder desarrollar determinadas 
+		operaciones.
+		</p>
+		
+		<table border="1" cellspacing="0" cellpadding="0">
+		 <tr>
+		  <td>
+		  <p><span>Actor</span></p>
+		  </td>
+		  <td>
+		  <p><span></span></p>
+		  </td>
+		  <td>
+		  <p><span>Descripción</span></p>
+		  </td>
+		 </tr>
+		 <tr>
+		  <td>
+		  <p><span>Canal</span></p>
+		  </td>
+		  <td>
+		  <p><span>CanalInstitucional</span></p>
+		  </td>
+		  <td>
+		  <p><span >A través de ciertos acuerdos
+		  corporativos se comercializan una serie de productos en determinadas
+		  condiciones.</span></p>
+		  </td>
+		 </tr>
+		 <tr>
+		  <td>
+		  <p><span></span></p>
+		  </td>
+		  <td>
+		  <p><span>CanalMediadores</span></p>
+		  </td>
+		  <td>
+		  <p><span >Desde la red de oficinas, ya bien sean
+		  propias o ajenas, se establece un nivel de comercialización de los productos
+		  de la compañía.</span></p>
+		  </td>
+		 </tr>
+		 <tr>
+		  <td>
+		  <p><span></span></p>
+		  </td>
+		  <td>
+		  <p><span>CanalDirecto</span></p>
+		  </td>
+		  <td>
+		  <p><span >Focalizado en la atención directa a
+		  clientes, captados de forma directa a través de distintas campañas de
+		  marketing.</span></p>
+		  </td>
+		 </tr>
+		 <tr>
+		  <td>
+		  <p><span></span></p>
+		  </td>
+		  <td>
+		  <p><span>CanalWeb</span></p>
+		  </td>
+		  <td>
+		  <p><span >Acceso directo de Clientes a las
+		  aplicaciones a través de Internet.</span></p>
+		  </td>
+		 </tr>
+		</table>
+		<a name="ind_5"></a> 
+	</section>
+	
+	<section name="Diagramas de Casos de Uso" >
+
+		<p>En este apartado se describen el conjunto de casos de uso que van a ser implementados en el marco del 
+		ejemplo a desarrollar en las guías.</p>
+		<p><strong>Taller de Productos</strong></p>
+		<p>Como ya se ha indicado, el ejemplo se va a limitar a un conjunto de casos de uso de Contratación. 
+		No obstante, para completarlo se va a dotar a la aplicación de capacidad para realizar algunos 
+		mantenimientos simples de las entidades que soportarían un hipotético taller de productos 
+		(concretamente, aquellas cuyo nombre comienza por 'Taller…' en el diagrama indicado en el 
+		apartado <strong>Contratación</strong> ) La aplicación también limitará el acceso a estos mantenimientos 
+		al perfil adecuado (actor Direccion, tal y como se ha mostrado en el diagrama de contexto 
+		del apartado <strong>Diagrama de contexto</strong>).
+		</p>
+		<p><strong>Contratacion</strong></p>
+		<p align='center'><img src="images/image005.jpg"></img></p>
+		
+
+
+		<table border="1" cellspacing="0" cellpadding="0">
+		 <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+		  <td width="390" colspan="2" valign="top" style='width:292.4pt;border:solid windowtext 2.25pt;
+		  background:navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='center' style='text-align:center'><b><span 
+		  style='font-size:10.0pt;line-height:150%;mso-bidi-font-family:Arial;color:white;
+		  color:white'>FICHA DE CASO DE USO</span></b></p>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='font-size:10.0pt;line-height:150%;mso-bidi-font-family:Arial;color:white;
+		  color:white'>contratacion.bienvenida</span></b></p>
+		  </td>
+		  <td  style='width:178.9pt;border:solid windowtext 2.25pt;
+		  border-left:none;mso-border-left-alt:solid windowtext 2.25pt;background:navy;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p ><b><span  style='mso-bidi-font-family:Arial;color:white;
+		  color:white'></span></b></p>
+		  <p ><b><span  style='mso-bidi-font-family:Arial;color:white;
+		  color:white'>Fecha de inicio: </span></b><span  style='mso-bidi-font-family:
+		  Arial;color:white'><span style='mso-field-code:" DATE  \\* MERGEFORMAT "'><span
+		   style='mso-ansi-language:ES;mso-no-proof:yes'>24/07/2006</span></span><b></b></span></p>
+		  <p ><b><span  style='mso-bidi-font-family:Arial;color:white;
+		  color:white'>Fecha última modificación: </span></b><span
+		   style='mso-bidi-font-family:Arial;color:white;color:white'><span
+		  style='mso-element:field-begin'></span><span
+		  style='mso-spacerun:yes'> </span>DATE \@ &quot;d/MM/yy&quot; \* MERGEFORMAT <span
+		  style='mso-element:field-separator'></span></span><span
+		   style='mso-bidi-font-family:Arial;color:white;color:white'><span
+		  style='mso-no-proof:yes'>24/07/06</span></span><span
+		   style='mso-bidi-font-family:Arial;color:white;color:white'><span
+		  style='mso-element:field-end'></span></span><span 
+		  style='mso-bidi-font-family:Arial;color:white;color:white'><b></b></span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:1'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white;color:white'>IDENTIFICACIÓN</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><b><span 
+		  style='font-size:10.0pt;line-height:150%;mso-bidi-font-family:Arial;color:black'>contratacion.bienvenida</span></b><span
+		   style='mso-bidi-font-family:Arial;color:white'></span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:2'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>NOMBRE</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial;color:black'>Bienvenida a la aplicacion</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:3'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>DESCRIPCIÓN</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial;color:black'>Bienvenida a la aplicación, tras la
+		  validación de los datos del usuario</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:4'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>EXTENSIONES</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial;color:white'></span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:5'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>EXCEPCIONES</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial;color:black'>N/A.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:6'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>CASOS DE USO ASOCIADOS</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left;color:black'><span >N/A.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:7'>
+		  <td width='628' colspan='3' valign='top' style='width:471.3pt;border:solid windowtext 2.25pt;
+		  border-top:none;mso-border-top-alt:solid windowtext 2.25pt;background:navy;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>FLUJO NORMAL</span></b></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:8'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext 2.25pt;mso-border-top-alt:
+		  2.25pt;mso-border-left-alt:2.25pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:
+		  .5pt;mso-border-color-alt:windowtext;mso-border-style-alt:solid;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>ACTORES</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext 2.25pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-top-alt:2.25pt;mso-border-left-alt:.5pt;mso-border-bottom-alt:
+		  .5pt;mso-border-right-alt:2.25pt;mso-border-color-alt:windowtext;mso-border-style-alt:
+		  solid;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial;color:black'>Canal, Director</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:9'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>PRECONDICIONES</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial;color:black'>El usuario se ha autentificado satisfactoriamente
+		  en el sistema</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:10'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>ACTIVACIÓN</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial;color:black'>Un usuario intenta acceder a la aplicación</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:11'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>DESCRIPCIÓN</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  style='margin-left:36.0pt;text-indent:-18.0pt;line-height:
+		  normal;mso-list:l12 level2 lfo25;tab-stops:-36.0pt 0cm list 36.0pt'><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt;mso-fareast-font-family:
+		  Arial;mso-bidi-font-family:Arial;color:white'><span style='mso-list:Ignore;color:black'>a)<span
+		  style='font:7.0pt "Times New Roman"'> </span></span></span><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt'>Presentar la
+		  bienvenida al sistema y el conjunto de opciones a las que tiene acceso según
+		  su perfil</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:12'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 2.25pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+		  .5pt;mso-border-left-alt:2.25pt;mso-border-bottom-alt:2.25pt;mso-border-right-alt:
+		  .5pt;mso-border-color-alt:windowtext;mso-border-style-alt:solid;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>POSTCONDICIONES</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 2.25pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial;color:white'></span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:13'>
+		  <td width='628' colspan='3' valign='top' style='width:471.3pt;border:solid windowtext 2.25pt;
+		  border-top:none;mso-border-top-alt:solid windowtext 2.25pt;background:navy;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>FLUJO ALTERNATIVO 1</span></b></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:14'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>DESCRIPCIÓN</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span >N/A</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:15'>
+		  <td width='628' colspan='3' valign='top' style='width:471.3pt;border:solid windowtext 2.25pt;
+		  border-top:none;mso-border-top-alt:solid windowtext 2.25pt;background:navy;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>FACTORES DE DECISIÓN</span></b></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:16'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext 2.25pt;mso-border-top-alt:
+		  2.25pt;mso-border-left-alt:2.25pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:
+		  .5pt;mso-border-color-alt:windowtext;mso-border-style-alt:solid;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span
+		  style='mso-bidi-font-family:Arial;color:white;mso-ansi-language:ES'>FRECUENCIA</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext 2.25pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-top-alt:2.25pt;mso-border-left-alt:.5pt;mso-border-bottom-alt:
+		  .5pt;mso-border-right-alt:2.25pt;mso-border-color-alt:windowtext;mso-border-style-alt:
+		  solid;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span style='mso-bidi-font-family:
+		  Arial;mso-ansi-language:ES'>A petición del cliente</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:17'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>CRITICIDAD</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial;color:black'>Alta</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:18'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>RIESGOS</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial;color:black'>N/A</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:19;mso-yfti-lastrow:yes'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 2.25pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+		  .5pt;mso-border-left-alt:2.25pt;mso-border-bottom-alt:2.25pt;mso-border-right-alt:
+		  .5pt;mso-border-color-alt:windowtext;mso-border-style-alt:solid;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>COMPLEJIDAD</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 2.25pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial;color:black'>Baja</span></p>
+		  </td>
+		 </tr>
+		 <tr height='0'>
+		  <td width='149' style='border:none'></td>
+		  <td width='241' style='border:none'></td>
+		  <td width='239' style='border:none'></td>
+		 </tr>
+		</table>
+		
+		<p><strong>Diagrama de Actividad: contratacion.bienvenida</strong></p>
+		<p align='center'><img src="images/image006.jpg"></img></p>
+		
+		<table border='1' cellspacing='0' cellpadding='0'
+		 style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext 2.25pt;
+		 mso-padding-alt:0cm 3.5pt 0cm 3.5pt'>
+		 <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+		  <td  style='width:292.4pt;border:solid windowtext 2.25pt;
+		  background:navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='center' style='text-align:center'><b><span 
+		  style='font-size:10.0pt;line-height:150%;mso-bidi-font-family:Arial;
+		  color:white'>FICHA DE CASO DE USO</span></b></p>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='font-size:10.0pt;line-height:150%;mso-bidi-font-family:Arial;
+		  color:white'>contratacion.contratar</span></b></p>
+		  </td>
+		  <td  style='width:178.9pt;border:solid windowtext 2.25pt;
+		  border-left:none;mso-border-left-alt:solid windowtext 2.25pt;background:navy;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p ><b><span  style='mso-bidi-font-family:Arial;
+		  color:white'></span></b></p>
+		  <p ><b><span  style='mso-bidi-font-family:Arial;
+		  color:white'>Fecha de inicio: </span></b><span  style='mso-bidi-font-family:
+		  Arial;color:white'><span style='mso-field-code:" DATE  \\* MERGEFORMAT "'><span
+		   style='mso-ansi-language:ES;mso-no-proof:yes'>24/07/2006</span></span><b></b></span></p>
+		  <p ><b><span  style='mso-bidi-font-family:Arial;
+		  color:white'>Fecha última modificación: </span></b><span
+		   style='mso-bidi-font-family:Arial;color:white'><span
+		  style='mso-element:field-begin'></span><span
+		  style='mso-spacerun:yes'> </span>DATE \@ &quot;d/MM/yy&quot; \* MERGEFORMAT <span
+		  style='mso-element:field-separator'></span></span><span
+		   style='mso-bidi-font-family:Arial;color:white'><span
+		  style='mso-no-proof:yes'>24/07/06</span></span><span
+		   style='mso-bidi-font-family:Arial;color:white'><span
+		  style='mso-element:field-end'></span></span><span 
+		  style='mso-bidi-font-family:Arial;color:white'><b></b></span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:1'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>IDENTIFICACIÓN</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><b><span 
+		  style='font-size:10.0pt;line-height:150%;mso-bidi-font-family:Arial'>contratacion.contratar</span></b><span
+		   style='mso-bidi-font-family:Arial'></span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:2'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>NOMBRE</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>Contratar pólizas o suplementos</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:3'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>DESCRIPCIÓN</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>Caso de uso de orquestación dentro del
+		  proceso de contratación. No solo lleva a cabo la toma de datos, sino que en
+		  función de la misma se tarifica, documenta y/o emite.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:4'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>EXTENSIONES</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'></span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:5'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>EXCEPCIONES</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>No se puede formalizar el presupuesto o
+		  simulación. En estos casos hay que dejar rastro para un futuro tratamiento
+		  estadístico.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:6'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>CASOS DE USO ASOCIADOS</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span >Tarificar,
+		  Documentar, Emitir</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:7'>
+		  <td width='628' colspan='3' valign='top' style='width:471.3pt;border:solid windowtext 2.25pt;
+		  border-top:none;mso-border-top-alt:solid windowtext 2.25pt;background:navy;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>FLUJO NORMAL</span></b></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:8'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext 2.25pt;mso-border-top-alt:
+		  2.25pt;mso-border-left-alt:2.25pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:
+		  .5pt;mso-border-color-alt:windowtext;mso-border-style-alt:solid;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>ACTORES</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext 2.25pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-top-alt:2.25pt;mso-border-left-alt:.5pt;mso-border-bottom-alt:
+		  .5pt;mso-border-right-alt:2.25pt;mso-border-color-alt:windowtext;mso-border-style-alt:
+		  solid;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>CanalWeb, CanalDirecto, CanalMediadores,
+		  CanalInstitucional</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:9'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>PRECONDICIONES</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>El producto necesariamente debe haber sido
+		  dado de alta en el sistema (taller de productos). El protocolo de
+		  comercialización del producto debe estar activo.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:10'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>ACTIVACIÓN</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>Un Cliente se pone en contacto con la
+		  compañía a través de alguno de los canales de comercialización hábiles y
+		  declara su intención de contratar alguno de los productos (solicitud de
+		  presupuesto) o modificar algún contrato en vigor (simulación de suplemento).</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:11'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>DESCRIPCIÓN</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  style='margin-left:18.0pt;text-indent:-18.0pt;line-height:
+		  normal;mso-list:l2 level1 lfo34;tab-stops:-36.0pt 0cm list 18.0pt left 36.0pt'><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt;mso-fareast-font-family:
+		  Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>1)<span
+		  style='font:7.0pt "Times New Roman"'> </span></span></span><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt'>Preparar toma
+		  de datos: se elige tipo de operación; generación de presupuesto o simulación
+		  sobre póliza. En este último caso se debe seleccionar el tipo de simulación
+		  (Ejemplo: en el caso de autos podría ser el cambio de Kms anuales).</span></p>
+		  <p  style='margin-left:18.0pt;text-indent:-18.0pt;line-height:
+		  normal;mso-list:l2 level1 lfo34;tab-stops:-36.0pt 0cm list 18.0pt'><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt;mso-fareast-font-family:
+		  Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>2)<span
+		  style='font:7.0pt "Times New Roman"'> </span></span></span><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt'>Tomar todos
+		  los datos necesarios para cumplir con el objetivo del proceso de
+		  contratación.</span></p>
+		  <p  style='margin-left:18.0pt;text-indent:-18.0pt;line-height:
+		  normal;mso-list:l2 level1 lfo34;tab-stops:-36.0pt 0cm list 18.0pt'><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt;mso-fareast-font-family:
+		  Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>3)<span
+		  style='font:7.0pt "Times New Roman"'> </span></span></span><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt'>Validar:
+		  comprobar los datos tomados:</span></p>
+		  <p  style='margin-left:36.0pt;text-indent:-18.0pt;line-height:
+		  normal;mso-list:l2 level2 lfo34;tab-stops:-36.0pt 0cm list 36.0pt'><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt;mso-fareast-font-family:
+		  Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>a)<span
+		  style='font:7.0pt "Times New Roman"'> </span></span></span><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt'>Si faltan datos
+		  o son incorrectos volver al paso 2.</span></p>
+		  <p  style='margin-left:36.0pt;text-indent:-18.0pt;line-height:
+		  normal;mso-list:l2 level2 lfo34;tab-stops:-36.0pt 0cm list 36.0pt'><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt;mso-fareast-font-family:
+		  Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>b)<span
+		  style='font:7.0pt "Times New Roman"'> </span></span></span><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt'>Si los datos
+		  contemplan una situación de fuera de normas solicitar una autorización de los
+		  mismos a un supervisor.</span></p>
+		  <p  style='margin-left:36.0pt;text-indent:-18.0pt;line-height:
+		  normal;mso-list:l2 level2 lfo34;tab-stops:-36.0pt 0cm list 36.0pt'><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt;mso-fareast-font-family:
+		  Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>c)<span
+		  style='font:7.0pt "Times New Roman"'> </span></span></span><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt'>Si los datos
+		  facilitados por el cliente nos conducen a una situación de bloqueo abandonar
+		  el proceso de contratación. (Ejemplo: en el caso de autos el conductor
+		  principal es menor de 26 años).</span></p>
+		  <p  style='margin-left:36.0pt;text-indent:-18.0pt;line-height:
+		  normal;mso-list:l2 level2 lfo34;tab-stops:-36.0pt 0cm list 36.0pt'><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt;mso-fareast-font-family:
+		  Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>d)<span
+		  style='font:7.0pt "Times New Roman"'> </span></span></span><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt'>Todos los
+		  datos son correctos y se procede a facilitar precio al Cliente por el
+		  producto solicitado.</span></p>
+		  <p  style='margin-left:36.0pt;text-indent:-18.0pt;line-height:
+		  normal;mso-list:l2 level2 lfo34;tab-stops:-36.0pt 0cm list 36.0pt'><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt;mso-fareast-font-family:
+		  Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>e)<span
+		  style='font:7.0pt "Times New Roman"'> </span></span></span><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt'>Todos los
+		  datos son correctos, se cuenta con precio que se le facilitó al Cliente y con
+		  el cual estuvo de acuerdo y se chequea que la documentación que se le
+		  requirió es la correcta.</span></p>
+		  <p  style='margin-left:36.0pt;text-indent:-18.0pt;line-height:
+		  normal;mso-list:l2 level2 lfo34;tab-stops:-36.0pt 0cm list 36.0pt'><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt;mso-fareast-font-family:
+		  Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>f)<span
+		  style='font:7.0pt "Times New Roman"'>
+		  </span></span></span><span  style='font-size:8.0pt;
+		  mso-bidi-font-size:10.0pt'>Todos los datos son correctos, se cuenta con un
+		  precio que se le facilitó al Cliente y la documentación obligatoria
+		  solicitada ha sido recibida y chequeada. A partir de aquí se puede proceder
+		  con la emisión de la póliza o suplemento.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:12'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 2.25pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+		  .5pt;mso-border-left-alt:2.25pt;mso-border-bottom-alt:2.25pt;mso-border-right-alt:
+		  .5pt;mso-border-color-alt:windowtext;mso-border-style-alt:solid;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>POSTCONDICIONES</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 2.25pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>Una vez que se ha contratado una póliza o
+		  suplemento se debe proceder al envío de la documentación oportuna al Cliente.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:13'>
+		  <td width='628' colspan='3' valign='top' style='width:471.3pt;border:solid windowtext 2.25pt;
+		  border-top:none;mso-border-top-alt:solid windowtext 2.25pt;background:navy;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>FLUJO ALTERNATIVO 1</span></b></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:14'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>DESCRIPCIÓN</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span >N/A</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:15'>
+		  <td width='628' colspan='3' valign='top' style='width:471.3pt;border:solid windowtext 2.25pt;
+		  border-top:none;mso-border-top-alt:solid windowtext 2.25pt;background:navy;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>FACTORES DE DECISIÓN</span></b></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:16'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext 2.25pt;mso-border-top-alt:
+		  2.25pt;mso-border-left-alt:2.25pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:
+		  .5pt;mso-border-color-alt:windowtext;mso-border-style-alt:solid;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span
+		  style='mso-bidi-font-family:Arial;mso-ansi-language:ES;color:white'>FRECUENCIA</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext 2.25pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-top-alt:2.25pt;mso-border-left-alt:.5pt;mso-border-bottom-alt:
+		  .5pt;mso-border-right-alt:2.25pt;mso-border-color-alt:windowtext;mso-border-style-alt:
+		  solid;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span style='mso-bidi-font-family:
+		  Arial;mso-ansi-language:ES'>A petición del cliente</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:17'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>CRITICIDAD</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>Alta</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:18'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>RIESGOS</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>N/A</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:19;mso-yfti-lastrow:yes'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 2.25pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+		  .5pt;mso-border-left-alt:2.25pt;mso-border-bottom-alt:2.25pt;mso-border-right-alt:
+		  .5pt;mso-border-color-alt:windowtext;mso-border-style-alt:solid;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>COMPLEJIDAD</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 2.25pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>Normal</span></p>
+		  </td>
+		 </tr>
+		 
+		 <tr height='0'>
+		  <td width='149' style='border:none'></td>
+		  <td width='241' style='border:none'></td>
+		  <td width='239' style='border:none'></td>
+		 </tr>
+		 
+		</table>
+
+		<p><strong>Diagrama de Actividad: contratacion.contratar</strong></p>
+		<p align='center'><img src="images/image007.jpg"></img></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Entrar
+		a ficha de posición:</span></b></p>
+		
+		<p><span>Entrada a la ficha de posición.
+		Permitirá seleccionar la operación a realizar: Venta o Post-Venta.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Seleccionar
+		venta o post-venta:</span></b></p>
+		
+		<p><span>Actividad que identifica si el usuario
+		desea realizar una venta o una post-venta en función de su elección.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Preparar
+		buscador de Clientes:</span></b></p>
+		
+		<p><span>Actividad necesaria para cargar los valores
+		base que sirvan al buscador de Clientes para localizar al Cliente objeto del nuevo
+		contrato.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Buscador
+		de Clientes:</span></b></p>
+		
+		<p><span>Actividad destinada a mostrar los
+		contenidos del buscador de Clientes.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Nueva
+		búsqueda de Cliente:</span></b></p>
+		
+		<p><span>Relanzar el buscador de Clientes.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Nuevo
+		presupuesto o editar presupuesto:</span></b></p>
+		
+		<p><span>Acción en la que se le permitirá al
+		usuario definir si se trata de editar un presupuesto o es un nuevo presupuesto
+		el que se generará.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Dirigir
+		proceso de venta:</span></b></p>
+		
+		<p><span>Se redirigirá el proceso de venta en
+		función de que sea una primera venta o no (edición de prosupuesto).</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Carga
+		de productos:</span></b></p>
+		
+		<p><span>En caso de ser una primera venta hay que
+		mostrar todos los productos, para que el usuario seleccione sobre cual de ellos
+		desea llevar a cabo el proceso de contratación.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Selección
+		del producto a contratar:</span></b></p>
+		
+		<p><span>Acción que permite al usuario
+		seleccionar el producto que desea contratar.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Lista
+		de clientes:</span></b></p>
+		
+		<p><span>Definición del comportamiento de la
+		rejilla de datos que mostrará todos los clientes coincidentes con el criterio
+		de búsqueda proporcionado.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Listado
+		de presupuestos y pólizas:</span></b></p>
+		
+		<p><span>Rejilla de datos que contiene los
+		presupuestos y pólizas del cliente que hayamos seleccionado en las actividades
+		previas.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Seleccionar
+		un presupuesto o póliza:</span></b></p>
+		
+		<p><span>Actividad que modela el comportamiento
+		de la selección de un presupuesto o póliza orientada a generar la edición del
+		mismo.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Prepara
+		la simulación:</span></b></p>
+		
+		<p><span>Actividad para preparar las acciones
+		pertinentes para poder hacer la edición de una simulación de un suplemento
+		concreto o seleccionar un tipo de suplemento para poder llevar a cabo una nueva
+		simulación.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Selección
+		de producto:</span></b></p>
+		
+		<p><span>El usuario selecciona un producto de la
+		lista mostrada con los mismos en la actividad previa y se prepara el nuevo
+		proceso de contratación en base a la selección realizada.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Carga
+		del taller las simulaciones:</span></b></p>
+		
+		<p><span>Se preparan todas las simulaciones
+		disponibles en el taller para el tipo póliza seleccionado con anterioridad. El
+		tipo de póliza dependerá del producto sobre el que se haya contratado.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Lista
+		los tipos de suplemento:</span></b></p>
+		
+		<p><span>Página que presenta los tipos de suplemento
+		para la póliza seleccionada en actividades anteriores.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Carga
+		lista suplementos aplicados:</span></b></p>
+		
+		<p><span>Carga la lista de suplementos ya aplicados
+		a la póliza que se indicó.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Lista
+		de simulaciones:</span></b></p>
+		
+		<p><span>Rejilla que contiene todas las
+		simulaciones realizadas sobre la póliza seleccionada.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Carga
+		de combos:</span></b></p>
+		
+		<p><span>Actividad destinada a cargar el
+		contenido de una los combos del formulario para la carga del detalle de la póliza.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Carga
+		el detalle de la póliza:</span></b></p>
+		
+		<p><span>Actividad destinada a cargar el
+		contenido de una póliza, previo a la edición de la misma.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Datos
+		de tomador y propietario:</span></b></p>
+		
+		<p><span>Se representan los campos necesarios
+		para poder completar o editar los Clientes (Tomador y Propietario) relativos a
+		una póliza.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Graba
+		Tomador y Propietario:</span></b></p>
+		
+		<p><span>Almacena los datos introducidos
+		relativos a los clientes.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Carga
+		marcas:</span></b></p>
+		
+		<p><span>Carga todas las marcas disponibles para
+		el producto de autos.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Carga
+		modelos:</span></b></p>
+		
+		<p><span>En función de la marca seleccionada en
+		la actividad anterior se cargan los modelos.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Obtener
+		versiones:</span></b></p>
+		
+		<p><span>Preparar las versiones disponibles para
+		una marca, modelo, combustible y número de puertas seleccionado previamente en
+		la actividad anterior.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Datos
+		del riesgo vehiculo:</span></b></p>
+		
+		<p><span>Página destinada a poder introducir los
+		datos del riesgo relativos al vehículo, en función de los datos disponibles de
+		las actividades anteriores (marca, modelo y versión).</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Guardar
+		datos tipo vehiculo:</span></b></p>
+		
+		<p><span>Actividad que deja almacenados los datos
+		del vehiculo introducido para posterior referencia.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Tomar
+		identificación vehiculo:</span></b></p>
+		
+		<p><span>Actividad que permite tomar los datos de
+		identificación del vehiculo (matrícula, etc.).</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Registrar
+		vehiculo:</span></b></p>
+		
+		<p><span>Actividad que registra los datos del
+		vehiculo en el sistema.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Búsqueda
+		de conductores:</span></b></p>
+		
+		<p><span>La actividad busca a todos los
+		conductores que coinciden con el criterio seleccionado (asociados a la póliza).</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Datos
+		del riesgo conductores:</span></b></p>
+		
+		<p><span>Actividad que muestra el formulario
+		necesario para poder añadir a la póliza, presupuesto o simulación, los
+		conductores necesarios.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Agregar
+		conductor:</span></b></p>
+		
+		<p><span>Se añade un nuevo conductor a los
+		incluidos en la póliza o presupuesto.</span></p>
+		
+		<p><span></span></p>
+
+		<table border='1' cellspacing='0' cellpadding='0'
+		 style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext 2.25pt;
+		 mso-padding-alt:0cm 3.5pt 0cm 3.5pt'>
+		 <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+		  <td  style='width:292.4pt;border:solid windowtext 2.25pt;
+		  background:navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='center' style='text-align:center'><b><span 
+		  style='font-size:10.0pt;line-height:150%;mso-bidi-font-family:Arial;
+		  color:white'>FICHA DE CASO DE USO</span></b></p>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='font-size:10.0pt;line-height:150%;mso-bidi-font-family:Arial;
+		  color:white'>contratacion.tarificar</span></b></p>
+		  </td>
+		  <td  style='width:178.9pt;border:solid windowtext 2.25pt;
+		  border-left:none;mso-border-left-alt:solid windowtext 2.25pt;background:navy;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p ><b><span  style='mso-bidi-font-family:Arial;
+		  color:white'></span></b></p>
+		  <p ><b><span  style='mso-bidi-font-family:Arial;
+		  color:white'>Fecha de inicio: </span></b><span  style='mso-bidi-font-family:
+		  Arial;color:white'><span style='mso-field-code:" DATE  \\* MERGEFORMAT "'><span
+		   style='mso-ansi-language:ES;mso-no-proof:yes'>24/07/2006</span></span><b></b></span></p>
+		  <p ><b><span  style='mso-bidi-font-family:Arial;
+		  color:white'>Fecha última modificación: </span></b><span
+		   style='mso-bidi-font-family:Arial;color:white'><span
+		  style='mso-element:field-begin'></span><span
+		  style='mso-spacerun:yes'> </span>DATE \@ &quot;d/MM/yy&quot; \* MERGEFORMAT <span
+		  style='mso-element:field-separator'></span></span><span
+		   style='mso-bidi-font-family:Arial;color:white'><span
+		  style='mso-no-proof:yes'>24/07/06</span></span><span
+		   style='mso-bidi-font-family:Arial;color:white'><span
+		  style='mso-element:field-end'></span></span><span 
+		  style='mso-bidi-font-family:Arial;color:white'><b></b></span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:1'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>IDENTIFICACIÓN</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><b><span 
+		  style='font-size:10.0pt;line-height:150%;mso-bidi-font-family:Arial'>contratacion.tarificar</span></b><span
+		   style='mso-bidi-font-family:Arial'></span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:2'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>NOMBRE</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>Solicitar precio para un presupuesto o
+		  simulación</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:3'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>DESCRIPCIÓN</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>Tarificar permite obtener para las
+		  distintas modalidades de pago las primas e impuestos relativos a una
+		  solicitud o simulación. Las tarifas obtenidas como resultado han de
+		  mantenerse durante la vida del presupuesto o simulación.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:4'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>EXTENSIONES</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'></span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:5'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>EXCEPCIONES</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>No se cumple alguna regla de contratación,
+		  en cuyo caso se obtiene un error en vez de 
+		  ProductID="la prima. En" w:st="on">la prima. En este caso se
+		  debe mostrar al agente la inconsistencia para que pueda actuar en
+		  consecuencia modificando los datos base del presupuesto / simulación , o bien
+		  dando marcha atrás al proceso de contratación abierto.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:6'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>CASOS DE USO ASOCIADOS</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span ></span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:7'>
+		  <td width='628' colspan='3' valign='top' style='width:471.3pt;border:solid windowtext 2.25pt;
+		  border-top:none;mso-border-top-alt:solid windowtext 2.25pt;background:navy;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>FLUJO NORMAL</span></b></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:8'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext 2.25pt;mso-border-top-alt:
+		  2.25pt;mso-border-left-alt:2.25pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:
+		  .5pt;mso-border-color-alt:windowtext;mso-border-style-alt:solid;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>ACTORES</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext 2.25pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-top-alt:2.25pt;mso-border-left-alt:.5pt;mso-border-bottom-alt:
+		  .5pt;mso-border-right-alt:2.25pt;mso-border-color-alt:windowtext;mso-border-style-alt:
+		  solid;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>CanalWeb, CanalDirecto, CanalMediadores,
+		  CanalInstitucional</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:9'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>PRECONDICIONES</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>Han sido informados todos los datos
+		  obligatorios para poder solicitar precio y no existe un estado ni de
+		  “bloqueo”, ni de “pendiente de autorización”</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:10'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>ACTIVACIÓN</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>El Cliente nos ha facilitado sus datos
+		  pertinentes y nos solicita un precio para el producto a contratar.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:11'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>DESCRIPCIÓN</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  style='margin-left:18.0pt;text-indent:-18.0pt;line-height:
+		  normal;mso-list:l26 level1 lfo27;tab-stops:-36.0pt 0cm list 18.0pt'><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt;mso-fareast-font-family:
+		  Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>1)<span
+		  style='font:7.0pt "Times New Roman"'> </span></span></span><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt'>Se comprueba
+		  que con los datos facilitados se cumplen las reglas de contratación
+		  especificadas para el producto en el taller.</span></p>
+		  <p  style='margin-left:18.0pt;text-indent:-18.0pt;line-height:
+		  normal;mso-list:l26 level1 lfo27;tab-stops:-36.0pt 0cm list 18.0pt'><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt;mso-fareast-font-family:
+		  Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>2)<span
+		  style='font:7.0pt "Times New Roman"'> </span></span></span><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt'>Se calcula el
+		  precio y los impuestos correspondientes para la modalidad o modalidades
+		  solicitadas. Para esto nos apoyaremos en la formulación facilitada para tal
+		  fin.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:12'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 2.25pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+		  .5pt;mso-border-left-alt:2.25pt;mso-border-bottom-alt:2.25pt;mso-border-right-alt:
+		  .5pt;mso-border-color-alt:windowtext;mso-border-style-alt:solid;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>POSTCONDICIONES</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 2.25pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>Una vez obtenido el precio se retorna al
+		  flujo normal de contratación desde el que se pidió la tarifa.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:13'>
+		  <td width='628' colspan='3' valign='top' style='width:471.3pt;border:solid windowtext 2.25pt;
+		  border-top:none;mso-border-top-alt:solid windowtext 2.25pt;background:navy;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>FLUJO ALTERNATIVO 1</span></b></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:14'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>DESCRIPCIÓN</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span >N/A</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:15'>
+		  <td width='628' colspan='3' valign='top' style='width:471.3pt;border:solid windowtext 2.25pt;
+		  border-top:none;mso-border-top-alt:solid windowtext 2.25pt;background:navy;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>FACTORES DE DECISIÓN</span></b></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:16'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext 2.25pt;mso-border-top-alt:
+		  2.25pt;mso-border-left-alt:2.25pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:
+		  .5pt;mso-border-color-alt:windowtext;mso-border-style-alt:solid;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span
+		  style='mso-bidi-font-family:Arial;mso-ansi-language:ES;color:white'>FRECUENCIA</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext 2.25pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-top-alt:2.25pt;mso-border-left-alt:.5pt;mso-border-bottom-alt:
+		  .5pt;mso-border-right-alt:2.25pt;mso-border-color-alt:windowtext;mso-border-style-alt:
+		  solid;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span style='mso-bidi-font-family:
+		  Arial;mso-ansi-language:ES'>A petición del cliente</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:17'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>CRITICIDAD</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>Alta</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:18'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>RIESGOS</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>N/A</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:19;mso-yfti-lastrow:yes'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 2.25pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+		  .5pt;mso-border-left-alt:2.25pt;mso-border-bottom-alt:2.25pt;mso-border-right-alt:
+		  .5pt;mso-border-color-alt:windowtext;mso-border-style-alt:solid;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>COMPLEJIDAD</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 2.25pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>Alta</span></p>
+		  </td>
+		 </tr>
+		 
+		 <tr height='0'>
+		  <td width='149' style='border:none'></td>
+		  <td width='241' style='border:none'></td>
+		  <td width='239' style='border:none'></td>
+		 </tr>
+
+
+		 
+		</table>
+
+		<p><strong>Diagrama de Actividad: contratacion.tarificar</strong></p>
+		<p align='center'><img src="images/image008.jpg"></img></p>
+
+		
+		<p><b style='mso-bidi-font-weight:normal'><span >Prepara
+		las tarifas:</span></b></p>
+		
+		<p><span >Genera las tarifas oportunas en función
+		de los datos capturados mediante el proceso de toma de datos.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span >Tarificar:</span></b></p>
+		
+		<p><span >Presenta una página en la que se muestra
+		una rejilla con todas las modalidades de seguro de autos.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span >Desglosar:</span></b></p>
+		
+		<p><span >En función de la tarifa seleccionada en
+		la actividad anterior, se carga el desglose correspondiente a la misma.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span >Fijar
+		tarifa:</span></b></p>
+		
+		<p><span >Se establece la tarifa seleccionada en
+		la actividad anterior como la que hay que asociar a la poliza.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span >Registrar
+		datos de domiciliación:</span></b></p>
+		
+		<p><span >En función de los datos de domiciliación
+		bancaria, se procede a actualizar el presupuesto o simulación con los mismos.</span></p>
+		
+		<p><span ></span></p>
+
+		<table border='1' cellspacing='0' cellpadding='0'
+		 style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext 2.25pt;
+		 mso-padding-alt:0cm 3.5pt 0cm 3.5pt'>
+		 <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+		  <td width='390' colspan='2' valign='top' style='width:292.4pt;border:solid windowtext 2.25pt;
+		  background:navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='center' style='text-align:center'><b><span 
+		  style='font-size:10.0pt;line-height:150%;mso-bidi-font-family:Arial;
+		  color:white'>FICHA DE CASO DE USO</span></b></p>
+		  <p align='center' style='text-align:center'><b><span 
+		  style='font-size:10.0pt;line-height:150%;mso-bidi-font-family:Arial;
+		  color:white'>contratacion.documentar</span></b></p>
+		  </td>
+		  <td width='239' valign='top' style='width:178.9pt;border:solid windowtext 2.25pt;
+		  border-left:none;mso-border-left-alt:solid windowtext 2.25pt;background:navy;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p><b><span  style='mso-bidi-font-family:Arial;
+		  color:white'></span></b></p>
+		  <p><b><span  style='mso-bidi-font-family:Arial;
+		  color:white'>Fecha de inicio: </span></b><span  style='mso-bidi-font-family:
+		  Arial;color:white'><span style='mso-field-code:" DATE  \\* MERGEFORMAT "'><span
+		  style='mso-ansi-language:ES;mso-no-proof:yes'>24/07/2006</span></span><b></b></span></p>
+		  <p><b><span  style='mso-bidi-font-family:Arial;
+		  color:white'>Fecha última modificación: </span></b><span
+		   style='mso-bidi-font-family:Arial;color:white'><span
+		  style='mso-element:field-begin'></span><span
+		  style='mso-spacerun:yes'> </span>DATE \@ &quot;d/MM/yy&quot; \* MERGEFORMAT <span
+		  style='mso-element:field-separator'></span></span><span
+		   style='mso-bidi-font-family:Arial;color:white'><span
+		  style='mso-no-proof:yes'>24/07/06</span></span><span
+		   style='mso-bidi-font-family:Arial;color:white'><span
+		  style='mso-element:field-end'></span></span><span 
+		  style='mso-bidi-font-family:Arial;color:white'><b></b></span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:1'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>IDENTIFICACIÓN</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='left' style='text-align:left'><b><span 
+		  style='font-size:10.0pt;line-height:150%;mso-bidi-font-family:Arial'>contratacion.documentar</span></b><span
+		   style='mso-bidi-font-family:Arial'></span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:2'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>NOMBRE</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>Chequeo de documentación obligatoria y
+		  opcional.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:3'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>DESCRIPCIÓN</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>Asociar un documento recibido a un
+		  presupuesto o simulación, de tal modo que en el mismo conste que el mismo se
+		  ha recibido y se encuentra archivado en 
+		  ProductID="la compa&#65521;&#65517;a. Cuando" w:st="on">la compañía. Cuando
+		  se termina el proceso hay que comprobar si toda la documentación necesaria
+		  para formalizar se ha recibido, en cuyo caso hay que proceder a avisar a un
+		  agente para que continúe con el proceso de formalización de la póliza o
+		  suplemento.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:4'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>EXTENSIONES</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'></span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:5'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>EXCEPCIONES</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>Si la documentación no se recibe en un
+		  plazo preestablecido hay que avisar a un agente para que tome las medidas
+		  oportunas.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:6'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>CASOS DE USO ASOCIADOS</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='left' style='text-align:left'><span >gestordocumental.altadocumento</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:7'>
+		  <td width='628' colspan='3' valign='top' style='width:471.3pt;border:solid windowtext 2.25pt;
+		  border-top:none;mso-border-top-alt:solid windowtext 2.25pt;background:navy;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>FLUJO NORMAL</span></b></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:8'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext 2.25pt;mso-border-top-alt:
+		  2.25pt;mso-border-left-alt:2.25pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:
+		  .5pt;mso-border-color-alt:windowtext;mso-border-style-alt:solid;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>ACTORES</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext 2.25pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-top-alt:2.25pt;mso-border-left-alt:.5pt;mso-border-bottom-alt:
+		  .5pt;mso-border-right-alt:2.25pt;mso-border-color-alt:windowtext;mso-border-style-alt:
+		  solid;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>CanalDirecto, CanalMediadores,
+		  CanalInstitucional (en ningún caso desde el CanalWeb)</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:9'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>PRECONDICIONES</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>Tenemos un presupuesto o simulación con
+		  todos sus datos y su precio asociado.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:10'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>ACTIVACIÓN</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>Se recibe un documento en la compañía, ya
+		  bien sea de forma automática o manual. En el primer caso se activará el caso
+		  de uso de forma automática, y estudiará el encaje del documento en función de
+		  su estructura y algún otro dato significativo que se incluya, mientras que en
+		  el segundo será un agente el que se encargará de buscar el presupuesto y o
+		  simulación con el que se corresponde dicho documento procediendo al chequeo
+		  de la recepción del mismo.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:11'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>DESCRIPCIÓN</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p style='margin-left:18.0pt;text-indent:-18.0pt;line-height:
+		  normal;mso-list:l27 level1 lfo28;tab-stops:-36.0pt 0cm list 18.0pt'><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt;mso-fareast-font-family:
+		  Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>1)<span
+		  style='font:7.0pt "Times New Roman"'> </span></span></span><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt'>Llega un
+		  documento</span></p>
+		  <p style='margin-left:18.0pt;text-indent:-18.0pt;line-height:
+		  normal;mso-list:l27 level1 lfo28;tab-stops:-36.0pt 0cm list 18.0pt'><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt;mso-fareast-font-family:
+		  Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>2)<span
+		  style='font:7.0pt "Times New Roman"'> </span></span></span><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt'>Se busca el
+		  presupuesto o simulación con el que se corresponde</span></p>
+		  <p style='margin-left:18.0pt;text-indent:-18.0pt;line-height:
+		  normal;mso-list:l27 level1 lfo28;tab-stops:-36.0pt 0cm list 18.0pt'><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt;mso-fareast-font-family:
+		  Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>3)<span
+		  style='font:7.0pt "Times New Roman"'> </span></span></span><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt'>Se comprueba
+		  si todos los documentos obligatorios han sido recibidos, en cuyo caso se
+		  avisa a un agente para que proceda con la emisión.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:12'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 2.25pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+		  .5pt;mso-border-left-alt:2.25pt;mso-border-bottom-alt:2.25pt;mso-border-right-alt:
+		  .5pt;mso-border-color-alt:windowtext;mso-border-style-alt:solid;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>POSTCONDICIONES</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 2.25pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>En caso de que se haya recibido toda la
+		  documentación obligatoria se debe proceder a avisar a un agente para que
+		  pueda proceder con la emisión de la póliza o suplemento.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:13'>
+		  <td width='628' colspan='3' valign='top' style='width:471.3pt;border:solid windowtext 2.25pt;
+		  border-top:none;mso-border-top-alt:solid windowtext 2.25pt;background:navy;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>FLUJO ALTERNATIVO 1</span></b></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:14'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>DESCRIPCIÓN</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='left' style='margin-left:18.0pt;text-align:left;
+		  text-indent:-18.0pt;mso-list:l16 level1 lfo29;tab-stops:-36.0pt 0cm list 18.0pt left 36.0pt'><span
+		   style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+		  style='mso-list:Ignore'>1)<span style='font:7.0pt "Times New Roman"'>
+		  </span></span></span><span >Llega un documento. </span></p>
+		  <p align='left' style='margin-left:18.0pt;text-align:left;
+		  text-indent:-18.0pt;mso-list:l16 level1 lfo29;tab-stops:-36.0pt 0cm list 18.0pt left 36.0pt'><span
+		   style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+		  style='mso-list:Ignore'>2)<span style='font:7.0pt "Times New Roman"'>
+		  </span></span></span><span >Se busca el presupuesto o
+		  simulación con el que se corresponde. </span></p>
+		  <p align='left' style='margin-left:18.0pt;text-align:left;
+		  text-indent:-18.0pt;mso-list:l16 level1 lfo29;tab-stops:-36.0pt 0cm list 18.0pt left 36.0pt'><span
+		   style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+		  style='mso-list:Ignore'>3)<span style='font:7.0pt "Times New Roman"'>
+		  </span></span></span><span >Se comprueba que el mismo
+		  se encuentra en estado de bloqueo por haber vencido el plazo de recepción de
+		  la documentación. </span></p>
+		  <p align='left' style='margin-left:18.0pt;text-align:left;
+		  text-indent:-18.0pt;mso-list:l16 level1 lfo29;tab-stops:-36.0pt 0cm list 18.0pt left 36.0pt'><span
+		   style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+		  style='mso-list:Ignore'>4)<span style='font:7.0pt "Times New Roman"'>
+		  </span></span></span><span >Se avisa a un agente para
+		  que tome las medidas oportunas.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:15'>
+		  <td width='628' colspan='3' valign='top' style='width:471.3pt;border:solid windowtext 2.25pt;
+		  border-top:none;mso-border-top-alt:solid windowtext 2.25pt;background:navy;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>FACTORES DE DECISIÓN</span></b></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:16'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext 2.25pt;mso-border-top-alt:
+		  2.25pt;mso-border-left-alt:2.25pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:
+		  .5pt;mso-border-color-alt:windowtext;mso-border-style-alt:solid;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='center' style='text-align:center'><b><span
+		  style='mso-bidi-font-family:Arial;mso-ansi-language:ES;color:white'>FRECUENCIA</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext 2.25pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-top-alt:2.25pt;mso-border-left-alt:.5pt;mso-border-bottom-alt:
+		  .5pt;mso-border-right-alt:2.25pt;mso-border-color-alt:windowtext;mso-border-style-alt:
+		  solid;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='left' style='text-align:left'><span style='mso-bidi-font-family:
+		  Arial;mso-ansi-language:ES'>Se recibe un documento</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:17'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>CRITICIDAD</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>Alta</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:18'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>RIESGOS</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>N/A</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:19;mso-yfti-lastrow:yes'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 2.25pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+		  .5pt;mso-border-left-alt:2.25pt;mso-border-bottom-alt:2.25pt;mso-border-right-alt:
+		  .5pt;mso-border-color-alt:windowtext;mso-border-style-alt:solid;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>COMPLEJIDAD</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 2.25pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>Normal</span></p>
+		  </td>
+		 </tr>
+		 <tr height='0'>
+		  <td width='149' style='border:none'></td>
+		  <td width='241' style='border:none'></td>
+		  <td width='239' style='border:none'></td>
+		 </tr>
+		 
+		</table>
+
+		<p><strong>Diagrama de Actividad: contratacion.documentar</strong></p>
+		<p align='center'><img src="images/image009.jpg"></img></p>
+
+		<p><b style='mso-bidi-font-weight:normal'><span>Preparar:</span></b></p>
+		
+		<p><span>Cargar las listas de documentación
+		obligatoria pendiente de recibir y documentación recibida.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Documentar:</span></b></p>
+		
+		<p><span>El usuario puede chequear los documentos
+		que están en poder de la compañía y ya no suponen un impedimento para poder
+		continuar con el proceso de contratación.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Registrar:</span></b></p>
+		
+		<p><span>Actualizar la simulación o presupuesto
+		con los nuevos documentos recibidos y su id. dentro del gestor documental de la
+		compañía.</span></p>
+		
+		<p><span></span></p>
+		
+		<table border='1' cellspacing='0' cellpadding='0'
+		 style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext 2.25pt;
+		 mso-padding-alt:0cm 3.5pt 0cm 3.5pt'>
+		 <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+		  <td width='390' colspan='2' valign='top' style='width:292.4pt;border:solid windowtext 2.25pt;
+		  background:navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='font-size:10.0pt;line-height:150%;mso-bidi-font-family:Arial;
+		  color:white'>FICHA DE CASO DE USO</span></b></p>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='font-size:10.0pt;line-height:150%;mso-bidi-font-family:Arial;
+		  color:white'>contratacion.emitir</span></b></p>
+		  </td>
+		  <td width='239' valign='top' style='width:178.9pt;border:solid windowtext 2.25pt;
+		  border-left:none;mso-border-left-alt:solid windowtext 2.25pt;background:navy;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p ><b><span  style='mso-bidi-font-family:Arial;
+		  color:white'></span></b></p>
+		  <p ><b><span  style='mso-bidi-font-family:Arial;
+		  color:white'>Fecha de inicio: </span></b><span  style='mso-bidi-font-family:
+		  Arial;color:white'><span style='mso-field-code:" DATE  \\* MERGEFORMAT "'><span
+		  style='mso-ansi-language:ES;mso-no-proof:yes'>24/07/2006</span></span><b></b></span></p>
+		  <p ><b><span  style='mso-bidi-font-family:Arial;
+		  color:white'>Fecha última modificación: </span></b><span
+		   style='mso-bidi-font-family:Arial;color:white'><span
+		  style='mso-element:field-begin'></span><span
+		  style='mso-spacerun:yes'> </span>DATE \@ &quot;d/MM/yy&quot; \* MERGEFORMAT <span
+		  style='mso-element:field-separator'></span></span><span
+		   style='mso-bidi-font-family:Arial;color:white'><span
+		  style='mso-no-proof:yes'>24/07/06</span></span><span
+		   style='mso-bidi-font-family:Arial;color:white'><span
+		  style='mso-element:field-end'></span></span><span 
+		  style='mso-bidi-font-family:Arial;color:white'><b></b></span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:1'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>IDENTIFICACIÓN</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><b><span 
+		  style='font-size:10.0pt;line-height:150%;mso-bidi-font-family:Arial'>contratacion.emitir</span></b><span
+		   style='mso-bidi-font-family:Arial'></span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:2'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>NOMBRE</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>Convertir un presupuesto en póliza o una
+		  simulación en suplemento.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:3'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>DESCRIPCIÓN</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>Se debe tomar la dirección de envío y
+		  algunos datos genéricos de la nueva póliza o suplemento, para partiendo de
+		  los mismo proceder con la generación del recibo y la formalización que
+		  terminará con el envío de la documentación específica a la dirección de envío
+		  facilitada por el Cliente.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:4'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>EXTENSIONES</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'></span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:5'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>EXCEPCIONES</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>En caso de no poder llevarse a cabo la
+		  formalización de la póliza o suplemento por cualquier motivo, se debe avisar
+		  a un Agente para que haga un estudio de detalle del presupuesto o simulación.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:6'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>CASOS DE USO ASOCIADOS</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span >facturacion.emitirrecibo</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:7'>
+		  <td width='628' colspan='3' valign='top' style='width:471.3pt;border:solid windowtext 2.25pt;
+		  border-top:none;mso-border-top-alt:solid windowtext 2.25pt;background:navy;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>FLUJO NORMAL</span></b></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:8'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext 2.25pt;mso-border-top-alt:
+		  2.25pt;mso-border-left-alt:2.25pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:
+		  .5pt;mso-border-color-alt:windowtext;mso-border-style-alt:solid;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>ACTORES</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext 2.25pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-top-alt:2.25pt;mso-border-left-alt:.5pt;mso-border-bottom-alt:
+		  .5pt;mso-border-right-alt:2.25pt;mso-border-color-alt:windowtext;mso-border-style-alt:
+		  solid;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>CanalDirecto, CanalMediadores,
+		  CanalInstitucional (En ningún caso desde el CanalWeb)</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:9'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>PRECONDICIONES</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>Tenemos al menos todos los datos de
+		  carácter obligatorio, hemos obtenido un precio y se cuenta con toda la información
+		  obligatoria.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:10'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>ACTIVACIÓN</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>El Agente recibe un Aviso que le informa
+		  de la viabilidad de formalizar un presupuesto o simulación.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:11'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>DESCRIPCIÓN</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p style='margin-left:18.0pt;text-indent:-18.0pt;line-height:
+		  normal;mso-list:l6 level1 lfo30;tab-stops:-36.0pt 0cm list 18.0pt'><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt;mso-fareast-font-family:
+		  Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>1)<span
+		  style='font:7.0pt "Times New Roman"'> </span></span></span><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt'>Toma de datos
+		  adicionales de póliza ó suplemento: </span></p>
+		  <p style='margin-left:54.0pt;text-indent:-18.0pt;line-height:
+		  normal;mso-list:l6 level2 lfo30;tab-stops:-36.0pt 0cm list 54.0pt'><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt;mso-fareast-font-family:
+		  Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>a.<span
+		  style='font:7.0pt "Times New Roman"'>
+		  </span></span></span><span  style='font-size:8.0pt;
+		  mso-bidi-font-size:10.0pt'>Forma de pago </span></p>
+		  <p style='margin-left:54.0pt;text-indent:-18.0pt;line-height:
+		  normal;mso-list:l6 level2 lfo30;tab-stops:-36.0pt 0cm list 54.0pt'><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt;mso-fareast-font-family:
+		  Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>b.<span
+		  style='font:7.0pt "Times New Roman"'>
+		  </span></span></span><span  style='font-size:8.0pt;
+		  mso-bidi-font-size:10.0pt'>Dirección de envío</span></p>
+		  <p style='margin-left:18.0pt;text-indent:-18.0pt;line-height:
+		  normal;mso-list:l6 level1 lfo30;tab-stops:-36.0pt 0cm list 18.0pt'><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt;mso-fareast-font-family:
+		  Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>2)<span
+		  style='font:7.0pt "Times New Roman"'> </span></span></span><span
+		   style='font-size:8.0pt;mso-bidi-font-size:10.0pt'>Formalización</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:12'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 2.25pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:
+		  .5pt;mso-border-left-alt:2.25pt;mso-border-bottom-alt:2.25pt;mso-border-right-alt:
+		  .5pt;mso-border-color-alt:windowtext;mso-border-style-alt:solid;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>POSTCONDICIONES</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 2.25pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span >Generación,
+		  envío y cobro del recibo. </span></p>
+		  <p  align='left' style='text-align:left'><span >Envío de
+		  la documentación al Cliente.</span><span  style='mso-bidi-font-family:
+		  Arial'></span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:13'>
+		  <td width='628' colspan='3' valign='top' style='width:471.3pt;border:solid windowtext 2.25pt;
+		  border-top:none;mso-border-top-alt:solid windowtext 2.25pt;background:navy;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>FLUJO ALTERNATIVO 1</span></b></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:14'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>DESCRIPCIÓN</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span >N/A</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:15'>
+		  <td width='628' colspan='3' valign='top' style='width:471.3pt;border:solid windowtext 2.25pt;
+		  border-top:none;mso-border-top-alt:solid windowtext 2.25pt;background:navy;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>FACTORES DE DECISIÓN</span></b></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:16'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext 2.25pt;mso-border-top-alt:
+		  2.25pt;mso-border-left-alt:2.25pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:
+		  .5pt;mso-border-color-alt:windowtext;mso-border-style-alt:solid;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span
+		  style='mso-bidi-font-family:Arial;mso-ansi-language:ES;color:white'>FRECUENCIA</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext 2.25pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-top-alt:2.25pt;mso-border-left-alt:.5pt;mso-border-bottom-alt:
+		  .5pt;mso-border-right-alt:2.25pt;mso-border-color-alt:windowtext;mso-border-style-alt:
+		  solid;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span style='mso-bidi-font-family:
+		  Arial;mso-ansi-language:ES'>El Agente recibe un aviso para formalizar</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:17'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>CRITICIDAD</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>Alta</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:18'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>RIESGOS</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>N/A</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:19;mso-yfti-lastrow:yes'>
+		  <td width='149' valign='top' style='width:111.8pt;border-top:none;border-left:
+		  solid windowtext 2.25pt;border-bottom:solid windowtext 1.0pt;border-right:
+		  solid windowtext 1.0pt;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;mso-border-left-alt:solid windowtext 2.25pt;background:
+		  navy;padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='center' style='text-align:center'><b><span 
+		  style='mso-bidi-font-family:Arial;color:white'>COMPLEJIDAD</span></b></p>
+		  </td>
+		  <td width='479' colspan='2' valign='top' style='width:359.5pt;border-top:none;
+		  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 2.25pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext 2.25pt;
+		  padding:0cm 3.5pt 0cm 3.5pt'>
+		  <p  align='left' style='text-align:left'><span 
+		  style='mso-bidi-font-family:Arial'>Alta</span></p>
+		  </td>
+		 </tr>
+		 <tr height='0'>
+		  <td width='149' style='border:none'></td>
+		  <td width='241' style='border:none'></td>
+		  <td width='239' style='border:none'></td>
+		 </tr>
+		 
+		</table>
+
+		<p><strong>Diagrama de Actividad: contratacion.emitir</strong></p>
+		<p align='center'><img src="images/image009.jpg"></img></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Preparar
+		datos dirección de envío:</span></b></p>
+		
+		<p><span>Preparar los campos necesarios para que
+		el usuario pueda proceder a introducir la dirección de envío para la
+		documentación generada, previa al proceso de emisión.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Cargar
+		datos previos:</span></b></p>
+		
+		<p><span>Carga de datos necesarios para convertir
+		la simulación en suplemento o el presupuesto en póliza.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Emitiendo:</span></b></p>
+		
+		<p><span>Edición de la dirección de envío de la
+		documentación de la póliza y lanzamiento del proceso de emisión.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span>Emitir:</span></b></p>
+		
+		<p><span>Actividad para emitir la póliza o suplemento.</span></p>
+		<a name="ind_6"></a>		
+	</section>    
+	<section name="Modelos de Dominio">
+		<p><strong>Contratación</strong></p>
+		<p>El siguiente diagrama de clases muestra el modelo de dominio que se va a emplear 
+		como base de la implementación:
+		</p>
+		<p align='center'><img src="images/image011.jpg"></img></p>		
+		<a name="ind_7"></a>			
+	</section>
+	<section name="Arquitectura del ejemplo">
+		<p><strong>Ámbito</strong></p>
+		<p>Prueba conceptual inicial para demostrar las capacidades de I-Builder. Se considera 
+		el caso de ejemplo desarrollado en el apartado 4. Descripción Funcional del Ejemplo a 
+		desarrollar de este mismo documento (NPA - Contratación).
+		</p>
+		<p>El siguiente diagrama ofrece una visión de los primeros niveles de la arquitectura propuesta:
+		</p>
+		<p align='center'><img src="images/image012.jpg"></img></p>		
+		<p><strong>1.- Capa de Acceso y Presentación</strong></p>
+		<p>Se considera el desarrollo de una aplicación web para dar soporte a las diversas partes 
+		de la interfaz de usuario que deben ser consideradas por el negocio.
+		</p>
+		<p><strong>1.1.- Aplicaciones / Portlets</strong></p>
+		<p><strong>1.1.1.- Aplicación NPA Contratación</strong></p>
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Nombre: NPA_Contratacion</span></p>
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Perfiles usuarios: Canal,
+		Direccion</span></p>
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Metas y Objetivos</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Permitir la toma de datos
+		necesaria para la generación de presupuestos o simulación sobre pólizas.</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Permitir el conjunto de
+		mantenimientos ligado al proceso de contratación.</span></p>
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Servicios Utilizados</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Clientes</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Tarifas</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Pólizas</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Productos</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Vehículos</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Valores Base</span></p>
+		
+		<p style='margin-left:98.4pt'><span ></span></p>
+		
+		<p style='margin-left:0cm'><span ></span></p>
+		
+		<p><span ></span></p>
+
+
+		<p><strong>2.- Capa de composición de Servicios y Procesos de Negocio</strong></p>
+		<p><strong>2.1.- Procesos de Negocio </strong></p>
+		<p>NO APLICA  (En este apartado se deberían incluir aquellos servicios que van a ser 
+		soportados como una composición/orquestación de servicios)
+		</p>
+		<p><strong>2.2.- Decisiones de arquitectura </strong></p>
+		<p>NO APLICA  (ya que no se ha considerado la existencia de esta capa de orquestación/composición)
+		</p>
+		<p><strong>3.- Capa de Servicios</strong></p>		
+		<p><strong>3.1.- Catálogo de servicios</strong></p>		
+		<p><strong>3.1.1.- Servicio de Clientes</strong></p>				
+
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Nombre: SrvClientes</span></p>
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Metas y Objetivos</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Permitir el acceso a los
+		datos de los clientes registrados en el sistema</span></p>
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+		Symbol;mso-ansi-language:EN-GB'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span  style='mso-ansi-language:EN-GB'>KPIs
+		(Key Performance Indicators asociados)</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		style='font-family:"Courier New";mso-fareast-font-family:"Courier New";
+		mso-ansi-language:ES'><span style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span style='mso-ansi-language:ES'>No
+		especificados</span></p>
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Descripción</span></p>
+
+		<p align='center'><img src="images/image013.jpg"></img></p>				
+
+
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Categorización
+		(negocio/sistema; atómico/compuesto)</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Negocio</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Atómico</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Servicio de Datos</span></p>
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >QoS (requerida)</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >No especificada</span></p>
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Componentes que lo
+		implementan</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >No especificados</span></p>
+		
+		<p><strong>3.1.3.p01.- Servicio de Pólizas</strong></p>						
+		
+		<p  style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Nombre: SrvPolizas</span></p>
+		
+		<p  style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Metas y Objetivos</span></p>
+		
+		<p  style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Gestionar las diferentes
+		agrupaciones de información que componen una póliza, presupuesto o suplemento.</span></p>
+		
+		<p  style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+		Symbol;mso-ansi-language:EN-GB'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span  style='mso-ansi-language:EN-GB'>KPIs
+		(Key Performance Indicators asociados)</span></p>
+		
+		<p  style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		style='font-family:"Courier New";mso-fareast-font-family:"Courier New";
+		mso-ansi-language:ES'><span style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span style='mso-ansi-language:ES'>No
+		especificados</span></p>
+		
+		<p  style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+		Symbol;mso-ansi-language:EN-GB'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span  style='mso-ansi-language:EN-GB'>Descripción
+		</span></p>
+
+		<p align='center'><img src="images/image020.jpg"></img></p>						
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Categorización
+		(negocio/sistema; atómico/compuesto)</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Negocio</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Atómico</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Servicio de Datos</span></p>
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >QoS (requerida)</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >No especificado</span></p>
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Componentes que lo
+		implementan</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >No especificado</span></p>
+
+		<p><strong>3.1.3.p01.- Servicio de Productos</strong></p>						
+				
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Nombre: SrvProductos</span></p>
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Metas y Objetivos</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Proporcionar los datos de los
+		diferentes elementos definidos mediante el taller de productos (productos,
+		tipos de suplementos, tipos de documentos, …)</span></p>
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+		Symbol;mso-ansi-language:EN-GB'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span  style='mso-ansi-language:EN-GB'>KPIs
+		(Key Performance Indicators asociados)</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		style='font-family:"Courier New";mso-fareast-font-family:"Courier New";
+		mso-ansi-language:ES'><span style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span style='mso-ansi-language:ES'>No
+		especificados</span></p>
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+		Symbol;mso-ansi-language:EN-GB'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span  style='mso-ansi-language:EN-GB'>Descripción
+		</span></p>
+		
+		<p align='center'><img src="images/image021.jpg"></img></p>								
+				
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Categorización
+		(negocio/sistema; atómico/compuesto)</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Negocio</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Atómico</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Servicio de Datos</span></p>
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >QoS (requerida)</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >No especificado</span></p>
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Componentes que lo
+		implementan</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >No especificado</span></p>
+		
+		<p><span ></span></p>
+
+		<p><strong>3.1.3.p01.- Servicio de Tarifas</strong></p>
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span>Nombre: SrvTarifas</span></p>
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Metas y Objetivos</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Proporcionar el desglose
+		asociado a una tarifa</span></p>
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+		Symbol;mso-ansi-language:EN-GB'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span  style='mso-ansi-language:EN-GB'>KPIs
+		(Key Performance Indicators asociados)</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		style='font-family:"Courier New";mso-fareast-font-family:"Courier New";
+		mso-ansi-language:ES'><span style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span style='mso-ansi-language:ES'>No
+		especificados</span></p>
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+		Symbol;mso-ansi-language:EN-GB'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span  style='mso-ansi-language:EN-GB'>Descripción
+		</span></p>
+
+		<p align='center'><img src="images/image022.jpg"></img></p>	
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Categorización
+		(negocio/sistema; atómico/compuesto)</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Negocio</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Atómico</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Servicio de Cálculo</span></p>
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >QoS (requerida)</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >No especificado</span></p>
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Componentes que lo
+		implementan</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >No especificado</span></p>
+		
+		<p><span ></span></p>
+		
+		<p><span ></span></p>
+
+		<p><strong>3.1.4.- Servicio de Valores Base</strong></p>			
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Nombre: SrvValoresBase</span></p>
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Metas y Objetivos</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Proporcionar los datos a
+		presentar en cada uno de los combos de la aplicación.</span></p>
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+		Symbol;mso-ansi-language:EN-GB'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span  style='mso-ansi-language:EN-GB'>KPIs
+		(Key Performance Indicators asociados)</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		style='font-family:"Courier New";mso-fareast-font-family:"Courier New";
+		mso-ansi-language:ES'><span style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span style='mso-ansi-language:ES'>No
+		especificados</span></p>
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+		Symbol;mso-ansi-language:EN-GB'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span  style='mso-ansi-language:EN-GB'>Descripción
+		</span></p>
+		
+		<p align='center'><img src="images/image023.jpg"></img></p>	
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Categorización
+		(negocio/sistema; atómico/compuesto)</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Negocio</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Atómico</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Servicio de Datos</span></p>
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >QoS (requerida)</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >No especificado</span></p>
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Componentes que lo
+		implementan</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >No especificado</span></p>
+		
+		<p><span ></span></p>
+		
+		<p><span ></span></p>
+		
+		<p><strong>3.1.7.p01.- Servicio de Vehículos</strong></p>			
+		
+				
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Nombre: SrvVehiculos</span></p>
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Metas y Objetivos</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Proporcionar los datos de
+		referencia de los vehículos (marcas, modelos y versiones).</span></p>
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+		Symbol;mso-ansi-language:EN-GB'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span  style='mso-ansi-language:EN-GB'>KPIs
+		(Key Performance Indicators asociados)</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		style='font-family:"Courier New";mso-fareast-font-family:"Courier New";
+		mso-ansi-language:ES'><span style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span style='mso-ansi-language:ES'>No
+		especificados</span></p>
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+		Symbol;mso-ansi-language:EN-GB'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span  style='mso-ansi-language:EN-GB'>Descripción
+		</span></p>
+		
+		<p align='center'><img src="images/image024.jpg"></img></p>	
+		
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Categorización
+		(negocio/sistema; atómico/compuesto)</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Negocio</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Atómico</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Servicio de Datos</span></p>
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >QoS (requerida)</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >No especificado</span></p>
+		
+		<p style='margin-left:80.4pt;text-indent:-18.0pt;mso-list:l13 level1 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 80.4pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Componentes que lo
+		implementan</span></p>
+		
+		<p style='margin-left:116.4pt;text-indent:-18.0pt;mso-list:l13 level2 lfo31;
+		tab-stops:-36.0pt 0cm 36.0pt list 116.4pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >No especificado</span></p>
+
+
+		<p><strong>4.- Despliegue de la Solución</strong></p>					
+		
+		<p>La solución finalmente implementada, se desplegará como una aplicación web sobre servidor 
+		de aplicaciones J2EE, de manera tradicional, tal y como ilustra el siguiente diagrama:
+		</p>
+
+		<p align='center'><img src="images/image025.jpg"></img></p>			
+		
+	</section>
+	
+	
+    </body>
+</document>

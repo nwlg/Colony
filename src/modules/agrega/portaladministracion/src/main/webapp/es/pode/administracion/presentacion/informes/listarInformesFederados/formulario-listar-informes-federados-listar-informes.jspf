@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="listarInformes" class="action">
+    <h3><bean:message key="listar.informes.federados.formulario.listar.informes.federados.listar.informes"/></h3>
+    <div class="trigger">
+        <form id="listarInformesFederadosFormularioListarInformesFederadosListarInformesForm" action='<html:rewrite action="/ListarInformesFederados/FormularioListarInformesFederadosListarInformes"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+               <html:submit onmouseover="hints.show('listarInformes')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="listar.informes.federados.formulario.listar.informes.federados.listar.informes"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

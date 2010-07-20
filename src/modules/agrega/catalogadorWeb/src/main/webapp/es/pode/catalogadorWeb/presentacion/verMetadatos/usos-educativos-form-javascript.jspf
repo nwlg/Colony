@@ -1,0 +1,28 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'ver.metadatos.usos.educativos.form.detalle.uso.educativo.param.identificador.ode.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.usos.educativos.form.detalle.uso.educativo.param.identificador.ode.title"/></formatting:escape>',
+                'ver.metadatos.usos.educativos.form.detalle.uso.educativo.param.listado.usos.edu.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.usos.educativos.form.detalle.uso.educativo.param.listado.usos.edu.title"/></formatting:escape>',
+                'ver.metadatos.usos.educativos.form.detalle.uso.educativo.param.boton.pulsado.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.usos.educativos.form.detalle.uso.educativo.param.boton.pulsado.title"/></formatting:escape>',
+                'detalleUsoEducativo':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.usos.educativos.form.detalle.uso.educativo.title"/></formatting:escape>',
+                'detalleUsoEducativo_no':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.usos.educativos.form.detalle.uso.educativo.title.notallowed"/></formatting:escape>',
+                'detalleUsoEducativo_reset':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.usos.educativos.form.detalle.uso.educativo.title.reset"/></formatting:escape>',
+                'detalleUsoEducativo_noreset':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.usos.educativos.form.detalle.uso.educativo.title.reset.not.allowed"/></formatting:escape>',
+                'vuelveDeUsosEducativos':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.usos.educativos.form.vuelve.de.usos.educativos.title"/></formatting:escape>',
+                'vuelveDeUsosEducativos_no':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.usos.educativos.form.vuelve.de.usos.educativos.title.notallowed"/></formatting:escape>',
+                'vuelveDeUsosEducativos_reset':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.usos.educativos.form.vuelve.de.usos.educativos.title.reset"/></formatting:escape>',
+                'vuelveDeUsosEducativos_noreset':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.usos.educativos.form.vuelve.de.usos.educativos.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+</script>
+    </tiles:put>

@@ -1,0 +1,17 @@
+#crearNoticia.action {}
+#crearNoticia.action #form_submit {}
+
+
+#gestionCategorias.action {}
+#gestionCategorias.action #form_submit {}
+
+
+#noticias.table {}
+#noticias.table th {}
+#noticias.table td div {}
+
+#noticias.table th.idNoticia {}
+#noticias.table td div.idNoticia {}
+
+
+

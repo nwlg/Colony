@@ -1,0 +1,58 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="detalleClasificacion" class="action">
+    <h3><bean:message key="ver.metadatos.clasificaciones.form.detalle.clasificacion"/></h3>
+    <div class="trigger">
+        <html:form styleId="verMetadatosClasificacionesFormDetalleClasificacionForm" action="/VerMetadatos/ClasificacionesFormDetalleClasificacion" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="identificadorOde">
+                        <td class="label"><bean:message key="ver.metadatos.clasificaciones.form.detalle.clasificacion.param.identificador.ode"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.identificadorOde}"/>
+                           <input type="text" name="identificadorOde" value="${value}" onmouseover="hints.show('ver.metadatos.clasificaciones.form.detalle.clasificacion.param.identificador.ode.title')" onmouseout="hints.hide()"  id="detalleClasificacionIdentificadorOde"/>
+                        </td>
+                    </tr>
+                    <tr class="listadoClasificaciones">
+                        <td class="label"><bean:message key="ver.metadatos.clasificaciones.form.detalle.clasificacion.param.listado.clasificaciones"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.listadoClasificaciones}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.listadoClasificacionesBackingList}">
+                                  <html:select name="form" property="listadoClasificacionesAsArray" onmouseover="hints.show('ver.metadatos.clasificaciones.form.detalle.clasificacion.param.listado.clasificaciones.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="detalleClasificacionListadoClasificaciones">
+                                      <html:optionsCollection name="form" property="listadoClasificacionesBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="listadoClasificacionesAsArray" onmouseover="hints.show('ver.metadatos.clasificaciones.form.detalle.clasificacion.param.listado.clasificaciones.title')" onmouseout="hints.hide()"  styleId="detalleClasificacionListadoClasificaciones"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="botonPulsado">
+                        <td class="label"><bean:message key="ver.metadatos.clasificaciones.form.detalle.clasificacion.param.boton.pulsado"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.botonPulsado}"/>
+                           <input type="text" name="botonPulsado" value="${value}" onmouseover="hints.show('ver.metadatos.clasificaciones.form.detalle.clasificacion.param.boton.pulsado.title')" onmouseout="hints.hide()"  id="detalleClasificacionBotonPulsado"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('detalleClasificacion')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="ver.metadatos.clasificaciones.form.detalle.clasificacion"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

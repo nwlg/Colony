@@ -1,0 +1,2368 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+    "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+    <!-- display-name merge point -->
+
+    <!-- description merge point -->
+
+    <data-sources>
+        <!-- data-sources merge point -->
+    </data-sources>
+
+    <form-beans>
+        <!-- form-beans merge-point -->
+        <form-bean
+            name="listarODECUListarODECUForm"
+            type="es.pode.buscador.presentacion.basico.listar.ListarODECUFormImpl" />
+        <form-bean
+            name="detallarODECUMostrarDetalleODEEnviarMailForm"
+            type="es.pode.buscador.presentacion.basico.detallar.MostrarDetalleODEEnviarMailFormImpl" />
+        <form-bean
+            name="detallarODECUSeleccionaCSSecuenciaMostrarODECSSecuenciaForm"
+            type="es.pode.buscador.presentacion.basico.detallar.SeleccionaCSSecuenciaMostrarODECSSecuenciaFormImpl" />
+        <form-bean
+            name="detallarODECUMostrarDetalleODEVolverBusquedaForm"
+            type="es.pode.buscador.presentacion.basico.detallar.MostrarDetalleODEVolverBusquedaFormImpl" />
+        <form-bean
+            name="detallarODECUOdeAgregadoAgregarNuevoForm"
+            type="es.pode.buscador.presentacion.basico.detallar.OdeAgregadoAgregarNuevoFormImpl" />
+        <form-bean
+            name="detallarODECUMostrarDetalleODEGestionarPosicionadoForm"
+            type="es.pode.buscador.presentacion.basico.detallar.MostrarDetalleODEGestionarPosicionadoFormImpl" />
+        <form-bean
+            name="detallarODECUMostrarDetalleODEDescargarForm"
+            type="es.pode.buscador.presentacion.basico.detallar.MostrarDetalleODEDescargarFormImpl" />
+        <form-bean
+            name="detallarODECUDetallarODECUForm"
+            type="es.pode.buscador.presentacion.basico.detallar.DetallarODECUFormImpl" />
+        <form-bean
+            name="detallarODECUMostrarDetalleODEPrevisualizarForm"
+            type="es.pode.buscador.presentacion.basico.detallar.MostrarDetalleODEPrevisualizarFormImpl" />
+        <form-bean
+            name="detallarODECUMostrarDetalleODEQueEsEstoForm"
+            type="es.pode.buscador.presentacion.basico.detallar.MostrarDetalleODEQueEsEstoFormImpl" />
+        <form-bean
+            name="detallarODECUMostrarDetalleODEValorarODEForm"
+            type="es.pode.buscador.presentacion.basico.detallar.MostrarDetalleODEValorarODEFormImpl" />
+        <form-bean
+            name="detallarODECUMostrarDetalleODEListarComentariosForm"
+            type="es.pode.buscador.presentacion.basico.detallar.MostrarDetalleODEListarComentariosFormImpl" />
+        <form-bean
+            name="detallarODECUSeleccionaCSSecuenciaCancelarForm"
+            type="es.pode.buscador.presentacion.basico.detallar.SeleccionaCSSecuenciaCancelarFormImpl" />
+        <form-bean
+            name="detallarODECUMostrarDetalleODEAgregacionOdeForm"
+            type="es.pode.buscador.presentacion.basico.detallar.MostrarDetalleODEAgregacionOdeFormImpl" />
+        <form-bean
+            name="detallarODECUQueEsEstoVolverDetalleForm"
+            type="es.pode.buscador.presentacion.basico.detallar.QueEsEstoVolverDetalleFormImpl" />
+        <form-bean
+            name="detallarODECUMostrarDetalleODEConsultarMetadatosForm"
+            type="es.pode.buscador.presentacion.basico.detallar.MostrarDetalleODEConsultarMetadatosFormImpl" />
+        <form-bean
+            name="descargarODECUSeleccionarTipoFormatoCancelarForm"
+            type="es.pode.buscador.presentacion.basico.descargar.SeleccionarTipoFormatoCancelarFormImpl" />
+        <form-bean
+            name="descargarODECUSeleccionarTipoFormatoAceptarForm"
+            type="es.pode.buscador.presentacion.basico.descargar.SeleccionarTipoFormatoAceptarFormImpl" />
+        <form-bean
+            name="descargarODECUDescargarODECUForm"
+            type="es.pode.buscador.presentacion.basico.descargar.DescargarODECUFormImpl" />
+        <form-bean
+            name="enviarMailCUResultadoEnvioAceptarForm"
+            type="es.pode.buscador.presentacion.basico.enviarMail.ResultadoEnvioAceptarFormImpl" />
+        <form-bean
+            name="enviarMailCUEnvioMailBuscarForm"
+            type="es.pode.buscador.presentacion.basico.enviarMail.EnvioMailBuscarFormImpl" />
+        <form-bean
+            name="enviarMailCUEnvioMailAceptarForm"
+            type="es.pode.buscador.presentacion.basico.enviarMail.EnvioMailAceptarFormImpl" />
+        <form-bean
+            name="enviarMailCUEnviarMailCUForm"
+            type="es.pode.buscador.presentacion.basico.enviarMail.EnviarMailCUFormImpl" />
+        <form-bean
+            name="enviarMailCUEnvioMailCancelarForm"
+            type="es.pode.buscador.presentacion.basico.enviarMail.EnvioMailCancelarFormImpl" />
+        <form-bean
+            name="enviarMailCUResultadoEnvioBuscarForm"
+            type="es.pode.buscador.presentacion.basico.enviarMail.ResultadoEnvioBuscarFormImpl" />
+        <form-bean
+            name="listarComentariosCUMostrarComentariosCancelarForm"
+            type="es.pode.buscador.presentacion.basico.listarComentarios.MostrarComentariosCancelarFormImpl" />
+        <form-bean
+            name="listarComentariosCUListarComentariosCUForm"
+            type="es.pode.buscador.presentacion.basico.listarComentarios.ListarComentariosCUFormImpl" />
+        <form-bean
+            name="introducirComentariosCUAdvertenciaEliminarAnalizaPulsacionForm"
+            type="es.pode.buscador.presentacion.basico.introducirComentarios.AdvertenciaEliminarAnalizaPulsacionFormImpl" />
+        <form-bean
+            name="introducirComentariosCUIntroducirComentariosCUForm"
+            type="es.pode.buscador.presentacion.basico.introducirComentarios.IntroducirComentariosCUFormImpl" />
+        <form-bean
+            name="introducirComentariosCUMostrarComentariosEliminarForm"
+            type="es.pode.buscador.presentacion.basico.introducirComentarios.MostrarComentariosEliminarFormImpl" />
+        <form-bean
+            name="introducirComentariosCUMostrarComentariosCancelarForm"
+            type="es.pode.buscador.presentacion.basico.introducirComentarios.MostrarComentariosCancelarFormImpl" />
+        <form-bean
+            name="introducirComentariosCUMostrarComentariosInsertarComentarioForm"
+            type="es.pode.buscador.presentacion.basico.introducirComentarios.MostrarComentariosInsertarComentarioFormImpl" />
+        <form-bean
+            name="anadirCarpetaPersonalCUMostrarResultadoResultadoForm"
+            type="es.pode.buscador.presentacion.basico.anadirCarpetaPersonal.MostrarResultadoResultadoFormImpl" />
+        <form-bean
+            name="anadirCarpetaPersonalCUAnadirCarpetaPersonalCUForm"
+            type="es.pode.buscador.presentacion.basico.anadirCarpetaPersonal.AnadirCarpetaPersonalCUFormImpl" />
+        <form-bean
+            name="areaCurricularCUAreaCurricularVolcarAreaCurricularForm"
+            type="es.pode.buscador.presentacion.avanzado.areaCurricular.AreaCurricularVolcarAreaCurricularFormImpl" />
+        <form-bean
+            name="areaCurricularCUAreaCurricularCancelarForm"
+            type="es.pode.buscador.presentacion.avanzado.areaCurricular.AreaCurricularCancelarFormImpl" />
+        <form-bean
+            name="areaCurricularCUAreaCurricularCUForm"
+            type="es.pode.buscador.presentacion.avanzado.areaCurricular.AreaCurricularCUFormImpl" />
+        <form-bean
+            name="areaCurricularCUAreaCurricularSeleccionaHijoForm"
+            type="es.pode.buscador.presentacion.avanzado.areaCurricular.AreaCurricularSeleccionaHijoFormImpl" />
+        <form-bean
+            name="areaCurricularCUAreaCurricularSeleccionaPadreForm"
+            type="es.pode.buscador.presentacion.avanzado.areaCurricular.AreaCurricularSeleccionaPadreFormImpl" />
+        <form-bean
+            name="buscarAvanzadoCUMostrarQuisoDecirAvanzadoBuscarQuisoDecirForm"
+            type="es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarQuisoDecirAvanzadoBuscarQuisoDecirFormImpl" />
+        <form-bean
+            name="buscarAvanzadoCUMostrarResultadosAvanzadoBuscarResultadosForm"
+            type="es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarResultadosAvanzadoBuscarResultadosFormImpl" />
+        <form-bean
+            name="buscarAvanzadoCUMostrarResultadosAvanzadoMostrarAvanzadoImagenesForm"
+            type="es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarResultadosAvanzadoMostrarAvanzadoImagenesFormImpl" />
+        <form-bean
+            name="buscarAvanzadoCUMostrarResultadosImagenesPrepararRetornoDetalleImagenesForm"
+            type="es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarResultadosImagenesPrepararRetornoDetalleImagenesFormImpl" />
+        <form-bean
+            name="buscarAvanzadoCUMostrarResultadosImagenesEliminarODEForm"
+            type="es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarResultadosImagenesEliminarODEFormImpl" />
+        <form-bean
+            name="buscarAvanzadoCUMostrarResultadosImagenesMostrarAvanzadoResultadosForm"
+            type="es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarResultadosImagenesMostrarAvanzadoResultadosFormImpl" />
+        <form-bean
+            name="buscarAvanzadoCUMostrarResultadosAvanzadoBuscarResultadosImagenesForm"
+            type="es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarResultadosAvanzadoBuscarResultadosImagenesFormImpl" />
+        <form-bean
+            name="buscarAvanzadoCUMostrarFormularioAvanzadoAnalizaPulsacionForm"
+            type="es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarFormularioAvanzadoAnalizaPulsacionFormImpl" />
+        <form-bean
+            name="buscarAvanzadoCUMostrarResultadosImagenesGenerarRSSForm"
+            type="es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarResultadosImagenesGenerarRSSFormImpl" />
+        <form-bean
+            name="buscarAvanzadoCUMostrarResultadosAvanzadoPrepararRetornoDetalleForm"
+            type="es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarResultadosAvanzadoPrepararRetornoDetalleFormImpl" />
+        <form-bean
+            name="buscarAvanzadoCUMostrarResultadosAvanzadoPaginarForm"
+            type="es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarResultadosAvanzadoPaginarFormImpl" />
+        <form-bean
+            name="buscarAvanzadoCUMostrarResultadosImagenesPaginarImagenesForm"
+            type="es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarResultadosImagenesPaginarImagenesFormImpl" />
+        <form-bean
+            name="buscarAvanzadoCUBuscarAvanzadoCUForm"
+            type="es.pode.buscador.presentacion.avanzado.buscarAvanzado.BuscarAvanzadoCUFormImpl" />
+        <form-bean
+            name="buscarAvanzadoCUMostrarQuisoDecirAvanzadoQuisoDecirForm"
+            type="es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarQuisoDecirAvanzadoQuisoDecirFormImpl" />
+        <form-bean
+            name="buscarAvanzadoCUMostrarQuisoDecirAvanzadoMostrarAvanzadoQuisoDecirForm"
+            type="es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarQuisoDecirAvanzadoMostrarAvanzadoQuisoDecirFormImpl" />
+        <form-bean
+            name="eliminarOdesCUConfirmacionBuscarForm"
+            type="es.pode.buscador.presentacion.avanzado.eliminarOdes.ConfirmacionBuscarFormImpl" />
+        <form-bean
+            name="eliminarOdesCUResultadoEliminacionBuscarForm"
+            type="es.pode.buscador.presentacion.avanzado.eliminarOdes.ResultadoEliminacionBuscarFormImpl" />
+        <form-bean
+            name="eliminarOdesCUEliminarOdesCUForm"
+            type="es.pode.buscador.presentacion.avanzado.eliminarOdes.EliminarOdesCUFormImpl" />
+        <form-bean
+            name="eliminarOdesCUConfirmacionAceptarForm"
+            type="es.pode.buscador.presentacion.avanzado.eliminarOdes.ConfirmacionAceptarFormImpl" />
+        <form-bean
+            name="eliminarOdesCUResultadoEliminacionAceptarForm"
+            type="es.pode.buscador.presentacion.avanzado.eliminarOdes.ResultadoEliminacionAceptarFormImpl" />
+        <form-bean
+            name="eliminarOdesCUConfirmacionCancelarForm"
+            type="es.pode.buscador.presentacion.avanzado.eliminarOdes.ConfirmacionCancelarFormImpl" />
+        <form-bean
+            name="tesaurosCUTesaurosCUForm"
+            type="es.pode.buscador.presentacion.avanzado.tesauros.TesaurosCUFormImpl" />
+        <form-bean
+            name="tesaurosCUTesaurosAsociarTesauroForm"
+            type="es.pode.buscador.presentacion.avanzado.tesauros.TesaurosAsociarTesauroFormImpl" />
+        <form-bean
+            name="tesaurosCUTesaurosBuscarTerminosForm"
+            type="es.pode.buscador.presentacion.avanzado.tesauros.TesaurosBuscarTerminosFormImpl" />
+        <form-bean
+            name="tesaurosCUTesaurosCancelarForm"
+            type="es.pode.buscador.presentacion.avanzado.tesauros.TesaurosCancelarFormImpl" />
+        <form-bean
+            name="tesaurosCUTesaurosConsultaPadreForm"
+            type="es.pode.buscador.presentacion.avanzado.tesauros.TesaurosConsultaPadreFormImpl" />
+        <form-bean
+            name="tesaurosCUTesaurosConsultaNodoForm"
+            type="es.pode.buscador.presentacion.avanzado.tesauros.TesaurosConsultaNodoFormImpl" />
+        <form-bean
+            name="formularioAvanzadoCUFormularioAvanzadoCUForm"
+            type="es.pode.buscador.presentacion.avanzado.formularioAvanzado.FormularioAvanzadoCUFormImpl" />
+        <form-bean
+            name="busquedaSQICUMostrarResultadosPaginarSQIForm"
+            type="es.pode.buscador.presentacion.avanzado.busquedaSQI.MostrarResultadosPaginarSQIFormImpl" />
+        <form-bean
+            name="busquedaSQICUBusquedaSQICUForm"
+            type="es.pode.buscador.presentacion.avanzado.busquedaSQI.BusquedaSQICUFormImpl" />
+        <form-bean
+            name="busquedaSQICUMostrarResultadosAnalizaTipoBusquedaForm"
+            type="es.pode.buscador.presentacion.avanzado.busquedaSQI.MostrarResultadosAnalizaTipoBusquedaFormImpl" />
+        <form-bean
+            name="navegarArbolCurricularCUNavegarArbolCurricularCUForm"
+            type="es.pode.buscador.presentacion.arbolCurricular.navegarArbolCurricular.NavegarArbolCurricularCUFormImpl" />
+        <form-bean
+            name="navegarArbolCurricularCUArbolCurricularListarODEAreaForm"
+            type="es.pode.buscador.presentacion.arbolCurricular.navegarArbolCurricular.ArbolCurricularListarODEAreaFormImpl" />
+        <form-bean
+            name="navegarArbolCurricularCUArbolCurricularSeleccionarPadreForm"
+            type="es.pode.buscador.presentacion.arbolCurricular.navegarArbolCurricular.ArbolCurricularSeleccionarPadreFormImpl" />
+        <form-bean
+            name="navegarArbolCurricularCUArbolCurricularSeleccionarHijoForm"
+            type="es.pode.buscador.presentacion.arbolCurricular.navegarArbolCurricular.ArbolCurricularSeleccionarHijoFormImpl" />
+        <form-bean
+            name="listarODEAreaCUListarODEAreaCUForm"
+            type="es.pode.buscador.presentacion.arbolCurricular.listarODEArea.ListarODEAreaCUFormImpl" />
+        <form-bean
+            name="listarODEAreaCUListadoODEDecidirSalidaForm"
+            type="es.pode.buscador.presentacion.arbolCurricular.listarODEArea.ListadoODEDecidirSalidaFormImpl" />
+        <form-bean
+            name="navegarTesauroCUNavegarTesauroBuscarTerminosForm"
+            type="es.pode.buscador.presentacion.arbolTesauros.navegarTesauro.NavegarTesauroBuscarTerminosFormImpl" />
+        <form-bean
+            name="navegarTesauroCUNavegarTesauroListarODETesauroForm"
+            type="es.pode.buscador.presentacion.arbolTesauros.navegarTesauro.NavegarTesauroListarODETesauroFormImpl" />
+        <form-bean
+            name="navegarTesauroCUNavegarTesauroSeleccionarPadreForm"
+            type="es.pode.buscador.presentacion.arbolTesauros.navegarTesauro.NavegarTesauroSeleccionarPadreFormImpl" />
+        <form-bean
+            name="navegarTesauroCUNavegarTesauroSeleccionarHijoForm"
+            type="es.pode.buscador.presentacion.arbolTesauros.navegarTesauro.NavegarTesauroSeleccionarHijoFormImpl" />
+        <form-bean
+            name="navegarTesauroCUNavegarTesauroCUForm"
+            type="es.pode.buscador.presentacion.arbolTesauros.navegarTesauro.NavegarTesauroCUFormImpl" />
+        <form-bean
+            name="listarODETesauroCUListadoODEDecidirSalidaForm"
+            type="es.pode.buscador.presentacion.arbolTesauros.listarODETesauro.ListadoODEDecidirSalidaFormImpl" />
+        <form-bean
+            name="listarODETesauroCUListarODETesauroCUForm"
+            type="es.pode.buscador.presentacion.arbolTesauros.listarODETesauro.ListarODETesauroCUFormImpl" />
+        <form-bean
+            name="seleccionTipoBusquedaCUSeleccionTipoBusquedaCUForm"
+            type="es.pode.buscador.presentacion.seleccionTipoBusqueda.SeleccionTipoBusquedaCUFormImpl" />
+        <form-bean
+            name="seleccionTipoBusquedaCUSeleccionTipoBusquedaDecidirSalidaForm"
+            type="es.pode.buscador.presentacion.seleccionTipoBusqueda.SeleccionTipoBusquedaDecidirSalidaFormImpl" />
+    </form-beans>
+
+    <global-exceptions>
+        <!-- global-exceptions merge point -->
+        <exception
+            handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+            type="java.lang.Throwable"
+            key="error.exception.message"
+            path="/error-page.jsp?code=exception&amp;exception=true"
+            scope="request" />
+    </global-exceptions>
+
+    <global-forwards>
+        
+        <forward
+            name="listar.odecu"
+            path="/ListarODECU/ListarODECU.do"
+            redirect="false" />
+        <forward
+            name="detallar.odecu"
+            path="/DetallarODECU/DetallarODECU.do"
+            redirect="false" />
+        <forward
+            name="descargar.odecu"
+            path="/DescargarODECU/DescargarODECU.do"
+            redirect="false" />
+        <forward
+            name="enviar.mail.cu"
+            path="/EnviarMailCU/EnviarMailCU.do"
+            redirect="false" />
+        <forward
+            name="listar.comentarios.cu"
+            path="/ListarComentariosCU/ListarComentariosCU.do"
+            redirect="false" />
+        <forward
+            name="introducir.comentarios.cu"
+            path="/IntroducirComentariosCU/IntroducirComentariosCU.do"
+            redirect="false" />
+        <forward
+            name="anadir.carpeta.personal.cu"
+            path="/AnadirCarpetaPersonalCU/AnadirCarpetaPersonalCU.do"
+            redirect="false" />
+        <forward
+            name="area.curricular.cu"
+            path="/AreaCurricularCU/AreaCurricularCU.do"
+            redirect="false" />
+        <forward
+            name="buscar.avanzado.cu"
+            path="/BuscarAvanzadoCU/BuscarAvanzadoCU.do"
+            redirect="false" />
+        <forward
+            name="eliminar.odes.cu"
+            path="/EliminarOdesCU/EliminarOdesCU.do"
+            redirect="false" />
+        <forward
+            name="tesauros.cu"
+            path="/TesaurosCU/TesaurosCU.do"
+            redirect="false" />
+        <forward
+            name="formulario.avanzado.cu"
+            path="/FormularioAvanzadoCU/FormularioAvanzadoCU.do"
+            redirect="false" />
+        <forward
+            name="busqueda.sqicu"
+            path="/BusquedaSQICU/BusquedaSQICU.do"
+            redirect="false" />
+        <forward
+            name="navegar.arbol.curricular.cu"
+            path="/NavegarArbolCurricularCU/NavegarArbolCurricularCU.do"
+            redirect="false" />
+        <forward
+            name="listar.odearea.cu"
+            path="/ListarODEAreaCU/ListarODEAreaCU.do"
+            redirect="false" />
+        <forward
+            name="navegar.tesauro.cu"
+            path="/NavegarTesauroCU/NavegarTesauroCU.do"
+            redirect="false" />
+        <forward
+            name="listar.odetesauro.cu"
+            path="/ListarODETesauroCU/ListarODETesauroCU.do"
+            redirect="false" />
+        <forward
+            name="seleccion.tipo.busqueda.cu"
+            path="/SeleccionTipoBusquedaCU/SeleccionTipoBusquedaCU.do"
+            redirect="false" />
+    </global-forwards>
+
+    <action-mappings>
+        <!-- action-mappings merge-point -->
+        <action
+            path="/ListarODECU/ListarODECU"
+            type="es.pode.buscador.presentacion.basico.listar.ListarODECU"
+            name="listarODECUListarODECUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="buscar.avanzado.cu"
+                path="/BuscarAvanzadoCU/BuscarAvanzadoCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/buscador/presentacion/basico/listar/ListarODECUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/basico/listar/listar-ODECU_help.jsp"/>
+        <action
+            path="/DetallarODECU/MostrarDetalleODEEnviarMail"
+            type="es.pode.buscador.presentacion.basico.detallar.MostrarDetalleODEEnviarMail"
+            name="detallarODECUMostrarDetalleODEEnviarMailForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/basico/detallar/mostrar-detalle-ode.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="detallar.odecu.mostrar.detalle.ode.enviar.mail.exception"
+                path="/es/pode/buscador/presentacion/basico/detallar/mostrar-detalle-ode.jsp"
+                scope="request" />
+            <forward
+                name="enviar.mail"
+                path="/EnviarMailCU/EnviarMailCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/DetallarODECU/SeleccionaCSSecuenciaMostrarODECSSecuencia"
+            type="es.pode.buscador.presentacion.basico.detallar.SeleccionaCSSecuenciaMostrarODECSSecuencia"
+            name="detallarODECUSeleccionaCSSecuenciaMostrarODECSSecuenciaForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/basico/detallar/selecciona-cssecuencia.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="detallar.odecu.selecciona.cssecuencia.mostrar.odecssecuencia.exception"
+                path="/es/pode/buscador/presentacion/basico/detallar/selecciona-cssecuencia.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/DetallarODECU/MostrarDetalleODEVolverBusqueda"
+            type="es.pode.buscador.presentacion.basico.detallar.MostrarDetalleODEVolverBusqueda"
+            name="detallarODECUMostrarDetalleODEVolverBusquedaForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/basico/detallar/mostrar-detalle-ode.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="detallar.odecu.mostrar.detalle.ode.volver.busqueda.exception"
+                path="/es/pode/buscador/presentacion/basico/detallar/mostrar-detalle-ode.jsp"
+                scope="request" />
+            <forward
+                name="listar.odecu"
+                path="/ListarODECU/ListarODECU.do"
+                redirect="false" />
+            <forward
+                name="buscar.avanzado.cu"
+                path="/BuscarAvanzadoCU/BuscarAvanzadoCU.do"
+                redirect="false" />
+            <forward
+                name="listar.odearea.cu"
+                path="/ListarODEAreaCU/ListarODEAreaCU.do"
+                redirect="false" />
+            <forward
+                name="listar.odetesauro.cu"
+                path="/ListarODETesauroCU/ListarODETesauroCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/DetallarODECU/OdeAgregadoAgregarNuevo"
+            type="es.pode.buscador.presentacion.basico.detallar.OdeAgregadoAgregarNuevo"
+            name="detallarODECUOdeAgregadoAgregarNuevoForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/basico/detallar/ode-agregado.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="detallar.odecu.ode.agregado.agregar.nuevo.exception"
+                path="/es/pode/buscador/presentacion/basico/detallar/ode-agregado.jsp"
+                scope="request" />
+            <forward
+                name="listar.odecu"
+                path="/ListarODECU/ListarODECU.do"
+                redirect="false" />
+            <forward
+                name="buscar.avanzado.cu"
+                path="/BuscarAvanzadoCU/BuscarAvanzadoCU.do"
+                redirect="false" />
+            <forward
+                name="listar.odearea.cu"
+                path="/ListarODEAreaCU/ListarODEAreaCU.do"
+                redirect="false" />
+            <forward
+                name="listar.odetesauro.cu"
+                path="/ListarODETesauroCU/ListarODETesauroCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/DetallarODECU/MostrarDetalleODEGestionarPosicionado"
+            type="es.pode.buscador.presentacion.basico.detallar.MostrarDetalleODEGestionarPosicionado"
+            name="detallarODECUMostrarDetalleODEGestionarPosicionadoForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/basico/detallar/mostrar-detalle-ode.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="detallar.odecu.mostrar.detalle.ode.gestionar.posicionado.exception"
+                path="/es/pode/buscador/presentacion/basico/detallar/mostrar-detalle-ode.jsp"
+                scope="request" />
+            <forward
+                name="mostrar.detalle.ode"
+                path="/es/pode/buscador/presentacion/basico/detallar/mostrar-detalle-ode.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/DetallarODECU/MostrarDetalleODEDescargar"
+            type="es.pode.buscador.presentacion.basico.detallar.MostrarDetalleODEDescargar"
+            name="detallarODECUMostrarDetalleODEDescargarForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/basico/detallar/mostrar-detalle-ode.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="detallar.odecu.mostrar.detalle.ode.descargar.exception"
+                path="/es/pode/buscador/presentacion/basico/detallar/mostrar-detalle-ode.jsp"
+                scope="request" />
+            <forward
+                name="descargar"
+                path="/DescargarODECU/DescargarODECU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/DetallarODECU/DetallarODECU"
+            type="es.pode.buscador.presentacion.basico.detallar.DetallarODECU"
+            name="detallarODECUDetallarODECUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="ode.agregado"
+                path="/es/pode/buscador/presentacion/basico/detallar/ode-agregado.jsp"
+                redirect="false" />
+            <forward
+                name="mostrar.detalle.ode"
+                path="/es/pode/buscador/presentacion/basico/detallar/mostrar-detalle-ode.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/DetallarODECU/MostrarDetalleODEPrevisualizar"
+            type="es.pode.buscador.presentacion.basico.detallar.MostrarDetalleODEPrevisualizar"
+            name="detallarODECUMostrarDetalleODEPrevisualizarForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/basico/detallar/mostrar-detalle-ode.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="detallar.odecu.mostrar.detalle.ode.previsualizar.exception"
+                path="/es/pode/buscador/presentacion/basico/detallar/mostrar-detalle-ode.jsp"
+                scope="request" />
+            <forward
+                name="selecciona.cssecuencia"
+                path="/es/pode/buscador/presentacion/basico/detallar/selecciona-cssecuencia.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/DetallarODECU/MostrarDetalleODEQueEsEsto"
+            type="es.pode.buscador.presentacion.basico.detallar.MostrarDetalleODEQueEsEsto"
+            name="detallarODECUMostrarDetalleODEQueEsEstoForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/basico/detallar/mostrar-detalle-ode.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="detallar.odecu.mostrar.detalle.ode.que.es.esto.exception"
+                path="/es/pode/buscador/presentacion/basico/detallar/mostrar-detalle-ode.jsp"
+                scope="request" />
+            <forward
+                name="que.es.esto"
+                path="/es/pode/buscador/presentacion/basico/detallar/que-es-esto.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/DetallarODECU/MostrarDetalleODEAnadirODEPersonal"
+            type="es.pode.buscador.presentacion.basico.detallar.MostrarDetalleODEAnadirODEPersonal"
+            scope="request"
+            input="/es/pode/buscador/presentacion/basico/detallar/mostrar-detalle-ode.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="detallar.odecu.mostrar.detalle.ode.anadir.odepersonal.exception"
+                path="/es/pode/buscador/presentacion/basico/detallar/mostrar-detalle-ode.jsp"
+                scope="request" />
+            <forward
+                name="anadir.odepersonal"
+                path="/AnadirCarpetaPersonalCU/AnadirCarpetaPersonalCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/DetallarODECU/MostrarDetalleODEValorarODE"
+            type="es.pode.buscador.presentacion.basico.detallar.MostrarDetalleODEValorarODE"
+            name="detallarODECUMostrarDetalleODEValorarODEForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/basico/detallar/mostrar-detalle-ode.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="detallar.odecu.mostrar.detalle.ode.valorar.ode.exception"
+                path="/es/pode/buscador/presentacion/basico/detallar/mostrar-detalle-ode.jsp"
+                scope="request" />
+            <forward
+                name="ode.agregado"
+                path="/es/pode/buscador/presentacion/basico/detallar/ode-agregado.jsp"
+                redirect="false" />
+            <forward
+                name="mostrar.detalle.ode"
+                path="/es/pode/buscador/presentacion/basico/detallar/mostrar-detalle-ode.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/DetallarODECU/MostrarDetalleODEListarComentarios"
+            type="es.pode.buscador.presentacion.basico.detallar.MostrarDetalleODEListarComentarios"
+            name="detallarODECUMostrarDetalleODEListarComentariosForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/basico/detallar/mostrar-detalle-ode.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="detallar.odecu.mostrar.detalle.ode.listar.comentarios.exception"
+                path="/es/pode/buscador/presentacion/basico/detallar/mostrar-detalle-ode.jsp"
+                scope="request" />
+            <forward
+                name="listar.comentarios"
+                path="/ListarComentariosCU/ListarComentariosCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/DetallarODECU/SeleccionaCSSecuenciaCancelar"
+            type="es.pode.buscador.presentacion.basico.detallar.SeleccionaCSSecuenciaCancelar"
+            name="detallarODECUSeleccionaCSSecuenciaCancelarForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/basico/detallar/selecciona-cssecuencia.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="detallar.odecu.selecciona.cssecuencia.cancelar.exception"
+                path="/es/pode/buscador/presentacion/basico/detallar/selecciona-cssecuencia.jsp"
+                scope="request" />
+            <forward
+                name="ode.agregado"
+                path="/es/pode/buscador/presentacion/basico/detallar/ode-agregado.jsp"
+                redirect="false" />
+            <forward
+                name="mostrar.detalle.ode"
+                path="/es/pode/buscador/presentacion/basico/detallar/mostrar-detalle-ode.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/DetallarODECU/MostrarDetalleODEIntroducirComentarios"
+            type="es.pode.buscador.presentacion.basico.detallar.MostrarDetalleODEIntroducirComentarios"
+            scope="request"
+            input="/es/pode/buscador/presentacion/basico/detallar/mostrar-detalle-ode.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="detallar.odecu.mostrar.detalle.ode.introducir.comentarios.exception"
+                path="/es/pode/buscador/presentacion/basico/detallar/mostrar-detalle-ode.jsp"
+                scope="request" />
+            <forward
+                name="introducir.comentarios"
+                path="/IntroducirComentariosCU/IntroducirComentariosCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/DetallarODECU/MostrarDetalleODEAgregacionOde"
+            type="es.pode.buscador.presentacion.basico.detallar.MostrarDetalleODEAgregacionOde"
+            name="detallarODECUMostrarDetalleODEAgregacionOdeForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/basico/detallar/mostrar-detalle-ode.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="detallar.odecu.mostrar.detalle.ode.agregacion.ode.exception"
+                path="/es/pode/buscador/presentacion/basico/detallar/mostrar-detalle-ode.jsp"
+                scope="request" />
+            <forward
+                name="ode.agregado"
+                path="/es/pode/buscador/presentacion/basico/detallar/ode-agregado.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/DetallarODECU/QueEsEstoVolverDetalle"
+            type="es.pode.buscador.presentacion.basico.detallar.QueEsEstoVolverDetalle"
+            name="detallarODECUQueEsEstoVolverDetalleForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/basico/detallar/que-es-esto.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="detallar.odecu.que.es.esto.volver.detalle.exception"
+                path="/es/pode/buscador/presentacion/basico/detallar/que-es-esto.jsp"
+                scope="request" />
+            <forward
+                name="ode.agregado"
+                path="/es/pode/buscador/presentacion/basico/detallar/ode-agregado.jsp"
+                redirect="false" />
+            <forward
+                name="mostrar.detalle.ode"
+                path="/es/pode/buscador/presentacion/basico/detallar/mostrar-detalle-ode.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/DetallarODECU/MostrarDetalleODEConsultarMetadatos"
+            type="es.pode.buscador.presentacion.basico.detallar.MostrarDetalleODEConsultarMetadatos"
+            name="detallarODECUMostrarDetalleODEConsultarMetadatosForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/basico/detallar/mostrar-detalle-ode.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="detallar.odecu.mostrar.detalle.ode.consultar.metadatos.exception"
+                path="/es/pode/buscador/presentacion/basico/detallar/mostrar-detalle-ode.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/es/pode/buscador/presentacion/basico/detallar/DetallarODECUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/basico/detallar/detallar-ODECU_help.jsp"/>
+        <action
+            path="/MostrarDetalleODEHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/basico/detallar/mostrar-detalle-ode_help.jsp"/>
+        <action
+            path="/SeleccionaCSSecuenciaHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/basico/detallar/selecciona-cssecuencia_help.jsp"/>
+        <action
+            path="/OdeAgregadoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/basico/detallar/ode-agregado_help.jsp"/>
+        <action
+            path="/QueEsEstoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/basico/detallar/que-es-esto_help.jsp"/>
+        <action
+            path="/DescargarODECU/SeleccionarTipoFormatoCancelar"
+            type="es.pode.buscador.presentacion.basico.descargar.SeleccionarTipoFormatoCancelar"
+            name="descargarODECUSeleccionarTipoFormatoCancelarForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/basico/descargar/seleccionar-tipo-formato.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="descargar.odecu.seleccionar.tipo.formato.cancelar.exception"
+                path="/es/pode/buscador/presentacion/basico/descargar/seleccionar-tipo-formato.jsp"
+                scope="request" />
+            <forward
+                name="cancelar"
+                path="/DetallarODECU/DetallarODECU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/DescargarODECU/SeleccionarTipoFormatoAceptar"
+            type="es.pode.buscador.presentacion.basico.descargar.SeleccionarTipoFormatoAceptar"
+            name="descargarODECUSeleccionarTipoFormatoAceptarForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/basico/descargar/seleccionar-tipo-formato.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="descargar.odecu.seleccionar.tipo.formato.aceptar.exception"
+                path="/es/pode/buscador/presentacion/basico/descargar/seleccionar-tipo-formato.jsp"
+                scope="request" />
+            <forward
+                name="muestra.seleccion"
+                path="/es/pode/buscador/presentacion/basico/descargar/seleccionar-tipo-formato.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/DescargarODECU/DescargarODECU"
+            type="es.pode.buscador.presentacion.basico.descargar.DescargarODECU"
+            name="descargarODECUDescargarODECUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="muestra.seleccion"
+                path="/es/pode/buscador/presentacion/basico/descargar/seleccionar-tipo-formato.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/buscador/presentacion/basico/descargar/DescargarODECUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/basico/descargar/descargar-ODECU_help.jsp"/>
+        <action
+            path="/SeleccionarTipoFormatoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/basico/descargar/seleccionar-tipo-formato_help.jsp"/>
+        <action
+            path="/EnviarMailCU/ResultadoEnvioAceptar"
+            type="es.pode.buscador.presentacion.basico.enviarMail.ResultadoEnvioAceptar"
+            name="enviarMailCUResultadoEnvioAceptarForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/basico/enviarMail/resultado-envio.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="enviar.mail.cu.resultado.envio.aceptar.exception"
+                path="/es/pode/buscador/presentacion/basico/enviarMail/resultado-envio.jsp"
+                scope="request" />
+            <forward
+                name="aceptar"
+                path="/DetallarODECU/DetallarODECU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/EnviarMailCU/EnvioMailBuscar"
+            type="es.pode.buscador.presentacion.basico.enviarMail.EnvioMailBuscar"
+            name="enviarMailCUEnvioMailBuscarForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/basico/enviarMail/envio-mail.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="enviar.mail.cu.envio.mail.buscar.exception"
+                path="/es/pode/buscador/presentacion/basico/enviarMail/envio-mail.jsp"
+                scope="request" />
+            <forward
+                name="buscar"
+                path="/BuscarAvanzadoCU/BuscarAvanzadoCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/EnviarMailCU/EnvioMailAceptar"
+            type="es.pode.buscador.presentacion.basico.enviarMail.EnvioMailAceptar"
+            name="enviarMailCUEnvioMailAceptarForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/basico/enviarMail/envio-mail.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="enviar.mail.cu.envio.mail.aceptar.exception"
+                path="/es/pode/buscador/presentacion/basico/enviarMail/envio-mail.jsp"
+                scope="request" />
+            <forward
+                name="resultado.envio"
+                path="/es/pode/buscador/presentacion/basico/enviarMail/resultado-envio.jsp"
+                redirect="false" />
+            <forward
+                name="envio.mail"
+                path="/es/pode/buscador/presentacion/basico/enviarMail/envio-mail.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/EnviarMailCU/EnviarMailCU"
+            type="es.pode.buscador.presentacion.basico.enviarMail.EnviarMailCU"
+            name="enviarMailCUEnviarMailCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="envio.mail"
+                path="/es/pode/buscador/presentacion/basico/enviarMail/envio-mail.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/EnviarMailCU/EnvioMailCancelar"
+            type="es.pode.buscador.presentacion.basico.enviarMail.EnvioMailCancelar"
+            name="enviarMailCUEnvioMailCancelarForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/basico/enviarMail/envio-mail.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="enviar.mail.cu.envio.mail.cancelar.exception"
+                path="/es/pode/buscador/presentacion/basico/enviarMail/envio-mail.jsp"
+                scope="request" />
+            <forward
+                name="cancelar"
+                path="/DetallarODECU/DetallarODECU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/EnviarMailCU/ResultadoEnvioBuscar"
+            type="es.pode.buscador.presentacion.basico.enviarMail.ResultadoEnvioBuscar"
+            name="enviarMailCUResultadoEnvioBuscarForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/basico/enviarMail/resultado-envio.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="enviar.mail.cu.resultado.envio.buscar.exception"
+                path="/es/pode/buscador/presentacion/basico/enviarMail/resultado-envio.jsp"
+                scope="request" />
+            <forward
+                name="buscar"
+                path="/BuscarAvanzadoCU/BuscarAvanzadoCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/buscador/presentacion/basico/enviarMail/EnviarMailCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/basico/enviarMail/enviar-Mail-CU_help.jsp"/>
+        <action
+            path="/EnvioMailHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/basico/enviarMail/envio-mail_help.jsp"/>
+        <action
+            path="/ResultadoEnvioHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/basico/enviarMail/resultado-envio_help.jsp"/>
+        <action
+            path="/ListarComentariosCU/MostrarComentariosCancelar"
+            type="es.pode.buscador.presentacion.basico.listarComentarios.MostrarComentariosCancelar"
+            name="listarComentariosCUMostrarComentariosCancelarForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/basico/listarComentarios/mostrar-comentarios.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="listar.comentarios.cu.mostrar.comentarios.cancelar.exception"
+                path="/es/pode/buscador/presentacion/basico/listarComentarios/mostrar-comentarios.jsp"
+                scope="request" />
+            <forward
+                name="cancelar"
+                path="/DetallarODECU/DetallarODECU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ListarComentariosCU/ListarComentariosCU"
+            type="es.pode.buscador.presentacion.basico.listarComentarios.ListarComentariosCU"
+            name="listarComentariosCUListarComentariosCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="listar.comentarios"
+                path="/es/pode/buscador/presentacion/basico/listarComentarios/mostrar-comentarios.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/buscador/presentacion/basico/listarComentarios/ListarComentariosCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/basico/listarComentarios/listar-Comentarios-CU_help.jsp"/>
+        <action
+            path="/MostrarComentariosHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/basico/listarComentarios/mostrar-comentarios_help.jsp"/>
+        <action
+            path="/IntroducirComentariosCU/AdvertenciaEliminarAnalizaPulsacion"
+            type="es.pode.buscador.presentacion.basico.introducirComentarios.AdvertenciaEliminarAnalizaPulsacion"
+            name="introducirComentariosCUAdvertenciaEliminarAnalizaPulsacionForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/basico/introducirComentarios/advertencia-eliminar.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="introducir.comentarios.cu.advertencia.eliminar.analiza.pulsacion.exception"
+                path="/es/pode/buscador/presentacion/basico/introducirComentarios/advertencia-eliminar.jsp"
+                scope="request" />
+            <forward
+                name="listar.comentarios"
+                path="/es/pode/buscador/presentacion/basico/introducirComentarios/mostrar-comentarios.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/IntroducirComentariosCU/IntroducirComentariosCU"
+            type="es.pode.buscador.presentacion.basico.introducirComentarios.IntroducirComentariosCU"
+            name="introducirComentariosCUIntroducirComentariosCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="listar.comentarios"
+                path="/es/pode/buscador/presentacion/basico/introducirComentarios/mostrar-comentarios.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/IntroducirComentariosCU/MostrarComentariosEliminar"
+            type="es.pode.buscador.presentacion.basico.introducirComentarios.MostrarComentariosEliminar"
+            name="introducirComentariosCUMostrarComentariosEliminarForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/basico/introducirComentarios/mostrar-comentarios.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="introducir.comentarios.cu.mostrar.comentarios.eliminar.exception"
+                path="/es/pode/buscador/presentacion/basico/introducirComentarios/mostrar-comentarios.jsp"
+                scope="request" />
+            <forward
+                name="listar.comentarios"
+                path="/es/pode/buscador/presentacion/basico/introducirComentarios/mostrar-comentarios.jsp"
+                redirect="true" />
+            <forward
+                name="advertencia.eliminar"
+                path="/es/pode/buscador/presentacion/basico/introducirComentarios/advertencia-eliminar.jsp"
+                redirect="true" />
+        </action>
+        <action
+            path="/IntroducirComentariosCU/MostrarComentariosCancelar"
+            type="es.pode.buscador.presentacion.basico.introducirComentarios.MostrarComentariosCancelar"
+            name="introducirComentariosCUMostrarComentariosCancelarForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/basico/introducirComentarios/mostrar-comentarios.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="introducir.comentarios.cu.mostrar.comentarios.cancelar.exception"
+                path="/es/pode/buscador/presentacion/basico/introducirComentarios/mostrar-comentarios.jsp"
+                scope="request" />
+            <forward
+                name="cancelar"
+                path="/DetallarODECU/DetallarODECU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/IntroducirComentariosCU/MostrarComentariosInsertarComentario"
+            type="es.pode.buscador.presentacion.basico.introducirComentarios.MostrarComentariosInsertarComentario"
+            name="introducirComentariosCUMostrarComentariosInsertarComentarioForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/basico/introducirComentarios/mostrar-comentarios.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="introducir.comentarios.cu.mostrar.comentarios.insertar.comentario.exception"
+                path="/es/pode/buscador/presentacion/basico/introducirComentarios/mostrar-comentarios.jsp"
+                scope="request" />
+            <forward
+                name="listar.comentarios"
+                path="/es/pode/buscador/presentacion/basico/introducirComentarios/mostrar-comentarios.jsp"
+                redirect="true" />
+        </action>
+        <action
+            path="/es/pode/buscador/presentacion/basico/introducirComentarios/IntroducirComentariosCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/basico/introducirComentarios/introducir-Comentarios-CU_help.jsp"/>
+        <action
+            path="/MostrarComentariosHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/basico/introducirComentarios/mostrar-comentarios_help.jsp"/>
+        <action
+            path="/AdvertenciaEliminarHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/basico/introducirComentarios/advertencia-eliminar_help.jsp"/>
+        <action
+            path="/AnadirCarpetaPersonalCU/MostrarResultadoResultado"
+            type="es.pode.buscador.presentacion.basico.anadirCarpetaPersonal.MostrarResultadoResultado"
+            name="anadirCarpetaPersonalCUMostrarResultadoResultadoForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/basico/anadirCarpetaPersonal/mostrar-resultado.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="anadir.carpeta.personal.cu.mostrar.resultado.resultado.exception"
+                path="/es/pode/buscador/presentacion/basico/anadirCarpetaPersonal/mostrar-resultado.jsp"
+                scope="request" />
+            <forward
+                name="resultado"
+                path="/DetallarODECU/DetallarODECU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/AnadirCarpetaPersonalCU/AnadirCarpetaPersonalCU"
+            type="es.pode.buscador.presentacion.basico.anadirCarpetaPersonal.AnadirCarpetaPersonalCU"
+            name="anadirCarpetaPersonalCUAnadirCarpetaPersonalCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="anadir"
+                path="/es/pode/buscador/presentacion/basico/anadirCarpetaPersonal/mostrar-resultado.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/buscador/presentacion/basico/anadirCarpetaPersonal/AnadirCarpetaPersonalCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/basico/anadirCarpetaPersonal/anadir-Carpeta-Personal-CU_help.jsp"/>
+        <action
+            path="/MostrarResultadoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/basico/anadirCarpetaPersonal/mostrar-resultado_help.jsp"/>
+        <action
+            path="/AreaCurricularCU/AreaCurricularVolcarAreaCurricular"
+            type="es.pode.buscador.presentacion.avanzado.areaCurricular.AreaCurricularVolcarAreaCurricular"
+            name="areaCurricularCUAreaCurricularVolcarAreaCurricularForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/avanzado/areaCurricular/area-curricular.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="area.curricular.cu.area.curricular.volcar.area.curricular.exception"
+                path="/es/pode/buscador/presentacion/avanzado/areaCurricular/area-curricular.jsp"
+                scope="request" />
+            <forward
+                name="buscar.avanzado.cu"
+                path="/BuscarAvanzadoCU/BuscarAvanzadoCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/AreaCurricularCU/AreaCurricularCancelar"
+            type="es.pode.buscador.presentacion.avanzado.areaCurricular.AreaCurricularCancelar"
+            name="areaCurricularCUAreaCurricularCancelarForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/avanzado/areaCurricular/area-curricular.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="area.curricular.cu.area.curricular.cancelar.exception"
+                path="/es/pode/buscador/presentacion/avanzado/areaCurricular/area-curricular.jsp"
+                scope="request" />
+            <forward
+                name="cancelar"
+                path="/BuscarAvanzadoCU/BuscarAvanzadoCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/AreaCurricularCU/AreaCurricularCU"
+            type="es.pode.buscador.presentacion.avanzado.areaCurricular.AreaCurricularCU"
+            name="areaCurricularCUAreaCurricularCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="cargar.area.curricular"
+                path="/es/pode/buscador/presentacion/avanzado/areaCurricular/area-curricular.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/AreaCurricularCU/AreaCurricularSeleccionaHijo"
+            type="es.pode.buscador.presentacion.avanzado.areaCurricular.AreaCurricularSeleccionaHijo"
+            name="areaCurricularCUAreaCurricularSeleccionaHijoForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/avanzado/areaCurricular/area-curricular.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="area.curricular.cu.area.curricular.selecciona.hijo.exception"
+                path="/es/pode/buscador/presentacion/avanzado/areaCurricular/area-curricular.jsp"
+                scope="request" />
+            <forward
+                name="recarga.arbol"
+                path="/es/pode/buscador/presentacion/avanzado/areaCurricular/area-curricular.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/AreaCurricularCU/AreaCurricularSeleccionaPadre"
+            type="es.pode.buscador.presentacion.avanzado.areaCurricular.AreaCurricularSeleccionaPadre"
+            name="areaCurricularCUAreaCurricularSeleccionaPadreForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/avanzado/areaCurricular/area-curricular.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="area.curricular.cu.area.curricular.selecciona.padre.exception"
+                path="/es/pode/buscador/presentacion/avanzado/areaCurricular/area-curricular.jsp"
+                scope="request" />
+            <forward
+                name="recarga.arbol"
+                path="/es/pode/buscador/presentacion/avanzado/areaCurricular/area-curricular.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/buscador/presentacion/avanzado/areaCurricular/AreaCurricularCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/avanzado/areaCurricular/area-Curricular-CU_help.jsp"/>
+        <action
+            path="/AreaCurricularHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/avanzado/areaCurricular/area-curricular_help.jsp"/>
+        <action
+            path="/BuscarAvanzadoCU/MostrarQuisoDecirAvanzadoBuscarQuisoDecir"
+            type="es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarQuisoDecirAvanzadoBuscarQuisoDecir"
+            name="buscarAvanzadoCUMostrarQuisoDecirAvanzadoBuscarQuisoDecirForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-quiso-decir-avanzado.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.exception"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-quiso-decir-avanzado.jsp"
+                scope="request" />
+            <forward
+                name="mostrar.resultados"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-imagenes.jsp"
+                redirect="false" />
+            <forward
+                name="mostrar.resultados.avanzado"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-avanzado.jsp"
+                redirect="false" />
+            <forward
+                name="busqueda.sqicu"
+                path="/BusquedaSQICU/BusquedaSQICU.do"
+                redirect="false" />
+            <forward
+                name="mostrar"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-formulario-avanzado.jsp"
+                redirect="false" />
+            <forward
+                name="mostrar.quiso.decir.avanzado"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-quiso-decir-avanzado.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/BuscarAvanzadoCU/MostrarResultadosAvanzadoBuscarResultados"
+            type="es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarResultadosAvanzadoBuscarResultados"
+            name="buscarAvanzadoCUMostrarResultadosAvanzadoBuscarResultadosForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-avanzado.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="buscar.avanzado.cu.mostrar.resultados.avanzado.buscar.resultados.exception"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-avanzado.jsp"
+                scope="request" />
+            <forward
+                name="mostrar.resultados"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-imagenes.jsp"
+                redirect="false" />
+            <forward
+                name="mostrar.resultados.avanzado"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-avanzado.jsp"
+                redirect="false" />
+            <forward
+                name="busqueda.sqicu"
+                path="/BusquedaSQICU/BusquedaSQICU.do"
+                redirect="false" />
+            <forward
+                name="mostrar"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-formulario-avanzado.jsp"
+                redirect="false" />
+            <forward
+                name="mostrar.quiso.decir.avanzado"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-quiso-decir-avanzado.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/BuscarAvanzadoCU/MostrarResultadosAvanzadoMostrarAvanzadoImagenes"
+            type="es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarResultadosAvanzadoMostrarAvanzadoImagenes"
+            name="buscarAvanzadoCUMostrarResultadosAvanzadoMostrarAvanzadoImagenesForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-avanzado.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="buscar.avanzado.cu.mostrar.resultados.avanzado.mostrar.avanzado.imagenes.exception"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-avanzado.jsp"
+                scope="request" />
+            <forward
+                name="mostrar"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-formulario-avanzado.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/BuscarAvanzadoCU/MostrarResultadosImagenesPrepararRetornoDetalleImagenes"
+            type="es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarResultadosImagenesPrepararRetornoDetalleImagenes"
+            name="buscarAvanzadoCUMostrarResultadosImagenesPrepararRetornoDetalleImagenesForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-imagenes.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="buscar.avanzado.cu.mostrar.resultados.imagenes.preparar.retorno.detalle.imagenes.exception"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-imagenes.jsp"
+                scope="request" />
+            <forward
+                name="detallar.resultado"
+                path="/DetallarODECU/DetallarODECU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/BuscarAvanzadoCU/MostrarResultadosImagenesEliminarODE"
+            type="es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarResultadosImagenesEliminarODE"
+            name="buscarAvanzadoCUMostrarResultadosImagenesEliminarODEForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-imagenes.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="buscar.avanzado.cu.mostrar.resultados.imagenes.eliminar.ode.exception"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-imagenes.jsp"
+                scope="request" />
+            <forward
+                name="mostrar.resultados"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-imagenes.jsp"
+                redirect="true" />
+            <forward
+                name="mostrar.resultados.avanzado"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-avanzado.jsp"
+                redirect="true" />
+            <forward
+                name="eliminar.odes.cu"
+                path="/EliminarOdesCU/EliminarOdesCU.do"
+                redirect="true" />
+            <forward
+                name="busqueda.sqicu"
+                path="/BusquedaSQICU/BusquedaSQICU.do"
+                redirect="true" />
+            <forward
+                name="mostrar"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-formulario-avanzado.jsp"
+                redirect="true" />
+            <forward
+                name="mostrar.quiso.decir.avanzado"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-quiso-decir-avanzado.jsp"
+                redirect="true" />
+        </action>
+        <action
+            path="/BuscarAvanzadoCU/MostrarResultadosImagenesMostrarAvanzadoResultados"
+            type="es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarResultadosImagenesMostrarAvanzadoResultados"
+            name="buscarAvanzadoCUMostrarResultadosImagenesMostrarAvanzadoResultadosForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-imagenes.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="buscar.avanzado.cu.mostrar.resultados.imagenes.mostrar.avanzado.resultados.exception"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-imagenes.jsp"
+                scope="request" />
+            <forward
+                name="mostrar"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-formulario-avanzado.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/BuscarAvanzadoCU/MostrarResultadosAvanzadoBuscarResultadosImagenes"
+            type="es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarResultadosAvanzadoBuscarResultadosImagenes"
+            name="buscarAvanzadoCUMostrarResultadosAvanzadoBuscarResultadosImagenesForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-avanzado.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="buscar.avanzado.cu.mostrar.resultados.avanzado.buscar.resultados.imagenes.exception"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-avanzado.jsp"
+                scope="request" />
+            <forward
+                name="mostrar.resultados"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-imagenes.jsp"
+                redirect="false" />
+            <forward
+                name="mostrar.resultados.avanzado"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-avanzado.jsp"
+                redirect="false" />
+            <forward
+                name="busqueda.sqicu"
+                path="/BusquedaSQICU/BusquedaSQICU.do"
+                redirect="false" />
+            <forward
+                name="mostrar"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-formulario-avanzado.jsp"
+                redirect="false" />
+            <forward
+                name="mostrar.quiso.decir.avanzado"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-quiso-decir-avanzado.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/BuscarAvanzadoCU/MostrarFormularioAvanzadoAnalizaPulsacion"
+            type="es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarFormularioAvanzadoAnalizaPulsacion"
+            name="buscarAvanzadoCUMostrarFormularioAvanzadoAnalizaPulsacionForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-formulario-avanzado.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.exception"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-formulario-avanzado.jsp"
+                scope="request" />
+            <forward
+                name="area.curricular.cu"
+                path="/AreaCurricularCU/AreaCurricularCU.do"
+                redirect="false" />
+            <forward
+                name="mostrar.resultados"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-imagenes.jsp"
+                redirect="false" />
+            <forward
+                name="mostrar.resultados.avanzado"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-avanzado.jsp"
+                redirect="false" />
+            <forward
+                name="busqueda.sqicu"
+                path="/BusquedaSQICU/BusquedaSQICU.do"
+                redirect="false" />
+            <forward
+                name="mostrar"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-formulario-avanzado.jsp"
+                redirect="false" />
+            <forward
+                name="tesauros.cu"
+                path="/TesaurosCU/TesaurosCU.do"
+                redirect="false" />
+            <forward
+                name="mostrar.quiso.decir.avanzado"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-quiso-decir-avanzado.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/BuscarAvanzadoCU/MostrarResultadosImagenesGenerarRSS"
+            type="es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarResultadosImagenesGenerarRSS"
+            name="buscarAvanzadoCUMostrarResultadosImagenesGenerarRSSForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-imagenes.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="buscar.avanzado.cu.mostrar.resultados.imagenes.generar.rss.exception"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-imagenes.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/BuscarAvanzadoCU/MostrarResultadosAvanzadoPrepararRetornoDetalle"
+            type="es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarResultadosAvanzadoPrepararRetornoDetalle"
+            name="buscarAvanzadoCUMostrarResultadosAvanzadoPrepararRetornoDetalleForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-avanzado.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="buscar.avanzado.cu.mostrar.resultados.avanzado.preparar.retorno.detalle.exception"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-avanzado.jsp"
+                scope="request" />
+            <forward
+                name="detallar.resultado"
+                path="/DetallarODECU/DetallarODECU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/BuscarAvanzadoCU/MostrarResultadosAvanzadoPaginar"
+            type="es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarResultadosAvanzadoPaginar"
+            name="buscarAvanzadoCUMostrarResultadosAvanzadoPaginarForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-avanzado.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="buscar.avanzado.cu.mostrar.resultados.avanzado.paginar.exception"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-avanzado.jsp"
+                scope="request" />
+            <forward
+                name="mostrar.resultados"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-imagenes.jsp"
+                redirect="false" />
+            <forward
+                name="mostrar.resultados.avanzado"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-avanzado.jsp"
+                redirect="false" />
+            <forward
+                name="busqueda.sqicu"
+                path="/BusquedaSQICU/BusquedaSQICU.do"
+                redirect="false" />
+            <forward
+                name="mostrar"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-formulario-avanzado.jsp"
+                redirect="false" />
+            <forward
+                name="mostrar.quiso.decir.avanzado"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-quiso-decir-avanzado.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/BuscarAvanzadoCU/MostrarResultadosImagenesPaginarImagenes"
+            type="es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarResultadosImagenesPaginarImagenes"
+            name="buscarAvanzadoCUMostrarResultadosImagenesPaginarImagenesForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-imagenes.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="buscar.avanzado.cu.mostrar.resultados.imagenes.paginar.imagenes.exception"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-imagenes.jsp"
+                scope="request" />
+            <forward
+                name="mostrar.resultados"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-imagenes.jsp"
+                redirect="false" />
+            <forward
+                name="mostrar.resultados.avanzado"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-avanzado.jsp"
+                redirect="false" />
+            <forward
+                name="busqueda.sqicu"
+                path="/BusquedaSQICU/BusquedaSQICU.do"
+                redirect="false" />
+            <forward
+                name="mostrar"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-formulario-avanzado.jsp"
+                redirect="false" />
+            <forward
+                name="mostrar.quiso.decir.avanzado"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-quiso-decir-avanzado.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/BuscarAvanzadoCU/BuscarAvanzadoCU"
+            type="es.pode.buscador.presentacion.avanzado.buscarAvanzado.BuscarAvanzadoCU"
+            name="buscarAvanzadoCUBuscarAvanzadoCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="mostrar.resultados"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-imagenes.jsp"
+                redirect="false" />
+            <forward
+                name="mostrar.resultados.avanzado"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-avanzado.jsp"
+                redirect="false" />
+            <forward
+                name="busqueda.sqicu"
+                path="/BusquedaSQICU/BusquedaSQICU.do"
+                redirect="false" />
+            <forward
+                name="mostrar"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-formulario-avanzado.jsp"
+                redirect="false" />
+            <forward
+                name="mostrar.quiso.decir.avanzado"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-quiso-decir-avanzado.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/BuscarAvanzadoCU/MostrarQuisoDecirAvanzadoQuisoDecir"
+            type="es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarQuisoDecirAvanzadoQuisoDecir"
+            name="buscarAvanzadoCUMostrarQuisoDecirAvanzadoQuisoDecirForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-quiso-decir-avanzado.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.quiso.decir.exception"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-quiso-decir-avanzado.jsp"
+                scope="request" />
+            <forward
+                name="mostrar.resultados"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-imagenes.jsp"
+                redirect="false" />
+            <forward
+                name="mostrar.resultados.avanzado"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-avanzado.jsp"
+                redirect="false" />
+            <forward
+                name="busqueda.sqicu"
+                path="/BusquedaSQICU/BusquedaSQICU.do"
+                redirect="false" />
+            <forward
+                name="mostrar"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-formulario-avanzado.jsp"
+                redirect="false" />
+            <forward
+                name="mostrar.quiso.decir.avanzado"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-quiso-decir-avanzado.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/BuscarAvanzadoCU/MostrarQuisoDecirAvanzadoMostrarAvanzadoQuisoDecir"
+            type="es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarQuisoDecirAvanzadoMostrarAvanzadoQuisoDecir"
+            name="buscarAvanzadoCUMostrarQuisoDecirAvanzadoMostrarAvanzadoQuisoDecirForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-quiso-decir-avanzado.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.mostrar.avanzado.quiso.decir.exception"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-quiso-decir-avanzado.jsp"
+                scope="request" />
+            <forward
+                name="mostrar"
+                path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-formulario-avanzado.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/BuscarAvanzadoCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/buscar-Avanzado-CU_help.jsp"/>
+        <action
+            path="/MostrarFormularioAvanzadoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-formulario-avanzado_help.jsp"/>
+        <action
+            path="/MostrarResultadosAvanzadoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-avanzado_help.jsp"/>
+        <action
+            path="/MostrarQuisoDecirAvanzadoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-quiso-decir-avanzado_help.jsp"/>
+        <action
+            path="/MostrarResultadosImagenesHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-imagenes_help.jsp"/>
+        <action
+            path="/EliminarOdesCU/ConfirmacionBuscar"
+            type="es.pode.buscador.presentacion.avanzado.eliminarOdes.ConfirmacionBuscar"
+            name="eliminarOdesCUConfirmacionBuscarForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/avanzado/eliminarOdes/confirmacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="eliminar.odes.cu.confirmacion.buscar.exception"
+                path="/es/pode/buscador/presentacion/avanzado/eliminarOdes/confirmacion.jsp"
+                scope="request" />
+            <forward
+                name="buscar"
+                path="/ListarODECU/ListarODECU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/EliminarOdesCU/ResultadoEliminacionBuscar"
+            type="es.pode.buscador.presentacion.avanzado.eliminarOdes.ResultadoEliminacionBuscar"
+            name="eliminarOdesCUResultadoEliminacionBuscarForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/avanzado/eliminarOdes/resultado-eliminacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="eliminar.odes.cu.resultado.eliminacion.buscar.exception"
+                path="/es/pode/buscador/presentacion/avanzado/eliminarOdes/resultado-eliminacion.jsp"
+                scope="request" />
+            <forward
+                name="buscar"
+                path="/ListarODECU/ListarODECU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/EliminarOdesCU/EliminarOdesCU"
+            type="es.pode.buscador.presentacion.avanzado.eliminarOdes.EliminarOdesCU"
+            name="eliminarOdesCUEliminarOdesCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="confirmacion"
+                path="/es/pode/buscador/presentacion/avanzado/eliminarOdes/confirmacion.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/EliminarOdesCU/ConfirmacionAceptar"
+            type="es.pode.buscador.presentacion.avanzado.eliminarOdes.ConfirmacionAceptar"
+            name="eliminarOdesCUConfirmacionAceptarForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/avanzado/eliminarOdes/confirmacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="eliminar.odes.cu.confirmacion.aceptar.exception"
+                path="/es/pode/buscador/presentacion/avanzado/eliminarOdes/confirmacion.jsp"
+                scope="request" />
+            <forward
+                name="resultado.eliminacion"
+                path="/es/pode/buscador/presentacion/avanzado/eliminarOdes/resultado-eliminacion.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/EliminarOdesCU/ResultadoEliminacionAceptar"
+            type="es.pode.buscador.presentacion.avanzado.eliminarOdes.ResultadoEliminacionAceptar"
+            name="eliminarOdesCUResultadoEliminacionAceptarForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/avanzado/eliminarOdes/resultado-eliminacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="eliminar.odes.cu.resultado.eliminacion.aceptar.exception"
+                path="/es/pode/buscador/presentacion/avanzado/eliminarOdes/resultado-eliminacion.jsp"
+                scope="request" />
+            <forward
+                name="aceptar"
+                path="/BuscarAvanzadoCU/BuscarAvanzadoCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/EliminarOdesCU/ConfirmacionCancelar"
+            type="es.pode.buscador.presentacion.avanzado.eliminarOdes.ConfirmacionCancelar"
+            name="eliminarOdesCUConfirmacionCancelarForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/avanzado/eliminarOdes/confirmacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="eliminar.odes.cu.confirmacion.cancelar.exception"
+                path="/es/pode/buscador/presentacion/avanzado/eliminarOdes/confirmacion.jsp"
+                scope="request" />
+            <forward
+                name="cancelar"
+                path="/BuscarAvanzadoCU/BuscarAvanzadoCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/buscador/presentacion/avanzado/eliminarOdes/EliminarOdesCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/avanzado/eliminarOdes/eliminar-Odes-CU_help.jsp"/>
+        <action
+            path="/ConfirmacionHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/avanzado/eliminarOdes/confirmacion_help.jsp"/>
+        <action
+            path="/ResultadoEliminacionHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/avanzado/eliminarOdes/resultado-eliminacion_help.jsp"/>
+        <action
+            path="/TesaurosCU/TesaurosCU"
+            type="es.pode.buscador.presentacion.avanzado.tesauros.TesaurosCU"
+            name="tesaurosCUTesaurosCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="presentar.tesauros"
+                path="/es/pode/buscador/presentacion/avanzado/tesauros/tesauros.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/TesaurosCU/TesaurosAsociarTesauro"
+            type="es.pode.buscador.presentacion.avanzado.tesauros.TesaurosAsociarTesauro"
+            name="tesaurosCUTesaurosAsociarTesauroForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/avanzado/tesauros/tesauros.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="tesauros.cu.tesauros.asociar.tesauro.exception"
+                path="/es/pode/buscador/presentacion/avanzado/tesauros/tesauros.jsp"
+                scope="request" />
+            <forward
+                name="asociar.tesauro"
+                path="/BuscarAvanzadoCU/BuscarAvanzadoCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/TesaurosCU/TesaurosBuscarTerminos"
+            type="es.pode.buscador.presentacion.avanzado.tesauros.TesaurosBuscarTerminos"
+            name="tesaurosCUTesaurosBuscarTerminosForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/avanzado/tesauros/tesauros.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="tesauros.cu.tesauros.buscar.terminos.exception"
+                path="/es/pode/buscador/presentacion/avanzado/tesauros/tesauros.jsp"
+                scope="request" />
+            <forward
+                name="tesauros"
+                path="/es/pode/buscador/presentacion/avanzado/tesauros/tesauros.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/TesaurosCU/TesaurosCancelar"
+            type="es.pode.buscador.presentacion.avanzado.tesauros.TesaurosCancelar"
+            name="tesaurosCUTesaurosCancelarForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/avanzado/tesauros/tesauros.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="tesauros.cu.tesauros.cancelar.exception"
+                path="/es/pode/buscador/presentacion/avanzado/tesauros/tesauros.jsp"
+                scope="request" />
+            <forward
+                name="cancelar"
+                path="/BuscarAvanzadoCU/BuscarAvanzadoCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/TesaurosCU/TesaurosConsultaPadre"
+            type="es.pode.buscador.presentacion.avanzado.tesauros.TesaurosConsultaPadre"
+            name="tesaurosCUTesaurosConsultaPadreForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/avanzado/tesauros/tesauros.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="tesauros.cu.tesauros.consulta.padre.exception"
+                path="/es/pode/buscador/presentacion/avanzado/tesauros/tesauros.jsp"
+                scope="request" />
+            <forward
+                name="tesauros"
+                path="/es/pode/buscador/presentacion/avanzado/tesauros/tesauros.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/TesaurosCU/TesaurosConsultaNodo"
+            type="es.pode.buscador.presentacion.avanzado.tesauros.TesaurosConsultaNodo"
+            name="tesaurosCUTesaurosConsultaNodoForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/avanzado/tesauros/tesauros.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="tesauros.cu.tesauros.consulta.nodo.exception"
+                path="/es/pode/buscador/presentacion/avanzado/tesauros/tesauros.jsp"
+                scope="request" />
+            <forward
+                name="tesauros"
+                path="/es/pode/buscador/presentacion/avanzado/tesauros/tesauros.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/buscador/presentacion/avanzado/tesauros/TesaurosCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/avanzado/tesauros/tesauros-CU_help.jsp"/>
+        <action
+            path="/TesaurosHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/avanzado/tesauros/tesauros_help.jsp"/>
+        <action
+            path="/FormularioAvanzadoCU/FormularioAvanzadoCU"
+            type="es.pode.buscador.presentacion.avanzado.formularioAvanzado.FormularioAvanzadoCU"
+            name="formularioAvanzadoCUFormularioAvanzadoCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="buscar.avanzado.cu"
+                path="/BuscarAvanzadoCU/BuscarAvanzadoCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/buscador/presentacion/avanzado/formularioAvanzado/FormularioAvanzadoCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/avanzado/formularioAvanzado/formulario-Avanzado-CU_help.jsp"/>
+        <action
+            path="/BusquedaSQICU/MostrarResultadosPaginarSQI"
+            type="es.pode.buscador.presentacion.avanzado.busquedaSQI.MostrarResultadosPaginarSQI"
+            name="busquedaSQICUMostrarResultadosPaginarSQIForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/avanzado/busquedaSQI/mostrar-resultados.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="busqueda.sqicu.mostrar.resultados.paginar.sqi.exception"
+                path="/es/pode/buscador/presentacion/avanzado/busquedaSQI/mostrar-resultados.jsp"
+                scope="request" />
+            <forward
+                name="mostrar.resultados.busqueda"
+                path="/es/pode/buscador/presentacion/avanzado/busquedaSQI/mostrar-resultados.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/BusquedaSQICU/BusquedaSQICU"
+            type="es.pode.buscador.presentacion.avanzado.busquedaSQI.BusquedaSQICU"
+            name="busquedaSQICUBusquedaSQICUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="mostrar.resultados.busqueda"
+                path="/es/pode/buscador/presentacion/avanzado/busquedaSQI/mostrar-resultados.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/BusquedaSQICU/MostrarResultadosAnalizaTipoBusqueda"
+            type="es.pode.buscador.presentacion.avanzado.busquedaSQI.MostrarResultadosAnalizaTipoBusqueda"
+            name="busquedaSQICUMostrarResultadosAnalizaTipoBusquedaForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/avanzado/busquedaSQI/mostrar-resultados.jsp"
+            unknown="false"
+            validate="true">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda.exception"
+                path="/es/pode/buscador/presentacion/avanzado/busquedaSQI/mostrar-resultados.jsp"
+                scope="request" />
+            <forward
+                name="mostrar.resultados.busqueda"
+                path="/es/pode/buscador/presentacion/avanzado/busquedaSQI/mostrar-resultados.jsp"
+                redirect="false" />
+            <forward
+                name="buscar.avanzado.cu"
+                path="/BuscarAvanzadoCU/BuscarAvanzadoCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/buscador/presentacion/avanzado/busquedaSQI/BusquedaSQICUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/avanzado/busquedaSQI/busqueda-SQICU_help.jsp"/>
+        <action
+            path="/MostrarResultadosHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/avanzado/busquedaSQI/mostrar-resultados_help.jsp"/>
+        <action
+            path="/NavegarArbolCurricularCU/NavegarArbolCurricularCU"
+            type="es.pode.buscador.presentacion.arbolCurricular.navegarArbolCurricular.NavegarArbolCurricularCU"
+            name="navegarArbolCurricularCUNavegarArbolCurricularCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="cargar.area.curricular"
+                path="/es/pode/buscador/presentacion/arbolCurricular/navegarArbolCurricular/arbol-curricular.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/NavegarArbolCurricularCU/ArbolCurricularListarODEArea"
+            type="es.pode.buscador.presentacion.arbolCurricular.navegarArbolCurricular.ArbolCurricularListarODEArea"
+            name="navegarArbolCurricularCUArbolCurricularListarODEAreaForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/arbolCurricular/navegarArbolCurricular/arbol-curricular.jsp"
+            unknown="false"
+            validate="true">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="navegar.arbol.curricular.cu.arbol.curricular.listar.odearea.exception"
+                path="/es/pode/buscador/presentacion/arbolCurricular/navegarArbolCurricular/arbol-curricular.jsp"
+                scope="request" />
+            <forward
+                name="listar.odearea"
+                path="/ListarODEAreaCU/ListarODEAreaCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/NavegarArbolCurricularCU/ArbolCurricularSeleccionarPadre"
+            type="es.pode.buscador.presentacion.arbolCurricular.navegarArbolCurricular.ArbolCurricularSeleccionarPadre"
+            name="navegarArbolCurricularCUArbolCurricularSeleccionarPadreForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/arbolCurricular/navegarArbolCurricular/arbol-curricular.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="navegar.arbol.curricular.cu.arbol.curricular.seleccionar.padre.exception"
+                path="/es/pode/buscador/presentacion/arbolCurricular/navegarArbolCurricular/arbol-curricular.jsp"
+                scope="request" />
+            <forward
+                name="recargar.arbol"
+                path="/es/pode/buscador/presentacion/arbolCurricular/navegarArbolCurricular/arbol-curricular.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/NavegarArbolCurricularCU/ArbolCurricularSeleccionarHijo"
+            type="es.pode.buscador.presentacion.arbolCurricular.navegarArbolCurricular.ArbolCurricularSeleccionarHijo"
+            name="navegarArbolCurricularCUArbolCurricularSeleccionarHijoForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/arbolCurricular/navegarArbolCurricular/arbol-curricular.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="navegar.arbol.curricular.cu.arbol.curricular.seleccionar.hijo.exception"
+                path="/es/pode/buscador/presentacion/arbolCurricular/navegarArbolCurricular/arbol-curricular.jsp"
+                scope="request" />
+            <forward
+                name="recargar.arbol"
+                path="/es/pode/buscador/presentacion/arbolCurricular/navegarArbolCurricular/arbol-curricular.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/buscador/presentacion/arbolCurricular/navegarArbolCurricular/NavegarArbolCurricularCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/arbolCurricular/navegarArbolCurricular/navegar-Arbol-Curricular-CU_help.jsp"/>
+        <action
+            path="/ArbolCurricularHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/arbolCurricular/navegarArbolCurricular/arbol-curricular_help.jsp"/>
+        <action
+            path="/ListarODEAreaCU/ListarODEAreaCU"
+            type="es.pode.buscador.presentacion.arbolCurricular.listarODEArea.ListarODEAreaCU"
+            name="listarODEAreaCUListarODEAreaCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="buscar.documentos"
+                path="/es/pode/buscador/presentacion/arbolCurricular/listarODEArea/listado-ode.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/ListarODEAreaCU/ListadoODEDecidirSalida"
+            type="es.pode.buscador.presentacion.arbolCurricular.listarODEArea.ListadoODEDecidirSalida"
+            name="listarODEAreaCUListadoODEDecidirSalidaForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/arbolCurricular/listarODEArea/listado-ode.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="listar.odearea.cu.listado.ode.decidir.salida.exception"
+                path="/es/pode/buscador/presentacion/arbolCurricular/listarODEArea/listado-ode.jsp"
+                scope="request" />
+            <forward
+                name="navegar.arbol.curricular.cu"
+                path="/NavegarArbolCurricularCU/NavegarArbolCurricularCU.do"
+                redirect="false" />
+            <forward
+                name="detallar.odecu"
+                path="/DetallarODECU/DetallarODECU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/buscador/presentacion/arbolCurricular/listarODEArea/ListarODEAreaCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/arbolCurricular/listarODEArea/listar-ODEArea-CU_help.jsp"/>
+        <action
+            path="/ListadoODEHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/arbolCurricular/listarODEArea/listado-ode_help.jsp"/>
+        <action
+            path="/NavegarTesauroCU/NavegarTesauroBuscarTerminos"
+            type="es.pode.buscador.presentacion.arbolTesauros.navegarTesauro.NavegarTesauroBuscarTerminos"
+            name="navegarTesauroCUNavegarTesauroBuscarTerminosForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/arbolTesauros/navegarTesauro/navegar-tesauro.jsp"
+            unknown="false"
+            validate="true">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="navegar.tesauro.cu.navegar.tesauro.buscar.terminos.exception"
+                path="/es/pode/buscador/presentacion/arbolTesauros/navegarTesauro/navegar-tesauro.jsp"
+                scope="request" />
+            <forward
+                name="navegar.tesauro"
+                path="/es/pode/buscador/presentacion/arbolTesauros/navegarTesauro/navegar-tesauro.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/NavegarTesauroCU/NavegarTesauroListarODETesauro"
+            type="es.pode.buscador.presentacion.arbolTesauros.navegarTesauro.NavegarTesauroListarODETesauro"
+            name="navegarTesauroCUNavegarTesauroListarODETesauroForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/arbolTesauros/navegarTesauro/navegar-tesauro.jsp"
+            unknown="false"
+            validate="true">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="navegar.tesauro.cu.navegar.tesauro.listar.odetesauro.exception"
+                path="/es/pode/buscador/presentacion/arbolTesauros/navegarTesauro/navegar-tesauro.jsp"
+                scope="request" />
+            <forward
+                name="listar.odetesauro"
+                path="/ListarODETesauroCU/ListarODETesauroCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/NavegarTesauroCU/NavegarTesauroSeleccionarPadre"
+            type="es.pode.buscador.presentacion.arbolTesauros.navegarTesauro.NavegarTesauroSeleccionarPadre"
+            name="navegarTesauroCUNavegarTesauroSeleccionarPadreForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/arbolTesauros/navegarTesauro/navegar-tesauro.jsp"
+            unknown="false"
+            validate="true">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="navegar.tesauro.cu.navegar.tesauro.seleccionar.padre.exception"
+                path="/es/pode/buscador/presentacion/arbolTesauros/navegarTesauro/navegar-tesauro.jsp"
+                scope="request" />
+            <forward
+                name="recargar.tesauro"
+                path="/es/pode/buscador/presentacion/arbolTesauros/navegarTesauro/navegar-tesauro.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/NavegarTesauroCU/NavegarTesauroSeleccionarHijo"
+            type="es.pode.buscador.presentacion.arbolTesauros.navegarTesauro.NavegarTesauroSeleccionarHijo"
+            name="navegarTesauroCUNavegarTesauroSeleccionarHijoForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/arbolTesauros/navegarTesauro/navegar-tesauro.jsp"
+            unknown="false"
+            validate="true">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="navegar.tesauro.cu.navegar.tesauro.seleccionar.hijo.exception"
+                path="/es/pode/buscador/presentacion/arbolTesauros/navegarTesauro/navegar-tesauro.jsp"
+                scope="request" />
+            <forward
+                name="recargar.tesauro"
+                path="/es/pode/buscador/presentacion/arbolTesauros/navegarTesauro/navegar-tesauro.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/NavegarTesauroCU/NavegarTesauroCU"
+            type="es.pode.buscador.presentacion.arbolTesauros.navegarTesauro.NavegarTesauroCU"
+            name="navegarTesauroCUNavegarTesauroCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="cargar.tesauro"
+                path="/es/pode/buscador/presentacion/arbolTesauros/navegarTesauro/navegar-tesauro.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/buscador/presentacion/arbolTesauros/navegarTesauro/NavegarTesauroCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/arbolTesauros/navegarTesauro/navegar-Tesauro-CU_help.jsp"/>
+        <action
+            path="/NavegarTesauroHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/arbolTesauros/navegarTesauro/navegar-tesauro_help.jsp"/>
+        <action
+            path="/ListarODETesauroCU/ListadoODEDecidirSalida"
+            type="es.pode.buscador.presentacion.arbolTesauros.listarODETesauro.ListadoODEDecidirSalida"
+            name="listarODETesauroCUListadoODEDecidirSalidaForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/arbolTesauros/listarODETesauro/listado-ode.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="listar.odetesauro.cu.listado.ode.decidir.salida.exception"
+                path="/es/pode/buscador/presentacion/arbolTesauros/listarODETesauro/listado-ode.jsp"
+                scope="request" />
+            <forward
+                name="detallar.odecu"
+                path="/DetallarODECU/DetallarODECU.do"
+                redirect="false" />
+            <forward
+                name="navegar.tesauro.cu"
+                path="/NavegarTesauroCU/NavegarTesauroCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ListarODETesauroCU/ListarODETesauroCU"
+            type="es.pode.buscador.presentacion.arbolTesauros.listarODETesauro.ListarODETesauroCU"
+            name="listarODETesauroCUListarODETesauroCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="buscar.documentos"
+                path="/es/pode/buscador/presentacion/arbolTesauros/listarODETesauro/listado-ode.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/buscador/presentacion/arbolTesauros/listarODETesauro/ListarODETesauroCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/arbolTesauros/listarODETesauro/listar-ODETesauro-CU_help.jsp"/>
+        <action
+            path="/ListadoODEHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/arbolTesauros/listarODETesauro/listado-ode_help.jsp"/>
+        <action
+            path="/SeleccionTipoBusquedaCU/SeleccionTipoBusquedaCU"
+            type="es.pode.buscador.presentacion.seleccionTipoBusqueda.SeleccionTipoBusquedaCU"
+            name="seleccionTipoBusquedaCUSeleccionTipoBusquedaCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="preparar.consulta"
+                path="/es/pode/buscador/presentacion/seleccionTipoBusqueda/seleccion-tipo-busqueda.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/SeleccionTipoBusquedaCU/SeleccionTipoBusquedaDecidirSalida"
+            type="es.pode.buscador.presentacion.seleccionTipoBusqueda.SeleccionTipoBusquedaDecidirSalida"
+            name="seleccionTipoBusquedaCUSeleccionTipoBusquedaDecidirSalidaForm"
+            scope="request"
+            input="/es/pode/buscador/presentacion/seleccionTipoBusqueda/seleccion-tipo-busqueda.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="seleccion.tipo.busqueda.cu.seleccion.tipo.busqueda.decidir.salida.exception"
+                path="/es/pode/buscador/presentacion/seleccionTipoBusqueda/seleccion-tipo-busqueda.jsp"
+                scope="request" />
+            <forward
+                name="navegar.tesauro.cu"
+                path="/NavegarTesauroCU/NavegarTesauroCU.do"
+                redirect="false" />
+            <forward
+                name="navegar.arbol.curricular.cu"
+                path="/NavegarArbolCurricularCU/NavegarArbolCurricularCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/buscador/presentacion/seleccionTipoBusqueda/SeleccionTipoBusquedaCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/seleccionTipoBusqueda/seleccion-Tipo-Busqueda-CU_help.jsp"/>
+        <action
+            path="/SeleccionTipoBusquedaHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/buscador/presentacion/seleccionTipoBusqueda/seleccion-tipo-busqueda_help.jsp"/>
+        <action
+            path="/applicationHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/application-help.jsp"/>
+        <action
+            path="/calendar"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/calendar-js.jsp"/>
+        <action
+            path="/formValidation"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/form-validation.jsp"/>
+        <action
+            path="/login"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/login/login-form.jsp"/>
+        <action
+            path="/logincaptcha"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/login/login-form.jsp"/>  
+        <action
+            path="/captcha-image"
+            type="es.indra.ibuilder.security.captcha.ImageCaptchaAction"
+            scope="request"/>  
+    </action-mappings>
+
+    <!-- controller merge point -->
+
+    <!-- message-resources merge-point -->
+    <message-resources parameter="application-resources" null="false"/>
+
+    <!-- plug-in merge-point -->
+    
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property property="pathnames" value="/WEB-INF/validation.xml,/WEB-INF/validator-rules.xml"/>
+        <set-property property="stopOnFirstError" value="false"/>
+    </plug-in>
+
+    <plug-in className="org.apache.struts.tiles.TilesPlugin">
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml"/>
+        <set-property property="definitions-parser-validate" value="true"/>
+        <set-property property="moduleAware" value="true"/>
+    </plug-in>
+
+<!--
+  UNCOMMENT TO EXPOSE THE STRUTS-MENU TAGLIB
+
+    <plug-in className="net.sf.navigator.menu.MenuPlugIn">
+        <set-property property="menuConfig" value="/WEB-INF/menu-config.xml"/>
+    </plug-in>
+-->
+</struts-config>

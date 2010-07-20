@@ -1,0 +1,40 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="solicitar.baja.usuario.confirmacion.solicitud.baja.aceptar"/></h3>
+    <div class="trigger">
+        <html:form styleId="solicitarBajaUsuarioConfirmacionSolicitudBajaAceptarForm" action="/SolicitarBajaUsuario/ConfirmacionSolicitudBajaAceptar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="usuario">
+                        <td class="label"><bean:message key="solicitar.baja.usuario.confirmacion.solicitud.baja.aceptar.param.usuario"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.usuario}"/>
+                           <input type="text" name="usuario" value="${value}" onmouseover="hints.show('solicitar.baja.usuario.confirmacion.solicitud.baja.aceptar.param.usuario.title')" onmouseout="hints.hide()"  id="aceptarUsuario"/>
+                        </td>
+                    </tr>
+                    <tr class="resultadoEnvio">
+                        <td class="label"><bean:message key="solicitar.baja.usuario.confirmacion.solicitud.baja.aceptar.param.resultado.envio"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.resultadoEnvio}"/>
+                           <input type="text" name="resultadoEnvio" value="${value}" onmouseover="hints.show('solicitar.baja.usuario.confirmacion.solicitud.baja.aceptar.param.resultado.envio.title')" onmouseout="hints.hide()"  id="aceptarResultadoEnvio"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="solicitar.baja.usuario.confirmacion.solicitud.baja.aceptar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

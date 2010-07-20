@@ -1,0 +1,26 @@
+#submit.action {}
+#submit.action #form_submit {}
+
+#submit.action .url {}
+#submit.action .url .label {}
+#submit.action .url .field {}
+#submit.action .comentarios {}
+#submit.action .comentarios .label {}
+#submit.action .comentarios .field {}
+#submit.action .titulo {}
+#submit.action .titulo .label {}
+#submit.action .titulo .field {}
+#submit.action .idioma {}
+#submit.action .idioma .label {}
+#submit.action .idioma .field {}
+#submit.action .idiomaDestinatario {}
+#submit.action .idiomaDestinatario .label {}
+#submit.action .idiomaDestinatario .field {}
+#submit.action .action {}
+#submit.action .action .label {}
+#submit.action .action .field {}
+#submit.action .tipo {}
+#submit.action .tipo .label {}
+#submit.action .tipo .field {}
+
+

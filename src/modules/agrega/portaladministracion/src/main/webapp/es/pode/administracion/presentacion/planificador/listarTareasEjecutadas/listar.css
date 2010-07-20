@@ -1,0 +1,25 @@
+#listarTareasEjecutadas.action {}
+#listarTareasEjecutadas.action #form_submit {}
+
+
+#tareasEjecutadas.table {}
+#tareasEjecutadas.table th {}
+#tareasEjecutadas.table td div {}
+
+#tareasEjecutadas.table th.trabajo {}
+#tareasEjecutadas.table td div.trabajo {}
+
+#tareasEjecutadas.table th.grupoTrabajo {}
+#tareasEjecutadas.table td div.grupoTrabajo {}
+
+#tareasEjecutadas.table th.fechaInicio {}
+#tareasEjecutadas.table td div.fechaInicio {}
+
+#tareasEjecutadas.table th.fechaFin {}
+#tareasEjecutadas.table td div.fechaFin {}
+
+#tareasEjecutadas.table th.estado {}
+#tareasEjecutadas.table td div.estado {}
+
+
+

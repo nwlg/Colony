@@ -1,0 +1,42 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="propuestos" class="action">
+    <h3><bean:message key="objetos.publicados.cu.mostrar.odespublicados.propuestos"/></h3>
+    <div class="trigger">
+        <html:form styleId="objetosPublicadosCUMostrarODESPublicadosPropuestosForm" action="/ObjetosPublicadosCU/MostrarODESPublicadosPropuestos" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="idiomaBuscador">
+                        <td class="label"><bean:message key="objetos.publicados.cu.mostrar.odespublicados.propuestos.param.idioma.buscador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idiomaBuscador}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.idiomaBuscadorBackingList}">
+                                  <html:select name="form" property="idiomaBuscador" onmouseover="hints.show('objetos.publicados.cu.mostrar.odespublicados.propuestos.param.idioma.buscador.title')" onmouseout="hints.hide()"  styleId="propuestosIdiomaBuscador">
+                                      <html:optionsCollection name="form" property="idiomaBuscadorBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="idiomaBuscador" onmouseover="hints.show('objetos.publicados.cu.mostrar.odespublicados.propuestos.param.idioma.buscador.title')" onmouseout="hints.hide()"  styleId="propuestosIdiomaBuscador"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_CATALOGADOR,ROLE_ADMINISTRADOR,ROLE_DOCENTE">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Propuestos')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="objetos.publicados.cu.mostrar.odespublicados.propuestos"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

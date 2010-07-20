@@ -1,0 +1,42 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="catalogar" class="action">
+    <h3><bean:message key="gestor.basico.gestor.basico.catalogar"/></h3>
+    <div class="trigger">
+        <html:form styleId="gestorBasicoGestorBasicoCatalogarForm" action="/GestorBasico/GestorBasicoCatalogar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="identifier">
+                        <td class="label"><bean:message key="gestor.basico.gestor.basico.catalogar.param.identifier"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.identifier}"/>
+                           <input type="text" name="identifier" value="${value}" onmouseover="hints.show('gestor.basico.gestor.basico.catalogar.param.identifier.title')" onmouseout="hints.hide()"  id="catalogarIdentifier"/>
+                        </td>
+                    </tr>
+                    <tr class="returnURL">
+                        <td class="label"><bean:message key="gestor.basico.gestor.basico.catalogar.param.return.url"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.returnURL}"/>
+                           <input type="text" name="returnURL" value="${value}" onmouseover="hints.show('gestor.basico.gestor.basico.catalogar.param.return.url.title')" onmouseout="hints.hide()"  id="catalogarReturnURL"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_DOCENTE,ROLE_ADMINISTRADOR,ROLE_CATALOGADOR,ROLE_PUBLICADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Catalogar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="gestor.basico.gestor.basico.catalogar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

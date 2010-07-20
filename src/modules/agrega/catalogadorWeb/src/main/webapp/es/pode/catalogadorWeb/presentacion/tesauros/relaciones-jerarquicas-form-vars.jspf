@@ -1,0 +1,20 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="id" value="${form.id}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="rutaPadrevo" value="${form.rutaPadrevo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="jerarquias" value="${form.jerarquias}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idioma" value="${form.idioma}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="taxonesvo" value="${form.taxonesvo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="nomTesauro" value="${form.nomTesauro}"/>
+    </c:catch>
+</div>

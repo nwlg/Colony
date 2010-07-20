@@ -1,0 +1,36 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'relacion.listado.relaciones.form.eliminar.param.titulo.relacion.title':'<formatting:escape language="javascript"><bean:message key="relacion.listado.relaciones.form.eliminar.param.titulo.relacion.title"/></formatting:escape>',
+                'relacion.listado.relaciones.form.detalles.relacion.param.titulo.relacion.title':'<formatting:escape language="javascript"><bean:message key="relacion.listado.relaciones.form.detalles.relacion.param.titulo.relacion.title"/></formatting:escape>',
+                'relacion.listado.relaciones.form.detalles.relacion.param.identificador.ode.title':'<formatting:escape language="javascript"><bean:message key="relacion.listado.relaciones.form.detalles.relacion.param.identificador.ode.title"/></formatting:escape>',
+                'relacion.listado.relaciones.form.detalles.relacion.param.boton.pulsado.title':'<formatting:escape language="javascript"><bean:message key="relacion.listado.relaciones.form.detalles.relacion.param.boton.pulsado.title"/></formatting:escape>',
+                'relacion.listado.relaciones.form.cancelar.param.identificador.ode.title':'<formatting:escape language="javascript"><bean:message key="relacion.listado.relaciones.form.cancelar.param.identificador.ode.title"/></formatting:escape>',
+                'relacion.listado.relaciones.form.cancelar.param.listado.relaciones.title':'<formatting:escape language="javascript"><bean:message key="relacion.listado.relaciones.form.cancelar.param.listado.relaciones.title"/></formatting:escape>',
+                'Eliminar':'<formatting:escape language="javascript"><bean:message key="relacion.listado.relaciones.form.eliminar.title"/></formatting:escape>',
+                'Eliminar_no':'<formatting:escape language="javascript"><bean:message key="relacion.listado.relaciones.form.eliminar.title.notallowed"/></formatting:escape>',
+                'Eliminar_reset':'<formatting:escape language="javascript"><bean:message key="relacion.listado.relaciones.form.eliminar.title.reset"/></formatting:escape>',
+                'Eliminar_noreset':'<formatting:escape language="javascript"><bean:message key="relacion.listado.relaciones.form.eliminar.title.reset.not.allowed"/></formatting:escape>',
+                'DetallesRelacion':'<formatting:escape language="javascript"><bean:message key="relacion.listado.relaciones.form.detalles.relacion.title"/></formatting:escape>',
+                'DetallesRelacion_no':'<formatting:escape language="javascript"><bean:message key="relacion.listado.relaciones.form.detalles.relacion.title.notallowed"/></formatting:escape>',
+                'DetallesRelacion_reset':'<formatting:escape language="javascript"><bean:message key="relacion.listado.relaciones.form.detalles.relacion.title.reset"/></formatting:escape>',
+                'DetallesRelacion_noreset':'<formatting:escape language="javascript"><bean:message key="relacion.listado.relaciones.form.detalles.relacion.title.reset.not.allowed"/></formatting:escape>',
+                'Cancelar':'<formatting:escape language="javascript"><bean:message key="relacion.listado.relaciones.form.cancelar.title"/></formatting:escape>',
+                'Cancelar_no':'<formatting:escape language="javascript"><bean:message key="relacion.listado.relaciones.form.cancelar.title.notallowed"/></formatting:escape>',
+                'Cancelar_reset':'<formatting:escape language="javascript"><bean:message key="relacion.listado.relaciones.form.cancelar.title.reset"/></formatting:escape>',
+                'Cancelar_noreset':'<formatting:escape language="javascript"><bean:message key="relacion.listado.relaciones.form.cancelar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+</script>
+    </tiles:put>

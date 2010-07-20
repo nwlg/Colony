@@ -1,0 +1,249 @@
+/* Basic styles */
+body {
+	background: #f2f2f2 url(../images/bkgd-grad.gif) repeat-x !important; 
+	padding: 0 0 60px 0;
+	}
+
+/* positioning */
+
+/* Clear fix */
+.clear:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+
+/* no need to hide from IE5 Mac as its filtered out anyway */
+.clear {display:inline-block;}
+*>.clear {display:block;} /* Fix gap created in Gecko 1.9 by support of inline-block. */
+
+#wrapper {
+	width: 891px;
+	background: #fff;
+	text-align: center;
+	margin: 35px auto 35px auto;
+	border: 2px solid #e0e0e0;
+	position: relative;
+	z-index: 1;
+}
+
+#home #wrapper {
+	width: 685px;
+}
+
+
+
+/* corners */
+
+b.tr, b.tl, b.br, b.bl {
+	display: block;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	z-index: 2;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+b.tr {
+	left: -2px;
+	top: -2px;
+	background-image: url(../images/tr.gif)
+}
+
+b.tl {
+	right: -2px;
+	top: -2px;
+	background-image: url(../images/tl.gif)
+}
+
+b.br {
+	right: -2px;
+	bottom: -2px;
+	background-image: url(../images/br.gif)
+}
+
+b.bl {
+	left: -2px;
+	bottom: -2px;
+	background-image: url(../images/bl.gif)
+}
+
+#header,
+#content,
+#footer {
+	clear: both;
+	margin: 0 auto;
+	position: relative;
+}
+
+#logo {
+	margin: 10px 0 0 0;
+}
+
+#border {
+	background: #efefef;
+	border: 1px #ccc solid;
+	padding: 25px;
+}
+
+#content {
+	clear : both;	
+	margin: -360px auto 0 auto;
+}
+
+#home #content {
+	margin: 0 auto;
+}
+
+
+#footer {
+	padding: 1.5em 0;
+	border-top: 1px dotted #ccc;
+}
+
+#home h1 {
+	color: #999;
+}
+
+#home #home {
+	   height: 380px;
+	   margin: 0;
+	   padding: 0 55px;
+	   position: relative;
+}
+
+
+#home #content {
+	margin: 0 auto;
+	padding: 0 0 40px 0;
+	width: 400px;
+}
+
+#home #header,
+#home #footer {
+	width: 590px;
+}
+
+
+#home #footer,#home #footer a {
+	color: #999;
+	padding: 15px 0 15px 0;
+}
+
+#home #footer img {
+	padding-top: 8px;
+}
+
+/* forms */
+
+form {		
+    margin:0;		
+    padding:0;	
+}
+	
+form div,
+form p {
+    font-size: 1em;		
+    margin: 10px auto 0 auto;		
+    padding: 0;	
+}
+	
+form img {
+	    margin-top: 30px;
+	    margin-bottom: 30px;
+	    }			
+
+input, select {		
+     font-size:1em; 		
+     margin: 0 0 5px 0;		
+     padding: 2px;		
+     vertical-align:middle;	
+}
+
+input.button {
+	background: url(../images/greyBck.gif) bottom repeat-x;	
+      	border : 1px solid #ccc;
+      	padding: 1px 5px 1px 5px;
+      	color: #000;
+}
+
+input.button:hover {
+	color: #f00;
+	}
+
+form div.submit {		
+     margin: 1em 0;
+}
+
+
+/* misc styles */
+
+input {
+	vertical-align: middle;
+}
+
+/* Typography */
+/* ------------------------------------------------------- */
+html, body, div, span,
+applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dd, dl, dt, li, ol, ul,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	line-height: 1.5;
+	font-family: inherit;
+	text-align: left;
+	vertical-align: baseline;
+}
+a img, :link img, :visited img {
+	border: 0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body { 
+    font-size: 75%; /* for IE */
+    font-family: Lucida Grande, Lucida Sans Unicode, Bitstream Vera Sans, Geneva, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    color: #333;
+    }
+    
+html>body { 
+	font-size: 12px; 
+	line-height: 18px;	
+} 
+
+/* for the rest */
+
+/*typography*/
+
+a:hover {
+	text-decoration: underline;
+	}
+	
+table, thead, tbody, tr, th, td {font-size:1em}
+
+
+h1 {
+	font-size:24px;
+	margin:0 0 0.7em 0;
+}
+
+p {
+	font-size:1em;
+	margin:0 0 1.5em 0;
+}

@@ -1,0 +1,88 @@
+#listarODETesauro.action {}
+#listarODETesauro.action #form_submit {}
+
+#listarODETesauro.action .idTesauro {}
+#listarODETesauro.action .idTesauro .label {}
+#listarODETesauro.action .idTesauro .field {}
+#listarODETesauro.action .rutaPadreVO {}
+#listarODETesauro.action .rutaPadreVO .label {}
+#listarODETesauro.action .rutaPadreVO .field {}
+#listarODETesauro.action .idiomaBuscador {}
+#listarODETesauro.action .idiomaBuscador .label {}
+#listarODETesauro.action .idiomaBuscador .field {}
+#listarODETesauro.action .idioma {}
+#listarODETesauro.action .idioma .label {}
+#listarODETesauro.action .idioma .field {}
+#listarODETesauro.action .tituloTesauro {}
+#listarODETesauro.action .tituloTesauro .label {}
+#listarODETesauro.action .tituloTesauro .field {}
+#listarODETesauro.action .numMaxResultados {}
+#listarODETesauro.action .numMaxResultados .label {}
+#listarODETesauro.action .numMaxResultados .field {}
+
+#buscarTerminos.action {}
+#buscarTerminos.action #form_submit {}
+
+#buscarTerminos.action .taxonesVO {}
+#buscarTerminos.action .taxonesVO .label {}
+#buscarTerminos.action .taxonesVO .field {}
+#buscarTerminos.action .idioma {}
+#buscarTerminos.action .idioma .label {}
+#buscarTerminos.action .idioma .field {}
+#buscarTerminos.action .rutaPadreVO {}
+#buscarTerminos.action .rutaPadreVO .label {}
+#buscarTerminos.action .rutaPadreVO .field {}
+#buscarTerminos.action .idTesauro {}
+#buscarTerminos.action .idTesauro .label {}
+#buscarTerminos.action .idTesauro .field {}
+#buscarTerminos.action .textoBusqueda {}
+#buscarTerminos.action .textoBusqueda .label {}
+#buscarTerminos.action .textoBusqueda .field {}
+#buscarTerminos.action .esRuta {}
+#buscarTerminos.action .esRuta .label {}
+#buscarTerminos.action .esRuta .field {}
+#buscarTerminos.action .idiomaBuscador {}
+#buscarTerminos.action .idiomaBuscador .label {}
+#buscarTerminos.action .idiomaBuscador .field {}
+#buscarTerminos.action .numeroResultados {}
+#buscarTerminos.action .numeroResultados .label {}
+#buscarTerminos.action .numeroResultados .field {}
+#buscarTerminos.action .tipoBusqueda {}
+#buscarTerminos.action .tipoBusqueda .label {}
+#buscarTerminos.action .tipoBusqueda .field {}
+#buscarTerminos.action .tipoBusquedaArbol {}
+#buscarTerminos.action .tipoBusquedaArbol .label {}
+#buscarTerminos.action .tipoBusquedaArbol .field {}
+#buscarTerminos.action .tipoLayoutbuscador {}
+#buscarTerminos.action .tipoLayoutbuscador .label {}
+#buscarTerminos.action .tipoLayoutbuscador .field {}
+#buscarTerminos.action .nomTesauro {}
+#buscarTerminos.action .nomTesauro .label {}
+#buscarTerminos.action .nomTesauro .field {}
+#buscarTerminos.action .tituloTesauro {}
+#buscarTerminos.action .tituloTesauro .label {}
+#buscarTerminos.action .tituloTesauro .field {}
+
+#taxonesVO.table {}
+#taxonesVO.table th {}
+#taxonesVO.table td div {}
+
+#taxonesVO.table th.idTesauro {}
+#taxonesVO.table td div.idTesauro {}
+
+#taxonesVO.table th.valorTax {}
+#taxonesVO.table td div.valorTax {}
+
+
+#rutaPadreVO.table {}
+#rutaPadreVO.table th {}
+#rutaPadreVO.table td div {}
+
+#rutaPadreVO.table th.idTesauro {}
+#rutaPadreVO.table td div.idTesauro {}
+
+#rutaPadreVO.table th.valorTax {}
+#rutaPadreVO.table td div.valorTax {}
+
+
+

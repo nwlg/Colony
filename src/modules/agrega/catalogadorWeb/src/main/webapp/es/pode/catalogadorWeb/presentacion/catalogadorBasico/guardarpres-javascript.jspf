@@ -1,0 +1,53 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'catalogador.basico.guardarpres.aceptar.guardar.param.titulo.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.aceptar.guardar.param.titulo.title"/></formatting:escape>',
+                'catalogador.basico.guardarpres.aceptar.guardar.param.idioma.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.aceptar.guardar.param.idioma.title"/></formatting:escape>',
+                'catalogador.basico.guardarpres.aceptar.guardar.param.descripcion.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.aceptar.guardar.param.descripcion.title"/></formatting:escape>',
+                'catalogador.basico.guardarpres.aceptar.guardar.param.tipo.recurso.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.aceptar.guardar.param.tipo.recurso.title"/></formatting:escape>',
+                'catalogador.basico.guardarpres.aceptar.guardar.param.contexto.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.aceptar.guardar.param.contexto.title"/></formatting:escape>',
+                'catalogador.basico.guardarpres.aceptar.guardar.param.edad.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.aceptar.guardar.param.edad.title"/></formatting:escape>',
+                'catalogador.basico.guardarpres.aceptar.guardar.param.idioma.destinatario.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.aceptar.guardar.param.idioma.destinatario.title"/></formatting:escape>',
+                'catalogador.basico.guardarpres.aceptar.guardar.param.proceso.cognitivo.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.aceptar.guardar.param.proceso.cognitivo.title"/></formatting:escape>',
+                'catalogador.basico.guardarpres.aceptar.guardar.param.identificador.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.aceptar.guardar.param.identificador.title"/></formatting:escape>',
+                'catalogador.basico.guardarpres.aceptar.guardar.param.usuario.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.aceptar.guardar.param.usuario.title"/></formatting:escape>',
+                'catalogador.basico.guardarpres.aceptar.guardar.param.arboles.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.aceptar.guardar.param.arboles.title"/></formatting:escape>',
+                'catalogador.basico.guardarpres.guardar.datos.param.identificador.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.guardar.datos.param.identificador.title"/></formatting:escape>',
+                'catalogador.basico.guardarpres.guardar.datos.param.usuario.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.guardar.datos.param.usuario.title"/></formatting:escape>',
+                'catalogador.basico.guardarpres.guardar.datos.param.contexto.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.guardar.datos.param.contexto.title"/></formatting:escape>',
+                'catalogador.basico.guardarpres.guardar.datos.param.descripcion.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.guardar.datos.param.descripcion.title"/></formatting:escape>',
+                'catalogador.basico.guardarpres.guardar.datos.param.edad.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.guardar.datos.param.edad.title"/></formatting:escape>',
+                'catalogador.basico.guardarpres.guardar.datos.param.idioma.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.guardar.datos.param.idioma.title"/></formatting:escape>',
+                'catalogador.basico.guardarpres.guardar.datos.param.idioma.destinatario.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.guardar.datos.param.idioma.destinatario.title"/></formatting:escape>',
+                'catalogador.basico.guardarpres.guardar.datos.param.proceso.cognitivo.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.guardar.datos.param.proceso.cognitivo.title"/></formatting:escape>',
+                'catalogador.basico.guardarpres.guardar.datos.param.tipo.recurso.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.guardar.datos.param.tipo.recurso.title"/></formatting:escape>',
+                'catalogador.basico.guardarpres.guardar.datos.param.titulo.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.guardar.datos.param.titulo.title"/></formatting:escape>',
+                'catalogador.basico.guardarpres.guardar.datos.param.accion.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.guardar.datos.param.accion.title"/></formatting:escape>',
+                'catalogador.basico.guardarpres.guardar.datos.param.arboles.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.guardar.datos.param.arboles.title"/></formatting:escape>',
+                'aceptarGuardar':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.aceptar.guardar.title"/></formatting:escape>',
+                'aceptarGuardar_no':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.aceptar.guardar.title.notallowed"/></formatting:escape>',
+                'aceptarGuardar_reset':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.aceptar.guardar.title.reset"/></formatting:escape>',
+                'aceptarGuardar_noreset':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.aceptar.guardar.title.reset.not.allowed"/></formatting:escape>',
+                'Cancelar':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.cancelar.title"/></formatting:escape>',
+                'Cancelar_no':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.cancelar.title.notallowed"/></formatting:escape>',
+                'Cancelar_reset':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.cancelar.title.reset"/></formatting:escape>',
+                'Cancelar_noreset':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.cancelar.title.reset.not.allowed"/></formatting:escape>',
+                'guardarDatos':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.guardar.datos.title"/></formatting:escape>',
+                'guardarDatos_no':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.guardar.datos.title.notallowed"/></formatting:escape>',
+                'guardarDatos_reset':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.guardar.datos.title.reset"/></formatting:escape>',
+                'guardarDatos_noreset':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.guardarpres.guardar.datos.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+</script>
+    </tiles:put>

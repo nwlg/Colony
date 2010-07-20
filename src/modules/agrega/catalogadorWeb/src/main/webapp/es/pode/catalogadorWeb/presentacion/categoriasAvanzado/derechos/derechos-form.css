@@ -1,0 +1,35 @@
+#submitForm.action {}
+#submitForm.action #form_submit {}
+
+#submitForm.action .identificadorOde {}
+#submitForm.action .identificadorOde .label {}
+#submitForm.action .identificadorOde .field {}
+#submitForm.action .coste {}
+#submitForm.action .coste .label {}
+#submitForm.action .coste .field {}
+#submitForm.action .copyRestricciones {}
+#submitForm.action .copyRestricciones .label {}
+#submitForm.action .copyRestricciones .field {}
+#submitForm.action .descripciones {}
+#submitForm.action .descripciones .label {}
+#submitForm.action .descripciones .field {}
+#submitForm.action .comboIdioma {}
+#submitForm.action .comboIdioma .label {}
+#submitForm.action .comboIdioma .field {}
+#submitForm.action .accion {}
+#submitForm.action .accion .label {}
+#submitForm.action .accion .field {}
+#submitForm.action .idEliminado {}
+#submitForm.action .idEliminado .label {}
+#submitForm.action .idEliminado .field {}
+#submitForm.action .listadoComunidades {}
+#submitForm.action .listadoComunidades .label {}
+#submitForm.action .listadoComunidades .field {}
+#submitForm.action .tipoAcceso {}
+#submitForm.action .tipoAcceso .label {}
+#submitForm.action .tipoAcceso .field {}
+#submitForm.action .listadoNodos {}
+#submitForm.action .listadoNodos .label {}
+#submitForm.action .listadoNodos .field {}
+
+

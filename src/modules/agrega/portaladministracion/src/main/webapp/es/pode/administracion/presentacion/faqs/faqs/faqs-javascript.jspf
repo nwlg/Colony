@@ -1,0 +1,46 @@
+
+    <tiles:put name="javascript" type="string">
+        <script type="text/javascript" language="Javascript1.1" src="<html:rewrite action="/formValidation"/>"></script>
+        <html:javascript formName="faqsFaqsModificarForm" method="validateFaqsModificarForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+        <html:javascript formName="faqsFaqsVerFaqForm" method="validateFaqsVerFaqForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'faqs.faqs.eliminar.param.id.title':'<formatting:escape language="javascript"><bean:message key="faqs.faqs.eliminar.param.id.title"/></formatting:escape>',
+                'faqs.faqs.modificar.param.id.title':'<formatting:escape language="javascript"><bean:message key="faqs.faqs.modificar.param.id.title"/></formatting:escape>',
+                'faqs.faqs.ver.faq.param.id.title':'<formatting:escape language="javascript"><bean:message key="faqs.faqs.ver.faq.param.id.title"/></formatting:escape>',
+                'idioma':'<formatting:escape language="javascript"><bean:message key="faqs.faqs.idioma.title"/></formatting:escape>',
+                'idioma_no':'<formatting:escape language="javascript"><bean:message key="faqs.faqs.idioma.title.notallowed"/></formatting:escape>',
+                'idioma_reset':'<formatting:escape language="javascript"><bean:message key="faqs.faqs.idioma.title.reset"/></formatting:escape>',
+                'idioma_noreset':'<formatting:escape language="javascript"><bean:message key="faqs.faqs.idioma.title.reset.not.allowed"/></formatting:escape>',
+                'Eliminar':'<formatting:escape language="javascript"><bean:message key="faqs.faqs.eliminar.title"/></formatting:escape>',
+                'Eliminar_no':'<formatting:escape language="javascript"><bean:message key="faqs.faqs.eliminar.title.notallowed"/></formatting:escape>',
+                'Eliminar_reset':'<formatting:escape language="javascript"><bean:message key="faqs.faqs.eliminar.title.reset"/></formatting:escape>',
+                'Eliminar_noreset':'<formatting:escape language="javascript"><bean:message key="faqs.faqs.eliminar.title.reset.not.allowed"/></formatting:escape>',
+                'CrearFaq':'<formatting:escape language="javascript"><bean:message key="faqs.faqs.crear.faq.title"/></formatting:escape>',
+                'CrearFaq_no':'<formatting:escape language="javascript"><bean:message key="faqs.faqs.crear.faq.title.notallowed"/></formatting:escape>',
+                'CrearFaq_reset':'<formatting:escape language="javascript"><bean:message key="faqs.faqs.crear.faq.title.reset"/></formatting:escape>',
+                'CrearFaq_noreset':'<formatting:escape language="javascript"><bean:message key="faqs.faqs.crear.faq.title.reset.not.allowed"/></formatting:escape>',
+                'modificar':'<formatting:escape language="javascript"><bean:message key="faqs.faqs.modificar.title"/></formatting:escape>',
+                'modificar_no':'<formatting:escape language="javascript"><bean:message key="faqs.faqs.modificar.title.notallowed"/></formatting:escape>',
+                'modificar_reset':'<formatting:escape language="javascript"><bean:message key="faqs.faqs.modificar.title.reset"/></formatting:escape>',
+                'modificar_noreset':'<formatting:escape language="javascript"><bean:message key="faqs.faqs.modificar.title.reset.not.allowed"/></formatting:escape>',
+                'verFaq':'<formatting:escape language="javascript"><bean:message key="faqs.faqs.ver.faq.title"/></formatting:escape>',
+                'verFaq_no':'<formatting:escape language="javascript"><bean:message key="faqs.faqs.ver.faq.title.notallowed"/></formatting:escape>',
+                'verFaq_reset':'<formatting:escape language="javascript"><bean:message key="faqs.faqs.ver.faq.title.reset"/></formatting:escape>',
+                'verFaq_noreset':'<formatting:escape language="javascript"><bean:message key="faqs.faqs.ver.faq.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+
+</script>
+    </tiles:put>

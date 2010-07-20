@@ -1,0 +1,124 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="submit" class="action">
+    <h3><bean:message key="crear.elemento.crear.elemento01.submit"/></h3>
+    <div class="trigger">
+        <html:form styleId="crearElementoCrearElemento01SubmitForm" action="/CrearElemento/CrearElemento01Submit" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="title">
+                        <td class="label"><bean:message key="crear.elemento.crear.elemento01.submit.param.title"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.title}"/>
+                           <input type="text" name="title" value="${value}" onmouseover="hints.show('crear.elemento.crear.elemento01.submit.param.title.title')" onmouseout="hints.hide()"  id="submitTitle"/>
+                        </td>
+                    </tr>
+                    <tr class="referenciado">
+                        <td class="label"><bean:message key="crear.elemento.crear.elemento01.submit.param.referenciado"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.referenciado}"/>
+                           <table>
+                               <tr>
+                                   <td>
+                                       <html:radio name="form" property="referenciado" value="0" onmouseover="hints.show('crear.elemento.crear.elemento01.submit.param.referenciado.title')" onmouseout="hints.hide()"  styleId="submitReferenciado"/>
+                                       <bean:message key="crear.elemento.crear.elemento01.submit.param.referenciado.0"/>
+                                   </td>
+                               </tr>
+                               <tr>
+                                   <td>
+                                       <html:radio name="form" property="referenciado" value="1" onmouseover="hints.show('crear.elemento.crear.elemento01.submit.param.referenciado.title')" onmouseout="hints.hide()"  styleId="submitReferenciado"/>
+                                       <bean:message key="crear.elemento.crear.elemento01.submit.param.referenciado.1"/>
+                                   </td>
+                               </tr>
+                               <tr>
+                                   <td>
+                                       <html:radio name="form" property="referenciado" value="2" onmouseover="hints.show('crear.elemento.crear.elemento01.submit.param.referenciado.title')" onmouseout="hints.hide()"  styleId="submitReferenciado"/>
+                                       <bean:message key="crear.elemento.crear.elemento01.submit.param.referenciado.2"/>
+                                   </td>
+                               </tr>
+                           </table>
+                        </td>
+                    </tr>
+                    <tr class="action">
+                        <td class="label"><bean:message key="crear.elemento.crear.elemento01.submit.param.action"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.action}"/>
+                           <input type="text" name="action" value="${value}" onmouseover="hints.show('crear.elemento.crear.elemento01.submit.param.action.title')" onmouseout="hints.hide()"  id="submitAction"/>
+                        </td>
+                    </tr>
+                    <tr class="timeLimitAction">
+                        <td class="label"><bean:message key="crear.elemento.crear.elemento01.submit.param.time.limit.action"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.timeLimitAction}"/>
+                           <input type="text" name="timeLimitAction" value="${value}" onmouseover="hints.show('crear.elemento.crear.elemento01.submit.param.time.limit.action.title')" onmouseout="hints.hide()"  id="submitTimeLimitAction"/>
+                        </td>
+                    </tr>
+                    <tr class="dataFromLMS">
+                        <td class="label"><bean:message key="crear.elemento.crear.elemento01.submit.param.data.from.lms"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.dataFromLMS}"/>
+                           <input type="text" name="dataFromLMS" value="${value}" onmouseover="hints.show('crear.elemento.crear.elemento01.submit.param.data.from.lms.title')" onmouseout="hints.hide()"  id="submitDataFromLMS"/>
+                        </td>
+                    </tr>
+                    <tr class="completionThreshold">
+                        <td class="label"><bean:message key="crear.elemento.crear.elemento01.submit.param.completion.threshold"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.completionThreshold}"/>
+                           <input type="text" name="completionThreshold" value="${value}" onmouseover="hints.show('crear.elemento.crear.elemento01.submit.param.completion.threshold.title')" onmouseout="hints.hide()"  id="submitCompletionThreshold"/>
+                        </td>
+                    </tr>
+                    <tr class="selectPresentation">
+                        <td class="label"><bean:message key="crear.elemento.crear.elemento01.submit.param.select.presentation"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.selectPresentation}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.selectPresentationBackingList}">
+                                  <html:select name="form" property="selectPresentation" onmouseover="hints.show('crear.elemento.crear.elemento01.submit.param.select.presentation.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="submitSelectPresentation">
+                                      <html:optionsCollection name="form" property="selectPresentationBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="selectPresentation" onmouseover="hints.show('crear.elemento.crear.elemento01.submit.param.select.presentation.title')" onmouseout="hints.hide()"  styleId="submitSelectPresentation"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="isVisible">
+                        <td class="label"><bean:message key="crear.elemento.crear.elemento01.submit.param.is.visible"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.isVisible}"/>
+                           <input type="checkbox" name="isVisible" value="on" <c:if test="${value}">checked="checked" </c:if>onmouseover="hints.show('crear.elemento.crear.elemento01.submit.param.is.visible.title')" onmouseout="hints.hide()"  id="submitIsVisible"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_DOCENTE,ROLE_ADMINISTRADOR,ROLE_CATALOGADOR,ROLE_PUBLICADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Submit')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="crear.elemento.crear.elemento01.submit"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

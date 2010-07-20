@@ -1,0 +1,31 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="submitPrincipal" class="action">
+    <h3><bean:message key="crear.recurso.avanzado.elementos.recurso.submit.principal"/></h3>
+    <div class="trigger">
+        <html:form styleId="crearRecursoAvanzadoElementosRecursoSubmitPrincipalForm" action="/CrearRecursoAvanzadoElementos/RecursoSubmitPrincipal" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="action">
+                        <td class="label"><bean:message key="crear.recurso.avanzado.elementos.recurso.submit.principal.param.action"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.action}"/>
+                           <input type="text" name="action" value="${value}" onmouseover="hints.show('crear.recurso.avanzado.elementos.recurso.submit.principal.param.action.title')" onmouseout="hints.hide()"  id="submitPrincipalAction"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('SubmitPrincipal')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="crear.recurso.avanzado.elementos.recurso.submit.principal"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

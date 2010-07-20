@@ -1,0 +1,4 @@
+<source>
+	${load:string.xml}
+	<!-- Mas traducciones -->
+</source>

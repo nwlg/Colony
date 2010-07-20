@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN" "http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+	<mapping wildcard="true" map-id="DEF_MAPPING_TRANSICIONVO_TRANSICIONCONTAMAINOVO">
+            <class-a>
+                  es.pode.publicacion.negocio.servicios.TransicionVO
+            </class-a>
+            <class-b>
+                  es.pode.gestorFlujo.presentacion.objetosPersonales.TransicionConTamainoVO
+            </class-b>
+            <field>
+                  <a>comentarios</a>
+                  <b>comentario</b>   
+            </field>
+            <field>
+                  <a>fecha</a>
+                  <b>fecha</b>
+            </field>
+            <field>
+                  <a>idODE</a>
+                  <b>idODE</b>
+            </field>
+            <field>
+                  <a>idUsuario</a>
+                  <b>idUsuario</b>
+            </field>
+            <field>
+                  <a>titulo</a>
+                  <b>titulo</b>
+            </field>
+      </mapping>
+</mappings>

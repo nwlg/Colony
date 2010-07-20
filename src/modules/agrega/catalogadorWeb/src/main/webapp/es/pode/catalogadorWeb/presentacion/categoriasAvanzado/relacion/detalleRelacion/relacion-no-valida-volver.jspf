@@ -1,0 +1,121 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="volver" class="action">
+    <h3><bean:message key="detalle.relacion.cu.relacion.no.valida.volver"/></h3>
+    <div class="trigger">
+        <html:form styleId="detalleRelacionCURelacionNoValidaVolverForm" action="/DetalleRelacionCU/RelacionNoValidaVolver" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="tituloRelacion">
+                        <td class="label"><bean:message key="detalle.relacion.cu.relacion.no.valida.volver.param.titulo.relacion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tituloRelacion}"/>
+                           <input type="text" name="tituloRelacion" value="${value}" onmouseover="hints.show('detalle.relacion.cu.relacion.no.valida.volver.param.titulo.relacion.title')" onmouseout="hints.hide()"  id="volverTituloRelacion"/>
+                        </td>
+                    </tr>
+                    <tr class="identificadorOde">
+                        <td class="label"><bean:message key="detalle.relacion.cu.relacion.no.valida.volver.param.identificador.ode"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.identificadorOde}"/>
+                           <input type="text" name="identificadorOde" value="${value}" onmouseover="hints.show('detalle.relacion.cu.relacion.no.valida.volver.param.identificador.ode.title')" onmouseout="hints.hide()"  id="volverIdentificadorOde"/>
+                        </td>
+                    </tr>
+                    <tr class="botonPulsado">
+                        <td class="label"><bean:message key="detalle.relacion.cu.relacion.no.valida.volver.param.boton.pulsado"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.botonPulsado}"/>
+                           <input type="text" name="botonPulsado" value="${value}" onmouseover="hints.show('detalle.relacion.cu.relacion.no.valida.volver.param.boton.pulsado.title')" onmouseout="hints.hide()"  id="volverBotonPulsado"/>
+                        </td>
+                    </tr>
+                    <tr class="comboIdioma">
+                        <td class="label"><bean:message key="detalle.relacion.cu.relacion.no.valida.volver.param.combo.idioma"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.comboIdioma}"/>
+                           <input type="text" name="comboIdioma" value="${value}" onmouseover="hints.show('detalle.relacion.cu.relacion.no.valida.volver.param.combo.idioma.title')" onmouseout="hints.hide()"  id="volverComboIdioma"/>
+                        </td>
+                    </tr>
+                    <tr class="descripcion">
+                        <td class="label"><bean:message key="detalle.relacion.cu.relacion.no.valida.volver.param.descripcion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.descripcion}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.descripcionBackingList}">
+                                  <html:select name="form" property="descripcionAsArray" onmouseover="hints.show('detalle.relacion.cu.relacion.no.valida.volver.param.descripcion.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="volverDescripcion">
+                                      <html:optionsCollection name="form" property="descripcionBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="descripcionAsArray" onmouseover="hints.show('detalle.relacion.cu.relacion.no.valida.volver.param.descripcion.title')" onmouseout="hints.hide()"  styleId="volverDescripcion"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="tipo">
+                        <td class="label"><bean:message key="detalle.relacion.cu.relacion.no.valida.volver.param.tipo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipo}"/>
+                           <input type="text" name="tipo" value="${value}" onmouseover="hints.show('detalle.relacion.cu.relacion.no.valida.volver.param.tipo.title')" onmouseout="hints.hide()"  id="volverTipo"/>
+                        </td>
+                    </tr>
+                    <tr class="catalogo">
+                        <td class="label"><bean:message key="detalle.relacion.cu.relacion.no.valida.volver.param.catalogo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.catalogo}"/>
+                           <input type="text" name="catalogo" value="${value}" onmouseover="hints.show('detalle.relacion.cu.relacion.no.valida.volver.param.catalogo.title')" onmouseout="hints.hide()"  id="volverCatalogo"/>
+                        </td>
+                    </tr>
+                    <tr class="entrada">
+                        <td class="label"><bean:message key="detalle.relacion.cu.relacion.no.valida.volver.param.entrada"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.entrada}"/>
+                           <input type="text" name="entrada" value="${value}" onmouseover="hints.show('detalle.relacion.cu.relacion.no.valida.volver.param.entrada.title')" onmouseout="hints.hide()"  id="volverEntrada"/>
+                        </td>
+                    </tr>
+                    <tr class="mensajesError">
+                        <td class="label"><bean:message key="detalle.relacion.cu.relacion.no.valida.volver.param.mensajes.error"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.mensajesError}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.mensajesErrorBackingList}">
+                                  <html:select name="form" property="mensajesErrorAsArray" onmouseover="hints.show('detalle.relacion.cu.relacion.no.valida.volver.param.mensajes.error.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="volverMensajesError">
+                                      <html:optionsCollection name="form" property="mensajesErrorBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="mensajesErrorAsArray" onmouseover="hints.show('detalle.relacion.cu.relacion.no.valida.volver.param.mensajes.error.title')" onmouseout="hints.hide()"  styleId="volverMensajesError"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('volver')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="detalle.relacion.cu.relacion.no.valida.volver"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

@@ -1,0 +1,75 @@
+#cancelar.action {}
+#cancelar.action #form_submit {}
+
+
+#aceptar.action {}
+#aceptar.action #form_submit {}
+
+#aceptar.action .anio {}
+#aceptar.action .anio .label {}
+#aceptar.action .anio .field {}
+#aceptar.action .mes {}
+#aceptar.action .mes .label {}
+#aceptar.action .mes .field {}
+#aceptar.action .dia {}
+#aceptar.action .dia .label {}
+#aceptar.action .dia .field {}
+#aceptar.action .hora {}
+#aceptar.action .hora .label {}
+#aceptar.action .hora .field {}
+#aceptar.action .minutos {}
+#aceptar.action .minutos .label {}
+#aceptar.action .minutos .field {}
+#aceptar.action .anioDesde {}
+#aceptar.action .anioDesde .label {}
+#aceptar.action .anioDesde .field {}
+#aceptar.action .mesDesde {}
+#aceptar.action .mesDesde .label {}
+#aceptar.action .mesDesde .field {}
+#aceptar.action .diaDesde {}
+#aceptar.action .diaDesde .label {}
+#aceptar.action .diaDesde .field {}
+#aceptar.action .anioHasta {}
+#aceptar.action .anioHasta .label {}
+#aceptar.action .anioHasta .field {}
+#aceptar.action .mesHasta {}
+#aceptar.action .mesHasta .label {}
+#aceptar.action .mesHasta .field {}
+#aceptar.action .diaHasta {}
+#aceptar.action .diaHasta .label {}
+#aceptar.action .diaHasta .field {}
+#aceptar.action .tipoTarea {}
+#aceptar.action .tipoTarea .label {}
+#aceptar.action .tipoTarea .field {}
+#aceptar.action .trabajo {}
+#aceptar.action .trabajo .label {}
+#aceptar.action .trabajo .field {}
+#aceptar.action .trigger {}
+#aceptar.action .trigger .label {}
+#aceptar.action .trigger .field {}
+#aceptar.action .rango {}
+#aceptar.action .rango .label {}
+#aceptar.action .rango .field {}
+#aceptar.action .formato {}
+#aceptar.action .formato .label {}
+#aceptar.action .formato .field {}
+#aceptar.action .informe {}
+#aceptar.action .informe .label {}
+#aceptar.action .informe .field {}
+#aceptar.action .msgDescTrabajo {}
+#aceptar.action .msgDescTrabajo .label {}
+#aceptar.action .msgDescTrabajo .field {}
+#aceptar.action .msgInforme {}
+#aceptar.action .msgInforme .label {}
+#aceptar.action .msgInforme .field {}
+#aceptar.action .msgNoInforme {}
+#aceptar.action .msgNoInforme .label {}
+#aceptar.action .msgNoInforme .field {}
+#aceptar.action .periodicidad {}
+#aceptar.action .periodicidad .label {}
+#aceptar.action .periodicidad .field {}
+#aceptar.action .tareaModificada {}
+#aceptar.action .tareaModificada .label {}
+#aceptar.action .tareaModificada .field {}
+
+

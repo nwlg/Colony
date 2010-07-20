@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="listarUsuariosPendientes" class="action">
+    <h3><bean:message key="listar.usuarios.inactivos.formulario.listado.usuarios.inactivos.listar.usuarios.pendientes"/></h3>
+    <div class="trigger">
+        <form id="listarUsuariosInactivosFormularioListadoUsuariosInactivosListarUsuariosPendientesForm" action='<html:rewrite action="/ListarUsuariosInactivos/FormularioListadoUsuariosInactivosListarUsuariosPendientes"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+               <html:submit onmouseover="hints.show('ListarUsuariosPendientes')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="listar.usuarios.inactivos.formulario.listado.usuarios.inactivos.listar.usuarios.pendientes"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

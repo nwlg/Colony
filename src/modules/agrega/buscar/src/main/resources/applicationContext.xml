@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+    <!-- ========================= GENERAL DEFINITIONS ========================= -->
+
+    <!-- Message source for this context, loaded from localized "messages_xx" files -->
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename"><value>messages</value></property>
+    </bean>
+
+	<bean id="beanMapper" class="net.sf.dozer.util.mapping.DozerBeanMapper" singleton="true">
+		<property name="mappingFiles">
+			<list>
+				<value>defaultDozerMappings.xml</value>
+				<value>customDozerMappings.xml</value>				
+				<!-- dozer mappings merge-point -->
+			</list>
+		</property>
+	</bean>
+
+    <!-- applicationContext merge-point -->
+
+    <!-- Hibernate SessionFactory -->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource"><ref bean="dataSource"/></property>
+        <property name="mappingResources">
+            <list>
+                <value>es/pode/buscar/negocio/administrar/dominio/Nodo.hbm.xml</value>
+                <value>es/pode/buscar/negocio/administrar/dominio/Ccaa.hbm.xml</value>
+                <value>es/pode/buscar/negocio/administrar/dominio/Servicio.hbm.xml</value>
+                <value>es/pode/buscar/negocio/nodosSQI/dominio/NodoSQI.hbm.xml</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
+                <prop key="hibernate.cache.use_query_cache">false</prop>
+                <prop key="hibernate.cache.provider_class">org.hibernate.cache.NoCacheProvider</prop>
+                <prop key="hibernate.cache.query_cache_factory">org.hibernate.cache.StandardQueryCacheFactory</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- The Hibernate interceptor -->
+    <bean id="hibernateInterceptor" class="org.springframework.orm.hibernate3.HibernateInterceptor">
+        <property name="sessionFactory"><ref bean="sessionFactory"/></property>
+    </bean>
+
+    <!-- Nodo Entity Proxy with inner Nodo Entity implementation -->
+    <bean id="nodoDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.buscar.negocio.administrar.dominio.NodoDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.buscar.negocio.administrar.dominio.NodoDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- Ccaa Entity Proxy with inner Ccaa Entity implementation -->
+    <bean id="ccaaDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.buscar.negocio.administrar.dominio.CcaaDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.buscar.negocio.administrar.dominio.CcaaDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- Servicio Entity Proxy with inner Servicio Entity implementation -->
+    <bean id="servicioDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.buscar.negocio.administrar.dominio.ServicioDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.buscar.negocio.administrar.dominio.ServicioDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- NodoSQI Entity Proxy with inner NodoSQI Entity implementation -->
+    <bean id="nodoSQIDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.buscar.negocio.nodosSQI.dominio.NodoSQIDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.buscar.negocio.nodosSQI.dominio.NodoSQIDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- ========================= Start of SERVICE DEFINITIONS ========================= -->
+
+    <!-- Service Transactional Interceptor -->
+    <bean id="serviceTransactionInterceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor">
+        <property name="transactionManager"><ref bean="transactionManager"/></property>
+        <property name="transactionAttributeSource">
+            <value>
+                es.pode.buscar.negocio.buscar.servicios.SrvBuscarService.buscarLomEs=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.buscar.servicios.SrvBuscarService.buscarAvanzado=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.buscar.servicios.SrvBuscarService.solicitarMetadato=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.buscar.servicios.SrvBuscarService.generadorIdentificadorAvanzado=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.buscar.servicios.SrvBuscarService.busquedaAvanzadaLocal=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.buscar.servicios.SrvBuscarService.solicitarDocsCount=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.buscar.servicios.SrvBuscarService.solicitudDocsCountFederada=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.buscar.servicios.SrvBuscarService.borrarHitCache=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.buscar.servicios.SrvBuscarService.busquedaFederadaLocal=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.buscar.servicios.SrvBuscarService.solicitudDocsCountLocal=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.buscar.servicios.SrvBuscarService.buscarSQI=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.administrar.servicio.SrvNodoService.eliminarNodo=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.administrar.servicio.SrvNodoService.listarNodos=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.administrar.servicio.SrvNodoService.crearNodo=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.administrar.servicio.SrvNodoService.modificarNodo=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.administrar.servicio.SrvNodoService.obtenerNodo=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.administrar.servicio.SrvNodoService.obtenerCCAA=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.administrar.servicio.SrvNodoService.obtenerCCAAs=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.administrar.servicio.SrvNodoService.obtenerServicio=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.administrar.servicio.SrvNodoService.obtenerServicios=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.administrar.servicio.SrvNodoService.estaDadoAlta=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.administrar.servicio.SrvNodoService.existeNombreNodo=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.federada.servicios.SrvBuscarFederadaService.busquedaFederada=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.federada.servicios.SrvBuscarFederadaService.solicitarDocsCountArbolCurricular=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.federada.servicios.SrvBuscarFederadaService.buscarDocsNodoArbolCurricular=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.federada.servicios.SrvBuscarFederadaService.estoyActivo=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.federada.servicios.SrvBuscarFederadaService.obtenerIdentificadorNodo=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.monitorizar.servicio.SrvMonitorizarService.obtenerEstadoNodos=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.nodosSQI.servicio.SrvGestionSqiService.altaNodoSQI=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.nodosSQI.servicio.SrvGestionSqiService.bajaNodosSQI=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.nodosSQI.servicio.SrvGestionSqiService.consultaNodosSQI=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.nodosSQI.servicio.SrvGestionSqiService.modificarNodoSQI=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.nodosSQI.servicio.SrvGestionSqiService.listarNodosSQI=PROPAGATION_REQUIRED
+                es.pode.buscar.negocio.nodosSQI.servicio.SrvGestionSqiService.obtenerNodosSQI=PROPAGATION_REQUIRED
+            </value>
+        </property>
+    </bean>
+
+    <!-- SrvBuscarService Service Proxy with inner SrvBuscarService Service Implementation -->
+    <bean id="srvBuscarService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.buscar.negocio.buscar.servicios.SrvBuscarServiceImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+	                <property name="srvNodoService"><ref bean="srvNodoService"/></property>
+    		                <property name="srvGestionSqiService"><ref bean="srvGestionSqiService"/></property>
+    		            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.buscar.negocio.buscar.servicios.SrvBuscarService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceSecurityInterceptor</value>
+                <value>serviceTransactionInterceptor</value>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvNodoService Service Proxy with inner SrvNodoService Service Implementation -->
+    <bean id="srvNodoService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.buscar.negocio.administrar.servicio.SrvNodoServiceImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                <property name="nodoDao"><ref bean="nodoDao"/></property>
+                <property name="ccaaDao"><ref bean="ccaaDao"/></property>
+                <property name="servicioDao"><ref bean="servicioDao"/></property>
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.buscar.negocio.administrar.servicio.SrvNodoService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceSecurityInterceptor</value>
+                <value>serviceTransactionInterceptor</value>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvBuscarFederadaService Service Proxy with inner SrvBuscarFederadaService Service Implementation -->
+    <bean id="srvBuscarFederadaService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.buscar.negocio.federada.servicios.SrvBuscarFederadaServiceImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+	                <property name="srvBuscarService"><ref bean="srvBuscarService"/></property>
+    	            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.buscar.negocio.federada.servicios.SrvBuscarFederadaService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceSecurityInterceptor</value>
+                <value>serviceTransactionInterceptor</value>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvMonitorizarService Service Proxy with inner SrvMonitorizarService Service Implementation -->
+    <bean id="srvMonitorizarService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.buscar.negocio.monitorizar.servicio.SrvMonitorizarServiceImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+	                <property name="srvNodoService"><ref bean="srvNodoService"/></property>
+    	            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.buscar.negocio.monitorizar.servicio.SrvMonitorizarService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceSecurityInterceptor</value>
+                <value>serviceTransactionInterceptor</value>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvGestionSqiService Service Proxy with inner SrvGestionSqiService Service Implementation -->
+    <bean id="srvGestionSqiService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.buscar.negocio.nodosSQI.servicio.SrvGestionSqiServiceImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                <property name="nodoSQIDao"><ref bean="nodoSQIDao"/></property>
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.buscar.negocio.nodosSQI.servicio.SrvGestionSqiService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceSecurityInterceptor</value>
+                <value>serviceTransactionInterceptor</value>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- ========================= End of SERVICE DEFINITIONS ========================= -->
+
+</beans>

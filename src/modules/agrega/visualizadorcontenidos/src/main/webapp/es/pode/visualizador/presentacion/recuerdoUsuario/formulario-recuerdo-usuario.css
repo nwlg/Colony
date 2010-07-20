@@ -1,0 +1,15 @@
+#cancelar.action {}
+#cancelar.action #form_submit {}
+
+
+#aceptar.action {}
+#aceptar.action #form_submit {}
+
+#aceptar.action .email {}
+#aceptar.action .email .label {}
+#aceptar.action .email .field {}
+#aceptar.action .nif {}
+#aceptar.action .nif .label {}
+#aceptar.action .nif .field {}
+
+

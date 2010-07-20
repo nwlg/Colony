@@ -1,0 +1,21 @@
+<MAPEOS>
+<!--
+  //ESCENA PRINCIPAL//
+ </ACTIVIDAD>
+  <ACTIVIDAD ID="castillo" 
+	     PATH="a_aa01_03vf.swf"
+	     CONF="a_aa01_03vf"
+	     SONIDO="true"
+	     GUIA="true"
+	     IMPRESORA="true"
+	     PUERTA="true">
+  </ACTIVIDAD>-->
+
+  <ACTIVIDAD ID="castillo" 
+	     PATH="../a_aa03_08vf.swf"
+	     CONF="a_aa03_08vf">
+  </ACTIVIDAD>
+  
+ 
+
+</MAPEOS>

@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aAdir" class="action">
+    <h3><bean:message key="crear.recurso.avanzado.archivos.archivos.a.adir"/></h3>
+    <div class="trigger">
+        <form id="crearRecursoAvanzadoArchivosArchivosAAdirForm" action='<html:rewrite action="/CrearRecursoAvanzadoArchivos/ArchivosAAdir"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_DOCENTE,ROLE_ADMINISTRADOR,ROLE_CATALOGADOR,ROLE_PUBLICADOR">
+               <html:submit onmouseover="hints.show('Añadir')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="crear.recurso.avanzado.archivos.archivos.a.adir"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

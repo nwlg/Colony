@@ -1,0 +1,66 @@
+<div id="noticias" class="table">
+    <display:table name="${form.noticias}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="noticias-noticias.pdf" />
+
+        <display:column media="xml csv excel pdf"
+            titleKey="portada.noticias.param.noticias.titulo"
+            autolink="true" paramId="titulo"
+            property="titulo">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="titulo" paramId="titulo"
+            sortProperty="titulo" sortable="true"
+            titleKey="portada.noticias.param.noticias.titulo"
+            >
+ <html:link action="/Portada/NoticiasVer?id=${row.id}" onmouseover="hints.show('Ver')" onmouseout="hints.hide()">
+     ${row.titulo}
+ </html:link>
+            </display:column>
+   
+
+        <display:column media="xml csv excel pdf"
+            titleKey="portada.noticias.param.noticias.fecha.publicacion.time"
+            autolink="true" paramId="fechaPublicacion.time"
+            property="fechaPublicacion.time">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="fechaPublicacion.time" paramId="fechaPublicacion.time"
+            sortProperty="fechaPublicacion.time" sortable="true"
+            titleKey="portada.noticias.param.noticias.fecha.publicacion.time"
+            property="fechaPublicacion.time" />
+   
+
+        <display:column media="xml csv excel pdf"
+            titleKey="portada.noticias.param.noticias.resumen"
+            autolink="true" paramId="resumen"
+            property="resumen">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="resumen" paramId="resumen"
+            sortProperty="resumen" sortable="true"
+            titleKey="portada.noticias.param.noticias.resumen"
+            property="resumen" />
+   
+
+        <display:column media="xml csv excel pdf"
+            titleKey="portada.noticias.param.noticias.categoria.nombre"
+            autolink="true" paramId="categoria.nombre"
+            property="categoria.nombre">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="categoria.nombre" paramId="categoria.nombre"
+            sortProperty="categoria.nombre" sortable="true"
+            titleKey="portada.noticias.param.noticias.categoria.nombre"
+            property="categoria.nombre" />
+   
+    </display:table>
+</div>
+

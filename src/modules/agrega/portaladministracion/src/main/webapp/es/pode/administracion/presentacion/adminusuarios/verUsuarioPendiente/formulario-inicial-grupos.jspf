@@ -1,0 +1,25 @@
+<div id="grupos" class="table">
+    <display:table name="${form.grupos}" uid="row"
+        export="false" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+
+
+        <display:column media="html"
+            headerClass="id" paramId="id"
+            sortProperty="id" sortable="true"
+            titleKey="ver.usuario.pendiente.formulario.inicial.param.grupos.id"
+            property="id" />
+   
+
+
+        <display:column media="html"
+            headerClass="descripcion" paramId="descripcion"
+            sortProperty="descripcion" sortable="true"
+            titleKey="ver.usuario.pendiente.formulario.inicial.param.grupos.descripcion"
+            property="descripcion" />
+   
+    </display:table>
+</div>
+

@@ -1,0 +1,17 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="rutaPadrevo" value="${form.rutaPadrevo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="vocabName" value="${form.vocabName}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idioma" value="${form.idioma}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="taxonesvo" value="${form.taxonesvo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="nomTaxonomia" value="${form.nomTaxonomia}"/>
+    </c:catch>
+</div>

@@ -1,0 +1,46 @@
+
+    <tiles:put name="javascript" type="string">
+        <script type="text/javascript" language="Javascript1.1" src="<html:rewrite action="/formValidation"/>"></script>
+        <html:javascript formName="listarUsuariosPendientesFormularioListadoUsuariosPendientesAltaForm" method="validateFormularioListadoUsuariosPendientesAltaForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+        <html:javascript formName="listarUsuariosPendientesFormularioListadoUsuariosPendientesVerUsuarioPendienteForm" method="validateFormularioListadoUsuariosPendientesVerUsuarioPendienteForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'listar.usuarios.pendientes.formulario.listado.usuarios.pendientes.alta.param.id.title':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.pendientes.formulario.listado.usuarios.pendientes.alta.param.id.title"/></formatting:escape>',
+                'listar.usuarios.pendientes.formulario.listado.usuarios.pendientes.baja.param.id.title':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.pendientes.formulario.listado.usuarios.pendientes.baja.param.id.title"/></formatting:escape>',
+                'listar.usuarios.pendientes.formulario.listado.usuarios.pendientes.ver.usuario.pendiente.param.id.title':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.pendientes.formulario.listado.usuarios.pendientes.ver.usuario.pendiente.param.id.title"/></formatting:escape>',
+                'Alta':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.pendientes.formulario.listado.usuarios.pendientes.alta.title"/></formatting:escape>',
+                'Alta_no':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.pendientes.formulario.listado.usuarios.pendientes.alta.title.notallowed"/></formatting:escape>',
+                'Alta_reset':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.pendientes.formulario.listado.usuarios.pendientes.alta.title.reset"/></formatting:escape>',
+                'Alta_noreset':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.pendientes.formulario.listado.usuarios.pendientes.alta.title.reset.not.allowed"/></formatting:escape>',
+                'ListarUsuarios':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.pendientes.formulario.listado.usuarios.pendientes.listar.usuarios.title"/></formatting:escape>',
+                'ListarUsuarios_no':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.pendientes.formulario.listado.usuarios.pendientes.listar.usuarios.title.notallowed"/></formatting:escape>',
+                'ListarUsuarios_reset':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.pendientes.formulario.listado.usuarios.pendientes.listar.usuarios.title.reset"/></formatting:escape>',
+                'ListarUsuarios_noreset':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.pendientes.formulario.listado.usuarios.pendientes.listar.usuarios.title.reset.not.allowed"/></formatting:escape>',
+                'Baja':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.pendientes.formulario.listado.usuarios.pendientes.baja.title"/></formatting:escape>',
+                'Baja_no':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.pendientes.formulario.listado.usuarios.pendientes.baja.title.notallowed"/></formatting:escape>',
+                'Baja_reset':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.pendientes.formulario.listado.usuarios.pendientes.baja.title.reset"/></formatting:escape>',
+                'Baja_noreset':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.pendientes.formulario.listado.usuarios.pendientes.baja.title.reset.not.allowed"/></formatting:escape>',
+                'VerUsuarioPendiente':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.pendientes.formulario.listado.usuarios.pendientes.ver.usuario.pendiente.title"/></formatting:escape>',
+                'VerUsuarioPendiente_no':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.pendientes.formulario.listado.usuarios.pendientes.ver.usuario.pendiente.title.notallowed"/></formatting:escape>',
+                'VerUsuarioPendiente_reset':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.pendientes.formulario.listado.usuarios.pendientes.ver.usuario.pendiente.title.reset"/></formatting:escape>',
+                'VerUsuarioPendiente_noreset':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.pendientes.formulario.listado.usuarios.pendientes.ver.usuario.pendiente.title.reset.not.allowed"/></formatting:escape>',
+                'ListarUsuariosInactivos':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.pendientes.formulario.listado.usuarios.pendientes.listar.usuarios.inactivos.title"/></formatting:escape>',
+                'ListarUsuariosInactivos_no':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.pendientes.formulario.listado.usuarios.pendientes.listar.usuarios.inactivos.title.notallowed"/></formatting:escape>',
+                'ListarUsuariosInactivos_reset':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.pendientes.formulario.listado.usuarios.pendientes.listar.usuarios.inactivos.title.reset"/></formatting:escape>',
+                'ListarUsuariosInactivos_noreset':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.pendientes.formulario.listado.usuarios.pendientes.listar.usuarios.inactivos.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+
+</script>
+    </tiles:put>

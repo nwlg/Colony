@@ -1,0 +1,42 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="importar" class="action">
+    <h3><bean:message key="objetos.personales.cu.mostrar.odespersonales.importar"/></h3>
+    <div class="trigger">
+        <html:form styleId="objetosPersonalesCUMostrarODESPersonalesImportarForm" action="/ObjetosPersonalesCU/MostrarODESPersonalesImportar" method="post" enctype="multipart/form-data" onsubmit="return validateMostrarODESPersonalesImportarForm(this);">
+            <table>
+                <tbody>
+                    <tr class="idUsuario">
+                        <td class="label"><bean:message key="objetos.personales.cu.mostrar.odespersonales.importar.param.id.usuario"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idUsuario}"/>
+                           <input type="text" name="idUsuario" value="${value}" onmouseover="hints.show('objetos.personales.cu.mostrar.odespersonales.importar.param.id.usuario.title')" onmouseout="hints.hide()"  id="importarIdUsuario"/>
+                        </td>
+                    </tr>
+                    <tr class="espacioLibre">
+                        <td class="label"><bean:message key="objetos.personales.cu.mostrar.odespersonales.importar.param.espacio.libre"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.espacioLibre}"/>
+                           <input type="text" name="espacioLibre" value="${value}" onmouseover="hints.show('objetos.personales.cu.mostrar.odespersonales.importar.param.espacio.libre.title')" onmouseout="hints.hide()"  id="importarEspacioLibre"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_CATALOGADOR,ROLE_ADMINISTRADOR,ROLE_DOCENTE">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Importar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="objetos.personales.cu.mostrar.odespersonales.importar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

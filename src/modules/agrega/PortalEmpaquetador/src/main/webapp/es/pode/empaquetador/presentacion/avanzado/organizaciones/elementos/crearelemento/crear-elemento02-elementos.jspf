@@ -1,0 +1,23 @@
+<div id="elementos" class="table">
+    <display:table name="${form.elementos}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="crear-elemento02-elementos.pdf" />
+
+        <display:column media="xml csv excel pdf"
+            titleKey="crear.elemento.crear.elemento02.param.elementos.elementos.identifier"
+            autolink="true" paramId="elementos.identifier"
+            property="elementos.identifier">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="elementos.identifier" paramId="elementos.identifier"
+            sortProperty="elementos.identifier" sortable="true"
+            titleKey="crear.elemento.crear.elemento02.param.elementos.elementos.identifier"
+            property="elementos.identifier" />
+   
+    </display:table>
+</div>
+

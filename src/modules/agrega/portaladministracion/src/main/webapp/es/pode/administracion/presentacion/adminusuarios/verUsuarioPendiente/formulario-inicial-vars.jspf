@@ -1,0 +1,35 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="apellido2" value="${form.apellido2}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="nombre" value="${form.nombre}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="id" value="${form.id}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tipoEmpaquetador" value="${form.tipoEmpaquetador}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="usuario" value="${form.usuario}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="email" value="${form.email}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="apellido1" value="${form.apellido1}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idioma" value="${form.idioma}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idiomaBusqueda" value="${form.idiomaBusqueda}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="NIF" value="${form.NIF}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="grupos" value="${form.grupos}"/>
+    </c:catch>
+</div>

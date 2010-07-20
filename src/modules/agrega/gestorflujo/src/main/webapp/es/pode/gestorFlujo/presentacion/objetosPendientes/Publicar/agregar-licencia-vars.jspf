@@ -1,0 +1,14 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="licencias" value="${form.licencias}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="ambito_todas" value="${form.ambito_todas}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tipo_licencia" value="${form.tipo_licencia}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="comunidades" value="${form.comunidades}"/>
+    </c:catch>
+</div>

@@ -1,0 +1,32 @@
+<div id="resultadosVO" class="table">
+    <form id="resultadosVO" name="" action="" method="post" enctype="multipart/form-data">
+    <display:table name="${form.resultadosVO}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="mostrar-resultados-imagenes-resultados-vo.pdf" />
+        <display:column media="html">
+            <input type="checkbox" name="idRowSelectionAsArray" value="${row.id}" title='<bean:message key="select.deselect.this.row"/>'/>
+        </display:column>
+
+        <display:column media="xml csv excel pdf"
+            titleKey="buscar.avanzado.cu.mostrar.resultados.imagenes.param.resultados.vo.id"
+            autolink="true" paramId="id"
+            property="id">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="id" paramId="id"
+            sortProperty="id" sortable="true"
+            titleKey="buscar.avanzado.cu.mostrar.resultados.imagenes.param.resultados.vo.id"
+            property="id" />
+   
+    </display:table>
+    <c:if test="${!empty form.resultadosVO}">
+            <input type="submit" value="<bean:message key="buscar.avanzado.cu.mostrar.resultados.imagenes.eliminar.ode"/>" onclick="this.form.name='buscarAvanzadoCUMostrarResultadosImagenesEliminarODEForm';this.form.action='<html:rewrite action="/BuscarAvanzadoCU/MostrarResultadosImagenesEliminarODE"/>';" onmouseover="hints.show('eliminarODE')" onmouseout="hints.hide()"/>
+            <input type="button" value="<bean:message key="select.deselect.all"/>" onclick="var boxes=this.form.elements['idRowSelectionAsArray'];var setChecked=(boxes.length==0)?false:!boxes[0].checked;for(var i=0;i<boxes.length;i++)boxes[i].checked=setChecked;"/>
+    </c:if>
+    </form>
+</div>
+

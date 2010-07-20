@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="continuar" class="action">
+    <h3><bean:message key="importar.compartidos.cu.resultado.importacion.continuar"/></h3>
+    <div class="trigger">
+        <form id="importarCompartidosCUResultadoImportacionContinuarForm" action='<html:rewrite action="/ImportarCompartidosCU/ResultadoImportacionContinuar"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR,ROLE_DOCENTE">
+               <html:submit onmouseover="hints.show('continuar')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="importar.compartidos.cu.resultado.importacion.continuar"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

@@ -1,0 +1,3199 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<document>
+    <properties>
+        <author email="harias@indra.es">Hector Arias</author>
+        <title>Guía Técnica Aplicaciones</title>
+    </properties>
+    <body>
+	<section name="Guía Aplicación y Modelado">
+		<li><strong><a href="modelado.html#ind_1">Introducción</a></strong></li>
+		<li><strong><a href="modelado.html#ind_2">Marco y frameworks utilizados</a></strong></li>		
+		<li><strong><a href="modelado.html#ind_3">Modelado - Profile</a></strong></li>				
+		<li><strong><a href="modelado.html#ind_4">Mantenimientos</a></strong></li>						
+		<li><strong><a href="modelado.html#ind_5">Estereotipos y Valores Etiquetados</a></strong></li>								
+		<li><strong><a href="modelado.html#ind_6">Recomendaciones</a></strong></li>										
+		<a name="ind_1"></a>
+	</section>
+
+	<section name="Introducción">
+		<p><span>En la presente guía se va a abordar el
+		modelado de aplicaciones. Estas aplicaciones se suponen aplicaciones web en
+		sentido tradicional, y son los consumidores típicos de servicios en una
+		arquitectura SOA sobre J2EE. Se hayan localizadas, fundamentalmente, en el
+		nivel de presentación de la arquitectura de referencia definida.</span></p>
+		
+		<p><span>A lo largo del documento y con el fin de
+		ir profundizando en el nivel del sistema propuesto en la presente guía se irán
+		desglosando los siguientes aspectos relevantes:</span></p>
+		
+		<p style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:
+		l12 level1 lfo5;tab-stops:-36.0pt 0cm list 36.0pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span>Marco y Framewoks utilizados.</span></p>
+		
+		<p style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:
+		l12 level1 lfo5;tab-stops:-36.0pt 0cm list 36.0pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span>Modelado – Profile.</span></p>
+		
+		<p style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:
+		l12 level2 lfo5;tab-stops:-36.0pt 0cm 36.0pt list 72.0pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span>Diagramas y estructura de
+		paquetes.</span></p>
+		
+		<p style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:
+		l12 level2 lfo5;tab-stops:-36.0pt 0cm 36.0pt list 72.0pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span>Estereotipos.</span></p>
+		
+		<p style='margin-left:72.0pt;text-indent:-18.0pt;mso-list:
+		l12 level2 lfo5;tab-stops:-36.0pt 0cm 36.0pt list 72.0pt'><span
+		 style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span>Tagged values.</span></p>
+		
+		<p style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:
+		l12 level1 lfo5;tab-stops:-36.0pt 0cm list 36.0pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span>Recomendaciones y ayudas al
+		desarrollo.</span></p>
+		
+		<p style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:
+		l12 level1 lfo5;tab-stops:-36.0pt 0cm list 36.0pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span>Ejemplos.</span></p>
+		
+		<p style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:
+		l12 level1 lfo5;tab-stops:-36.0pt 0cm list 36.0pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span>Referencias: Documentación
+		adicional.</span></p>
+		
+		<p><span></span></p>
+		
+		<a name="ind_2"></a>
+	</section>
+	<section name="Marco y frameworks utilizados">
+		
+		<p><span>En este apartado de la guía trataremos
+		de describir el marco tecnológico del nivel de presentación <span
+		style='mso-spacerun:yes'> </span>y en base al mismo trataremos de describir
+		todos y cada uno de los frameworks y componentes que lo conforman.</span></p>
+
+		<p><strong>Marco Tecnológico</strong></p>					
+
+		<p><span>Dentro del marco tecnológico encontramos
+		los frameworks de spring y struts para conseguir dar cobertura a los distintos
+		requerimientos de la interfaz de usuario. </span></p>
+
+		<p><strong>Frameworks y Componentes utilizados</strong></p>					
+		
+		<p><span>Los frameworks utilizados en el nivel de
+		presentación para aplicaciones web son:</span></p>
+		
+		<p style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:
+		l4 level1 lfo4;tab-stops:-36.0pt 0cm list 36.0pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span>Spring</span></p>
+		
+		<p style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:
+		l4 level1 lfo4;tab-stops:-36.0pt 0cm list 36.0pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		
+		
+		</span></span></span><span>Struts</span></p>
+
+		<p><strong>Spring</strong></p>							
+		<p><strong>- Descripción</strong></p>							
+		
+		<p>Spring Framework  es un marco de trabajo de amplio espectro para desarrollo empresarial en Java,  
+		basado en el concepto de inversión de control (IoC). 
+		</p>
+		<p><strong>- Funcionalidades</strong></p>									
+		
+		<p style='margin-top:5.0pt;margin-right:0cm;margin-bottom:5.0pt;margin-left:
+		18.0pt;line-height:normal;mso-pagination:widow-orphan'><span 
+		style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman";
+		mso-ansi-language:ES-TRAD'>Spring proporciona</span></p>
+		
+		<p style='margin-top:5.0pt;margin-right:0cm;margin-bottom:5.0pt;margin-left:
+		36.0pt;text-indent:-18.0pt;mso-pagination:widow-orphan;mso-list:l13 level1 lfo8;
+		tab-stops:list 36.0pt'><span 
+		style='font-size:10.0pt;line-height:150%;font-family:Symbol;mso-fareast-font-family:
+		Symbol;mso-bidi-font-family:Symbol;mso-ansi-language:ES-TRAD'><span
+		style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span  style='font-size:10.0pt;
+		line-height:150%;font-family:Arial;mso-bidi-font-family:"Times New Roman";
+		mso-ansi-language:ES-TRAD'>Una potente gestión de configuración basada en
+		JavaBeans, aplicando los principios de Inversión de Control (IoC). Esto hace
+		que la configuración de aplicaciones sea rápida y sencilla. Ya no es necesario
+		tener singletons ni ficheros de configuración, una aproximación consistente y
+		elegante. Esta factoría de beans puede ser usada en cualquier entorno, desde applets
+		hasta contenedores J2EE. Estas definiciones de beans se realizan en lo que se
+		llama el contexto de aplicación.</span></p>
+		
+		<p style='margin-top:5.0pt;margin-right:0cm;margin-bottom:5.0pt;margin-left:
+		36.0pt;text-indent:-18.0pt;mso-pagination:widow-orphan;mso-list:l13 level1 lfo8;
+		tab-stops:list 36.0pt'><span 
+		style='font-size:10.0pt;line-height:150%;font-family:Symbol;mso-fareast-font-family:
+		Symbol;mso-bidi-font-family:Symbol;mso-ansi-language:ES-TRAD'><span
+		style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span  style='font-size:10.0pt;
+		line-height:150%;font-family:Arial;mso-bidi-font-family:"Times New Roman";
+		mso-ansi-language:ES-TRAD'>Una capa genérica de abstracción para la gestión de
+		transacciones, permitiendo gestores de transacción enchufables (pluggables), y haciendo
+		sencilla la demarcación de transacciones sin tratarlas a bajo nivel. Se
+		incluyen estrategias genéricas para JTA y un único JDBC DataSource. En
+		contraste con el JTA simple o EJB CMT, el soporte de transacciones de Spring no
+		está atado a entornos J2EE.</span></p>
+		
+		<p style='margin-top:5.0pt;margin-right:0cm;margin-bottom:5.0pt;margin-left:
+		36.0pt;text-indent:-18.0pt;mso-pagination:widow-orphan;mso-list:l13 level1 lfo8;
+		tab-stops:list 36.0pt'><span 
+		style='font-size:10.0pt;line-height:150%;font-family:Symbol;mso-fareast-font-family:
+		Symbol;mso-bidi-font-family:Symbol;mso-ansi-language:ES-TRAD'><span
+		style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span  style='font-size:10.0pt;
+		line-height:150%;font-family:Arial;mso-bidi-font-family:"Times New Roman";
+		mso-ansi-language:ES-TRAD'>Una capa de abstracción JDBC que ofrece una
+		significativa jerarquía de excepciones (evitando la necesidad de obtener de
+		SQLException los códigos que cada gestor de base de datos asigna a los
+		errores), simplifica el manejo de errores, y reduce considerablemente la
+		cantidad de código necesario.</span></p>
+		
+		<p style='margin-top:5.0pt;margin-right:0cm;margin-bottom:5.0pt;margin-left:
+		36.0pt;text-indent:-18.0pt;mso-pagination:widow-orphan;mso-list:l13 level1 lfo8;
+		tab-stops:list 36.0pt'><span 
+		style='font-size:10.0pt;line-height:150%;font-family:Symbol;mso-fareast-font-family:
+		Symbol;mso-bidi-font-family:Symbol;mso-ansi-language:ES-TRAD'><span
+		style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span  style='font-size:10.0pt;
+		line-height:150%;font-family:Arial;mso-bidi-font-family:"Times New Roman";
+		mso-ansi-language:ES-TRAD'>Integración con Hibernate, JDO e iBatis SQL Maps en
+		términos de soporte a implementaciones DAO y estrategias con transacciones.
+		Especial soporte a Hibernate añadiendo convenientes características de IoC, y
+		solucionando muchos de los problemas comunes de integración de Hibernate. Todo
+		ello cumpliendo con las transacciones genéricas de Spring y la jerarquía de
+		excepciones DAO.</span></p>
+		
+		<p style='margin-top:5.0pt;margin-right:0cm;margin-bottom:5.0pt;margin-left:
+		36.0pt;text-indent:-18.0pt;mso-pagination:widow-orphan;mso-list:l13 level1 lfo8;
+		tab-stops:list 36.0pt'><span 
+		style='font-size:10.0pt;line-height:150%;font-family:Symbol;mso-fareast-font-family:
+		Symbol;mso-bidi-font-family:Symbol;mso-ansi-language:ES-TRAD'><span
+		style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span  style='font-size:10.0pt;
+		line-height:150%;font-family:Arial;mso-bidi-font-family:"Times New Roman";
+		mso-ansi-language:ES-TRAD'>Funcionalidad AOP, totalmente integrada en la
+		gestión de configuración de Spring. Se puede aplicar AOP a cualquier objeto
+		gestionado por Spring, añadiendo aspectos como gestión de transacciones
+		declarativa. Con Spring se puede tener gestión de transacciones declarativa sin
+		EJB, incluso sin JTA, si se utiliza una única base de datos en un contenedor
+		web sin soporte JTA.</span></p>
+		
+		<p><span  style='font-size:10.0pt;line-height:150%;font-family:
+		Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:ES-TRAD'>Toda
+		esta funcionalidad puede usarse en cualquier servidor J2EE, y la mayoría de
+		ella ni siquiera requiere su uso. El objetivo central de Spring es permitir que
+		objetos de negocio y de acceso a datos sean reusables, no ligados a servicios
+		J2EE específicos. Estos objetos pueden ser reutilizados tanto en entornos J2EE
+		(web o EJB), aplicaciones standalone, entornos de pruebas, sin ningún problema.</span></p>
+		
+		<p><strong>- ¿Por qué utilizar Spring?</strong></p>									
+		
+		<p><span  style='font-size:10.0pt;line-height:150%;font-family:
+		Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:ES-TRAD'>La
+		arquitectura en capas de Spring ofrece una gran flexibilidad. Toda la
+		funcionalidad está construida sobre los niveles inferiores. Por ejemplo se
+		puede utilizar la gestión de configuración basada en JavaBeans sin utilizar el
+		framework MVC o el soporte AOP.</span></p>
+
+		<p align='center'><img src="images/ximage002.jpg"></img></p>		
+
+		<p><span style='mso-ansi-language:ES-TRAD'>De
+		todas las funcionalidades que ofrece Spring, nos interesa aprovechar la gestión
+		de Java Beans y la integración con<span style='mso-spacerun:yes'> 
+		</span>Struts, que se encuentra en el paquete <i style='mso-bidi-font-style:
+		normal'>Web<a style='mso-footnote-id:ftn1' href="#_ftn1" name="_ftnref1"
+		title=""><span><span style='mso-special-character:
+		footnote'><span><b style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;
+		line-height:150%;font-family:Arial;mso-fareast-font-family:"Times New Roman";
+		mso-bidi-font-family:"Times New Roman";letter-spacing:-.15pt;mso-ansi-language:
+		ES-TRAD;mso-fareast-language:ES;mso-bidi-language:AR-SA'></span></b></span></span></span></a>.</i>
+		Spring ofrece la posibilidad de configurar el acceso a struts de una manera
+		sencilla e independizando la configuración de la lógica del desarrollo (modelo
+		IoC).</span></p>
+
+		<p><strong>Struts</strong></p>									
+		<p><strong>- Descripción</strong></p>											
+		<p><strong>Struts</strong> es una herramienta de soporte para el desarrollo de aplicaciones Web 
+		bajo el patrón MVC con la plataforma J2EE (Java 2 Enterprise Edition). 
+		Struts se desarrolla como parte del proyecto Jakarta de la Apache Software Foundation		
+		</p>
+		<p>Struts permite reducir el tiempo de desarrollo, su carácter de "software libre" y su compatibilidad
+		 con todas las plataformas en donde Java Enterprise está disponible, lo convierte en una herramienta 
+		 altamente disponible.
+		</p>
+		<p><strong>- Funcionalidades</strong></p>											
+
+		<p><span>Struts se basa en el patrón del Modelo
+		Vista Controlador (MVC) el cual se utiliza ampliamente y es considerado de gran
+		solidez. De acuerdo con este modelo, el procesamiento se separa en tres
+		secciones diferenciadas, llamadas el modelo, las vistas y el controlador:</span></p>
+		
+		<p><a name="Componentes_del_modelo"></a><i style='mso-bidi-font-style:normal'>Componentes
+		del modelo</i></p>
+		
+		<p><span>Corresponden a la lógica del negocio con
+		el cual se comunica la aplicación web. Usualmente el modelo comprende accesos a
+		Bases de Datos o sistemas que funcionan independientemente de la aplicación web,
+		etc.</span></p>
+		
+		<p><a name="Componentes_del_control"></a><i style='mso-bidi-font-style:normal'>Componentes
+		del control</i></p>
+		
+		<p><span>Los componentes de control son los
+		encargados de coordinar las actividades de la aplicación, que van desde la
+		recepción de datos del usuario, las verificaciones de forma y la selección de
+		un componente del modelo a ser llamado. Por su parte los componentes del modelo
+		envían al control sus eventuales resultados y/o errores de manera que pueden
+		continuar con otros pasos de la aplicación.</span></p>
+		
+		<p><span>Esta separación simplifica enormemente
+		la escritura tanto de vistas como de componentes del modelo: Las páginas JSP no
+		tienen que incluir manejo de errores, mientras que los elementos del control
+		simplemente deciden sobre el paso siguiente a seguir.</span></p>
+		
+		<p><span>Entre las características de Struts se
+		pueden mencionar:</span></p>
+		
+		<p style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:
+		l6 level1 lfo9;tab-stops:-36.0pt 0cm list 36.0pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span>Configuración del control
+		centralizada. </span></p>
+		
+		<p style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:
+		l6 level1 lfo9;tab-stops:-36.0pt 0cm list 36.0pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span>Interrelaciones entre
+		Acciones y página u otras acciones se especifican por tablas XML en lugar de
+		codificarlas en los programas o páginas. </span></p>
+		
+		<p style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:
+		l6 level1 lfo9;tab-stops:-36.0pt 0cm list 36.0pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span>Componentes de aplicación,
+		que son el mecanismo para compartir información bidireccionalmente entre el
+		usuario de la aplicación y las acciones del modelo. </span></p>
+		
+		<p style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:
+		l6 level1 lfo9;tab-stops:-36.0pt 0cm list 36.0pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span>Librerías de entidades para
+		facilitar la mayoría de las operaciones que generalmente realizan las páginas
+		JSP. </span></p>
+		
+		<p style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:
+		l6 level1 lfo9;tab-stops:-36.0pt 0cm list 36.0pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span>Struts contiene herramientas
+		para validación de campos de plantillas. bajo varios esquemas que van desde
+		validaciones locales en la página (en javaScript) hasta las validaciones de
+		fondo hechas a nivel de las acciones. </span></p>
+		
+		<p><strong>- ¿Por qué Struts?</strong></p>
+		
+		<p><span>Struts permite que el desarrollador se
+		concentre en el diseño de aplicaciones complejas como una serie simple de
+		componentes del Modelo y de la vista intercomunicados por un control
+		centralizado. Diseñando de esta manera se debe obtener una aplicación más
+		consistente y más fácil de mantener.</span></p>
+
+		<a name="ind_3"></a>
+	</section>
+	<section name="Modelado - Profile">
+		<p><strong>- Introducción</strong></p>
+
+		<p><span style='mso-bookmark:_Toc112576863'>Con el fin de
+		mantener los desarrollos basados en I-Builder alineados con la estrategia<span
+		style='mso-spacerun:yes'>  </span>de Indra, y así conseguir un mayor control y
+		un aseguramiento de la calidad, se propone utilizar la metodología desarrollada
+		por la compañía para este tipo de procesos. Para un mayor conocimiento de estos
+		temas recomendamos acudir al portal de la DDP en su área de “Metodología y Calidad”, donde
+		se puede encontrar toda la documentación necesaria al respecto. </span></p>
+		
+		<p><span style='mso-bookmark:_Toc112576863'>Para poder ceñirnos
+		a la metodología a utilizar desarrollaremos el modelado de las aplicaciones a
+		nivel de presentación, utilizando el lenguaje de modelado unificado, UML. </span></p>
+		
+		<p><span style='mso-bookmark:_Toc112576863'>UML 2.0 es un
+		meta-modelo adecuado para definir procesos de negocio. Basta añadir los
+		estereotipos y las etiquetas (tagged-values)
+		adicionales para satisfacer las necesidades específicas de modelado. De hecho,
+		las herramientas que implementan UML 2.0 constan de un interfaz gráfico que
+		permite la representación visual de los procesos de negocio.</span></p>
+		
+		<p><span style='mso-bookmark:_Toc112576863'>El modo de actuación,
+		se basa en definir los procesos de negocio basándose en el lenguaje unificado,
+		UML, para postergar su traducción a un lenguaje de ejecución específico del nivel
+		de presentación de las nuevas aplicaciones. El mapeo permite estandarizar un
+		lenguaje de modelado de procesos, de alto nivel,<span
+		style='mso-spacerun:yes'>  </span>independiente al lenguaje de ejecución de las
+		aplicaciones, de nivel medio. Utilizar un framework de mapeo flexible es ideal,
+		para desacoplar al máximo los requisitos, la arquitectura y el diseño de los
+		artefactos de implementación a utilizar en cada caso.</span></p>
+		
+		<p><span style='mso-bookmark:_Toc112576863'><span
+		>El modelado basado en MDA potencia la estandarización y la
+		independencia de los productos finales a emplear, a la vez que maximiza el
+		enfoque en el modelo del negocio.</span></span></p>
+		
+		<p><span style='mso-bookmark:_Toc112576863'>En el <b
+		style='mso-bidi-font-weight:normal'>modelado de los procesos</b>, hay que
+		especificar y definir los elementos siguientes:</span></p>
+		
+		<ul type='disc'>
+		 <li style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+		     line-height:normal;mso-pagination:widow-orphan;mso-list:l9 level1 lfo7;
+		     tab-stops:list 36.0pt'><span style='mso-bookmark:_Toc112576863'>Estructura
+		     de paquetes</span></li>
+		 <li style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+		     line-height:normal;mso-pagination:widow-orphan;mso-list:l9 level1 lfo7;
+		     tab-stops:list 36.0pt'><span style='mso-bookmark:_Toc112576863'>Diagramas
+		     de Caso de Uso</span></li>
+		 <li style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+		     line-height:normal;mso-pagination:widow-orphan;mso-list:l9 level1 lfo7;
+		     tab-stops:list 36.0pt'><span style='mso-bookmark:_Toc112576863'>Diagramas
+		     de Actividades</span></li>
+		 <li style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+		     line-height:normal;mso-pagination:widow-orphan;mso-list:l9 level1 lfo7;
+		     tab-stops:list 36.0pt'><span style='mso-bookmark:_Toc112576863'>Diagramas
+		     de clases</span></li>
+		</ul>
+		
+		<p style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+		line-height:normal;mso-pagination:widow-orphan'><span style='mso-bookmark:_Toc112576863'>Con
+		la finalidad de poder especificar los siguientes elementos de la arquitectura
+		de la aplicación:</span></p>
+		
+		<ul type='disc'>
+		 <ul type='circle'>
+		  <li style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+		      auto;line-height:normal;mso-pagination:widow-orphan;mso-list:l9 level2 lfo7;
+		      tab-stops:list 72.0pt'><span style='mso-bookmark:_Toc112576863'>Controladores</span></li>
+		  <li style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+		      auto;line-height:normal;mso-pagination:widow-orphan;mso-list:l9 level2 lfo7;
+		      tab-stops:list 72.0pt'><span style='mso-bookmark:_Toc112576863'>Código adaptado</span></li>
+		  <li style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+		      auto;line-height:normal;mso-pagination:widow-orphan;mso-list:l9 level2 lfo7;
+		      tab-stops:list 72.0pt'><span style='mso-bookmark:_Toc112576863'>Especificación
+		      de objetos de sesión</span></li>
+		  <li style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+		      auto;line-height:normal;mso-pagination:widow-orphan;mso-list:l9 level2 lfo7;
+		      tab-stops:list 72.0pt'><span style='mso-bookmark:_Toc112576863'>Seguridad</span></li>
+		  <li style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+		      auto;line-height:normal;mso-pagination:widow-orphan;mso-list:l9 level2 lfo7;
+		      tab-stops:list 72.0pt'><span style='mso-bookmark:_Toc112576863'>Llamadas
+		      a otros sistemas</span></li>
+		  <li style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+		      auto;line-height:normal;mso-pagination:widow-orphan;mso-list:l9 level2 lfo7;
+		      tab-stops:list 72.0pt'><span style='mso-bookmark:_Toc112576863'>Tablas de
+		      manejo de interfaz</span></li>
+		  <li style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+		      auto;line-height:normal;mso-pagination:widow-orphan;mso-list:l9 level2 lfo7;
+		      tab-stops:list 72.0pt'><span style='mso-bookmark:_Toc112576863'>Internacionalización</span></li>
+		  <li style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
+		      auto;mso-pagination:widow-orphan;mso-list:l9 level2 lfo7;tab-stops:list 72.0pt'><span
+		      style='mso-bookmark:_Toc112576863'>Otros contenidos</span></li>
+		 </ul>
+		</ul>
+		
+		<p><span style='mso-bookmark:_Toc112576863'>Para la realización
+		del modelado de los procesos hay que extender el meta-modelo UML, añadiendo
+		nuevos artefactos personalizados, a saber:</span></p>
+		
+		<p><span style='mso-bookmark:_Toc112576863'><span
+		style='mso-tab-count:1'>           </span><b style='mso-bidi-font-weight:normal'>Estereotipos</b>,
+		sterotypes</span></p>
+		
+		<p style='text-indent:31.2pt'><span style='mso-bookmark:_Toc112576863'><b
+		style='mso-bidi-font-weight:normal'>Valores etiquetados</b>, tagged values</span></p>
+		
+	
+		<p><strong>- Elementos del modelo</strong></p>
+		
+		<p><span style='mso-bookmark:_Toc112576863'><span>Con elementos del modelo queremos expresar la colección de todos
+		aquellos elementos que nos permiten expresar y describir formalmente el flujo del
+		proceso. Utilizaremos estos elementos para modelar nuestra aplicación. Lo que
+		sigue es una lista de elementos y una descripción de cómo mapearlos sobre
+		objetos específicos.</span></span></p>
+
+		<p><strong>- Clases</strong></p>
+		
+		<p><span style='mso-bookmark:_Toc112576863'><span
+		>Las clases son únicamente utilizadas como controladores del modelo.
+		Un controlador es el componente que contiene la lógica para llevar a cabo las
+		operaciones de negocio. La mayoría de las veces, en aplicaciones J2EE, delegaremos
+		la ejecución de la lógica del controlador a uno o varios servicios de los
+		expuestos en la capa de servicios. De esta manera se conseguirá una total
+		independencia entre la capa de presentación y la lógica de negocio implementada
+		en la capa de servicios.</span></span></p>
+		
+		<p><span style='mso-bookmark:_Toc112576863'><span
+		>Para la modelización de este comportamiento, definiremos la clase
+		controladora en el mismo paquete que el diagrama del caso de uso al que se
+		desee asociar. La manera de indicar esta asociación dependerá de las
+		posibilidades de la herramienta que empleemos. Si esta acción no se contempla
+		en el interfaz gráfico, deberemos establecer el valor etiquetado @andromda.presentation.controller.usecase=&lt;caso
+		de uso&gt; en la clase controller (siendo &lt;caso de uso&gt; el nombre del
+		caso de uso implicado). Una vez realizado este enlace podremos emplear
+		cualquiera de los métodos públicos de la clase cuando sea necesario en el diagrama
+		de actividad del caso de uso.</span></span></p>
+		
+		<p><strong>- Actores</strong></p>			
+		
+		<p><span style='mso-bookmark:_Toc112576863'><span
+		>Un actor representa un usuario en el sistema. Típicamente se
+		modela un actor por cada rol diferente de los que utilizan la aplicación.</span></span></p>
+		
+		<p><span style='mso-bookmark:_Toc112576863'><span
+		>Los actores pueden generalizar otros actores, haciendo posible
+		combinar diferentes roles en un único rol.</span></span></p>
+		
+		<p><span style='mso-bookmark:_Toc112576863'><span
+		>El modelado de actores activará la seguridad en la aplicación
+		generada. Un actor está únicamente autorizado a requerir aquellas páginas y
+		acciones pertenecientes al caso de uso con el que está asociado.</span></span></p>
+		
+		<p><strong>- Casos de uso</strong></p>			
+		
+		<p><span style='mso-bookmark:_Toc112576863'><span
+		>Cada unidad de procesamiento lógico se combina en un caso de uso
+		sencillo. Algunos ejemplos de casos de uso son: ‘Login’, ‘Hacer un pedido’,
+		‘Añadir nuevo usuario’. Nunca dos casos de uso deberían tener el mismo nombre.</span></span></p>
+		
+		<p><span style='mso-bookmark:_Toc112576863'><span
+		>Poner el caso de uso en un espacio de nombres dedicado (tal y como
+		un paquete en Java), de modo que no haya confusión acerca de lo que está
+		sucediendo dentro.</span></span></p>
+		
+		<p><strong>- Diagramas de actividad</strong></p>			
+		
+		<p><span style='mso-bookmark:_Toc112576863'><span
+		>Cada caso de uso se describe en mayor detalle utilizando un
+		diagrama de actividad. De este modo un diagrama de actividad te permite modelar
+		el flujo del proceso de un estado a otro. Haciéndolo de esta forma
+		determinaremos dónde se presenta una página al usuario y dónde se llamarán
+		acciones.</span></span></p>
+		
+		<p><span style='mso-bookmark:_Toc112576863'><span
+		>En el diagrama de actividad modelaremos: un estado inicial,
+		estados de acción, uno o más estados finales y transiciones.</span></span></p>
+		
+		<p><strong>- Transiciones</strong></p>			
+				
+		<p><span style='mso-bookmark:_Toc112576863'><span
+		>Las transiciones son las flechas que denotan un flujo entre dos
+		estados (origen y destino). Cada estado en el diagrama de actividad tiene al
+		menos una transición de salida, excepto el estado final en el que no existirá
+		dicha transición de salida.</span></span></p>
+		
+		<p><span style='mso-bookmark:_Toc112576863'><span
+		>Opcionalmente una transición puede llevar un disparador (trigger),
+		que indica que algo sucedió en la fuente, que disparó a la aplicación a seguir el camino representado en la transición
+		Utilizaremos un disparador cuando queramos modelar una acción
+		,como por ejemplo un clic de ratón en una página, que provocará una llamada
+		específica a una acción sobre el servidor.</span></span></p>
+		
+		<p><span style='mso-bookmark:_Toc112576863'><span
+		>Tanto los disparadores como las transiciones son interesantes
+		también porque pueden tener parámetros. Así, cada vez que el cliente y el
+		servidor intercambian información podemos querer utilizar el disparador para
+		especificar el parámetro a transportar en la petición.</span></span></p>
+		
+		<p><span style='mso-bookmark:_Toc112576863'><span
+		>Es posible también asociar a la transición la llamada a un método
+		de la clase controladora. Esto puede ser útil cuando la transición se bifurca
+		en un punto de decisión que consultará la respuesta de dicho método.</span></span></p>
+		
+		<p><span style='mso-bookmark:_Toc112576863'><span
+		>Las transiciones también servirán para especificar el tratamiento
+		de ciertas excepciones , modelándolas en un estado de acción y asociando la
+		transición a la excepción a tratar.</span></span></p>
+
+		<p><strong>- Estados Iniciales</strong></p>			
+		
+		<p><span style='mso-bookmark:_Toc112576863'><span
+		>Representa el punto en el que se inicia la actividad del caso de
+		uso. Solamente se permite un estado inicial simple por diagrama de actividad.</span></span></p>
+
+		<p><strong>- Estados de Acción</strong></p>					
+		
+		<p><span style='mso-bookmark:_Toc112576863'><span
+		>Un estado de acción es un estado atómico para el caso de uso de la aplicación. 
+		Normalmente tendremos varios de ellos en un caso de uso sencillo.</span></span></p>
+		
+		<p><span style='mso-bookmark:_Toc112576863'><span
+		>En el marco de la aplicación, distinguiremos entre dos grupos de
+		estados de acción: los que representan estados de acción del cliente y los del servidor.</span></span></p>
+		
+		<p><span style='mso-bookmark:_Toc112576863'><span
+		>Cada uno de los estados de acción de cliente representará un
+		conjunto de información mostrada al usuario (para el caso general de
+		aplicaciones con interfaz gráfico sería una pantalla de la aplicación). En los
+		estados de acción del servidor se podrán definir eventos diferidos que llamen a
+		métodos públicos de la clase controladora (desde donde invocar la lógica de
+		negocio, en última instancia).</span></span></p>
+		
+		<p><strong>- Estado Final</strong></p>			
+		
+		<p><span style='mso-bookmark:_Toc112576863'><span
+		>Un estado final, en un diagrama de actividad, representa el final
+		de un caso de uso. Lo habitual será indicar en este estado final cual será el
+		siguiente caso de uso que se iniciará al finalizar el actual. Puede darse el
+		caso de que se represente más de un estado final porque, por ejemplo, el
+		siguiente caso de uso defiera según el flujo de acciones seguido en el diagrama
+		de actividad.</span></span></p>
+		
+		<p><strong>- SwimLanes: Partición de diagramas de actividad</strong></p>					
+		
+		<p><span style='mso-bookmark:_Toc112576863'><span
+		>Esta característica es totalmente opcional, pero se recomienda
+		utilizarla en los diagramas por claridad. Dividir los diagramas de actividad en
+		particiones de forma que tengamos una para el servidor y otra para el Cliente nos
+		facilitará la interpretación y también la implementación del caso de uso.</span></span></p>
+		
+		<p><strong>Modelado de los Procesos</strong></p>							
+		<p><strong>- Estructura de Paquetes</strong></p>									
+		<p><span >En el documento “Introducción a las
+		guías técnicas” se propone una estructura de paquetes para el diseño y
+		desarrollo del ejemplo. Esta sirve como referencia a la hora de estudiar el
+		Modelado de los Procesos dentro del marco de I-Builder.</span></p>
+		
+		<p align='center'><img src="images/ximage004.jpg"></img></p>		
+		
+		<p>De manera general se puede indicar que cada caso de uso debe estar contenido en un paquete distinto, 
+		junto con su clase controladora (y las demás necesarias para el modelado del caso de uso),  
+		y el diagrama de actividad del propio caso de uso</p>
+
+		<p><strong>- Diagramas de Caso de Uso</strong></p>									
+		<p>En el documento "Introducción a las guías técnicas" se pueden consultar los diagramas 
+		de caso de uso correspondientes al ejemplo; en particular para el subsistema de contratación. 
+		Este último es en el que se basan los ejemplos</p>
+		
+		<p align='center'><img src="images/ximage006.jpg"></img></p>	
+		
+		<p><strong>CU - Contratación</strong></p>														
+		
+		<p align='center'><img src="images/ximage007.jpg"></img></p>	
+
+		<p><span>Es importante tener en cuenta que el
+		actor asociado a cada caso de uso será empleado para controlar el acceso de la
+		aplicación a los usuarios cuyos roles coincidan con dichos actores.</span></p>
+		
+		<p><span style='mso-ansi-language:ES'>Se deberá aplicar el
+		estereotipo <b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+		normal'>&lt;&lt;FrontEndUseCase&gt;&gt;</i></b> a aquellos casos de uso que
+		contemplen la interacción del usuario final a través de una interfaz (front-end).
+		También será obligatorio aplicar el estereotipo <b style='mso-bidi-font-weight:
+		normal'><i style='mso-bidi-font-style:normal'>&lt;&lt;FrontEndApplication&gt;&gt;</i></b>
+		al caso de uso que constituya el punto de entrada a la aplicación.</span></p>
+
+		<p><strong>- Diagramas de Actividad</strong></p>
+		
+		<p><span style='mso-bidi-font-family:Arial'>Una vez definido
+		cada caso de uso e incluido en su paquete independiente, deberemos asociar a
+		cada uno de ellos un diagrama de actividad que refleje su flujo de actividades
+		y transiciones. Si la herramienta de modelado no ofrece esta opción en su
+		interfaz gráfico, deberemos establecer en la especificación del caso de uso el
+		valor etiquetado <b style='mso-bidi-font-weight:normal'>@andromda.presentation.usecase.activity=&lt;diagrama
+		de actividad&gt;</b>, siendo <i style='mso-bidi-font-style:normal'>&lt;diagrama
+		de actividad&gt;</i> el nombre del diagrama de actividad a enlazar.</span></p>
+		
+		<p><span style='mso-bidi-font-family:Arial'>En este apartado se
+		indicará cómo emplear el diagrama de actividad para definir el paso de
+		parámetros en las transiciones, así como diferentes elementos en el interfaz
+		del usuario final, validaciones, puntos de decisión, etc.</span></p>
+
+		<p><strong>- Estados Iniciales</strong></p>
+		
+		<p>Es obligatorio que cada diagrama de actividad contenga uno y
+		sólo un estado inicial, que se suele representar como un disco negro. Este
+		estado inicial puede no tener transiciones de entrada, pero debe tener
+		obligatoriamente una transición de salida.</p>
+		
+		<p align='center'><img src="images/ximage009.jpg"></img></p>			
+
+		<p><strong>- Estados de Acción</strong></p>				
+		<p><span style='mso-bidi-font-family:Arial'>Representan cierta
+		‘situación’ en que se puede encontrar la aplicación en un momento dado.
+		Distinguiremos dos tipos de estados: </span></p>
+		
+		<p style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo10;
+		tab-stops:list 18.0pt'><span style='font-family:"Times New Roman"'><span
+		style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><b style='mso-bidi-font-weight:normal'><span
+		style='mso-bidi-font-family:Arial'>Estados Cliente:</span></b><span
+		style='mso-bidi-font-family:Arial'> Los estados del lado del cliente se
+		estereotiparán como <b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+		normal'>&lt;&lt;FrontEndView&gt;&gt;</i></b>. Representarán páginas JSP y
+		podrán tener múltiples transiciones de salida (una por cada llamada al
+		servidor).</span></p>
+		
+		<p align='center'><img src="images/ximage011.jpg"></img></p>		
+
+		<p style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo10;
+		tab-stops:list 18.0pt'><span style='font-family:"Times New Roman"'><span
+		style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><b style='mso-bidi-font-weight:normal'><span
+		style='mso-bidi-font-family:Arial'>Estados Servidor:</span></b><span
+		style='mso-bidi-font-family:Arial'> Los estados del lado servidor no serán
+		estereotipados, y sólo podrán tener una transición de salida. Solamente en
+		estos estados se podrán definir <i style='mso-bidi-font-style:normal'>eventos
+		diferidos</i> (una o varias llamadas a métodos públicos de la clase
+		controladora asociada al caso de uso). En la figura se puede ver que cuando el
+		flujo del caso de uso llegue al estado <i style='mso-bidi-font-style:normal'>cargaClientes,
+		</i><span style='mso-spacerun:yes'> </span>se ejecutará el método <i
+		style='mso-bidi-font-style:normal'>loadclientes</i>.</span></p>
+		
+		<p align='center'><img src="images/ximage013.jpg"></img></p>		
+		
+		
+		<p><span style='mso-bidi-font-family:Arial'>En la mayoría de
+		las ocasiones será necesaria una transición de salida de los estados del
+		servidor, pero es posible que en algún caso no se desee que el flujo de
+		ejecución continúe con el siguiente recurso (por ejemplo: un action que debe
+		devolver un pdf). En estos casos, simplemente no se deben definir transiciones
+		de salida. Se entenderá que el action del Strut devolverá <i style='mso-bidi-font-style:
+		normal'>null</i></span></p>
+		
+		<p><strong>- Transiciones</strong></p>
+		
+		<p><span >Las transiciones se emplean para
+		interconectar los diferentes estados del diagrama. Por regla general, se
+		observará que desde estados de tipo <i style='mso-bidi-font-style:normal'>frontendview
+		</i>se transita a estados del servidor, y que desde éstos se suele transitar a
+		estados de tipo <i style='mso-bidi-font-style:normal'>FrontEndView.</i></span></p>
+		
+		<p><span >Se han definido una serie de valores
+		etiquetados para apoyar la ejecución de las transiciones de salida de estados
+		tipo F<i style='mso-bidi-font-style:normal'>rontEndView</i>, de los que podemos
+		destacar:</span></p>
+		
+		<p style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:
+		l2 level1 lfo10;tab-stops:-36.0pt 0cm list 18.0pt left 36.0pt'><span
+		style='font-family:"Times New Roman";mso-ansi-language:ES'><span
+		style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><b style='mso-bidi-font-weight:normal'><span
+		style='mso-ansi-language:ES'>andromda.struts.action.success.message:</span></b><span
+		style='mso-ansi-language:ES'> Muestra un mensaje cuando la transición se efectúa
+		satisfactoriamente</span></p>
+		
+		<p style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:
+		l2 level1 lfo10;tab-stops:-36.0pt 0cm list 18.0pt left 36.0pt'><span
+		style='font-family:"Times New Roman";mso-ansi-language:ES'><span
+		style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><b style='mso-bidi-font-weight:normal'><span
+		style='mso-ansi-language:ES'>andromda.struts.action.warning.message:</span></b><span
+		style='mso-ansi-language:ES'> Muestra un mensaje cuando la transición se efectúa
+		con algún tipo de <i style='mso-bidi-font-style:normal'>warning</i>.</span></p>
+		
+		<p><span style='mso-ansi-language:ES'>También es posible modelar
+		el tratamiento de excepciones. Para ello se debe crear una transición marcada
+		con el estereotipo <i style='mso-bidi-font-style:normal'>&lt;&lt;FrontEndException&gt;&gt;</i>.
+		Por defecto se tratarán todas las excepciones <i style='mso-bidi-font-style:
+		normal'>java.lang.Exception</i>. Si se desea refinar el tratamiento de ciertas
+		excepciones se debe asociar a la transición el valor etiquetado <b
+		style='mso-bidi-font-weight:normal'>@andromda.struts.exception.type</b>, indicando
+		el path completo a la clase de la excepción que será manejada por esta
+		transición.</span></p>
+		
+		<p><strong>- Triggers y Parámetros</strong></p>
+		
+		<p><span style='mso-bidi-font-family:Arial'>Se pueden asociar
+		triggers a las transiciones de salida de estados tipo <i style='mso-bidi-font-style:
+		normal'>FrontEndView</i>. Estos triggers suelen ser de tipo <b
+		style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'>señal</i></b>,
+		y pueden llevar asociados ciertos parámetros. Con todo ello, por cada trigger
+		de salida de un <i style='mso-bidi-font-style:normal'>frontendview,</i> estaremos
+		modelando una acción del usuario (por ejemplo un botón de un formulario), y por
+		cada parámetro asociado a esa señal estaremos modelando un dato de entrada (por
+		ejemplo un campo tipo texto de un formulario).</span></p>
+		
+		<p><span style='mso-bidi-font-family:Arial'>Es obligatorio
+		asociar un nombre a cada señal de este tipo aunque no lo es para la transición
+		que la contiene.</span></p>
+		
+		<p><span style='mso-bidi-font-family:Arial'>Por ejemplo, en la
+		figura inferior se está indicando que se mostrará una pantalla <i
+		style='mso-bidi-font-style:normal'>buscadorClientes</i>, que contendrá una
+		serie de campos a rellenar por el usuario (nombre, apellido1, apellido2 y nif),
+		y que mostrará un botón para lanzar la acción <i style='mso-bidi-font-style:
+		normal'>buscarClientes</i> con los valores dados a esos parámetros<a
+		style='mso-footnote-id:ftn2' href="#_ftn2" name="_ftnref2" title=""><span
+		><span style='mso-special-character:footnote'><span
+		><span style='font-size:10.0pt;line-height:150%;
+		font-family:Arial;mso-fareast-font-family:"Times New Roman";letter-spacing:
+		-.15pt;mso-ansi-language:ES;mso-fareast-language:ES;mso-bidi-language:AR-SA'></span></span></span></span></a>.
+		</span></p>
+		
+		<p align='center'><img src="images/ximage015.jpg"></img></p>		
+		
+		<p><strong>Tipos de Campo</strong></p>
+
+
+		<p><span style='mso-bidi-font-family:Arial'>Existen diferentes <i
+		style='mso-bidi-font-style:normal'>valores etiquetados </i><span
+		style='mso-spacerun:yes'> </span>que se deberán asociar a cada parámetro para
+		identificar su tipo (o, desde el punto de vista del interfaz gráfico
+		resultante, los tipos de campos de un formulario)<i style='mso-bidi-font-style:
+		normal'>:</i></span></p>
+		
+		<p style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo10;
+		tab-stops:list 18.0pt'><span style='font-family:"Times New Roman"'><span
+		style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><b style='mso-bidi-font-weight:normal'><span
+		style='mso-bidi-font-family:Arial'>Parámetros seleccionables (combos): </span></b><span
+		style='mso-bidi-font-family:Arial'>Para configurar un combo se deben seguir los
+		siguientes pasos:<i style='mso-bidi-font-style:normal'></i></span></p>
+		
+		<p style='margin-left:54.0pt;text-indent:-18.0pt;mso-list:l2 level2 lfo10;
+		tab-stops:list 54.0pt'><span style='font-family:"Courier New";
+		mso-fareast-font-family:"Courier New"'><span style='mso-list:Ignore'>o<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span>En la señal de la transición de salida del <i
+		style='mso-bidi-font-style:normal'>FrontEndView</i>, definir un parámetro de
+		tipo select (estableciendo el valor etiquetado <i style='mso-bidi-font-style:
+		normal'><span style='mso-bidi-font-family:Arial'>@struts.view.field.type=select</span></i>)
+		con el nombre del combo.<b style='mso-bidi-font-weight:normal'><i
+		style='mso-bidi-font-style:normal'></i></b></p>
+		
+		<p style='margin-left:54.0pt;text-indent:-18.0pt;mso-list:l2 level2 lfo10;
+		tab-stops:list 54.0pt'><span style='font-family:"Courier New";
+		mso-fareast-font-family:"Courier New"'><span style='mso-list:Ignore'>o<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span>Definir un método en la clase Controller asociada al caso de uso  que tenga como parámetro inout
+		 el nombre del combo, cuyo tipo de dato sea el de los valores del combo  y que devuelva void.
+		</p>
+		
+		<p align='left' style='margin-top:0cm;margin-right:0cm;
+		margin-bottom:0cm;margin-left:54.0pt;margin-bottom:.0001pt;text-align:left;
+		text-indent:-18.0pt;line-height:normal;mso-pagination:widow-orphan;mso-list:
+		l2 level2 lfo10;tab-stops:list 54.0pt'><span
+		style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span>Definir una llamada diferida al método, definido
+		en el controller, en el <span style='mso-spacerun:yes'> </span>estado anterior
+		al FrontEndView.<b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+		normal'></i></b></p>
+		
+		<p align='left' style='margin-top:0cm;margin-right:0cm;
+		margin-bottom:0cm;margin-left:36.0pt;margin-bottom:.0001pt;text-align:left;
+		line-height:normal;mso-pagination:widow-orphan'><b style='mso-bidi-font-weight:
+		normal'><i style='mso-bidi-font-style:normal'></i></b></p>
+		
+		<p style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo10;
+		tab-stops:list 18.0pt'><span style='font-family:"Times New Roman"'><span
+		style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><b style='mso-bidi-font-weight:normal'><span
+		style='mso-bidi-font-family:Arial'>Campos Password</span></b><span
+		style='mso-bidi-font-family:Arial'>: <i style='mso-bidi-font-style:normal'>@struts.view.field.type=password</i></span></p>
+		
+		<p style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo10;
+		tab-stops:list 18.0pt'><span style='font-family:"Times New Roman"'><span
+		style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><b style='mso-bidi-font-weight:normal'><span
+		style='mso-bidi-font-family:Arial'>Texto: </span></b><i style='mso-bidi-font-style:
+		normal'><span style='mso-bidi-font-family:Arial'>@struts.view.field.type=text</span></i><b
+		style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-family:Arial'></span></b></p>
+		
+		<p style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo10;
+		tab-stops:list 18.0pt'><span style='font-family:"Times New Roman"'><span
+		style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><b style='mso-bidi-font-weight:normal'><span
+		style='mso-bidi-font-family:Arial'>Texto multilínea</span></b><span
+		style='mso-bidi-font-family:Arial'>: <i style='mso-bidi-font-style:normal'>@struts.view.field.type=textarea</i></span></p>
+		
+		<p style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo10;
+		tab-stops:list 18.0pt'><span style='font-family:"Times New Roman"'><span
+		style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><b style='mso-bidi-font-weight:normal'><span
+		style='mso-bidi-font-family:Arial'>Opciones</span></b><span style='mso-bidi-font-family:
+		Arial'>: <i style='mso-bidi-font-style:normal'>@struts.view.field.type=radio</i>.</span></p>
+		
+		<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+		margin-left:54.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;mso-pagination:
+		widow-orphan;mso-list:l2 level2 lfo10;tab-stops:list 54.0pt'><span
+		style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span style='mso-bidi-font-family:Arial'><span
+		style='mso-spacerun:yes'> </span>Se puede especificar el número de campos <i
+		style='mso-bidi-font-style:normal'>@struts.view.field.radio=5 </i></span></p>
+		
+		<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+		margin-left:54.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;mso-pagination:
+		widow-orphan;mso-list:l2 level2 lfo10;tab-stops:list 54.0pt'><span
+		style='font-family:"Courier New";mso-fareast-font-family:"Courier New"'><span
+		style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span style='mso-bidi-font-family:Arial'>y la
+		sucesión de valores que lo componen <i style='mso-bidi-font-style:normal'>@struts.view.field.radio=
+		uno, dos, tres.</i></span></p>
+		
+		<p style='margin-bottom:0cm;margin-bottom:.0001pt;mso-pagination:
+		widow-orphan'><span style='mso-bidi-font-family:Arial'></span></p>
+		
+		<p style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo10;
+		tab-stops:list 18.0pt'><span style='font-family:"Times New Roman"'><span
+		style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><b style='mso-bidi-font-weight:normal'><span
+		style='mso-bidi-font-family:Arial'>Upload de ficheros</span></b><span
+		style='mso-bidi-font-family:Arial'>: <i style='mso-bidi-font-style:normal'>@struts.view.field.type=file</i></span></p>
+		
+		<p style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo10;
+		tab-stops:list 18.0pt'><span style='font-family:"Times New Roman"'><span
+		style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><b style='mso-bidi-font-weight:normal'><span
+		style='mso-bidi-font-family:Arial'>Checkboxes</span></b><span style='mso-bidi-font-family:
+		Arial'>: <i style='mso-bidi-font-style:normal'>@struts.view.field.type=boolean</i></span></p>
+		
+		<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+		margin-left:18.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;mso-pagination:
+		widow-orphan;mso-list:l2 level1 lfo10;tab-stops:list 18.0pt'><span
+		style='font-family:"Times New Roman"'><span style='mso-list:Ignore'>-<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><b style='mso-bidi-font-weight:normal'><span
+		style='mso-bidi-font-family:Arial'>Lista de Checkboxes</span></b><span
+		style='mso-bidi-font-family:Arial'>: <i style='mso-bidi-font-style:normal'>@struts.view.field.type=multibox.</i>
+		Se empleará cuando se trabaje con tablas. Será necesario especificar también la
+		variable que contiene el collection o array mediante el valor etiquetado <i
+		style='mso-bidi-font-style:normal'>@struts.view.field.multibox.</i><b
+		style='mso-bidi-font-weight:normal'></b></span></p>
+		
+		<p style='margin-bottom:0cm;margin-bottom:.0001pt;mso-pagination:
+		widow-orphan'><b style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-family:
+		Arial'></span></b></p>
+		
+		<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+		margin-left:18.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;mso-pagination:
+		widow-orphan;mso-list:l2 level1 lfo10;tab-stops:list 18.0pt'><span
+		style='font-family:"Times New Roman"'><span style='mso-list:Ignore'>-<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><b style='mso-bidi-font-weight:normal'><span
+		style='mso-bidi-font-family:Arial'>Radio Button: </span></b>Presenta
+		radiobuttons, por defecto hay 3; utilizar el tagged value <i style='mso-bidi-font-style:
+		normal'>@struts.view.field.radio</i>, que denota el número de elecciones para
+		este parámetro: el valor introducido para ese tagged value determinará el
+		número de radiobuttons que serán presentados. Alternativamente se puede
+		utilizar una lista de propiedades separadas por comas en lugar de un integer.<b
+		style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-family:Arial'></span></b></p>
+		
+		<p style='margin-bottom:0cm;margin-bottom:.0001pt;mso-pagination:
+		widow-orphan'><b style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-family:
+		Arial'></span></b></p>
+		
+		<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+		margin-left:18.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;mso-pagination:
+		widow-orphan;mso-list:l2 level1 lfo10;tab-stops:list 18.0pt'><span
+		style='font-family:"Times New Roman"'><span style='mso-list:Ignore'>-<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><b style='mso-bidi-font-weight:normal'><span
+		style='mso-bidi-font-family:Arial'>Hidden: </span></b>No se presenta ningún
+		conector, pero el parámetro dado se incluirá en la petición.<b
+		style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-family:Arial'></span></b></p>
+		
+		<p style='margin-bottom:0cm;margin-bottom:.0001pt;mso-pagination:
+		widow-orphan'><b style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-family:
+		Arial'></span></b></p>
+		
+		
+		<p style='margin-bottom:0cm;margin-bottom:.0001pt;mso-pagination:
+		widow-orphan'><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+		normal'><span style='mso-bidi-font-family:Arial'>Tablas</span></i></b></p>
+		
+		<p style='margin-bottom:0cm;margin-bottom:.0001pt;mso-pagination:
+		widow-orphan'><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+		normal'><span style='mso-bidi-font-family:Arial'></span></i></b></p>
+		
+		<p style='margin-bottom:0cm;margin-bottom:.0001pt;mso-pagination:
+		widow-orphan'><span style='mso-bidi-font-family:Arial'>Combinando distintos
+		valores etiquetados se podrá modelar la presentación de una <b
+		style='mso-bidi-font-weight:normal'>tabla de valores</b> como alguna de las
+		mostradas en el ejemplo desarrollado. A continuación se detallan los pasos a
+		seguir para la definición de la tabla de la figura inferior.</span></p>
+		
+		<p style='margin-bottom:0cm;margin-bottom:.0001pt;mso-pagination:
+		widow-orphan'><span style='mso-bidi-font-family:Arial'></span></p>
+		
+		
+		<p align='center'><img src="images/ximage017.jpg"></img></p>		
+		
+		<p style='margin-bottom:0cm;margin-bottom:.0001pt;mso-pagination:
+		widow-orphan'><span style='mso-bidi-font-family:Arial'></span></p>
+		
+		<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+		margin-left:18.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;mso-text-indent-alt:
+		-18.0pt;line-height:normal;mso-pagination:widow-orphan;mso-list:l11 level1 lfo12;
+		mso-list-ins:harias 20051021T1511;tab-stops:list 18.0pt'><span
+		style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+		><ins cite="mailto:harias" datetime="2005-10-21T15:11"><span
+		style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>
+		</span></span></ins></span></span>Crear una nueva clase. Definir los
+		atributos que se quieran representar en la tabla.</p>
+		
+		<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+		margin-left:18.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;mso-text-indent-alt:
+		-18.0pt;line-height:normal;mso-pagination:widow-orphan;mso-list:l11 level1 lfo12;
+		mso-list-ins:harias 20051021T1511;tab-stops:list 18.0pt'><span
+		style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+		><ins cite="mailto:harias" datetime="2005-10-21T15:11"><span
+		style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>
+		</span></span></ins></span></span>Crear una nueva clase vacía cuyo
+		nombre sea igual al de la clase anterior con dos corchetes al final ‘<i
+		style='mso-bidi-font-style:normal'>nombreclase<b style='mso-bidi-font-weight:
+		normal'>[ ]</b></i>’. Alternativamente, en vez de emplear un array de objetos
+		como base de la tabla a mostrar, se puede emplear una clase que implemente <b
+		style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'>java.util.Collection</i></b>.</p>
+		
+		<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+		margin-left:18.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;mso-text-indent-alt:
+		-18.0pt;line-height:normal;mso-pagination:widow-orphan;mso-list:l11 level1 lfo12;
+		mso-list-ins:harias 20051021T1511;tab-stops:list 18.0pt'><span
+		style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+		><ins cite="mailto:harias" datetime="2005-10-21T15:11"><span
+		style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>
+		</span></span></ins></span></span>Crear una función en el controller.
+		Definir un parámetro <i style='mso-bidi-font-style:normal'>inout</i> de tipo
+		array (‘<i style='mso-bidi-font-style:normal'>nombreclase<b style='mso-bidi-font-weight:
+		normal'>[ ]</b></i>’), tal como el que se ha definido en el paso anterior.</p>
+		
+		<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+		margin-left:18.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;
+		mso-pagination:widow-orphan;mso-list:l11 level1 lfo12;tab-stops:list 18.0pt'><span
+		style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+		style='mso-list:Ignore'>4.<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span>En la acción previa al FrontEndView en que
+		presentará la tabla, se añade la llamada a la función del controller como
+		‘defer’ (evento diferido); esta función debe <i style='mso-bidi-font-style:
+		normal'>tener como parámetro uno del mismo nombre y tipo del que acabamos de
+		definir (tipo nombreclase[]).</i><span style='mso-bidi-font-family:Arial'></span></p>
+		
+		<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+		margin-left:18.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;
+		mso-pagination:widow-orphan;mso-list:l11 level1 lfo12;tab-stops:list 18.0pt'><span
+		style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+		style='mso-list:Ignore'>5.<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span>En la transición al Front End View crear un
+		Trigger de tipo señal que tenga como parámetro un atributo con el mismo nombre
+		y tipo que en la cabecera de la función asociada del controller (definido en el
+		paso anterior). Este parámetro, además, deberá tener asociados los siguientes
+		valores etiquetados:<span style='mso-bidi-font-family:Arial'></span></p>
+		
+		<p style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+		normal;mso-pagination:widow-orphan'><span style='mso-bidi-font-family:Arial'></span></p>
+		
+		<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+		margin-left:54.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;
+		mso-pagination:widow-orphan;mso-list:l11 level2 lfo12;tab-stops:list 54.0pt'><span
+		style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+		Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><b style='mso-bidi-font-weight:normal'><span
+		style='mso-bidi-font-family:Arial'>@andromda.presentation.view.table.columns</span></b><span
+		style='mso-bidi-font-family:Arial'>=&lt;<i style='mso-bidi-font-style:normal'>nombre
+		de las columnas a mostrar en la tabla, separadas por comas</i>&gt;</span></p>
+		
+		<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+		margin-left:54.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;
+		mso-pagination:widow-orphan;mso-list:l11 level2 lfo12;tab-stops:list 54.0pt'><span
+		style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+		Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><b style='mso-bidi-font-weight:normal'><span
+		style='mso-bidi-font-family:Arial'>@andromda.presentation.view.table.maxrows</span></b><span
+		style='mso-bidi-font-family:Arial'>=&lt;nº de filas máximo a presentar&gt;</span></p>
+		
+		<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+		margin-left:54.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;
+		mso-pagination:widow-orphan;mso-list:l11 level2 lfo12;tab-stops:list 54.0pt'><span
+		style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+		Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><b style='mso-bidi-font-weight:normal'><span
+		style='mso-bidi-font-family:Arial'>@andromda.presentation.view.table.sortable</span></b><span
+		style='mso-bidi-font-family:Arial'>=&lt;true ó false según queramos que se
+		puedan ordenar la tabla por las columnas o no&gt;</span></p>
+		
+		<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+		margin-left:54.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;
+		mso-pagination:widow-orphan;mso-list:l11 level2 lfo12;tab-stops:list 54.0pt'><span
+		style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+		Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><b style='mso-bidi-font-weight:normal'><span
+		style='mso-bidi-font-family:Arial'>@andromda.presentation.view.table.export</span></b><span
+		style='mso-bidi-font-family:Arial'>=&lt;tipo de fichero a exportar; por defecto
+		se exporta CSV, XML, Excel y PDF&gt;</span></p>
+		
+		<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+		margin-left:36.0pt;margin-bottom:.0001pt;line-height:normal;mso-pagination:
+		widow-orphan'><span style='mso-bidi-font-family:Arial'></span></p>
+		
+		<p style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+		normal;mso-pagination:widow-orphan'></p>
+		
+		<p style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+		normal;mso-pagination:widow-orphan'><span style='mso-bidi-font-family:Arial'>El
+		modelo resultante debe ser el siguiente.</span></p>
+		
+		<p style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+		normal;mso-pagination:widow-orphan'><span style='mso-bidi-font-family:Arial'></span></p>
+		
+		<p align='center'><img src="images/ximage019.jpg"></img></p>		
+		
+		<p style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+		normal;mso-pagination:widow-orphan'><span style='mso-bidi-font-family:Arial'></span></p>
+		
+		<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+		margin-left:18.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;
+		mso-pagination:widow-orphan;mso-list:l11 level1 lfo12;tab-stops:list 18.0pt'><span
+		style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+		style='mso-list:Ignore'>6.<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span style='mso-bidi-font-family:Arial'>Para
+		asociar una transición a uno de los campos de la tabla, será necesario</span>
+		asociar a la señal de dicha transición los value objects:</p>
+		
+		<p style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+		normal;mso-pagination:widow-orphan'></p>
+		
+		<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+		margin-left:90.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;
+		mso-pagination:widow-orphan;mso-list:l11 level3 lfo12;tab-stops:list 90.0pt'><span
+		style='font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+		Wingdings'><span style='mso-list:Ignore'>§<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span>@anndromda.presentation.web.action.type=<b
+		style='mso-bidi-font-weight:normal'>hyperlink</b></p>
+		
+		<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+		margin-left:90.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;
+		mso-pagination:widow-orphan;mso-list:l11 level3 lfo12;tab-stops:list 90.0pt'><span
+		style='font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+		Wingdings'><span style='mso-list:Ignore'>§<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span>@anndromda.presentation.web.action.tablelink=<b
+		style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'>&lt;tabla&gt;.&lt;columna&gt;</i></b></p>
+		
+		<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+		margin-left:25.5pt;margin-bottom:.0001pt;line-height:normal;mso-pagination:
+		widow-orphan'></p>
+		
+		<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+		margin-left:25.5pt;margin-bottom:.0001pt;line-height:normal;mso-pagination:
+		widow-orphan'>En el ejemplo se ha asociado la transición a un nuevo campo <i
+		style='mso-bidi-font-style:normal'>nombre</i>, quedando el modelo y el
+		resultado final como sigue:</p>
+		
+		<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+		margin-left:25.5pt;margin-bottom:.0001pt;line-height:normal;mso-pagination:
+		widow-orphan'></p>
+		
+		<p align='center'><img src="images/ximage021.jpg"></img></p>		
+		
+		<p style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+		normal;mso-pagination:widow-orphan'><span style='mso-bidi-font-family:Arial'></span></p>
+		
+		<p style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+		normal;mso-pagination:widow-orphan'><span style='mso-bidi-font-family:Arial'></span></p>
+		
+		<p align='center'><img src="images/ximage023.jpg"></img></p>		
+		
+		<p>Para pasar información de la fila seleccionada a la siguiente actividad, tan solo es 
+		necesario incluir un parámetro de la señal de salida del frontEndView cuyo nombre y tipo 
+		sean iguales al campo de la tabla cuya información queremos propagar al siguiente estado, 
+		una vez se haya producido la selección.
+		</p>	
+		<p>En el diagrama de actividades del caso de uso Tarificar se ha modelado un tabla de 
+		tarifas que recarga la página actualizando el desglose mostrado en función de la tarifa 
+		seleccionada en la tabla. 
+		</p>
+		<p><strong>Page Variables</strong></p>
+		<p>Se trata de los parámetros asociados a las señales de las transiciones de entrada de 
+		los estados FrontEndView (que suelen ser los de salida de los estados de servidor). 
+		No es necesario que estas señales tengan nombre.
+		</p>
+		
+		<p align='center'><img src="images/ximage025.jpg"></img></p>		
+		
+		<p><strong>Puntos de Decisión</strong></p>		
+
+		<p><span style='mso-bidi-font-family:Arial'>Serán necesarios
+		cuando queramos bifurcar el flujo en función de alguna condición. Para modelar
+		correctamente un punto de decisión se deben seguir los siguientes pasos.</span></p>
+		
+		<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+		margin-left:18.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;
+		mso-pagination:widow-orphan;mso-list:l8 level1 lfo13;tab-stops:list 18.0pt'><span
+		style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+		style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span>Añadir un método público en la clase
+		controladora con valor de retorno distinto de <i style='mso-bidi-font-style:
+		normal'>void</i>.</p>
+		
+		<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+		margin-left:18.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;
+		mso-pagination:widow-orphan;mso-list:l8 level1 lfo13;tab-stops:list 18.0pt'><span
+		style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+		style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span>Asociar la ejecución del método previamente definido
+		en la clase controladora a la transición de entrada al punto de decisión.</p>
+		
+		<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+		margin-left:18.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;
+		mso-pagination:widow-orphan;mso-list:l8 level1 lfo13;tab-stops:list 18.0pt'><span
+		style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+		style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span>Definir una <i style='mso-bidi-font-style:normal'>guarda
+		</i>en cada transición de salida del punto de decisión, cuyo <b
+		style='mso-bidi-font-weight:normal'>nombre</b> será comparado con el valor de
+		retorno del método del controller para que el flujo de la ejecución resultante
+		derive por uno de los caminos posibles. Es importante tener en cuenta que el
+		nombre de la guarda debe ser igual a str(<i style='mso-bidi-font-style:normal'>&lt;valor
+		retornado por el método&gt;</i>).</p>
+		
+		<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+		margin-left:18.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;
+		mso-pagination:widow-orphan;mso-list:l8 level1 lfo13;tab-stops:list 18.0pt'><span
+		style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+		style='mso-list:Ignore'>4.<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span>Si deseamos que la bifurcación tenga relación
+		con alguna variable en tiempo de ejecución (por ejemplo la selección de un
+		radio-button), se debe pasar un parámetro al método del controller antes
+		definido, cuyo nombre sea igual que la variable de la que depende la decisión.</p>
+		
+		<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+		margin-left:18.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;
+		mso-pagination:widow-orphan;mso-list:l8 level1 lfo13;tab-stops:list 18.0pt'><span
+		style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+		style='mso-list:Ignore'>5.<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span>Por defecto todas las funciones generadas automáticamente
+		devuelven <i style='mso-bidi-font-style:normal'>false</i>. Para personalizar la
+		decisión será necesario <a href="#_Código_adaptado">personalizar el código</a>.</p>
+		
+		<p><span style='mso-bidi-font-family:Arial'></span></p>
+		
+		<p><span style='mso-bidi-font-family:Arial'>A continuación se
+		puede observar la modelización de uno de los puntos de decisión del ejemplo:</span></p>
+		
+		<p align='center'><img src="images/ximage027.jpg"></img></p>		
+		
+		<p>Y su resultado:</p>		
+		
+		<p align='center'><img src="images/ximage029.jpg"></img></p>	
+		
+		<p><strong>Estados Finales</strong></p>	
+		
+		<p><span style='mso-bidi-font-family:Arial'>En el marco de
+		trabajo que nos ocupa, el estado final de un diagrama de actividad indica el
+		final del flujo de un caso de uso y el comienzo del siguiente. Esto se podrá
+		indicar empleando hyperlinks o nombrando el estado final igual que el caso de
+		uso siguiente (que puede ser el mismo caso de uso). Un diagrama de actividad
+		podrá tener tantos estados finales como sea necesario.</span><b
+		style='mso-bidi-font-weight:normal'><span style='font-family:"Courier New";
+		mso-bidi-font-family:"Times New Roman";mso-ansi-language:ES-TRAD'> <span
+		></span></span></b></p>
+		
+		<p>Si fuera necesario enviar parámetros de un caso de uso a
+		otro distinto, se puede modelar incluyéndolos como parámetros en la señal
+		asociada a la transición de entrada del estado final del diagrama de actividad <i
+		style='mso-bidi-font-style:normal'>emisor</i>, que a su vez se asociará al
+		comienzo del diagrama de actividad del siguiente caso de uso (<i
+		style='mso-bidi-font-style:normal'>receptor</i> de dichos parámetros).</p>
+		
+		<p><span style='mso-bidi-font-family:Arial'>En el ejemplo
+		desarrollado se puede observar cómo en el diagrama de Actividades del caso de
+		uso contratar, se he definido un estado final cuyo nombre es Tarificar. Con
+		ello estamos indicando que cuando finalice el caso de uso Contratar,<span
+		style='mso-spacerun:yes'>  </span>se transitará al caso de uso Tarificar </span></p>
+		
+		<p align='center'><img src="images/ximage031.jpg"></img></p>
+
+		
+		<p><strong>Diagramas de Clases</strong></p>			
+		
+		<p><span style='mso-bidi-font-family:Arial;mso-ansi-language:
+		ES'>En la capa de aplicación, los diagramas de clases se emplearán para modelar
+		la clase controladora del caso de uso, y si fuera necesario, la definición de
+		alguna variable de sesión, así como las dependencias entre el controller y los
+		servicios que este va a invocar. A continuación se trata en detalle cada uno de
+		estos elementos del modelado.</span></p>
+
+		<p><strong>- Controladores</strong></p>			
+
+		<p><span style='mso-bidi-font-family:Arial'>Por cada caso de
+		uso se deberá definir una clase en la que se reúnan las operaciones que se
+		podrán ejecutar desde su diagrama de actividad. Esta clase deberá encontrarse
+		en el mismo paquete que el caso de uso, y deberá indicarse que se trata de la
+		clase controladora de ese caso de uso.</span></p>
+		
+		<p><span style='mso-bidi-font-family:Arial'>Si la herramienta
+		empleada para el modelado no contempla esta posibilidad se debe definir, en la
+		especificación de la clase, un valor etiquetado
+		@andromda.presentation.controller.usecase=<i style='mso-bidi-font-style:normal'>MiCasoDeUso,
+		</i>donde <i style='mso-bidi-font-style:normal'>MiCasoDeUso</i> es el nombre
+		del caso de uso al que la debemos asociar.</span></p>
+		
+		<p><span style='mso-bidi-font-family:Arial'>Una vez definida y
+		asociada la clase<a style='mso-footnote-id:ftn3' href="#_ftn3" name="_ftnref3"
+		title=""><span ><span style='mso-special-character:
+		footnote'><span><span
+		style='font-size:10.0pt;line-height:150%;font-family:Arial;mso-fareast-font-family:
+		"Times New Roman";letter-spacing:-.15pt;mso-ansi-language:ES;mso-fareast-language:
+		ES;mso-bidi-language:AR-SA'></span></span></span></span></a>
+		controladora al diagrama de actividad correspondiente, seremos capaces de
+		delegar en ella el control del flujo de ciertos puntos específicos de dicho
+		diagrama:</span></p>
+		
+		<p style='margin-left:18.0pt;text-indent:-18.0pt;mso-list:l2 level1 lfo10;
+		tab-stops:list 18.0pt'><span style='font-family:"Times New Roman"'><span
+		style='mso-list:Ignore'>-<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><b style='mso-bidi-font-weight:normal'><span
+		style='mso-bidi-font-family:Arial'>En las transiciones</span></b><span
+		style='mso-bidi-font-family:Arial'>: Como se ha visto en los puntos de decisión,
+		se podrá asociar la ejecución de un método a una señal. </span></p>
+		
+		<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+		margin-left:18.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;mso-pagination:
+		widow-orphan;mso-list:l2 level1 lfo10;tab-stops:list 18.0pt'><span
+		style='font-family:"Times New Roman"'><span style='mso-list:Ignore'>-<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><b style='mso-bidi-font-weight:normal'><span
+		style='mso-bidi-font-family:Arial'>En las actividades de servidor: </span></b><span
+		style='mso-bidi-font-family:Arial'>Como se a comprobado en la modelación de
+		combos, se podrá incluir la ejecución de un método del controller en una
+		actividad de servidor (nunca en una etiquetada como <i style='mso-bidi-font-style:
+		normal'>FrontEndView</i>). Pueden ser tantas como deseemos, <b
+		style='mso-bidi-font-weight:normal'>pero no podemos realizar ninguna asunción
+		respecto del orden de su ejecución</b>, por lo que si es necesario garantizar
+		algún orden relativo de ejecución, hay que definirlas cada una en un estado
+		diferente, y estos estados se deben encadenar en el orden de ejecución
+		requerido.</span></p>
+		
+		<p style='margin-bottom:0cm;margin-bottom:.0001pt;mso-pagination:
+		widow-orphan'><span style='mso-bidi-font-family:Arial'></span></p>
+		
+		<p><strong>Consideración : </strong> desde un punto de vista 'purista' esta clase no deja de ser una clase 
+		más del conjunto que define el modelo (orientado a objetos) de la aplicación. Por tanto, está sujeta a 
+		los mismos criterios generales que las demás clases en cuanto a la corrección de la misma; por ejemplo, 
+		un número muy elevado de métodos, puede indicar un mal diseño de la misma, lo que, encadenando el 
+		razonamiento hacia atrás, nos lleva a un gran número de puntos de decisión y estados en el diagrama de 
+		actividad, lo que a su vez puede indicar que el caso de uso es muy complejo y, por tanto, habría que 
+		plantear su descomposición varios casos de uso más simples, cada uno con su controller específico asociado…
+		</p>		
+		
+		<p><strong>- Código adaptado</strong></p>
+		
+		<p>Una vez modelada la clase controladora con sus métodos, se genera automáticamente el código del 
+		interfaz de la clase, así como una implementación por defecto para cada método. Los métodos implementados 
+		devolverán/tomarán valores de prueba en los parámetros inout y false para los valores de retorno tipo 
+		boolean.</p>
+		<p>Una vez generado el código será necesario editar la clase de implementación del controller y 
+		codificar las implementaciones correctas de cada método. </p>
+		<p>Por ejemplo en los métodos empleados en los puntos de decisión se incluirá la lógica necesaria y 
+		para los métodos incluidos en las actividades del servidor se codificará la llamada al servicio de 
+		la capa de negocio.</p>
+
+		<p><strong>- Value Objects</strong></p>
+		
+		<p>Las clases que tienen este estereotipo aplicado sirven para reunir un conjunto de datos que se 
+		encuentran asociados por un motivo puramente funcional. Realmente con un value object se define una 
+		estructura de datos para el intercambio de información entre los niveles de presentación y servicio. 
+		Las clases con el estereotipo ValueObject aplicado, actúan como parámetros de entrada y/o salida en 
+		las operaciones de los servicios; de esta manera se logra abstraer la capa de persistencia de la de 
+		presentación, encapsulando los datos y presentando distintas vistas de las entidades, minimizando el 
+		trasiego de información entre ellas.</p>
+		
+		<p><strong>- Especificación de objetos de sesión</strong></p>
+		
+		<p>Algunas veces será interesante almacenar datos en el ámbito de sesión; de esta manera, serán 
+		accesibles desde cualquier estado del diagrama de actividad posterior a aquel en que se almacenan. 
+		Para ello se deberá modelar la clase marcada con el estereotipo <strong>«FrontEndSessionObject»</strong>. 
+		Los atributos de esta clase deben ser públicos para posibilitar el acceso desde cualquier clase 
+		controladora que dependa de ésta. Finalmente se deberá establecer una relación de dependencia 
+		entre la clase controladora y el objeto de sesión que acabamos de definir.</p>
+		
+		<p>Una clase controladora puede depender de más de un objeto de sesión y un objeto de sesión 
+		puede ser compartido por más de una clase controladora.</p>
+		
+		
+		<p align='center'><img src="images/ximage032.gif"></img></p>	
+		
+		<p>Es importante no abusar de este mecanismo, ya que puede
+		limitar la escalabilidad final de la aplicación.</p>
+		
+		<p>La anterior relación de dependencia permite a <i
+		style='mso-bidi-font-style:normal'>LoginController</i> acceder a la instancia
+		de la clase <i style='mso-bidi-font-style:normal'>LoginSession</i> (por
+		ejemplo, para leer o modificar el valor de <i style='mso-bidi-font-style:normal'>attemptCount</i>)
+		de la siguiente manera:</p>
+		
+		<p align='center' style='text-align:center'><span 
+		style='font-family:"Courier New";mso-ansi-language:EN-GB'>
+		this.getLoginSession(request).setAttemptCount(3);</span></p>
+		
+		<p align='center' style='text-align:center'><span 
+		style='font-family:"Courier New";mso-ansi-language:EN-GB'>int x = this.getLoginSession(request).getAttemptCount();</span></p>
+		
+		<p>siendo <i style='mso-bidi-font-style:normal'>request</i> un
+		parámetro que se pasa en todos los métodos del controller.</p>
+				
+		<p><strong>- Llamadas a servicios</strong></p>				
+
+
+		<p><span >Para conectar la capa de presentación
+		con la de servicios solamente será necesario establecer una relación de dependencia
+		entre la clase controller del caso de uso y las &lt;&lt;<i style='mso-bidi-font-style:
+		normal'>Service</i>&gt;&gt;<i style='mso-bidi-font-style:normal'> </i>implicadas
+		(como se verá en la guía de servicios, éstos se modelarán mediante clases
+		marcadas con el estereotipo <i style='mso-bidi-font-style:normal'>Service</i>).</span></p>
+		
+		<p><span >Se pueden establecer tantas relaciones
+		de dependencia como sean necesarias. Para cada una de ellas se creará un Proxy
+		al servicio automáticamente.</span></p>
+		
+		<p><span >En el ejemplo se puede comprobar como en el diagrama de clases asociado al caso de uso Documentar, 
+		se han establecido relaciones de dependencia entre la clase DocumentarController y las de servicios SrvProducto 
+		y SrvPolizas.</span></p>
+		
+		
+		<p align='center'><img src="images/ximage034.jpg"></img></p>	
+		
+		<p><span >De esta manera, para realizar una
+		llamada desde un método del controller <i style='mso-bidi-font-style:normal'>DocumentarController</i>
+		a la operación <i style='mso-bidi-font-style:normal'>setDocumentosByPoliza</i>
+		del servicio <i style='mso-bidi-font-style:normal'>SrvPolizas</i>, incluiríamos
+		la siguiente línea de código:</span></p>
+		
+		<p align='center' style='text-align:center'><span 
+		style='font-family:"Courier New"'>this.getSrvPolizas().setDocumentosByPoliza(codPoliza,listaDocumentos);</span></p>
+		
+		<p><span >De manera equivalente, para realizar una
+		invocación de la operación <i style='mso-bidi-font-style:normal'>getDocumentosByProducto</i>
+		del servicio <i style='mso-bidi-font-style:normal'>SrvProductos</i> incluiríamos
+		la siguiente línea de código:</span></p>
+		
+		<p align='center' style='text-align:center'><span 
+		style='font-family:"Courier New"'>this.getSrvProductos().getDocumentosByProducto(codProducto)</span></p>
+		
+		<p><span ></span></p>
+		
+		<p><strong>- Validación</strong></p>
+
+		<p><span  style='mso-ansi-language:ES-TRAD'>Se dispone de una serie de valores etiquetados para 
+		establecer reglas de validación sobre los parámetros definidos en el diagrama de actividad. 
+		Por lo general se aplicarán sobre campos de entrada de datos definidos en el interfaz de la aplicación. 
+		Como se ha explicado con anterioridad, los campos de entrada se definen como parámetros de una señal 
+		asociada a una transición de salida de un FrontEndView. Para aplicar cierta validación sobre uno de 
+		estos parámetros será necesario asociarle un valor etiquetado   de entre los que se detallan a 
+		continuación.</span></p>
+		
+		<p><b><i><span  style='mso-ansi-language:ES-TRAD'>@andromda.presentation.view.field.format</span></i></b></p>
+		
+		<p><span  style='mso-ansi-language:ES-TRAD;
+		mso-bidi-font-weight:bold;mso-bidi-font-style:italic'>Puede contener una o más
+		reglas de validación separadas por comas. La siguiente tabla muestra los tipos
+		de validaciones definidos y los tipos de datos a los que éstas se pueden
+		aplicar.</span></p>
+
+		<table border='1' cellspacing='0' cellpadding='0' width='680'
+		 style='width:18.0cm;margin-left:5.4pt;border-collapse:collapse;border:none;
+		 mso-border-alt:solid windowtext .5pt;mso-yfti-tbllook:480;mso-padding-alt:
+		 0cm 5.4pt 0cm 5.4pt;mso-border-insideh:.5pt solid windowtext;mso-border-insidev:
+		 .5pt solid windowtext'>
+		 <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+		  <td width='115' valign='top' style='width:86.4pt;border:solid windowtext 1.0pt;
+		  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><b><span  style='mso-bidi-font-family:Arial;
+		  color:black;mso-ansi-language:EN-GB'>Type</span></b><b><i><span 
+		  style='mso-bidi-font-family:Arial;mso-ansi-language:ES-TRAD'></span></i></b></p>
+		  </td>
+		  <td width='115' valign='top' style='width:86.45pt;border:solid windowtext 1.0pt;
+		  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><b><span  style='mso-bidi-font-family:Arial;
+		  color:black;mso-ansi-language:EN-GB'>Value</span></b><b><i><span
+		   style='mso-bidi-font-family:Arial;mso-ansi-language:ES-TRAD'></span></i></b></p>
+		  </td>
+		  <td width='115' valign='top' style='width:86.45pt;border:solid windowtext 1.0pt;
+		  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><b><span  style='mso-bidi-font-family:Arial;
+		  color:black;mso-ansi-language:EN-GB'>Arguments</span></b><b><i><span
+		   style='mso-bidi-font-family:Arial;mso-ansi-language:ES-TRAD'></span></i></b></p>
+		  </td>
+		  <td width='115' valign='top' style='width:86.45pt;border:solid windowtext 1.0pt;
+		  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><b><span  style='mso-bidi-font-family:Arial;
+		  color:black;mso-ansi-language:EN-GB'>Example</span></b><b><i><span
+		   style='mso-bidi-font-family:Arial;mso-ansi-language:ES-TRAD'></span></i></b></p>
+		  </td>
+		  <td width='219' valign='top' style='width:164.55pt;border:solid windowtext 1.0pt;
+		  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+		  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><b><span  style='mso-bidi-font-family:Arial;
+		  color:black;mso-ansi-language:EN-GB'>Description</span></b><b><i><span
+		   style='mso-bidi-font-family:Arial;mso-ansi-language:ES-TRAD'></span></i></b></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:1'>
+		  <td width='115' valign='top' style='width:86.4pt;border:solid windowtext 1.0pt;
+		  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+		  padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p  style='mso-layout-grid-align:none;text-autospace:none'><span
+		   style='mso-bidi-font-family:Arial;color:black;mso-ansi-language:
+		  EN-GB'>java.lang.String</span></p>
+		  </td>
+		  <td width='115' valign='top' style='width:86.45pt;border-top:none;border-left:
+		  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><b style='mso-bidi-font-weight:normal'><span 
+		  style='mso-bidi-font-family:Arial;color:black;mso-ansi-language:EN-GB'>email</span></b></p>
+		  </td>
+		  <td width='115' valign='top' style='width:86.45pt;border-top:none;border-left:
+		  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><span  style='mso-bidi-font-family:Arial;
+		  color:black;mso-ansi-language:EN-GB'>N/A</span></p>
+		  </td>
+		  <td width='115' valign='top' style='width:86.45pt;border-top:none;border-left:
+		  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><span  style='mso-bidi-font-family:Arial;
+		  color:black;mso-ansi-language:EN-GB'>email</span></p>
+		  </td>
+		  <td width='219' valign='top' style='width:164.55pt;border-top:none;border-left:
+		  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p  style='mso-layout-grid-align:none;text-autospace:none'><span
+		  style='mso-bidi-font-family:Arial;color:black'>Comprueba que el dato
+		  introducido sea una dirección de correo electrónico. Se puede combinar con
+		  otras validaciones con el único requisito de que sea el último de la lista.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:2'>
+		  <td width='115' valign='top' style='width:86.4pt;border:solid windowtext 1.0pt;
+		  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+		  padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p  style='mso-layout-grid-align:none;text-autospace:none'><span
+		   style='mso-bidi-font-family:Arial;color:black;mso-ansi-language:
+		  EN-GB'>java.lang.String</span></p>
+		  </td>
+		  <td width='115' valign='top' style='width:86.45pt;border-top:none;border-left:
+		  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><b style='mso-bidi-font-weight:normal'><span 
+		  style='mso-bidi-font-family:Arial;color:black;mso-ansi-language:EN-GB'>creditcard</span></b></p>
+		  </td>
+		  <td width='115' valign='top' style='width:86.45pt;border-top:none;border-left:
+		  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><span  style='mso-bidi-font-family:Arial;
+		  color:black;mso-ansi-language:EN-GB'>N/A</span></p>
+		  </td>
+		  <td width='115' valign='top' style='width:86.45pt;border-top:none;border-left:
+		  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><span  style='mso-bidi-font-family:Arial;
+		  color:black;mso-ansi-language:EN-GB'>creditcard</span></p>
+		  </td>
+		  <td width='219' valign='top' style='width:164.55pt;border-top:none;border-left:
+		  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p  style='mso-layout-grid-align:none;text-autospace:none'><span
+		  style='mso-bidi-font-family:Arial;color:black'>Valida que el dato se
+		  corresponda con un número de tarjeta válido de acuerdo con el algoritmo Luhn.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:3'>
+		  <td width='115' valign='top' style='width:86.4pt;border:solid windowtext 1.0pt;
+		  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+		  padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p  style='mso-layout-grid-align:none;text-autospace:none'><span
+		   style='mso-bidi-font-family:Arial;color:black;mso-ansi-language:
+		  EN-GB'>java.lang.String</span></p>
+		  </td>
+		  <td width='115' valign='top' style='width:86.45pt;border-top:none;border-left:
+		  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><b style='mso-bidi-font-weight:normal'><span 
+		  style='mso-bidi-font-family:Arial;color:black;mso-ansi-language:EN-GB'>pattern</span></b></p>
+		  </td>
+		  <td width='115' valign='top' style='width:86.45pt;border-top:none;border-left:
+		  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><span  style='mso-bidi-font-family:Arial;
+		  color:black;mso-ansi-language:EN-GB'>Expresión regular</span></p>
+		  </td>
+		  <td width='115' valign='top' style='width:86.45pt;border-top:none;border-left:
+		  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><span  style='mso-bidi-font-family:Arial;
+		  color:black;mso-ansi-language:EN-GB'>pattern [a-zA-Z]*</span></p>
+		  </td>
+		  <td width='219' valign='top' style='width:164.55pt;border-top:none;border-left:
+		  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p  style='mso-layout-grid-align:none;text-autospace:none'><span
+		  style='mso-bidi-font-family:Arial;color:black'>Valida el formato del dato
+		  introducido de acuerdo con el patrón indicado. No se debe indicar '^' ni '$'.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:4'>
+		  <td width='115' valign='top' style='width:86.4pt;border:solid windowtext 1.0pt;
+		  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+		  padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p  style='mso-layout-grid-align:none;text-autospace:none'><span
+		   style='mso-bidi-font-family:Arial;color:black;mso-ansi-language:
+		  EN-GB'>java.lang.String</span></p>
+		  </td>
+		  <td width='115' valign='top' style='width:86.45pt;border-top:none;border-left:
+		  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><b style='mso-bidi-font-weight:normal'><span 
+		  style='mso-bidi-font-family:Arial;color:black;mso-ansi-language:EN-GB'>maxlength</span></b></p>
+		  </td>
+		  <td width='115' valign='top' style='width:86.45pt;border-top:none;border-left:
+		  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><span  style='mso-bidi-font-family:Arial;
+		  color:black;mso-ansi-language:EN-GB'>Valor entero</span></p>
+		  </td>
+		  <td width='115' valign='top' style='width:86.45pt;border-top:none;border-left:
+		  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><span  style='mso-bidi-font-family:Arial;
+		  color:black;mso-ansi-language:EN-GB'>maxlength 4</span></p>
+		  </td>
+		  <td width='219' valign='top' style='width:164.55pt;border-top:none;border-left:
+		  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p  style='mso-layout-grid-align:none;text-autospace:none'><span
+		  style='mso-bidi-font-family:Arial;color:black'>Indica el número máximo de
+		  caracteres permitido</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:5'>
+		  <td width='115' valign='top' style='width:86.4pt;border:solid windowtext 1.0pt;
+		  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+		  padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p  style='mso-layout-grid-align:none;text-autospace:none'><span
+		   style='mso-bidi-font-family:Arial;color:black;mso-ansi-language:
+		  EN-GB'>java.lang.String</span><span  style='mso-bidi-font-family:Arial;
+		  color:black;mso-ansi-language:FR'></span></p>
+		  </td>
+		  <td width='115' valign='top' style='width:86.45pt;border-top:none;border-left:
+		  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><b style='mso-bidi-font-weight:normal'><span 
+		  style='mso-bidi-font-family:Arial;color:black;mso-ansi-language:EN-GB'>minlength</span></b></p>
+		  </td>
+		  <td width='115' valign='top' style='width:86.45pt;border-top:none;border-left:
+		  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><span  style='mso-bidi-font-family:Arial;
+		  color:black;mso-ansi-language:EN-GB'>Valor entero</span></p>
+		  </td>
+		  <td width='115' valign='top' style='width:86.45pt;border-top:none;border-left:
+		  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><span  style='mso-bidi-font-family:Arial;
+		  color:black;mso-ansi-language:EN-GB'>minlength 4</span></p>
+		  </td>
+		  <td width='219' valign='top' style='width:164.55pt;border-top:none;border-left:
+		  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p  style='mso-layout-grid-align:none;text-autospace:none'><span
+		  style='mso-bidi-font-family:Arial;color:black'>Indica el número mínimo de
+		  caracteres permitido.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:6'>
+		  <td width='115' valign='top' style='width:86.4pt;border:solid windowtext 1.0pt;
+		  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+		  padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p  style='mso-layout-grid-align:none;text-autospace:none'><span
+		   style='mso-bidi-font-family:Arial;color:black;mso-ansi-language:FR'>java.util.Date,
+		  java.sql.Date</span></p>
+		  </td>
+		  <td width='115' valign='top' style='width:86.45pt;border-top:none;border-left:
+		  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><span  style='mso-bidi-font-family:Arial;
+		  color:black;mso-ansi-language:EN-GB'>N/A </span><span 
+		  style='mso-bidi-font-family:Arial;color:black;mso-ansi-language:FR'></span></p>
+		  </td>
+		  <td width='115' valign='top' style='width:86.45pt;border-top:none;border-left:
+		  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><b style='mso-bidi-font-weight:normal'><span 
+		  style='mso-bidi-font-family:Arial;color:black;mso-ansi-language:EN-GB'>[strict]
+		  (format) </span></b><b style='mso-bidi-font-weight:normal'><span 
+		  style='mso-bidi-font-family:Arial;color:black;mso-ansi-language:FR'></span></b></p>
+		  </td>
+		  <td width='115' valign='top' style='width:86.45pt;border-top:none;border-left:
+		  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><span  style='mso-bidi-font-family:Arial;
+		  color:black;mso-ansi-language:EN-GB'>strict dd/MM/yyyy</span><span 
+		  style='mso-bidi-font-family:Arial;color:black;mso-ansi-language:FR'></span></p>
+		  </td>
+		  <td width='219' valign='top' style='width:164.55pt;border-top:none;border-left:
+		  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p  style='mso-layout-grid-align:none;text-autospace:none'><span
+		  style='mso-bidi-font-family:Arial;color:black'>Indica el formato en el que se
+		  debe introducir la fecha. </span><span  style='mso-bidi-font-family:
+		  Arial;color:black;mso-ansi-language:FR'>(<i style='mso-bidi-font-style:normal'>strict</i>
+		  es opcional).<b style='mso-bidi-font-weight:normal'>*</b></span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:7;mso-yfti-lastrow:yes'>
+		  <td width='115' valign='top' style='width:86.4pt;border:solid windowtext 1.0pt;
+		  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+		  padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p  style='mso-layout-grid-align:none;text-autospace:none'><span
+		   style='mso-bidi-font-family:Arial;color:black;mso-ansi-language:FR'>int,
+		  float, double,</span></p>
+		  <p  style='mso-layout-grid-align:none;text-autospace:none'><span
+		   style='mso-bidi-font-family:Arial;color:black;mso-ansi-language:FR'>java.lang.Integer,</span></p>
+		  <p  style='mso-layout-grid-align:none;text-autospace:none'><span
+		   style='mso-bidi-font-family:Arial;color:black;mso-ansi-language:FR'>java.lang.Float,</span></p>
+		  <p ><span  style='mso-bidi-font-family:Arial;
+		  color:black;mso-ansi-language:FR'>java.lang.Double</span><b><i><span 
+		  style='mso-bidi-font-family:Arial;mso-ansi-language:FR'></span></i></b></p>
+		  </td>
+		  <td width='115' valign='top' style='width:86.45pt;border-top:none;border-left:
+		  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><b style='mso-bidi-font-weight:normal'><span 
+		  style='mso-bidi-font-family:Arial;color:black;mso-ansi-language:FR'>range</span></b><b><i><span
+		   style='mso-bidi-font-family:Arial;mso-ansi-language:FR'></span></i></b></p>
+		  </td>
+		  <td width='115' valign='top' style='width:86.45pt;border-top:none;border-left:
+		  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><span  style='mso-bidi-font-family:Arial;
+		  color:black;mso-ansi-language:FR'>2 valores del mismo tipo</span><b><i><span
+		   style='mso-bidi-font-family:Arial;mso-ansi-language:FR'></span></i></b></p>
+		  </td>
+		  <td width='115' valign='top' style='width:86.45pt;border-top:none;border-left:
+		  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><span  style='mso-bidi-font-family:Arial;
+		  color:black;mso-ansi-language:FR'>range 2 12</span><b><i><span 
+		  style='mso-bidi-font-family:Arial;mso-ansi-language:FR'></span></i></b></p>
+		  </td>
+		  <td width='219' valign='top' style='width:164.55pt;border-top:none;border-left:
+		  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+		  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+		  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><span style='mso-bidi-font-family:Arial;color:black'>Especifica
+		  el rango de valores válido.</span><b><i><span style='mso-bidi-font-family:
+		  Arial'></span></i></b></p>
+		  </td>
+		 </tr>
+		</table>
+
+
+		<p><span  style='mso-ansi-language:ES-TRAD;
+		mso-bidi-font-weight:bold;mso-bidi-font-style:italic'>(*) En el caso de la
+		fecha se puede configurar el formato general incluyendo el tag</span></p>
+		
+		<p style='text-indent:35.4pt'><span 
+		style='font-size:8.0pt;line-height:150%;font-family:Verdana;mso-ansi-language:
+		ES-TRAD;mso-bidi-font-weight:bold;mso-bidi-font-style:italic'><span
+		style='mso-tab-count:1'>         </span></span><span 
+		style='font-size:8.0pt;line-height:150%;font-family:Verdana;mso-ansi-language:
+		EN-GB;mso-bidi-font-weight:bold;mso-bidi-font-style:italic'>&lt;property
+		name=&quot;defaultDateFormat&quot;&gt;dd/MM/yyyy&lt;/property&gt;</span></p>
+		
+		<p style='text-indent:31.2pt'><span style='mso-bidi-font-weight:
+		bold;mso-bidi-font-style:italic'>en el fichero </span><i>mda\conf\andromda.xml.
+		</i></p>
+		
+		<p><b><i><span  style='mso-ansi-language:ES-TRAD'>@andromda.presentation.view.field.required</span></i></b></p>
+		
+		<p><span  style='mso-ansi-language:ES-TRAD;
+		mso-bidi-font-weight:bold;mso-bidi-font-style:italic'>Por defecto su valor es
+		false. Si establecemos este valor etiquetado a true, se comprobará que contiene
+		un valor antes de efectuar el submit del formulario.</span></p>
+		
+		<p><b><i><span  style='mso-ansi-language:ES-TRAD'>@andromda.presentation.web.view.field.validators</span></i></b></p>
+		
+		<p><span  style='mso-ansi-language:ES-TRAD;
+		mso-bidi-font-weight:bold;mso-bidi-font-style:italic'>Sólo aplicable a los
+		parámetros de salida de una acción marcada con el estereotipo <i>&lt;&lt;FrontEndView&gt;&gt;.
+		</i></span></p>
+		
+		<p><b><span  style='mso-ansi-language:ES-TRAD;
+		mso-bidi-font-style:italic'><span style='mso-spacerun:yes'> </span></span></b><span
+		 style='mso-ansi-language:ES-TRAD;mso-bidi-font-weight:bold;
+		mso-bidi-font-style:italic'>El valor puede ser cualquiera de las reglas
+		definidas en el fichero <i>validator-rules.xml </i>(propio de la configuración
+		del framework de validación de Struts).</span></p>
+		
+		<p><span  style='mso-ansi-language:ES-TRAD;
+		mso-bidi-font-weight:bold;mso-bidi-font-style:italic'>Este fichero se encuentra
+		el cartridge de bpm4Struts, en la ruta relativa <i>templates\bpm4struts\configuration.</i>
+		</span></p>
+		
+		<p><span  style='mso-ansi-language:ES-TRAD;
+		mso-bidi-font-weight:bold;mso-bidi-font-style:italic'>Para incluir una regla de
+		validación que no podamos conseguir a partir de las ofrecidas por defecto, se
+		puede incluir en este fichero. Si no queremos volver a compilar el cartridge
+		habrá que definir una ruta de <i>merge</i> en el fichero de configuración <i>andromda.xml</i>,
+		y copiar el fichero <i>validator-rules.xml.vsl </i><span
+		style='mso-spacerun:yes'> </span>y sus dependencias afectadas (si las hubiera)
+		en la misma ruta relativa (es decir para <i>validator-rules.xml.vsl</i> sería
+		&lt;mergePath&gt;\<i> templates\bpm4struts\configuration\</i>).</span></p>
+		
+		<p><span  style='mso-ansi-language:ES-TRAD;
+		mso-bidi-font-weight:bold;mso-bidi-font-style:italic'>Para que no se aplique la
+		validación xhtml sobre el fichero validator-rules.xml, que al llevar el código
+		javascript no es <i>XHTML fiendly, </i>hay que deshabilitar la opción en la
+		sección de bpm4struts del fichero de propiedades <i>andromda.xml:</i></span></p>
+		
+		<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+		mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 0cm'>
+		
+		<p style='text-indent:35.4pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 0cm'><span 
+		style='font-size:8.0pt;line-height:150%;font-family:Verdana;mso-ansi-language:
+		EN-GB;mso-bidi-font-weight:bold;mso-bidi-font-style:italic'>&lt;property
+		name=&quot;xhtml&quot;&gt;false&lt;/property&gt;</span></p>
+		
+		</div>
+		
+		<p><b><i><span  style='mso-ansi-language:EN-GB'></span></i></b></p>
+		
+		<p><b><i><span  style='mso-ansi-language:EN-GB'>@andromda.presentation.web.view.field.validwhen</span></i></b></p>
+		
+		<p><span  style='mso-ansi-language:ES-TRAD;
+		mso-bidi-font-weight:bold;mso-bidi-font-style:italic'>Sólo aplicable a los
+		parámetros de salida de una acción marcada con el estereotipo <i>&lt;&lt;FrontEndView&gt;&gt;.
+		</i></span></p>
+		
+		<p><span  style='mso-ansi-language:ES-TRAD;
+		mso-bidi-font-weight:bold;mso-bidi-font-style:italic'>Permite definir una regla
+		de validación a partir de una expresión lógica ‘compleja’, que se evaluará en
+		tiempo de ejecución. Se puede utilizar, por ejemplo, para verificar que el
+		campo <i>contraseña</i> y el campo <i>confirmación de contraseña </i>tienen
+		valores idénticos, mostrando un error en caso contrario.</span></p>
+		
+		<p><b><span  style='mso-ansi-language:EN-GB;
+		mso-bidi-font-style:italic'>Ver</span></b><span  style='mso-ansi-language:
+		EN-GB;mso-bidi-font-weight:bold;mso-bidi-font-style:italic'> <span
+		style='mso-tab-count:1'>    </span>(</span><span  style='mso-ansi-language:
+		EN-GB'>Designing Complex Validations with validwhen<span style='mso-bidi-font-weight:
+		bold;mso-bidi-font-style:italic'>) en</span></span></p>
+		
+		<p style='text-indent:35.4pt'><span 
+		style='mso-ansi-language:ES-TRAD;mso-bidi-font-weight:bold;mso-bidi-font-style:
+		italic'><a href="http://struts.apache.org/1.x/userGuide/building_view.html#validator"><span
+		 style='mso-ansi-language:EN-GB'>http://struts.apache.org/userGuide/dev_validator.html</span></a></span><span
+		 style='mso-ansi-language:EN-GB;mso-bidi-font-weight:bold;
+		mso-bidi-font-style:italic'> </span><span  style='mso-ansi-language:
+		EN-GB;mso-bidi-font-weight:bold;mso-bidi-font-style:italic'></span></p>
+		
+		<p><span  style='mso-ansi-language:EN-GB;mso-bidi-font-weight:
+		bold;mso-bidi-font-style:italic'></span></p>
+		
+		<p style='mso-layout-grid-align:none;text-autospace:none'><b
+		style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-family:Arial;
+		color:black'>Configuración</span></b></p>
+		
+		<p>Por defecto se encuentran habilitadas tanto la validación en
+		cliente como en servidor. Si quisiéramos modificar esa configuración se pueden
+		modificar (o añadir en caso de que no existan) los siguientes tags de la
+		sección <i style='mso-bidi-font-style:normal'>bpm4struts en el<span
+		style='mso-spacerun:yes'>  </span></i>fichero <i>mda\conf\andromda.xml </i><span
+		style='mso-bidi-font-style:italic'><span
+		style='mso-spacerun:yes'> </span>dentro del proyecto andromda.</span></p>
+		
+		<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+		mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+		margin-left:18.0pt;margin-right:0cm'>
+		
+		<p style='text-indent:17.4pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><b><span 
+		style='font-size:8.0pt;line-height:150%;font-family:Verdana;mso-ansi-language:
+		EN-GB'>&lt;property name=&quot;clientValidation&quot;&gt;true&lt;/property&gt;</span></b></p>
+		
+		<p style='text-indent:17.4pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><b><span 
+		style='font-size:8.0pt;line-height:150%;font-family:Verdana;mso-ansi-language:
+		EN-GB'>&lt;property name=&quot;serverValidation&quot;&gt;true&lt;/property&gt;</span></b><span
+		 style='font-size:8.0pt;line-height:150%;font-family:Verdana;
+		mso-ansi-language:EN-GB'></span></p>
+		
+		</div>
+
+
+		<p style='mso-layout-grid-align:none;text-autospace:none'><b
+		style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-family:Arial;
+		color:black'>Ejemplo</span></b></p>
+		
+		<p><span style='mso-ansi-language:ES'></span></p>
+		
+		<p>Como se ha visto, tenemos la posibilidad de definir nuevas
+		validaciones en caso de que las originales proporcionadas por el framework de
+		validaciones de Struts no sea suficiente. En el ejemplo modelado se ha definido
+		una nueva validación: NIF obligatorio. Para ello:</p>
+		
+		<p></p>
+		
+		<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+		margin-left:18.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;
+		mso-pagination:widow-orphan;mso-list:l0 level1 lfo14;tab-stops:list 18.0pt'><span
+		style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+		style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span>En el fichero de configuración del cartridge
+		de<span style='mso-spacerun:yes'>  </span>andromda mda\conf\andromda.xml añadir
+		la siguiente propiedad dentro del apartado dedicado a bpm4struts:</p>
+		
+		<p style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+		normal;mso-pagination:widow-orphan'></p>
+		
+		<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+		mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+		margin-left:18.0pt;margin-right:0cm'>
+		
+		<p style='text-indent:17.4pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;line-height:150%;font-family:Verdana;mso-ansi-language:
+		EN-GB'>&lt;property
+		name=&quot;mergeLocation&quot;&gt;${maven.src.dir}/cartridge/custom&lt;/property&gt;</span></p>
+		
+		</div>
+		
+		<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+		margin-left:18.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;
+		mso-pagination:widow-orphan;mso-list:l0 level1 lfo14;tab-stops:list 18.0pt'><span
+		style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+		style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span>Copiar en la ruta
+		\mda\src\cartridge\custom\templates\bpm4struts\configuration de nuestro
+		proyecto andromda, <span style='mso-spacerun:yes'> </span>el fichero validator-rules.xml.vsl
+		que se encuentra en la misma ruta relativa del cartridge BPM4Struts.</p>
+		
+		<p style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+		normal;mso-pagination:widow-orphan'></p>
+		
+		<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+		margin-left:18.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;
+		mso-pagination:widow-orphan;mso-list:l0 level1 lfo14;tab-stops:list 18.0pt'><span
+		style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+		style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>
+		</span></span></span>Añadir en el fichero la nueva regla de
+		validación y su función javascript.</p>
+		
+		<p style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+		normal;mso-pagination:widow-orphan'></p>
+		
+		<p style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+		normal;mso-pagination:widow-orphan'></p>
+		
+		<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+		mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+		margin-left:31.2pt;margin-right:0cm'>
+		
+		<p style='mso-line-height-alt:8.0pt;border:none;mso-border-alt:
+		solid windowtext .5pt;padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span
+		 style='mso-ansi-language:ES-TRAD'><span
+		style='mso-spacerun:yes'>    </span></span><span  style='font-size:
+		8.0pt;mso-ansi-language:EN-GB'>&lt;validator name=&quot;validateNif&quot;</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;mso-ansi-language:EN-GB'><span
+		style='mso-spacerun:yes'>       
+		</span>classname=&quot;org.apache.struts.validator.FieldChecks&quot;</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;mso-ansi-language:EN-GB'><span
+		style='mso-spacerun:yes'>               </span>method=&quot;validateRequired&quot;</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;mso-ansi-language:EN-GB'><span
+		style='mso-spacerun:yes'>         </span>methodParams=&quot;java.lang.Object,</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;mso-ansi-language:EN-GB'><span
+		style='mso-spacerun:yes'>                       </span>org.apache.commons.validator.ValidatorAction,</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;mso-ansi-language:EN-GB'><span
+		style='mso-spacerun:yes'>                      
+		</span>org.apache.commons.validator.Field,</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;mso-ansi-language:EN-GB'><span
+		style='mso-spacerun:yes'>                       </span></span><span 
+		style='font-size:8.0pt;mso-ansi-language:FR'>org.apache.struts.action.ActionMessages,</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;mso-ansi-language:FR'><span
+		style='mso-spacerun:yes'>                       </span></span><span
+		style='font-size:8.0pt'>org.apache.commons.validator.Validator,</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span style='font-size:
+		8.0pt'><span style='mso-spacerun:yes'>                       </span></span><span
+		 style='font-size:8.0pt;mso-ansi-language:EN-GB'>javax.servlet.http.HttpServletRequest&quot;</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;mso-ansi-language:EN-GB'><span
+		style='mso-spacerun:yes'>              </span><span style='mso-tab-count:1'>              </span>depends=&quot;&quot;</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;mso-ansi-language:EN-GB'><span
+		style='mso-spacerun:yes'>                </span>msg=&quot;errors.invalid&quot;</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;mso-ansi-language:EN-GB'><span
+		style='mso-spacerun:yes'>               
+		</span>jsFunctionName=&quot;validateNif&quot;&gt;</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;mso-ansi-language:EN-GB'><span
+		style='mso-spacerun:yes'>        </span>&lt;javascript&gt;&lt;![CDATA[</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;mso-ansi-language:EN-GB'><span
+		style='mso-spacerun:yes'>     </span>/**</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;mso-ansi-language:EN-GB'><span
+		style='mso-spacerun:yes'>      </span>* Check to see if fields is in a valid
+		integer range.</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;mso-ansi-language:EN-GB'><span
+		style='mso-spacerun:yes'>      </span>* Fields are not checked if they are
+		disabled.</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;mso-ansi-language:EN-GB'><span
+		style='mso-spacerun:yes'>      </span>* &lt;p&gt;</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;mso-ansi-language:EN-GB'><span
+		style='mso-spacerun:yes'>      </span>* @param form The form validation is
+		taking place on.</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;mso-ansi-language:EN-GB'><span
+		style='mso-spacerun:yes'>      </span>*/</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;mso-ansi-language:EN-GB'><span
+		style='mso-spacerun:yes'>   </span>function validateRequired(form)</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;mso-ansi-language:EN-GB'><span style='mso-tab-count:
+		1'>              </span>{</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;mso-ansi-language:EN-GB'><span style='mso-tab-count:
+		2'>                            </span>var resultado = true;</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;mso-ansi-language:EN-GB'><span style='mso-tab-count:
+		1'>              </span></span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;mso-ansi-language:EN-GB'><span style='mso-tab-count:
+		2'>                            </span>abc=form.nif.value;</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;mso-ansi-language:EN-GB'><span style='mso-tab-count:
+		2'>                            </span>dni=abc.substring(0,abc.length-1);</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;mso-ansi-language:EN-GB'><span style='mso-tab-count:
+		2'>                            </span>let=abc.charAt(abc.length-1);</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;mso-ansi-language:EN-GB'><span style='mso-tab-count:
+		2'>                            </span>if (!isNaN(let))</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;mso-ansi-language:EN-GB'><span style='mso-tab-count:
+		2'>                            </span><span style='mso-spacerun:yes'> </span>{</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;mso-ansi-language:EN-GB'><span style='mso-tab-count:
+		2'>                            </span><span style='mso-spacerun:yes'> 
+		</span>resultado = false;</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;mso-ansi-language:EN-GB'><span style='mso-tab-count:
+		2'>                            </span><span style='mso-spacerun:yes'> 
+		</span>alert('NIF mal formado');</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;mso-ansi-language:EN-GB'><span style='mso-tab-count:
+		2'>                            </span><span style='mso-spacerun:yes'> </span>}</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;mso-ansi-language:EN-GB'><span style='mso-tab-count:
+		2'>                            </span>else</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;mso-ansi-language:EN-GB'><span style='mso-tab-count:
+		2'>                            </span><span style='mso-spacerun:yes'> </span>{</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:8.0pt;mso-ansi-language:EN-GB'><span style='mso-tab-count:
+		2'>                            </span><span style='mso-spacerun:yes'>  </span></span><span
+		style='font-size:8.0pt'>cadena=&quot;TRWAGMYFPDXBNJZSQVHLCKET&quot;;</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span style='font-size:
+		8.0pt'><span style='mso-tab-count:2'>                            </span><span
+		style='mso-spacerun:yes'>  </span>posicion = dni % 23;</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span style='font-size:
+		8.0pt'><span style='mso-tab-count:2'>                            </span><span
+		style='mso-spacerun:yes'>  </span>letra =
+		cadena.substring(posicion,posicion+1);</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span style='font-size:
+		8.0pt'><span style='mso-tab-count:2'>                            </span><span
+		style='mso-spacerun:yes'>  </span>if (letra!=let.toUpperCase())</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span style='font-size:
+		8.0pt'><span style='mso-tab-count:2'>                            </span><span
+		style='mso-spacerun:yes'>   </span>{</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span style='font-size:
+		8.0pt'><span style='mso-tab-count:2'>                            </span><span
+		style='mso-spacerun:yes'>    </span>resultado = false;</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span style='font-size:
+		8.0pt'><span style='mso-tab-count:2'>                            </span><span
+		style='mso-spacerun:yes'>    </span>alert('NIF mal formado');</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span style='font-size:
+		8.0pt'><span style='mso-tab-count:2'>                            </span><span
+		style='mso-spacerun:yes'>   </span>}</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span style='font-size:
+		8.0pt'><span style='mso-tab-count:2'>                            </span><span
+		style='mso-spacerun:yes'> </span>}</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span style='font-size:
+		8.0pt'><span style='mso-tab-count:1'>              </span><span
+		style='mso-tab-count:1'>              </span>return resultado;</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span style='font-size:
+		8.0pt'><span style='mso-tab-count:1'>              </span>}</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span style='font-size:
+		8.0pt'>]]&gt;</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span style='font-size:
+		8.0pt'><span style='mso-spacerun:yes'>        </span>&lt;/javascript&gt;</span></p>
+		
+		<p style='line-height:8.0pt;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span style='font-size:
+		8.0pt'><span style='mso-spacerun:yes'>      </span>&lt;/validator&gt;</span></p>
+		
+		</div>
+		
+		<p style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+		normal;mso-pagination:widow-orphan'></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'></b></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'>Ver</b></p>
+		
+		<p>Validación en cliente y en servidor:</p>
+		
+		<p><a
+		href="http://struts.apache.org/1.x/userGuide/building_view.html#validator">http://struts.apache.org/1.x/userGuide/building_view.html#validator</a></p>
+		
+		<p><span  style='mso-ansi-language:EN-GB'>Struts Validator:</span></p>
+		
+		<p><a
+		href="http://www.oreilly.com/catalog/0596006519/chapter/ch11.pdf"><span
+		 style='mso-ansi-language:EN-GB'>http://www.oreilly.com/catalog/0596006519/chapter/ch11.pdf</span></a><span
+		 style='mso-ansi-language:EN-GB'></span></p>
+		
+		<p><span  style='mso-ansi-language:EN-GB'></span></p>
+		
+		
+		<h3><a name="_Toc119754808"><span 
+		style='mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'><span
+		style='mso-list:Ignore'>3.2.7 <span style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Internacionalización</span></a></h3>
+		
+		<p><span >Pensando en la internacionalización de
+		la capa de presentación, se dispone de una serie de ficheros de etiquetas (<i
+		style='mso-bidi-font-style:normal'>resource</i> <i style='mso-bidi-font-style:
+		normal'>bundles</i>) por defecto. Estos ficheros podrán ser traducidos a tantos
+		idiomas como se desee. Para ello basta con añadir al nombre del fichero <b
+		style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'>_&lt;codigo
+		del idioma&gt;</i></b>. Por ejemplo, para el fichero
+		application-resources.properties, el correspondiente traducido al castellano
+		será application-resources<b style='mso-bidi-font-weight:normal'>_es</b>.properties.</span></p>
+		
+		<p><span >A continuación se detalla cada uno de
+		estos ficheros de etiquetas:</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span >application-resources.properties</span></b></p>
+		
+		<p><span >Este fichero contiene las etiquetas
+		extraídas del diagrama UML. Se podrán encontrar nombres de campos de
+		formularios, de tablas, textos de ayuda en línea. Estos mensajes se incorporan
+		a los ficheros jsp mediante los tags <i style='mso-bidi-font-style:normal'>&lt;bean:message
+		key=”label.key”&gt;</i>.</span></p>
+		
+		<p><span ></span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span >displaytag.properties</span></b></p>
+		
+		<p><span >Almacena los tags de la capa de
+		presentación asociados a mensajes susceptibles de traducción de las tablas de
+		interfaz de usuario. Por ejemplo Mensajes en banners, links de paginación de
+		tablas, etc.</span></p>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span >Custom-resources.properties</span></b></p>
+		
+		<p><span >Este fichero no se encuentra por defecto
+		en el código generado. Si se desea añadir uno a más ficheros de mensajes a los
+		ya existentes, basta con añadirlo en la rama <i style='mso-bidi-font-style:
+		normal'>src </i>que corresponda, y configurar un punto de <i style='mso-bidi-font-style:
+		normal'>merge</i> con este fichero en el apartado reservado a mensajes del
+		fichero Bpm4StrutsMergeMappings.xml.</span></p>
+		
+		<p><span >Si por ejemplo añadimos un fichero
+		MiCustom.properties en el directorio /web/src/properties/, debemos añadir en el
+		fichero Bpm4StrutsMergeMappings.xml el siguiente nodo xml</span></p>
+		
+		<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+		mso-border-alt:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt'>
+		
+		<p style='line-height:normal;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span style='mso-tab-count:
+		1'>           </span><span  style='font-size:10.0pt;mso-bidi-font-size:
+		12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+		EN-GB'>&lt;mapping&gt;</span></p>
+		
+		<p style='line-height:normal;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:
+		"Times New Roman";mso-ansi-language:EN-GB'><span
+		style='mso-spacerun:yes'>                </span><span style='mso-tab-count:
+		1'>     </span>&lt;from&gt;&lt;![CDATA[# custom-messages
+		merge-point]]&gt;&lt;/from&gt;</span></p>
+		
+		<p style='line-height:normal;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:
+		"Times New Roman";mso-ansi-language:EN-GB'><span
+		style='mso-spacerun:yes'>              </span><span style='mso-tab-count:1'>       </span><span
+		style='mso-spacerun:yes'>  </span>&lt;to&gt;</span></p>
+		
+		<p style='line-height:normal;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:
+		"Times New Roman";mso-ansi-language:EN-GB'><span
+		style='mso-spacerun:yes'>                 </span><span style='mso-tab-count:
+		1'>    </span><span style='mso-spacerun:yes'>   </span><span style='mso-tab-count:
+		1'>        </span>&lt;path&gt;../../../web/src/properties/Micustom.properties&lt;/path&gt;</span></p>
+		
+		<p style='line-height:normal;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span 
+		style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:
+		"Times New Roman";mso-ansi-language:EN-GB'><span
+		style='mso-spacerun:yes'>              </span><span style='mso-tab-count:1'>       </span><span
+		style='mso-spacerun:yes'>  </span></span><span style='font-size:10.0pt;
+		mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>&lt;/to&gt;</span></p>
+		
+		<p style='line-height:normal;border:none;mso-border-alt:solid windowtext .5pt;
+		padding:0cm;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span style='font-size:
+		10.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><span
+		style='mso-spacerun:yes'>            </span>&lt;/mapping&gt;</span></p>
+		
+		</div>
+		
+		<p><b style='mso-bidi-font-weight:normal'><span ></span></b></p>
+		
+		<p><span >Para sobrescribir cualquier mensaje de
+		los incluidos en los ficheros por defecto con uno personalizado, es suficiente con
+		incluirlo en el fichero personalizado.</span></p>
+		
+		<p><span >Esta personalización puede ser muy útil
+		en el caso de que queramos realizar un tratamiento más dinámico de los
+		mensajes, pudiendo seleccionar desde el controller el mensaje a mostrar o
+		guardando ciertos mensajes con la instrucción <i style='mso-bidi-font-style:
+		normal'>saveMessages(..).</i></span></p>
+
+		<p><strong>Otros Contenidos</strong></p>
+		
+		<p><span >Para realizar la inclusión de otros
+		contenidos (imágenes, documentos en formato PDF, etc.) dentro de la aplicación
+		web, el modo es escribir directamente en la respuesta http en vez de permitir a
+		struts que nos redirija a alguna acción. Para ello, es necesario hacer un
+		‘defer’ a un método del controller en <b style='mso-bidi-font-weight:normal'>un
+		estado </b>(actividad) <b style='mso-bidi-font-weight:normal'>que no tenga
+		transiciones de salida</b>. </span></p>
+		
+		<p><span >Dentro del método invocado en ese
+		estado, el código a utilizar debe ser similar al siguiente (en este ejemplo se
+		envía una imagen almacenada en una variable de nombre <i style='mso-bidi-font-style:
+		normal'>image</i>):</span></p>
+		
+		<p align='left' style='margin-left:62.4pt;text-align:left'><span
+		 style='font-family:"Courier New";mso-ansi-language:EN-GB'>response.setContentType(“image/jpeg”);</span></p>
+		
+		<p align='left' style='margin-left:62.4pt;text-align:left'><span
+		 style='font-family:"Courier New";mso-ansi-language:EN-GB'>response.setContentLength(image.length);</span></p>
+		
+		<p align='left' style='margin-left:62.4pt;text-align:left'><span
+		 style='font-family:"Courier New";mso-ansi-language:EN-GB'>response.getOutputStream().write(image);</span></p>
+		
+		<p><span style='mso-ansi-language:ES'>La variable <i
+		style='mso-bidi-font-style:normal'>response</i> se pasa como parámetro en todos
+		los métodos de las clases controladoras.</span></p>
+		
+		<p><span style='mso-ansi-language:ES'></span></p>
+		<a name="ind_4"></a>
+		
+	</section>
+
+
+
+
+
+
+				
+		
+	<section name="Mantenimientos">
+
+
+		<p><span style='mso-bookmark:_Toc112576864'><span
+		>Una funcionalidad a caballo entre la interfaz de usuario y los
+		servicios son los mantenimientos. Por mantenimientos entendemos la
+		funcionalidad CRUD</span></span><a style='mso-footnote-id:ftn4' href="#_ftn4"
+		name="_ftnref4" title=""><span style='mso-bookmark:_Toc112576864'><span
+		><span ><span style='mso-special-character:
+		footnote'><span ><span
+		 style='font-size:10.0pt;line-height:150%;font-family:Arial;
+		mso-fareast-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+		letter-spacing:-.15pt;mso-ansi-language:ES-TRAD;mso-fareast-language:ES;
+		mso-bidi-language:AR-SA'>[4]</span></span></span></span></span></span></a><span
+		style='mso-bookmark:_Toc112576864'><span > sobre una entidad.</span></span></p>
+		
+		<p><span style='mso-bookmark:_Toc112576864'><span
+		>Para definir los mantenimientos sobre una entidad (una clase a la
+		que se ha aplicado el estereotipo <i style='mso-bidi-font-style:normal'>&lt;&lt;Entity&gt;&gt;</i>),
+		basta con aplicarle, además, el estereotipo &lt;&lt;Maneageble&gt;&gt;.</span></span></p>
+		
+		<p><span style='mso-bookmark:_Toc112576864'><span
+		>Para controlar el acceso a los mantenimientos de modo que solo los
+		perfiles así definidos tengan acceso a los mismos, se establece una relación de
+		dependencia entre el actor y la entidad. Así, en el diagrama siguiente, solo
+		los usuarios cuyo rol es ‘Direccion’ pueden realizar mantenimientos de las
+		entidades indicadas:</span></span></p>
+		
+		<p align='center'><img src="images/ximage041.jpg"></img></p>		
+		
+		<p><span style='mso-bookmark:_Toc112576864'><span
+		>El anterior diagrama, tomado del ejemplo creado para mostrar las
+		capacidades de I-Builder, produce un conjunto de pantallas de mantenimiento
+		como la que se muestra a continuación para el caso de la entidad <i
+		style='mso-bidi-font-style:normal'>TallerProducto</i>:</span></span></p>
+
+		<p align='center'><img src="images/ximage043.jpg"></img></p>		
+		
+		<a name="ind_5"></a>
+	</section>
+	<section name="Estereotipos y Valores Etiquetados">
+	
+		<p><span >A modo de resumen y referencia, se
+		incluye en este apartado el conjunto de estereotipos y valores etiquetados
+		(tagged-values) disponibles para el modelado de aplicaciones web:</span></p>
+		
+		<p><strong>- Estereotipos</strong></p>
+		
+		<table border='1' cellspacing='0' cellpadding='0' width='659'
+		 style='width:494.45pt;border-collapse:collapse;border:none;mso-border-top-alt:
+		 solid black 1.5pt;mso-border-bottom-alt:solid black 1.5pt;mso-yfti-tbllook:
+		 160;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
+		 <tr style='mso-yfti-irow:-1;mso-yfti-firstrow:yes;height:12.75pt'>
+		  <td width='253'  valign='top' style='width:189.7pt;border-top:solid black 1.5pt;
+		  border-left:none;border-bottom:solid black 1.0pt;border-right:none;
+		  mso-border-top-alt:solid black 1.5pt;mso-border-bottom-alt:solid black .75pt;
+		  background:purple;mso-shading:white;mso-pattern:solid purple;padding:0cm 5.4pt 0cm 5.4pt;
+		  height:12.75pt'>
+		  <p style='mso-yfti-cnfc:517'><a name="RANGE!A1:C6"><b><span
+		  style='font-family:"Courier New";color:white'>Estereotip</span></b></a><b><span
+		  style='font-family:"Courier New";color:white'>os</span></b></p>
+		  </td>
+		  <td width='161'  valign='top' style='width:120.5pt;border-top:solid black 1.5pt;
+		  border-left:none;border-bottom:solid black 1.0pt;border-right:none;
+		  mso-border-top-alt:solid black 1.5pt;mso-border-bottom-alt:solid black .75pt;
+		  background:purple;mso-shading:white;mso-pattern:solid purple;padding:0cm 5.4pt 0cm 5.4pt;
+		  height:12.75pt'>
+		  <p style='mso-yfti-cnfc:1'><b style='mso-bidi-font-weight:
+		  normal'><span style='font-family:"Courier New";color:white'>Elemento</span></b></p>
+		  </td>
+		  <td width='246'  valign='top' style='width:184.25pt;border-top:solid black 1.5pt;
+		  border-left:none;border-bottom:solid black 1.0pt;border-right:none;
+		  mso-border-top-alt:solid black 1.5pt;mso-border-bottom-alt:solid black .75pt;
+		  background:purple;mso-shading:white;mso-pattern:solid purple;padding:0cm 5.4pt 0cm 5.4pt;
+		  height:12.75pt'>
+		  <p style='mso-yfti-cnfc:1'><b style='mso-bidi-font-weight:
+		  normal'><span style='font-family:"Courier New";color:white'>Descripción</span></b></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:0;height:12.75pt'>
+		  <td width='253'  valign='top' style='width:189.7pt;border:none;background:
+		  silver;mso-shading:white;mso-pattern:solid silver;padding:0cm 5.4pt 0cm 5.4pt;
+		  height:12.75pt'>
+		  <p style='mso-yfti-cnfc:4'><b><span style='font-family:"Courier New"'>FrontEndSessionObject</span></b></p>
+		  </td>
+		  <td width='161'  valign='top' style='width:120.5pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p><span style='font-family:"Courier New"'>Class</span></p>
+		  </td>
+		  <td width='246'  valign='top' style='width:184.25pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p><span style='font-family:"Courier New"'>
+		  Estas clases pueden ser asociadas a Controllers. Representan objetos que persisten durante la sesión. 
+		  Por cada uno de estos objetos de sesión asociados a Controllers, el Controller tendrá métodos de acceso. 
+		  Se debe establecer una dependencia entre el controller y este objeto de sesión para establecer esta 
+		  relación. Un Controller puede tener dependencia con muchos objetos de sesión; y de la misma manera un 
+		  objeto de sesión puede estar compartido con muchos controllers. 
+		  </span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:1;height:12.75pt'>
+		  <td width='253'  valign='top' style='width:189.7pt;border:none;background:
+		  silver;mso-shading:white;mso-pattern:solid silver;padding:0cm 5.4pt 0cm 5.4pt;
+		  height:12.75pt'>
+		  <p style='mso-yfti-cnfc:4'><b><span style='font-family:"Courier New"'>FrontEndApplication</span></b></p>
+		  </td>
+		  <td width='161'  valign='top' style='width:120.5pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p><span style='font-family:"Courier New"'>UseCase</span></p>
+		  </td>
+		  <td width='246'  valign='top' style='width:184.25pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p><span style='font-family:"Courier New"'>
+		  El caso de uso etiquetado con este estereotipo es el punto de entrada a la aplicación. 
+		  Necesitará además estar etiquetado con el estereotipo FrontEndUseCase.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:2;height:12.75pt'>
+		  <td width='253'  valign='top' style='width:189.7pt;border:none;background:
+		  silver;mso-shading:white;mso-pattern:solid silver;padding:0cm 5.4pt 0cm 5.4pt;
+		  height:12.75pt'>
+		  <p style='mso-yfti-cnfc:4'><b><span style='font-family:"Courier New"'>FrontEndUseCase</span></b></p>
+		  </td>
+		  <td width='161'  valign='top' style='width:120.5pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p><span style='font-family:"Courier New"'>UseCase</span></p>
+		  </td>
+		  <td width='246'  valign='top' style='width:184.25pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p><span style='font-family:"Courier New"'>Caso de uso que participa
+		  en los procesos de Front-End.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:3;height:12.75pt'>
+		  <td width='253'  valign='top' style='width:189.7pt;border:none;background:
+		  silver;mso-shading:white;mso-pattern:solid silver;padding:0cm 5.4pt 0cm 5.4pt;
+		  height:12.75pt'>
+		  <p style='mso-yfti-cnfc:4'><b><span style='font-family:"Courier New"'>FrontEndView</span></b></p>
+		  </td>
+		  <td width='161'  valign='top' style='width:120.5pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p><span style='font-family:"Courier New"'>Action State</span></p>
+		  </td>
+		  <td width='246'  valign='top' style='width:184.25pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p><span style='font-family:"Courier New"'>Página JSP</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:4;mso-yfti-lastrow:yes;height:12.75pt'>
+		  <td width='253'  valign='top' style='width:189.7pt;border:none;border-bottom:
+		  solid black 1.5pt;background:silver;mso-shading:white;mso-pattern:solid silver;
+		  padding:0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p style='mso-yfti-cnfc:4'><b><span style='font-family:"Courier New"'>FrontEndException</span></b></p>
+		  </td>
+		  <td width='161'  valign='top' style='width:120.5pt;border:none;border-bottom:
+		  solid black 1.5pt;padding:0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p><span style='font-family:"Courier New"'>Transition</span></p>
+		  </td>
+		  <td width='246'  valign='top' style='width:184.25pt;border:none;border-bottom:
+		  solid black 1.5pt;padding:0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p><span style='font-family:"Courier New"'>Designa una
+		  excepción ocurrida cuando se procesa una acción.</span></p>
+		  </td>
+		 </tr>
+		</table>
+		
+		<p><strong>- Valores Etiquetados</strong></p>
+		
+		<table  border='1' cellspacing='0' cellpadding='0' width='659'
+		 style='width:494.45pt;border-collapse:collapse;border:none;mso-border-top-alt:
+		 solid black 1.5pt;mso-border-bottom-alt:solid black 1.5pt;mso-yfti-tbllook:
+		 160;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
+		 <tr style='mso-yfti-irow:-1;mso-yfti-firstrow:yes;height:12.75pt'>
+		  <td width='253'  valign='top' style='width:189.7pt;border-top:solid black 1.5pt;
+		  border-left:none;border-bottom:solid black 1.0pt;border-right:none;
+		  mso-border-top-alt:solid black 1.5pt;mso-border-bottom-alt:solid black .75pt;
+		  background:purple;mso-shading:white;mso-pattern:solid purple;padding:0cm 5.4pt 0cm 5.4pt;
+		  height:12.75pt'>
+		  <p  style='mso-yfti-cnfc:517'><a name="RANGE!A1:C26"><b><span
+		  style='font-family:"Courier New";color:white'>Tagged value</span></b></a><b><span
+		  style='font-family:"Courier New";color:white'></span></b></p>
+		  </td>
+		  <td width='161'  valign='top' style='width:120.5pt;border-top:solid black 1.5pt;
+		  border-left:none;border-bottom:solid black 1.0pt;border-right:none;
+		  mso-border-top-alt:solid black 1.5pt;mso-border-bottom-alt:solid black .75pt;
+		  background:purple;mso-shading:white;mso-pattern:solid purple;padding:0cm 5.4pt 0cm 5.4pt;
+		  height:12.75pt'>
+		  <p  style='mso-yfti-cnfc:1'><b style='mso-bidi-font-weight:
+		  normal'><span style='font-family:"Courier New";color:white'>Elemento</span></b></p>
+		  </td>
+		  <td width='246'  valign='top' style='width:184.25pt;border-top:solid black 1.5pt;
+		  border-left:none;border-bottom:solid black 1.0pt;border-right:none;
+		  mso-border-top-alt:solid black 1.5pt;mso-border-bottom-alt:solid black .75pt;
+		  background:purple;mso-shading:white;mso-pattern:solid purple;padding:0cm 5.4pt 0cm 5.4pt;
+		  height:12.75pt'>
+		  <p  style='mso-yfti-cnfc:1'><b style='mso-bidi-font-weight:
+		  normal'><span style='font-family:"Courier New";color:white'>Descripción</span></b></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:0;height:12.75pt'>
+		  <td width='253'  valign='top' style='width:189.7pt;border:none;background:
+		  silver;mso-shading:white;mso-pattern:solid silver;padding:0cm 5.4pt 0cm 5.4pt;
+		  height:12.75pt'>
+		  <p  style='mso-yfti-cnfc:4'><b><span style='font-family:"Courier New"'>@struts.action.type
+		  (*)</span></b></p>
+		  </td>
+		  <td width='161'  valign='top' style='width:120.5pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Transición que
+		  sale de un<span style='mso-spacerun:yes'>  </span>action state etiquetado
+		  como<span style='mso-spacerun:yes'>  </span>&lt;&lt;FrontEndView&gt;&gt; </span></p>
+		  </td>
+		  <td width='246'  valign='top' style='width:184.25pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>
+		  Indica el tipo de trigger que lanza la acción. Puede ser: hyperlink, image y form</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:1;height:12.75pt'>
+		  <td width='253'  valign='top' style='width:189.7pt;border:none;background:
+		  silver;mso-shading:white;mso-pattern:solid silver;padding:0cm 5.4pt 0cm 5.4pt;
+		  height:12.75pt'>
+		  <p  style='mso-yfti-cnfc:4'><b><span style='font-family:"Courier New"'>@struts.action.redirect</span></b></p>
+		  </td>
+		  <td width='161'  valign='top' style='width:120.5pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Transición que
+		  sale de un<span style='mso-spacerun:yes'>  </span>action state etiquetado
+		  como<span style='mso-spacerun:yes'>  </span>&lt;&lt;FrontEndView&gt;&gt;</span></p>
+		  </td>
+		  <td width='246'  valign='top' style='width:184.25pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Indica si se puede
+		  dar o no una redirección HTTP al hacer el forward a la siguiente dirección.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:2;height:12.75pt'>
+		  <td width='253'  valign='top' style='width:189.7pt;border:none;background:
+		  silver;mso-shading:white;mso-pattern:solid silver;padding:0cm 5.4pt 0cm 5.4pt;
+		  height:12.75pt'>
+		  <p  style='mso-yfti-cnfc:4'><b><span 
+		  style='font-family:"Courier New";mso-ansi-language:EN-GB'>@struts.action.success.message</span></b></p>
+		  </td>
+		  <td width='161'  valign='top' style='width:120.5pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Transición que
+		  sale de un<span style='mso-spacerun:yes'>  </span>action state etiquetado
+		  como<span style='mso-spacerun:yes'>  </span>&lt;&lt;FrontEndView&gt;&gt;</span></p>
+		  </td>
+		  <td width='246'  valign='top' style='width:184.25pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Cuando la acción
+		  se complete, habrá un mensaje de éxito en la pantalla.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:3;height:12.75pt'>
+		  <td width='253'  valign='top' style='width:189.7pt;border:none;background:
+		  silver;mso-shading:white;mso-pattern:solid silver;padding:0cm 5.4pt 0cm 5.4pt;
+		  height:12.75pt'>
+		  <p  style='mso-yfti-cnfc:4'><b><span 
+		  style='font-family:"Courier New";mso-ansi-language:EN-GB'>@struts.action.warning.message</span></b></p>
+		  </td>
+		  <td width='161'  valign='top' style='width:120.5pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Transición que
+		  sale de un<span style='mso-spacerun:yes'>  </span>action state etiquetado
+		  como<span style='mso-spacerun:yes'>  </span>&lt;&lt;FrontEndView&gt;&gt;</span></p>
+		  </td>
+		  <td width='246'  valign='top' style='width:184.25pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Cuando la acción
+		  se complete, se visualizará un mensaje de Warning en la pantalla.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:4;height:12.75pt'>
+		  <td width='253'  valign='top' style='width:189.7pt;border:none;background:
+		  silver;mso-shading:white;mso-pattern:solid silver;padding:0cm 5.4pt 0cm 5.4pt;
+		  height:12.75pt'>
+		  <p  style='mso-yfti-cnfc:4'><b><span style='font-family:"Courier New"'>@struts.action.resettable</span></b></p>
+		  </td>
+		  <td width='161'  valign='top' style='width:120.5pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Transición que
+		  sale de un<span style='mso-spacerun:yes'>  </span>action state etiquetado
+		  como<span style='mso-spacerun:yes'>  </span>&lt;&lt;FrontEndView&gt;&gt;</span></p>
+		  </td>
+		  <td width='246'  valign='top' style='width:184.25pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Con valor <i
+		  style='mso-bidi-font-style:normal'>true </i><span
+		  style='mso-spacerun:yes'> </span>si se desea que el formulario se pueda <i
+		  style='mso-bidi-font-style:normal'>resetear</i> <i style='mso-bidi-font-style:
+		  normal'><span style='mso-spacerun:yes'> </span>con </i>sus valores
+		  originales.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:5;height:12.75pt'>
+		  <td width='253'  valign='top' style='width:189.7pt;border:none;background:
+		  silver;mso-shading:white;mso-pattern:solid silver;padding:0cm 5.4pt 0cm 5.4pt;
+		  height:12.75pt'>
+		  <p  style='mso-yfti-cnfc:4'><b><span 
+		  style='font-family:"Courier New";mso-ansi-language:EN-GB'>@struts.view.field.type</span></b></p>
+		  </td>
+		  <td width='161'  valign='top' style='width:120.5pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Parámetro</span></p>
+		  </td>
+		  <td width='246'  valign='top' style='width:184.25pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>
+		  Tipo de parámetro a visualizar en la pantalla. Puede ser: link, multibox, 
+		  text, textarea, checkbox, radio, select, password, hidden y plaintext.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:6;height:12.75pt'>
+		  <td width='253'  valign='top' style='width:189.7pt;border:none;background:
+		  silver;mso-shading:white;mso-pattern:solid silver;padding:0cm 5.4pt 0cm 5.4pt;
+		  height:12.75pt'>
+		  <p  style='mso-yfti-cnfc:4'><b><span 
+		  style='font-family:"Courier New";mso-ansi-language:EN-GB'>@struts.view.field.radio</span></b></p>
+		  </td>
+		  <td width='161'  valign='top' style='width:120.5pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Parámetro</span></p>
+		  </td>
+		  <td width='246'  valign='top' style='width:184.25pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Puede ser usado junto
+		  con @struts.view.field.type=radio, para especificar el número de opciones a
+		  mostrar, y sus valores.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:7;height:12.75pt'>
+		  <td width='253'  valign='top' style='width:189.7pt;border:none;background:
+		  silver;mso-shading:white;mso-pattern:solid silver;padding:0cm 5.4pt 0cm 5.4pt;
+		  height:12.75pt'>
+		  <p  style='mso-yfti-cnfc:4'><b><span 
+		  style='font-family:"Courier New";mso-ansi-language:EN-GB'>@struts.view.field.multibox</span></b></p>
+		  </td>
+		  <td width='161'  valign='top' style='width:120.5pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Parámetro</span></p>
+		  </td>
+		  <td width='246'  valign='top' style='width:184.25pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Puede ser usado
+		  junto con @struts.view.field.type=multibox en una tabla. Especifica la
+		  variable de entrada de la página que contiene los valores a utilizar. Si se
+		  encuentra una coincidencia, se chequeará la columna correspondiente de la
+		  checkbox.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:8;height:12.75pt'>
+		  <td width='253'  valign='top' style='width:189.7pt;border:none;background:
+		  silver;mso-shading:white;mso-pattern:solid silver;padding:0cm 5.4pt 0cm 5.4pt;
+		  height:12.75pt'>
+		  <p  style='mso-yfti-cnfc:4'><b><span 
+		  style='font-family:"Courier New";mso-ansi-language:EN-GB'>@struts.view.field.reset</span></b></p>
+		  </td>
+		  <td width='161'  valign='top' style='width:120.5pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Parámetro </span></p>
+		  </td>
+		  <td width='246'  valign='top' style='width:184.25pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>
+		  Indica si el campo debe ser reseteado o no después de realizar la acción. 
+		  Es útil cuando no todos los campos deben ser reseteados.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:9;height:12.75pt'>
+		  <td width='253'  valign='top' style='width:189.7pt;border:none;background:
+		  silver;mso-shading:white;mso-pattern:solid silver;padding:0cm 5.4pt 0cm 5.4pt;
+		  height:12.75pt'>
+		  <p  style='mso-yfti-cnfc:4'><b><span 
+		  style='font-family:"Courier New";mso-ansi-language:EN-GB'>@struts.view.field.required</span></b></p>
+		  </td>
+		  <td width='161'  valign='top' style='width:120.5pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Parámetro</span></p>
+		  </td>
+		  <td width='246'  valign='top' style='width:184.25pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Indica si se trata
+		  de un campo obligatorio.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:10;height:12.75pt'>
+		  <td width='253'  valign='top' style='width:189.7pt;border:none;background:
+		  silver;mso-shading:white;mso-pattern:solid silver;padding:0cm 5.4pt 0cm 5.4pt;
+		  height:12.75pt'>
+		  <p  style='mso-yfti-cnfc:4'><b><span 
+		  style='font-family:"Courier New";mso-ansi-language:EN-GB'>@struts.view.field.format
+		  (**)</span></b></p>
+		  </td>
+		  <td width='161'  valign='top' style='width:120.5pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Parámetro</span></p>
+		  </td>
+		  <td width='246'  valign='top' style='width:184.25pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Formato del valor
+		  del campo</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:11;height:12.75pt'>
+		  <td width='253'  valign='top' style='width:189.7pt;border:none;background:
+		  silver;mso-shading:white;mso-pattern:solid silver;padding:0cm 5.4pt 0cm 5.4pt;
+		  height:12.75pt'>
+		  <p  style='mso-yfti-cnfc:4'><b><span 
+		  style='font-family:"Courier New";mso-ansi-language:EN-GB'>@struts.view.field.validwhen</span></b></p>
+		  </td>
+		  <td width='161'  valign='top' style='width:120.5pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Parámetro</span></p>
+		  </td>
+		  <td width='246'  valign='top' style='width:184.25pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Validación adicional
+		  a realizar. Se debe especificar una condición de Struts-Validator.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:12;height:12.75pt'>
+		  <td width='253'  valign='top' style='width:189.7pt;border:none;background:
+		  silver;mso-shading:white;mso-pattern:solid silver;padding:0cm 5.4pt 0cm 5.4pt;
+		  height:12.75pt'>
+		  <p  style='mso-yfti-cnfc:4'><b><span 
+		  style='font-family:"Courier New";mso-ansi-language:EN-GB'>@struts.view.field.validators</span></b></p>
+		  </td>
+		  <td width='161'  valign='top' style='width:120.5pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Parámetro</span></p>
+		  </td>
+		  <td width='246'  valign='top' style='width:184.25pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Validación
+		  personalizada a realizar, Se pueden especificar una o más separadas por
+		  comas.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:13;height:12.75pt'>
+		  <td width='253'  valign='top' style='width:189.7pt;border:none;background:
+		  silver;mso-shading:white;mso-pattern:solid silver;padding:0cm 5.4pt 0cm 5.4pt;
+		  height:12.75pt'>
+		  <p  style='mso-yfti-cnfc:4'><b><span 
+		  style='font-family:"Courier New";mso-ansi-language:EN-GB'>@struts.view.field.readonly</span></b></p>
+		  </td>
+		  <td width='161'  valign='top' style='width:120.5pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Parámetro </span></p>
+		  </td>
+		  <td width='246'  valign='top' style='width:184.25pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Indica un valor
+		  que no puede ser modificado por el usuario.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:14;height:12.75pt'>
+		  <td width='253'  valign='top' style='width:189.7pt;border:none;background:
+		  silver;mso-shading:white;mso-pattern:solid silver;padding:0cm 5.4pt 0cm 5.4pt;
+		  height:12.75pt'>
+		  <p  style='mso-yfti-cnfc:4'><b><span style='font-family:"Courier New"'>@struts.exception.type</span></b></p>
+		  </td>
+		  <td width='161'  valign='top' style='width:120.5pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Transición
+		  FrontEndException</span></p>
+		  </td>
+		  <td width='246'  valign='top' style='width:184.25pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Indica qué excepción
+		  trata este manejador de excepciones.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:15;height:12.75pt'>
+		  <td width='253'  valign='top' style='width:189.7pt;border:none;background:
+		  silver;mso-shading:white;mso-pattern:solid silver;padding:0cm 5.4pt 0cm 5.4pt;
+		  height:12.75pt'>
+		  <p  style='mso-yfti-cnfc:4'><b><span 
+		  style='font-family:"Courier New";mso-ansi-language:EN-GB'>@struts.view.table.columns</span></b></p>
+		  </td>
+		  <td width='161'  valign='top' style='width:120.5pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Parámetro de
+		  entrada de un trigger de una transición a un FrontEndView action state. El
+		  tipo del parámetro debe ser un array o una implementación de
+		  java.util.Collection.</span></p>
+		  </td>
+		  <td width='246'  valign='top' style='width:184.25pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>
+		  Cada columna de la tabla será asociada a una propiedad del objeto tipo 
+		  contenido en la collection. Todos los objetos deberán tener un método de 
+		  acceso a al propiedad listada en este tagged value. Las propiedades se 
+		  deben separar con comas.</span><span
+		   style='font-family:"Courier New";mso-ansi-language:EN-GB'></span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:16;height:12.75pt'>
+		  <td width='253'  valign='top' style='width:189.7pt;border:none;background:
+		  silver;mso-shading:white;mso-pattern:solid silver;padding:0cm 5.4pt 0cm 5.4pt;
+		  height:12.75pt'>
+		  <p  style='mso-yfti-cnfc:4'><b><span 
+		  style='font-family:"Courier New";mso-ansi-language:EN-GB'>@struts.view.table.maxrows</span></b></p>
+		  </td>
+		  <td width='161'  valign='top' style='width:120.5pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span  style='font-family:"Courier New";mso-ansi-language:
+		  FR'>idem</span></p>
+		  </td>
+		  <td width='246'  valign='top' style='width:184.25pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Máximo número de
+		  filas mostradas al mismo tiempo. Si el número de filas es mayor que este
+		  valor, se mostrará una lista de páginas para saltar a las demás.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:17;height:12.75pt'>
+		  <td width='253'  valign='top' style='width:189.7pt;border:none;background:
+		  silver;mso-shading:white;mso-pattern:solid silver;padding:0cm 5.4pt 0cm 5.4pt;
+		  height:12.75pt'>
+		  <p  style='mso-yfti-cnfc:4'><b><span 
+		  style='font-family:"Courier New";mso-ansi-language:EN-GB'>@struts.view.table.sortable</span></b></p>
+		  </td>
+		  <td width='161'  valign='top' style='width:120.5pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span  style='font-family:"Courier New";mso-ansi-language:
+		  FR'>idem</span><span  style='font-family:"Courier New";mso-ansi-language:
+		  EN-GB'></span></p>
+		  </td>
+		  <td width='246'  valign='top' style='width:184.25pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Indica si debe ser
+		  posible o no ordenar las columnas haciendo clic en la cabecera.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:18;height:12.75pt'>
+		  <td width='253'  valign='top' style='width:189.7pt;border:none;background:
+		  silver;mso-shading:white;mso-pattern:solid silver;padding:0cm 5.4pt 0cm 5.4pt;
+		  height:12.75pt'>
+		  <p  style='mso-yfti-cnfc:4'><b><span 
+		  style='font-family:"Courier New";mso-ansi-language:EN-GB'>@struts.view.table.export</span></b></p>
+		  </td>
+		  <td width='161'  valign='top' style='width:120.5pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span  style='font-family:"Courier New";
+		  mso-ansi-language:EN-GB'>idem</span></p>
+		  </td>
+		  <td width='246'  valign='top' style='width:184.25pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>
+		  Diferentes formatos en los que puede ser exportable la lista. 
+		  Puede ser: none, csv , xml , pdf, Excel, …
+		  </span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:19;height:12.75pt'>
+		  <td width='253'  valign='top' style='width:189.7pt;border:none;background:
+		  silver;mso-shading:white;mso-pattern:solid silver;padding:0cm 5.4pt 0cm 5.4pt;
+		  height:12.75pt'>
+		  <p  style='mso-yfti-cnfc:4'><b><span 
+		  style='font-family:"Courier New";mso-ansi-language:EN-GB'>@struts.view.table.decorator</span></b></p>
+		  </td>
+		  <td width='161'  valign='top' style='width:120.5pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span  style='font-family:"Courier New";
+		  mso-ansi-language:EN-GB'>idem</span></p>
+		  </td>
+		  <td width='246'  valign='top' style='width:184.25pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Generar o no un <i
+		  style='mso-bidi-font-style:normal'>decorator displaytag table</i> para esta
+		  tabla. Puede ser usado en combinación con <i style='mso-bidi-font-style:normal'>generateTableDecorators
+		  namespace property</i>.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:20;height:12.75pt'>
+		  <td width='253'  valign='top' style='width:189.7pt;border:none;background:
+		  silver;mso-shading:white;mso-pattern:solid silver;padding:0cm 5.4pt 0cm 5.4pt;
+		  height:12.75pt'>
+		  <p  style='mso-yfti-cnfc:4'><b><span 
+		  style='font-family:"Courier New";mso-ansi-language:EN-GB'>@struts.view.field.tablelink</span></b></p>
+		  </td>
+		  <td width='161'  valign='top' style='width:120.5pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><i style='mso-bidi-font-style:normal'><span
+		  style='font-family:"Courier New"'>Parámetro Action</span></i></p>
+		  </td>
+		  <td width='246'  valign='top' style='width:184.25pt;border:none;padding:
+		  0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>El formato del
+		  valor es<span style='mso-spacerun:yes'>  </span>table.column donde <i
+		  style='mso-bidi-font-style:normal'>table</i> indica un parámetro de entrada a
+		  la página de tipo colección (y conteniendo un <i style='mso-bidi-font-style:
+		  normal'>valor etiquetado</i> para indicar que se debe presentar como una
+		  tabla); La parte <i style='mso-bidi-font-style:normal'>columna </i>se usa
+		  para indicar qué columna de la tabla correspondiente se usará para el link. El
+		  resultado será que la columna especificada, contendrá un hiperlink que referencia
+		  el action en el que reside este parámetro, esto es útil, por ejemplo, para
+		  mostrar una lista de personas y ver sus detalles haciendo clic en los nombres.</span></p>
+		  </td>
+		 </tr>
+		 <tr style='mso-yfti-irow:21;mso-yfti-lastrow:yes;height:12.75pt'>
+		  <td width='253'  valign='top' style='width:189.7pt;border:none;border-bottom:
+		  solid black 1.5pt;background:silver;mso-shading:white;mso-pattern:solid silver;
+		  padding:0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p  style='mso-yfti-cnfc:4'><b><span style='font-family:"Courier New"'>@role.name</span></b></p>
+		  </td>
+		  <td width='161'  valign='top' style='width:120.5pt;border:none;border-bottom:
+		  solid black 1.5pt;padding:0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Un usuario<span
+		  style='mso-spacerun:yes'>  </span>(indirectamente) asociado con un<span
+		  style='mso-spacerun:yes'>  </span>&lt;&lt;FrontEndUseCase&gt;&gt;</span></p>
+		  </td>
+		  <td width='246'  valign='top' style='width:184.25pt;border:none;border-bottom:
+		  solid black 1.5pt;padding:0cm 5.4pt 0cm 5.4pt;height:12.75pt'>
+		  <p ><span style='font-family:"Courier New"'>Opcionalmente
+		  permite asociar el nombre del rol (Si necesita ser diferente al nombre del
+		  actor que define el rol).</span></p>
+		  </td>
+		 </tr>
+		</table>
+		
+		<p ><a name="_Toc112576866"><span >(*<i
+		style='mso-bidi-font-style:normal'>) </i>Posibles valores para el tagged Value<i
+		style='mso-bidi-font-style:normal'> @struts.action.type</i></span></a></p>
+		
+		<table  border='1' cellspacing='0' cellpadding='0'
+		 style='border-collapse:collapse;border:none;mso-border-top-alt:solid black 1.5pt;
+		 mso-border-bottom-alt:solid black 1.5pt;mso-yfti-tbllook:480;mso-padding-alt:
+		 0cm 5.4pt 0cm 5.4pt'>
+		 <tr style='mso-yfti-irow:-1;mso-yfti-firstrow:yes'>
+		  <td width='316' valign='top' style='width:236.8pt;border-top:solid black 1.5pt;
+		  border-left:none;border-bottom:solid black 1.0pt;border-right:none;
+		  mso-border-top-alt:solid black 1.5pt;mso-border-bottom-alt:solid black .75pt;
+		  background:purple;mso-shading:white;mso-pattern:solid purple;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p  style='mso-yfti-cnfc:517'><span style='mso-bookmark:_Toc112576866'><b><span
+		   style='color:white'>Tipo</span></b></span></p>
+		  </td>
+		  <span style='mso-bookmark:_Toc112576866'></span>
+		  <td width='316' valign='top' style='width:236.8pt;border-top:solid black 1.5pt;
+		  border-left:none;border-bottom:solid black 1.0pt;border-right:none;
+		  mso-border-top-alt:solid black 1.5pt;mso-border-bottom-alt:solid black .75pt;
+		  background:purple;mso-shading:white;mso-pattern:solid purple;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p  style='mso-yfti-cnfc:1'><span style='mso-bookmark:_Toc112576866'><b
+		  style='mso-bidi-font-weight:normal'><span  style='color:white'>Descripción</span></b></span></p>
+		  </td>
+		  <span style='mso-bookmark:_Toc112576866'></span>
+		 </tr>
+		 <tr style='mso-yfti-irow:0'>
+		  <td width='316' valign='top' style='width:236.8pt;border:none;background:silver;
+		  mso-shading:white;mso-pattern:solid silver;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p  style='mso-yfti-cnfc:4'><span style='mso-bookmark:_Toc112576866'><span
+		   style='mso-bidi-font-weight:bold'>text</span></span></p>
+		  </td>
+		  <span style='mso-bookmark:_Toc112576866'></span>
+		  <td width='316' valign='top' style='width:236.8pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><span style='mso-bookmark:_Toc112576866'><span
+		  >Presenta un campo de texto. Este es el conector por defecto.</span></span></p>
+		  </td>
+		  <span style='mso-bookmark:_Toc112576866'></span>
+		 </tr>
+		 <tr style='mso-yfti-irow:1'>
+		  <td width='316' valign='top' style='width:236.8pt;border:none;background:silver;
+		  mso-shading:white;mso-pattern:solid silver;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p  style='mso-yfti-cnfc:4'><span style='mso-bookmark:_Toc112576866'><span
+		   style='mso-bidi-font-weight:bold'>textarea</span></span></p>
+		  </td>
+		  <span style='mso-bookmark:_Toc112576866'></span>
+		  <td width='316' valign='top' style='width:236.8pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><span style='mso-bookmark:_Toc112576866'><span
+		  >Presenta un conector que permite un bloque de texto con
+		  múltiples líneas para entrada.</span></span></p>
+		  </td>
+		  <span style='mso-bookmark:_Toc112576866'></span>
+		 </tr>
+		 <tr style='mso-yfti-irow:2'>
+		  <td width='316' valign='top' style='width:236.8pt;border:none;background:silver;
+		  mso-shading:white;mso-pattern:solid silver;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p  style='mso-yfti-cnfc:4'><span style='mso-bookmark:_Toc112576866'><span
+		   style='mso-bidi-font-weight:bold'>select</span></span></p>
+		  </td>
+		  <span style='mso-bookmark:_Toc112576866'></span>
+		  <td width='316' valign='top' style='width:236.8pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><span style='mso-bookmark:_Toc112576866'><span
+		  >Presentará un listbox o combobox. Si el parámetro es un Collection
+		  o un array tendremos la posibilidad de seleccionar múltiples valores, en otro
+		  caso tendremos un combobox donde sólo puede ser seleccionado un valor cada
+		  vez.</span></span></p>
+		  </td>
+		  <span style='mso-bookmark:_Toc112576866'></span>
+		 </tr>
+		 <tr style='mso-yfti-irow:3'>
+		  <td width='316' valign='top' style='width:236.8pt;border:none;background:silver;
+		  mso-shading:white;mso-pattern:solid silver;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p  style='mso-yfti-cnfc:4'><span style='mso-bookmark:_Toc112576866'><span
+		   style='mso-bidi-font-weight:bold'>checkbox</span></span></p>
+		  </td>
+		  <span style='mso-bookmark:_Toc112576866'></span>
+		  <td width='316' valign='top' style='width:236.8pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><span style='mso-bookmark:_Toc112576866'><span
+		  >Presenta un checkbox, si el campo es un valor bolean este
+		  conector se presentará por defecto.</span></span></p>
+		  </td>
+		  <span style='mso-bookmark:_Toc112576866'></span>
+		 </tr>
+		 <tr style='mso-yfti-irow:4'>
+		  <td width='316' valign='top' style='width:236.8pt;border:none;background:silver;
+		  mso-shading:white;mso-pattern:solid silver;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p  style='mso-yfti-cnfc:4'><span style='mso-bookmark:_Toc112576866'><span
+		   style='mso-bidi-font-weight:bold'>radio</span></span></p>
+		  </td>
+		  <span style='mso-bookmark:_Toc112576866'></span>
+		  <td width='316' valign='top' style='width:236.8pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><span style='mso-bookmark:_Toc112576866'><span
+		  >Presenta radiobuttons, por defecto hay 3; utilizar el tagged
+		  value @struts.view.field.radio, que denota el número de elecciones para este
+		  parámetro: el valor introducido para ese tagged value determinará el número
+		  de radiobuttons que serán presentados. Alternativamente se puede utilizar una
+		  lista de propiedades separadas por comas en lugar de un integer.</span></span></p>
+		  </td>
+		  <span style='mso-bookmark:_Toc112576866'></span>
+		 </tr>
+		 <tr style='mso-yfti-irow:5'>
+		  <td width='316' valign='top' style='width:236.8pt;border:none;background:silver;
+		  mso-shading:white;mso-pattern:solid silver;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p  style='mso-yfti-cnfc:4'><span style='mso-bookmark:_Toc112576866'><span
+		   style='mso-bidi-font-weight:bold'>password</span></span></p>
+		  </td>
+		  <span style='mso-bookmark:_Toc112576866'></span>
+		  <td width='316' valign='top' style='width:236.8pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p ><span style='mso-bookmark:_Toc112576866'><span
+		  >Presenta un campo password. Cada carácter tecleado se presentará
+		  como un asterisco.</span></span></p>
+		  </td>
+		  <span style='mso-bookmark:_Toc112576866'></span>
+		 </tr>
+		 <tr style='mso-yfti-irow:6;mso-yfti-lastrow:yes'>
+		  <td width='316' valign='top' style='width:236.8pt;border-top:solid black 1.0pt;
+		  border-left:none;border-bottom:solid black 1.5pt;border-right:none;
+		  mso-border-top-alt:solid black .75pt;mso-border-bottom-alt:solid black 1.5pt;
+		  background:silver;mso-shading:white;mso-pattern:solid silver;padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p  style='mso-yfti-cnfc:2054'><span style='mso-bookmark:
+		  _Toc112576866'><span  style='mso-bidi-font-weight:bold'>hidden</span></span></p>
+		  </td>
+		  <span style='mso-bookmark:_Toc112576866'></span>
+		  <td width='316' valign='top' style='width:236.8pt;border-top:solid black 1.0pt;
+		  border-left:none;border-bottom:solid black 1.5pt;border-right:none;
+		  mso-border-top-alt:solid black .75pt;mso-border-bottom-alt:solid black 1.5pt;
+		  padding:0cm 5.4pt 0cm 5.4pt'>
+		  <p  style='mso-yfti-cnfc:2'><span style='mso-bookmark:_Toc112576866'><span
+		  >No se presenta ningún conector, pero el parámetro dado se
+		  incluirá en la petición.</span></span></p>
+		  </td>
+		  <span style='mso-bookmark:_Toc112576866'></span>
+		 </tr>
+		</table>
+			
+		<a name="ind_6"></a>
+	</section>
+	<section name="Recomendaciones">
+
+		<p style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:
+		l3 level1 lfo17;tab-stops:-36.0pt 0cm list 36.0pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Seguir un método iterativo en
+		la implementación, caso de uso a caso de uso, de modo que se aproveche la
+		realimentación proporcionada por la temprana generación de código que permite
+		replantear el propio análisis, refinándolo.</span></p>
+		
+		<p style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:
+		l3 level1 lfo17;tab-stops:-36.0pt 0cm list 36.0pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >Vigilar el tamaño (en término
+		de número de métodos) de las clases controladoras (controllers), ya que puede
+		ser un indicador de que el caso de uso bajo consideración debe dividirse en
+		varios.</span></p>
+		
+		<p style='margin-left:36.0pt;text-indent:-18.0pt;mso-list:
+		l3 level1 lfo17;tab-stops:-36.0pt 0cm list 36.0pt'><span
+		 style='font-family:Symbol;mso-fareast-font-family:Symbol;
+		mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+		style='font:7.0pt "Times New Roman"'>
+		</span></span></span><span >No abusar de los objetos de
+		sesión, ya que pueden limitar la escalabilidad de la aplicación final.</span></p>
+		
+		<p><span ></span></p>
+		<p><strong>Anexo I – ejemplos</strong></p>
+		<p><span>En este apartado se incluyen diversos
+		diagramas (especialmente de actividad) tomados del ejemplo desarrollado para
+		demostrar las capacidades de I-Builder, y que se detalla en la Introducción a
+		las Guías Técnicas.</span></p>
+		<p><strong>Contratacion.Contratar</strong></p>			
+		<p><span>Este diagrama de actividad modela el
+		flujo de pantallas asociado al caso de uso de contratación (algunos elementos
+		pueden haberse omitido para facilitar la legibilidad del modelo):</span></p>
+
+		<p align='center'><img src="images/ximage045.jpg"></img></p>				
+		<p><strong>Contratacion.Tarificar</strong></p>					
+		<p><span>Este diagrama de actividad modela el
+		flujo de pantallas asociado al caso de uso de tarificación (algunos elementos
+		pueden haberse omitido para facilitar la legibilidad del modelo):</span></p>
+		<p align='center'><img src="images/ximage047.jpg"></img></p>						
+		<p><strong>Contratacion.Documentar</strong></p>						
+		<p><span>Este diagrama de actividad modela el
+		flujo de pantallas asociado al caso de uso de tarificación (algunos elementos
+		pueden haberse omitido para facilitar la legibilidad del modelo):</span></p>
+		<p align='center'><img src="images/ximage048.jpg"></img></p>								
+		<p><strong>Contratacion.Emitir</strong></p>								
+		<p><span>Este diagrama de actividad modela el flujo de pantallas asociado al caso de 
+		uso de emisión de póliza (algunos elementos pueden haberse omitido para facilitar la 
+		legibilidad del modelo):
+		</span></p>
+		<p align='center'><img src="images/ximage049.jpg"></img></p>
+		
+		
+	</section>
+
+
+
+    </body>
+</document>	    	

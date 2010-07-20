@@ -1,0 +1,89 @@
+#volver.action {}
+#volver.action #form_submit {}
+
+#volver.action .tituloUsoEducativo {}
+#volver.action .tituloUsoEducativo .label {}
+#volver.action .tituloUsoEducativo .field {}
+#volver.action .tipoInteractividad {}
+#volver.action .tipoInteractividad .label {}
+#volver.action .tipoInteractividad .field {}
+#volver.action .tipoRecurso {}
+#volver.action .tipoRecurso .label {}
+#volver.action .tipoRecurso .field {}
+#volver.action .comboTipoRecurso {}
+#volver.action .comboTipoRecurso .label {}
+#volver.action .comboTipoRecurso .field {}
+#volver.action .nivelInteractividad {}
+#volver.action .nivelInteractividad .label {}
+#volver.action .nivelInteractividad .field {}
+#volver.action .densidadSemantica {}
+#volver.action .densidadSemantica .label {}
+#volver.action .densidadSemantica .field {}
+#volver.action .rolUsuario {}
+#volver.action .rolUsuario .label {}
+#volver.action .rolUsuario .field {}
+#volver.action .comboRol {}
+#volver.action .comboRol .label {}
+#volver.action .comboRol .field {}
+#volver.action .contexto {}
+#volver.action .contexto .label {}
+#volver.action .contexto .field {}
+#volver.action .comboContexto {}
+#volver.action .comboContexto .label {}
+#volver.action .comboContexto .field {}
+#volver.action .edadTipica {}
+#volver.action .edadTipica .label {}
+#volver.action .edadTipica .field {}
+#volver.action .comboIdioma {}
+#volver.action .comboIdioma .label {}
+#volver.action .comboIdioma .field {}
+#volver.action .dificultad {}
+#volver.action .dificultad .label {}
+#volver.action .dificultad .field {}
+#volver.action .tiempoAprendizaje {}
+#volver.action .tiempoAprendizaje .label {}
+#volver.action .tiempoAprendizaje .field {}
+#volver.action .anyo {}
+#volver.action .anyo .label {}
+#volver.action .anyo .field {}
+#volver.action .mes {}
+#volver.action .mes .label {}
+#volver.action .mes .field {}
+#volver.action .dia {}
+#volver.action .dia .label {}
+#volver.action .dia .field {}
+#volver.action .hora {}
+#volver.action .hora .label {}
+#volver.action .hora .field {}
+#volver.action .minutos {}
+#volver.action .minutos .label {}
+#volver.action .minutos .field {}
+#volver.action .segundosP1 {}
+#volver.action .segundosP1 .label {}
+#volver.action .segundosP1 .field {}
+#volver.action .segundosP2 {}
+#volver.action .segundosP2 .label {}
+#volver.action .segundosP2 .field {}
+#volver.action .tiempoApAprendizaje {}
+#volver.action .tiempoApAprendizaje .label {}
+#volver.action .tiempoApAprendizaje .field {}
+#volver.action .descripciones {}
+#volver.action .descripciones .label {}
+#volver.action .descripciones .field {}
+#volver.action .idiomas {}
+#volver.action .idiomas .label {}
+#volver.action .idiomas .field {}
+#volver.action .procesoCognitivo {}
+#volver.action .procesoCognitivo .label {}
+#volver.action .procesoCognitivo .field {}
+#volver.action .comboProceso {}
+#volver.action .comboProceso .label {}
+#volver.action .comboProceso .field {}
+#volver.action .botonPulsado {}
+#volver.action .botonPulsado .label {}
+#volver.action .botonPulsado .field {}
+#volver.action .mensajesError {}
+#volver.action .mensajesError .label {}
+#volver.action .mensajesError .field {}
+
+

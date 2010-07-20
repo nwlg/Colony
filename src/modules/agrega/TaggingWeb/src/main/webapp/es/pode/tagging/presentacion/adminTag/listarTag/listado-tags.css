@@ -1,0 +1,23 @@
+#mostrarOdes.action {}
+#mostrarOdes.action #form_submit {}
+
+#mostrarOdes.action .tag {}
+#mostrarOdes.action .tag .label {}
+#mostrarOdes.action .tag .field {}
+
+#modificar.action {}
+#modificar.action #form_submit {}
+
+#modificar.action .tag {}
+#modificar.action .tag .label {}
+#modificar.action .tag .field {}
+
+#tags.table {}
+#tags.table th {}
+#tags.table td div {}
+
+#tags.table th.tag {}
+#tags.table td div.tag {}
+
+
+

@@ -1,0 +1,49 @@
+<div id="tareasEnEjecucion" class="table">
+    <display:table name="${form.tareasEnEjecucion}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="listar-tareas-en-ejecucion.pdf" />
+
+        <display:column media="xml csv excel pdf"
+            titleKey="listar.tareas.en.ejecucion.listar.param.tareas.en.ejecucion.trabajo"
+            autolink="true" paramId="trabajo"
+            property="trabajo">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="trabajo" paramId="trabajo"
+            sortProperty="trabajo" sortable="true"
+            titleKey="listar.tareas.en.ejecucion.listar.param.tareas.en.ejecucion.trabajo"
+            >
+            <div class="trabajo">
+		
+ <c:set var="value" value="${row.trabajo}"/>
+ <input type="text" name="trabajo" value="${value}" onmouseover="hints.show('listar.tareas.en.ejecucion.listar.parar.tarea.param.trabajo.title')" onmouseout="hints.hide()"  id="tareasEnEjecucionTrabajo${row_rowNum}"/>
+            </div>
+       </display:column>
+   
+
+        <display:column media="xml csv excel pdf"
+            titleKey="listar.tareas.en.ejecucion.listar.param.tareas.en.ejecucion.grupo.trabajo"
+            autolink="true" paramId="grupoTrabajo"
+            property="grupoTrabajo">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="grupoTrabajo" paramId="grupoTrabajo"
+            sortProperty="grupoTrabajo" sortable="true"
+            titleKey="listar.tareas.en.ejecucion.listar.param.tareas.en.ejecucion.grupo.trabajo"
+            >
+            <div class="grupoTrabajo">
+		
+ <c:set var="value" value="${row.grupoTrabajo}"/>
+ <html:link action="/ListarTareasEnEjecucion/ListarPararTarea?trabajo=${row.trabajo}&grupoTrabajo=${row.grupoTrabajo}&trigger=${row.trigger}&grupoTrigger=${row.grupoTrigger}" onmouseover="hints.show('listar.tareas.en.ejecucion.listar.parar.tarea.param.grupo.trabajo.title')" onmouseout="hints.hide()">${row.grupoTrabajo}</html:link>
+ <input type="hidden" name="grupoTrabajo" value="${value}" id="tareasEnEjecucionGrupoTrabajo${row_rowNum}"/>
+            </div>
+       </display:column>
+   
+    </display:table>
+</div>
+

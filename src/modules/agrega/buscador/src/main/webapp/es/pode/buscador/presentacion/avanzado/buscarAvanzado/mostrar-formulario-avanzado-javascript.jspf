@@ -1,0 +1,45 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.anyo.publicacion.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.anyo.publicacion.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.autor.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.autor.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.buscador.contenido.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.buscador.contenido.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.c.s.secuencia.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.c.s.secuencia.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.comunidades.seleccionadas.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.comunidades.seleccionadas.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.enlace.comunidades.seleccionadas.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.enlace.comunidades.seleccionadas.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.contexto.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.contexto.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.descripcion.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.descripcion.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.dia.publicacion.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.dia.publicacion.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.edad.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.edad.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.formato.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.formato.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.idioma.buscador.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.mes.publicacion.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.mes.publicacion.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.area.curricular.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.area.curricular.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.proceso.cognitivo.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.proceso.cognitivo.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.nivel.agregacion.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.nivel.agregacion.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.recurso.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.recurso.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.titulo.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.titulo.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.valoracion.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.valoracion.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.contador.ambito.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.contador.ambito.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.contador.areas.curriculares.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.contador.areas.curriculares.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.contador.propiedades.contenido.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.contador.propiedades.contenido.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.validado.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.validado.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.hora.publicacion.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.hora.publicacion.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.destinatarios.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.param.destinatarios.title"/></formatting:escape>',
+                'analizaPulsacion':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.title"/></formatting:escape>',
+                'analizaPulsacion_no':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.title.notallowed"/></formatting:escape>',
+                'analizaPulsacion_reset':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.title.reset"/></formatting:escape>',
+                'analizaPulsacion_noreset':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.formulario.avanzado.analiza.pulsacion.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

@@ -1,0 +1,40 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="seleccionaPadre" class="action">
+    <h3><bean:message key="area.curricular.cu.area.curricular.selecciona.padre"/></h3>
+    <div class="trigger">
+        <html:form styleId="areaCurricularCUAreaCurricularSeleccionaPadreForm" action="/AreaCurricularCU/AreaCurricularSeleccionaPadre" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="id">
+                        <td class="label"><bean:message key="area.curricular.cu.area.curricular.selecciona.padre.param.id"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.id}"/>
+                           <input type="text" name="id" value="${value}" onmouseover="hints.show('area.curricular.cu.area.curricular.selecciona.padre.param.id.title')" onmouseout="hints.hide()"  id="seleccionaPadreId"/>
+                        </td>
+                    </tr>
+                    <tr class="buscadorEmpaquetador">
+                        <td class="label"><bean:message key="area.curricular.cu.area.curricular.selecciona.padre.param.buscador.empaquetador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.buscadorEmpaquetador}"/>
+                           <input type="checkbox" name="buscadorEmpaquetador" value="on" <c:if test="${value}">checked="checked" </c:if>onmouseover="hints.show('area.curricular.cu.area.curricular.selecciona.padre.param.buscador.empaquetador.title')" onmouseout="hints.hide()"  id="seleccionaPadreBuscadorEmpaquetador"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('seleccionaPadre')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="area.curricular.cu.area.curricular.selecciona.padre"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

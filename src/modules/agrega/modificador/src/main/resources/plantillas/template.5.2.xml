@@ -1,0 +1,4 @@
+<learningResourceType>
+${load:source.xml}
+${load:value.xml}
+</learningResourceType>

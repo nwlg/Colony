@@ -1,0 +1,58 @@
+<div id="gruposTrabajo" class="table">
+    <form id="gruposTrabajo" name="" action="" method="post" enctype="multipart/form-data">
+    <display:table name="${form.gruposTrabajo}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="formulario-grupos-trabajo-grupos-trabajo.pdf" />
+        <display:column media="html">
+            <input type="checkbox" name="identificadorRowSelectionAsArray" value="${row.identificador}" title='<bean:message key="select.deselect.this.row"/>'/>
+        </display:column>
+
+        <display:column media="xml csv excel pdf"
+            titleKey="modificar.usuario.formulario.grupos.trabajo.param.grupos.trabajo.identificador"
+            autolink="true" paramId="identificador"
+            property="identificador">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="identificador" paramId="identificador"
+            sortProperty="identificador" sortable="true"
+            titleKey="modificar.usuario.formulario.grupos.trabajo.param.grupos.trabajo.identificador"
+            property="identificador" />
+   
+
+        <display:column media="xml csv excel pdf"
+            titleKey="modificar.usuario.formulario.grupos.trabajo.param.grupos.trabajo.nombre"
+            autolink="true" paramId="nombre"
+            property="nombre">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="nombre" paramId="nombre"
+            sortProperty="nombre" sortable="true"
+            titleKey="modificar.usuario.formulario.grupos.trabajo.param.grupos.trabajo.nombre"
+            property="nombre" />
+   
+
+        <display:column media="xml csv excel pdf"
+            titleKey="modificar.usuario.formulario.grupos.trabajo.param.grupos.trabajo.descripcion"
+            autolink="true" paramId="descripcion"
+            property="descripcion">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="descripcion" paramId="descripcion"
+            sortProperty="descripcion" sortable="true"
+            titleKey="modificar.usuario.formulario.grupos.trabajo.param.grupos.trabajo.descripcion"
+            property="descripcion" />
+   
+    </display:table>
+    <c:if test="${!empty form.gruposTrabajo}">
+            <input type="submit" value="<bean:message key="modificar.usuario.formulario.grupos.trabajo.aceptar"/>" onclick="this.form.name='modificarUsuarioFormularioGruposTrabajoAceptarForm';this.form.action='<html:rewrite action="/ModificarUsuario/FormularioGruposTrabajoAceptar"/>';" onmouseover="hints.show('Aceptar')" onmouseout="hints.hide()"/>
+            <input type="button" value="<bean:message key="select.deselect.all"/>" onclick="var boxes=this.form.elements['identificadorRowSelectionAsArray'];var setChecked=(boxes.length==0)?false:!boxes[0].checked;for(var i=0;i<boxes.length;i++)boxes[i].checked=setChecked;"/>
+    </c:if>
+    </form>
+</div>
+

@@ -1,0 +1,4 @@
+<cognitiveProcess>
+${load:source.xml}
+${load:value.xml}
+</cognitiveProcess>

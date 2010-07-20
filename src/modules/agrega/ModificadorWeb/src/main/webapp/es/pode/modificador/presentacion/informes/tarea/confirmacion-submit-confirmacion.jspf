@@ -1,0 +1,40 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="submitConfirmacion" class="action">
+    <h3><bean:message key="informe.tarea.confirmacion.submit.confirmacion"/></h3>
+    <div class="trigger">
+        <html:form styleId="informeTareaConfirmacionSubmitConfirmacionForm" action="/InformeTarea/ConfirmacionSubmitConfirmacion" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="action">
+                        <td class="label"><bean:message key="informe.tarea.confirmacion.submit.confirmacion.param.action"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.action}"/>
+                           <input type="text" name="action" value="${value}" onmouseover="hints.show('informe.tarea.confirmacion.submit.confirmacion.param.action.title')" onmouseout="hints.hide()"  id="submitConfirmacionAction"/>
+                        </td>
+                    </tr>
+                    <tr class="id">
+                        <td class="label"><bean:message key="informe.tarea.confirmacion.submit.confirmacion.param.id"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.id}"/>
+                           <input type="text" name="id" value="${value}" onmouseover="hints.show('informe.tarea.confirmacion.submit.confirmacion.param.id.title')" onmouseout="hints.hide()"  id="submitConfirmacionId"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('submitConfirmacion')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="informe.tarea.confirmacion.submit.confirmacion"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

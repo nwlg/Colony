@@ -1,0 +1,49 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="cancelar" class="action">
+    <h3><bean:message key="listar.comentarios.cu.mostrar.comentarios.cancelar"/></h3>
+    <div class="trigger">
+        <html:form styleId="listarComentariosCUMostrarComentariosCancelarForm" action="/ListarComentariosCU/MostrarComentariosCancelar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="idODE">
+                        <td class="label"><bean:message key="listar.comentarios.cu.mostrar.comentarios.cancelar.param.id.ode"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idODE}"/>
+                           <input type="text" name="idODE" value="${value}" onmouseover="hints.show('listar.comentarios.cu.mostrar.comentarios.cancelar.param.id.ode.title')" onmouseout="hints.hide()"  id="cancelarIdODE"/>
+                        </td>
+                    </tr>
+                    <tr class="idiomaODE">
+                        <td class="label"><bean:message key="listar.comentarios.cu.mostrar.comentarios.cancelar.param.idioma.ode"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idiomaODE}"/>
+                           <input type="text" name="idiomaODE" value="${value}" onmouseover="hints.show('listar.comentarios.cu.mostrar.comentarios.cancelar.param.idioma.ode.title')" onmouseout="hints.hide()"  id="cancelarIdiomaODE"/>
+                        </td>
+                    </tr>
+                    <tr class="tituloODE">
+                        <td class="label"><bean:message key="listar.comentarios.cu.mostrar.comentarios.cancelar.param.titulo.ode"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tituloODE}"/>
+                           <input type="text" name="tituloODE" value="${value}" onmouseover="hints.show('listar.comentarios.cu.mostrar.comentarios.cancelar.param.titulo.ode.title')" onmouseout="hints.hide()"  id="cancelarTituloODE"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('cancelar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="listar.comentarios.cu.mostrar.comentarios.cancelar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

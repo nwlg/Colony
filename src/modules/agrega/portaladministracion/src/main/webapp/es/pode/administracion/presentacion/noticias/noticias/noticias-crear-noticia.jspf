@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="crearNoticia" class="action">
+    <h3><bean:message key="noticias.noticias.crear.noticia"/></h3>
+    <div class="trigger">
+        <form id="noticiasNoticiasCrearNoticiaForm" action='<html:rewrite action="/Noticias/NoticiasCrearNoticia"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+               <html:submit onmouseover="hints.show('Crear Noticia')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="noticias.noticias.crear.noticia"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

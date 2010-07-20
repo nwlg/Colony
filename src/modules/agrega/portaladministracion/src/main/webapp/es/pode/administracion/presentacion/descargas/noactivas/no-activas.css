@@ -1,0 +1,19 @@
+#activas.action {}
+#activas.action #form_submit {}
+
+
+#descargas.table {}
+#descargas.table th {}
+#descargas.table td div {}
+
+#descargas.table th.identificador {}
+#descargas.table td div.identificador {}
+
+#descargas.table th.titulo {}
+#descargas.table td div.titulo {}
+
+#descargas.table th.fecha {}
+#descargas.table td div.fecha {}
+
+
+

@@ -1,0 +1,187 @@
+#prepararRetornoDetalleImagenes.action {}
+#prepararRetornoDetalleImagenes.action #form_submit {}
+
+#prepararRetornoDetalleImagenes.action .anyoPublicacion {}
+#prepararRetornoDetalleImagenes.action .anyoPublicacion .label {}
+#prepararRetornoDetalleImagenes.action .anyoPublicacion .field {}
+#prepararRetornoDetalleImagenes.action .areaCurricular {}
+#prepararRetornoDetalleImagenes.action .areaCurricular .label {}
+#prepararRetornoDetalleImagenes.action .areaCurricular .field {}
+#prepararRetornoDetalleImagenes.action .autor {}
+#prepararRetornoDetalleImagenes.action .autor .label {}
+#prepararRetornoDetalleImagenes.action .autor .field {}
+#prepararRetornoDetalleImagenes.action .buscadorContenido {}
+#prepararRetornoDetalleImagenes.action .buscadorContenido .label {}
+#prepararRetornoDetalleImagenes.action .buscadorContenido .field {}
+#prepararRetornoDetalleImagenes.action .busquedaSimpleAvanzada {}
+#prepararRetornoDetalleImagenes.action .busquedaSimpleAvanzada .label {}
+#prepararRetornoDetalleImagenes.action .busquedaSimpleAvanzada .field {}
+#prepararRetornoDetalleImagenes.action .c_s_secuencia {}
+#prepararRetornoDetalleImagenes.action .c_s_secuencia .label {}
+#prepararRetornoDetalleImagenes.action .c_s_secuencia .field {}
+#prepararRetornoDetalleImagenes.action .comunidadesSeleccionadas {}
+#prepararRetornoDetalleImagenes.action .comunidadesSeleccionadas .label {}
+#prepararRetornoDetalleImagenes.action .comunidadesSeleccionadas .field {}
+#prepararRetornoDetalleImagenes.action .contexto {}
+#prepararRetornoDetalleImagenes.action .contexto .label {}
+#prepararRetornoDetalleImagenes.action .contexto .field {}
+#prepararRetornoDetalleImagenes.action .diaPublicacion {}
+#prepararRetornoDetalleImagenes.action .diaPublicacion .label {}
+#prepararRetornoDetalleImagenes.action .diaPublicacion .field {}
+#prepararRetornoDetalleImagenes.action .edad {}
+#prepararRetornoDetalleImagenes.action .edad .label {}
+#prepararRetornoDetalleImagenes.action .edad .field {}
+#prepararRetornoDetalleImagenes.action .enlaceComunidadesSeleccionadas {}
+#prepararRetornoDetalleImagenes.action .enlaceComunidadesSeleccionadas .label {}
+#prepararRetornoDetalleImagenes.action .enlaceComunidadesSeleccionadas .field {}
+#prepararRetornoDetalleImagenes.action .enlaceTodoAgrega {}
+#prepararRetornoDetalleImagenes.action .enlaceTodoAgrega .label {}
+#prepararRetornoDetalleImagenes.action .enlaceTodoAgrega .field {}
+#prepararRetornoDetalleImagenes.action .formato {}
+#prepararRetornoDetalleImagenes.action .formato .label {}
+#prepararRetornoDetalleImagenes.action .formato .field {}
+#prepararRetornoDetalleImagenes.action .idTesauro {}
+#prepararRetornoDetalleImagenes.action .idTesauro .label {}
+#prepararRetornoDetalleImagenes.action .idTesauro .field {}
+#prepararRetornoDetalleImagenes.action .idTesauroSugerencia {}
+#prepararRetornoDetalleImagenes.action .idTesauroSugerencia .label {}
+#prepararRetornoDetalleImagenes.action .idTesauroSugerencia .field {}
+#prepararRetornoDetalleImagenes.action .identificadorODE {}
+#prepararRetornoDetalleImagenes.action .identificadorODE .label {}
+#prepararRetornoDetalleImagenes.action .identificadorODE .field {}
+#prepararRetornoDetalleImagenes.action .idiomaBuscador {}
+#prepararRetornoDetalleImagenes.action .idiomaBuscador .label {}
+#prepararRetornoDetalleImagenes.action .idiomaBuscador .field {}
+#prepararRetornoDetalleImagenes.action .keyword {}
+#prepararRetornoDetalleImagenes.action .keyword .label {}
+#prepararRetornoDetalleImagenes.action .keyword .field {}
+#prepararRetornoDetalleImagenes.action .listaIds {}
+#prepararRetornoDetalleImagenes.action .listaIds .label {}
+#prepararRetornoDetalleImagenes.action .listaIds .field {}
+#prepararRetornoDetalleImagenes.action .mesPublicacion {}
+#prepararRetornoDetalleImagenes.action .mesPublicacion .label {}
+#prepararRetornoDetalleImagenes.action .mesPublicacion .field {}
+#prepararRetornoDetalleImagenes.action .nivelAgregacion {}
+#prepararRetornoDetalleImagenes.action .nivelAgregacion .label {}
+#prepararRetornoDetalleImagenes.action .nivelAgregacion .field {}
+#prepararRetornoDetalleImagenes.action .nodoDestino {}
+#prepararRetornoDetalleImagenes.action .nodoDestino .label {}
+#prepararRetornoDetalleImagenes.action .nodoDestino .field {}
+#prepararRetornoDetalleImagenes.action .nomTesauros {}
+#prepararRetornoDetalleImagenes.action .nomTesauros .label {}
+#prepararRetornoDetalleImagenes.action .nomTesauros .field {}
+#prepararRetornoDetalleImagenes.action .numeroResultados {}
+#prepararRetornoDetalleImagenes.action .numeroResultados .label {}
+#prepararRetornoDetalleImagenes.action .numeroResultados .field {}
+#prepararRetornoDetalleImagenes.action .pagina {}
+#prepararRetornoDetalleImagenes.action .pagina .label {}
+#prepararRetornoDetalleImagenes.action .pagina .field {}
+#prepararRetornoDetalleImagenes.action .procesoCognitivo {}
+#prepararRetornoDetalleImagenes.action .procesoCognitivo .label {}
+#prepararRetornoDetalleImagenes.action .procesoCognitivo .field {}
+#prepararRetornoDetalleImagenes.action .recurso {}
+#prepararRetornoDetalleImagenes.action .recurso .label {}
+#prepararRetornoDetalleImagenes.action .recurso .field {}
+#prepararRetornoDetalleImagenes.action .tipoBusqueda {}
+#prepararRetornoDetalleImagenes.action .tipoBusqueda .label {}
+#prepararRetornoDetalleImagenes.action .tipoBusqueda .field {}
+#prepararRetornoDetalleImagenes.action .tipoLayoutBuscador {}
+#prepararRetornoDetalleImagenes.action .tipoLayoutBuscador .label {}
+#prepararRetornoDetalleImagenes.action .tipoLayoutBuscador .field {}
+#prepararRetornoDetalleImagenes.action .tipoVisualizacion {}
+#prepararRetornoDetalleImagenes.action .tipoVisualizacion .label {}
+#prepararRetornoDetalleImagenes.action .tipoVisualizacion .field {}
+#prepararRetornoDetalleImagenes.action .valoracion {}
+#prepararRetornoDetalleImagenes.action .valoracion .label {}
+#prepararRetornoDetalleImagenes.action .valoracion .field {}
+
+#paginarImagenes.action {}
+#paginarImagenes.action #form_submit {}
+
+
+#generarRSS.action {}
+#generarRSS.action #form_submit {}
+
+#generarRSS.action .anyoPublicacion {}
+#generarRSS.action .anyoPublicacion .label {}
+#generarRSS.action .anyoPublicacion .field {}
+#generarRSS.action .areaCurricular {}
+#generarRSS.action .areaCurricular .label {}
+#generarRSS.action .areaCurricular .field {}
+#generarRSS.action .autor {}
+#generarRSS.action .autor .label {}
+#generarRSS.action .autor .field {}
+#generarRSS.action .buscadorContenido {}
+#generarRSS.action .buscadorContenido .label {}
+#generarRSS.action .buscadorContenido .field {}
+#generarRSS.action .c_s_secuencia {}
+#generarRSS.action .c_s_secuencia .label {}
+#generarRSS.action .c_s_secuencia .field {}
+#generarRSS.action .contexto {}
+#generarRSS.action .contexto .label {}
+#generarRSS.action .contexto .field {}
+#generarRSS.action .descripcion {}
+#generarRSS.action .descripcion .label {}
+#generarRSS.action .descripcion .field {}
+#generarRSS.action .diaPublicacion {}
+#generarRSS.action .diaPublicacion .label {}
+#generarRSS.action .diaPublicacion .field {}
+#generarRSS.action .edad {}
+#generarRSS.action .edad .label {}
+#generarRSS.action .edad .field {}
+#generarRSS.action .formato {}
+#generarRSS.action .formato .label {}
+#generarRSS.action .formato .field {}
+#generarRSS.action .idioma {}
+#generarRSS.action .idioma .label {}
+#generarRSS.action .idioma .field {}
+#generarRSS.action .keyword {}
+#generarRSS.action .keyword .label {}
+#generarRSS.action .keyword .field {}
+#generarRSS.action .idTesauro {}
+#generarRSS.action .idTesauro .label {}
+#generarRSS.action .idTesauro .field {}
+#generarRSS.action .idTesauroSugerencia {}
+#generarRSS.action .idTesauroSugerencia .label {}
+#generarRSS.action .idTesauroSugerencia .field {}
+#generarRSS.action .mesPublicacion {}
+#generarRSS.action .mesPublicacion .label {}
+#generarRSS.action .mesPublicacion .field {}
+#generarRSS.action .procesoCognitivo {}
+#generarRSS.action .procesoCognitivo .label {}
+#generarRSS.action .procesoCognitivo .field {}
+#generarRSS.action .recurso {}
+#generarRSS.action .recurso .label {}
+#generarRSS.action .recurso .field {}
+#generarRSS.action .valoracion {}
+#generarRSS.action .valoracion .label {}
+#generarRSS.action .valoracion .field {}
+#generarRSS.action .nivelAgregacion {}
+#generarRSS.action .nivelAgregacion .label {}
+#generarRSS.action .nivelAgregacion .field {}
+#generarRSS.action .destinatarios {}
+#generarRSS.action .destinatarios .label {}
+#generarRSS.action .destinatarios .field {}
+#generarRSS.action .enlaceTodoAgrega {}
+#generarRSS.action .enlaceTodoAgrega .label {}
+#generarRSS.action .enlaceTodoAgrega .field {}
+#generarRSS.action .enlaceComunidadesSeleccionadas {}
+#generarRSS.action .enlaceComunidadesSeleccionadas .label {}
+#generarRSS.action .enlaceComunidadesSeleccionadas .field {}
+#generarRSS.action .tipoBusqueda {}
+#generarRSS.action .tipoBusqueda .label {}
+#generarRSS.action .tipoBusqueda .field {}
+
+#mostrarAvanzadoResultados.action {}
+#mostrarAvanzadoResultados.action #form_submit {}
+
+
+#resultadosVO.table {}
+#resultadosVO.table th {}
+#resultadosVO.table td div {}
+
+#resultadosVO.table th.id {}
+#resultadosVO.table td div.id {}
+
+
+

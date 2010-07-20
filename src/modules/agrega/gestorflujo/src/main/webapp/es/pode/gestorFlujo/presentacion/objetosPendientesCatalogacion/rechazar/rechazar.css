@@ -1,0 +1,21 @@
+#aceptar.action {}
+#aceptar.action #form_submit {}
+
+#aceptar.action .titulo {}
+#aceptar.action .titulo .label {}
+#aceptar.action .titulo .field {}
+#aceptar.action .comentarios {}
+#aceptar.action .comentarios .label {}
+#aceptar.action .comentarios .field {}
+#aceptar.action .idODE {}
+#aceptar.action .idODE .label {}
+#aceptar.action .idODE .field {}
+
+#cancelar.action {}
+#cancelar.action #form_submit {}
+
+#cancelar.action .idiomaBuscador {}
+#cancelar.action .idiomaBuscador .label {}
+#cancelar.action .idiomaBuscador .field {}
+
+

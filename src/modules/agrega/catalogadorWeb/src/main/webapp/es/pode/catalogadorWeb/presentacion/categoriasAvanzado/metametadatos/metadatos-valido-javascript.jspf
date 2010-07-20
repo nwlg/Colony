@@ -1,0 +1,39 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'meta.metadatos.metadatos.valido.volver.param.identificador.ode.title':'<formatting:escape language="javascript"><bean:message key="meta.metadatos.metadatos.valido.volver.param.identificador.ode.title"/></formatting:escape>',
+                'meta.metadatos.metadatos.valido.volver.param.identificadores.title':'<formatting:escape language="javascript"><bean:message key="meta.metadatos.metadatos.valido.volver.param.identificadores.title"/></formatting:escape>',
+                'meta.metadatos.metadatos.valido.volver.param.contribucion.title':'<formatting:escape language="javascript"><bean:message key="meta.metadatos.metadatos.valido.volver.param.contribucion.title"/></formatting:escape>',
+                'meta.metadatos.metadatos.valido.volver.param.descripciones.title':'<formatting:escape language="javascript"><bean:message key="meta.metadatos.metadatos.valido.volver.param.descripciones.title"/></formatting:escape>',
+                'meta.metadatos.metadatos.valido.volver.param.combo.idioma.title':'<formatting:escape language="javascript"><bean:message key="meta.metadatos.metadatos.valido.volver.param.combo.idioma.title"/></formatting:escape>',
+                'meta.metadatos.metadatos.valido.volver.param.esquemas.meta.title':'<formatting:escape language="javascript"><bean:message key="meta.metadatos.metadatos.valido.volver.param.esquemas.meta.title"/></formatting:escape>',
+                'meta.metadatos.metadatos.valido.volver.param.combo.idioma.meta.title':'<formatting:escape language="javascript"><bean:message key="meta.metadatos.metadatos.valido.volver.param.combo.idioma.meta.title"/></formatting:escape>',
+                'meta.metadatos.metadatos.valido.volver.param.mensajes.errores.title':'<formatting:escape language="javascript"><bean:message key="meta.metadatos.metadatos.valido.volver.param.mensajes.errores.title"/></formatting:escape>',
+                'meta.metadatos.metadatos.valido.volver.param.crol.title':'<formatting:escape language="javascript"><bean:message key="meta.metadatos.metadatos.valido.volver.param.crol.title"/></formatting:escape>',
+                'meta.metadatos.metadatos.valido.volver.param.cidentidad.title':'<formatting:escape language="javascript"><bean:message key="meta.metadatos.metadatos.valido.volver.param.cidentidad.title"/></formatting:escape>',
+                'meta.metadatos.metadatos.valido.volver.param.fecha.corta.title':'<formatting:escape language="javascript"><bean:message key="meta.metadatos.metadatos.valido.volver.param.fecha.corta.title"/></formatting:escape>',
+                'meta.metadatos.metadatos.valido.volver.param.hora.title':'<formatting:escape language="javascript"><bean:message key="meta.metadatos.metadatos.valido.volver.param.hora.title"/></formatting:escape>',
+                'meta.metadatos.metadatos.valido.volver.param.minutos.title':'<formatting:escape language="javascript"><bean:message key="meta.metadatos.metadatos.valido.volver.param.minutos.title"/></formatting:escape>',
+                'meta.metadatos.metadatos.valido.volver.param.segundo.p1.title':'<formatting:escape language="javascript"><bean:message key="meta.metadatos.metadatos.valido.volver.param.segundo.p1.title"/></formatting:escape>',
+                'meta.metadatos.metadatos.valido.volver.param.segundo.p2.title':'<formatting:escape language="javascript"><bean:message key="meta.metadatos.metadatos.valido.volver.param.segundo.p2.title"/></formatting:escape>',
+                'meta.metadatos.metadatos.valido.volver.param.meridianocero.title':'<formatting:escape language="javascript"><bean:message key="meta.metadatos.metadatos.valido.volver.param.meridianocero.title"/></formatting:escape>',
+                'meta.metadatos.metadatos.valido.volver.param.combo.zona.h.title':'<formatting:escape language="javascript"><bean:message key="meta.metadatos.metadatos.valido.volver.param.combo.zona.h.title"/></formatting:escape>',
+                'meta.metadatos.metadatos.valido.volver.param.zh.hora.title':'<formatting:escape language="javascript"><bean:message key="meta.metadatos.metadatos.valido.volver.param.zh.hora.title"/></formatting:escape>',
+                'meta.metadatos.metadatos.valido.volver.param.zh.minutos.title':'<formatting:escape language="javascript"><bean:message key="meta.metadatos.metadatos.valido.volver.param.zh.minutos.title"/></formatting:escape>',
+                'volver':'<formatting:escape language="javascript"><bean:message key="meta.metadatos.metadatos.valido.volver.title"/></formatting:escape>',
+                'volver_no':'<formatting:escape language="javascript"><bean:message key="meta.metadatos.metadatos.valido.volver.title.notallowed"/></formatting:escape>',
+                'volver_reset':'<formatting:escape language="javascript"><bean:message key="meta.metadatos.metadatos.valido.volver.title.reset"/></formatting:escape>',
+                'volver_noreset':'<formatting:escape language="javascript"><bean:message key="meta.metadatos.metadatos.valido.volver.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN" "http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+	<mapping wildcard="true">
+		<class-a>
+			es.pode.empaquetador.negocio.gestionficheros.Fichero
+		</class-a>
+		<class-b>
+			es.pode.empaquetador.negocio.servicio.FicheroVO
+		</class-b>
+		<field copy-by-reference="true">
+  			<a>datos</a>
+  			<b>datos</b>
+		</field>  
+	</mapping>
+</mappings>

@@ -1,0 +1,4 @@
+<intendedEndUserRole>
+${load:source.xml}
+${load:value.xml}
+</intendedEndUserRole>

@@ -1,0 +1,14 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="identificadorODEFederado" value="${form.identificadorODEFederado}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="titulo" value="${form.titulo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="agregacionCorrecta" value="${form.agregacionCorrecta}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tipoLayoutBuscador" value="${form.tipoLayoutBuscador}"/>
+    </c:catch>
+</div>

@@ -1,0 +1,25 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'Volver':'<formatting:escape language="javascript"><bean:message key="abrir.buscador.mensaje.agregar.volver.title"/></formatting:escape>',
+                'Volver_no':'<formatting:escape language="javascript"><bean:message key="abrir.buscador.mensaje.agregar.volver.title.notallowed"/></formatting:escape>',
+                'Volver_reset':'<formatting:escape language="javascript"><bean:message key="abrir.buscador.mensaje.agregar.volver.title.reset"/></formatting:escape>',
+                'Volver_noreset':'<formatting:escape language="javascript"><bean:message key="abrir.buscador.mensaje.agregar.volver.title.reset.not.allowed"/></formatting:escape>',
+                'Buscar':'<formatting:escape language="javascript"><bean:message key="abrir.buscador.mensaje.agregar.buscar.title"/></formatting:escape>',
+                'Buscar_no':'<formatting:escape language="javascript"><bean:message key="abrir.buscador.mensaje.agregar.buscar.title.notallowed"/></formatting:escape>',
+                'Buscar_reset':'<formatting:escape language="javascript"><bean:message key="abrir.buscador.mensaje.agregar.buscar.title.reset"/></formatting:escape>',
+                'Buscar_noreset':'<formatting:escape language="javascript"><bean:message key="abrir.buscador.mensaje.agregar.buscar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+</script>
+    </tiles:put>

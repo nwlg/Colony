@@ -1,0 +1,26 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="listadoNodos" value="${form.listadoNodos}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="descripciones" value="${form.descripciones}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tipoAcceso" value="${form.tipoAcceso}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="comboIdioma" value="${form.comboIdioma}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="copyRestricciones" value="${form.copyRestricciones}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="coste" value="${form.coste}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="listadoComunidades" value="${form.listadoComunidades}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="identificadorOde" value="${form.identificadorOde}"/>
+    </c:catch>
+</div>

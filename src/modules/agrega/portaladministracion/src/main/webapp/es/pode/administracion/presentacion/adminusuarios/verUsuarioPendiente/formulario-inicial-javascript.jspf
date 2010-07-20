@@ -1,0 +1,20 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'Aceptar':'<formatting:escape language="javascript"><bean:message key="ver.usuario.pendiente.formulario.inicial.aceptar.title"/></formatting:escape>',
+                'Aceptar_no':'<formatting:escape language="javascript"><bean:message key="ver.usuario.pendiente.formulario.inicial.aceptar.title.notallowed"/></formatting:escape>',
+                'Aceptar_reset':'<formatting:escape language="javascript"><bean:message key="ver.usuario.pendiente.formulario.inicial.aceptar.title.reset"/></formatting:escape>',
+                'Aceptar_noreset':'<formatting:escape language="javascript"><bean:message key="ver.usuario.pendiente.formulario.inicial.aceptar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

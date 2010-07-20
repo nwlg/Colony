@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="validar" class="action">
+    <h3><bean:message key="gestor.archivos.gestor.archivos.validar"/></h3>
+    <div class="trigger">
+        <form id="gestorArchivosGestorArchivosValidarForm" action='<html:rewrite action="/GestorArchivos/GestorArchivosValidar"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_DOCENTE,ROLE_ADMINISTRADOR,ROLE_CATALOGADOR,ROLE_PUBLICADOR">
+               <html:submit onmouseover="hints.show('Validar')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="gestor.archivos.gestor.archivos.validar"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

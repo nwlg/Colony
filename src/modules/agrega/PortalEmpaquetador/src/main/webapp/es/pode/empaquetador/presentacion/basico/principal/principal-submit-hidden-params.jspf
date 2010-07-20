@@ -1,0 +1,3 @@
+<html:hidden name="form" property="action" styleId="submitAction"/>
+<html:hidden name="form" property="idRecurso" styleId="submitIdRecurso"/>
+ 

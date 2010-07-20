@@ -1,0 +1,31 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="eliminar.tareas.confirmacion.eliminacion.aceptar"/></h3>
+    <div class="trigger">
+        <html:form styleId="eliminarTareasConfirmacionEliminacionAceptarForm" action="/EliminarTareas/ConfirmacionEliminacionAceptar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="listaTrabajoPlana">
+                        <td class="label"><bean:message key="eliminar.tareas.confirmacion.eliminacion.aceptar.param.lista.trabajo.plana"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.listaTrabajoPlana}"/>
+                           <input type="text" name="listaTrabajoPlana" value="${value}" onmouseover="hints.show('eliminar.tareas.confirmacion.eliminacion.aceptar.param.lista.trabajo.plana.title')" onmouseout="hints.hide()"  id="aceptarListaTrabajoPlana"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="eliminar.tareas.confirmacion.eliminacion.aceptar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

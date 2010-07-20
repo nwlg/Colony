@@ -1,0 +1,37 @@
+#ejecutandose.action {}
+#ejecutandose.action #form_submit {}
+
+
+#ejecutadas.action {}
+#ejecutadas.action #form_submit {}
+
+
+#planificar.action {}
+#planificar.action #form_submit {}
+
+#planificar.action .idModificacion {}
+#planificar.action .idModificacion .label {}
+#planificar.action .idModificacion .field {}
+#planificar.action .idPlanificador {}
+#planificar.action .idPlanificador .label {}
+#planificar.action .idPlanificador .field {}
+
+#buscar.action {}
+#buscar.action #form_submit {}
+
+#buscar.action .idiomaBuscador {}
+#buscar.action .idiomaBuscador .label {}
+#buscar.action .idiomaBuscador .field {}
+
+#modificaciones.table {}
+#modificaciones.table th {}
+#modificaciones.table td div {}
+
+#modificaciones.table th.nombre {}
+#modificaciones.table td div.nombre {}
+
+#modificaciones.table th.fechaEjecucion {}
+#modificaciones.table td div.fechaEjecucion {}
+
+
+

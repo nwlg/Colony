@@ -1,0 +1,13 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="vuelveDeUsosEducativos" class="action">
+    <h3><bean:message key="ver.metadatos.usos.educativos.form.vuelve.de.usos.educativos"/></h3>
+    <div class="trigger">
+        <form id="verMetadatosUsosEducativosFormVuelveDeUsosEducativosForm" action='<html:rewrite action="/VerMetadatos/UsosEducativosFormVuelveDeUsosEducativos"/>' method="post">
+               <html:submit onmouseover="hints.show('vuelveDeUsosEducativos')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="ver.metadatos.usos.educativos.form.vuelve.de.usos.educativos"/>
+               </html:submit>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

@@ -1,0 +1,27 @@
+#buscar.action {}
+#buscar.action #form_submit {}
+
+#buscar.action .idiomaBuscador {}
+#buscar.action .idiomaBuscador .label {}
+#buscar.action .idiomaBuscador .field {}
+
+#alta.action {}
+#alta.action #form_submit {}
+
+
+#exportar.action {}
+#exportar.action #form_submit {}
+
+#exportar.action .nombre {}
+#exportar.action .nombre .label {}
+#exportar.action .nombre .field {}
+
+#tesauros.table {}
+#tesauros.table th {}
+#tesauros.table td div {}
+
+#tesauros.table th.nombre {}
+#tesauros.table td div.nombre {}
+
+
+

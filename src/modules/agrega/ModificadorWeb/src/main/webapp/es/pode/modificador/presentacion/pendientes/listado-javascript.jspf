@@ -1,0 +1,65 @@
+
+    <tiles:put name="javascript" type="string">
+        <script type="text/javascript" language="Javascript1.1" src="<html:rewrite action="/formValidation"/>"></script>
+        <html:javascript formName="modificacionesPendientesListadoEjecutarForm" method="validateListadoEjecutarForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+        <html:javascript formName="modificacionesPendientesListadoExportarForm" method="validateListadoExportarForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'modificaciones.pendientes.listado.planificar.param.id.modificacion.title':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.planificar.param.id.modificacion.title"/></formatting:escape>',
+                'modificaciones.pendientes.listado.planificar.param.id.planificador.title':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.planificar.param.id.planificador.title"/></formatting:escape>',
+                'modificaciones.pendientes.listado.submit.param.id.modificacion.title':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.submit.param.id.modificacion.title"/></formatting:escape>',
+                'modificaciones.pendientes.listado.modificar.param.id.modificacion.title':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.modificar.param.id.modificacion.title"/></formatting:escape>',
+                'modificaciones.pendientes.listado.buscar.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.buscar.param.idioma.buscador.title"/></formatting:escape>',
+                'modificaciones.pendientes.listado.ejecutar.param.id.modificacion.title':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.ejecutar.param.id.modificacion.title"/></formatting:escape>',
+                'modificaciones.pendientes.listado.exportar.param.id.modificacion.title':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.exportar.param.id.modificacion.title"/></formatting:escape>',
+                'Ejecutandose':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.ejecutandose.title"/></formatting:escape>',
+                'Ejecutandose_no':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.ejecutandose.title.notallowed"/></formatting:escape>',
+                'Ejecutandose_reset':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.ejecutandose.title.reset"/></formatting:escape>',
+                'Ejecutandose_noreset':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.ejecutandose.title.reset.not.allowed"/></formatting:escape>',
+                'Ejecutadas':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.ejecutadas.title"/></formatting:escape>',
+                'Ejecutadas_no':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.ejecutadas.title.notallowed"/></formatting:escape>',
+                'Ejecutadas_reset':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.ejecutadas.title.reset"/></formatting:escape>',
+                'Ejecutadas_noreset':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.ejecutadas.title.reset.not.allowed"/></formatting:escape>',
+                'Planificar':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.planificar.title"/></formatting:escape>',
+                'Planificar_no':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.planificar.title.notallowed"/></formatting:escape>',
+                'Planificar_reset':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.planificar.title.reset"/></formatting:escape>',
+                'Planificar_noreset':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.planificar.title.reset.not.allowed"/></formatting:escape>',
+                'Submit':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.submit.title"/></formatting:escape>',
+                'Submit_no':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.submit.title.notallowed"/></formatting:escape>',
+                'Submit_reset':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.submit.title.reset"/></formatting:escape>',
+                'Submit_noreset':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.submit.title.reset.not.allowed"/></formatting:escape>',
+                'Modificar':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.modificar.title"/></formatting:escape>',
+                'Modificar_no':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.modificar.title.notallowed"/></formatting:escape>',
+                'Modificar_reset':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.modificar.title.reset"/></formatting:escape>',
+                'Modificar_noreset':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.modificar.title.reset.not.allowed"/></formatting:escape>',
+                'Buscar':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.buscar.title"/></formatting:escape>',
+                'Buscar_no':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.buscar.title.notallowed"/></formatting:escape>',
+                'Buscar_reset':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.buscar.title.reset"/></formatting:escape>',
+                'Buscar_noreset':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.buscar.title.reset.not.allowed"/></formatting:escape>',
+                'Ejecutar':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.ejecutar.title"/></formatting:escape>',
+                'Ejecutar_no':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.ejecutar.title.notallowed"/></formatting:escape>',
+                'Ejecutar_reset':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.ejecutar.title.reset"/></formatting:escape>',
+                'Ejecutar_noreset':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.ejecutar.title.reset.not.allowed"/></formatting:escape>',
+                'Exportar':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.exportar.title"/></formatting:escape>',
+                'Exportar_no':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.exportar.title.notallowed"/></formatting:escape>',
+                'Exportar_reset':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.exportar.title.reset"/></formatting:escape>',
+                'Exportar_noreset':'<formatting:escape language="javascript"><bean:message key="modificaciones.pendientes.listado.exportar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+
+
+
+
+</script>
+    </tiles:put>

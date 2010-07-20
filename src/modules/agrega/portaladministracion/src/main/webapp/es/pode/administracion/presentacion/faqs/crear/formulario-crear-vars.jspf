@@ -1,0 +1,62 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="valuePosicion" value="${form.valuePosicion}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idiomasAlta" value="${form.idiomasAlta}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="posicionesValenciano" value="${form.posicionesValenciano}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="descripcion" value="${form.descripcion}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="catalan" value="${form.catalan}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idiomasCategoriasBBDD" value="${form.idiomasCategoriasBBDD}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="posicionesCatalan" value="${form.posicionesCatalan}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="posicionesEuskera" value="${form.posicionesEuskera}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="gallego" value="${form.gallego}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="categoria" value="${form.categoria}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="nombreCategoria" value="${form.nombreCategoria}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="titulo" value="${form.titulo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="castellano" value="${form.castellano}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="ingles" value="${form.ingles}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="posicionesIngles" value="${form.posicionesIngles}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idiomas" value="${form.idiomas}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="valenciano" value="${form.valenciano}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="posicionesGallego" value="${form.posicionesGallego}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="euskera" value="${form.euskera}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="posicionesCastellano" value="${form.posicionesCastellano}"/>
+    </c:catch>
+</div>

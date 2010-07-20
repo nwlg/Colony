@@ -1,0 +1,51 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="selectAction" class="action">
+    <h3><bean:message key="tipo.anadir.tipo.anadir.select.action"/></h3>
+    <div class="trigger">
+        <html:form styleId="tipoAnadirTipoAnadirSelectActionForm" action="/TipoAnadir/TipoAnadirSelectAction" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="alcance">
+                        <td class="label"><bean:message key="tipo.anadir.tipo.anadir.select.action.param.alcance"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.alcance}"/>
+                           <input type="checkbox" name="alcance" value="on" <c:if test="${value}">checked="checked" </c:if>onmouseover="hints.show('tipo.anadir.tipo.anadir.select.action.param.alcance.title')" onmouseout="hints.hide()"  id="selectActionAlcance"/>
+                        </td>
+                    </tr>
+                    <tr class="tipoAniadir">
+                        <td class="label"><bean:message key="tipo.anadir.tipo.anadir.select.action.param.tipo.aniadir"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipoAniadir}"/>
+                           <input type="text" name="tipoAniadir" value="${value}" onmouseover="hints.show('tipo.anadir.tipo.anadir.select.action.param.tipo.aniadir.title')" onmouseout="hints.hide()"  id="selectActionTipoAniadir"/>
+                        </td>
+                    </tr>
+                    <tr class="action">
+                        <td class="label"><bean:message key="tipo.anadir.tipo.anadir.select.action.param.action"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.action}"/>
+                           <input type="text" name="action" value="${value}" onmouseover="hints.show('tipo.anadir.tipo.anadir.select.action.param.action.title')" onmouseout="hints.hide()"  id="selectActionAction"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('selectAction')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="tipo.anadir.tipo.anadir.select.action"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

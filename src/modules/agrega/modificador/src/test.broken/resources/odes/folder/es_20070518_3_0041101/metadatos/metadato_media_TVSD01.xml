@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This is a Reload version 2.5.4 Metadata document-->
+<!--Spawned from the Reload Metadata Generator - http://www.reload.ac.uk-->
+<lom xmlns="http://ltsc.ieee.org/xsd/LOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM lom.xsd">
+  <general>
+    <identifier>
+      <catalog>Catálogo unificado mec-red.es-ccaa de identificación de ODE</catalog>
+      <entry>es_20070518_3_0041101</entry>
+    </identifier>
+    <title>
+      <string>Historia de la televisión</string>
+    </title>
+    <language>es</language>
+    <description>
+      <string>Estudio del origen y la evolución histórica del medio televisivo en diferentes países.</string>
+    </description>
+    <keyword>
+      <string>Televisión, Medios de Comunicación</string>
+    </keyword>
+    <coverage>
+      <string>Universal</string>
+    </coverage>
+    <structure>
+      <source>LOM-ESv1.0</source>
+      <value>hierarchical</value>
+    </structure>
+    <aggregationLevel>
+      <source>LOM-ESv1.0</source>
+      <value>3</value>
+    </aggregationLevel>
+  </general>
+  <lifeCycle>
+    <version>
+      <string>V1.0</string>
+    </version>
+    <status>
+      <source>LOM-ESv1.0</source>
+      <value>final</value>
+    </status>
+    <contribute>
+      <role>
+        <source>LOM-ESv1.0</source>
+        <value>author</value>
+      </role>
+      <entity>BEGIN:VCARD VERSION:3.0 FN: Juan Carlos Alfeo Álvarez, José Manuel Palacio Arranz, Guido Cortell Huot Sordot, Guzmán Urrero Peña, Miguel Ángel Sáez, Inmaculada Bernal Fernández, Servipinto S.L. EMAIL;TYPE=INTERNET:ORG:END:VCARD</entity>
+      <date>
+        <dateTime>2002-10-31</dateTime>
+        <description>
+          <string>Fecha de creación de la secuencia didáctica</string>
+        </description>
+      </date>
+    </contribute>
+    <contribute>
+      <role>
+        <source>LOM-ESv1.0</source>
+        <value>editor</value>
+      </role>
+      <entity>BEGIN:VCARD VERSION:3.0 FN: Centro Nacional de Información y Comunicación Educativa EMAIL;TYPE=INTERNET: webmaster@cnice.mec.es ORG:Ministerio de Educación y Ciencia de España END:VCARD</entity>
+      <date>
+        <dateTime>2002-10-31</dateTime>
+        <description>
+          <string>Fecha de publicación de la secuencia didáctica</string>
+        </description>
+      </date>
+    </contribute>
+  </lifeCycle>
+  <metaMetadata>
+    <identifier>
+      <catalog>Catálogo unificado mec-red.es-ccaa-meta de identificación de instancias de metadatos de ODE</catalog>
+      <entry>es_20070518_3_0041101-meta</entry>
+    </identifier>
+    <contribute>
+      <role>
+        <source>LOM-ESv1.0</source>
+        <value>creator</value>
+      </role>
+      <entity>BEGIN:VCARD VERSION:3.0 FN: EMAIL;TYPE=INTERNET:ORG: Santillana Educación S.L. e Indra Sistemas S.A. END:VCARD</entity>
+      <date>
+        <dateTime>2007-05-18</dateTime>
+        <description>
+          <string>Fecha de catalogación de la secuencia didáctica</string>
+        </description>
+      </date>
+    </contribute>
+    <metadataSchema>LOM-ES V1.0</metadataSchema>
+    <language>es</language>
+  </metaMetadata>
+  <technical>
+    <format>application/x-shockwave-flash</format>
+    <format>image/gif</format>
+    <format>image/jpeg</format>
+    <format>text/css</format>
+    <format>text/html</format>
+    <size>1401856</size>
+    <requirement>
+      <orComposite>
+        <type>
+          <source>LOM-ESv1.0</source>
+          <value>browser</value>
+        </type>
+        <name>
+          <source>LOM-ESv1.0</source>
+          <value>any</value>
+        </name>
+        <minimumVersion>Flash Player 5</minimumVersion>
+      </orComposite>
+    </requirement>
+    <otherPlatformRequirements>
+      <string>Plugin de Flash Player</string>
+    </otherPlatformRequirements>
+  </technical>
+  <educational>
+    <interactivityType>
+      <source>LOM-ESv1.0</source>
+      <value>mixed</value>
+    </interactivityType>
+    <learningResourceType>
+      <source>LOM-ESv1.0</source>
+      <value>hypertext</value>
+    </learningResourceType>
+    <learningResourceType>
+      <source>LOM-ESv1.0</source>
+      <value>master class</value>
+    </learningResourceType>
+    <learningResourceType>
+      <source>LOM-ESv1.0</source>
+      <value>guided reading</value>
+    </learningResourceType>
+    <learningResourceType>
+      <source>LOM-ESv1.0</source>
+      <value>narrative text</value>
+    </learningResourceType>
+    <learningResourceType>
+      <source>LOM-ESv1.0</source>
+      <value>photograph</value>
+    </learningResourceType>
+    <learningResourceType>
+      <source>LOM-ESv1.0</source>
+      <value>illustration</value>
+    </learningResourceType>
+    <learningResourceType>
+      <source>LOM-ESv1.0</source>
+      <value>real or virtual learning environment</value>
+    </learningResourceType>
+    <learningResourceType>
+      <source>LOM-ESv1.0</source>
+      <value>contextualized case problem</value>
+    </learningResourceType>
+    <learningResourceType>
+      <source>LOM-ESv1.0</source>
+      <value>closed exercise or problem</value>
+    </learningResourceType>
+    <learningResourceType>
+      <source>LOM-ESv1.0</source>
+      <value>self assessment</value>
+    </learningResourceType>
+    <interactivityLevel>
+      <source>LOM-ESv1.0</source>
+      <value>medium</value>
+    </interactivityLevel>
+    <semanticDensity>
+      <source>LOM-ESv1.0</source>
+      <value>high</value>
+    </semanticDensity>
+    <intendedEndUserRole>
+      <source>LOM-ESv1.0</source>
+      <value>general public</value>
+    </intendedEndUserRole>
+    <intendedEndUserRole>
+      <source>LOM-ESv1.0</source>
+      <value>group</value>
+    </intendedEndUserRole>
+    <context>
+      <source>LOM-ESv1.0</source>
+      <value>mixed</value>
+    </context>
+    <context>
+      <source>LOM-ESv1.0</source>
+      <value>mixed</value>
+    </context>
+    <context>
+      <source>LOM-ESv1.0</source>
+      <value>distance</value>
+    </context>
+    <typicalAgeRange>
+      <string>Para alumnos entre 12-16 años</string>
+    </typicalAgeRange>
+    <difficulty>
+      <source>LOM-ESv1.0</source>
+      <value>difficult</value>
+    </difficulty>
+    <description>
+      <string>Tener una visión general de la evolución de la Televisión.</string>
+    </description>
+    <language>es</language>
+    <cognitiveProcess>
+      <source>LOM-ESv1.0</source>
+      <value>analyse</value>
+    </cognitiveProcess>
+    <cognitiveProcess>
+      <source>LOM-ESv1.0</source>
+      <value>explain</value>
+    </cognitiveProcess>
+    <cognitiveProcess>
+      <source>LOM-ESv1.0</source>
+      <value>understand</value>
+    </cognitiveProcess>
+    <cognitiveProcess>
+      <source>LOM-ESv1.0</source>
+      <value>contextualize</value>
+    </cognitiveProcess>
+    <cognitiveProcess>
+      <source>LOM-ESv1.0</source>
+      <value>decide</value>
+    </cognitiveProcess>
+    <cognitiveProcess>
+      <source>LOM-ESv1.0</source>
+      <value>remember</value>
+    </cognitiveProcess>
+  </educational>
+  <rights>
+    <cost>
+      <source>LOM-ESv1.0</source>
+      <value>no</value>
+    </cost>
+    <copyrightAndOtherRestrictions>
+      <source>LOM-ESv1.0</source>
+      <value>creative commons: attribution - non commercial - share alike</value>
+    </copyrightAndOtherRestrictions>
+    <description>
+      <string>La utilización de estos contenidos es universal, gratuita y abierta, siempre y cuando se trate de un uso educativo no comercial. Las acciones, productos y utilidades derivadas de su utilización no podrán, en consecuencia, generar ningún tipo de lucro. Asimismo, es obligada la referencia a la fuente.</string>
+    </description>
+    <access>
+      <accessType>
+        <source>LOM-ESv1.0</source>
+        <value>universal</value>
+      </accessType>
+      <description>
+        <string>No existen restricciones</string>
+      </description>
+    </access>
+  </rights>
+  <relation>
+    <kind>
+      <source>LOM-ESv1.0</source>
+      <value>ispartof</value>
+    </kind>
+    <resource>
+      <identifier>
+        <catalog>Catálogo unificado mec-red.es-ccaa de identificación de ODE</catalog>
+        <entry>es_20070518_4_0040000</entry>
+      </identifier>
+      <description>
+        <string>Media es un proyecto que permitirá conocer con bastante detalle los aspectos más relevantes del mundo de los Medios de Comunicación de Masas: TELEVISIÓN, RADIO ,CINE,PRENSA y PUBLICIDAD.  En sus secciones se tratará de cuestiones como e lenguaje, la realización, la redacción, la producción, etc, procurando satisfacer la curiosidad y ofreciendo un complemento a tu aprendizaje y una información de partida en relación con algunas de las titulaciones universitarias que mayor demanda presentan.</string>
+      </description>
+    </resource>
+  </relation>
+</lom>
+

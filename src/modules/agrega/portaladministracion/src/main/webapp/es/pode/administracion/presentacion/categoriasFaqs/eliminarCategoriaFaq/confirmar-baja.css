@@ -1,0 +1,15 @@
+#cancelar.action {}
+#cancelar.action #form_submit {}
+
+
+#aceptar.action {}
+#aceptar.action #form_submit {}
+
+#aceptar.action .categoriasBorradas {}
+#aceptar.action .categoriasBorradas .label {}
+#aceptar.action .categoriasBorradas .field {}
+#aceptar.action .listaIds {}
+#aceptar.action .listaIds .label {}
+#aceptar.action .listaIds .field {}
+
+

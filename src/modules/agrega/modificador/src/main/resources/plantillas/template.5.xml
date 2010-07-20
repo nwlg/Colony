@@ -1,0 +1,28 @@
+<educational>
+${load:template.5.1.xml}
+${load:template.5.2.xml}
+<!-- Mas learningResourceType -->
+${load:template.5.3.xml}
+${load:template.5.4.xml}
+<!-- Opcional -->
+${load:template.5.5.xml}
+<!-- Mas intendedEndUserRole -->
+<!-- Opcional -->
+${load:template.5.6.xml}
+<!-- Mas context -->
+<!-- Opcional -->
+${load:template.5.7.xml}
+<!-- Mas typicalAgeRange -->
+<!-- Opcional -->
+${load:template.5.8.xml}
+<!-- Opcional -->
+${load:template.5.9.xml}
+<!-- Opcional -->
+${load:description.xml}
+<!-- Mas description -->
+${load:language.xml}
+<!-- mas language -->
+<!-- Opcional -->
+${load:template.5.12.xml}
+<!-- Mas cognitiveProcess -->
+</educational>

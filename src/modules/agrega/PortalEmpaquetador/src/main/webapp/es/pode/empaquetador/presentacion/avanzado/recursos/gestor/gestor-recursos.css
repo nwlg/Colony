@@ -1,0 +1,54 @@
+#archivos.action {}
+#archivos.action #form_submit {}
+
+
+#organizaciones.action {}
+#organizaciones.action #form_submit {}
+
+
+#recursos.action {}
+#recursos.action #form_submit {}
+
+
+#submanifiestos.action {}
+#submanifiestos.action #form_submit {}
+
+
+#guardar.action {}
+#guardar.action #form_submit {}
+
+#guardar.action .returnURL {}
+#guardar.action .returnURL .label {}
+#guardar.action .returnURL .field {}
+
+#catalogar.action {}
+#catalogar.action #form_submit {}
+
+#catalogar.action .identificador {}
+#catalogar.action .identificador .label {}
+#catalogar.action .identificador .field {}
+#catalogar.action .returnURL {}
+#catalogar.action .returnURL .label {}
+#catalogar.action .returnURL .field {}
+
+#previsualizar.action {}
+#previsualizar.action #form_submit {}
+
+
+#salir.action {}
+#salir.action #form_submit {}
+
+
+#validar.action {}
+#validar.action #form_submit {}
+
+
+#listado.table {}
+#listado.table th {}
+#listado.table td div {}
+
+#listado.table th.identifier {}
+#listado.table td div.identifier {}
+
+
+

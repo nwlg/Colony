@@ -1,0 +1,22 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="vista" class="action">
+    <h3><bean:message key="crear.recurso.avanzado.archivos.archivos.vista"/></h3>
+    <div class="trigger">
+        <html:form styleId="crearRecursoAvanzadoArchivosArchivosVistaForm" action="/CrearRecursoAvanzadoArchivos/ArchivosVista" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Vista')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="crear.recurso.avanzado.archivos.archivos.vista"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

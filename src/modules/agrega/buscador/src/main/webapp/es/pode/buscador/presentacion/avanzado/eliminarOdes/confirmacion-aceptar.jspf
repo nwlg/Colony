@@ -1,0 +1,112 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="eliminar.odes.cu.confirmacion.aceptar"/></h3>
+    <div class="trigger">
+        <html:form styleId="eliminarOdesCUConfirmacionAceptarForm" action="/EliminarOdesCU/ConfirmacionAceptar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="listaIds">
+                        <td class="label"><bean:message key="eliminar.odes.cu.confirmacion.aceptar.param.lista.ids"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.listaIds}"/>
+                           <input type="text" name="listaIds" value="${value}" onmouseover="hints.show('eliminar.odes.cu.confirmacion.aceptar.param.lista.ids.title')" onmouseout="hints.hide()"  id="aceptarListaIds"/>
+                        </td>
+                    </tr>
+                    <tr class="odesDeleted">
+                        <td class="label"><bean:message key="eliminar.odes.cu.confirmacion.aceptar.param.odes.deleted"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.odesDeleted}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.odesDeletedBackingList}">
+                                  <html:select name="form" property="odesDeletedAsArray" onmouseover="hints.show('eliminar.odes.cu.confirmacion.aceptar.param.odes.deleted.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="aceptarOdesDeleted">
+                                      <html:optionsCollection name="form" property="odesDeletedBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="odesDeletedAsArray" onmouseover="hints.show('eliminar.odes.cu.confirmacion.aceptar.param.odes.deleted.title')" onmouseout="hints.hide()"  styleId="aceptarOdesDeleted"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="tipoBusqueda">
+                        <td class="label"><bean:message key="eliminar.odes.cu.confirmacion.aceptar.param.tipo.busqueda"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipoBusqueda}"/>
+                           <input type="text" name="tipoBusqueda" value="${value}" onmouseover="hints.show('eliminar.odes.cu.confirmacion.aceptar.param.tipo.busqueda.title')" onmouseout="hints.hide()"  id="aceptarTipoBusqueda"/>
+                        </td>
+                    </tr>
+                    <tr class="idiomaBuscador">
+                        <td class="label"><bean:message key="eliminar.odes.cu.confirmacion.aceptar.param.idioma.buscador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idiomaBuscador}"/>
+                           <input type="text" name="idiomaBuscador" value="${value}" onmouseover="hints.show('eliminar.odes.cu.confirmacion.aceptar.param.idioma.buscador.title')" onmouseout="hints.hide()"  id="aceptarIdiomaBuscador"/>
+                        </td>
+                    </tr>
+                    <tr class="idHits">
+                        <td class="label"><bean:message key="eliminar.odes.cu.confirmacion.aceptar.param.id.hits"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idHits}"/>
+                           <input type="text" name="idHits" value="${value}" onmouseover="hints.show('eliminar.odes.cu.confirmacion.aceptar.param.id.hits.title')" onmouseout="hints.hide()"  id="aceptarIdHits"/>
+                        </td>
+                    </tr>
+                    <tr class="idioma">
+                        <td class="label"><bean:message key="eliminar.odes.cu.confirmacion.aceptar.param.idioma"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idioma}"/>
+                           <input type="text" name="idioma" value="${value}" onmouseover="hints.show('eliminar.odes.cu.confirmacion.aceptar.param.idioma.title')" onmouseout="hints.hide()"  id="aceptarIdioma"/>
+                        </td>
+                    </tr>
+                    <tr class="busquedaSimpleAvanzada">
+                        <td class="label"><bean:message key="eliminar.odes.cu.confirmacion.aceptar.param.busqueda.simple.avanzada"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.busquedaSimpleAvanzada}"/>
+                           <input type="text" name="busquedaSimpleAvanzada" value="${value}" onmouseover="hints.show('eliminar.odes.cu.confirmacion.aceptar.param.busqueda.simple.avanzada.title')" onmouseout="hints.hide()"  id="aceptarBusquedaSimpleAvanzada"/>
+                        </td>
+                    </tr>
+                    <tr class="tipoLayoutBuscador">
+                        <td class="label"><bean:message key="eliminar.odes.cu.confirmacion.aceptar.param.tipo.layout.buscador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipoLayoutBuscador}"/>
+                           <input type="text" name="tipoLayoutBuscador" value="${value}" onmouseover="hints.show('eliminar.odes.cu.confirmacion.aceptar.param.tipo.layout.buscador.title')" onmouseout="hints.hide()"  id="aceptarTipoLayoutBuscador"/>
+                        </td>
+                    </tr>
+                    <tr class="numeroResultados">
+                        <td class="label"><bean:message key="eliminar.odes.cu.confirmacion.aceptar.param.numero.resultados"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.numeroResultados}"/>
+                           <input type="text" name="numeroResultados" value="${value}" onmouseover="hints.show('eliminar.odes.cu.confirmacion.aceptar.param.numero.resultados.title')" onmouseout="hints.hide()"  id="aceptarNumeroResultados"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="eliminar.odes.cu.confirmacion.aceptar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

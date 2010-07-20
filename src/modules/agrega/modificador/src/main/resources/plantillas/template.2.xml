@@ -1,0 +1,5 @@
+<lifeCycle>
+${load:template.2.1.xml}
+${load:template.2.2.xml}
+${load:template.2.3.xml}
+</lifeCycle>

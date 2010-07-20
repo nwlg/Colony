@@ -1,0 +1,27 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'uso.educativo.confirmacion.eliminar.datos.asesion.param.listado.usos.edu.title':'<formatting:escape language="javascript"><bean:message key="uso.educativo.confirmacion.eliminar.datos.asesion.param.listado.usos.edu.title"/></formatting:escape>',
+                'uso.educativo.confirmacion.eliminar.datos.asesion.param.titulo.uso.edu.title':'<formatting:escape language="javascript"><bean:message key="uso.educativo.confirmacion.eliminar.datos.asesion.param.titulo.uso.edu.title"/></formatting:escape>',
+                'cancelarEliminar':'<formatting:escape language="javascript"><bean:message key="uso.educativo.confirmacion.eliminar.cancelar.eliminar.title"/></formatting:escape>',
+                'cancelarEliminar_no':'<formatting:escape language="javascript"><bean:message key="uso.educativo.confirmacion.eliminar.cancelar.eliminar.title.notallowed"/></formatting:escape>',
+                'cancelarEliminar_reset':'<formatting:escape language="javascript"><bean:message key="uso.educativo.confirmacion.eliminar.cancelar.eliminar.title.reset"/></formatting:escape>',
+                'cancelarEliminar_noreset':'<formatting:escape language="javascript"><bean:message key="uso.educativo.confirmacion.eliminar.cancelar.eliminar.title.reset.not.allowed"/></formatting:escape>',
+                'datosASesion':'<formatting:escape language="javascript"><bean:message key="uso.educativo.confirmacion.eliminar.datos.asesion.title"/></formatting:escape>',
+                'datosASesion_no':'<formatting:escape language="javascript"><bean:message key="uso.educativo.confirmacion.eliminar.datos.asesion.title.notallowed"/></formatting:escape>',
+                'datosASesion_reset':'<formatting:escape language="javascript"><bean:message key="uso.educativo.confirmacion.eliminar.datos.asesion.title.reset"/></formatting:escape>',
+                'datosASesion_noreset':'<formatting:escape language="javascript"><bean:message key="uso.educativo.confirmacion.eliminar.datos.asesion.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+</script>
+    </tiles:put>

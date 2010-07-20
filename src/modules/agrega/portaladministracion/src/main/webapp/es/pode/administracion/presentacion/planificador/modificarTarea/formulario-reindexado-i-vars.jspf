@@ -1,0 +1,47 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="anio" value="${form.anio}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="minutos" value="${form.minutos}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="trigger" value="${form.trigger}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="grupoTrigger" value="${form.grupoTrigger}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="grupoTrabajo" value="${form.grupoTrabajo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tipoTarea" value="${form.tipoTarea}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="msgReindexado" value="${form.msgReindexado}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="dia" value="${form.dia}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="hora" value="${form.hora}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="trabajo" value="${form.trabajo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="msgNoReindexado" value="${form.msgNoReindexado}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="mes" value="${form.mes}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="msgDescReindexado" value="${form.msgDescReindexado}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="periodicidad" value="${form.periodicidad}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="repositorio" value="${form.repositorio}"/>
+    </c:catch>
+</div>

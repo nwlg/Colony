@@ -1,0 +1,32 @@
+<div id="listadoAnotaciones" class="table">
+    <form id="listadoAnotaciones" name="" action="" method="post" enctype="multipart/form-data">
+    <display:table name="${form.listadoAnotaciones}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="listado-anotaciones-form-listado-anotaciones.pdf" />
+        <display:column media="html">
+            <input type="checkbox" name="tituloAnotacionRowSelectionAsArray" value="${row.tituloAnotacion}" title='<bean:message key="select.deselect.this.row"/>'/>
+        </display:column>
+
+        <display:column media="xml csv excel pdf"
+            titleKey="anotacion.listado.anotaciones.form.param.listado.anotaciones.titulo.anotacion"
+            autolink="true" paramId="tituloAnotacion"
+            property="tituloAnotacion">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="tituloAnotacion" paramId="tituloAnotacion"
+            sortProperty="tituloAnotacion" sortable="true"
+            titleKey="anotacion.listado.anotaciones.form.param.listado.anotaciones.titulo.anotacion"
+            property="tituloAnotacion" />
+   
+    </display:table>
+    <c:if test="${!empty form.listadoAnotaciones}">
+            <input type="submit" value="<bean:message key="anotacion.listado.anotaciones.form.eliminar"/>" onclick="this.form.name='anotacionListadoAnotacionesFormEliminarForm';this.form.action='<html:rewrite action="/Anotacion/ListadoAnotacionesFormEliminar"/>';" onmouseover="hints.show('Eliminar')" onmouseout="hints.hide()"/>
+            <input type="button" value="<bean:message key="select.deselect.all"/>" onclick="var boxes=this.form.elements['tituloAnotacionRowSelectionAsArray'];var setChecked=(boxes.length==0)?false:!boxes[0].checked;for(var i=0;i<boxes.length;i++)boxes[i].checked=setChecked;"/>
+    </c:if>
+    </form>
+</div>
+

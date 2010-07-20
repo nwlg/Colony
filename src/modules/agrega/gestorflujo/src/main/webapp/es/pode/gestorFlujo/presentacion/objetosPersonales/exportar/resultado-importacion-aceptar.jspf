@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="exportar.cu.resultado.importacion.aceptar"/></h3>
+    <div class="trigger">
+        <form id="exportarCUResultadoImportacionAceptarForm" action='<html:rewrite action="/ExportarCU/ResultadoImportacionAceptar"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_CATALOGADOR,ROLE_ADMINISTRADOR,ROLE_DOCENTE">
+               <html:submit onmouseover="hints.show('aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="exportar.cu.resultado.importacion.aceptar"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

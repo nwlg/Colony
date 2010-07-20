@@ -1,0 +1,59 @@
+Installation guide for Service Provider
+---------------------------------------
+
+aptitude install libapache2-mod-shib2
+
+For live config files:
+$ cp sp-conf/* /etc/shibboleth/
+
+For dev (virtual machine) config files:
+$ cp dev-sp-conf/* /etc/shibboleth/
+
+a2enmod shib2
+
+vi /etc/apache2/sites-enabled/001-agrega
+
+* remove CAS VirtualHosts
+* ensure that apache has a valid DocumentRoot that is has permission to read.  The directory must also be visible to clients, ie "Allow from all".
+* add (within the main Agrega VirtualHost):
+
+---
+  <Location /shibboleth-sp>
+    Allow from all
+  </Location>
+  Alias /shibboleth-sp/main.css /usr/share/shibboleth/main.css
+  Alias /shibboleth-sp/logo.jpg /usr/share/shibboleth/logo.jpg
+
+  JkEnvVar Shib-Session-ID
+  JkEnvVar uid
+  JkEnvVar givenName
+  JkEnvVar sn
+  JkEnvVar mail
+  JkEnvVar persistent-id
+
+  <LocationMatch /(visualizadorcontenidos|PortalEmpaquetador|catalogadorWeb|visualizador|portaladministracion|buscador|dri|gestorFlujo|buscar|auditoria|ModificadorWeb|oaipmh|TaggingWeb)/j_acegi_shibboleth_security_check>
+    AuthType shibboleth
+    ShibRequireSession On
+    require valid-user
+  </Location>
+---
+
+
+Add metadata to IdP (very short version)...
+
+$ curl http://<your server>/Shibboleth.sso/Metadata -o your-server-metadata.xml
+
+$ scp your-server-metadata.xml identity.siriusit.co.uk:/opt/shibboleth-idp/metadata/
+
+Now on identity.siriusit.co.uk ...
+
+$ vi /opt/shibboleth-idp/conf/relying-party.xml
+
+Search for "This is just for our dev SP" and add a MetadataProvider block pointing to your newly added metadat.xml file.  Save, quit.
+
+$ vi /opt/shibboleth-idp/conf/attribute-filter.xml
+
+Search for "Add our own dev and testing servers" and add a new basic:Rule line with updated URI (you can find the correct one in the metadata.xml file).  This search should find two hits and both need an extra line.  Save, quit.
+
+$ /etc/init.d/tomcat6 restart
+

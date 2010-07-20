@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+ <globalConfiguration>
+	  <requestFlow>
+		   <handler name="HttpBasicAuthHandler" type="java:es.indra.ibuilder.security.ws.HttpBasicCredentialsSender">
+		   </handler>
+	  </requestFlow>
+ </globalConfiguration>
+ <transport name="http" pivot="java:org.apache.axis.transport.http.HTTPSender"/>
+</deployment>

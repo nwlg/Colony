@@ -1,0 +1,26 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="nodos" value="${form.nodos}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="areaCurricularBusqueda" value="${form.areaCurricularBusqueda}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tipoBusquedaArbol" value="${form.tipoBusquedaArbol}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="rutaArbol" value="${form.rutaArbol}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tipoLayoutBuscador" value="${form.tipoLayoutBuscador}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tipoBusqueda" value="${form.tipoBusqueda}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="numeroResultados" value="${form.numeroResultados}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idiomaBuscador" value="${form.idiomaBuscador}"/>
+    </c:catch>
+</div>

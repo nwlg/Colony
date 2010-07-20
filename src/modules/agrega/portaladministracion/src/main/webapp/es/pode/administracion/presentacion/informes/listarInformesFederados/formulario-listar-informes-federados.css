@@ -1,0 +1,23 @@
+#recuperar.action {}
+#recuperar.action #form_submit {}
+
+#recuperar.action .nombre {}
+#recuperar.action .nombre .label {}
+#recuperar.action .nombre .field {}
+
+#listarInformes.action {}
+#listarInformes.action #form_submit {}
+
+
+#informes.table {}
+#informes.table th {}
+#informes.table td div {}
+
+#informes.table th.nombre {}
+#informes.table td div.nombre {}
+
+#informes.table th.fecha {}
+#informes.table td div.fecha {}
+
+
+

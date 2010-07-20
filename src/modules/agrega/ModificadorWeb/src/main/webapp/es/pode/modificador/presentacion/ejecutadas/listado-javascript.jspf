@@ -1,0 +1,43 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'modificaciones.ejecutadas.listado.busqueda.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="modificaciones.ejecutadas.listado.busqueda.param.idioma.buscador.title"/></formatting:escape>',
+                'modificaciones.ejecutadas.listado.informe.param.id.modificacion.title':'<formatting:escape language="javascript"><bean:message key="modificaciones.ejecutadas.listado.informe.param.id.modificacion.title"/></formatting:escape>',
+                'modificaciones.ejecutadas.listado.eliminar.param.id.modificacion.title':'<formatting:escape language="javascript"><bean:message key="modificaciones.ejecutadas.listado.eliminar.param.id.modificacion.title"/></formatting:escape>',
+                'Ejecutandose':'<formatting:escape language="javascript"><bean:message key="modificaciones.ejecutadas.listado.ejecutandose.title"/></formatting:escape>',
+                'Ejecutandose_no':'<formatting:escape language="javascript"><bean:message key="modificaciones.ejecutadas.listado.ejecutandose.title.notallowed"/></formatting:escape>',
+                'Ejecutandose_reset':'<formatting:escape language="javascript"><bean:message key="modificaciones.ejecutadas.listado.ejecutandose.title.reset"/></formatting:escape>',
+                'Ejecutandose_noreset':'<formatting:escape language="javascript"><bean:message key="modificaciones.ejecutadas.listado.ejecutandose.title.reset.not.allowed"/></formatting:escape>',
+                'Pendientes':'<formatting:escape language="javascript"><bean:message key="modificaciones.ejecutadas.listado.pendientes.title"/></formatting:escape>',
+                'Pendientes_no':'<formatting:escape language="javascript"><bean:message key="modificaciones.ejecutadas.listado.pendientes.title.notallowed"/></formatting:escape>',
+                'Pendientes_reset':'<formatting:escape language="javascript"><bean:message key="modificaciones.ejecutadas.listado.pendientes.title.reset"/></formatting:escape>',
+                'Pendientes_noreset':'<formatting:escape language="javascript"><bean:message key="modificaciones.ejecutadas.listado.pendientes.title.reset.not.allowed"/></formatting:escape>',
+                'Busqueda':'<formatting:escape language="javascript"><bean:message key="modificaciones.ejecutadas.listado.busqueda.title"/></formatting:escape>',
+                'Busqueda_no':'<formatting:escape language="javascript"><bean:message key="modificaciones.ejecutadas.listado.busqueda.title.notallowed"/></formatting:escape>',
+                'Busqueda_reset':'<formatting:escape language="javascript"><bean:message key="modificaciones.ejecutadas.listado.busqueda.title.reset"/></formatting:escape>',
+                'Busqueda_noreset':'<formatting:escape language="javascript"><bean:message key="modificaciones.ejecutadas.listado.busqueda.title.reset.not.allowed"/></formatting:escape>',
+                'Informe':'<formatting:escape language="javascript"><bean:message key="modificaciones.ejecutadas.listado.informe.title"/></formatting:escape>',
+                'Informe_no':'<formatting:escape language="javascript"><bean:message key="modificaciones.ejecutadas.listado.informe.title.notallowed"/></formatting:escape>',
+                'Informe_reset':'<formatting:escape language="javascript"><bean:message key="modificaciones.ejecutadas.listado.informe.title.reset"/></formatting:escape>',
+                'Informe_noreset':'<formatting:escape language="javascript"><bean:message key="modificaciones.ejecutadas.listado.informe.title.reset.not.allowed"/></formatting:escape>',
+                'Eliminar':'<formatting:escape language="javascript"><bean:message key="modificaciones.ejecutadas.listado.eliminar.title"/></formatting:escape>',
+                'Eliminar_no':'<formatting:escape language="javascript"><bean:message key="modificaciones.ejecutadas.listado.eliminar.title.notallowed"/></formatting:escape>',
+                'Eliminar_reset':'<formatting:escape language="javascript"><bean:message key="modificaciones.ejecutadas.listado.eliminar.title.reset"/></formatting:escape>',
+                'Eliminar_noreset':'<formatting:escape language="javascript"><bean:message key="modificaciones.ejecutadas.listado.eliminar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+
+</script>
+    </tiles:put>

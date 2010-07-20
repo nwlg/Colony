@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="crearNodoSQI" class="action">
+    <h3><bean:message key="listar.nodos.sqi.formulario.nodos.sqi.crear.nodo.sqi"/></h3>
+    <div class="trigger">
+        <form id="listarNodosSQIFormularioNodosSQICrearNodoSQIForm" action='<html:rewrite action="/ListarNodosSQI/FormularioNodosSQICrearNodoSQI"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+               <html:submit onmouseover="hints.show('CrearNodoSQI')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="listar.nodos.sqi.formulario.nodos.sqi.crear.nodo.sqi"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

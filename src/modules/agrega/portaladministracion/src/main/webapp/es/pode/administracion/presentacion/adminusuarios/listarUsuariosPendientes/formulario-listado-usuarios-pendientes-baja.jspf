@@ -1,0 +1,16 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="baja" class="action">
+    <h3><bean:message key="listar.usuarios.pendientes.formulario.listado.usuarios.pendientes.baja"/></h3>
+    <div class="trigger">
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+        <html:form styleId="listarUsuariosPendientesFormularioListadoUsuariosPendientesBajaForm" action="/ListarUsuariosPendientes/FormularioListadoUsuariosPendientesBaja" method="post" enctype="multipart/form-data">
+            <%@ include file="/es/pode/administracion/presentacion/adminusuarios/listarUsuariosPendientes/formulario-listado-usuarios-pendientes-usuarios.jspf" %>
+               <html:submit onmouseover="hints.show('Baja')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="listar.usuarios.pendientes.formulario.listado.usuarios.pendientes.baja"/>
+               </html:submit>	
+        </html:form>
+			</authz:authorize>	
+    </div>
+
+</div>
+ <br class="clr"/>

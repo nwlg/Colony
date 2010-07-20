@@ -1,0 +1,103 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="datosRelacion" class="action">
+    <h3><bean:message key="tesauros.relaciones.jerarquicas.form.datos.relacion"/></h3>
+    <div class="trigger">
+        <html:form styleId="tesaurosRelacionesJerarquicasFormDatosRelacionForm" action="/Tesauros/RelacionesJerarquicasFormDatosRelacion" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="id">
+                        <td class="label"><bean:message key="tesauros.relaciones.jerarquicas.form.datos.relacion.param.id"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.id}"/>
+                           <input type="text" name="id" value="${value}" onmouseover="hints.show('tesauros.relaciones.jerarquicas.form.datos.relacion.param.id.title')" onmouseout="hints.hide()"  id="datosRelacionId"/>
+                        </td>
+                    </tr>
+                    <tr class="nomTesauro">
+                        <td class="label"><bean:message key="tesauros.relaciones.jerarquicas.form.datos.relacion.param.nom.tesauro"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.nomTesauro}"/>
+                           <input type="text" name="nomTesauro" value="${value}" onmouseover="hints.show('tesauros.relaciones.jerarquicas.form.datos.relacion.param.nom.tesauro.title')" onmouseout="hints.hide()"  id="datosRelacionNomTesauro"/>
+                        </td>
+                    </tr>
+                    <tr class="idioma">
+                        <td class="label"><bean:message key="tesauros.relaciones.jerarquicas.form.datos.relacion.param.idioma"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idioma}"/>
+                           <input type="text" name="idioma" value="${value}" onmouseover="hints.show('tesauros.relaciones.jerarquicas.form.datos.relacion.param.idioma.title')" onmouseout="hints.hide()"  id="datosRelacionIdioma"/>
+                        </td>
+                    </tr>
+                    <tr class="taxonesvo">
+                        <td class="label"><bean:message key="tesauros.relaciones.jerarquicas.form.datos.relacion.param.taxonesvo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.taxonesvo}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.taxonesvoBackingList}">
+                                  <html:select name="form" property="taxonesvoAsArray" onmouseover="hints.show('tesauros.relaciones.jerarquicas.form.datos.relacion.param.taxonesvo.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="datosRelacionTaxonesvo">
+                                      <html:optionsCollection name="form" property="taxonesvoBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="taxonesvoAsArray" onmouseover="hints.show('tesauros.relaciones.jerarquicas.form.datos.relacion.param.taxonesvo.title')" onmouseout="hints.hide()"  styleId="datosRelacionTaxonesvo"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="rutaPadrevo">
+                        <td class="label"><bean:message key="tesauros.relaciones.jerarquicas.form.datos.relacion.param.ruta.padrevo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.rutaPadrevo}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.rutaPadrevoBackingList}">
+                                  <html:select name="form" property="rutaPadrevoAsArray" onmouseover="hints.show('tesauros.relaciones.jerarquicas.form.datos.relacion.param.ruta.padrevo.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="datosRelacionRutaPadrevo">
+                                      <html:optionsCollection name="form" property="rutaPadrevoBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="rutaPadrevoAsArray" onmouseover="hints.show('tesauros.relaciones.jerarquicas.form.datos.relacion.param.ruta.padrevo.title')" onmouseout="hints.hide()"  styleId="datosRelacionRutaPadrevo"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="jerarquias">
+                        <td class="label"><bean:message key="tesauros.relaciones.jerarquicas.form.datos.relacion.param.jerarquias"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.jerarquias}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.jerarquiasBackingList}">
+                                  <html:select name="form" property="jerarquiasAsArray" onmouseover="hints.show('tesauros.relaciones.jerarquicas.form.datos.relacion.param.jerarquias.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="datosRelacionJerarquias">
+                                      <html:optionsCollection name="form" property="jerarquiasBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="jerarquiasAsArray" onmouseover="hints.show('tesauros.relaciones.jerarquicas.form.datos.relacion.param.jerarquias.title')" onmouseout="hints.hide()"  styleId="datosRelacionJerarquias"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('datosRelacion')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="tesauros.relaciones.jerarquicas.form.datos.relacion"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

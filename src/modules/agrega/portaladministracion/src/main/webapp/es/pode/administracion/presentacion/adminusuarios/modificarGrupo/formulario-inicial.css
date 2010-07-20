@@ -1,0 +1,15 @@
+#continuar.action {}
+#continuar.action #form_submit {}
+
+#continuar.action .descripcion {}
+#continuar.action .descripcion .label {}
+#continuar.action .descripcion .field {}
+#continuar.action .id {}
+#continuar.action .id .label {}
+#continuar.action .id .field {}
+
+#cancelar.action {}
+#cancelar.action #form_submit {}
+
+
+

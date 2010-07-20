@@ -1,0 +1,247 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="volver" class="action">
+    <h3><bean:message key="ciclo.de.vida.ciclo.no.valido.volver"/></h3>
+    <div class="trigger">
+        <html:form styleId="cicloDeVidaCicloNoValidoVolverForm" action="/CicloDeVida/CicloNoValidoVolver" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="identificadorOde">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.no.valido.volver.param.identificador.ode"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.identificadorOde}"/>
+                           <input type="text" name="identificadorOde" value="${value}" onmouseover="hints.show('ciclo.de.vida.ciclo.no.valido.volver.param.identificador.ode.title')" onmouseout="hints.hide()"  id="volverIdentificadorOde"/>
+                        </td>
+                    </tr>
+                    <tr class="versiones">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.no.valido.volver.param.versiones"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.versiones}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.versionesBackingList}">
+                                  <html:select name="form" property="versionesAsArray" onmouseover="hints.show('ciclo.de.vida.ciclo.no.valido.volver.param.versiones.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="volverVersiones">
+                                      <html:optionsCollection name="form" property="versionesBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="versionesAsArray" onmouseover="hints.show('ciclo.de.vida.ciclo.no.valido.volver.param.versiones.title')" onmouseout="hints.hide()"  styleId="volverVersiones"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="estatus">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.no.valido.volver.param.estatus"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.estatus}"/>
+                           <input type="text" name="estatus" value="${value}" onmouseover="hints.show('ciclo.de.vida.ciclo.no.valido.volver.param.estatus.title')" onmouseout="hints.hide()"  id="volverEstatus"/>
+                        </td>
+                    </tr>
+                    <tr class="contribuciones">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.no.valido.volver.param.contribuciones"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.contribuciones}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.contribucionesBackingList}">
+                                  <html:select name="form" property="contribucionesAsArray" onmouseover="hints.show('ciclo.de.vida.ciclo.no.valido.volver.param.contribuciones.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="volverContribuciones">
+                                      <html:optionsCollection name="form" property="contribucionesBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="contribucionesAsArray" onmouseover="hints.show('ciclo.de.vida.ciclo.no.valido.volver.param.contribuciones.title')" onmouseout="hints.hide()"  styleId="volverContribuciones"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="descripciones">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.no.valido.volver.param.descripciones"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.descripciones}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.descripcionesBackingList}">
+                                  <html:select name="form" property="descripcionesAsArray" onmouseover="hints.show('ciclo.de.vida.ciclo.no.valido.volver.param.descripciones.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="volverDescripciones">
+                                      <html:optionsCollection name="form" property="descripcionesBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="descripcionesAsArray" onmouseover="hints.show('ciclo.de.vida.ciclo.no.valido.volver.param.descripciones.title')" onmouseout="hints.hide()"  styleId="volverDescripciones"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="comboIdioma">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.no.valido.volver.param.combo.idioma"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.comboIdioma}"/>
+                           <input type="text" name="comboIdioma" value="${value}" onmouseover="hints.show('ciclo.de.vida.ciclo.no.valido.volver.param.combo.idioma.title')" onmouseout="hints.hide()"  id="volverComboIdioma"/>
+                        </td>
+                    </tr>
+                    <tr class="mensajesError">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.no.valido.volver.param.mensajes.error"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.mensajesError}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.mensajesErrorBackingList}">
+                                  <html:select name="form" property="mensajesErrorAsArray" onmouseover="hints.show('ciclo.de.vida.ciclo.no.valido.volver.param.mensajes.error.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="volverMensajesError">
+                                      <html:optionsCollection name="form" property="mensajesErrorBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="mensajesErrorAsArray" onmouseover="hints.show('ciclo.de.vida.ciclo.no.valido.volver.param.mensajes.error.title')" onmouseout="hints.hide()"  styleId="volverMensajesError"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="crol">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.no.valido.volver.param.crol"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.crol}"/>
+                           <input type="text" name="crol" value="${value}" onmouseover="hints.show('ciclo.de.vida.ciclo.no.valido.volver.param.crol.title')" onmouseout="hints.hide()"  id="volverCrol"/>
+                        </td>
+                    </tr>
+                    <tr class="cidentidad">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.no.valido.volver.param.cidentidad"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.cidentidad}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.cidentidadBackingList}">
+                                  <html:select name="form" property="cidentidadAsArray" onmouseover="hints.show('ciclo.de.vida.ciclo.no.valido.volver.param.cidentidad.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="volverCidentidad">
+                                      <html:optionsCollection name="form" property="cidentidadBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="cidentidadAsArray" onmouseover="hints.show('ciclo.de.vida.ciclo.no.valido.volver.param.cidentidad.title')" onmouseout="hints.hide()"  styleId="volverCidentidad"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="dia">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.no.valido.volver.param.dia"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.dia}"/>
+                           <input type="text" name="dia" value="${value}" onmouseover="hints.show('ciclo.de.vida.ciclo.no.valido.volver.param.dia.title')" onmouseout="hints.hide()"  id="volverDia"/>
+                        </td>
+                    </tr>
+                    <tr class="mes">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.no.valido.volver.param.mes"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.mes}"/>
+                           <input type="text" name="mes" value="${value}" onmouseover="hints.show('ciclo.de.vida.ciclo.no.valido.volver.param.mes.title')" onmouseout="hints.hide()"  id="volverMes"/>
+                        </td>
+                    </tr>
+                    <tr class="anyo">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.no.valido.volver.param.anyo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.anyo}"/>
+                           <input type="text" name="anyo" value="${value}" onmouseover="hints.show('ciclo.de.vida.ciclo.no.valido.volver.param.anyo.title')" onmouseout="hints.hide()"  id="volverAnyo"/>
+                        </td>
+                    </tr>
+                    <tr class="hora">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.no.valido.volver.param.hora"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.hora}"/>
+                           <input type="text" name="hora" value="${value}" onmouseover="hints.show('ciclo.de.vida.ciclo.no.valido.volver.param.hora.title')" onmouseout="hints.hide()"  id="volverHora"/>
+                        </td>
+                    </tr>
+                    <tr class="minutos">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.no.valido.volver.param.minutos"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.minutos}"/>
+                           <input type="text" name="minutos" value="${value}" onmouseover="hints.show('ciclo.de.vida.ciclo.no.valido.volver.param.minutos.title')" onmouseout="hints.hide()"  id="volverMinutos"/>
+                        </td>
+                    </tr>
+                    <tr class="segundoP1">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.no.valido.volver.param.segundo.p1"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.segundoP1}"/>
+                           <input type="text" name="segundoP1" value="${value}" onmouseover="hints.show('ciclo.de.vida.ciclo.no.valido.volver.param.segundo.p1.title')" onmouseout="hints.hide()"  id="volverSegundoP1"/>
+                        </td>
+                    </tr>
+                    <tr class="segundoP2">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.no.valido.volver.param.segundo.p2"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.segundoP2}"/>
+                           <input type="text" name="segundoP2" value="${value}" onmouseover="hints.show('ciclo.de.vida.ciclo.no.valido.volver.param.segundo.p2.title')" onmouseout="hints.hide()"  id="volverSegundoP2"/>
+                        </td>
+                    </tr>
+                    <tr class="meridianocero">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.no.valido.volver.param.meridianocero"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.meridianocero}"/>
+                           <input type="text" name="meridianocero" value="${value}" onmouseover="hints.show('ciclo.de.vida.ciclo.no.valido.volver.param.meridianocero.title')" onmouseout="hints.hide()"  id="volverMeridianocero"/>
+                        </td>
+                    </tr>
+                    <tr class="comboZonaH">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.no.valido.volver.param.combo.zona.h"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.comboZonaH}"/>
+                           <input type="text" name="comboZonaH" value="${value}" onmouseover="hints.show('ciclo.de.vida.ciclo.no.valido.volver.param.combo.zona.h.title')" onmouseout="hints.hide()"  id="volverComboZonaH"/>
+                        </td>
+                    </tr>
+                    <tr class="zhHora">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.no.valido.volver.param.zh.hora"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.zhHora}"/>
+                           <input type="text" name="zhHora" value="${value}" onmouseover="hints.show('ciclo.de.vida.ciclo.no.valido.volver.param.zh.hora.title')" onmouseout="hints.hide()"  id="volverZhHora"/>
+                        </td>
+                    </tr>
+                    <tr class="zhMinutos">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.no.valido.volver.param.zh.minutos"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.zhMinutos}"/>
+                           <input type="text" name="zhMinutos" value="${value}" onmouseover="hints.show('ciclo.de.vida.ciclo.no.valido.volver.param.zh.minutos.title')" onmouseout="hints.hide()"  id="volverZhMinutos"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('volver')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="ciclo.de.vida.ciclo.no.valido.volver"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

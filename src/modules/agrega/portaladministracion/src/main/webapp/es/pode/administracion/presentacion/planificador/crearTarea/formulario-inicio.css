@@ -1,0 +1,33 @@
+#crearTarea.action {}
+#crearTarea.action #form_submit {}
+
+#crearTarea.action .trabajo {}
+#crearTarea.action .trabajo .label {}
+#crearTarea.action .trabajo .field {}
+#crearTarea.action .periodicidad {}
+#crearTarea.action .periodicidad .label {}
+#crearTarea.action .periodicidad .field {}
+#crearTarea.action .dia {}
+#crearTarea.action .dia .label {}
+#crearTarea.action .dia .field {}
+#crearTarea.action .mes {}
+#crearTarea.action .mes .label {}
+#crearTarea.action .mes .field {}
+#crearTarea.action .anio {}
+#crearTarea.action .anio .label {}
+#crearTarea.action .anio .field {}
+#crearTarea.action .hora {}
+#crearTarea.action .hora .label {}
+#crearTarea.action .hora .field {}
+#crearTarea.action .minutos {}
+#crearTarea.action .minutos .label {}
+#crearTarea.action .minutos .field {}
+#crearTarea.action .tipoTarea {}
+#crearTarea.action .tipoTarea .label {}
+#crearTarea.action .tipoTarea .field {}
+
+#cancelar.action {}
+#cancelar.action #form_submit {}
+
+
+

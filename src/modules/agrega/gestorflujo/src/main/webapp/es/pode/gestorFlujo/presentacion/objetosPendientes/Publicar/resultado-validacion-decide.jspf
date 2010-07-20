@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="decide" class="action">
+    <h3><bean:message key="publicar.cu.resultado.validacion.decide"/></h3>
+    <div class="trigger">
+        <form id="publicarCUResultadoValidacionDecideForm" action='<html:rewrite action="/PublicarCU/ResultadoValidacionDecide"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR,ROLE_CATALOGADOR,ROLE_PUBLICADOR,ROLE_ADMINISTRADOR,ROLE_CATALOGADOR,ROLE_PUBLICADOR">
+               <html:submit onmouseover="hints.show('decide')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="publicar.cu.resultado.validacion.decide"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

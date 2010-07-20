@@ -1,0 +1,13 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="modificarLicencia" class="action">
+    <h3><bean:message key="publicar.cu.publicar.ode.modificar.licencia"/></h3>
+    <div class="trigger">
+        <form id="publicarCUPublicarODEModificarLicenciaForm" action='<html:rewrite action="/PublicarCU/PublicarODEModificarLicencia"/>' method="post">
+               <html:submit onmouseover="hints.show('modificarLicencia')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="publicar.cu.publicar.ode.modificar.licencia"/>
+               </html:submit>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

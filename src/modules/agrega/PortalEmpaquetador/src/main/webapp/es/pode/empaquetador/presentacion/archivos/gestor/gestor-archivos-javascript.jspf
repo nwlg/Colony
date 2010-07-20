@@ -1,0 +1,103 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'gestor.archivos.gestor.archivos.submit.param.nombre.title':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.submit.param.nombre.title"/></formatting:escape>',
+                'gestor.archivos.gestor.archivos.navegar.param.href.title':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.navegar.param.href.title"/></formatting:escape>',
+                'gestor.archivos.gestor.archivos.vista.param.vista.carpeta.title':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.vista.param.vista.carpeta.title"/></formatting:escape>',
+                'gestor.archivos.gestor.archivos.portapapeles.eliminar.param.nombre.title':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.portapapeles.eliminar.param.nombre.title"/></formatting:escape>',
+                'gestor.archivos.gestor.archivos.catalogar.param.identificador.title':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.catalogar.param.identificador.title"/></formatting:escape>',
+                'gestor.archivos.gestor.archivos.catalogar.param.return.url.title':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.catalogar.param.return.url.title"/></formatting:escape>',
+                'gestor.archivos.gestor.archivos.guardar.param.return.url.title':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.guardar.param.return.url.title"/></formatting:escape>',
+                'gestor.archivos.gestor.archivos.modificar.param.nombre.title':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.modificar.param.nombre.title"/></formatting:escape>',
+                'Submit':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.submit.title"/></formatting:escape>',
+                'Submit_no':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.submit.title.notallowed"/></formatting:escape>',
+                'Submit_reset':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.submit.title.reset"/></formatting:escape>',
+                'Submit_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.submit.title.reset.not.allowed"/></formatting:escape>',
+                'Navegar':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.navegar.title"/></formatting:escape>',
+                'Navegar_no':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.navegar.title.notallowed"/></formatting:escape>',
+                'Navegar_reset':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.navegar.title.reset"/></formatting:escape>',
+                'Navegar_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.navegar.title.reset.not.allowed"/></formatting:escape>',
+                'Vista':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.vista.title"/></formatting:escape>',
+                'Vista_no':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.vista.title.notallowed"/></formatting:escape>',
+                'Vista_reset':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.vista.title.reset"/></formatting:escape>',
+                'Vista_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.vista.title.reset.not.allowed"/></formatting:escape>',
+                'Portapapeles Eliminar':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.portapapeles.eliminar.title"/></formatting:escape>',
+                'Portapapeles Eliminar_no':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.portapapeles.eliminar.title.notallowed"/></formatting:escape>',
+                'Portapapeles Eliminar_reset':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.portapapeles.eliminar.title.reset"/></formatting:escape>',
+                'Portapapeles Eliminar_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.portapapeles.eliminar.title.reset.not.allowed"/></formatting:escape>',
+                'Vaciar Portapapeles':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.vaciar.portapapeles.title"/></formatting:escape>',
+                'Vaciar Portapapeles_no':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.vaciar.portapapeles.title.notallowed"/></formatting:escape>',
+                'Vaciar Portapapeles_reset':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.vaciar.portapapeles.title.reset"/></formatting:escape>',
+                'Vaciar Portapapeles_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.vaciar.portapapeles.title.reset.not.allowed"/></formatting:escape>',
+                'Archivos':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.archivos.title"/></formatting:escape>',
+                'Archivos_no':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.archivos.title.notallowed"/></formatting:escape>',
+                'Archivos_reset':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.archivos.title.reset"/></formatting:escape>',
+                'Archivos_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.archivos.title.reset.not.allowed"/></formatting:escape>',
+                'Organizaciones':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.organizaciones.title"/></formatting:escape>',
+                'Organizaciones_no':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.organizaciones.title.notallowed"/></formatting:escape>',
+                'Organizaciones_reset':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.organizaciones.title.reset"/></formatting:escape>',
+                'Organizaciones_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.organizaciones.title.reset.not.allowed"/></formatting:escape>',
+                'Recursos':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.recursos.title"/></formatting:escape>',
+                'Recursos_no':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.recursos.title.notallowed"/></formatting:escape>',
+                'Recursos_reset':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.recursos.title.reset"/></formatting:escape>',
+                'Recursos_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.recursos.title.reset.not.allowed"/></formatting:escape>',
+                'Submanifiestos':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.submanifiestos.title"/></formatting:escape>',
+                'Submanifiestos_no':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.submanifiestos.title.notallowed"/></formatting:escape>',
+                'Submanifiestos_reset':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.submanifiestos.title.reset"/></formatting:escape>',
+                'Submanifiestos_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.submanifiestos.title.reset.not.allowed"/></formatting:escape>',
+                'Catalogar':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.catalogar.title"/></formatting:escape>',
+                'Catalogar_no':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.catalogar.title.notallowed"/></formatting:escape>',
+                'Catalogar_reset':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.catalogar.title.reset"/></formatting:escape>',
+                'Catalogar_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.catalogar.title.reset.not.allowed"/></formatting:escape>',
+                'Previsualizar':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.previsualizar.title"/></formatting:escape>',
+                'Previsualizar_no':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.previsualizar.title.notallowed"/></formatting:escape>',
+                'Previsualizar_reset':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.previsualizar.title.reset"/></formatting:escape>',
+                'Previsualizar_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.previsualizar.title.reset.not.allowed"/></formatting:escape>',
+                'Validar':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.validar.title"/></formatting:escape>',
+                'Validar_no':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.validar.title.notallowed"/></formatting:escape>',
+                'Validar_reset':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.validar.title.reset"/></formatting:escape>',
+                'Validar_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.validar.title.reset.not.allowed"/></formatting:escape>',
+                'Guardar':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.guardar.title"/></formatting:escape>',
+                'Guardar_no':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.guardar.title.notallowed"/></formatting:escape>',
+                'Guardar_reset':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.guardar.title.reset"/></formatting:escape>',
+                'Guardar_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.guardar.title.reset.not.allowed"/></formatting:escape>',
+                'Salir':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.salir.title"/></formatting:escape>',
+                'Salir_no':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.salir.title.notallowed"/></formatting:escape>',
+                'Salir_reset':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.salir.title.reset"/></formatting:escape>',
+                'Salir_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.salir.title.reset.not.allowed"/></formatting:escape>',
+                'Modificar':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.modificar.title"/></formatting:escape>',
+                'Modificar_no':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.modificar.title.notallowed"/></formatting:escape>',
+                'Modificar_reset':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.modificar.title.reset"/></formatting:escape>',
+                'Modificar_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.modificar.title.reset.not.allowed"/></formatting:escape>',
+                'Estructura':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.estructura.title"/></formatting:escape>',
+                'Estructura_no':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.estructura.title.notallowed"/></formatting:escape>',
+                'Estructura_reset':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.estructura.title.reset"/></formatting:escape>',
+                'Estructura_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.archivos.gestor.archivos.estructura.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+    </tiles:put>

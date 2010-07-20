@@ -1,0 +1,36 @@
+<div id="cambios" class="table">
+    <display:table name="${form.cambios}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="configurar-modificacion-cambios.pdf" />
+
+        <display:column media="xml csv excel pdf"
+            titleKey="configurar.modificacion.configurar.modificacion.param.cambios.type"
+            autolink="true" paramId="type"
+            property="type">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="type" paramId="type"
+            sortProperty="type" sortable="true"
+            titleKey="configurar.modificacion.configurar.modificacion.param.cambios.type"
+            property="type" />
+   
+
+        <display:column media="xml csv excel pdf"
+            titleKey="configurar.modificacion.configurar.modificacion.param.cambios.value"
+            autolink="true" paramId="value"
+            property="value">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="value" paramId="value"
+            sortProperty="value" sortable="true"
+            titleKey="configurar.modificacion.configurar.modificacion.param.cambios.value"
+            property="value" />
+   
+    </display:table>
+</div>
+

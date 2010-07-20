@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This is a Reload CRT version 2.3.5 Metadata document-->
+<!--Spawned from the Reload Metadata Generator - http://www.reload.ac.uk-->
+<lom xmlns="http://ltsc.ieee.org/xsd/LOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM lom.xsd">
+	<general>
+		<identifier>
+			<catalog>Catálogo unificado mec-red.es-ccaa de identificación de ODE</catalog>
+			<entry>es_20070727_2_0130101</entry>
+		</identifier>
+		<title>
+			<string>Definición y elementos de los polígonos.</string>
+		</title>
+		<language>es</language>
+		<description>
+			<string>Desarrollar las capacidades que permitan expresar con precisión y objetividad las soluciones gráficas. Conocer y comprender los fundamentos del Dibujo técnico para aplicarlos a la lectura e interpretación de los diseños, planos y productos artísticos y a la representación de formas, ateniéndose a las diversas normas, y para elaborar soluciones razonadas ante problemas geométricos en el campo de la técnica y del arte, tanto en el plano, como en el espacio.</string>
+		</description>
+		<keyword>
+			<string>Polígonos, Dibujo Técnico, Educación Plástica y Visual, Tecnología</string>
+		</keyword>
+		<coverage>
+			<string>Universal</string>
+		</coverage>
+		<structure>
+			<source>LOM-ESv1.0</source>
+			<value>hierarchical</value>
+		</structure>
+		<aggregationLevel>
+			<source>LOM-ESv1.0</source>
+			<value>1</value>
+		</aggregationLevel>
+	</general>
+	<lifeCycle>
+		<version>
+			<string>V1.0</string>
+		</version>
+		<status>
+			<source>LOM-ESv1.0</source>
+			<value>final</value>
+		</status>
+		<contribute>
+			<role>
+				<source>LOM-ESv1.0</source>
+				<value>author</value>
+			</role>
+			<entity>BEGIN:VCARD VERSION:3.0 FN: José Antonio Cuadrado Vicente, Segundo Álvarez Moreno, Francisco J. Pérez Alonso, Javier Prieto Martín, José Rodríguez Lara, Jesús García Otero, Manuel J. Prieto Martín, Celia Pernas Prieto, Hernán Gómez Cortés, Horacio González Diéguez, Javier Macho Eiras, Paulo Porta Martínez, Carlos Vera López, Andrés Cantera Cabañas, José Manuel Barrera Arroyo, Pepón Negre y Jorge Rodríguez Balmaseda EMAIL;TYPE=INTERNET:ORG:END:VCARD</entity>
+			<date>
+				<dateTime>2005-12-29</dateTime>
+				<description>
+					<string>Fecha de creación del objeto educativo</string>
+				</description>
+			</date>
+		</contribute>
+		<contribute>
+			<role>
+				<source>LOM-ESv1.0</source>
+				<value>editor</value>
+			</role>
+			<entity>BEGIN:VCARD VERSION:3.0 FN: Centro Nacional de Información y Comunicación Educativa EMAIL;TYPE=INTERNET: webmaster@cnice.mec.es ORG:Ministerio de Educación y Ciencia de España END:VCARD</entity>
+			<date>
+				<dateTime>2005-12-29</dateTime>
+				<description>
+					<string>Fecha de publicación del objeto educativo</string>
+				</description>
+			</date>
+		</contribute>
+	</lifeCycle>
+	<metaMetadata>
+		<identifier>
+			<catalog>Catálogo unificado mec-red.es-ccaa-meta de identificación de instancias de metadatos de ODE</catalog>
+			<entry>es_20070727_2_0130101-meta</entry>
+		</identifier>
+		<contribute>
+			<role>
+				<source>LOM-ESv1.0</source>
+				<value>creator</value>
+			</role>
+			<entity>BEGIN:VCARD VERSION:3.0 FN: EMAIL;TYPE=INTERNET:ORG: Santillana Educación S.L. e Indra Sistemas S.A. END:VCARD</entity>
+			<date>
+				<dateTime>2007-07-23</dateTime>
+				<description>
+					<string>Fecha de catalogación del objeto educativo</string>
+				</description>
+			</date>
+		</contribute>
+		<metadataSchema>LOM-ES V1.0</metadataSchema>
+		<language>es</language>
+	</metaMetadata>
+	<technical>
+		<format>application/x-shockwave-flash</format>
+		<format>text/html</format>
+		<size/>
+		<requirement>
+			<orComposite>
+				<type>
+					<source>LOM-ESv1.0</source>
+					<value>browser</value>
+				</type>
+				<name>
+					<source>LOM-ESv1.0</source>
+					<value>any</value>
+				</name>
+				<minimumVersion>Flash Player 6</minimumVersion>
+			</orComposite>
+		</requirement>
+		<otherPlatformRequirements>
+			<string>Plugin de Flash Player</string>
+		</otherPlatformRequirements>
+	</technical>
+	<educational>
+		<interactivityType>
+			<source>LOM-ESv1.0</source>
+			<value>active</value>
+		</interactivityType>
+		<learningResourceType>
+			<source>LOM-ESv1.0</source>
+			<value>animation</value>
+		</learningResourceType>
+		<learningResourceType>
+			<source>LOM-ESv1.0</source>
+			<value>illustration</value>
+		</learningResourceType>
+		<learningResourceType>
+			<source>LOM-ESv1.0</source>
+			<value>master class</value>
+		</learningResourceType>
+		<learningResourceType>
+			<source>LOM-ESv1.0</source>
+			<value>conceptual map</value>
+		</learningResourceType>
+		<learningResourceType>
+			<source>LOM-ESv1.0</source>
+			<value>narrative text</value>
+		</learningResourceType>
+		<learningResourceType>
+			<source>LOM-ESv1.0</source>
+			<value>information/knowledgeanalysis/organization service</value>
+		</learningResourceType>
+		<learningResourceType>
+			<source>LOM-ESv1.0</source>
+			<value>closed exercise or problem</value>
+		</learningResourceType>
+		<learningResourceType>
+			<source>LOM-ESv1.0</source>
+			<value>self assessment</value>
+		</learningResourceType>
+		<interactivityLevel>
+			<source>LOM-ESv1.0</source>
+			<value>high</value>
+		</interactivityLevel>
+		<semanticDensity>
+			<source>LOM-ESv1.0</source>
+			<value>very high</value>
+		</semanticDensity>
+		<intendedEndUserRole>
+			<source>LOM-ESv1.0</source>
+			<value>general public</value>
+		</intendedEndUserRole>
+		<intendedEndUserRole>
+			<source>LOM-ESv1.0</source>
+			<value>individual</value>
+		</intendedEndUserRole>
+		<context>
+			<source>LOM-ESv1.0</source>
+			<value>mixed</value>
+		</context>
+		<context>
+			<source>LOM-ESv1.0</source>
+			<value>mixed</value>
+		</context>
+		<context>
+			<source>LOM-ESv1.0</source>
+			<value>distance</value>
+		</context>
+		<typicalAgeRange>
+			<string>Para alumnos entre 16-17 años</string>
+		</typicalAgeRange>
+		<difficulty>
+			<source>LOM-ESv1.0</source>
+			<value>difficult</value>
+		</difficulty>
+		<description>
+			<string>Conocer las características, fundamentos y particularidades que encierra el trazado de polígonos: triángulos, cuadriláteros y métodos generales de construcción. Verificar la importancia que tiene la geometría de las formas poligonales para el estudio de la estructura interna de los objetos naturales o de los creados por el hombre. Dividir, con precisión y soltura, la circunferencia en un número cualquiera de partes iguales o, lo que es igual, inscribir polígonos regulares en una circunferencia.</string>
+		</description>
+		<language>es</language>
+		<cognitiveProcess>
+			<source>LOM-ESv1.0</source>
+			<value>analyse</value>
+		</cognitiveProcess>
+		<cognitiveProcess>
+			<source>LOM-ESv1.0</source>
+			<value>understand</value>
+		</cognitiveProcess>
+		<cognitiveProcess>
+			<source>LOM-ESv1.0</source>
+			<value>practise</value>
+		</cognitiveProcess>
+		<cognitiveProcess>
+			<source>LOM-ESv1.0</source>
+			<value>observe</value>
+		</cognitiveProcess>
+		<cognitiveProcess>
+			<source>LOM-ESv1.0</source>
+			<value>self assessment</value>
+		</cognitiveProcess></educational>
+	<rights>
+		<cost>
+			<source>LOM-ESv1.0</source>
+			<value>no</value>
+		</cost>
+		<copyrightAndOtherRestrictions>
+			<source>LOM-ESv1.0</source>
+			<value>creative commons: attribution - non commercial - share alike</value>
+		</copyrightAndOtherRestrictions>
+		<description>
+			<string>La utilización de estos contenidos es universal, gratuita y abierta, siempre y cuando se trate de un uso educativo no comercial. Las acciones, productos y utilidades derivadas de su utilización no podrán, en consecuencia, generar ningún tipo de lucro. Asimismo, es obligada la referencia a la fuente.</string>
+		</description>
+		<access>
+			<accessType>
+				<source>LOM-ESv1.0</source>
+				<value>universal</value>
+			</accessType>
+			<description>
+				<string>No existen restricciones</string>
+			</description>
+		</access>
+	</rights>
+	<relation>
+		<kind>
+			<source>LOM-ESv1.0</source>
+			<value>ispartof</value>
+		</kind>
+		<resource>
+			<identifier>
+				<catalog>Catálogo unificado mec-red.es-ccaa de identificación de ODE</catalog>
+				<entry>es_20070727_3_0130100</entry>
+			</identifier>
+			<description>
+				<string>Se muestra una composición poligonal compleja para estudiar todos los elementos y definiciones de los polígonos en general.</string>
+			</description>
+		</resource>
+	</relation>
+</lom>

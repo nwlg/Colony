@@ -1,0 +1,30 @@
+#buscar.action {}
+#buscar.action #form_submit {}
+
+#buscar.action .idiomaBuscador {}
+#buscar.action .idiomaBuscador .label {}
+#buscar.action .idiomaBuscador .field {}
+
+#submit.action {}
+#submit.action #form_submit {}
+
+#submit.action .action {}
+#submit.action .action .label {}
+#submit.action .action .field {}
+#submit.action .fichero1 {}
+#submit.action .fichero1 .label {}
+#submit.action .fichero1 .field {}
+#submit.action .fichero2 {}
+#submit.action .fichero2 .label {}
+#submit.action .fichero2 .field {}
+#submit.action .fichero3 {}
+#submit.action .fichero3 .label {}
+#submit.action .fichero3 .field {}
+#submit.action .fichero4 {}
+#submit.action .fichero4 .label {}
+#submit.action .fichero4 .field {}
+#submit.action .fichero5 {}
+#submit.action .fichero5 .label {}
+#submit.action .fichero5 .field {}
+
+

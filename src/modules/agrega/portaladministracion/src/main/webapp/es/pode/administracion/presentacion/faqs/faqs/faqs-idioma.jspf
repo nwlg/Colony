@@ -1,0 +1,13 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="idioma" class="action">
+    <h3><bean:message key="faqs.faqs.idioma"/></h3>
+    <div class="trigger">
+        <form id="faqsFaqsIdiomaForm" action='<html:rewrite action="/Faqs/FaqsIdioma"/>' method="post">
+               <html:submit onmouseover="hints.show('idioma')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="faqs.faqs.idioma"/>
+               </html:submit>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

@@ -1,0 +1,32 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'enviar.mail.cu.resultado.envio.aceptar.param.identificador.ode.title':'<formatting:escape language="javascript"><bean:message key="enviar.mail.cu.resultado.envio.aceptar.param.identificador.ode.title"/></formatting:escape>',
+                'enviar.mail.cu.resultado.envio.aceptar.param.idioma.title':'<formatting:escape language="javascript"><bean:message key="enviar.mail.cu.resultado.envio.aceptar.param.idioma.title"/></formatting:escape>',
+                'enviar.mail.cu.resultado.envio.aceptar.param.tipo.layout.buscador.title':'<formatting:escape language="javascript"><bean:message key="enviar.mail.cu.resultado.envio.aceptar.param.tipo.layout.buscador.title"/></formatting:escape>',
+                'enviar.mail.cu.resultado.envio.aceptar.param.mostrar.vuelta.title':'<formatting:escape language="javascript"><bean:message key="enviar.mail.cu.resultado.envio.aceptar.param.mostrar.vuelta.title"/></formatting:escape>',
+                'enviar.mail.cu.resultado.envio.buscar.param.tipo.busqueda.title':'<formatting:escape language="javascript"><bean:message key="enviar.mail.cu.resultado.envio.buscar.param.tipo.busqueda.title"/></formatting:escape>',
+                'enviar.mail.cu.resultado.envio.buscar.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="enviar.mail.cu.resultado.envio.buscar.param.idioma.buscador.title"/></formatting:escape>',
+                'enviar.mail.cu.resultado.envio.buscar.param.mostrar.vuelta.title':'<formatting:escape language="javascript"><bean:message key="enviar.mail.cu.resultado.envio.buscar.param.mostrar.vuelta.title"/></formatting:escape>',
+                'aceptar':'<formatting:escape language="javascript"><bean:message key="enviar.mail.cu.resultado.envio.aceptar.title"/></formatting:escape>',
+                'aceptar_no':'<formatting:escape language="javascript"><bean:message key="enviar.mail.cu.resultado.envio.aceptar.title.notallowed"/></formatting:escape>',
+                'aceptar_reset':'<formatting:escape language="javascript"><bean:message key="enviar.mail.cu.resultado.envio.aceptar.title.reset"/></formatting:escape>',
+                'aceptar_noreset':'<formatting:escape language="javascript"><bean:message key="enviar.mail.cu.resultado.envio.aceptar.title.reset.not.allowed"/></formatting:escape>',
+                'buscar':'<formatting:escape language="javascript"><bean:message key="enviar.mail.cu.resultado.envio.buscar.title"/></formatting:escape>',
+                'buscar_no':'<formatting:escape language="javascript"><bean:message key="enviar.mail.cu.resultado.envio.buscar.title.notallowed"/></formatting:escape>',
+                'buscar_reset':'<formatting:escape language="javascript"><bean:message key="enviar.mail.cu.resultado.envio.buscar.title.reset"/></formatting:escape>',
+                'buscar_noreset':'<formatting:escape language="javascript"><bean:message key="enviar.mail.cu.resultado.envio.buscar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+</script>
+    </tiles:put>

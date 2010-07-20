@@ -1,0 +1,18 @@
+#detalleClasificacion.action {}
+#detalleClasificacion.action #form_submit {}
+
+#detalleClasificacion.action .identificadorOde {}
+#detalleClasificacion.action .identificadorOde .label {}
+#detalleClasificacion.action .identificadorOde .field {}
+#detalleClasificacion.action .listadoClasificaciones {}
+#detalleClasificacion.action .listadoClasificaciones .label {}
+#detalleClasificacion.action .listadoClasificaciones .field {}
+#detalleClasificacion.action .botonPulsado {}
+#detalleClasificacion.action .botonPulsado .label {}
+#detalleClasificacion.action .botonPulsado .field {}
+
+#vuelveDeClasificaciones.action {}
+#vuelveDeClasificaciones.action #form_submit {}
+
+
+

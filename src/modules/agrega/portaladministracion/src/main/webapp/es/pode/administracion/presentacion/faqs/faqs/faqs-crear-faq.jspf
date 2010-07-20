@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="crearFaq" class="action">
+    <h3><bean:message key="faqs.faqs.crear.faq"/></h3>
+    <div class="trigger">
+        <form id="faqsFaqsCrearFaqForm" action='<html:rewrite action="/Faqs/FaqsCrearFaq"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+               <html:submit onmouseover="hints.show('CrearFaq')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="faqs.faqs.crear.faq"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

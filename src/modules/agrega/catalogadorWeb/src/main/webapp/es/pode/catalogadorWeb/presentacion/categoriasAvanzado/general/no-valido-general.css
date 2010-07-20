@@ -1,0 +1,38 @@
+#volver.action {}
+#volver.action #form_submit {}
+
+#volver.action .identificadorOde {}
+#volver.action .identificadorOde .label {}
+#volver.action .identificadorOde .field {}
+#volver.action .estructura {}
+#volver.action .estructura .label {}
+#volver.action .estructura .field {}
+#volver.action .nivelAgregacion {}
+#volver.action .nivelAgregacion .label {}
+#volver.action .nivelAgregacion .field {}
+#volver.action .identificadores {}
+#volver.action .identificadores .label {}
+#volver.action .identificadores .field {}
+#volver.action .titulos {}
+#volver.action .titulos .label {}
+#volver.action .titulos .field {}
+#volver.action .idiomas {}
+#volver.action .idiomas .label {}
+#volver.action .idiomas .field {}
+#volver.action .descripciones {}
+#volver.action .descripciones .label {}
+#volver.action .descripciones .field {}
+#volver.action .palabrasClave {}
+#volver.action .palabrasClave .label {}
+#volver.action .palabrasClave .field {}
+#volver.action .ambitos {}
+#volver.action .ambitos .label {}
+#volver.action .ambitos .field {}
+#volver.action .comboIdioma {}
+#volver.action .comboIdioma .label {}
+#volver.action .comboIdioma .field {}
+#volver.action .mensajesError {}
+#volver.action .mensajesError .label {}
+#volver.action .mensajesError .field {}
+
+

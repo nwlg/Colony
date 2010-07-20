@@ -1,0 +1,49 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="submitConfirmacion" class="action">
+    <h3><bean:message key="modificaciones.pendientes.confirmacion.submit.confirmacion"/></h3>
+    <div class="trigger">
+        <html:form styleId="modificacionesPendientesConfirmacionSubmitConfirmacionForm" action="/ModificacionesPendientes/ConfirmacionSubmitConfirmacion" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="action">
+                        <td class="label"><bean:message key="modificaciones.pendientes.confirmacion.submit.confirmacion.param.action"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.action}"/>
+                           <input type="text" name="action" value="${value}" onmouseover="hints.show('modificaciones.pendientes.confirmacion.submit.confirmacion.param.action.title')" onmouseout="hints.hide()"  id="submitConfirmacionAction"/>
+                        </td>
+                    </tr>
+                    <tr class="identificadores">
+                        <td class="label"><bean:message key="modificaciones.pendientes.confirmacion.submit.confirmacion.param.identificadores"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.identificadores}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.identificadoresBackingList}">
+                                  <html:select name="form" property="identificadoresAsArray" onmouseover="hints.show('modificaciones.pendientes.confirmacion.submit.confirmacion.param.identificadores.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="submitConfirmacionIdentificadores">
+                                      <html:optionsCollection name="form" property="identificadoresBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="identificadoresAsArray" onmouseover="hints.show('modificaciones.pendientes.confirmacion.submit.confirmacion.param.identificadores.title')" onmouseout="hints.hide()"  styleId="submitConfirmacionIdentificadores"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('submitConfirmacion')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="modificaciones.pendientes.confirmacion.submit.confirmacion"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

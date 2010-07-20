@@ -1,0 +1,37 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'buscar.objetos.buscar.objeto.select.action.param.action.title':'<formatting:escape language="javascript"><bean:message key="buscar.objetos.buscar.objeto.select.action.param.action.title"/></formatting:escape>',
+                'buscar.objetos.buscar.objeto.select.action.param.anyo.desde.title':'<formatting:escape language="javascript"><bean:message key="buscar.objetos.buscar.objeto.select.action.param.anyo.desde.title"/></formatting:escape>',
+                'buscar.objetos.buscar.objeto.select.action.param.anyo.hasta.title':'<formatting:escape language="javascript"><bean:message key="buscar.objetos.buscar.objeto.select.action.param.anyo.hasta.title"/></formatting:escape>',
+                'buscar.objetos.buscar.objeto.select.action.param.autor.title':'<formatting:escape language="javascript"><bean:message key="buscar.objetos.buscar.objeto.select.action.param.autor.title"/></formatting:escape>',
+                'buscar.objetos.buscar.objeto.select.action.param.dia.desde.title':'<formatting:escape language="javascript"><bean:message key="buscar.objetos.buscar.objeto.select.action.param.dia.desde.title"/></formatting:escape>',
+                'buscar.objetos.buscar.objeto.select.action.param.dia.hasta.title':'<formatting:escape language="javascript"><bean:message key="buscar.objetos.buscar.objeto.select.action.param.dia.hasta.title"/></formatting:escape>',
+                'buscar.objetos.buscar.objeto.select.action.param.identificador.title':'<formatting:escape language="javascript"><bean:message key="buscar.objetos.buscar.objeto.select.action.param.identificador.title"/></formatting:escape>',
+                'buscar.objetos.buscar.objeto.select.action.param.mes.desde.title':'<formatting:escape language="javascript"><bean:message key="buscar.objetos.buscar.objeto.select.action.param.mes.desde.title"/></formatting:escape>',
+                'buscar.objetos.buscar.objeto.select.action.param.mes.hasta.title':'<formatting:escape language="javascript"><bean:message key="buscar.objetos.buscar.objeto.select.action.param.mes.hasta.title"/></formatting:escape>',
+                'buscar.objetos.buscar.objeto.select.action.param.titulo.title':'<formatting:escape language="javascript"><bean:message key="buscar.objetos.buscar.objeto.select.action.param.titulo.title"/></formatting:escape>',
+                'buscar.objetos.buscar.objeto.select.action.param.idioma.title':'<formatting:escape language="javascript"><bean:message key="buscar.objetos.buscar.objeto.select.action.param.idioma.title"/></formatting:escape>',
+                'buscar.objetos.buscar.objeto.buscar.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="buscar.objetos.buscar.objeto.buscar.param.idioma.buscador.title"/></formatting:escape>',
+                'selectAction':'<formatting:escape language="javascript"><bean:message key="buscar.objetos.buscar.objeto.select.action.title"/></formatting:escape>',
+                'selectAction_no':'<formatting:escape language="javascript"><bean:message key="buscar.objetos.buscar.objeto.select.action.title.notallowed"/></formatting:escape>',
+                'selectAction_reset':'<formatting:escape language="javascript"><bean:message key="buscar.objetos.buscar.objeto.select.action.title.reset"/></formatting:escape>',
+                'selectAction_noreset':'<formatting:escape language="javascript"><bean:message key="buscar.objetos.buscar.objeto.select.action.title.reset.not.allowed"/></formatting:escape>',
+                'buscar':'<formatting:escape language="javascript"><bean:message key="buscar.objetos.buscar.objeto.buscar.title"/></formatting:escape>',
+                'buscar_no':'<formatting:escape language="javascript"><bean:message key="buscar.objetos.buscar.objeto.buscar.title.notallowed"/></formatting:escape>',
+                'buscar_reset':'<formatting:escape language="javascript"><bean:message key="buscar.objetos.buscar.objeto.buscar.title.reset"/></formatting:escape>',
+                'buscar_noreset':'<formatting:escape language="javascript"><bean:message key="buscar.objetos.buscar.objeto.buscar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+</script>
+    </tiles:put>

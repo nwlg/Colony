@@ -1,0 +1,4 @@
+<otherPlatformRequirements>
+	${load:string.xml}
+	<!-- Mas traducciones -->
+</otherPlatformRequirements>

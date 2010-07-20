@@ -1,0 +1,49 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="eliminar.odes.cu.resultado.eliminacion.aceptar"/></h3>
+    <div class="trigger">
+        <html:form styleId="eliminarOdesCUResultadoEliminacionAceptarForm" action="/EliminarOdesCU/ResultadoEliminacionAceptar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="idioma">
+                        <td class="label"><bean:message key="eliminar.odes.cu.resultado.eliminacion.aceptar.param.idioma"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idioma}"/>
+                           <input type="text" name="idioma" value="${value}" onmouseover="hints.show('eliminar.odes.cu.resultado.eliminacion.aceptar.param.idioma.title')" onmouseout="hints.hide()"  id="aceptarIdioma"/>
+                        </td>
+                    </tr>
+                    <tr class="busquedaSimpleAvanzada">
+                        <td class="label"><bean:message key="eliminar.odes.cu.resultado.eliminacion.aceptar.param.busqueda.simple.avanzada"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.busquedaSimpleAvanzada}"/>
+                           <input type="text" name="busquedaSimpleAvanzada" value="${value}" onmouseover="hints.show('eliminar.odes.cu.resultado.eliminacion.aceptar.param.busqueda.simple.avanzada.title')" onmouseout="hints.hide()"  id="aceptarBusquedaSimpleAvanzada"/>
+                        </td>
+                    </tr>
+                    <tr class="numeroResultados">
+                        <td class="label"><bean:message key="eliminar.odes.cu.resultado.eliminacion.aceptar.param.numero.resultados"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.numeroResultados}"/>
+                           <input type="text" name="numeroResultados" value="${value}" onmouseover="hints.show('eliminar.odes.cu.resultado.eliminacion.aceptar.param.numero.resultados.title')" onmouseout="hints.hide()"  id="aceptarNumeroResultados"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="eliminar.odes.cu.resultado.eliminacion.aceptar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

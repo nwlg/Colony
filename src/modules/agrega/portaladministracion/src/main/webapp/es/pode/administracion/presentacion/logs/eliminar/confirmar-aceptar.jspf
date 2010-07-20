@@ -1,0 +1,49 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="eliminar.log.confirmar.aceptar"/></h3>
+    <div class="trigger">
+        <html:form styleId="eliminarLogConfirmarAceptarForm" action="/EliminarLog/ConfirmarAceptar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="logs">
+                        <td class="label"><bean:message key="eliminar.log.confirmar.aceptar.param.logs"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.logs}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.logsBackingList}">
+                                  <html:select name="form" property="logs" onmouseover="hints.show('eliminar.log.confirmar.aceptar.param.logs.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="aceptarLogs">
+                                      <html:optionsCollection name="form" property="logsBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="logs" onmouseover="hints.show('eliminar.log.confirmar.aceptar.param.logs.title')" onmouseout="hints.hide()"  styleId="aceptarLogs"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="listaId">
+                        <td class="label"><bean:message key="eliminar.log.confirmar.aceptar.param.lista.id"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.listaId}"/>
+                           <input type="text" name="listaId" value="${value}" onmouseover="hints.show('eliminar.log.confirmar.aceptar.param.lista.id.title')" onmouseout="hints.hide()"  id="aceptarListaId"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="eliminar.log.confirmar.aceptar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

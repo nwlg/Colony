@@ -1,0 +1,81 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>agrega</groupId>
+  <artifactId>agrega</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>Agrega</name>
+  <description>Agrega</description>
+
+  <modules>
+    <module>soporte/soporte</module>
+    <module>soporte/webservices</module>
+    <module>soporte/parseadorXML</module>
+
+    <module>agrega-war</module>
+
+    <module>AdminUsuarios</module>
+    <module>agregadorRSS</module>
+    <module>auditoria</module>
+    <module>buscador</module>
+    <module>buscar</module>
+    <module>catalogacion</module>
+    <module>catalogadorWeb</module>
+    <module>contenidosportal</module>
+    <module>DRI</module>
+    <module>empaquetadorbasico</module>
+    <module>entregar</module>
+    <module>fuentestaxonomicas</module>
+    <module>gestorflujo</module>
+    <module>indexador</module>
+    <module>localizador</module>
+    <module>modificador</module>
+    <module>ModificadorWeb</module>
+    <module>oaipmh</module>
+    <module>planificador</module>
+    <module>portaladministracion</module>
+    <module>PortalEmpaquetador</module>
+    <module>publicacion</module>
+    <module>remotinggalleryserver</module>
+    <module>TaggingWeb</module>
+    <module>validador</module>
+    <module>valoracion</module>
+    <module>visualizador</module>
+    <module>visualizadorcontenidos</module>
+    <module>soporteAuthOpenID</module>
+  </modules>
+
+  <properties>
+      <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.0.2</version>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+          <encoding>ISO-8859-1</encoding>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+        <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>1.2.13</version>
+                <scope>provided</scope>
+        </dependency>
+  </dependencies>
+
+</project>

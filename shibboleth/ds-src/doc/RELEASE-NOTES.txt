@@ -1,0 +1,19 @@
+Changes in Release 1.1.1
+=============================================
+The major change in this release is the UI in particular the searching for IdPs can be done 
+from within the browser (by way of a javascript class).  The old style searching is still 
+supported and is used when the browser does not support javascript.  This means that the precise
+effect of the provideList and provideListOfList configuration values for wayfconfig
+have changed.  With the default JSP, the former controls whether the quick search is enabled, the
+latter toggles whether the single or double pane selector is chosen. 
+
+There is some support for prototyping of "embedded WAYF" code.
+
+The precise Cases changed are.
+
+[SDSJ-58] - Subtle bug to do with the default attribute handling and default end points. (2120)
+[SDSJ-60] - Missed case normalization before search meant we missed some items.
+[SDSJ-62] - Add Java script driver quick searching
+[SDSJ-63] - UI GUI -changes - dynamic search and nascent embedded WAYF work
+[SDSJ-64] - Needs to clean non printing whitespace from Organization DisplayName before outputing javascript arrays
+[SDSJ-65] - Update libraries for release

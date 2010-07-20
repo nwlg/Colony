@@ -1,0 +1,24 @@
+#listarTareasEnEjecucion.action {}
+#listarTareasEnEjecucion.action #form_submit {}
+
+
+#listarTareasEjecutadas.action {}
+#listarTareasEjecutadas.action #form_submit {}
+
+
+#listarTareasPendientes.action {}
+#listarTareasPendientes.action #form_submit {}
+
+
+#tareasEnEjecucion.table {}
+#tareasEnEjecucion.table th {}
+#tareasEnEjecucion.table td div {}
+
+#tareasEnEjecucion.table th.trabajo {}
+#tareasEnEjecucion.table td div.trabajo {}
+
+#tareasEnEjecucion.table th.grupoTrabajo {}
+#tareasEnEjecucion.table td div.grupoTrabajo {}
+
+
+

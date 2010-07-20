@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE social-definition [
+<!ELEMENT socialItem EMPTY>
+<!ATTLIST socialItem 
+	id ID #REQUIRED
+	name CDATA #REQUIRED
+	url CDATA #REQUIRED
+	target CDATA ""
+	roles CDATA ""
+	i18nKey CDATA "">
+<!ELEMENT social (socialItem)+>
+<!ATTLIST social 
+	i18nKey CDATA #REQUIRED
+	target CDATA ""
+	roles CDATA "">
+<!ELEMENT social-definition (social)+>
+]>
+
+<!--  	
+	<li class="enviar_objeto"><a href="#" title="enviar" ><span>Enviar</span></a></li>
+	<li><a href="#" title="del.iciou.us" id="delicious">&nbsp;<em>Del.iciou.us</em></a></li>
+	<li><a href="#" title="Digg " id="digg">&nbsp;<em>Digg</em></a></li>
+	<li><a href="#" title="Technorati" id="technorati">&nbsp;<em>Technorati</em></a></li>
+	<li><a href="#" title="Yahoo" id="yahoo">&nbsp;<em>Yahoo</em></a></li>
+	<li><a href="#" title="Meneame" id="meneame">&nbsp;<em>Meneame</em></a></li>
+
+-->	
+<social-definition>
+	<social i18nKey="social.compartir" target="_blank">
+	    <socialItem id="delicious" name="del.icio.us" url="http://del.icio.us/post?title=&amp;url="/>
+	    <socialItem id="digg" name="Digg" url="http://www.digg.com/submit?url="/>
+	    <socialItem id="technorati" name="Technorati" url="http://www.technorati.com/search/"/>
+	    <socialItem id="yahoo" name="Yahoo" url="http://myweb2.search.yahoo.com/myresults/bookmarklet?u="/>
+	    <socialItem id="meneame" name="Meneame" url="http://meneame.net/submit.php?url="/>    
+	 </social>
+</social-definition>

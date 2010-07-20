@@ -1,0 +1,132 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="selectAction" class="action">
+    <h3><bean:message key="buscar.objetos.buscar.objeto.select.action"/></h3>
+    <div class="trigger">
+        <html:form styleId="buscarObjetosBuscarObjetoSelectActionForm" action="/BuscarObjetos/BuscarObjetoSelectAction" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="action">
+                        <td class="label"><bean:message key="buscar.objetos.buscar.objeto.select.action.param.action"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.action}"/>
+                           <input type="text" name="action" value="${value}" onmouseover="hints.show('buscar.objetos.buscar.objeto.select.action.param.action.title')" onmouseout="hints.hide()"  id="selectActionAction"/>
+                        </td>
+                    </tr>
+                    <tr class="anyoDesde">
+                        <td class="label"><bean:message key="buscar.objetos.buscar.objeto.select.action.param.anyo.desde"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.anyoDesde}"/>
+                           <input type="text" name="anyoDesde" value="${value}" onmouseover="hints.show('buscar.objetos.buscar.objeto.select.action.param.anyo.desde.title')" onmouseout="hints.hide()"  id="selectActionAnyoDesde"/>
+                        </td>
+                    </tr>
+                    <tr class="anyoHasta">
+                        <td class="label"><bean:message key="buscar.objetos.buscar.objeto.select.action.param.anyo.hasta"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.anyoHasta}"/>
+                           <input type="text" name="anyoHasta" value="${value}" onmouseover="hints.show('buscar.objetos.buscar.objeto.select.action.param.anyo.hasta.title')" onmouseout="hints.hide()"  id="selectActionAnyoHasta"/>
+                        </td>
+                    </tr>
+                    <tr class="autor">
+                        <td class="label"><bean:message key="buscar.objetos.buscar.objeto.select.action.param.autor"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.autor}"/>
+                           <input type="text" name="autor" value="${value}" onmouseover="hints.show('buscar.objetos.buscar.objeto.select.action.param.autor.title')" onmouseout="hints.hide()"  id="selectActionAutor"/>
+                        </td>
+                    </tr>
+                    <tr class="diaDesde">
+                        <td class="label"><bean:message key="buscar.objetos.buscar.objeto.select.action.param.dia.desde"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.diaDesde}"/>
+                           <input type="text" name="diaDesde" value="${value}" onmouseover="hints.show('buscar.objetos.buscar.objeto.select.action.param.dia.desde.title')" onmouseout="hints.hide()"  id="selectActionDiaDesde"/>
+                        </td>
+                    </tr>
+                    <tr class="diaHasta">
+                        <td class="label"><bean:message key="buscar.objetos.buscar.objeto.select.action.param.dia.hasta"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.diaHasta}"/>
+                           <input type="text" name="diaHasta" value="${value}" onmouseover="hints.show('buscar.objetos.buscar.objeto.select.action.param.dia.hasta.title')" onmouseout="hints.hide()"  id="selectActionDiaHasta"/>
+                        </td>
+                    </tr>
+                    <tr class="identificador">
+                        <td class="label"><bean:message key="buscar.objetos.buscar.objeto.select.action.param.identificador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.identificador}"/>
+                           <input type="text" name="identificador" value="${value}" onmouseover="hints.show('buscar.objetos.buscar.objeto.select.action.param.identificador.title')" onmouseout="hints.hide()"  id="selectActionIdentificador"/>
+                        </td>
+                    </tr>
+                    <tr class="mesDesde">
+                        <td class="label"><bean:message key="buscar.objetos.buscar.objeto.select.action.param.mes.desde"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.mesDesde}"/>
+                           <input type="text" name="mesDesde" value="${value}" onmouseover="hints.show('buscar.objetos.buscar.objeto.select.action.param.mes.desde.title')" onmouseout="hints.hide()"  id="selectActionMesDesde"/>
+                        </td>
+                    </tr>
+                    <tr class="mesHasta">
+                        <td class="label"><bean:message key="buscar.objetos.buscar.objeto.select.action.param.mes.hasta"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.mesHasta}"/>
+                           <input type="text" name="mesHasta" value="${value}" onmouseover="hints.show('buscar.objetos.buscar.objeto.select.action.param.mes.hasta.title')" onmouseout="hints.hide()"  id="selectActionMesHasta"/>
+                        </td>
+                    </tr>
+                    <tr class="titulo">
+                        <td class="label"><bean:message key="buscar.objetos.buscar.objeto.select.action.param.titulo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.titulo}"/>
+                           <input type="text" name="titulo" value="${value}" onmouseover="hints.show('buscar.objetos.buscar.objeto.select.action.param.titulo.title')" onmouseout="hints.hide()"  id="selectActionTitulo"/>
+                        </td>
+                    </tr>
+                    <tr class="idioma">
+                        <td class="label"><bean:message key="buscar.objetos.buscar.objeto.select.action.param.idioma"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idioma}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.idiomaBackingList}">
+                                  <html:select name="form" property="idioma" onmouseover="hints.show('buscar.objetos.buscar.objeto.select.action.param.idioma.title')" onmouseout="hints.hide()"  styleId="selectActionIdioma">
+                                      <html:optionsCollection name="form" property="idiomaBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="idioma" onmouseover="hints.show('buscar.objetos.buscar.objeto.select.action.param.idioma.title')" onmouseout="hints.hide()"  styleId="selectActionIdioma"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR,ROLE_ADMINISTRADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('selectAction')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="buscar.objetos.buscar.objeto.select.action"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

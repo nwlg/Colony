@@ -1,0 +1,32 @@
+<div id="tesauros" class="table">
+    <form id="tesauros" name="" action="" method="post" enctype="multipart/form-data">
+    <display:table name="${form.tesauros}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="form-listar-tesauros-tesauros.pdf" />
+        <display:column media="html">
+            <input type="checkbox" name="seleccionadoRowSelectionAsArray" value="${row.seleccionado}" title='<bean:message key="select.deselect.this.row"/>'/>
+        </display:column>
+
+        <display:column media="xml csv excel pdf"
+            titleKey="listar.tesauros.form.listar.tesauros.param.tesauros.nombre"
+            autolink="true" paramId="nombre"
+            property="nombre">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="nombre" paramId="nombre"
+            sortProperty="nombre" sortable="true"
+            titleKey="listar.tesauros.form.listar.tesauros.param.tesauros.nombre"
+            property="nombre" />
+   
+    </display:table>
+    <c:if test="${!empty form.tesauros}">
+            <input type="submit" value="<bean:message key="listar.tesauros.form.listar.tesauros.validar"/>" onclick="this.form.name='listarTesaurosFormListarTesaurosValidarForm';this.form.action='<html:rewrite action="/ListarTesauros/FormListarTesaurosValidar"/>';" onmouseover="hints.show('Validar')" onmouseout="hints.hide()"/>
+            <input type="button" value="<bean:message key="select.deselect.all"/>" onclick="var boxes=this.form.elements['seleccionadoRowSelectionAsArray'];var setChecked=(boxes.length==0)?false:!boxes[0].checked;for(var i=0;i<boxes.length;i++)boxes[i].checked=setChecked;"/>
+    </c:if>
+    </form>
+</div>
+

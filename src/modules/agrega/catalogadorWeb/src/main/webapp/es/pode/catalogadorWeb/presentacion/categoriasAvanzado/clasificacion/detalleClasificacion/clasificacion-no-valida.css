@@ -1,0 +1,32 @@
+#volver.action {}
+#volver.action #form_submit {}
+
+#volver.action .tituloClasificacion {}
+#volver.action .tituloClasificacion .label {}
+#volver.action .tituloClasificacion .field {}
+#volver.action .razon {}
+#volver.action .razon .label {}
+#volver.action .razon .field {}
+#volver.action .rutaTaxonomica {}
+#volver.action .rutaTaxonomica .label {}
+#volver.action .rutaTaxonomica .field {}
+#volver.action .source {}
+#volver.action .source .label {}
+#volver.action .source .field {}
+#volver.action .comboIdioma {}
+#volver.action .comboIdioma .label {}
+#volver.action .comboIdioma .field {}
+#volver.action .descripciones {}
+#volver.action .descripciones .label {}
+#volver.action .descripciones .field {}
+#volver.action .palabrasClave {}
+#volver.action .palabrasClave .label {}
+#volver.action .palabrasClave .field {}
+#volver.action .botonPulsado {}
+#volver.action .botonPulsado .label {}
+#volver.action .botonPulsado .field {}
+#volver.action .mensajesError {}
+#volver.action .mensajesError .label {}
+#volver.action .mensajesError .field {}
+
+

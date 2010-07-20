@@ -1,0 +1,14 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="eliminar" class="action">
+    <h3><bean:message key="relacion.listado.relaciones.form.eliminar"/></h3>
+    <div class="trigger">
+        <html:form styleId="relacionListadoRelacionesFormEliminarForm" action="/Relacion/ListadoRelacionesFormEliminar" method="post" enctype="multipart/form-data">
+            <%@ include file="/es/pode/catalogadorWeb/presentacion/categoriasAvanzado/relacion/listado-relaciones-form-listadoRelaciones.jspf" %>
+               <html:submit onmouseover="hints.show('Eliminar')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="relacion.listado.relaciones.form.eliminar"/>
+               </html:submit>	
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

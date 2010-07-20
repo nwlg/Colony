@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+  <bean id="propiedadesConstantes" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+      <property name="locations">
+	  <list>
+		  	<value>classpath:spring.properties</value>
+	  </list>
+	  </property>
+	  <property name="ignoreUnresolvablePlaceholders">
+	  		<value>true</value>
+	  </property>	  
+  </bean>
+    
+      
+      <!-- JNDI Environment Template -->
+    <!-- bean id="jndiTemplateSrvGaleriaImgServicio" class="org.springframework.jndi.JndiTemplate">
+        <property name="environment">
+            <props>
+                <prop key="java.naming.factory.initial">org.jnp.interfaces.NamingContextFactory</prop>
+                <prop key="java.naming.provider.url">localhost</prop>
+           </props>
+        </property>
+    </bean-->
+
+    <!-- JMS Queue Connection Factory -->
+    <!-- bean id="internalJmsQueueConnectionFactorySrvGaleriaImgServicio"
+        	class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiTemplate">
+            <ref bean="jndiTemplateSrvGaleriaImgServicio"/>
+        </property>
+        <property name="jndiName">
+            <value>UIL2ConnectionFactory</value>
+        </property>
+    </bean-->
+
+    <!-- JMS Destination -->
+    <!-- bean id="destinationSrvGaleriaImgServicio"
+        class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiTemplate">
+            <ref bean="jndiTemplateSrvGaleriaImgServicio"/>
+        </property>
+        <property name="jndiName">
+            <value>queue/A</value>
+        </property>
+    </bean-->
+    
+        <!-- JMS Queue Template -->
+    <!-- bean id="jmsTemplateSrvPublicacionService" class="org.springframework.jms.core.JmsTemplate">
+        <property name="connectionFactory">
+            <ref bean="internalJmsQueueConnectionFactorySrvGaleriaImgServicio"/>
+        </property>
+        <property name="defaultDestination">
+            <ref bean="destinationSrvGaleriaImgServicio"/>
+        </property>
+       <property name="receiveTimeout">
+            <value>30000</value>
+        </property>
+    </bean-->
+
+   	<!-- bean id="GaleriaImgServer" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+  		<property name="serviceUrl" value="http://localhost:8080/RemotingGaleryServer/remoting/RemotingGalleryService"/>
+  		<property name="serviceInterface" value="es.agrega.galeriaimg.rmi.GaleriaImgServer"/>
+	</bean-->
+    
+	<bean class="es.indra.sawa.support.wiring.WiringPostProcessor">
+		<property name="propertyMappings">
+			<list>
+				<value>.*SrvPublicacionServiceImpl.*</value>
+				<!-- value>.*messageListenerSrvGaleriaImgServicio.*;imgServer;GaleriaImgServer</value-->
+			</list>
+		</property>
+	</bean>  
+    
+	<!-- Spring's 'RmiProxyFactoryBean' is a factory bean that creates a proxy to RMI service -->
+<!--  	<bean id="GaleriaImgServer" class="org.springframework.remoting.rmi.RmiProxyFactoryBean">
+	   	<property name="serviceUrl">
+	      	<value>rmi://${server.name}:${server.port}/${service.name}</value>  
+	   	</property>
+	   	<property name="serviceInterface">
+	     	<value>es.agrega.galeriaimg.rmi.GaleriaImgServer</value>
+	   	</property>
+	</bean>
+-->    
+  <!-- JMS Listener and ListenerContainer-->
+  
+<!--           <bean id="messageListenerSrvGaleriaImgServicio" class="es.pode.publicacion.negocio.servicios.SrvGaleriaImgServicioImpl" />	
+
+        <bean id="listenerContainerSrvGaleriaImgServicio"
+                class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+                <property name="connectionFactory" ref="internalJmsQueueConnectionFactorySrvGaleriaImgServicio" />
+                <property name="destination" ref="destinationSrvGaleriaImgServicio" />
+                <property name="messageListener" ref="messageListenerSrvGaleriaImgServicio" />
+        </bean>
+        -->
+</beans>

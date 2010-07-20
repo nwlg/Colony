@@ -1,0 +1,29 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'add.termino.add.termino.buscar.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="add.termino.add.termino.buscar.param.idioma.buscador.title"/></formatting:escape>',
+                'add.termino.add.termino.buscar.param.tipo.busqueda.title':'<formatting:escape language="javascript"><bean:message key="add.termino.add.termino.buscar.param.tipo.busqueda.title"/></formatting:escape>',
+                'add.termino.add.termino.action.param.action.title':'<formatting:escape language="javascript"><bean:message key="add.termino.add.termino.action.param.action.title"/></formatting:escape>',
+                'add.termino.add.termino.action.param.valor.title':'<formatting:escape language="javascript"><bean:message key="add.termino.add.termino.action.param.valor.title"/></formatting:escape>',
+                'Buscar':'<formatting:escape language="javascript"><bean:message key="add.termino.add.termino.buscar.title"/></formatting:escape>',
+                'Buscar_no':'<formatting:escape language="javascript"><bean:message key="add.termino.add.termino.buscar.title.notallowed"/></formatting:escape>',
+                'Buscar_reset':'<formatting:escape language="javascript"><bean:message key="add.termino.add.termino.buscar.title.reset"/></formatting:escape>',
+                'Buscar_noreset':'<formatting:escape language="javascript"><bean:message key="add.termino.add.termino.buscar.title.reset.not.allowed"/></formatting:escape>',
+                'action':'<formatting:escape language="javascript"><bean:message key="add.termino.add.termino.action.title"/></formatting:escape>',
+                'action_no':'<formatting:escape language="javascript"><bean:message key="add.termino.add.termino.action.title.notallowed"/></formatting:escape>',
+                'action_reset':'<formatting:escape language="javascript"><bean:message key="add.termino.add.termino.action.title.reset"/></formatting:escape>',
+                'action_noreset':'<formatting:escape language="javascript"><bean:message key="add.termino.add.termino.action.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+</script>
+    </tiles:put>

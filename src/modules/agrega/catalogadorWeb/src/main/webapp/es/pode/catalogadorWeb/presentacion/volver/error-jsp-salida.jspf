@@ -1,0 +1,13 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="salida" class="action">
+    <h3><bean:message key="volver.error.jsp.salida"/></h3>
+    <div class="trigger">
+        <form id="volverErrorJspSalidaForm" action='<html:rewrite action="/Volver/ErrorJspSalida"/>' method="post">
+               <html:submit onmouseover="hints.show('Salida')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="volver.error.jsp.salida"/>
+               </html:submit>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

@@ -1,0 +1,38 @@
+<div id="listado" class="table">
+    <form id="listado" name="" action="" method="post" enctype="multipart/form-data">
+    <display:table name="${form.listado}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="gestor-archivos-listado.pdf" />
+        <display:column media="html">
+            <input type="checkbox" name="nombreRowSelectionAsArray" value="${row.nombre}" title='<bean:message key="select.deselect.this.row"/>'/>
+        </display:column>
+
+        <display:column media="xml csv excel pdf"
+            titleKey="gestor.archivos.gestor.archivos.param.listado.nombre"
+            autolink="true" paramId="nombre"
+            property="nombre">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="nombre" paramId="nombre"
+            sortProperty="nombre" sortable="true"
+            titleKey="gestor.archivos.gestor.archivos.param.listado.nombre"
+            >
+            <div class="nombre">
+		
+ <c:set var="value" value="${row.nombre}"/>
+ <input type="text" name="nombre" value="${value}" onmouseover="hints.show('gestor.archivos.gestor.archivos.modificar.param.nombre.title')" onmouseout="hints.hide()"  id="listadoNombre${row_rowNum}"/>
+            </div>
+       </display:column>
+   
+    </display:table>
+    <c:if test="${!empty form.listado}">
+            <input type="submit" value="<bean:message key="gestor.archivos.gestor.archivos.submit"/>" onclick="this.form.name='gestorArchivosGestorArchivosSubmitForm';this.form.action='<html:rewrite action="/GestorArchivos/GestorArchivosSubmit"/>';" onmouseover="hints.show('Submit')" onmouseout="hints.hide()"/>
+            <input type="button" value="<bean:message key="select.deselect.all"/>" onclick="var boxes=this.form.elements['nombreRowSelectionAsArray'];var setChecked=(boxes.length==0)?false:!boxes[0].checked;for(var i=0;i<boxes.length;i++)boxes[i].checked=setChecked;"/>
+    </c:if>
+    </form>
+</div>
+

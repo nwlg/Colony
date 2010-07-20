@@ -1,0 +1,18 @@
+#detalleRelacion.action {}
+#detalleRelacion.action #form_submit {}
+
+#detalleRelacion.action .identificadorOde {}
+#detalleRelacion.action .identificadorOde .label {}
+#detalleRelacion.action .identificadorOde .field {}
+#detalleRelacion.action .listadoRelaciones {}
+#detalleRelacion.action .listadoRelaciones .label {}
+#detalleRelacion.action .listadoRelaciones .field {}
+#detalleRelacion.action .botonPulsado {}
+#detalleRelacion.action .botonPulsado .label {}
+#detalleRelacion.action .botonPulsado .field {}
+
+#vuelveDeRelaciones.action {}
+#vuelveDeRelaciones.action #form_submit {}
+
+
+

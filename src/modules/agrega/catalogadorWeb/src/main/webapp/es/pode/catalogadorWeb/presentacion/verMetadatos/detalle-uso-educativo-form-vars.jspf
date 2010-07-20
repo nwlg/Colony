@@ -1,0 +1,83 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="minutos" value="${form.minutos}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="segundoP2" value="${form.segundoP2}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="segundoP1" value="${form.segundoP1}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="descripciones" value="${form.descripciones}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="comboRol" value="${form.comboRol}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="comboProceso" value="${form.comboProceso}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="dificultad" value="${form.dificultad}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tipoRecurso" value="${form.tipoRecurso}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tiempoAprendizaje" value="${form.tiempoAprendizaje}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idiomas" value="${form.idiomas}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="comboContexto" value="${form.comboContexto}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tiempoApDescripcion" value="${form.tiempoApDescripcion}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="comboIdioma" value="${form.comboIdioma}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="mes" value="${form.mes}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="edadTipica" value="${form.edadTipica}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="contexto" value="${form.contexto}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tituloUsoEducativo" value="${form.tituloUsoEducativo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="botonPulsado" value="${form.botonPulsado}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tipoInteractividad" value="${form.tipoInteractividad}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="dia" value="${form.dia}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="procesoCognitivo" value="${form.procesoCognitivo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="hora" value="${form.hora}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="comboTipoRecurso" value="${form.comboTipoRecurso}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="nivelInteractividad" value="${form.nivelInteractividad}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="rolUsuario" value="${form.rolUsuario}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="densidadSemantica" value="${form.densidadSemantica}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="anyo" value="${form.anyo}"/>
+    </c:catch>
+</div>

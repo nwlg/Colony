@@ -1,0 +1,32 @@
+#detalleUsoEdu.action {}
+#detalleUsoEdu.action #form_submit {}
+
+#detalleUsoEdu.action .identificadorOde {}
+#detalleUsoEdu.action .identificadorOde .label {}
+#detalleUsoEdu.action .identificadorOde .field {}
+#detalleUsoEdu.action .tituloUsoEducativo {}
+#detalleUsoEdu.action .tituloUsoEducativo .label {}
+#detalleUsoEdu.action .tituloUsoEducativo .field {}
+#detalleUsoEdu.action .botonPulsado {}
+#detalleUsoEdu.action .botonPulsado .label {}
+#detalleUsoEdu.action .botonPulsado .field {}
+
+#cancelar.action {}
+#cancelar.action #form_submit {}
+
+#cancelar.action .identificadorOde {}
+#cancelar.action .identificadorOde .label {}
+#cancelar.action .identificadorOde .field {}
+#cancelar.action .listadoUsosEdu {}
+#cancelar.action .listadoUsosEdu .label {}
+#cancelar.action .listadoUsosEdu .field {}
+
+#listadoUsosEdu.table {}
+#listadoUsosEdu.table th {}
+#listadoUsosEdu.table td div {}
+
+#listadoUsosEdu.table th.tituloUsoEdu {}
+#listadoUsosEdu.table td div.tituloUsoEdu {}
+
+
+

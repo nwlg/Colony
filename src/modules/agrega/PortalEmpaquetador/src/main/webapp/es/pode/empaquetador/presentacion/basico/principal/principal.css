@@ -1,0 +1,22 @@
+#submit.action {}
+#submit.action #form_submit {}
+
+#submit.action .principal {}
+#submit.action .principal .label {}
+#submit.action .principal .field {}
+#submit.action .action {}
+#submit.action .action .label {}
+#submit.action .action .field {}
+#submit.action .idRecurso {}
+#submit.action .idRecurso .label {}
+#submit.action .idRecurso .field {}
+
+#ficheros.table {}
+#ficheros.table th {}
+#ficheros.table td div {}
+
+#ficheros.table th.href {}
+#ficheros.table td div.href {}
+
+
+

@@ -1,0 +1,34 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'modificar.termino.modificar.termino.select.action.param.alcance.termino.title':'<formatting:escape language="javascript"><bean:message key="modificar.termino.modificar.termino.select.action.param.alcance.termino.title"/></formatting:escape>',
+                'modificar.termino.modificar.termino.select.action.param.alcance.metadatos.title':'<formatting:escape language="javascript"><bean:message key="modificar.termino.modificar.termino.select.action.param.alcance.metadatos.title"/></formatting:escape>',
+                'modificar.termino.modificar.termino.select.action.param.action.title':'<formatting:escape language="javascript"><bean:message key="modificar.termino.modificar.termino.select.action.param.action.title"/></formatting:escape>',
+                'modificar.termino.modificar.termino.select.action.param.expr.reg.title':'<formatting:escape language="javascript"><bean:message key="modificar.termino.modificar.termino.select.action.param.expr.reg.title"/></formatting:escape>',
+                'modificar.termino.modificar.termino.select.action.param.valor.viejo.title':'<formatting:escape language="javascript"><bean:message key="modificar.termino.modificar.termino.select.action.param.valor.viejo.title"/></formatting:escape>',
+                'modificar.termino.modificar.termino.select.action.param.valor.nuevo.title':'<formatting:escape language="javascript"><bean:message key="modificar.termino.modificar.termino.select.action.param.valor.nuevo.title"/></formatting:escape>',
+                'modificar.termino.modificar.termino.select.action.param.idioma.title':'<formatting:escape language="javascript"><bean:message key="modificar.termino.modificar.termino.select.action.param.idioma.title"/></formatting:escape>',
+                'modificar.termino.modificar.termino.buscar.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="modificar.termino.modificar.termino.buscar.param.idioma.buscador.title"/></formatting:escape>',
+                'modificar.termino.modificar.termino.buscar.param.tipo.busqueda.title':'<formatting:escape language="javascript"><bean:message key="modificar.termino.modificar.termino.buscar.param.tipo.busqueda.title"/></formatting:escape>',
+                'selectAction':'<formatting:escape language="javascript"><bean:message key="modificar.termino.modificar.termino.select.action.title"/></formatting:escape>',
+                'selectAction_no':'<formatting:escape language="javascript"><bean:message key="modificar.termino.modificar.termino.select.action.title.notallowed"/></formatting:escape>',
+                'selectAction_reset':'<formatting:escape language="javascript"><bean:message key="modificar.termino.modificar.termino.select.action.title.reset"/></formatting:escape>',
+                'selectAction_noreset':'<formatting:escape language="javascript"><bean:message key="modificar.termino.modificar.termino.select.action.title.reset.not.allowed"/></formatting:escape>',
+                'buscar':'<formatting:escape language="javascript"><bean:message key="modificar.termino.modificar.termino.buscar.title"/></formatting:escape>',
+                'buscar_no':'<formatting:escape language="javascript"><bean:message key="modificar.termino.modificar.termino.buscar.title.notallowed"/></formatting:escape>',
+                'buscar_reset':'<formatting:escape language="javascript"><bean:message key="modificar.termino.modificar.termino.buscar.title.reset"/></formatting:escape>',
+                'buscar_noreset':'<formatting:escape language="javascript"><bean:message key="modificar.termino.modificar.termino.buscar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+</script>
+    </tiles:put>

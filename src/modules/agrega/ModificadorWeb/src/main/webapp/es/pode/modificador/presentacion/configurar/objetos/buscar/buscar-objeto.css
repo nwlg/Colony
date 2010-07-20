@@ -1,0 +1,45 @@
+#selectAction.action {}
+#selectAction.action #form_submit {}
+
+#selectAction.action .action {}
+#selectAction.action .action .label {}
+#selectAction.action .action .field {}
+#selectAction.action .anyoDesde {}
+#selectAction.action .anyoDesde .label {}
+#selectAction.action .anyoDesde .field {}
+#selectAction.action .anyoHasta {}
+#selectAction.action .anyoHasta .label {}
+#selectAction.action .anyoHasta .field {}
+#selectAction.action .autor {}
+#selectAction.action .autor .label {}
+#selectAction.action .autor .field {}
+#selectAction.action .diaDesde {}
+#selectAction.action .diaDesde .label {}
+#selectAction.action .diaDesde .field {}
+#selectAction.action .diaHasta {}
+#selectAction.action .diaHasta .label {}
+#selectAction.action .diaHasta .field {}
+#selectAction.action .identificador {}
+#selectAction.action .identificador .label {}
+#selectAction.action .identificador .field {}
+#selectAction.action .mesDesde {}
+#selectAction.action .mesDesde .label {}
+#selectAction.action .mesDesde .field {}
+#selectAction.action .mesHasta {}
+#selectAction.action .mesHasta .label {}
+#selectAction.action .mesHasta .field {}
+#selectAction.action .titulo {}
+#selectAction.action .titulo .label {}
+#selectAction.action .titulo .field {}
+#selectAction.action .idioma {}
+#selectAction.action .idioma .label {}
+#selectAction.action .idioma .field {}
+
+#buscar.action {}
+#buscar.action #form_submit {}
+
+#buscar.action .idiomaBuscador {}
+#buscar.action .idiomaBuscador .label {}
+#buscar.action .idiomaBuscador .field {}
+
+

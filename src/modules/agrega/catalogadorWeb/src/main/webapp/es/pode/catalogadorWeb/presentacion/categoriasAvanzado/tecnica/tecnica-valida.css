@@ -1,0 +1,71 @@
+#volver.action {}
+#volver.action #form_submit {}
+
+#volver.action .identificadorOde {}
+#volver.action .identificadorOde .label {}
+#volver.action .identificadorOde .field {}
+#volver.action .formatos {}
+#volver.action .formatos .label {}
+#volver.action .formatos .field {}
+#volver.action .comboFormato {}
+#volver.action .comboFormato .label {}
+#volver.action .comboFormato .field {}
+#volver.action .tamanio {}
+#volver.action .tamanio .label {}
+#volver.action .tamanio .field {}
+#volver.action .localizacion {}
+#volver.action .localizacion .label {}
+#volver.action .localizacion .field {}
+#volver.action .requerimiento {}
+#volver.action .requerimiento .label {}
+#volver.action .requerimiento .field {}
+#volver.action .agregadorOR {}
+#volver.action .agregadorOR .label {}
+#volver.action .agregadorOR .field {}
+#volver.action .comboTipo {}
+#volver.action .comboTipo .label {}
+#volver.action .comboTipo .field {}
+#volver.action .comboNombre {}
+#volver.action .comboNombre .label {}
+#volver.action .comboNombre .field {}
+#volver.action .descripcionInstalacion {}
+#volver.action .descripcionInstalacion .label {}
+#volver.action .descripcionInstalacion .field {}
+#volver.action .comboIdioma {}
+#volver.action .comboIdioma .label {}
+#volver.action .comboIdioma .field {}
+#volver.action .descripcionRequerimientos {}
+#volver.action .descripcionRequerimientos .label {}
+#volver.action .descripcionRequerimientos .field {}
+#volver.action .descripcionDuracion {}
+#volver.action .descripcionDuracion .label {}
+#volver.action .descripcionDuracion .field {}
+#volver.action .duracion {}
+#volver.action .duracion .label {}
+#volver.action .duracion .field {}
+#volver.action .anyo {}
+#volver.action .anyo .label {}
+#volver.action .anyo .field {}
+#volver.action .mes {}
+#volver.action .mes .label {}
+#volver.action .mes .field {}
+#volver.action .dia {}
+#volver.action .dia .label {}
+#volver.action .dia .field {}
+#volver.action .hora {}
+#volver.action .hora .label {}
+#volver.action .hora .field {}
+#volver.action .minutos {}
+#volver.action .minutos .label {}
+#volver.action .minutos .field {}
+#volver.action .segundosP1 {}
+#volver.action .segundosP1 .label {}
+#volver.action .segundosP1 .field {}
+#volver.action .segundosP2 {}
+#volver.action .segundosP2 .label {}
+#volver.action .segundosP2 .field {}
+#volver.action .mensajesError {}
+#volver.action .mensajesError .label {}
+#volver.action .mensajesError .field {}
+
+

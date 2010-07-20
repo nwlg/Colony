@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="baja.nodo.resultado.eliminacion.aceptar"/></h3>
+    <div class="trigger">
+        <form id="bajaNodoResultadoEliminacionAceptarForm" action='<html:rewrite action="/BajaNodo/ResultadoEliminacionAceptar"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+               <html:submit onmouseover="hints.show('Aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="baja.nodo.resultado.eliminacion.aceptar"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

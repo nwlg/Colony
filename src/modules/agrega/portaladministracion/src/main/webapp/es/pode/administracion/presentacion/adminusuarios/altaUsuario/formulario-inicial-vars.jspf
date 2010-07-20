@@ -1,0 +1,11 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="tipoEmpaquetador" value="${form.tipoEmpaquetador}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idioma" value="${form.idioma}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idiomaBusqueda" value="${form.idiomaBusqueda}"/>
+    </c:catch>
+</div>

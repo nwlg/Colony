@@ -1,0 +1,76 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="vuelveDeMetaMetadatos" class="action">
+    <h3><bean:message key="ver.metadatos.meta.metadatos.form.vuelve.de.meta.metadatos"/></h3>
+    <div class="trigger">
+        <html:form styleId="verMetadatosMetaMetadatosFormVuelveDeMetaMetadatosForm" action="/VerMetadatos/MetaMetadatosFormVuelveDeMetaMetadatos" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="comboIdiomaMeta">
+                        <td class="label"><bean:message key="ver.metadatos.meta.metadatos.form.vuelve.de.meta.metadatos.param.combo.idioma.meta"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.comboIdiomaMeta}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.comboIdiomaMetaBackingList}">
+                                  <html:select name="form" property="comboIdiomaMeta" onmouseover="hints.show('ver.metadatos.meta.metadatos.form.vuelve.de.meta.metadatos.param.combo.idioma.meta.title')" onmouseout="hints.hide()"  styleId="vuelveDeMetaMetadatosComboIdiomaMeta">
+                                      <html:optionsCollection name="form" property="comboIdiomaMetaBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="comboIdiomaMeta" onmouseover="hints.show('ver.metadatos.meta.metadatos.form.vuelve.de.meta.metadatos.param.combo.idioma.meta.title')" onmouseout="hints.hide()"  styleId="vuelveDeMetaMetadatosComboIdiomaMeta"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="crol">
+                        <td class="label"><bean:message key="ver.metadatos.meta.metadatos.form.vuelve.de.meta.metadatos.param.crol"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.crol}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.crolBackingList}">
+                                  <html:select name="form" property="crol" onmouseover="hints.show('ver.metadatos.meta.metadatos.form.vuelve.de.meta.metadatos.param.crol.title')" onmouseout="hints.hide()"  styleId="vuelveDeMetaMetadatosCrol">
+                                      <html:optionsCollection name="form" property="crolBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="crol" onmouseover="hints.show('ver.metadatos.meta.metadatos.form.vuelve.de.meta.metadatos.param.crol.title')" onmouseout="hints.hide()"  styleId="vuelveDeMetaMetadatosCrol"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="comboIdioma">
+                        <td class="label"><bean:message key="ver.metadatos.meta.metadatos.form.vuelve.de.meta.metadatos.param.combo.idioma"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.comboIdioma}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.comboIdiomaBackingList}">
+                                  <html:select name="form" property="comboIdioma" onmouseover="hints.show('ver.metadatos.meta.metadatos.form.vuelve.de.meta.metadatos.param.combo.idioma.title')" onmouseout="hints.hide()"  styleId="vuelveDeMetaMetadatosComboIdioma">
+                                      <html:optionsCollection name="form" property="comboIdiomaBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="comboIdioma" onmouseover="hints.show('ver.metadatos.meta.metadatos.form.vuelve.de.meta.metadatos.param.combo.idioma.title')" onmouseout="hints.hide()"  styleId="vuelveDeMetaMetadatosComboIdioma"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('vuelveDeMetaMetadatos')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="ver.metadatos.meta.metadatos.form.vuelve.de.meta.metadatos"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

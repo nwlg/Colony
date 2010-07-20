@@ -1,0 +1,51 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="selectAction" class="action">
+    <h3><bean:message key="configurar.cambios.configurar.cambios.select.action"/></h3>
+    <div class="trigger">
+        <html:form styleId="configurarCambiosConfigurarCambiosSelectActionForm" action="/ConfigurarCambios/ConfigurarCambiosSelectAction" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="action">
+                        <td class="label"><bean:message key="configurar.cambios.configurar.cambios.select.action.param.action"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.action}"/>
+                           <input type="text" name="action" value="${value}" onmouseover="hints.show('configurar.cambios.configurar.cambios.select.action.param.action.title')" onmouseout="hints.hide()"  id="selectActionAction"/>
+                        </td>
+                    </tr>
+                    <tr class="option">
+                        <td class="label"><bean:message key="configurar.cambios.configurar.cambios.select.action.param.option"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.option}"/>
+                           <input type="text" name="option" value="${value}" onmouseover="hints.show('configurar.cambios.configurar.cambios.select.action.param.option.title')" onmouseout="hints.hide()"  id="selectActionOption"/>
+                        </td>
+                    </tr>
+                    <tr class="idTermino">
+                        <td class="label"><bean:message key="configurar.cambios.configurar.cambios.select.action.param.id.termino"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idTermino}"/>
+                           <input type="text" name="idTermino" value="${value}" onmouseover="hints.show('configurar.cambios.configurar.cambios.select.action.param.id.termino.title')" onmouseout="hints.hide()"  id="selectActionIdTermino"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR,ROLE_ADMINISTRADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Select Action')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="configurar.cambios.configurar.cambios.select.action"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

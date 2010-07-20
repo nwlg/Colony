@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="crearGrupo" class="action">
+    <h3><bean:message key="listar.grupos.formulario.listado.crear.grupo"/></h3>
+    <div class="trigger">
+        <form id="listarGruposFormularioListadoCrearGrupoForm" action='<html:rewrite action="/ListarGrupos/FormularioListadoCrearGrupo"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+               <html:submit onmouseover="hints.show('Crear Grupo')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="listar.grupos.formulario.listado.crear.grupo"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

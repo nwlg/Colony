@@ -1,0 +1,24 @@
+#submit.action {}
+#submit.action #form_submit {}
+
+#submit.action .posicion {}
+#submit.action .posicion .label {}
+#submit.action .posicion .field {}
+#submit.action .idTermino {}
+#submit.action .idTermino .label {}
+#submit.action .idTermino .field {}
+#submit.action .action {}
+#submit.action .action .label {}
+#submit.action .action .field {}
+
+#buscar.action {}
+#buscar.action #form_submit {}
+
+#buscar.action .idiomaBuscador {}
+#buscar.action .idiomaBuscador .label {}
+#buscar.action .idiomaBuscador .field {}
+#buscar.action .tipoBusqueda {}
+#buscar.action .tipoBusqueda .label {}
+#buscar.action .tipoBusqueda .field {}
+
+

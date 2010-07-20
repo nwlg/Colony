@@ -1,0 +1,96 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="crearTarea" class="action">
+    <h3><bean:message key="crear.tarea.formulario.inicio.crear.tarea"/></h3>
+    <div class="trigger">
+        <html:form styleId="crearTareaFormularioInicioCrearTareaForm" action="/CrearTarea/FormularioInicioCrearTarea" method="post" enctype="multipart/form-data" onsubmit="return validateFormularioInicioCrearTareaForm(this);">
+            <table>
+                <tbody>
+                    <tr class="trabajo">
+                        <td class="label"><nobr><bean:message key="crear.tarea.formulario.inicio.crear.tarea.param.trabajo"/> <div class="important">*</div></nobr></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.trabajo}"/>
+                           <input type="text" name="trabajo" value="${value}" onmouseover="hints.show('crear.tarea.formulario.inicio.crear.tarea.param.trabajo.title')" onmouseout="hints.hide()"  id="crearTareaTrabajo"/>
+                        </td>
+                    </tr>
+                    <tr class="periodicidad">
+                        <td class="label"><bean:message key="crear.tarea.formulario.inicio.crear.tarea.param.periodicidad"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.periodicidad}"/>
+                           <input type="text" name="periodicidad" value="${value}" onmouseover="hints.show('crear.tarea.formulario.inicio.crear.tarea.param.periodicidad.title')" onmouseout="hints.hide()"  id="crearTareaPeriodicidad"/>
+                        </td>
+                    </tr>
+                    <tr class="dia">
+                        <td class="label"><bean:message key="crear.tarea.formulario.inicio.crear.tarea.param.dia"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.dia}"/>
+                           <input type="text" name="dia" value="${value}" onmouseover="hints.show('crear.tarea.formulario.inicio.crear.tarea.param.dia.title')" onmouseout="hints.hide()"  id="crearTareaDia"/>
+                        </td>
+                    </tr>
+                    <tr class="mes">
+                        <td class="label"><bean:message key="crear.tarea.formulario.inicio.crear.tarea.param.mes"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.mes}"/>
+                           <input type="text" name="mes" value="${value}" onmouseover="hints.show('crear.tarea.formulario.inicio.crear.tarea.param.mes.title')" onmouseout="hints.hide()"  id="crearTareaMes"/>
+                        </td>
+                    </tr>
+                    <tr class="anio">
+                        <td class="label"><bean:message key="crear.tarea.formulario.inicio.crear.tarea.param.anio"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.anio}"/>
+                           <input type="text" name="anio" value="${value}" onmouseover="hints.show('crear.tarea.formulario.inicio.crear.tarea.param.anio.title')" onmouseout="hints.hide()"  id="crearTareaAnio"/>
+                        </td>
+                    </tr>
+                    <tr class="hora">
+                        <td class="label"><bean:message key="crear.tarea.formulario.inicio.crear.tarea.param.hora"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.hora}"/>
+                           <input type="text" name="hora" value="${value}" onmouseover="hints.show('crear.tarea.formulario.inicio.crear.tarea.param.hora.title')" onmouseout="hints.hide()"  id="crearTareaHora"/>
+                        </td>
+                    </tr>
+                    <tr class="minutos">
+                        <td class="label"><bean:message key="crear.tarea.formulario.inicio.crear.tarea.param.minutos"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.minutos}"/>
+                           <input type="text" name="minutos" value="${value}" onmouseover="hints.show('crear.tarea.formulario.inicio.crear.tarea.param.minutos.title')" onmouseout="hints.hide()"  id="crearTareaMinutos"/>
+                        </td>
+                    </tr>
+                    <tr class="tipoTarea">
+                        <td class="label"><bean:message key="crear.tarea.formulario.inicio.crear.tarea.param.tipo.tarea"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipoTarea}"/>
+                           <input type="text" name="tipoTarea" value="${value}" onmouseover="hints.show('crear.tarea.formulario.inicio.crear.tarea.param.tipo.tarea.title')" onmouseout="hints.hide()"  id="crearTareaTipoTarea"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('crearTarea')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="crear.tarea.formulario.inicio.crear.tarea"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

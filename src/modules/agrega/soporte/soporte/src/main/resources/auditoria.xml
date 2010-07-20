@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE registro-definition [
+<!ELEMENT argumentoItem EMPTY>
+<!ATTLIST argumentoItem 
+	name CDATA #REQUIRED
+	atributo CDATA #REQUIRED
+	descripcionParametro CDATA ""
+>
+<!ELEMENT metodoItem (argumentoItem)+>
+<!ATTLIST metodoItem 
+	name CDATA #REQUIRED
+	destino CDATA #REQUIRED
+	argumentoVuelta CDATA ""
+	atributoVuelta CDATA ""
+>
+<!ELEMENT webService (metodoItem)+>
+<!ATTLIST webService 
+	name CDATA #REQUIRED
+>
+<!ELEMENT registro-definition (webService)+>
+]>
+<registro-definition>
+<!--  
+	Intercepción de valores de un servicio web
+		webService: La clase del servicio web (name)
+		metodoItem: El método de la clase del servicio web
+			name: Nombre del método
+			destino: Indicativo del módulo al que le enviamos la intercepción
+			argumentoVuelta: No se usa
+			atributoVuelta: No se usa
+		argumentoItem: Argumento que se intercepta puede ser un VO	
+			name: Tipo del atributo		
+			atributo: Si es un Value Object es el nombre del atributo a interceptar
+					  Si es no es un Value Object se indica la posición del atributo a interceptar
+			descripcionParametro: Descripción del parámetro que se intercepta. Sólo necesario si el argumento no es VO para poder referirnos al valor interceptado. En el VO se utiliza el nombre del atributo								   
+-->
+		<!--  Intercepción de las búsquedas: simple, avanzada (sólo texto de arriba) y SQI -->
+	<webService name="es.pode.buscar.negocio.buscar.servicios.SrvBuscarService">
+	    <metodoItem name="buscarAvanzado" destino="buscar" argumentoVuelta="" atributoVuelta="">
+    		<argumentoItem name="es.pode.buscar.negocio.buscar.servicios.ParametrosBusquedaAvanzadaVO" atributo="palabrasClave,origenPagina,comunidadesSeleccionadas,areaCurricular,idTesauro,busquedaSimpleAvanzada" />
+    	</metodoItem>    
+    	<metodoItem name="buscarLomES" destino="buscarSQI" argumentoVuelta="" atributoVuelta="">
+    		<argumentoItem name="es.pode.buscar.negocio.buscar.servicios.ParametrosBusquedaSQIVO" atributo="query,idiomaBusqueda" />
+    	</metodoItem>    
+    	<!--  Intercepción del visualizado de una ficha -->
+    	<metodoItem name="solicitarMetadato" destino="ficha" argumentoVuelta="" atributoVuelta="">
+    		<argumentoItem name="es.pode.buscar.negocio.buscar.servicios.ParametroMetadatoVO" atributo="identificadorODE,idioma,busquedaSimpleAvanzada" />
+    	</metodoItem>    
+	</webService>
+
+	<!--  Intercepción de las descargas y previsualización de ODEs -->	
+	<!--  Si el argumento de metodo del servicio web no es un Value Object y es de tipo String o Long 
+	  el atributo que se interceptará se indicará con el número del parámetro dentro del método
+	-->
+	<webService name="es.pode.entregar.negocio.servicios.SrvEntregarService">
+	    <metodoItem name="generarPaquetePIFTipoPIF" destino="descargado" argumentoVuelta="" atributoVuelta="">
+    		<argumentoItem name="es.pode.entregar.negocio.servicios.TipoPifVO" atributo="idODE,tipoPif,idioma" />
+    	</metodoItem>    
+	    <metodoItem name="obtenerOrganizaciones" destino="previsualizado" argumentoVuelta="" atributoVuelta="">
+    		<argumentoItem name="es.pode.entregar.negocio.servicios.ArgObtOrganizacionesVO" atributo="identificador,idioma" />
+    	</metodoItem>    
+	</webService>
+</registro-definition>

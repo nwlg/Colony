@@ -1,0 +1,33 @@
+<div id="comentarios" class="table">
+    <form id="comentarios" name="" action="" method="post" enctype="multipart/form-data">
+    <display:table name="${form.comentarios}" uid="row"
+        export="true" 
+		requestURI="${requestURI}"
+		defaultsort="1" partialList="true" size="${resultSize}"
+		pagesize="${pageSize}" sort="external">
+        
+        <display:setProperty name="export.pdf.filename" value="mostrar-comentarios-comentarios.pdf" />
+        <display:column media="html">
+            <input type="checkbox" name="idRowSelectionAsArray" value="${row.id}" title='<bean:message key="select.deselect.this.row"/>'/>
+        </display:column>
+
+        <display:column media="xml csv excel pdf"
+            titleKey="introducir.comentarios.cu.mostrar.comentarios.param.comentarios.id"
+            autolink="true" paramId="id"
+            property="id">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="id" paramId="id"
+            sortProperty="id" sortable="true"
+            titleKey="introducir.comentarios.cu.mostrar.comentarios.param.comentarios.id"
+            property="id" />
+   
+    </display:table>
+    <c:if test="${!empty form.comentarios}">
+            <input type="submit" value="<bean:message key="introducir.comentarios.cu.mostrar.comentarios.eliminar"/>" onclick="this.form.name='introducirComentariosCUMostrarComentariosEliminarForm';this.form.action='<html:rewrite action="/IntroducirComentariosCU/MostrarComentariosEliminar"/>';" onmouseover="hints.show('Eliminar')" onmouseout="hints.hide()"/>
+            <input type="button" value="<bean:message key="select.deselect.all"/>" onclick="var boxes=this.form.elements['idRowSelectionAsArray'];var setChecked=(boxes.length==0)?false:!boxes[0].checked;for(var i=0;i<boxes.length;i++)boxes[i].checked=setChecked;"/>
+    </c:if>
+    </form>
+</div>
+

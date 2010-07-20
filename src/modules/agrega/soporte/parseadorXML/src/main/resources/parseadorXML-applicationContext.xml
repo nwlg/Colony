@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans SYSTEM "http://www.springframework.org/dtd/spring-beans.dtd" >
+<beans>
+	<bean id="beanMapperODEs" class="net.sf.dozer.util.mapping.DozerBeanMapper" singleton="true">
+		<property name="mappingFiles">
+			<list>
+				<value>dozerMappings.xml</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="scorm2004Dao" class="es.pode.parseadorXML.SCORM2004Dao">
+		<property name="beanMapper">
+			<ref local="beanMapperODEs"/>
+		</property>
+	</bean>
+	<bean id="lomesDao" class="es.pode.parseadorXML.LomESDao">
+		<property name="beanMapper">
+			<ref local="beanMapperODEs"/>
+		</property>
+	</bean>
+</beans>

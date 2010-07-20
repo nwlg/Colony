@@ -1,0 +1,40 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="categoria" class="action">
+    <h3><bean:message key="noticia.noticia.categoria"/></h3>
+    <div class="trigger">
+        <html:form styleId="noticiaNoticiaCategoriaForm" action="/Noticia/NoticiaCategoria" method="post" enctype="multipart/form-data" onsubmit="return validateNoticiaCategoriaForm(this);">
+            <table>
+                <tbody>
+                    <tr class="categoria">
+                        <td class="label"><bean:message key="noticia.noticia.categoria.param.categoria"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.categoria}"/>
+                           <input type="text" name="categoria" value="${value}" onmouseover="hints.show('noticia.noticia.categoria.param.categoria.title')" onmouseout="hints.hide()"  id="categoriaCategoria"/>
+                        </td>
+                    </tr>
+                    <tr class="idCategoria">
+                        <td class="label"><bean:message key="noticia.noticia.categoria.param.id.categoria"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idCategoria}"/>
+                           <input type="text" name="idCategoria" value="${value}" onmouseover="hints.show('noticia.noticia.categoria.param.id.categoria.title')" onmouseout="hints.hide()"  id="categoriaIdCategoria"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Categoria')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="noticia.noticia.categoria"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

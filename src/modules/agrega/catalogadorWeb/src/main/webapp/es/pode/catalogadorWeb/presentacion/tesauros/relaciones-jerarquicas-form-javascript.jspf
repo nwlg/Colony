@@ -1,0 +1,26 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'tesauros.relaciones.jerarquicas.form.datos.relacion.param.id.title':'<formatting:escape language="javascript"><bean:message key="tesauros.relaciones.jerarquicas.form.datos.relacion.param.id.title"/></formatting:escape>',
+                'tesauros.relaciones.jerarquicas.form.datos.relacion.param.nom.tesauro.title':'<formatting:escape language="javascript"><bean:message key="tesauros.relaciones.jerarquicas.form.datos.relacion.param.nom.tesauro.title"/></formatting:escape>',
+                'tesauros.relaciones.jerarquicas.form.datos.relacion.param.idioma.title':'<formatting:escape language="javascript"><bean:message key="tesauros.relaciones.jerarquicas.form.datos.relacion.param.idioma.title"/></formatting:escape>',
+                'tesauros.relaciones.jerarquicas.form.datos.relacion.param.taxonesvo.title':'<formatting:escape language="javascript"><bean:message key="tesauros.relaciones.jerarquicas.form.datos.relacion.param.taxonesvo.title"/></formatting:escape>',
+                'tesauros.relaciones.jerarquicas.form.datos.relacion.param.ruta.padrevo.title':'<formatting:escape language="javascript"><bean:message key="tesauros.relaciones.jerarquicas.form.datos.relacion.param.ruta.padrevo.title"/></formatting:escape>',
+                'tesauros.relaciones.jerarquicas.form.datos.relacion.param.jerarquias.title':'<formatting:escape language="javascript"><bean:message key="tesauros.relaciones.jerarquicas.form.datos.relacion.param.jerarquias.title"/></formatting:escape>',
+                'datosRelacion':'<formatting:escape language="javascript"><bean:message key="tesauros.relaciones.jerarquicas.form.datos.relacion.title"/></formatting:escape>',
+                'datosRelacion_no':'<formatting:escape language="javascript"><bean:message key="tesauros.relaciones.jerarquicas.form.datos.relacion.title.notallowed"/></formatting:escape>',
+                'datosRelacion_reset':'<formatting:escape language="javascript"><bean:message key="tesauros.relaciones.jerarquicas.form.datos.relacion.title.reset"/></formatting:escape>',
+                'datosRelacion_noreset':'<formatting:escape language="javascript"><bean:message key="tesauros.relaciones.jerarquicas.form.datos.relacion.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

@@ -1,0 +1,21 @@
+#buscar.action {}
+#buscar.action #form_submit {}
+
+#buscar.action .idiomaBuscador {}
+#buscar.action .idiomaBuscador .label {}
+#buscar.action .idiomaBuscador .field {}
+#buscar.action .tipoBusqueda {}
+#buscar.action .tipoBusqueda .label {}
+#buscar.action .tipoBusqueda .field {}
+
+#importar.action {}
+#importar.action #form_submit {}
+
+#importar.action .fichero {}
+#importar.action .fichero .label {}
+#importar.action .fichero .field {}
+#importar.action .action {}
+#importar.action .action .label {}
+#importar.action .action .field {}
+
+

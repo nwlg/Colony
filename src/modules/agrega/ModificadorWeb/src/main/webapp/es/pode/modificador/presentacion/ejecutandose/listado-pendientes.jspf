@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="pendientes" class="action">
+    <h3><bean:message key="modificaciones.ejecutandose.listado.pendientes"/></h3>
+    <div class="trigger">
+        <form id="modificacionesEjecutandoseListadoPendientesForm" action='<html:rewrite action="/ModificacionesEjecutandose/ListadoPendientes"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+               <html:submit onmouseover="hints.show('Pendientes')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="modificaciones.ejecutandose.listado.pendientes"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

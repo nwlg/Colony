@@ -1,0 +1,41 @@
+
+    <tiles:put name="javascript" type="string">
+        <script type="text/javascript" language="Javascript1.1" src="<html:rewrite action="/formValidation"/>"></script>
+        <html:javascript formName="listarCatalogadoresFormularioListadoCatalogadoresVerCatalogadoresForm" method="validateFormularioListadoCatalogadoresVerCatalogadoresForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+        <html:javascript formName="listarCatalogadoresFormularioListadoCatalogadoresModificarCatalogadoresForm" method="validateFormularioListadoCatalogadoresModificarCatalogadoresForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'listar.catalogadores.formulario.listado.catalogadores.eliminar.catalogadores.param.identificador.title':'<formatting:escape language="javascript"><bean:message key="listar.catalogadores.formulario.listado.catalogadores.eliminar.catalogadores.param.identificador.title"/></formatting:escape>',
+                'listar.catalogadores.formulario.listado.catalogadores.ver.catalogadores.param.id.title':'<formatting:escape language="javascript"><bean:message key="listar.catalogadores.formulario.listado.catalogadores.ver.catalogadores.param.id.title"/></formatting:escape>',
+                'listar.catalogadores.formulario.listado.catalogadores.modificar.catalogadores.param.id.title':'<formatting:escape language="javascript"><bean:message key="listar.catalogadores.formulario.listado.catalogadores.modificar.catalogadores.param.id.title"/></formatting:escape>',
+                'EliminarCatalogadores':'<formatting:escape language="javascript"><bean:message key="listar.catalogadores.formulario.listado.catalogadores.eliminar.catalogadores.title"/></formatting:escape>',
+                'EliminarCatalogadores_no':'<formatting:escape language="javascript"><bean:message key="listar.catalogadores.formulario.listado.catalogadores.eliminar.catalogadores.title.notallowed"/></formatting:escape>',
+                'EliminarCatalogadores_reset':'<formatting:escape language="javascript"><bean:message key="listar.catalogadores.formulario.listado.catalogadores.eliminar.catalogadores.title.reset"/></formatting:escape>',
+                'EliminarCatalogadores_noreset':'<formatting:escape language="javascript"><bean:message key="listar.catalogadores.formulario.listado.catalogadores.eliminar.catalogadores.title.reset.not.allowed"/></formatting:escape>',
+                'CrearCatalogadores':'<formatting:escape language="javascript"><bean:message key="listar.catalogadores.formulario.listado.catalogadores.crear.catalogadores.title"/></formatting:escape>',
+                'CrearCatalogadores_no':'<formatting:escape language="javascript"><bean:message key="listar.catalogadores.formulario.listado.catalogadores.crear.catalogadores.title.notallowed"/></formatting:escape>',
+                'CrearCatalogadores_reset':'<formatting:escape language="javascript"><bean:message key="listar.catalogadores.formulario.listado.catalogadores.crear.catalogadores.title.reset"/></formatting:escape>',
+                'CrearCatalogadores_noreset':'<formatting:escape language="javascript"><bean:message key="listar.catalogadores.formulario.listado.catalogadores.crear.catalogadores.title.reset.not.allowed"/></formatting:escape>',
+                'VerCatalogadores':'<formatting:escape language="javascript"><bean:message key="listar.catalogadores.formulario.listado.catalogadores.ver.catalogadores.title"/></formatting:escape>',
+                'VerCatalogadores_no':'<formatting:escape language="javascript"><bean:message key="listar.catalogadores.formulario.listado.catalogadores.ver.catalogadores.title.notallowed"/></formatting:escape>',
+                'VerCatalogadores_reset':'<formatting:escape language="javascript"><bean:message key="listar.catalogadores.formulario.listado.catalogadores.ver.catalogadores.title.reset"/></formatting:escape>',
+                'VerCatalogadores_noreset':'<formatting:escape language="javascript"><bean:message key="listar.catalogadores.formulario.listado.catalogadores.ver.catalogadores.title.reset.not.allowed"/></formatting:escape>',
+                'ModificarCatalogadores':'<formatting:escape language="javascript"><bean:message key="listar.catalogadores.formulario.listado.catalogadores.modificar.catalogadores.title"/></formatting:escape>',
+                'ModificarCatalogadores_no':'<formatting:escape language="javascript"><bean:message key="listar.catalogadores.formulario.listado.catalogadores.modificar.catalogadores.title.notallowed"/></formatting:escape>',
+                'ModificarCatalogadores_reset':'<formatting:escape language="javascript"><bean:message key="listar.catalogadores.formulario.listado.catalogadores.modificar.catalogadores.title.reset"/></formatting:escape>',
+                'ModificarCatalogadores_noreset':'<formatting:escape language="javascript"><bean:message key="listar.catalogadores.formulario.listado.catalogadores.modificar.catalogadores.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+</script>
+    </tiles:put>

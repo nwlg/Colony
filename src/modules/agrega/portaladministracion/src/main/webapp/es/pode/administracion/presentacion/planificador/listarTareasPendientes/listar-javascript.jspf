@@ -1,0 +1,68 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'listar.tareas.pendientes.listar.ejecutar.tarea.param.trabajo.title':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.ejecutar.tarea.param.trabajo.title"/></formatting:escape>',
+                'listar.tareas.pendientes.listar.ejecutar.tarea.param.grupo.trabajo.title':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.ejecutar.tarea.param.grupo.trabajo.title"/></formatting:escape>',
+                'listar.tareas.pendientes.listar.ejecutar.tarea.param.trigger.title':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.ejecutar.tarea.param.trigger.title"/></formatting:escape>',
+                'listar.tareas.pendientes.listar.ejecutar.tarea.param.grupo.trigger.title':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.ejecutar.tarea.param.grupo.trigger.title"/></formatting:escape>',
+                'listar.tareas.pendientes.listar.modificar.param.trabajo.title':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.modificar.param.trabajo.title"/></formatting:escape>',
+                'listar.tareas.pendientes.listar.modificar.param.grupo.trabajo.title':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.modificar.param.grupo.trabajo.title"/></formatting:escape>',
+                'listar.tareas.pendientes.listar.modificar.param.trigger.title':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.modificar.param.trigger.title"/></formatting:escape>',
+                'listar.tareas.pendientes.listar.modificar.param.grupo.trigger.title':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.modificar.param.grupo.trigger.title"/></formatting:escape>',
+                'listar.tareas.pendientes.listar.mostrar.param.trabajo.title':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.mostrar.param.trabajo.title"/></formatting:escape>',
+                'listar.tareas.pendientes.listar.mostrar.param.grupo.trabajo.title':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.mostrar.param.grupo.trabajo.title"/></formatting:escape>',
+                'listar.tareas.pendientes.listar.mostrar.param.trigger.title':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.mostrar.param.trigger.title"/></formatting:escape>',
+                'listar.tareas.pendientes.listar.mostrar.param.grupo.trigger.title':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.mostrar.param.grupo.trigger.title"/></formatting:escape>',
+                'listar.tareas.pendientes.listar.eliminar.param.trabajo.title':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.eliminar.param.trabajo.title"/></formatting:escape>',
+                'listarTareasPendientes':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.listar.tareas.pendientes.title"/></formatting:escape>',
+                'listarTareasPendientes_no':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.listar.tareas.pendientes.title.notallowed"/></formatting:escape>',
+                'listarTareasPendientes_reset':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.listar.tareas.pendientes.title.reset"/></formatting:escape>',
+                'listarTareasPendientes_noreset':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.listar.tareas.pendientes.title.reset.not.allowed"/></formatting:escape>',
+                'Crear tarea':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.crear.tarea.title"/></formatting:escape>',
+                'Crear tarea_no':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.crear.tarea.title.notallowed"/></formatting:escape>',
+                'Crear tarea_reset':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.crear.tarea.title.reset"/></formatting:escape>',
+                'Crear tarea_noreset':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.crear.tarea.title.reset.not.allowed"/></formatting:escape>',
+                'Ejecutar tarea':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.ejecutar.tarea.title"/></formatting:escape>',
+                'Ejecutar tarea_no':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.ejecutar.tarea.title.notallowed"/></formatting:escape>',
+                'Ejecutar tarea_reset':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.ejecutar.tarea.title.reset"/></formatting:escape>',
+                'Ejecutar tarea_noreset':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.ejecutar.tarea.title.reset.not.allowed"/></formatting:escape>',
+                'listarTareasEnEjecucion':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.listar.tareas.en.ejecucion.title"/></formatting:escape>',
+                'listarTareasEnEjecucion_no':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.listar.tareas.en.ejecucion.title.notallowed"/></formatting:escape>',
+                'listarTareasEnEjecucion_reset':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.listar.tareas.en.ejecucion.title.reset"/></formatting:escape>',
+                'listarTareasEnEjecucion_noreset':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.listar.tareas.en.ejecucion.title.reset.not.allowed"/></formatting:escape>',
+                'listarTareasEjecutadas':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.listar.tareas.ejecutadas.title"/></formatting:escape>',
+                'listarTareasEjecutadas_no':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.listar.tareas.ejecutadas.title.notallowed"/></formatting:escape>',
+                'listarTareasEjecutadas_reset':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.listar.tareas.ejecutadas.title.reset"/></formatting:escape>',
+                'listarTareasEjecutadas_noreset':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.listar.tareas.ejecutadas.title.reset.not.allowed"/></formatting:escape>',
+                'Modificar':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.modificar.title"/></formatting:escape>',
+                'Modificar_no':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.modificar.title.notallowed"/></formatting:escape>',
+                'Modificar_reset':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.modificar.title.reset"/></formatting:escape>',
+                'Modificar_noreset':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.modificar.title.reset.not.allowed"/></formatting:escape>',
+                'Mostrar':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.mostrar.title"/></formatting:escape>',
+                'Mostrar_no':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.mostrar.title.notallowed"/></formatting:escape>',
+                'Mostrar_reset':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.mostrar.title.reset"/></formatting:escape>',
+                'Mostrar_noreset':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.mostrar.title.reset.not.allowed"/></formatting:escape>',
+                'Eliminar':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.eliminar.title"/></formatting:escape>',
+                'Eliminar_no':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.eliminar.title.notallowed"/></formatting:escape>',
+                'Eliminar_reset':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.eliminar.title.reset"/></formatting:escape>',
+                'Eliminar_noreset':'<formatting:escape language="javascript"><bean:message key="listar.tareas.pendientes.listar.eliminar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+
+
+
+
+</script>
+    </tiles:put>

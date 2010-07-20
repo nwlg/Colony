@@ -1,0 +1,13 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="buscar" class="action">
+    <h3><bean:message key="abrir.buscador.mensaje.agregar.buscar"/></h3>
+    <div class="trigger">
+        <form id="abrirBuscadorMensajeAgregarBuscarForm" action='<html:rewrite action="/AbrirBuscador/MensajeAgregarBuscar"/>' method="post">
+               <html:submit onmouseover="hints.show('Buscar')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="abrir.buscador.mensaje.agregar.buscar"/>
+               </html:submit>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

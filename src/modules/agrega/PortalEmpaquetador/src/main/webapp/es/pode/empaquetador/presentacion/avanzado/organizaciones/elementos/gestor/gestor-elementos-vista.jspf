@@ -1,0 +1,31 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="vista" class="action">
+    <h3><bean:message key="gestor.elementos.gestor.elementos.vista"/></h3>
+    <div class="trigger">
+        <html:form styleId="gestorElementosGestorElementosVistaForm" action="/GestorElementos/GestorElementosVista" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="vistaArbol">
+                        <td class="label"><bean:message key="gestor.elementos.gestor.elementos.vista.param.vista.arbol"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.vistaArbol}"/>
+                           <input type="checkbox" name="vistaArbol" value="on" <c:if test="${value}">checked="checked" </c:if>onmouseover="hints.show('gestor.elementos.gestor.elementos.vista.param.vista.arbol.title')" onmouseout="hints.hide()"  id="vistaVistaArbol"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Vista')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="gestor.elementos.gestor.elementos.vista"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

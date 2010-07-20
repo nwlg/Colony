@@ -1,0 +1,141 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="validarFormu" class="action">
+    <h3><bean:message key="crear.faq.formulario.crear.validar.formu"/></h3>
+    <div class="trigger">
+        <html:form styleId="crearFAQFormularioCrearValidarFormuForm" action="/CrearFAQ/FormularioCrearValidarFormu" method="post" enctype="multipart/form-data" onsubmit="return validateFormularioCrearValidarFormuForm(this);">
+            <table>
+                <tbody>
+                    <tr class="categoria">
+                        <td class="label"><bean:message key="crear.faq.formulario.crear.validar.formu.param.categoria"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.categoria}"/>
+                           <input type="text" name="categoria" value="${value}" onmouseover="hints.show('crear.faq.formulario.crear.validar.formu.param.categoria.title')" onmouseout="hints.hide()"  id="validarFormuCategoria"/>
+                        </td>
+                    </tr>
+                    <tr class="castellano">
+                        <td class="label"><bean:message key="crear.faq.formulario.crear.validar.formu.param.castellano"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.castellano}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.castellanoBackingList}">
+                                  <html:select name="form" property="castellano" onmouseover="hints.show('crear.faq.formulario.crear.validar.formu.param.castellano.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="validarFormuCastellano">
+                                      <html:optionsCollection name="form" property="castellanoBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="castellano" onmouseover="hints.show('crear.faq.formulario.crear.validar.formu.param.castellano.title')" onmouseout="hints.hide()"  styleId="validarFormuCastellano"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="ingles">
+                        <td class="label"><bean:message key="crear.faq.formulario.crear.validar.formu.param.ingles"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.ingles}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.inglesBackingList}">
+                                  <html:select name="form" property="ingles" onmouseover="hints.show('crear.faq.formulario.crear.validar.formu.param.ingles.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="validarFormuIngles">
+                                      <html:optionsCollection name="form" property="inglesBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="ingles" onmouseover="hints.show('crear.faq.formulario.crear.validar.formu.param.ingles.title')" onmouseout="hints.hide()"  styleId="validarFormuIngles"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="catalan">
+                        <td class="label"><bean:message key="crear.faq.formulario.crear.validar.formu.param.catalan"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.catalan}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.catalanBackingList}">
+                                  <html:select name="form" property="catalan" onmouseover="hints.show('crear.faq.formulario.crear.validar.formu.param.catalan.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="validarFormuCatalan">
+                                      <html:optionsCollection name="form" property="catalanBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="catalan" onmouseover="hints.show('crear.faq.formulario.crear.validar.formu.param.catalan.title')" onmouseout="hints.hide()"  styleId="validarFormuCatalan"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="valenciano">
+                        <td class="label"><bean:message key="crear.faq.formulario.crear.validar.formu.param.valenciano"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.valenciano}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.valencianoBackingList}">
+                                  <html:select name="form" property="valenciano" onmouseover="hints.show('crear.faq.formulario.crear.validar.formu.param.valenciano.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="validarFormuValenciano">
+                                      <html:optionsCollection name="form" property="valencianoBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="valenciano" onmouseover="hints.show('crear.faq.formulario.crear.validar.formu.param.valenciano.title')" onmouseout="hints.hide()"  styleId="validarFormuValenciano"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="gallego">
+                        <td class="label"><bean:message key="crear.faq.formulario.crear.validar.formu.param.gallego"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.gallego}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.gallegoBackingList}">
+                                  <html:select name="form" property="gallego" onmouseover="hints.show('crear.faq.formulario.crear.validar.formu.param.gallego.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="validarFormuGallego">
+                                      <html:optionsCollection name="form" property="gallegoBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="gallego" onmouseover="hints.show('crear.faq.formulario.crear.validar.formu.param.gallego.title')" onmouseout="hints.hide()"  styleId="validarFormuGallego"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="euskera">
+                        <td class="label"><bean:message key="crear.faq.formulario.crear.validar.formu.param.euskera"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.euskera}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.euskeraBackingList}">
+                                  <html:select name="form" property="euskera" onmouseover="hints.show('crear.faq.formulario.crear.validar.formu.param.euskera.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="validarFormuEuskera">
+                                      <html:optionsCollection name="form" property="euskeraBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="euskera" onmouseover="hints.show('crear.faq.formulario.crear.validar.formu.param.euskera.title')" onmouseout="hints.hide()"  styleId="validarFormuEuskera"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('validarFormu')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="crear.faq.formulario.crear.validar.formu"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

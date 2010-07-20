@@ -1,0 +1,59 @@
+#accionSubmit.action {}
+#accionSubmit.action #form_submit {}
+
+#accionSubmit.action .accion {}
+#accionSubmit.action .accion .label {}
+#accionSubmit.action .accion .field {}
+#accionSubmit.action .identificadorOde {}
+#accionSubmit.action .identificadorOde .label {}
+#accionSubmit.action .identificadorOde .field {}
+#accionSubmit.action .versiones {}
+#accionSubmit.action .versiones .label {}
+#accionSubmit.action .versiones .field {}
+#accionSubmit.action .estatus {}
+#accionSubmit.action .estatus .label {}
+#accionSubmit.action .estatus .field {}
+#accionSubmit.action .contribuciones {}
+#accionSubmit.action .contribuciones .label {}
+#accionSubmit.action .contribuciones .field {}
+#accionSubmit.action .crol {}
+#accionSubmit.action .crol .label {}
+#accionSubmit.action .crol .field {}
+#accionSubmit.action .cidentidad {}
+#accionSubmit.action .cidentidad .label {}
+#accionSubmit.action .cidentidad .field {}
+#accionSubmit.action .fecha {}
+#accionSubmit.action .fecha .label {}
+#accionSubmit.action .fecha .field {}
+#accionSubmit.action .hora {}
+#accionSubmit.action .hora .label {}
+#accionSubmit.action .hora .field {}
+#accionSubmit.action .minutos {}
+#accionSubmit.action .minutos .label {}
+#accionSubmit.action .minutos .field {}
+#accionSubmit.action .segundoP1 {}
+#accionSubmit.action .segundoP1 .label {}
+#accionSubmit.action .segundoP1 .field {}
+#accionSubmit.action .segundoP2 {}
+#accionSubmit.action .segundoP2 .label {}
+#accionSubmit.action .segundoP2 .field {}
+#accionSubmit.action .meridianocero {}
+#accionSubmit.action .meridianocero .label {}
+#accionSubmit.action .meridianocero .field {}
+#accionSubmit.action .comboZonaH {}
+#accionSubmit.action .comboZonaH .label {}
+#accionSubmit.action .comboZonaH .field {}
+#accionSubmit.action .zhHora {}
+#accionSubmit.action .zhHora .label {}
+#accionSubmit.action .zhHora .field {}
+#accionSubmit.action .zhMinutos {}
+#accionSubmit.action .zhMinutos .label {}
+#accionSubmit.action .zhMinutos .field {}
+#accionSubmit.action .descripciones {}
+#accionSubmit.action .descripciones .label {}
+#accionSubmit.action .descripciones .field {}
+#accionSubmit.action .comboIdioma {}
+#accionSubmit.action .comboIdioma .label {}
+#accionSubmit.action .comboIdioma .field {}
+
+

@@ -1,0 +1,26 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="botonPulsado" value="${form.botonPulsado}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="descripciones" value="${form.descripciones}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="source" value="${form.source}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="palabrasClave" value="${form.palabrasClave}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="comboIdioma" value="${form.comboIdioma}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tituloClasificacion" value="${form.tituloClasificacion}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="rutaTaxonomica" value="${form.rutaTaxonomica}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="proposito" value="${form.proposito}"/>
+    </c:catch>
+</div>

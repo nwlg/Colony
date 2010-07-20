@@ -1,0 +1,34 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'gestor.submanifiestos.gestor.submanifiestos.submit.param.identifier.title':'<formatting:escape language="javascript"><bean:message key="gestor.submanifiestos.gestor.submanifiestos.submit.param.identifier.title"/></formatting:escape>',
+                'gestor.submanifiestos.gestor.submanifiestos.navegar.param.identifier.title':'<formatting:escape language="javascript"><bean:message key="gestor.submanifiestos.gestor.submanifiestos.navegar.param.identifier.title"/></formatting:escape>',
+                'gestor.submanifiestos.gestor.submanifiestos.metadato.param.identifier.title':'<formatting:escape language="javascript"><bean:message key="gestor.submanifiestos.gestor.submanifiestos.metadato.param.identifier.title"/></formatting:escape>',
+                'gestor.submanifiestos.gestor.submanifiestos.metadato.param.return.url.title':'<formatting:escape language="javascript"><bean:message key="gestor.submanifiestos.gestor.submanifiestos.metadato.param.return.url.title"/></formatting:escape>',
+                'Submit':'<formatting:escape language="javascript"><bean:message key="gestor.submanifiestos.gestor.submanifiestos.submit.title"/></formatting:escape>',
+                'Submit_no':'<formatting:escape language="javascript"><bean:message key="gestor.submanifiestos.gestor.submanifiestos.submit.title.notallowed"/></formatting:escape>',
+                'Submit_reset':'<formatting:escape language="javascript"><bean:message key="gestor.submanifiestos.gestor.submanifiestos.submit.title.reset"/></formatting:escape>',
+                'Submit_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.submanifiestos.gestor.submanifiestos.submit.title.reset.not.allowed"/></formatting:escape>',
+                'Navegar':'<formatting:escape language="javascript"><bean:message key="gestor.submanifiestos.gestor.submanifiestos.navegar.title"/></formatting:escape>',
+                'Navegar_no':'<formatting:escape language="javascript"><bean:message key="gestor.submanifiestos.gestor.submanifiestos.navegar.title.notallowed"/></formatting:escape>',
+                'Navegar_reset':'<formatting:escape language="javascript"><bean:message key="gestor.submanifiestos.gestor.submanifiestos.navegar.title.reset"/></formatting:escape>',
+                'Navegar_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.submanifiestos.gestor.submanifiestos.navegar.title.reset.not.allowed"/></formatting:escape>',
+                'Metadato':'<formatting:escape language="javascript"><bean:message key="gestor.submanifiestos.gestor.submanifiestos.metadato.title"/></formatting:escape>',
+                'Metadato_no':'<formatting:escape language="javascript"><bean:message key="gestor.submanifiestos.gestor.submanifiestos.metadato.title.notallowed"/></formatting:escape>',
+                'Metadato_reset':'<formatting:escape language="javascript"><bean:message key="gestor.submanifiestos.gestor.submanifiestos.metadato.title.reset"/></formatting:escape>',
+                'Metadato_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.submanifiestos.gestor.submanifiestos.metadato.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+</script>
+    </tiles:put>

@@ -1,0 +1,42 @@
+#volver.action {}
+#volver.action #form_submit {}
+
+
+#submit.action {}
+#submit.action #form_submit {}
+
+#submit.action .titulo {}
+#submit.action .titulo .label {}
+#submit.action .titulo .field {}
+#submit.action .idioma {}
+#submit.action .idioma .label {}
+#submit.action .idioma .field {}
+#submit.action .descripcion {}
+#submit.action .descripcion .label {}
+#submit.action .descripcion .field {}
+#submit.action .tipoRecurso {}
+#submit.action .tipoRecurso .label {}
+#submit.action .tipoRecurso .field {}
+#submit.action .idiomaDestinatario {}
+#submit.action .idiomaDestinatario .label {}
+#submit.action .idiomaDestinatario .field {}
+#submit.action .arboles {}
+#submit.action .arboles .label {}
+#submit.action .arboles .field {}
+#submit.action .idArbol {}
+#submit.action .idArbol .label {}
+#submit.action .idArbol .field {}
+
+#importar.action {}
+#importar.action #form_submit {}
+
+
+#arboles.table {}
+#arboles.table th {}
+#arboles.table td div {}
+
+#arboles.table th.idArbol {}
+#arboles.table td div.idArbol {}
+
+
+

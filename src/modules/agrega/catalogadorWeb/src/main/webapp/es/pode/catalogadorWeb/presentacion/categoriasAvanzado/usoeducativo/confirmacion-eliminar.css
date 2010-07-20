@@ -1,0 +1,15 @@
+#cancelarEliminar.action {}
+#cancelarEliminar.action #form_submit {}
+
+
+#datosASesion.action {}
+#datosASesion.action #form_submit {}
+
+#datosASesion.action .listadoUsosEdu {}
+#datosASesion.action .listadoUsosEdu .label {}
+#datosASesion.action .listadoUsosEdu .field {}
+#datosASesion.action .tituloUsoEdu {}
+#datosASesion.action .tituloUsoEdu .label {}
+#datosASesion.action .tituloUsoEdu .field {}
+
+

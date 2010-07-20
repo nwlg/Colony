@@ -1,0 +1,69 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="planificar" class="action">
+    <h3><bean:message key="planificar.planificar.modificacion.planificar"/></h3>
+    <div class="trigger">
+        <html:form styleId="planificarPlanificarModificacionPlanificarForm" action="/Planificar/PlanificarModificacionPlanificar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="idModificacion">
+                        <td class="label"><bean:message key="planificar.planificar.modificacion.planificar.param.id.modificacion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idModificacion}"/>
+                           <input type="text" name="idModificacion" value="${value}" onmouseover="hints.show('planificar.planificar.modificacion.planificar.param.id.modificacion.title')" onmouseout="hints.hide()"  id="planificarIdModificacion"/>
+                        </td>
+                    </tr>
+                    <tr class="horas">
+                        <td class="label"><bean:message key="planificar.planificar.modificacion.planificar.param.horas"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.horas}"/>
+                           <input type="text" name="horas" value="${value}" onmouseover="hints.show('planificar.planificar.modificacion.planificar.param.horas.title')" onmouseout="hints.hide()"  id="planificarHoras"/>
+                        </td>
+                    </tr>
+                    <tr class="minutos">
+                        <td class="label"><bean:message key="planificar.planificar.modificacion.planificar.param.minutos"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.minutos}"/>
+                           <input type="text" name="minutos" value="${value}" onmouseover="hints.show('planificar.planificar.modificacion.planificar.param.minutos.title')" onmouseout="hints.hide()"  id="planificarMinutos"/>
+                        </td>
+                    </tr>
+                    <tr class="action">
+                        <td class="label"><bean:message key="planificar.planificar.modificacion.planificar.param.action"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.action}"/>
+                           <input type="text" name="action" value="${value}" onmouseover="hints.show('planificar.planificar.modificacion.planificar.param.action.title')" onmouseout="hints.hide()"  id="planificarAction"/>
+                        </td>
+                    </tr>
+                    <tr class="fecha">
+                        <td class="label"><bean:message key="planificar.planificar.modificacion.planificar.param.fecha"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.fecha}"/>
+                           <input type="text" name="fecha" value="${value}" onmouseover="hints.show('planificar.planificar.modificacion.planificar.param.fecha.title')" onmouseout="hints.hide()"  id="planificarFecha"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Planificar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="planificar.planificar.modificacion.planificar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

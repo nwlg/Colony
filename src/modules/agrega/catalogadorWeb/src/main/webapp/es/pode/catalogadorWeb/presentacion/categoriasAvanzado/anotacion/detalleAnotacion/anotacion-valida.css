@@ -1,0 +1,62 @@
+#volver.action {}
+#volver.action #form_submit {}
+
+#volver.action .tituloAnotacion {}
+#volver.action .tituloAnotacion .label {}
+#volver.action .tituloAnotacion .field {}
+#volver.action .identificadorOde {}
+#volver.action .identificadorOde .label {}
+#volver.action .identificadorOde .field {}
+#volver.action .botonPulsado {}
+#volver.action .botonPulsado .label {}
+#volver.action .botonPulsado .field {}
+#volver.action .nombre {}
+#volver.action .nombre .label {}
+#volver.action .nombre .field {}
+#volver.action .organizacion {}
+#volver.action .organizacion .label {}
+#volver.action .organizacion .field {}
+#volver.action .email {}
+#volver.action .email .label {}
+#volver.action .email .field {}
+#volver.action .fechaCorta {}
+#volver.action .fechaCorta .label {}
+#volver.action .fechaCorta .field {}
+#volver.action .thora {}
+#volver.action .thora .label {}
+#volver.action .thora .field {}
+#volver.action .tminuto {}
+#volver.action .tminuto .label {}
+#volver.action .tminuto .field {}
+#volver.action .tsegundoP1 {}
+#volver.action .tsegundoP1 .label {}
+#volver.action .tsegundoP1 .field {}
+#volver.action .tsegundoP2 {}
+#volver.action .tsegundoP2 .label {}
+#volver.action .tsegundoP2 .field {}
+#volver.action .meridianoCero {}
+#volver.action .meridianoCero .label {}
+#volver.action .meridianoCero .field {}
+#volver.action .comboZonaH {}
+#volver.action .comboZonaH .label {}
+#volver.action .comboZonaH .field {}
+#volver.action .znHora {}
+#volver.action .znHora .label {}
+#volver.action .znHora .field {}
+#volver.action .znMinutos {}
+#volver.action .znMinutos .label {}
+#volver.action .znMinutos .field {}
+#volver.action .descripcionFecha {}
+#volver.action .descripcionFecha .label {}
+#volver.action .descripcionFecha .field {}
+#volver.action .comboIdioma {}
+#volver.action .comboIdioma .label {}
+#volver.action .comboIdioma .field {}
+#volver.action .descripcion {}
+#volver.action .descripcion .label {}
+#volver.action .descripcion .field {}
+#volver.action .mensajesError {}
+#volver.action .mensajesError .label {}
+#volver.action .mensajesError .field {}
+
+

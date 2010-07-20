@@ -1,0 +1,23 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'inicio.empaquetador.titulo2.submit.param.titulo.title':'<formatting:escape language="javascript"><bean:message key="inicio.empaquetador.titulo2.submit.param.titulo.title"/></formatting:escape>',
+                'inicio.empaquetador.titulo2.submit.param.identificador.title':'<formatting:escape language="javascript"><bean:message key="inicio.empaquetador.titulo2.submit.param.identificador.title"/></formatting:escape>',
+                'inicio.empaquetador.titulo2.submit.param.action.title':'<formatting:escape language="javascript"><bean:message key="inicio.empaquetador.titulo2.submit.param.action.title"/></formatting:escape>',
+                'Submit':'<formatting:escape language="javascript"><bean:message key="inicio.empaquetador.titulo2.submit.title"/></formatting:escape>',
+                'Submit_no':'<formatting:escape language="javascript"><bean:message key="inicio.empaquetador.titulo2.submit.title.notallowed"/></formatting:escape>',
+                'Submit_reset':'<formatting:escape language="javascript"><bean:message key="inicio.empaquetador.titulo2.submit.title.reset"/></formatting:escape>',
+                'Submit_noreset':'<formatting:escape language="javascript"><bean:message key="inicio.empaquetador.titulo2.submit.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

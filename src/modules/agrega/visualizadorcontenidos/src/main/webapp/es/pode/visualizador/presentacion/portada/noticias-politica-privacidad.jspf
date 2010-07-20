@@ -1,0 +1,13 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="politicaPrivacidad" class="action">
+    <h3><bean:message key="portada.noticias.politica.privacidad"/></h3>
+    <div class="trigger">
+        <form id="portadaNoticiasPoliticaPrivacidadForm" action='<html:rewrite action="/Portada/NoticiasPoliticaPrivacidad"/>' method="post">
+               <html:submit onmouseover="hints.show('PoliticaPrivacidad')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="portada.noticias.politica.privacidad"/>
+               </html:submit>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

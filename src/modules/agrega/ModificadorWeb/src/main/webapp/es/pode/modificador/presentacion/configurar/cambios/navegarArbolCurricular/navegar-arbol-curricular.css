@@ -1,0 +1,28 @@
+#navegar.action {}
+#navegar.action #form_submit {}
+
+#navegar.action .idTermino {}
+#navegar.action .idTermino .label {}
+#navegar.action .idTermino .field {}
+
+#buscar.action {}
+#buscar.action #form_submit {}
+
+#buscar.action .idiomaBuscador {}
+#buscar.action .idiomaBuscador .label {}
+#buscar.action .idiomaBuscador .field {}
+#buscar.action .tipoBusqueda {}
+#buscar.action .tipoBusqueda .label {}
+#buscar.action .tipoBusqueda .field {}
+
+#selectAction.action {}
+#selectAction.action #form_submit {}
+
+#selectAction.action .action {}
+#selectAction.action .action .label {}
+#selectAction.action .action .field {}
+#selectAction.action .idTermino {}
+#selectAction.action .idTermino .label {}
+#selectAction.action .idTermino .field {}
+
+

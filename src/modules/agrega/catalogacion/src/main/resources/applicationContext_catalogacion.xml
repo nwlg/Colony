@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <!-- ========================= GENERAL DEFINITIONS ========================= -->
+    <!-- Message source for this context, loaded from localized "messages_xx" files -->
+
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename"><value>messages</value></property>
+    </bean>
+
+	<bean id="beanMapper" class="net.sf.dozer.util.mapping.DozerBeanMapper" singleton="true">
+		<property name="mappingFiles">
+			<list>
+				<value>defaultDozerMappings_catalogacion.xml</value>
+				<value>customDozerMappings_catalogacion.xml</value>
+			</list>
+		</property>
+	</bean>
+
+    <!-- applicationContext merge-point -->
+
+    <!-- ========================= Start of SERVICE DEFINITIONS ========================= -->
+
+
+    <!-- SrvCatalogacionBasicaService Service Proxy with inner SrvCatalogacionBasicaService Service Implementation -->
+    <bean id="srvCatalogacionBasicaService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.catalogacion.negocio.servicios.SrvCatalogacionBasicaServiceImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+	                <property name="lomesDao"><ref bean="LomesDao"/></property>
+    		                <property name="catalogacionDozerDao"><ref bean="CatalogacionDozerDao"/></property>
+    	            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.catalogacion.negocio.servicios.SrvCatalogacionBasicaService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceSecurityInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvCatalogacionAvanzadaService Service Proxy with inner SrvCatalogacionAvanzadaService Service Implementation -->
+    <bean id="srvCatalogacionAvanzadaService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.catalogacion.negocio.servicios.SrvCatalogacionAvanzadaServiceImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+	                <property name="lomesDao"><ref bean="LomesDao"/></property>
+    		                <property name="catalogacionDozerDao"><ref bean="CatalogacionDozerDao"/></property>
+    	            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.catalogacion.negocio.servicios.SrvCatalogacionAvanzadaService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceSecurityInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- ========================= End of SERVICE DEFINITIONS ========================= -->
+
+</beans>

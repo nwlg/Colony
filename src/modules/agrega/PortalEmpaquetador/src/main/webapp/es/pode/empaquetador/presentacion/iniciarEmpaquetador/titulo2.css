@@ -1,0 +1,14 @@
+#submit.action {}
+#submit.action #form_submit {}
+
+#submit.action .titulo {}
+#submit.action .titulo .label {}
+#submit.action .titulo .field {}
+#submit.action .identificador {}
+#submit.action .identificador .label {}
+#submit.action .identificador .field {}
+#submit.action .action {}
+#submit.action .action .label {}
+#submit.action .action .field {}
+
+

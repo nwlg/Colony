@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE form-validation PUBLIC
+    "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1//EN"
+    "http://jakarta.apache.org/commons/dtds/validator_1_1.dtd">
+
+<form-validation>
+
+    <formset>
+    
+
+        <form name="busquedaSQICUMostrarResultadosAnalizaTipoBusquedaForm">
+            <field property="resultadosDesde" depends="integer">
+
+                <arg position="0" key="busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda.param.resultados.desde" />
+            </field>
+        </form>
+        <form name="navegarArbolCurricularCUArbolCurricularListarODEAreaForm">
+            <field property="numMaxResultados" depends="integer">
+
+                <arg position="0" key="navegar.arbol.curricular.cu.arbol.curricular.listar.odearea.param.num.max.resultados" />
+            </field>
+        </form>
+        <form name="navegarTesauroCUNavegarTesauroBuscarTerminosForm">
+            <field property="numeroResultados" depends="integer">
+
+                <arg position="0" key="navegar.tesauro.cu.navegar.tesauro.buscar.terminos.param.numero.resultados" />
+            </field>
+        </form>
+        <form name="navegarTesauroCUNavegarTesauroListarODETesauroForm">
+            <field property="numMaxResultados" depends="integer">
+
+                <arg position="0" key="navegar.tesauro.cu.navegar.tesauro.listar.odetesauro.param.num.max.resultados" />
+            </field>
+        </form>
+        <form name="navegarTesauroCUNavegarTesauroSeleccionarPadreForm">
+            <field property="numeroResultados" depends="integer">
+
+                <arg position="0" key="navegar.tesauro.cu.navegar.tesauro.seleccionar.padre.param.numero.resultados" />
+            </field>
+        </form>
+        <form name="navegarTesauroCUNavegarTesauroSeleccionarHijoForm">
+            <field property="numeroResultados" depends="integer">
+
+                <arg position="0" key="navegar.tesauro.cu.navegar.tesauro.seleccionar.hijo.param.numero.resultados" />
+            </field>
+        </form>
+<!--RLA-->
+
+<!--/RLA-->
+    </formset>
+
+</form-validation>

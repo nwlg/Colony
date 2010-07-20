@@ -1,0 +1,31 @@
+#listarTareasEjecutadas.action {}
+#listarTareasEjecutadas.action #form_submit {}
+
+#listarTareasEjecutadas.action .trabajo {}
+#listarTareasEjecutadas.action .trabajo .label {}
+#listarTareasEjecutadas.action .trabajo .field {}
+#listarTareasEjecutadas.action .descripcion {}
+#listarTareasEjecutadas.action .descripcion .label {}
+#listarTareasEjecutadas.action .descripcion .field {}
+#listarTareasEjecutadas.action .fechaInicio {}
+#listarTareasEjecutadas.action .fechaInicio .label {}
+#listarTareasEjecutadas.action .fechaInicio .field {}
+#listarTareasEjecutadas.action .fechaFin {}
+#listarTareasEjecutadas.action .fechaFin .label {}
+#listarTareasEjecutadas.action .fechaFin .field {}
+
+#informeTrabajo.table {}
+#informeTrabajo.table th {}
+#informeTrabajo.table td div {}
+
+#informeTrabajo.table th.descripcion {}
+#informeTrabajo.table td div.descripcion {}
+
+#informeTrabajo.table th.fecha {}
+#informeTrabajo.table td div.fecha {}
+
+#informeTrabajo.table th.estado {}
+#informeTrabajo.table td div.estado {}
+
+
+

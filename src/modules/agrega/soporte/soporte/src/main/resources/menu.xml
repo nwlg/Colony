@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE menu-definition [
+<!ELEMENT menuItem EMPTY>
+<!ATTLIST menuItem 
+	id ID #REQUIRED
+	name CDATA #REQUIRED
+	pattern CDATA ""
+	url CDATA ""
+	urlConcatVar CDATA ""
+	target CDATA ""
+	roles CDATA ""
+	i18nKey CDATA "">
+<!ELEMENT menu (menuItem)+>
+<!ATTLIST menu 
+	name CDATA #REQUIRED
+	i18nKey CDATA #REQUIRED
+	pattern CDATA ""
+	roles CDATA #REQUIRED>
+<!ELEMENT menu-definition (menu)+>
+]>
+<menu-definition>
+  <menu name="cabecera" i18nKey="menu.cabecera." roles="ROLE_ADMINISTRADOR,ROLE_PUBLICADOR,ROLE_CATALOGADOR,ROLE_DOCENTE,ROLE_INACTIVO">
+    <menuItem id="portada" name="portada" pattern="visualizadorcontenidos,listarAgregaTags,listarMisTags,modificarTag,mostrarOdesAgregaTags,mostrarOdesMisTags" url="url_portada"/>
+    <menuItem id="arbol" name="arbolCabecera" pattern="arbolCurricular,areaCurricularBusqueda,tipoBusquedaArbol,seleccionTipoBusqueda,navegarTesauro" url="url_seleccionTipoBusqueda" roles="ROLE_ADMINISTRADOR,ROLE_PUBLICADOR,ROLE_CATALOGADOR,ROLE_DOCENTE,ROLE_ANONYMOUS" />
+    <menuItem id="objetos" name="objetosPersonales" pattern="objetosPersonales,objetosPropuestos,objetosPublicados,objetosCompatidos" url="url_gestorFlujo" roles="ROLE_ADMINISTRADOR,ROLE_DOCENTE"/>
+    <menuItem id="admin" name="admin" pattern="portaladministracion,objetosDespublicados,objetosPendientes,ModificadorWeb,adminTag" url="url_portada_admin" roles="ROLE_ADMINISTRADOR,ROLE_PUBLICADOR,ROLE_CATALOGADOR"/>
+  </menu>
+  <menu name="lateral_generico" i18nKey="menu.lateral.generico." pattern="visualizadorcontenidos,TaggingWeb" roles="ROLE_ADMINISTRADOR,ROLE_PUBLICADOR,ROLE_CATALOGADOR,ROLE_DOCENTE,ROLE_ANONYMOUS,ROLE_INACTIVO,ROLE_DEMOUSER">
+    <menuItem id="noticias" name="noticias" pattern="noticias/" url="url_noticias"/>
+    <menuItem id="informes" name="informes" pattern="informes" url="url_informes_portada"/>
+    <menuItem id="descargas" name="descargas" pattern="descargas" url="url_descargas_portal"/>
+    <menuItem id="utilidades" name="utilidades" pattern="utilidades,agregaSlider,agregaContenidoDinamico" url="url_utilidades"/>
+    <!-- MCA: Remove tagging link from menu
+    <menuItem id="tagging" name="tagging" pattern="TaggingWeb" url="url_taggingWeb"/>
+    -->
+  </menu>
+  <menu name="lateral_admin" i18nKey="menu.lateral.administrador." pattern="portaladministracion,gestorFlujo,ModificadorWeb,adminTag" roles="ROLE_ADMINISTRADOR,ROLE_CATALOGADOR,ROLE_PUBLICADOR,ROLE_DEMOUSER">
+    <menuItem id="admin_noticias" name="noticias" pattern="noticias" url="url_noticias_admin" i18nKey="menu.lateral.generico." roles="ROLE_ADMINISTRADOR"/>
+    <menuItem id="admin_descargas" name="descargas" pattern="descargas" url="url_admin_descargas" i18nKey="menu.lateral.generico." roles="ROLE_ADMINISTRADOR"/>
+    <menuItem id="admin_faqs" name="FAQs" pattern="faqs" url="url_faqs_admin" i18nKey="menu.lateral.generico." roles="ROLE_ADMINISTRADOR"/>
+    <menuItem id="admin_tagging" name="tagging" pattern="adminTag/" url="url_admin_taggingWeb" i18nKey="menu.lateral.generico." roles="ROLE_ADMINISTRADOR"/>
+    <menuItem id="admin_nodo" name="nodo" pattern="Nodo" url="url_nodos_admin" roles="ROLE_ADMINISTRADOR"/>
+    <menuItem id="admin_usuarios" name="usuarios" pattern="Usuario" url="url_adminusuarios_usuarios" roles="ROLE_ADMINISTRADOR"/>
+    <menuItem id="admin_logs" name="logs" pattern="logs" url="url_logs" roles="ROLE_ADMINISTRADOR"/>
+    <menuItem id="admin_informes" name="informes" pattern="Informe" url="url_informes" i18nKey="menu.lateral.generico." roles="ROLE_ADMINISTRADOR"/>
+    <menuItem id="admin_publicador" name="publicador" pattern="objetosDespublicados,objetosPendientes/" url="url_gestorFlujo_admin" roles="ROLE_PUBLICADOR"/>
+    <menuItem id="admin_catalogador" name="catalogador" pattern="objetosPendientesCatalogacion" url="url_gestorFlujo_catalogacion" roles="ROLE_CATALOGADOR"/>    
+    <menuItem id="admin_planificador" name="planificador" pattern="planificador" url="url_planificador" roles="ROLE_ADMINISTRADOR"/>
+    <menuItem id="admin_modificador" name="modificador" pattern="ModificadorWeb" url="url_modificador" roles="ROLE_ADMINISTRADOR"/>
+    <menuItem id="admin_monitorizador" name="monitorizador" pattern="monitorizar" url="url_monitorizar" roles="ROLE_ADMINISTRADOR"/>
+    <menuItem id="admin_roles" name="roles" pattern="Grupo" url="url_adminusuarios_grupos" roles="ROLE_ADMINISTRADOR"/>
+    <menuItem id="admin_catalogadores" name="catalogadores" pattern="catalogadores" url="url_catalogadores" roles="ROLE_ADMINISTRADOR"/>
+    <menuItem id="admin_estructurasEdu" name="estructurasEdu" pattern="estructuraseducativas" url="url_estructurasEdu" roles="ROLE_ADMINISTRADOR"/>
+    <menuItem id="admin_repositorios" name="repositoriosExternos" pattern="RepositoriosExternos" url="url_repositorios_admin" roles="ROLE_ADMINISTRADOR"/>
+  </menu>
+  <menu name="metanavegacion" i18nKey="metanavegacion." roles="ROLE_ANONYMOUS,ROLE_ADMINISTRADOR,ROLE_PUBLICADOR,ROLE_CATALOGADOR,ROLE_DOCENTE,ROLE_INACTIVO,ROLE_DEMOUSER">
+    <menuItem id="salir" name="salir" url="url_salir" roles="ROLE_ADMINISTRADOR,ROLE_PUBLICADOR,ROLE_CATALOGADOR,ROLE_DOCENTE,ROLE_INACTIVO,ROLE_DEMOUSER"/>
+    <menuItem id="perfil" name="perfil" url="url_perfil" roles="ROLE_ADMINISTRADOR,ROLE_PUBLICADOR,ROLE_CATALOGADOR,ROLE_DOCENTE,ROLE_DEMOUSER"/>
+    <!-- MCA: Temporarily remove Help from the menu
+    <menuItem id="ayuda" name="ayuda" url="url_ayuda2" urlConcatVar="HELP_URL" target="blank" roles="ROLE_ANONYMOUS,ROLE_ADMINISTRADOR,ROLE_PUBLICADOR,ROLE_CATALOGADOR,ROLE_DOCENTE,ROLE_INACTIVO,ROLE_DEMOUSER"/>
+    -->
+    <menuItem id="restringida" name="restringida" url="url_restringida" roles="ROLE_ANONYMOUS"/>
+  </menu>
+  
+</menu-definition>

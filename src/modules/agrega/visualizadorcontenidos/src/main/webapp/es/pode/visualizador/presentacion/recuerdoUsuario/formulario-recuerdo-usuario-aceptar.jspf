@@ -1,0 +1,40 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="recuerdo.usuario.formulario.recuerdo.usuario.aceptar"/></h3>
+    <div class="trigger">
+        <html:form styleId="recuerdoUsuarioFormularioRecuerdoUsuarioAceptarForm" action="/RecuerdoUsuario/FormularioRecuerdoUsuarioAceptar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="email">
+                        <td class="label"><bean:message key="recuerdo.usuario.formulario.recuerdo.usuario.aceptar.param.email"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.email}"/>
+                           <input type="text" name="email" value="${value}" onmouseover="hints.show('recuerdo.usuario.formulario.recuerdo.usuario.aceptar.param.email.title')" onmouseout="hints.hide()"  id="aceptarEmail"/>
+                        </td>
+                    </tr>
+                    <tr class="nif">
+                        <td class="label"><bean:message key="recuerdo.usuario.formulario.recuerdo.usuario.aceptar.param.nif"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.nif}"/>
+                           <input type="text" name="nif" value="${value}" onmouseover="hints.show('recuerdo.usuario.formulario.recuerdo.usuario.aceptar.param.nif.title')" onmouseout="hints.hide()"  id="aceptarNif"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="recuerdo.usuario.formulario.recuerdo.usuario.aceptar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

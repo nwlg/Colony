@@ -1,0 +1,88 @@
+<div id="tareasEjecutadas" class="table">
+    <form id="tareasEjecutadas" name="" action="" method="post" enctype="multipart/form-data">
+    <display:table name="${form.tareasEjecutadas}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="listar-tareas-ejecutadas.pdf" />
+        <display:column media="html">
+            <input type="checkbox" name="idRowSelectionAsArray" value="${row.id}" title='<bean:message key="select.deselect.this.row"/>'/>
+        </display:column>
+
+        <display:column media="xml csv excel pdf"
+            titleKey="listar.tareas.ejecutadas.listar.param.tareas.ejecutadas.trabajo"
+            autolink="true" paramId="trabajo"
+            property="trabajo">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="trabajo" paramId="trabajo"
+            sortProperty="trabajo" sortable="true"
+            titleKey="listar.tareas.ejecutadas.listar.param.tareas.ejecutadas.trabajo"
+            >
+ <html:link action="/ListarTareasEjecutadas/ListarInforme?id=${row.id}" onmouseover="hints.show('Informe')" onmouseout="hints.hide()">
+     ${row.trabajo}
+ </html:link>
+            </display:column>
+   
+
+        <display:column media="xml csv excel pdf"
+            titleKey="listar.tareas.ejecutadas.listar.param.tareas.ejecutadas.grupo.trabajo"
+            autolink="true" paramId="grupoTrabajo"
+            property="grupoTrabajo">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="grupoTrabajo" paramId="grupoTrabajo"
+            sortProperty="grupoTrabajo" sortable="true"
+            titleKey="listar.tareas.ejecutadas.listar.param.tareas.ejecutadas.grupo.trabajo"
+            property="grupoTrabajo" />
+   
+
+        <display:column media="xml csv excel pdf"
+            titleKey="listar.tareas.ejecutadas.listar.param.tareas.ejecutadas.fecha.inicio"
+            autolink="true" paramId="fechaInicio"
+            property="fechaInicio">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="fechaInicio" paramId="fechaInicio"
+            sortProperty="fechaInicio" sortable="true"
+            titleKey="listar.tareas.ejecutadas.listar.param.tareas.ejecutadas.fecha.inicio"
+            property="fechaInicio" />
+   
+
+        <display:column media="xml csv excel pdf"
+            titleKey="listar.tareas.ejecutadas.listar.param.tareas.ejecutadas.fecha.fin"
+            autolink="true" paramId="fechaFin"
+            property="fechaFin">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="fechaFin" paramId="fechaFin"
+            sortProperty="fechaFin" sortable="true"
+            titleKey="listar.tareas.ejecutadas.listar.param.tareas.ejecutadas.fecha.fin"
+            property="fechaFin" />
+   
+
+        <display:column media="xml csv excel pdf"
+            titleKey="listar.tareas.ejecutadas.listar.param.tareas.ejecutadas.estado"
+            autolink="true" paramId="estado"
+            property="estado">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="estado" paramId="estado"
+            sortProperty="estado" sortable="true"
+            titleKey="listar.tareas.ejecutadas.listar.param.tareas.ejecutadas.estado"
+            property="estado" />
+   
+    </display:table>
+    <c:if test="${!empty form.tareasEjecutadas}">
+            <input type="submit" value="<bean:message key="listar.tareas.ejecutadas.listar.eliminar"/>" onclick="this.form.name='listarTareasEjecutadasListarEliminarForm';this.form.action='<html:rewrite action="/ListarTareasEjecutadas/ListarEliminar"/>';" onmouseover="hints.show('Eliminar')" onmouseout="hints.hide()"/>
+            <input type="button" value="<bean:message key="select.deselect.all"/>" onclick="var boxes=this.form.elements['idRowSelectionAsArray'];var setChecked=(boxes.length==0)?false:!boxes[0].checked;for(var i=0;i<boxes.length;i++)boxes[i].checked=setChecked;"/>
+    </c:if>
+    </form>
+</div>
+

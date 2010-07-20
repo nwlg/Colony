@@ -1,0 +1,31 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="secuenciaBoton" class="action">
+    <h3><bean:message key="visualizar.visualizar.datos.nav.secuencia.boton"/></h3>
+    <div class="trigger">
+        <html:form styleId="visualizarVisualizarDatosNavSecuenciaBotonForm" action="/Visualizar/VisualizarDatosNavSecuenciaBoton" method="post" enctype="multipart/form-data" onsubmit="return validateVisualizarDatosNavSecuenciaBotonForm(this);">
+            <table>
+                <tbody>
+                    <tr class="contador">
+                        <td class="label"><bean:message key="visualizar.visualizar.datos.nav.secuencia.boton.param.contador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.contador}"/>
+                           <input type="text" name="contador" value="${value}" onmouseover="hints.show('visualizar.visualizar.datos.nav.secuencia.boton.param.contador.title')" onmouseout="hints.hide()"  id="secuenciaBotonContador"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('secuenciaBoton')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="visualizar.visualizar.datos.nav.secuencia.boton"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

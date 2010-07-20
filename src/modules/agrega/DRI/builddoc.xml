@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<project default="docs" basedir=".">
+
+  <property file="build.properties"/>
+	<!-- define un grupo de archivos que pueden ser usados en el resto de tareas -->
+	<path id="jars">
+	    <fileset dir="" includes="servlet.jar" />
+	</path>
+
+  <target
+    name="doc"
+    depends="docs-init"
+    description="Generate JavaDocs."
+    >
+    <javadoc
+        destdir="${javadoc.destination.dir}"
+        author="true"
+        version="true"
+        sourcepath="${javadoc.sourcetemp.dir}"
+        packagenames="es.*,org.*,com.*"
+        verbose="false">
+        <doctitle><![CDATA[<h1></h1>]]></doctitle>
+        <bottom>
+            <![CDATA[<i>Copyright &#169; 2003 All Rights Reserved.</i>]]>
+        </bottom>
+        <tag name="todo" scope="all" description="To do:"/>
+      </javadoc>
+</target>
+
+<target name="docs-init">
+    <mkdir dir="${javadoc.destination.dir}"/>
+    <mkdir dir="${javadoc.sourcetemp.dir}"/>
+    <copy todir="${javadoc.sourcetemp.dir}">
+    	<fileset dir="./core/src/java">
+      	<include name="**/*.java"/>
+      </fileset>
+    </copy>
+    <copy todir="${javadoc.sourcetemp.dir}">
+    	<fileset dir="./core/target/src">
+      	<include name="**/*.java"/>
+      </fileset>
+    </copy>
+    <copy todir="${javadoc.sourcetemp.dir}">
+    	<fileset dir="./core/src/test">
+      	<include name="**/*.java"/>
+      </fileset>
+    </copy>    
+    <copy todir="${javadoc.sourcetemp.dir}">
+    	<fileset dir="./common/src/java">
+      	<include name="**/*.java"/>
+      </fileset>
+    </copy>
+    <copy todir="${javadoc.sourcetemp.dir}">
+    	<fileset dir="./common/target/src">
+      	<include name="**/*.java"/>
+      </fileset>
+    </copy>
+    <copy todir="${javadoc.sourcetemp.dir}">
+    	<fileset dir="./web/src/java">
+      	<include name="**/*.java"/>
+      </fileset>
+    </copy>
+    <copy todir="${javadoc.sourcetemp.dir}">
+    	<fileset dir="./web/target/src">
+      	<include name="**/*.java"/>
+      </fileset>
+    </copy>
+</target>
+
+<target name="docs-clean">
+    <delete dir="${javadoc.sourcetemp.dir}"/>
+</target>
+<target name="docs" depends="doc">
+    <delete dir="${javadoc.sourcetemp.dir}"/>
+</target>
+</project>

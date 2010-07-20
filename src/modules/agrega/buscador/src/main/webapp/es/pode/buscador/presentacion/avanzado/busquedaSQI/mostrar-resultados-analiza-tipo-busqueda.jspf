@@ -1,0 +1,94 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="analizaTipoBusqueda" class="action">
+    <h3><bean:message key="busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda"/></h3>
+    <div class="trigger">
+        <html:form styleId="busquedaSQICUMostrarResultadosAnalizaTipoBusquedaForm" action="/BusquedaSQICU/MostrarResultadosAnalizaTipoBusqueda" method="post" enctype="multipart/form-data" onsubmit="return validateMostrarResultadosAnalizaTipoBusquedaForm(this);">
+            <table>
+                <tbody>
+                    <tr class="tipoLayoutBuscador">
+                        <td class="label"><bean:message key="busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda.param.tipo.layout.buscador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipoLayoutBuscador}"/>
+                           <input type="text" name="tipoLayoutBuscador" value="${value}" onmouseover="hints.show('busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda.param.tipo.layout.buscador.title')" onmouseout="hints.hide()"  id="analizaTipoBusquedaTipoLayoutBuscador"/>
+                        </td>
+                    </tr>
+                    <tr class="buscadorContenido">
+                        <td class="label"><bean:message key="busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda.param.buscador.contenido"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.buscadorContenido}"/>
+                           <input type="text" name="buscadorContenido" value="${value}" onmouseover="hints.show('busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda.param.buscador.contenido.title')" onmouseout="hints.hide()"  id="analizaTipoBusquedaBuscadorContenido"/>
+                        </td>
+                    </tr>
+                    <tr class="tipoBusqueda">
+                        <td class="label"><bean:message key="busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda.param.tipo.busqueda"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipoBusqueda}"/>
+                           <input type="text" name="tipoBusqueda" value="${value}" onmouseover="hints.show('busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda.param.tipo.busqueda.title')" onmouseout="hints.hide()"  id="analizaTipoBusquedaTipoBusqueda"/>
+                        </td>
+                    </tr>
+                    <tr class="numeroResultados">
+                        <td class="label"><bean:message key="busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda.param.numero.resultados"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.numeroResultados}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.numeroResultadosBackingList}">
+                                  <html:select name="form" property="numeroResultados" onmouseover="hints.show('busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda.param.numero.resultados.title')" onmouseout="hints.hide()"  styleId="analizaTipoBusquedaNumeroResultados">
+                                      <html:optionsCollection name="form" property="numeroResultadosBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="numeroResultados" onmouseover="hints.show('busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda.param.numero.resultados.title')" onmouseout="hints.hide()"  styleId="analizaTipoBusquedaNumeroResultados"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="idiomaBuscador">
+                        <td class="label"><bean:message key="busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda.param.idioma.buscador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idiomaBuscador}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.idiomaBuscadorBackingList}">
+                                  <html:select name="form" property="idiomaBuscador" onmouseover="hints.show('busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda.param.idioma.buscador.title')" onmouseout="hints.hide()"  styleId="analizaTipoBusquedaIdiomaBuscador">
+                                      <html:optionsCollection name="form" property="idiomaBuscadorBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="idiomaBuscador" onmouseover="hints.show('busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda.param.idioma.buscador.title')" onmouseout="hints.hide()"  styleId="analizaTipoBusquedaIdiomaBuscador"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="resultadosDesde">
+                        <td class="label"><bean:message key="busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda.param.resultados.desde"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.resultadosDesde}"/>
+                           <input type="text" name="resultadosDesde" value="${value}" onmouseover="hints.show('busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda.param.resultados.desde.title')" onmouseout="hints.hide()"  id="analizaTipoBusquedaResultadosDesde"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('analizaTipoBusqueda')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<lom xmlns="http://ltsc.ieee.org/xsd/LOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM C:\LOM-ES_XSD\lomCustom.xsd">
+	<general>
+		<identifier>
+			<catalog/>
+			<entry/>
+		</identifier>
+		<title>
+			<string/>
+		</title>
+		<language>en</language>
+		<description>
+			<string/>
+		</description>
+		<keyword>
+			<string/>
+		</keyword>
+		<coverage>
+			<string/>
+		</coverage>
+		<structure>
+			<source>LOM-ES V1.0</source>
+			<value>atomic</value>
+		</structure>
+		<aggregationLevel>
+			<!--source/-->
+			<value>2</value>
+		</aggregationLevel>
+	</general>
+	<lifeCycle>
+		<version>
+			<string/>
+		</version>
+		<status>
+			<source>LOM-ES V1.0</source>
+			<value>final</value>
+		</status>
+		<contribute>
+			<role>
+				<source>LOM-ES V1.0</source>
+				<value>editor</value>
+			</role>
+			<entity/>
+			<date>
+				<dateTime>2007-05-04</dateTime>
+				<description>
+					<string/>
+				</description>
+			</date>
+		</contribute>
+	</lifeCycle>
+	<metaMetadata>
+		<identifier>
+			<catalog/>
+		</identifier>
+		<contribute>
+			<role>
+				<source>LOM-ES V1.0</source>
+				<value>validator</value>
+			</role>
+			<entity/>
+			<date>
+				<dateTime>2007-08-13</dateTime>
+				<description>
+					<string/>
+				</description>
+			</date>
+		</contribute>
+		<metadataSchema/>
+		<language>eu</language>
+	</metaMetadata>
+	<technical>
+		<format/>
+		<size>980908</size>
+		<location/>
+		<requirement>
+			<orComposite>
+				<type>
+					<source>LOM-ES V1.0</source>
+					<value>browser</value>
+				</type>
+				<name>
+					<source>LOM-ES V1.0</source>
+					<value>ms-windows</value>
+				</name>
+				<minimumVersion/>
+				<maximumVersion/>
+			</orComposite>
+		</requirement>
+		<installationRemarks>
+			<string/>
+		</installationRemarks>
+		<otherPlatformRequirements>
+			<string/>
+		</otherPlatformRequirements>
+		<duration/>
+	</technical>
+	<educational>
+		<interactivityType>
+			<source>LOM-ES V1.0</source>
+			<value>mixed</value>
+		</interactivityType>
+		<learningResourceType>
+			<value>narrative text</value>
+			<source>LOM-ES V1.0</source>
+		</learningResourceType>
+		<interactivityLevel>
+			<source>LOM-ES V1.0</source>
+			<value>medium</value>
+		</interactivityLevel>
+		<semanticDensity>
+			<source>LOM-ES V1.0</source>
+			<value>medium</value>
+		</semanticDensity>
+		<intendedEndUserRole>
+			<source>LOM-ES V1.0</source>
+			<value>individual</value>
+		</intendedEndUserRole>
+		<context>
+			<source>LOM-ES V1.0</source>
+			<value>teacher</value>
+		</context>
+		<typicalAgeRange>
+			<string/>
+		</typicalAgeRange>
+		<difficulty>
+			<source>LOM-ES V1.0</source>
+			<value>medium</value>
+		</difficulty>
+		<typicalLearningTime>
+			<duration>P7DT</duration>
+			<description>
+				<string/>
+			</description>
+		</typicalLearningTime>
+		<description>
+			<string/>
+		</description>
+		<language>ca</language>
+		<cognitiveProcess>
+			<source>LOM-ES V1.0</source>
+			<value>implement</value>
+		</cognitiveProcess>
+	</educational>
+	<rights>
+		<cost>
+			<source>LOM-ES V1.0</source>
+			<value>no</value>
+		</cost>
+		<copyrightAndOtherRestrictions>
+			<value>propietary license</value>
+			<source>LOM-ES V1.0</source>
+		</copyrightAndOtherRestrictions>
+		<description>
+			<string/>
+		</description>
+		<access>
+			<accessType>
+				<value>universal</value>
+				<source>LOM-ES V1.0</source>
+			</accessType>
+			<description>
+				<string/>
+			</description>
+		</access>
+	</rights>
+	<relation>
+		<kind>
+			<source>LOM-ES V1.0</source>
+			<value>isreferencedby</value>
+		</kind>
+		<resource>
+          <identifier>
+            <catalog>Catálogo unificado mec-red.es-ccaa de identificación de ODE</catalog>
+            <entry>es_20070518_3_0040100</entry>
+          </identifier>
+          <description>
+            <string>Secuencia didáctica sobre el origen y el desarrollo del medio publicitario.</string>
+          </description>
+        </resource>
+	</relation>
+	<annotation>
+		<entity/>
+		<date>
+			<dateTime>2007-06-09</dateTime>
+			<description>
+				<string/>
+			</description>
+		</date>
+		<description>
+			<string/>
+		</description>
+	</annotation>
+	<classification>
+		<purpose>
+			<value>competency</value>
+			<source>LOM-ES V1.0</source>
+		</purpose>
+		<description>
+			<string/>
+		</description>
+		<keyword>
+			<string/>
+		</keyword>
+	</classification>
+</lom>

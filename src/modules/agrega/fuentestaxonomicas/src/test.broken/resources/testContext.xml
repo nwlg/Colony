@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+
+
+    <!-- ========================= DATASOURCE DEFINITION ========================= -->
+
+    <!-- Local DataSource that works in any environment -->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName"><value>org.hsqldb.jdbcDriver</value></property>
+        <property name="username"><value>sa</value></property>
+        <property name="password"><value></value></property>
+        <property name="url"><value>jdbc:hsqldb:hsql://127.0.0.1:1701</value></property>
+    </bean>
+
+    <!-- ====================== End of DATASOURCE DEFINITION ====================== -->
+
+    <!-- ===================== TRANSACTION MANAGER DEFINITION ========================= -->
+
+    <!-- (local) Transaction Manager -->
+    <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <property name="sessionFactory"><ref bean="sessionFactory"/></property>
+    </bean>
+
+    <!-- ===================== TRANSACTION MANAGER DEFINITION ========================= -->
+
+
+    <!-- ========================= GENERAL DEFINITIONS ========================= -->
+    <!-- Message source for this context, loaded from localized "messages_xx" files -->
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename"><value>messages</value></property>
+    </bean>
+
+	<bean id="beanMapper" class="net.sf.dozer.util.mapping.DozerBeanMapper" singleton="true">
+		<property name="mappingFiles">
+			<list>
+				<value>defaultDozerMappings_fuentestaxonomicas.xml</value>
+				<value>customDozerMappings_fuentestaxonomicas.xml</value>
+				<!-- dozer mappings merge-point -->
+			</list>
+		</property>
+	</bean>
+    <!-- applicationContext merge-point -->
+
+    <!-- ========================= Start of SERVICE DEFINITIONS ========================= -->
+
+    <!-- Service Transactional Interceptor -->
+    <bean id="serviceTransactionInterceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor">
+        <property name="transactionManager"><ref bean="transactionManager"/></property>
+        <property name="transactionAttributeSource">
+            <value>
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvVocabulariosControladosService.obtenerCombos=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvVocabulariosControladosService.crearTraduccionAIngles=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvVocabulariosControladosService.crearTraduccionAIdioma=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvVocabulariosControladosService.obtenerIdTermino=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvTaxonomiaService.obtenerNodos=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvTaxonomiaService.obtenerTaxonomia=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvTaxonomiaService.obtenerTaxonPath=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvTaxonomiaService.obtenerTaxonomiaCompletaPreorden=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvTaxonomiaService.recargar=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvTaxonomiaService.obtenerVariosTaxonPaths=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvTaxonomiaService.obtenerVocabName=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvTaxonomiaService.obtenerVocabNames=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvTesaurosServices.obtenerTerminosRelacionadosPorId=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvTesaurosServices.obtenerJerarquia=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvTesaurosServices.obtenerPrimerNivelTesauro=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvTesaurosServices.obtenerTerminosRelacionadosPorTexto=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvTesaurosServices.obtenerTerminosRelacionAsociativa=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvTesaurosServices.obtenerTerminosRelacionJerarquica=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvTesaurosServices.recargar=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvTesaurosServices.obtenerVocabName=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvTesaurosServices.obtenerVocabNames=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvTesaurosServices.obtenerTerminos=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvTesaurosServices.chequearExistenciaIdioma=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvTesaurosServices.obtenerTextosDeIds=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvEstructurasEducativasService.chequearIdiomaArbolCurricular=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvEstructurasEducativasService.chequearIdiomaTesauro=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvEstructurasEducativasService.listarArbolCurricular=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvEstructurasEducativasService.listarTesauros=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvEstructurasEducativasService.eliminarArbolesCurriculares=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvEstructurasEducativasService.eliminarTesauros=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvEstructurasEducativasService.subirArbolesCurriculares=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvEstructurasEducativasService.subirTesauros=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvEstructurasEducativasService.eliminarBackups=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvEstructurasEducativasService.listarBackups=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvEstructurasEducativasService.subirBackups=PROPAGATION_REQUIRED
+                es.pode.fuentestaxonomicas.negocio.servicio.SrvEstructurasEducativasService.exportarVdex=PROPAGATION_REQUIRED
+            </value>
+        </property>
+    </bean>
+
+    <!-- SrvVocabulariosControladosService Service Proxy with inner SrvVocabulariosControladosService Service Implementation -->
+    <bean id="srvVocabulariosControladosService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.fuentestaxonomicas.negocio.servicio.SrvVocabulariosControladosServiceImpl">
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.fuentestaxonomicas.negocio.servicio.SrvVocabulariosControladosService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceTransactionInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvTaxonomiaService Service Proxy with inner SrvTaxonomiaService Service Implementation -->
+    <bean id="srvTaxonomiaService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.fuentestaxonomicas.negocio.servicio.SrvTaxonomiaServiceImpl">
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.fuentestaxonomicas.negocio.servicio.SrvTaxonomiaService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceTransactionInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvTesaurosServices Service Proxy with inner SrvTesaurosServices Service Implementation -->
+    <bean id="srvTesaurosServices" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.fuentestaxonomicas.negocio.servicio.SrvTesaurosServicesImpl">
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.fuentestaxonomicas.negocio.servicio.SrvTesaurosServices</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceTransactionInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvEstructurasEducativasService Service Proxy with inner SrvEstructurasEducativasService Service Implementation -->
+    <bean id="srvEstructurasEducativasService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.fuentestaxonomicas.negocio.servicio.SrvEstructurasEducativasServiceImpl">
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+		                <property name="srvTesaurosServices"><ref bean="srvTesaurosServices"/></property>
+    		                <property name="srvTaxonomiaService"><ref bean="srvTaxonomiaService"/></property>
+    	            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.fuentestaxonomicas.negocio.servicio.SrvEstructurasEducativasService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceTransactionInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- ========================= End of SERVICE DEFINITIONS ========================= -->
+
+    <!-- ========================= CONSTANTS PROPERTIES BEAN ========================= -->    
+    <bean id="propiedadesConstantes" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	      <property name="locations">
+		  <list>
+			  <value>classpath:spring.properties</value>
+		  </list>
+		  </property>
+    </bean>
+    <!-- ========================= END CONSTANTS PROPERTIES BEAN ========================= -->    
+</beans>

@@ -1,0 +1,33 @@
+
+    <tiles:put name="javascript" type="string">
+        <script type="text/javascript" language="Javascript1.1" src="<html:rewrite action="/formValidation"/>"></script>
+        <html:javascript formName="busquedaSQICUMostrarResultadosAnalizaTipoBusquedaForm" method="validateMostrarResultadosAnalizaTipoBusquedaForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda.param.tipo.layout.buscador.title':'<formatting:escape language="javascript"><bean:message key="busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda.param.tipo.layout.buscador.title"/></formatting:escape>',
+                'busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda.param.buscador.contenido.title':'<formatting:escape language="javascript"><bean:message key="busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda.param.buscador.contenido.title"/></formatting:escape>',
+                'busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda.param.tipo.busqueda.title':'<formatting:escape language="javascript"><bean:message key="busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda.param.tipo.busqueda.title"/></formatting:escape>',
+                'busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda.param.numero.resultados.title':'<formatting:escape language="javascript"><bean:message key="busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda.param.numero.resultados.title"/></formatting:escape>',
+                'busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda.param.idioma.buscador.title"/></formatting:escape>',
+                'busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda.param.resultados.desde.title':'<formatting:escape language="javascript"><bean:message key="busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda.param.resultados.desde.title"/></formatting:escape>',
+                'analizaTipoBusqueda':'<formatting:escape language="javascript"><bean:message key="busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda.title"/></formatting:escape>',
+                'analizaTipoBusqueda_no':'<formatting:escape language="javascript"><bean:message key="busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda.title.notallowed"/></formatting:escape>',
+                'analizaTipoBusqueda_reset':'<formatting:escape language="javascript"><bean:message key="busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda.title.reset"/></formatting:escape>',
+                'analizaTipoBusqueda_noreset':'<formatting:escape language="javascript"><bean:message key="busqueda.sqicu.mostrar.resultados.analiza.tipo.busqueda.title.reset.not.allowed"/></formatting:escape>',
+                'paginarSQI':'<formatting:escape language="javascript"><bean:message key="busqueda.sqicu.mostrar.resultados.paginar.sqi.title"/></formatting:escape>',
+                'paginarSQI_no':'<formatting:escape language="javascript"><bean:message key="busqueda.sqicu.mostrar.resultados.paginar.sqi.title.notallowed"/></formatting:escape>',
+                'paginarSQI_reset':'<formatting:escape language="javascript"><bean:message key="busqueda.sqicu.mostrar.resultados.paginar.sqi.title.reset"/></formatting:escape>',
+                'paginarSQI_noreset':'<formatting:escape language="javascript"><bean:message key="busqueda.sqicu.mostrar.resultados.paginar.sqi.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+</script>
+    </tiles:put>

@@ -1,0 +1,13 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="recuerdo.usuario.confirmacion.envio.correo.aceptar"/></h3>
+    <div class="trigger">
+        <form id="recuerdoUsuarioConfirmacionEnvioCorreoAceptarForm" action='<html:rewrite action="/RecuerdoUsuario/ConfirmacionEnvioCorreoAceptar"/>' method="post">
+               <html:submit onmouseover="hints.show('Aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="recuerdo.usuario.confirmacion.envio.correo.aceptar"/>
+               </html:submit>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

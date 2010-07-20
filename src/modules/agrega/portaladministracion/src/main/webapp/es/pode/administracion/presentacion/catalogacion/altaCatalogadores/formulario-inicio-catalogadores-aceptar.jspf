@@ -1,0 +1,40 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="alta.catalogadores.formulario.inicio.catalogadores.aceptar"/></h3>
+    <div class="trigger">
+        <html:form styleId="altaCatalogadoresFormularioInicioCatalogadoresAceptarForm" action="/AltaCatalogadores/FormularioInicioCatalogadoresAceptar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="descripcion">
+                        <td class="label"><bean:message key="alta.catalogadores.formulario.inicio.catalogadores.aceptar.param.descripcion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.descripcion}"/>
+                           <input type="text" name="descripcion" value="${value}" onmouseover="hints.show('alta.catalogadores.formulario.inicio.catalogadores.aceptar.param.descripcion.title')" onmouseout="hints.hide()"  id="aceptarDescripcion"/>
+                        </td>
+                    </tr>
+                    <tr class="nombre">
+                        <td class="label"><bean:message key="alta.catalogadores.formulario.inicio.catalogadores.aceptar.param.nombre"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.nombre}"/>
+                           <input type="text" name="nombre" value="${value}" onmouseover="hints.show('alta.catalogadores.formulario.inicio.catalogadores.aceptar.param.nombre.title')" onmouseout="hints.hide()"  id="aceptarNombre"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="alta.catalogadores.formulario.inicio.catalogadores.aceptar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

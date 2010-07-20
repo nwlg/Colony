@@ -1,0 +1,15 @@
+#aceptarEliminacion.action {}
+#aceptarEliminacion.action #form_submit {}
+
+#aceptarEliminacion.action .noticiasDeleted {}
+#aceptarEliminacion.action .noticiasDeleted .label {}
+#aceptarEliminacion.action .noticiasDeleted .field {}
+#aceptarEliminacion.action .listaIds {}
+#aceptarEliminacion.action .listaIds .label {}
+#aceptarEliminacion.action .listaIds .field {}
+
+#cancelar.action {}
+#cancelar.action #form_submit {}
+
+
+

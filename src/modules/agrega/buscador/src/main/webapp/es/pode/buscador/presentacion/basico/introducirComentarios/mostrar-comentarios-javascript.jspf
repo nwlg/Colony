@@ -1,0 +1,46 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'introducir.comentarios.cu.mostrar.comentarios.insertar.comentario.param.titulo.title':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.mostrar.comentarios.insertar.comentario.param.titulo.title"/></formatting:escape>',
+                'introducir.comentarios.cu.mostrar.comentarios.insertar.comentario.param.valoracion.title':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.mostrar.comentarios.insertar.comentario.param.valoracion.title"/></formatting:escape>',
+                'introducir.comentarios.cu.mostrar.comentarios.insertar.comentario.param.comentario.title':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.mostrar.comentarios.insertar.comentario.param.comentario.title"/></formatting:escape>',
+                'introducir.comentarios.cu.mostrar.comentarios.insertar.comentario.param.id.ode.title':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.mostrar.comentarios.insertar.comentario.param.id.ode.title"/></formatting:escape>',
+                'introducir.comentarios.cu.mostrar.comentarios.insertar.comentario.param.con.inaprop.title':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.mostrar.comentarios.insertar.comentario.param.con.inaprop.title"/></formatting:escape>',
+                'introducir.comentarios.cu.mostrar.comentarios.insertar.comentario.param.titulo.ode.title':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.mostrar.comentarios.insertar.comentario.param.titulo.ode.title"/></formatting:escape>',
+                'introducir.comentarios.cu.mostrar.comentarios.insertar.comentario.param.imagen.title':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.mostrar.comentarios.insertar.comentario.param.imagen.title"/></formatting:escape>',
+                'introducir.comentarios.cu.mostrar.comentarios.insertar.comentario.param.idioma.ode.title':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.mostrar.comentarios.insertar.comentario.param.idioma.ode.title"/></formatting:escape>',
+                'introducir.comentarios.cu.mostrar.comentarios.insertar.comentario.param.tipo.layout.buscador.title':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.mostrar.comentarios.insertar.comentario.param.tipo.layout.buscador.title"/></formatting:escape>',
+                'introducir.comentarios.cu.mostrar.comentarios.insertar.comentario.param.mostrar.vuelta.title':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.mostrar.comentarios.insertar.comentario.param.mostrar.vuelta.title"/></formatting:escape>',
+                'introducir.comentarios.cu.mostrar.comentarios.insertar.comentario.param.busqueda.simple.avanzada.title':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.mostrar.comentarios.insertar.comentario.param.busqueda.simple.avanzada.title"/></formatting:escape>',
+                'introducir.comentarios.cu.mostrar.comentarios.insertar.comentario.param.url.ode.title':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.mostrar.comentarios.insertar.comentario.param.url.ode.title"/></formatting:escape>',
+                'introducir.comentarios.cu.mostrar.comentarios.eliminar.param.id.title':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.mostrar.comentarios.eliminar.param.id.title"/></formatting:escape>',
+                'introducir.comentarios.cu.mostrar.comentarios.cancelar.param.id.ode.title':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.mostrar.comentarios.cancelar.param.id.ode.title"/></formatting:escape>',
+                'introducir.comentarios.cu.mostrar.comentarios.cancelar.param.idioma.ode.title':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.mostrar.comentarios.cancelar.param.idioma.ode.title"/></formatting:escape>',
+                'introducir.comentarios.cu.mostrar.comentarios.cancelar.param.titulo.ode.title':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.mostrar.comentarios.cancelar.param.titulo.ode.title"/></formatting:escape>',
+                'insertarComentario':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.mostrar.comentarios.insertar.comentario.title"/></formatting:escape>',
+                'insertarComentario_no':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.mostrar.comentarios.insertar.comentario.title.notallowed"/></formatting:escape>',
+                'insertarComentario_reset':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.mostrar.comentarios.insertar.comentario.title.reset"/></formatting:escape>',
+                'insertarComentario_noreset':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.mostrar.comentarios.insertar.comentario.title.reset.not.allowed"/></formatting:escape>',
+                'Eliminar':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.mostrar.comentarios.eliminar.title"/></formatting:escape>',
+                'Eliminar_no':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.mostrar.comentarios.eliminar.title.notallowed"/></formatting:escape>',
+                'Eliminar_reset':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.mostrar.comentarios.eliminar.title.reset"/></formatting:escape>',
+                'Eliminar_noreset':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.mostrar.comentarios.eliminar.title.reset.not.allowed"/></formatting:escape>',
+                'cancelar':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.mostrar.comentarios.cancelar.title"/></formatting:escape>',
+                'cancelar_no':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.mostrar.comentarios.cancelar.title.notallowed"/></formatting:escape>',
+                'cancelar_reset':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.mostrar.comentarios.cancelar.title.reset"/></formatting:escape>',
+                'cancelar_noreset':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.mostrar.comentarios.cancelar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+</script>
+    </tiles:put>

@@ -1,0 +1,1886 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+    "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+    <!-- display-name merge point -->
+
+    <!-- description merge point -->
+
+    <data-sources>
+        <!-- data-sources merge point -->
+    </data-sources>
+
+    <form-beans>
+        <!-- form-beans merge-point -->
+        <form-bean
+            name="objetosPropuestosCUMostrarODESPropuestosVerHistorialForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPropuestos.MostrarODESPropuestosVerHistorialFormImpl" />
+        <form-bean
+            name="objetosPropuestosCUObjetosPropuestosCUForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPropuestos.ObjetosPropuestosCUFormImpl" />
+        <form-bean
+            name="objetosPersonalesCUMostrarODESPersonalesImportarForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.MostrarODESPersonalesImportarFormImpl" />
+        <form-bean
+            name="objetosPersonalesCUMostrarODESPersonalesCompartirForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.MostrarODESPersonalesCompartirFormImpl" />
+        <form-bean
+            name="objetosPersonalesCUMostrarODESPersonalesVerHistorialForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.MostrarODESPersonalesVerHistorialFormImpl" />
+        <form-bean
+            name="objetosPersonalesCUMostrarODESPersonalesExportarForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.MostrarODESPersonalesExportarFormImpl" />
+        <form-bean
+            name="objetosPersonalesCUMostrarODESPersonalesProponerForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.MostrarODESPersonalesProponerFormImpl" />
+        <form-bean
+            name="objetosPersonalesCUObjetosPersonalesCUForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.ObjetosPersonalesCUFormImpl" />
+        <form-bean
+            name="objetosPersonalesCUMostrarODESPersonalesEliminarForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.MostrarODESPersonalesEliminarFormImpl" />
+        <form-bean
+            name="verHistorialCUVerHistorialCUForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.verHistorial.VerHistorialCUFormImpl" />
+        <form-bean
+            name="importarCUSeleccionarRecursoImportadoAceptarForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.importar.SeleccionarRecursoImportadoAceptarFormImpl" />
+        <form-bean
+            name="importarCUImportarCUForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.importar.ImportarCUFormImpl" />
+        <form-bean
+            name="exportarCUSeleccionarFormatoExportacionAceptarForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.exportar.SeleccionarFormatoExportacionAceptarFormImpl" />
+        <form-bean
+            name="exportarCUExportarCUForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.exportar.ExportarCUFormImpl" />
+        <form-bean
+            name="proponerCatalogacionCUProponerCatalogacionCUForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.proponerCatalogacion.ProponerCatalogacionCUFormImpl" />
+        <form-bean
+            name="proponerCatalogacionCUProponerCatalogacionAceptarForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.proponerCatalogacion.ProponerCatalogacionAceptarFormImpl" />
+        <form-bean
+            name="eliminarPersonalesCUConfirmacionAceptarForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.eliminar.ConfirmacionAceptarFormImpl" />
+        <form-bean
+            name="eliminarPersonalesCUEliminarPersonalesCUForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.eliminar.EliminarPersonalesCUFormImpl" />
+        <form-bean
+            name="importarURLCURellenarDatosSubmitForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.importarURL.RellenarDatosSubmitFormImpl" />
+        <form-bean
+            name="importarURLCUImportarURLCUForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.importarURL.ImportarURLCUFormImpl" />
+        <form-bean
+            name="objetosPublicadosCUMostrarODESPublicadosPropuestosForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPublicados.MostrarODESPublicadosPropuestosFormImpl" />
+        <form-bean
+            name="objetosPublicadosCUMostrarODESPublicadosVerHistorialForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPublicados.MostrarODESPublicadosVerHistorialFormImpl" />
+        <form-bean
+            name="objetosPublicadosCUObjetosPublicadosCUForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPublicados.ObjetosPublicadosCUFormImpl" />
+        <form-bean
+            name="objetosDespublicadosCUObjetosDespublicadosCUForm"
+            type="es.pode.gestorFlujo.presentacion.objetosDespublicados.ObjetosDespublicadosCUFormImpl" />
+        <form-bean
+            name="objetosDespublicadosCUMostrarODESDespublicadosVerHistorialForm"
+            type="es.pode.gestorFlujo.presentacion.objetosDespublicados.MostrarODESDespublicadosVerHistorialFormImpl" />
+        <form-bean
+            name="objetosDespublicadosCUMostrarODESDespublicadosPublicarForm"
+            type="es.pode.gestorFlujo.presentacion.objetosDespublicados.MostrarODESDespublicadosPublicarFormImpl" />
+        <form-bean
+            name="objetosDespublicadosCUMostrarODESDespublicadosPendientesForm"
+            type="es.pode.gestorFlujo.presentacion.objetosDespublicados.MostrarODESDespublicadosPendientesFormImpl" />
+        <form-bean
+            name="objetosDespublicadosCUMostrarODESDespublicadosEliminarForm"
+            type="es.pode.gestorFlujo.presentacion.objetosDespublicados.MostrarODESDespublicadosEliminarFormImpl" />
+        <form-bean
+            name="publicarCUPublicarODECancelarForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.Publicar.PublicarODECancelarFormImpl" />
+        <form-bean
+            name="publicarCUAgregarLicenciaAceptarForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.Publicar.AgregarLicenciaAceptarFormImpl" />
+        <form-bean
+            name="publicarCUPublicarCUForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.Publicar.PublicarCUFormImpl" />
+        <form-bean
+            name="publicarCUAgregarLicenciaCancelarForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.Publicar.AgregarLicenciaCancelarFormImpl" />
+        <form-bean
+            name="publicarCUPublicarODEModificarLicenciaForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.Publicar.PublicarODEModificarLicenciaFormImpl" />
+        <form-bean
+            name="publicarCUPublicarODEAceptarForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.Publicar.PublicarODEAceptarFormImpl" />
+        <form-bean
+            name="rechazarCURechazarCUForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.Rechazar.RechazarCUFormImpl" />
+        <form-bean
+            name="rechazarCURechazarCancelarForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.Rechazar.RechazarCancelarFormImpl" />
+        <form-bean
+            name="rechazarCURechazarAceptarForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.Rechazar.RechazarAceptarFormImpl" />
+        <form-bean
+            name="objetosPendientesCUObjetosPendientesCUForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.ObjetosPendientesCUFormImpl" />
+        <form-bean
+            name="objetosPendientesCUMostrarODESPendientesVerHistorialForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.MostrarODESPendientesVerHistorialFormImpl" />
+        <form-bean
+            name="objetosPendientesCUMostrarODESPendientesRechazarODEForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.MostrarODESPendientesRechazarODEFormImpl" />
+        <form-bean
+            name="objetosPendientesCUMostrarODESPendientesDespublicadosForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.MostrarODESPendientesDespublicadosFormImpl" />
+        <form-bean
+            name="objetosPendientesCUMostrarODESPendientesPublicarODEForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.MostrarODESPendientesPublicarODEFormImpl" />
+        <form-bean
+            name="eliminarCUEliminarCUForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.Eliminar.EliminarCUFormImpl" />
+        <form-bean
+            name="eliminarCUConfirmacionAceptarForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.Eliminar.ConfirmacionAceptarFormImpl" />
+        <form-bean
+            name="objetosPendientesCatalogacionCUMostrarODESPendientesRechazarForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientesCatalogacion.MostrarODESPendientesRechazarFormImpl" />
+        <form-bean
+            name="objetosPendientesCatalogacionCUObjetosPendientesCatalogacionCUForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientesCatalogacion.ObjetosPendientesCatalogacionCUFormImpl" />
+        <form-bean
+            name="objetosPendientesCatalogacionCUMostrarODESPendientesProponerPublicacionODEForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientesCatalogacion.MostrarODESPendientesProponerPublicacionODEFormImpl" />
+        <form-bean
+            name="objetosPendientesCatalogacionCUMostrarODESPendientesVerHistorialForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientesCatalogacion.MostrarODESPendientesVerHistorialFormImpl" />
+        <form-bean
+            name="proponerCUProponerCUForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientesCatalogacion.proponer.ProponerCUFormImpl" />
+        <form-bean
+            name="proponerCUProponerPrincipalAceptarForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientesCatalogacion.proponer.ProponerPrincipalAceptarFormImpl" />
+        <form-bean
+            name="rechazarPendCatalogacionCURechazarAceptarForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientesCatalogacion.rechazar.RechazarAceptarFormImpl" />
+        <form-bean
+            name="rechazarPendCatalogacionCURechazarPendCatalogacionCUForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientesCatalogacion.rechazar.RechazarPendCatalogacionCUFormImpl" />
+        <form-bean
+            name="rechazarPendCatalogacionCURechazarCancelarForm"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientesCatalogacion.rechazar.RechazarCancelarFormImpl" />
+        <form-bean
+            name="importarCompartidosCUImportarCompartidosCUForm"
+            type="es.pode.gestorFlujo.presentacion.objetosCompartidos.importarCompartidos.ImportarCompartidosCUFormImpl" />
+        <form-bean
+            name="objetosCompartidosCUMostrarODESCompartidosExportarCompartidosForm"
+            type="es.pode.gestorFlujo.presentacion.objetosCompartidos.MostrarODESCompartidosExportarCompartidosFormImpl" />
+        <form-bean
+            name="objetosCompartidosCUMostrarODESCompartidosImportarCompartidoForm"
+            type="es.pode.gestorFlujo.presentacion.objetosCompartidos.MostrarODESCompartidosImportarCompartidoFormImpl" />
+        <form-bean
+            name="objetosCompartidosCUObjetosCompartidosCUForm"
+            type="es.pode.gestorFlujo.presentacion.objetosCompartidos.ObjetosCompartidosCUFormImpl" />
+    </form-beans>
+
+    <global-exceptions>
+        <!-- global-exceptions merge point -->
+        <exception
+            handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+            type="java.lang.Throwable"
+            key="error.exception.message"
+            path="/error-page.jsp?code=exception&amp;exception=true"
+            scope="request" />
+    </global-exceptions>
+
+    <global-forwards>
+        
+        <forward
+            name="objetos.propuestos.cu"
+            path="/ObjetosPropuestosCU/ObjetosPropuestosCU.do"
+            redirect="false" />
+        <forward
+            name="objetos.personales.cu"
+            path="/ObjetosPersonalesCU/ObjetosPersonalesCU.do"
+            redirect="false" />
+        <forward
+            name="ver.historial.cu"
+            path="/VerHistorialCU/VerHistorialCU.do"
+            redirect="false" />
+        <forward
+            name="importar.cu"
+            path="/ImportarCU/ImportarCU.do"
+            redirect="false" />
+        <forward
+            name="exportar.cu"
+            path="/ExportarCU/ExportarCU.do"
+            redirect="false" />
+        <forward
+            name="proponer.catalogacion.cu"
+            path="/ProponerCatalogacionCU/ProponerCatalogacionCU.do"
+            redirect="false" />
+        <forward
+            name="eliminar.personales.cu"
+            path="/EliminarPersonalesCU/EliminarPersonalesCU.do"
+            redirect="false" />
+        <forward
+            name="importar.urlcu"
+            path="/ImportarURLCU/ImportarURLCU.do"
+            redirect="false" />
+        <forward
+            name="objetos.publicados.cu"
+            path="/ObjetosPublicadosCU/ObjetosPublicadosCU.do"
+            redirect="false" />
+        <forward
+            name="objetos.despublicados.cu"
+            path="/ObjetosDespublicadosCU/ObjetosDespublicadosCU.do"
+            redirect="false" />
+        <forward
+            name="publicar.cu"
+            path="/PublicarCU/PublicarCU.do"
+            redirect="false" />
+        <forward
+            name="rechazar.cu"
+            path="/RechazarCU/RechazarCU.do"
+            redirect="false" />
+        <forward
+            name="objetos.pendientes.cu"
+            path="/ObjetosPendientesCU/ObjetosPendientesCU.do"
+            redirect="false" />
+        <forward
+            name="eliminar.cu"
+            path="/EliminarCU/EliminarCU.do"
+            redirect="false" />
+        <forward
+            name="objetos.pendientes.catalogacion.cu"
+            path="/ObjetosPendientesCatalogacionCU/ObjetosPendientesCatalogacionCU.do"
+            redirect="false" />
+        <forward
+            name="proponer.cu"
+            path="/ProponerCU/ProponerCU.do"
+            redirect="false" />
+        <forward
+            name="rechazar.pend.catalogacion.cu"
+            path="/RechazarPendCatalogacionCU/RechazarPendCatalogacionCU.do"
+            redirect="false" />
+        <forward
+            name="importar.compartidos.cu"
+            path="/ImportarCompartidosCU/ImportarCompartidosCU.do"
+            redirect="false" />
+        <forward
+            name="objetos.compartidos.cu"
+            path="/ObjetosCompartidosCU/ObjetosCompartidosCU.do"
+            redirect="false" />
+    </global-forwards>
+
+    <action-mappings>
+        <!-- action-mappings merge-point -->
+        <action
+            path="/ObjetosPropuestosCU/MostrarODESPropuestosVerHistorial"
+            type="es.pode.gestorFlujo.presentacion.objetosPropuestos.MostrarODESPropuestosVerHistorial"
+            name="objetosPropuestosCUMostrarODESPropuestosVerHistorialForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPropuestos/mostrar-odespropuestos.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="objetos.propuestos.cu.mostrar.odespropuestos.ver.historial.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPropuestos/mostrar-odespropuestos.jsp"
+                scope="request" />
+            <forward
+                name="ver.historial"
+                path="/VerHistorialCU/VerHistorialCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ObjetosPropuestosCU/MostrarODESPropuestosPublicados"
+            type="es.pode.gestorFlujo.presentacion.objetosPropuestos.MostrarODESPropuestosPublicados"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPropuestos/mostrar-odespropuestos.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="objetos.propuestos.cu.mostrar.odespropuestos.publicados.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPropuestos/mostrar-odespropuestos.jsp"
+                scope="request" />
+            <forward
+                name="publicados"
+                path="/ObjetosPublicadosCU/ObjetosPublicadosCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ObjetosPropuestosCU/MostrarODESPropuestosPersonales"
+            type="es.pode.gestorFlujo.presentacion.objetosPropuestos.MostrarODESPropuestosPersonales"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPropuestos/mostrar-odespropuestos.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="objetos.propuestos.cu.mostrar.odespropuestos.personales.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPropuestos/mostrar-odespropuestos.jsp"
+                scope="request" />
+            <forward
+                name="personales"
+                path="/ObjetosPersonalesCU/ObjetosPersonalesCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ObjetosPropuestosCU/ObjetosPropuestosCU"
+            type="es.pode.gestorFlujo.presentacion.objetosPropuestos.ObjetosPropuestosCU"
+            name="objetosPropuestosCUObjetosPropuestosCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="mostrar.odespropuestos"
+                path="/es/pode/gestorFlujo/presentacion/objetosPropuestos/mostrar-odespropuestos.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/gestorFlujo/presentacion/objetosPropuestos/ObjetosPropuestosCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPropuestos/objetos-Propuestos-CU_help.jsp"/>
+        <action
+            path="/MostrarODESPropuestosHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPropuestos/mostrar-odespropuestos_help.jsp"/>
+        <action
+            path="/ObjetosPersonalesCU/MostrarODESPersonalesImportar"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.MostrarODESPersonalesImportar"
+            name="objetosPersonalesCUMostrarODESPersonalesImportarForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPersonales/mostrar-odespersonales.jsp"
+            unknown="false"
+            validate="true">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="objetos.personales.cu.mostrar.odespersonales.importar.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/mostrar-odespersonales.jsp"
+                scope="request" />
+            <forward
+                name="importar"
+                path="/ImportarCU/ImportarCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ObjetosPersonalesCU/MostrarODESPersonalesCompartir"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.MostrarODESPersonalesCompartir"
+            name="objetosPersonalesCUMostrarODESPersonalesCompartirForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPersonales/mostrar-odespersonales.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="objetos.personales.cu.mostrar.odespersonales.compartir.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/mostrar-odespersonales.jsp"
+                scope="request" />
+            <forward
+                name="mostrar.odespersonales"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/mostrar-odespersonales.jsp"
+                redirect="true" />
+        </action>
+        <action
+            path="/ObjetosPersonalesCU/MostrarODESPersonalesVerHistorial"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.MostrarODESPersonalesVerHistorial"
+            name="objetosPersonalesCUMostrarODESPersonalesVerHistorialForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPersonales/mostrar-odespersonales.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="objetos.personales.cu.mostrar.odespersonales.ver.historial.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/mostrar-odespersonales.jsp"
+                scope="request" />
+            <forward
+                name="ver.historial"
+                path="/VerHistorialCU/VerHistorialCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ObjetosPersonalesCU/MostrarODESPersonalesExportar"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.MostrarODESPersonalesExportar"
+            name="objetosPersonalesCUMostrarODESPersonalesExportarForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPersonales/mostrar-odespersonales.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="objetos.personales.cu.mostrar.odespersonales.exportar.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/mostrar-odespersonales.jsp"
+                scope="request" />
+            <forward
+                name="exportar"
+                path="/ExportarCU/ExportarCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ObjetosPersonalesCU/MostrarODESPersonalesProponer"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.MostrarODESPersonalesProponer"
+            name="objetosPersonalesCUMostrarODESPersonalesProponerForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPersonales/mostrar-odespersonales.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="objetos.personales.cu.mostrar.odespersonales.proponer.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/mostrar-odespersonales.jsp"
+                scope="request" />
+            <forward
+                name="proponer"
+                path="/ProponerCatalogacionCU/ProponerCatalogacionCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ObjetosPersonalesCU/MostrarODESPersonalesPropuestos"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.MostrarODESPersonalesPropuestos"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPersonales/mostrar-odespersonales.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="objetos.personales.cu.mostrar.odespersonales.propuestos.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/mostrar-odespersonales.jsp"
+                scope="request" />
+            <forward
+                name="propuestos"
+                path="/ObjetosPropuestosCU/ObjetosPropuestosCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ObjetosPersonalesCU/MostrarODESPersonalesPublicados"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.MostrarODESPersonalesPublicados"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPersonales/mostrar-odespersonales.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="objetos.personales.cu.mostrar.odespersonales.publicados.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/mostrar-odespersonales.jsp"
+                scope="request" />
+            <forward
+                name="publicados"
+                path="/ObjetosPublicadosCU/ObjetosPublicadosCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ObjetosPersonalesCU/ObjetosPersonalesCU"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.ObjetosPersonalesCU"
+            name="objetosPersonalesCUObjetosPersonalesCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="mostrar.odespersonales"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/mostrar-odespersonales.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/ObjetosPersonalesCU/MostrarODESPersonalesEliminar"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.MostrarODESPersonalesEliminar"
+            name="objetosPersonalesCUMostrarODESPersonalesEliminarForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPersonales/mostrar-odespersonales.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="objetos.personales.cu.mostrar.odespersonales.eliminar.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/mostrar-odespersonales.jsp"
+                scope="request" />
+            <forward
+                name="eliminar.personales.cu"
+                path="/EliminarPersonalesCU/EliminarPersonalesCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/gestorFlujo/presentacion/objetosPersonales/ObjetosPersonalesCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPersonales/objetos-Personales-CU_help.jsp"/>
+        <action
+            path="/MostrarODESPersonalesHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPersonales/mostrar-odespersonales_help.jsp"/>
+        <action
+            path="/VerHistorialCU/VerHistorialCU"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.verHistorial.VerHistorialCU"
+            name="verHistorialCUVerHistorialCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="mostrar.historial"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/verHistorial/mostrar-historial.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/gestorFlujo/presentacion/objetosPersonales/verHistorial/VerHistorialCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPersonales/verHistorial/ver-Historial-CU_help.jsp"/>
+        <action
+            path="/MostrarHistorialHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPersonales/verHistorial/mostrar-historial_help.jsp"/>
+        <action
+            path="/ImportarCU/SeleccionarRecursoImportadoCancelar"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.importar.SeleccionarRecursoImportadoCancelar"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPersonales/importar/seleccionar-recurso-importado.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="importar.cu.seleccionar.recurso.importado.cancelar.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/importar/seleccionar-recurso-importado.jsp"
+                scope="request" />
+            <forward
+                name="cancelar"
+                path="/ObjetosPersonalesCU/ObjetosPersonalesCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ImportarCU/SeleccionarRecursoImportadoAceptar"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.importar.SeleccionarRecursoImportadoAceptar"
+            name="importarCUSeleccionarRecursoImportadoAceptarForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPersonales/importar/seleccionar-recurso-importado.jsp"
+            unknown="false"
+            validate="true">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="importar.cu.seleccionar.recurso.importado.aceptar.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/importar/seleccionar-recurso-importado.jsp"
+                scope="request" />
+            <forward
+                name="resultado.importacion"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/importar/resultado-importacion.jsp"
+                redirect="true" />
+        </action>
+        <action
+            path="/ImportarCU/ImportarCU"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.importar.ImportarCU"
+            name="importarCUImportarCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="carga.formulario"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/importar/seleccionar-recurso-importado.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/ImportarCU/ResultadoImportacionContinuar"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.importar.ResultadoImportacionContinuar"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPersonales/importar/resultado-importacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="importar.cu.resultado.importacion.continuar.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/importar/resultado-importacion.jsp"
+                scope="request" />
+            <forward
+                name="continuar"
+                path="/ObjetosPersonalesCU/ObjetosPersonalesCU.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/es/pode/gestorFlujo/presentacion/objetosPersonales/importar/ImportarCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPersonales/importar/importar-CU_help.jsp"/>
+        <action
+            path="/SeleccionarRecursoImportadoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPersonales/importar/seleccionar-recurso-importado_help.jsp"/>
+        <action
+            path="/ResultadoImportacionHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPersonales/importar/resultado-importacion_help.jsp"/>
+        <action
+            path="/ExportarCU/ResultadoImportacionAceptar"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.exportar.ResultadoImportacionAceptar"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPersonales/exportar/resultado-importacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="exportar.cu.resultado.importacion.aceptar.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/exportar/resultado-importacion.jsp"
+                scope="request" />
+            <forward
+                name="aceptar"
+                path="/ObjetosPersonalesCU/ObjetosPersonalesCU.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/ExportarCU/SeleccionarFormatoExportacionAceptar"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.exportar.SeleccionarFormatoExportacionAceptar"
+            name="exportarCUSeleccionarFormatoExportacionAceptarForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPersonales/exportar/seleccionar-formato-exportacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="exportar.cu.seleccionar.formato.exportacion.aceptar.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/exportar/seleccionar-formato-exportacion.jsp"
+                scope="request" />
+            <forward
+                name="resultado.importacion"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/exportar/resultado-importacion.jsp"
+                redirect="false" />
+            <forward
+                name="objetos.personales.cu"
+                path="/ObjetosPersonalesCU/ObjetosPersonalesCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ExportarCU/ExportarCU"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.exportar.ExportarCU"
+            name="exportarCUExportarCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="formatos.exportacion"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/exportar/seleccionar-formato-exportacion.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/ExportarCU/SeleccionarFormatoExportacionCancelar"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.exportar.SeleccionarFormatoExportacionCancelar"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPersonales/exportar/seleccionar-formato-exportacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="exportar.cu.seleccionar.formato.exportacion.cancelar.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/exportar/seleccionar-formato-exportacion.jsp"
+                scope="request" />
+            <forward
+                name="cancelar"
+                path="/ObjetosPersonalesCU/ObjetosPersonalesCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/gestorFlujo/presentacion/objetosPersonales/exportar/ExportarCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPersonales/exportar/exportar-CU_help.jsp"/>
+        <action
+            path="/SeleccionarFormatoExportacionHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPersonales/exportar/seleccionar-formato-exportacion_help.jsp"/>
+        <action
+            path="/ResultadoImportacionHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPersonales/exportar/resultado-importacion_help.jsp"/>
+        <action
+            path="/ProponerCatalogacionCU/ProponerCatalogacionCU"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.proponerCatalogacion.ProponerCatalogacionCU"
+            name="proponerCatalogacionCUProponerCatalogacionCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="proponer.catalogacion"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/proponerCatalogacion/proponer-catalogacion.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/ProponerCatalogacionCU/ProponerCatalogacionAceptar"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.proponerCatalogacion.ProponerCatalogacionAceptar"
+            name="proponerCatalogacionCUProponerCatalogacionAceptarForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPersonales/proponerCatalogacion/proponer-catalogacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="proponer.catalogacion.cu.proponer.catalogacion.aceptar.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/proponerCatalogacion/proponer-catalogacion.jsp"
+                scope="request" />
+            <forward
+                name="off"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/proponerCatalogacion/proponer-catalogacion.jsp"
+                redirect="true" />
+            <forward
+                name="on"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/proponerCatalogacion/resultado-validacion.jsp"
+                redirect="true" />
+        </action>
+        <action
+            path="/ProponerCatalogacionCU/ProponerCatalogacionCancelar"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.proponerCatalogacion.ProponerCatalogacionCancelar"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPersonales/proponerCatalogacion/proponer-catalogacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="proponer.catalogacion.cu.proponer.catalogacion.cancelar.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/proponerCatalogacion/proponer-catalogacion.jsp"
+                scope="request" />
+            <forward
+                name="cancelar"
+                path="/ObjetosPersonalesCU/ObjetosPersonalesCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ProponerCatalogacionCU/ResultadoValidacionAceptar"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.proponerCatalogacion.ResultadoValidacionAceptar"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPersonales/proponerCatalogacion/resultado-validacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="proponer.catalogacion.cu.resultado.validacion.aceptar.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/proponerCatalogacion/resultado-validacion.jsp"
+                scope="request" />
+            <forward
+                name="aceptar"
+                path="/ObjetosPersonalesCU/ObjetosPersonalesCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/gestorFlujo/presentacion/objetosPersonales/proponerCatalogacion/ProponerCatalogacionCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPersonales/proponerCatalogacion/proponer-Catalogacion-CU_help.jsp"/>
+        <action
+            path="/ProponerCatalogacionHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPersonales/proponerCatalogacion/proponer-catalogacion_help.jsp"/>
+        <action
+            path="/ResultadoValidacionHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPersonales/proponerCatalogacion/resultado-validacion_help.jsp"/>
+        <action
+            path="/EliminarPersonalesCU/ConfirmacionAceptar"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.eliminar.ConfirmacionAceptar"
+            name="eliminarPersonalesCUConfirmacionAceptarForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPersonales/eliminar/confirmacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="eliminar.personales.cu.confirmacion.aceptar.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/eliminar/confirmacion.jsp"
+                scope="request" />
+            <forward
+                name="resultado"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/eliminar/resultado.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/EliminarPersonalesCU/EliminarPersonalesCU"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.eliminar.EliminarPersonalesCU"
+            name="eliminarPersonalesCUEliminarPersonalesCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="confirmacion"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/eliminar/confirmacion.jsp"
+                redirect="false" />
+            <forward
+                name="objetos.personales.cu"
+                path="/ObjetosPersonalesCU/ObjetosPersonalesCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/EliminarPersonalesCU/ConfirmacionCancelar"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.eliminar.ConfirmacionCancelar"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPersonales/eliminar/confirmacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="eliminar.personales.cu.confirmacion.cancelar.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/eliminar/confirmacion.jsp"
+                scope="request" />
+            <forward
+                name="cancelar"
+                path="/ObjetosPersonalesCU/ObjetosPersonalesCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/EliminarPersonalesCU/ResultadoVolver"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.eliminar.ResultadoVolver"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPersonales/eliminar/resultado.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="eliminar.personales.cu.resultado.volver.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/eliminar/resultado.jsp"
+                scope="request" />
+            <forward
+                name="volver"
+                path="/ObjetosPersonalesCU/ObjetosPersonalesCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/gestorFlujo/presentacion/objetosPersonales/eliminar/EliminarPersonalesCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPersonales/eliminar/eliminar-Personales-CU_help.jsp"/>
+        <action
+            path="/ConfirmacionHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPersonales/eliminar/confirmacion_help.jsp"/>
+        <action
+            path="/ResultadoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPersonales/eliminar/resultado_help.jsp"/>
+        <action
+            path="/ImportarURLCU/RellenarDatosSubmit"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.importarURL.RellenarDatosSubmit"
+            name="importarURLCURellenarDatosSubmitForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPersonales/importarURL/rellenar-datos.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="importar.urlcu.rellenar.datos.submit.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/importarURL/rellenar-datos.jsp"
+                scope="request" />
+            <forward
+                name="objetos.personales.cu"
+                path="/ObjetosPersonalesCU/ObjetosPersonalesCU.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/ImportarURLCU/ImportarURLCU"
+            type="es.pode.gestorFlujo.presentacion.objetosPersonales.importarURL.ImportarURLCU"
+            name="importarURLCUImportarURLCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="carga.url"
+                path="/es/pode/gestorFlujo/presentacion/objetosPersonales/importarURL/rellenar-datos.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/gestorFlujo/presentacion/objetosPersonales/importarURL/ImportarURLCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPersonales/importarURL/importar-URLCU_help.jsp"/>
+        <action
+            path="/RellenarDatosHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPersonales/importarURL/rellenar-datos_help.jsp"/>
+        <action
+            path="/ObjetosPublicadosCU/MostrarODESPublicadosPersonales"
+            type="es.pode.gestorFlujo.presentacion.objetosPublicados.MostrarODESPublicadosPersonales"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPublicados/mostrar-odespublicados.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="objetos.publicados.cu.mostrar.odespublicados.personales.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPublicados/mostrar-odespublicados.jsp"
+                scope="request" />
+            <forward
+                name="personales"
+                path="/ObjetosPersonalesCU/ObjetosPersonalesCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ObjetosPublicadosCU/MostrarODESPublicadosPropuestos"
+            type="es.pode.gestorFlujo.presentacion.objetosPublicados.MostrarODESPublicadosPropuestos"
+            name="objetosPublicadosCUMostrarODESPublicadosPropuestosForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPublicados/mostrar-odespublicados.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="objetos.publicados.cu.mostrar.odespublicados.propuestos.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPublicados/mostrar-odespublicados.jsp"
+                scope="request" />
+            <forward
+                name="propuestos"
+                path="/ObjetosPropuestosCU/ObjetosPropuestosCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ObjetosPublicadosCU/MostrarODESPublicadosVerHistorial"
+            type="es.pode.gestorFlujo.presentacion.objetosPublicados.MostrarODESPublicadosVerHistorial"
+            name="objetosPublicadosCUMostrarODESPublicadosVerHistorialForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPublicados/mostrar-odespublicados.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="objetos.publicados.cu.mostrar.odespublicados.ver.historial.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPublicados/mostrar-odespublicados.jsp"
+                scope="request" />
+            <forward
+                name="ver.historial"
+                path="/VerHistorialCU/VerHistorialCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ObjetosPublicadosCU/ObjetosPublicadosCU"
+            type="es.pode.gestorFlujo.presentacion.objetosPublicados.ObjetosPublicadosCU"
+            name="objetosPublicadosCUObjetosPublicadosCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="mostrar.odespublicados"
+                path="/es/pode/gestorFlujo/presentacion/objetosPublicados/mostrar-odespublicados.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/gestorFlujo/presentacion/objetosPublicados/ObjetosPublicadosCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPublicados/objetos-Publicados-CU_help.jsp"/>
+        <action
+            path="/MostrarODESPublicadosHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPublicados/mostrar-odespublicados_help.jsp"/>
+        <action
+            path="/ObjetosDespublicadosCU/ObjetosDespublicadosCU"
+            type="es.pode.gestorFlujo.presentacion.objetosDespublicados.ObjetosDespublicadosCU"
+            name="objetosDespublicadosCUObjetosDespublicadosCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="mostrar.odesdespublicados"
+                path="/es/pode/gestorFlujo/presentacion/objetosDespublicados/mostrar-odesdespublicados.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/ObjetosDespublicadosCU/MostrarODESDespublicadosVerHistorial"
+            type="es.pode.gestorFlujo.presentacion.objetosDespublicados.MostrarODESDespublicadosVerHistorial"
+            name="objetosDespublicadosCUMostrarODESDespublicadosVerHistorialForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosDespublicados/mostrar-odesdespublicados.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="objetos.despublicados.cu.mostrar.odesdespublicados.ver.historial.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosDespublicados/mostrar-odesdespublicados.jsp"
+                scope="request" />
+            <forward
+                name="ver.historial"
+                path="/VerHistorialCU/VerHistorialCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ObjetosDespublicadosCU/MostrarODESDespublicadosPublicar"
+            type="es.pode.gestorFlujo.presentacion.objetosDespublicados.MostrarODESDespublicadosPublicar"
+            name="objetosDespublicadosCUMostrarODESDespublicadosPublicarForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosDespublicados/mostrar-odesdespublicados.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="objetos.despublicados.cu.mostrar.odesdespublicados.publicar.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosDespublicados/mostrar-odesdespublicados.jsp"
+                scope="request" />
+            <forward
+                name="publicar"
+                path="/PublicarCU/PublicarCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ObjetosDespublicadosCU/MostrarODESDespublicadosPendientes"
+            type="es.pode.gestorFlujo.presentacion.objetosDespublicados.MostrarODESDespublicadosPendientes"
+            name="objetosDespublicadosCUMostrarODESDespublicadosPendientesForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosDespublicados/mostrar-odesdespublicados.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="objetos.despublicados.cu.mostrar.odesdespublicados.pendientes.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosDespublicados/mostrar-odesdespublicados.jsp"
+                scope="request" />
+            <forward
+                name="pendientes"
+                path="/ObjetosPendientesCU/ObjetosPendientesCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ObjetosDespublicadosCU/MostrarODESDespublicadosEliminar"
+            type="es.pode.gestorFlujo.presentacion.objetosDespublicados.MostrarODESDespublicadosEliminar"
+            name="objetosDespublicadosCUMostrarODESDespublicadosEliminarForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosDespublicados/mostrar-odesdespublicados.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="objetos.despublicados.cu.mostrar.odesdespublicados.eliminar.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosDespublicados/mostrar-odesdespublicados.jsp"
+                scope="request" />
+            <forward
+                name="eliminar.cu"
+                path="/EliminarCU/EliminarCU.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/es/pode/gestorFlujo/presentacion/objetosDespublicados/ObjetosDespublicadosCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosDespublicados/objetos-Despublicados-CU_help.jsp"/>
+        <action
+            path="/MostrarODESDespublicadosHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosDespublicados/mostrar-odesdespublicados_help.jsp"/>
+        <action
+            path="/PublicarCU/PublicarODECancelar"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.Publicar.PublicarODECancelar"
+            name="publicarCUPublicarODECancelarForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPendientes/Publicar/publicar-ode.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="publicar.cu.publicar.ode.cancelar.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientes/Publicar/publicar-ode.jsp"
+                scope="request" />
+            <forward
+                name="objetos.despublicados.cu"
+                path="/ObjetosDespublicadosCU/ObjetosDespublicadosCU.do"
+                redirect="true" />
+            <forward
+                name="objetos.pendientes.cu"
+                path="/ObjetosPendientesCU/ObjetosPendientesCU.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/PublicarCU/AgregarLicenciaAceptar"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.Publicar.AgregarLicenciaAceptar"
+            name="publicarCUAgregarLicenciaAceptarForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPendientes/Publicar/agregar-licencia.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="publicar.cu.agregar.licencia.aceptar.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientes/Publicar/agregar-licencia.jsp"
+                scope="request" />
+            <forward
+                name="carga.formulario"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientes/Publicar/publicar-ode.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/PublicarCU/PublicarCU"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.Publicar.PublicarCU"
+            name="publicarCUPublicarCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="carga.formulario"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientes/Publicar/publicar-ode.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/PublicarCU/AgregarLicenciaCancelar"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.Publicar.AgregarLicenciaCancelar"
+            name="publicarCUAgregarLicenciaCancelarForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPendientes/Publicar/agregar-licencia.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="publicar.cu.agregar.licencia.cancelar.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientes/Publicar/agregar-licencia.jsp"
+                scope="request" />
+            <forward
+                name="carga.formulario"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientes/Publicar/publicar-ode.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/PublicarCU/PublicarODEModificarLicencia"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.Publicar.PublicarODEModificarLicencia"
+            name="publicarCUPublicarODEModificarLicenciaForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPendientes/Publicar/publicar-ode.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="publicar.cu.publicar.ode.modificar.licencia.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientes/Publicar/publicar-ode.jsp"
+                scope="request" />
+            <forward
+                name="agregar.licencia"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientes/Publicar/agregar-licencia.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/PublicarCU/ResultadoValidacionDecide"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.Publicar.ResultadoValidacionDecide"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPendientes/Publicar/resultado-validacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="publicar.cu.resultado.validacion.decide.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientes/Publicar/resultado-validacion.jsp"
+                scope="request" />
+            <forward
+                name="objetos.despublicados.cu"
+                path="/ObjetosDespublicadosCU/ObjetosDespublicadosCU.do"
+                redirect="false" />
+            <forward
+                name="objetos.pendientes.cu"
+                path="/ObjetosPendientesCU/ObjetosPendientesCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/PublicarCU/PublicarODEAceptar"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.Publicar.PublicarODEAceptar"
+            name="publicarCUPublicarODEAceptarForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPendientes/Publicar/publicar-ode.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="publicar.cu.publicar.ode.aceptar.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientes/Publicar/publicar-ode.jsp"
+                scope="request" />
+            <forward
+                name="resultado.validacion"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientes/Publicar/resultado-validacion.jsp"
+                redirect="true" />
+        </action>
+        <action
+            path="/es/pode/gestorFlujo/presentacion/objetosPendientes/Publicar/PublicarCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPendientes/Publicar/Publicar-CU_help.jsp"/>
+        <action
+            path="/PublicarODEHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPendientes/Publicar/publicar-ode_help.jsp"/>
+        <action
+            path="/AgregarLicenciaHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPendientes/Publicar/agregar-licencia_help.jsp"/>
+        <action
+            path="/ResultadoValidacionHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPendientes/Publicar/resultado-validacion_help.jsp"/>
+        <action
+            path="/RechazarCU/RechazarCU"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.Rechazar.RechazarCU"
+            name="rechazarCURechazarCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="carga.formulario"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientes/Rechazar/rechazar.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/RechazarCU/RechazarCancelar"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.Rechazar.RechazarCancelar"
+            name="rechazarCURechazarCancelarForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPendientes/Rechazar/rechazar.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="rechazar.cu.rechazar.cancelar.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientes/Rechazar/rechazar.jsp"
+                scope="request" />
+            <forward
+                name="cancelar"
+                path="/ObjetosPendientesCU/ObjetosPendientesCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/RechazarCU/RechazarAceptar"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.Rechazar.RechazarAceptar"
+            name="rechazarCURechazarAceptarForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPendientes/Rechazar/rechazar.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="rechazar.cu.rechazar.aceptar.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientes/Rechazar/rechazar.jsp"
+                scope="request" />
+            <forward
+                name="objetos.pendientes.cu"
+                path="/ObjetosPendientesCU/ObjetosPendientesCU.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/es/pode/gestorFlujo/presentacion/objetosPendientes/Rechazar/RechazarCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPendientes/Rechazar/rechazar-CU_help.jsp"/>
+        <action
+            path="/RechazarHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPendientes/Rechazar/rechazar_help.jsp"/>
+        <action
+            path="/ObjetosPendientesCU/ObjetosPendientesCU"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.ObjetosPendientesCU"
+            name="objetosPendientesCUObjetosPendientesCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="mostrar.odespendientes"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientes/mostrar-odespendientes.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/ObjetosPendientesCU/MostrarODESPendientesVerHistorial"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.MostrarODESPendientesVerHistorial"
+            name="objetosPendientesCUMostrarODESPendientesVerHistorialForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPendientes/mostrar-odespendientes.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="objetos.pendientes.cu.mostrar.odespendientes.ver.historial.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientes/mostrar-odespendientes.jsp"
+                scope="request" />
+            <forward
+                name="ver.historial"
+                path="/VerHistorialCU/VerHistorialCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ObjetosPendientesCU/MostrarODESPendientesRechazarODE"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.MostrarODESPendientesRechazarODE"
+            name="objetosPendientesCUMostrarODESPendientesRechazarODEForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPendientes/mostrar-odespendientes.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="objetos.pendientes.cu.mostrar.odespendientes.rechazar.ode.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientes/mostrar-odespendientes.jsp"
+                scope="request" />
+            <forward
+                name="rechazar.ode"
+                path="/RechazarCU/RechazarCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ObjetosPendientesCU/MostrarODESPendientesDespublicados"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.MostrarODESPendientesDespublicados"
+            name="objetosPendientesCUMostrarODESPendientesDespublicadosForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPendientes/mostrar-odespendientes.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="objetos.pendientes.cu.mostrar.odespendientes.despublicados.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientes/mostrar-odespendientes.jsp"
+                scope="request" />
+            <forward
+                name="despublicados"
+                path="/ObjetosDespublicadosCU/ObjetosDespublicadosCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ObjetosPendientesCU/MostrarODESPendientesPublicarODE"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.MostrarODESPendientesPublicarODE"
+            name="objetosPendientesCUMostrarODESPendientesPublicarODEForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPendientes/mostrar-odespendientes.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="objetos.pendientes.cu.mostrar.odespendientes.publicar.ode.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientes/mostrar-odespendientes.jsp"
+                scope="request" />
+            <forward
+                name="publicar.ode"
+                path="/PublicarCU/PublicarCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/gestorFlujo/presentacion/objetosPendientes/ObjetosPendientesCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPendientes/objetos-Pendientes-CU_help.jsp"/>
+        <action
+            path="/MostrarODESPendientesHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPendientes/mostrar-odespendientes_help.jsp"/>
+        <action
+            path="/EliminarCU/EliminarCU"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.Eliminar.EliminarCU"
+            name="eliminarCUEliminarCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="objetos.despublicados.cu"
+                path="/ObjetosDespublicadosCU/ObjetosDespublicadosCU.do"
+                redirect="true" />
+            <forward
+                name="confirmacion"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientes/Eliminar/confirmacion.jsp"
+                redirect="true" />
+        </action>
+        <action
+            path="/EliminarCU/ConfirmacionCancelar"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.Eliminar.ConfirmacionCancelar"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPendientes/Eliminar/confirmacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="eliminar.cu.confirmacion.cancelar.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientes/Eliminar/confirmacion.jsp"
+                scope="request" />
+            <forward
+                name="cancelar"
+                path="/ObjetosDespublicadosCU/ObjetosDespublicadosCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/EliminarCU/ResultadoVolver"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.Eliminar.ResultadoVolver"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPendientes/Eliminar/resultado.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="eliminar.cu.resultado.volver.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientes/Eliminar/resultado.jsp"
+                scope="request" />
+            <forward
+                name="volver"
+                path="/ObjetosDespublicadosCU/ObjetosDespublicadosCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/EliminarCU/ConfirmacionAceptar"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientes.Eliminar.ConfirmacionAceptar"
+            name="eliminarCUConfirmacionAceptarForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPendientes/Eliminar/confirmacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="eliminar.cu.confirmacion.aceptar.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientes/Eliminar/confirmacion.jsp"
+                scope="request" />
+            <forward
+                name="resultado"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientes/Eliminar/resultado.jsp"
+                redirect="true" />
+        </action>
+        <action
+            path="/es/pode/gestorFlujo/presentacion/objetosPendientes/Eliminar/EliminarCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPendientes/Eliminar/Eliminar-CU_help.jsp"/>
+        <action
+            path="/ConfirmacionHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPendientes/Eliminar/confirmacion_help.jsp"/>
+        <action
+            path="/ResultadoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPendientes/Eliminar/resultado_help.jsp"/>
+        <action
+            path="/ObjetosPendientesCatalogacionCU/MostrarODESPendientesRechazar"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientesCatalogacion.MostrarODESPendientesRechazar"
+            name="objetosPendientesCatalogacionCUMostrarODESPendientesRechazarForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPendientesCatalogacion/mostrar-odespendientes.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="objetos.pendientes.catalogacion.cu.mostrar.odespendientes.rechazar.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientesCatalogacion/mostrar-odespendientes.jsp"
+                scope="request" />
+            <forward
+                name="rechazar"
+                path="/RechazarPendCatalogacionCU/RechazarPendCatalogacionCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ObjetosPendientesCatalogacionCU/ObjetosPendientesCatalogacionCU"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientesCatalogacion.ObjetosPendientesCatalogacionCU"
+            name="objetosPendientesCatalogacionCUObjetosPendientesCatalogacionCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="mostrar.odespendientes"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientesCatalogacion/mostrar-odespendientes.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/ObjetosPendientesCatalogacionCU/MostrarODESPendientesProponerPublicacionODE"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientesCatalogacion.MostrarODESPendientesProponerPublicacionODE"
+            name="objetosPendientesCatalogacionCUMostrarODESPendientesProponerPublicacionODEForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPendientesCatalogacion/mostrar-odespendientes.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="objetos.pendientes.catalogacion.cu.mostrar.odespendientes.proponer.publicacion.ode.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientesCatalogacion/mostrar-odespendientes.jsp"
+                scope="request" />
+            <forward
+                name="proponer.publicacion.ode"
+                path="/ProponerCU/ProponerCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ObjetosPendientesCatalogacionCU/MostrarODESPendientesVerHistorial"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientesCatalogacion.MostrarODESPendientesVerHistorial"
+            name="objetosPendientesCatalogacionCUMostrarODESPendientesVerHistorialForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPendientesCatalogacion/mostrar-odespendientes.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="objetos.pendientes.catalogacion.cu.mostrar.odespendientes.ver.historial.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientesCatalogacion/mostrar-odespendientes.jsp"
+                scope="request" />
+            <forward
+                name="ver.historial"
+                path="/VerHistorialCU/VerHistorialCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/gestorFlujo/presentacion/objetosPendientesCatalogacion/ObjetosPendientesCatalogacionCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPendientesCatalogacion/objetos-Pendientes-Catalogacion-CU_help.jsp"/>
+        <action
+            path="/MostrarODESPendientesHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPendientesCatalogacion/mostrar-odespendientes_help.jsp"/>
+        <action
+            path="/ProponerCU/ProponerCU"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientesCatalogacion.proponer.ProponerCU"
+            name="proponerCUProponerCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="cargar.formulario"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientesCatalogacion/proponer/proponer-principal.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/ProponerCU/ProponerPrincipalAceptar"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientesCatalogacion.proponer.ProponerPrincipalAceptar"
+            name="proponerCUProponerPrincipalAceptarForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPendientesCatalogacion/proponer/proponer-principal.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="proponer.cu.proponer.principal.aceptar.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientesCatalogacion/proponer/proponer-principal.jsp"
+                scope="request" />
+            <forward
+                name="resultado"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientesCatalogacion/proponer/resultado-validacion.jsp"
+                redirect="true" />
+        </action>
+        <action
+            path="/ProponerCU/ProponerPrincipalCancelar"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientesCatalogacion.proponer.ProponerPrincipalCancelar"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPendientesCatalogacion/proponer/proponer-principal.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="proponer.cu.proponer.principal.cancelar.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientesCatalogacion/proponer/proponer-principal.jsp"
+                scope="request" />
+            <forward
+                name="cancelar"
+                path="/ObjetosPendientesCatalogacionCU/ObjetosPendientesCatalogacionCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ProponerCU/ResultadoValidacionAceptar"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientesCatalogacion.proponer.ResultadoValidacionAceptar"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPendientesCatalogacion/proponer/resultado-validacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="proponer.cu.resultado.validacion.aceptar.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientesCatalogacion/proponer/resultado-validacion.jsp"
+                scope="request" />
+            <forward
+                name="aceptar"
+                path="/ObjetosPendientesCatalogacionCU/ObjetosPendientesCatalogacionCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/gestorFlujo/presentacion/objetosPendientesCatalogacion/proponer/ProponerCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPendientesCatalogacion/proponer/proponer-CU_help.jsp"/>
+        <action
+            path="/ProponerPrincipalHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPendientesCatalogacion/proponer/proponer-principal_help.jsp"/>
+        <action
+            path="/ResultadoValidacionHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPendientesCatalogacion/proponer/resultado-validacion_help.jsp"/>
+        <action
+            path="/RechazarPendCatalogacionCU/RechazarAceptar"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientesCatalogacion.rechazar.RechazarAceptar"
+            name="rechazarPendCatalogacionCURechazarAceptarForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPendientesCatalogacion/rechazar/rechazar.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="rechazar.pend.catalogacion.cu.rechazar.aceptar.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientesCatalogacion/rechazar/rechazar.jsp"
+                scope="request" />
+            <forward
+                name="objetos.pendientes.catalogacion.cu"
+                path="/ObjetosPendientesCatalogacionCU/ObjetosPendientesCatalogacionCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/RechazarPendCatalogacionCU/RechazarPendCatalogacionCU"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientesCatalogacion.rechazar.RechazarPendCatalogacionCU"
+            name="rechazarPendCatalogacionCURechazarPendCatalogacionCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="carga.formulario"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientesCatalogacion/rechazar/rechazar.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/RechazarPendCatalogacionCU/RechazarCancelar"
+            type="es.pode.gestorFlujo.presentacion.objetosPendientesCatalogacion.rechazar.RechazarCancelar"
+            name="rechazarPendCatalogacionCURechazarCancelarForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosPendientesCatalogacion/rechazar/rechazar.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="rechazar.pend.catalogacion.cu.rechazar.cancelar.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosPendientesCatalogacion/rechazar/rechazar.jsp"
+                scope="request" />
+            <forward
+                name="cancelar"
+                path="/ObjetosPendientesCatalogacionCU/ObjetosPendientesCatalogacionCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/gestorFlujo/presentacion/objetosPendientesCatalogacion/rechazar/RechazarPendCatalogacionCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPendientesCatalogacion/rechazar/rechazar-Pend-Catalogacion-CU_help.jsp"/>
+        <action
+            path="/RechazarHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosPendientesCatalogacion/rechazar/rechazar_help.jsp"/>
+        <action
+            path="/ImportarCompartidosCU/ImportarCompartidosCU"
+            type="es.pode.gestorFlujo.presentacion.objetosCompartidos.importarCompartidos.ImportarCompartidosCU"
+            name="importarCompartidosCUImportarCompartidosCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="resultado.importacion"
+                path="/es/pode/gestorFlujo/presentacion/objetosCompartidos/importarCompartidos/resultado-importacion.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/ImportarCompartidosCU/ResultadoImportacionContinuar"
+            type="es.pode.gestorFlujo.presentacion.objetosCompartidos.importarCompartidos.ResultadoImportacionContinuar"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosCompartidos/importarCompartidos/resultado-importacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="importar.compartidos.cu.resultado.importacion.continuar.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosCompartidos/importarCompartidos/resultado-importacion.jsp"
+                scope="request" />
+            <forward
+                name="continuar"
+                path="/ObjetosCompartidosCU/ObjetosCompartidosCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/gestorFlujo/presentacion/objetosCompartidos/importarCompartidos/ImportarCompartidosCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosCompartidos/importarCompartidos/importar-Compartidos-CU_help.jsp"/>
+        <action
+            path="/ResultadoImportacionHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosCompartidos/importarCompartidos/resultado-importacion_help.jsp"/>
+        <action
+            path="/ObjetosCompartidosCU/MostrarODESCompartidosExportarCompartidos"
+            type="es.pode.gestorFlujo.presentacion.objetosCompartidos.MostrarODESCompartidosExportarCompartidos"
+            name="objetosCompartidosCUMostrarODESCompartidosExportarCompartidosForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosCompartidos/mostrar-odescompartidos.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="objetos.compartidos.cu.mostrar.odescompartidos.exportar.compartidos.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosCompartidos/mostrar-odescompartidos.jsp"
+                scope="request" />
+            <forward
+                name="exportar.compartidos"
+                path="/ExportarCU/ExportarCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ObjetosCompartidosCU/MostrarODESCompartidosImportarCompartido"
+            type="es.pode.gestorFlujo.presentacion.objetosCompartidos.MostrarODESCompartidosImportarCompartido"
+            name="objetosCompartidosCUMostrarODESCompartidosImportarCompartidoForm"
+            scope="request"
+            input="/es/pode/gestorFlujo/presentacion/objetosCompartidos/mostrar-odescompartidos.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="objetos.compartidos.cu.mostrar.odescompartidos.importar.compartido.exception"
+                path="/es/pode/gestorFlujo/presentacion/objetosCompartidos/mostrar-odescompartidos.jsp"
+                scope="request" />
+            <forward
+                name="importar.compartido"
+                path="/ImportarCompartidosCU/ImportarCompartidosCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ObjetosCompartidosCU/ObjetosCompartidosCU"
+            type="es.pode.gestorFlujo.presentacion.objetosCompartidos.ObjetosCompartidosCU"
+            name="objetosCompartidosCUObjetosCompartidosCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="mostrar.odescompartidos"
+                path="/es/pode/gestorFlujo/presentacion/objetosCompartidos/mostrar-odescompartidos.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/gestorFlujo/presentacion/objetosCompartidos/ObjetosCompartidosCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosCompartidos/objetos-Compartidos-CU_help.jsp"/>
+        <action
+            path="/MostrarODESCompartidosHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/gestorFlujo/presentacion/objetosCompartidos/mostrar-odescompartidos_help.jsp"/>
+        <action
+            path="/applicationHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/application-help.jsp"/>
+        <action
+            path="/calendar"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/calendar-js.jsp"/>
+        <action
+            path="/formValidation"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/form-validation.jsp"/>
+        <action
+            path="/login"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/login/login-form.jsp"/>
+        <action
+            path="/logincaptcha"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/login/login-form.jsp"/>  
+        <action
+            path="/captcha-image"
+            type="es.indra.ibuilder.security.captcha.ImageCaptchaAction"
+            scope="request"/>  
+    </action-mappings>
+
+    <!-- controller merge point -->
+
+    <!-- message-resources merge-point -->
+    <message-resources parameter="application-resources" null="false"/>
+
+    <!-- plug-in merge-point -->
+    
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property property="pathnames" value="/WEB-INF/validation.xml,/WEB-INF/validator-rules.xml"/>
+        <set-property property="stopOnFirstError" value="false"/>
+    </plug-in>
+
+    <plug-in className="org.apache.struts.tiles.TilesPlugin">
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml"/>
+        <set-property property="definitions-parser-validate" value="true"/>
+        <set-property property="moduleAware" value="true"/>
+    </plug-in>
+
+<!--
+  UNCOMMENT TO EXPOSE THE STRUTS-MENU TAGLIB
+
+    <plug-in className="net.sf.navigator.menu.MenuPlugIn">
+        <set-property property="menuConfig" value="/WEB-INF/menu-config.xml"/>
+    </plug-in>
+-->
+</struts-config>

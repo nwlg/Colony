@@ -1,0 +1,40 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="seleccionarPadre" class="action">
+    <h3><bean:message key="navegar.arbol.curricular.cu.arbol.curricular.seleccionar.padre"/></h3>
+    <div class="trigger">
+        <html:form styleId="navegarArbolCurricularCUArbolCurricularSeleccionarPadreForm" action="/NavegarArbolCurricularCU/ArbolCurricularSeleccionarPadre" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="id">
+                        <td class="label"><bean:message key="navegar.arbol.curricular.cu.arbol.curricular.seleccionar.padre.param.id"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.id}"/>
+                           <input type="text" name="id" value="${value}" onmouseover="hints.show('navegar.arbol.curricular.cu.arbol.curricular.seleccionar.padre.param.id.title')" onmouseout="hints.hide()"  id="seleccionarPadreId"/>
+                        </td>
+                    </tr>
+                    <tr class="tipoLayoutBuscador">
+                        <td class="label"><bean:message key="navegar.arbol.curricular.cu.arbol.curricular.seleccionar.padre.param.tipo.layout.buscador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipoLayoutBuscador}"/>
+                           <input type="text" name="tipoLayoutBuscador" value="${value}" onmouseover="hints.show('navegar.arbol.curricular.cu.arbol.curricular.seleccionar.padre.param.tipo.layout.buscador.title')" onmouseout="hints.hide()"  id="seleccionarPadreTipoLayoutBuscador"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('seleccionarPadre')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="navegar.arbol.curricular.cu.arbol.curricular.seleccionar.padre"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

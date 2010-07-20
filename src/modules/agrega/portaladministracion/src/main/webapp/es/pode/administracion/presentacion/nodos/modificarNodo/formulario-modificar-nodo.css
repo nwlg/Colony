@@ -1,0 +1,30 @@
+#cancelar.action {}
+#cancelar.action #form_submit {}
+
+
+#aceptar.action {}
+#aceptar.action #form_submit {}
+
+#aceptar.action .id {}
+#aceptar.action .id .label {}
+#aceptar.action .id .field {}
+#aceptar.action .nodo {}
+#aceptar.action .nodo .label {}
+#aceptar.action .nodo .field {}
+#aceptar.action .url {}
+#aceptar.action .url .label {}
+#aceptar.action .url .field {}
+#aceptar.action .puerto {}
+#aceptar.action .puerto .label {}
+#aceptar.action .puerto .field {}
+#aceptar.action .ccaa {}
+#aceptar.action .ccaa .label {}
+#aceptar.action .ccaa .field {}
+#aceptar.action .urlWS {}
+#aceptar.action .urlWS .label {}
+#aceptar.action .urlWS .field {}
+#aceptar.action .idNodo {}
+#aceptar.action .idNodo .label {}
+#aceptar.action .idNodo .field {}
+
+

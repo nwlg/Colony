@@ -1,0 +1,29 @@
+#exportarCompartidos.action {}
+#exportarCompartidos.action #form_submit {}
+
+#exportarCompartidos.action .idODE {}
+#exportarCompartidos.action .idODE .label {}
+#exportarCompartidos.action .idODE .field {}
+#exportarCompartidos.action .titulo {}
+#exportarCompartidos.action .titulo .label {}
+#exportarCompartidos.action .titulo .field {}
+
+#importarCompartido.action {}
+#importarCompartido.action #form_submit {}
+
+#importarCompartido.action .idODE {}
+#importarCompartido.action .idODE .label {}
+#importarCompartido.action .idODE .field {}
+
+#listaODES.table {}
+#listaODES.table th {}
+#listaODES.table td div {}
+
+#listaODES.table th.idODE {}
+#listaODES.table td div.idODE {}
+
+#listaODES.table th.titulo {}
+#listaODES.table td div.titulo {}
+
+
+

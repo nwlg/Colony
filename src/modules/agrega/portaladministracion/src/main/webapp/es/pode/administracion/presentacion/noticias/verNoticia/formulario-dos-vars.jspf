@@ -1,0 +1,23 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="nombreCategoria" value="${form.nombreCategoria}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="titulo" value="${form.titulo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idiomas" value="${form.idiomas}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idiomasAlta" value="${form.idiomasAlta}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idNoticia" value="${form.idNoticia}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="cuerpo" value="${form.cuerpo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="resumen" value="${form.resumen}"/>
+    </c:catch>
+</div>

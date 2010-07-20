@@ -1,0 +1,39 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'listar.tareas.en.ejecucion.listar.parar.tarea.param.trabajo.title':'<formatting:escape language="javascript"><bean:message key="listar.tareas.en.ejecucion.listar.parar.tarea.param.trabajo.title"/></formatting:escape>',
+                'listar.tareas.en.ejecucion.listar.parar.tarea.param.grupo.trabajo.title':'<formatting:escape language="javascript"><bean:message key="listar.tareas.en.ejecucion.listar.parar.tarea.param.grupo.trabajo.title"/></formatting:escape>',
+                'listar.tareas.en.ejecucion.listar.parar.tarea.param.trigger.title':'<formatting:escape language="javascript"><bean:message key="listar.tareas.en.ejecucion.listar.parar.tarea.param.trigger.title"/></formatting:escape>',
+                'listar.tareas.en.ejecucion.listar.parar.tarea.param.grupo.trigger.title':'<formatting:escape language="javascript"><bean:message key="listar.tareas.en.ejecucion.listar.parar.tarea.param.grupo.trigger.title"/></formatting:escape>',
+                'listarTareasEnEjecucion':'<formatting:escape language="javascript"><bean:message key="listar.tareas.en.ejecucion.listar.listar.tareas.en.ejecucion.title"/></formatting:escape>',
+                'listarTareasEnEjecucion_no':'<formatting:escape language="javascript"><bean:message key="listar.tareas.en.ejecucion.listar.listar.tareas.en.ejecucion.title.notallowed"/></formatting:escape>',
+                'listarTareasEnEjecucion_reset':'<formatting:escape language="javascript"><bean:message key="listar.tareas.en.ejecucion.listar.listar.tareas.en.ejecucion.title.reset"/></formatting:escape>',
+                'listarTareasEnEjecucion_noreset':'<formatting:escape language="javascript"><bean:message key="listar.tareas.en.ejecucion.listar.listar.tareas.en.ejecucion.title.reset.not.allowed"/></formatting:escape>',
+                'listarTareasEjecutadas':'<formatting:escape language="javascript"><bean:message key="listar.tareas.en.ejecucion.listar.listar.tareas.ejecutadas.title"/></formatting:escape>',
+                'listarTareasEjecutadas_no':'<formatting:escape language="javascript"><bean:message key="listar.tareas.en.ejecucion.listar.listar.tareas.ejecutadas.title.notallowed"/></formatting:escape>',
+                'listarTareasEjecutadas_reset':'<formatting:escape language="javascript"><bean:message key="listar.tareas.en.ejecucion.listar.listar.tareas.ejecutadas.title.reset"/></formatting:escape>',
+                'listarTareasEjecutadas_noreset':'<formatting:escape language="javascript"><bean:message key="listar.tareas.en.ejecucion.listar.listar.tareas.ejecutadas.title.reset.not.allowed"/></formatting:escape>',
+                'listarTareasPendientes':'<formatting:escape language="javascript"><bean:message key="listar.tareas.en.ejecucion.listar.listar.tareas.pendientes.title"/></formatting:escape>',
+                'listarTareasPendientes_no':'<formatting:escape language="javascript"><bean:message key="listar.tareas.en.ejecucion.listar.listar.tareas.pendientes.title.notallowed"/></formatting:escape>',
+                'listarTareasPendientes_reset':'<formatting:escape language="javascript"><bean:message key="listar.tareas.en.ejecucion.listar.listar.tareas.pendientes.title.reset"/></formatting:escape>',
+                'listarTareasPendientes_noreset':'<formatting:escape language="javascript"><bean:message key="listar.tareas.en.ejecucion.listar.listar.tareas.pendientes.title.reset.not.allowed"/></formatting:escape>',
+                'Parar tarea':'<formatting:escape language="javascript"><bean:message key="listar.tareas.en.ejecucion.listar.parar.tarea.title"/></formatting:escape>',
+                'Parar tarea_no':'<formatting:escape language="javascript"><bean:message key="listar.tareas.en.ejecucion.listar.parar.tarea.title.notallowed"/></formatting:escape>',
+                'Parar tarea_reset':'<formatting:escape language="javascript"><bean:message key="listar.tareas.en.ejecucion.listar.parar.tarea.title.reset"/></formatting:escape>',
+                'Parar tarea_noreset':'<formatting:escape language="javascript"><bean:message key="listar.tareas.en.ejecucion.listar.parar.tarea.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+</script>
+    </tiles:put>

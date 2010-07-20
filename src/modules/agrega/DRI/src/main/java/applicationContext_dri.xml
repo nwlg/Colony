@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <!-- ========================= GENERAL DEFINITIONS ========================= -->
+    <!-- Message source for this context, loaded from localized "messages_xx" files -->
+
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename"><value>messages</value></property>
+    </bean>
+
+	<bean id="beanMapper" class="net.sf.dozer.util.mapping.DozerBeanMapper" singleton="true">
+		<property name="mappingFiles">
+			<list>
+				<value>defaultDozerMappings_dri.xml</value>
+				<value>customDozerMappings_dri.xml</value>
+			</list>
+		</property>
+	</bean>
+
+    <!-- applicationContext merge-point -->
+
+    <!-- Hibernate SessionFactory -->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource"><ref bean="dataSource"/></property>
+        <property name="mappingResources">
+            <list>
+                <value>es/pode/dri/negocio/dominio/Sesion.hbm.xml</value>
+                <value>es/pode/dri/negocio/dominio/Consulta.hbm.xml</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
+                <prop key="hibernate.cache.use_query_cache">false</prop>
+                <prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+                <prop key="hibernate.cache.query_cache_factory">org.hibernate.cache.StandardQueryCacheFactory</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- The Hibernate interceptor -->
+    <bean id="hibernateInterceptor" class="org.springframework.orm.hibernate3.HibernateInterceptor">
+        <property name="sessionFactory"><ref bean="sessionFactory"/></property>
+    </bean>
+
+    <!-- Sesion Entity Proxy with inner Sesion Entity implementation -->
+    <bean id="sesionDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.dri.negocio.dominio.SesionDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.dri.negocio.dominio.SesionDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+    <!-- Consulta Entity Proxy with inner Consulta Entity implementation -->
+    <bean id="consultaDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.dri.negocio.dominio.ConsultaDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.dri.negocio.dominio.ConsultaDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+    <!-- ========================= Start of SERVICE DEFINITIONS ========================= -->
+
+      <!-- Service Transactional Interceptor -->
+    <bean id="serviceTransactionInterceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor">
+        <property name="transactionManager"><ref bean="transactionManager"/></property>
+        <property name="transactionAttributeSource">
+            <value>
+                es.pode.dri.negocio.servicios.SQI.SrvSQIService.getTotalResultsCount=PROPAGATION_REQUIRED
+                es.pode.dri.negocio.servicios.SQI.SrvSQIService.setMaxDuration=PROPAGATION_REQUIRED
+                es.pode.dri.negocio.servicios.SQI.SrvSQIService.setResultsFormat=PROPAGATION_REQUIRED
+                es.pode.dri.negocio.servicios.SQI.SrvSQIService.setResultsSetSize=PROPAGATION_REQUIRED
+                es.pode.dri.negocio.servicios.SQI.SrvSQIService.setSourceLocation=PROPAGATION_REQUIRED
+                es.pode.dri.negocio.servicios.SQI.SrvSQIService.setQueryLanguage=PROPAGATION_REQUIRED
+                es.pode.dri.negocio.servicios.SQI.SrvSQIService.setMaxQueryResults=PROPAGATION_REQUIRED
+                es.pode.dri.negocio.servicios.SQI.SrvSQIService.asynchronousQuery=PROPAGATION_REQUIRED
+                es.pode.dri.negocio.servicios.SQI.SrvSQIService.synchronousQuery=PROPAGATION_REQUIRED
+                es.pode.dri.negocio.servicios.SQI.SrvSQIService.estasActivo=PROPAGATION_REQUIRED
+                es.pode.dri.negocio.servicios.SQI.SrvSQISincronoService.synchronousQuery=PROPAGATION_REQUIRED
+                es.pode.dri.negocio.servicios.SQI.SrvSQIAsincronoService.asynchronousQuery=PROPAGATION_REQUIRED
+                es.pode.dri.negocio.servicios.DRI.SrvDRIService.presentarAlmacenarSesion=PROPAGATION_REQUIRED
+                es.pode.dri.negocio.servicios.DRI.SrvDRIService.solicitarEntregarSesion=PROPAGATION_REQUIRED
+                es.pode.dri.negocio.servicios.DRI.SrvDRIService.presentarAlmacenar=PROPAGATION_REQUIRED
+                es.pode.dri.negocio.servicios.DRI.SrvDRIService.estasActivo=PROPAGATION_REQUIRED
+                es.pode.dri.negocio.servicios.DRI.SrvDRIService.presentarCatalogar=PROPAGATION_REQUIRED
+                es.pode.dri.negocio.servicios.DRI.SrvDRIService.presentarCatalogarSesion=PROPAGATION_REQUIRED
+                es.pode.dri.negocio.servicios.Sesion.SrvSesionesService.createSession=PROPAGATION_REQUIRED
+                es.pode.dri.negocio.servicios.Sesion.SrvSesionesService.createAnonymousSession=PROPAGATION_REQUIRED
+                es.pode.dri.negocio.servicios.Sesion.SrvSesionesService.limpiarSesiones=PROPAGATION_REQUIRED
+                es.pode.dri.negocio.servicios.Sesion.SrvSesionesService.destroySession=PROPAGATION_REQUIRED
+                es.pode.dri.negocio.servicios.Sesion.SrvSesionesService.consultaSesion=PROPAGATION_REQUIRED
+                es.pode.dri.negocio.servicios.Sesion.SrvSesionesService.modificarSesion=PROPAGATION_REQUIRED
+            </value>
+        </property>
+    </bean>
+
+    <!-- SrvSQIService Service Proxy with inner SrvSQIService Service Implementation -->
+    <bean id="srvSQIService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.dri.negocio.servicios.SQI.SrvSQIServiceImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                <property name="consultaDao"><ref bean="consultaDao"/></property>
+	                <property name="srvSesionesService"><ref bean="srvSesionesService"/></property>
+    		                <property name="srvSQISincronoService"><ref bean="srvSQISincronoService"/></property>
+    		                <property name="srvSQIAsincronoService"><ref bean="srvSQIAsincronoService"/></property>
+    	            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.dri.negocio.servicios.SQI.SrvSQIService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceSecurityInterceptor</value>
+                  <value>serviceTransactionInterceptor</value>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvSQISincronoService Service Proxy with inner SrvSQISincronoService Service Implementation -->
+    <bean id="srvSQISincronoService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.dri.negocio.servicios.SQI.SrvSQISincronoServiceImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                <property name="consultaDao"><ref bean="consultaDao"/></property>
+	                <property name="srvSesionesService"><ref bean="srvSesionesService"/></property>
+    		            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.dri.negocio.servicios.SQI.SrvSQISincronoService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceSecurityInterceptor</value>
+                  <value>serviceTransactionInterceptor</value>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvSQIAsincronoService Service Proxy with inner SrvSQIAsincronoService Service Implementation -->
+    <bean id="srvSQIAsincronoService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.dri.negocio.servicios.SQI.SrvSQIAsincronoServiceImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                <property name="consultaDao"><ref bean="consultaDao"/></property>
+	                <property name="srvSesionesService"><ref bean="srvSesionesService"/></property>
+    	            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.dri.negocio.servicios.SQI.SrvSQIAsincronoService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceSecurityInterceptor</value>
+                  <value>serviceTransactionInterceptor</value>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvDRIService Service Proxy with inner SrvDRIService Service Implementation -->
+    <bean id="srvDRIService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.dri.negocio.servicios.DRI.SrvDRIServiceImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+	                <property name="srvSesionesService"><ref bean="srvSesionesService"/></property>
+    				            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.dri.negocio.servicios.DRI.SrvDRIService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceSecurityInterceptor</value>
+                  <value>serviceTransactionInterceptor</value>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvSesionesService Service Proxy with inner SrvSesionesService Service Implementation -->
+    <bean id="srvSesionesService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.dri.negocio.servicios.Sesion.SrvSesionesServiceImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                <property name="sesionDao"><ref bean="sesionDao"/></property>
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.dri.negocio.servicios.Sesion.SrvSesionesService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceSecurityInterceptor</value>
+                  <value>serviceTransactionInterceptor</value>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- ========================= End of SERVICE DEFINITIONS ========================= -->
+
+</beans>

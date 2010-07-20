@@ -1,0 +1,86 @@
+#cancelar.action {}
+#cancelar.action #form_submit {}
+
+#cancelar.action .tipoLayoutBuscador {}
+#cancelar.action .tipoLayoutBuscador .label {}
+#cancelar.action .tipoLayoutBuscador .field {}
+#cancelar.action .nomTesauros {}
+#cancelar.action .nomTesauros .label {}
+#cancelar.action .nomTesauros .field {}
+#cancelar.action .idTesauro {}
+#cancelar.action .idTesauro .label {}
+#cancelar.action .idTesauro .field {}
+
+#asociarTesauro.action {}
+#asociarTesauro.action #form_submit {}
+
+#asociarTesauro.action .nomTesauros {}
+#asociarTesauro.action .nomTesauros .label {}
+#asociarTesauro.action .nomTesauros .field {}
+#asociarTesauro.action .idioma {}
+#asociarTesauro.action .idioma .label {}
+#asociarTesauro.action .idioma .field {}
+#asociarTesauro.action .idTesauro {}
+#asociarTesauro.action .idTesauro .label {}
+#asociarTesauro.action .idTesauro .field {}
+#asociarTesauro.action .taxonesVO {}
+#asociarTesauro.action .taxonesVO .label {}
+#asociarTesauro.action .taxonesVO .field {}
+#asociarTesauro.action .rutaPadreVO {}
+#asociarTesauro.action .rutaPadreVO .label {}
+#asociarTesauro.action .rutaPadreVO .field {}
+#asociarTesauro.action .tipoLayoutBuscador {}
+#asociarTesauro.action .tipoLayoutBuscador .label {}
+#asociarTesauro.action .tipoLayoutBuscador .field {}
+
+#buscarTerminos.action {}
+#buscarTerminos.action #form_submit {}
+
+#buscarTerminos.action .nomTesauros {}
+#buscarTerminos.action .nomTesauros .label {}
+#buscarTerminos.action .nomTesauros .field {}
+#buscarTerminos.action .idioma {}
+#buscarTerminos.action .idioma .label {}
+#buscarTerminos.action .idioma .field {}
+#buscarTerminos.action .taxonesVO {}
+#buscarTerminos.action .taxonesVO .label {}
+#buscarTerminos.action .taxonesVO .field {}
+#buscarTerminos.action .rutaPadreVO {}
+#buscarTerminos.action .rutaPadreVO .label {}
+#buscarTerminos.action .rutaPadreVO .field {}
+#buscarTerminos.action .idTesauro {}
+#buscarTerminos.action .idTesauro .label {}
+#buscarTerminos.action .idTesauro .field {}
+#buscarTerminos.action .textoBusqueda {}
+#buscarTerminos.action .textoBusqueda .label {}
+#buscarTerminos.action .textoBusqueda .field {}
+#buscarTerminos.action .esRuta {}
+#buscarTerminos.action .esRuta .label {}
+#buscarTerminos.action .esRuta .field {}
+#buscarTerminos.action .tituloTesauro {}
+#buscarTerminos.action .tituloTesauro .label {}
+#buscarTerminos.action .tituloTesauro .field {}
+
+#taxonesVO.table {}
+#taxonesVO.table th {}
+#taxonesVO.table td div {}
+
+#taxonesVO.table th.idTesauro {}
+#taxonesVO.table td div.idTesauro {}
+
+#taxonesVO.table th.valorTax {}
+#taxonesVO.table td div.valorTax {}
+
+
+#rutaPadreVO.table {}
+#rutaPadreVO.table th {}
+#rutaPadreVO.table td div {}
+
+#rutaPadreVO.table th.idTesauro {}
+#rutaPadreVO.table td div.idTesauro {}
+
+#rutaPadreVO.table th.valorTax {}
+#rutaPadreVO.table td div.valorTax {}
+
+
+

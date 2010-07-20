@@ -1,0 +1,2314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.15" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 2.2.1.r22a_v20071101 Build &lt;2.2.1.v20071101-1439></property>
+    <property name="units">in</property>
+    <property name="includeResource">birt-application-resources</property>
+    <property name="comments">Copyright (c) 2007 &lt;&lt;Your Company Name here>></property>
+    <html-property name="description">Creates a listing report with fields from the data source.</html-property>
+    <text-property name="displayName">Simple Listing</text-property>
+    <property name="iconFile">/templates/simple_listing.gif</property>
+    <property name="cheatSheet">org.eclipse.birt.report.designer.ui.cheatsheet.simplelisting</property>
+    <property name="layoutPreference">auto layout</property>
+    <parameters>
+        <scalar-parameter name="RP_UrlFicha" id="404">
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="paramType">simple</property>
+            <property name="isRequired">false</property>
+            <property name="controlType">text-box</property>
+            <property name="defaultValue">http://redes.agrega.indra.es/buscador/buscador.do</property>
+            <property name="distinct">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.datatools.enablement.oda.ws" name="Data Source" id="288">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>wsdlURI</name>
+                    <value>http://localhost:8080/auditoria/services/SrvAuditoriaServicio?wsdl</value>
+                </ex-property>
+                <ex-property>
+                    <name>driverClassPath</name>
+                </ex-property>
+            </list-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.datatools.enablement.oda.ws.dataSet" name="Data Set" id="289">
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">descripcion</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">edad</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">identificador</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">idioma</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">idiomaTexto</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">titulo</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">urlImagen</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">objetivos</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">nivel1Cobertura</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">nivel2Cobertura</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">nivel3Cobertura</property>
+                        <property name="dataType">any</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">nombreAreaCurricular</property>
+                        <property name="dataType">any</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">descripcion</property>
+                    <property name="nativeName">descripcion</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">edad</property>
+                    <property name="nativeName">edad</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">identificador</property>
+                    <property name="nativeName">identificador</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">idioma</property>
+                    <property name="nativeName">idioma</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">idiomaTexto</property>
+                    <property name="nativeName">idiomaTexto</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">titulo</property>
+                    <property name="nativeName">titulo</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">urlImagen</property>
+                    <property name="nativeName">urlImagen</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">objetivos</property>
+                    <property name="nativeName">objetivos</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">nivel1Cobertura</property>
+                    <property name="nativeName">nivel1Cobertura</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">nivel2Cobertura</property>
+                    <property name="nativeName">nivel2Cobertura</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">nivel3Cobertura</property>
+                    <property name="nativeName">nivel3Cobertura</property>
+                    <property name="dataType">any</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">nombreAreaCurricular</property>
+                    <property name="nativeName">nombreAreaCurricular</property>
+                    <property name="dataType">any</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <property name="queryText">&lt;?xml version="1.0"?>
+&lt;SOAP-ENV:Envelope
+xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	&lt;SOAP-ENV:Body>
+		&lt;m:repositorio xmlns:m="http://servicios.negocio.auditoria.pode.es">
+		&lt;/m:repositorio>
+	&lt;/SOAP-ENV:Body>
+&lt;/SOAP-ENV:Envelope></property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>xmlQueryText</name>
+                    <value>table0#-TNAME-#table0#:#[/soapenv:Envelope/soapenv:Body/repositorioResponse/repositorioReturn/repositorioReturn]#:#{descripcion;STRING;/descripcion},{edad;STRING;/edad},{identificador;STRING;/identificador},{idioma;STRING;/idioma},{idiomaTexto;STRING;/idiomaTexto},{titulo;STRING;/titulo},{urlImagen;STRING;/urlImagen},{objetivos;STRING;/objetivos},{nivel1Cobertura;STRING;/nivel1Cobertura},{nivel2Cobertura;STRING;/nivel2Cobertura},{nivel3Cobertura;STRING;/nivel3Cobertura},{nombreAreaCurricular;STRING;/nombreAreaCurricular}</value>
+                </ex-property>
+                <ex-property>
+                    <name>operationTrace</name>
+                    <value>SrvAuditoriaServicioService$-$SrvAuditoriaServicio$-$repositorio</value>
+                </ex-property>
+            </list-property>
+        </oda-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">a4</property>
+            <property name="topMargin">0mm</property>
+            <property name="leftMargin">1.5mm</property>
+            <property name="bottomMargin">0mm</property>
+            <property name="rightMargin">0.25mm</property>
+            <property name="headerHeight">0.5in</property>
+        </simple-master-page>
+        <simple-master-page name="PaginaIndice" id="482">
+            <property name="topMargin">10mm</property>
+            <property name="leftMargin">11mm</property>
+            <property name="bottomMargin">10mm</property>
+            <property name="rightMargin">4mm</property>
+            <property name="headerHeight">20mm</property>
+            <property name="footerHeight">65px</property>
+            <page-header>
+                <image id="1232">
+                    <property name="source">file</property>
+                    <expression name="uri">"img/logo_ndrb.gif"</expression>
+                </image>
+            </page-header>
+        </simple-master-page>
+        <simple-master-page name="MasterPage1" id="483">
+            <property name="topMargin">10mm</property>
+            <property name="leftMargin">29mm</property>
+            <property name="bottomMargin">10mm</property>
+            <property name="rightMargin">12mm</property>
+            <property name="headerHeight">20mm</property>
+            <property name="footerHeight">65px</property>
+            <page-header>
+                <grid id="888">
+                    <property name="height">0.7916666667in</property>
+                    <property name="width">5.8333333333in</property>
+                    <column id="889">
+                        <property name="width">2.4375in</property>
+                    </column>
+                    <column id="890"/>
+                    <row id="891">
+                        <property name="height">0.7916666667in</property>
+                        <cell id="892">
+                            <image id="894">
+                                <property name="source">file</property>
+                                <expression name="uri">"img/logo_ndrb.gif"</expression>
+                            </image>
+                        </cell>
+                        <cell id="893"/>
+                    </row>
+                </grid>
+            </page-header>
+            <page-footer>
+                <grid id="962">
+                    <property name="width">100%</property>
+                    <column id="963"/>
+                    <row id="964">
+                        <cell id="965">
+                            <text id="968">
+                                <property name="contentType">html</property>
+                                <text-property name="content"><![CDATA[<br>]]></text-property>
+                            </text>
+                        </cell>
+                    </row>
+                    <row id="966">
+                        <cell id="967">
+                            <grid id="969">
+                                <property name="borderTopColor">#747474</property>
+                                <property name="borderTopStyle">solid</property>
+                                <property name="borderTopWidth">1px</property>
+                                <property name="height">0.2708333333in</property>
+                                <property name="width">5.8854166667in</property>
+                                <column id="970">
+                                    <property name="width">4.8229166667in</property>
+                                </column>
+                                <column id="971">
+                                    <property name="width">1.0625in</property>
+                                </column>
+                                <row id="972">
+                                    <cell id="973">
+                                        <text id="975">
+                                            <property name="fontSize">10pt</property>
+                                            <property name="color">#747474</property>
+                                            <property name="contentType">auto</property>
+                                            <text-property name="content"><![CDATA[Catálogo de Objetos Digitales Educativos           INTERNET EN EL AULA (2008)]]></text-property>
+                                        </text>
+                                    </cell>
+                                    <cell id="974">
+                                        <text-data id="976">
+                                            <property name="fontSize">10pt</property>
+                                            <property name="color">#747474</property>
+                                            <expression name="valueExpr">pageNumber;</expression>
+                                            <property name="contentType">html</property>
+                                        </text-data>
+                                    </cell>
+                                </row>
+                            </grid>
+                        </cell>
+                    </row>
+                </grid>
+            </page-footer>
+        </simple-master-page>
+        <simple-master-page name="MasterPage2" id="484">
+            <property name="type">us-letter</property>
+            <property name="topMargin">10mm</property>
+            <property name="leftMargin">29mm</property>
+            <property name="bottomMargin">10mm</property>
+            <property name="rightMargin">12mm</property>
+            <property name="headerHeight">20mm</property>
+            <property name="footerHeight">65px</property>
+            <page-header>
+                <image id="921">
+                    <property name="color">gray</property>
+                    <property name="source">file</property>
+                    <expression name="uri">"img/logo_ndrb.gif"</expression>
+                </image>
+            </page-header>
+            <page-footer>
+                <grid id="977">
+                    <property name="width">100%</property>
+                    <column id="978"/>
+                    <row id="979">
+                        <cell id="980">
+                            <text id="983">
+                                <property name="contentType">html</property>
+                                <text-property name="content"><![CDATA[<br>]]></text-property>
+                            </text>
+                        </cell>
+                    </row>
+                    <row id="981">
+                        <cell id="982">
+                            <grid id="984">
+                                <property name="borderTopColor">#747474</property>
+                                <property name="borderTopStyle">solid</property>
+                                <property name="borderTopWidth">1px</property>
+                                <property name="height">0.4270833333in</property>
+                                <property name="width">5.9375in</property>
+                                <column id="985">
+                                    <property name="width">4.84375in</property>
+                                </column>
+                                <column id="986">
+                                    <property name="width">0.9270833333in</property>
+                                </column>
+                                <row id="987">
+                                    <cell id="988">
+                                        <text id="990">
+                                            <property name="fontSize">10pt</property>
+                                            <property name="color">#747474</property>
+                                            <property name="contentType">auto</property>
+                                            <text-property name="content"><![CDATA[Catálogo de Objetos Digitales Educativos           INTERNET EN EL AULA (2008)]]></text-property>
+                                        </text>
+                                    </cell>
+                                    <cell id="989">
+                                        <text-data id="991">
+                                            <property name="fontSize">10pt</property>
+                                            <property name="color">#747474</property>
+                                            <expression name="valueExpr">pageNumber;</expression>
+                                            <property name="contentType">html</property>
+                                        </text-data>
+                                    </cell>
+                                </row>
+                            </grid>
+                        </cell>
+                    </row>
+                </grid>
+            </page-footer>
+        </simple-master-page>
+        <simple-master-page name="MasterPage3" id="485">
+            <property name="topMargin">10mm</property>
+            <property name="leftMargin">9mm</property>
+            <property name="bottomMargin">10mm</property>
+            <property name="rightMargin">8mm</property>
+            <property name="headerHeight">20mm</property>
+            <property name="footerHeight">65px</property>
+            <page-header>
+                <grid id="912">
+                    <property name="height">0.7604166667in</property>
+                    <property name="width">5.8333333333in</property>
+                    <column id="913">
+                        <property name="width">3.03125in</property>
+                    </column>
+                    <column id="914"/>
+                    <row id="915">
+                        <property name="height">0.7604166667in</property>
+                        <cell id="916">
+                            <image id="918">
+                                <property name="source">file</property>
+                                <expression name="uri">"img/logo_ndrb.gif"</expression>
+                            </image>
+                        </cell>
+                        <cell id="917"/>
+                    </row>
+                </grid>
+            </page-header>
+            <page-footer>
+                <grid id="992">
+                    <property name="width">100%</property>
+                    <column id="993"/>
+                    <row id="994">
+                        <cell id="995">
+                            <text id="998">
+                                <property name="contentType">html</property>
+                                <text-property name="content"><![CDATA[<br>]]></text-property>
+                            </text>
+                        </cell>
+                    </row>
+                    <row id="996">
+                        <cell id="997">
+                            <grid id="999">
+                                <property name="borderTopColor">#747474</property>
+                                <property name="borderTopStyle">solid</property>
+                                <property name="borderTopWidth">1px</property>
+                                <property name="height">0.2708333333in</property>
+                                <property name="width">5.8645833333in</property>
+                                <column id="1000">
+                                    <property name="width">4.9270833333in</property>
+                                </column>
+                                <column id="1001">
+                                    <property name="width">1in</property>
+                                </column>
+                                <row id="1002">
+                                    <cell id="1003">
+                                        <text id="1005">
+                                            <property name="fontSize">10pt</property>
+                                            <property name="color">#747474</property>
+                                            <property name="contentType">auto</property>
+                                            <text-property name="content"><![CDATA[Catálogo de Objetos Digitales Educativos           INTERNET EN EL AULA (2008)]]></text-property>
+                                        </text>
+                                    </cell>
+                                    <cell id="1004">
+                                        <text-data id="1006">
+                                            <property name="fontSize">10pt</property>
+                                            <property name="color">#747474</property>
+                                            <expression name="valueExpr">pageNumber;</expression>
+                                            <property name="contentType">html</property>
+                                        </text-data>
+                                    </cell>
+                                </row>
+                            </grid>
+                        </cell>
+                    </row>
+                </grid>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="1109">
+            <property name="masterPage">PaginaIndice</property>
+            <property name="pageBreakAfter">always</property>
+            <property name="width">100%</property>
+            <property name="repeatHeader">false</property>
+            <column id="1140"/>
+            <header>
+                <row id="1110">
+                    <cell id="1111">
+                        <text id="1141">
+                            <property name="fontSize">20pt</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="color">#FF0000</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Índice]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+            </header>
+            <footer>
+                <row id="1138">
+                    <cell id="1139">
+                        <table id="1400">
+                            <property name="width">100%</property>
+                            <column id="1443">
+                                <property name="width">7.46875in</property>
+                            </column>
+                            <column id="1444"/>
+                            <header>
+                                <row id="1401">
+                                    <cell id="1402"/>
+                                    <cell id="1403"/>
+                                </row>
+                            </header>
+                            <detail>
+                                <row id="1404">
+                                    <cell id="1405">
+                                        <text id="1445">
+                                            <property name="fontSize">16pt</property>
+                                            <property name="color">#FF0000</property>
+                                            <property name="contentType">auto</property>
+                                            <text-property name="content"><![CDATA[1. INTRODUCCION]]></text-property>
+                                        </text>
+                                    </cell>
+                                    <cell id="1406">
+                                        <label id="1477">
+                                            <property name="fontSize">12pt</property>
+                                            <property name="color">#FF0000</property>
+                                            <text-property name="text">2</text-property>
+                                            <structure name="action">
+                                                <property name="linkType">bookmark-link</property>
+                                                <expression name="targetBookmark">"1"</expression>
+                                            </structure>
+                                        </label>
+                                    </cell>
+                                </row>
+                                <row id="1407">
+                                    <cell id="1408">
+                                        <text id="1446">
+                                            <property name="fontSize">12pt</property>
+                                            <property name="color">#747474</property>
+                                            <property name="contentType">plain</property>
+                                            <text-property name="content"><![CDATA[    1.1. Internet en el aula]]></text-property>
+                                        </text>
+                                    </cell>
+                                    <cell id="1409">
+                                        <label name="3" id="1467">
+                                            <property name="fontSize">12pt</property>
+                                            <property name="color">#747474</property>
+                                            <text-property name="text">3</text-property>
+                                            <structure name="action">
+                                                <property name="linkType">bookmark-link</property>
+                                                <expression name="targetBookmark">"1.1"</expression>
+                                            </structure>
+                                        </label>
+                                    </cell>
+                                </row>
+                                <row id="1410">
+                                    <cell id="1411">
+                                        <text id="1447">
+                                            <property name="fontSize">12pt</property>
+                                            <property name="color">#747474</property>
+                                            <property name="contentType">plain</property>
+                                            <text-property name="content"><![CDATA[    1.2. Financiación]]></text-property>
+                                        </text>
+                                    </cell>
+                                    <cell id="1412">
+                                        <label id="1468">
+                                            <property name="fontSize">12pt</property>
+                                            <property name="color">#747474</property>
+                                            <text-property name="text">4</text-property>
+                                            <structure name="action">
+                                                <property name="linkType">bookmark-link</property>
+                                                <expression name="targetBookmark">"1.2"</expression>
+                                            </structure>
+                                        </label>
+                                    </cell>
+                                </row>
+                                <row id="1413">
+                                    <cell id="1414">
+                                        <text id="1448">
+                                            <property name="fontSize">12pt</property>
+                                            <property name="color">#747474</property>
+                                            <property name="contentType">plain</property>
+                                            <text-property name="content"><![CDATA[    1.3. Licencia]]></text-property>
+                                        </text>
+                                    </cell>
+                                    <cell id="1415">
+                                        <label id="1469">
+                                            <property name="fontSize">12pt</property>
+                                            <property name="color">#747474</property>
+                                            <text-property name="text">5</text-property>
+                                            <structure name="action">
+                                                <property name="linkType">bookmark-link</property>
+                                                <expression name="targetBookmark">"1.3"</expression>
+                                            </structure>
+                                        </label>
+                                    </cell>
+                                </row>
+                                <row id="1416">
+                                    <cell id="1417">
+                                        <text id="1449">
+                                            <property name="fontSize">16pt</property>
+                                            <property name="color">#FF0000</property>
+                                            <property name="contentType">html</property>
+                                            <text-property name="content"><![CDATA[2. CATÁLOGO DE OBJETOS DIGITALES EDUCATIVOS]]></text-property>
+                                        </text>
+                                    </cell>
+                                    <cell id="1418">
+                                        <label id="1478">
+                                            <property name="fontSize">12pt</property>
+                                            <property name="color">#FF0000</property>
+                                            <text-property name="text">6</text-property>
+                                            <structure name="action">
+                                                <property name="linkType">bookmark-link</property>
+                                                <expression name="targetBookmark">"2"</expression>
+                                            </structure>
+                                        </label>
+                                    </cell>
+                                </row>
+                                <row id="1419">
+                                    <cell id="1420">
+                                        <text id="1450">
+                                            <property name="fontSize">12pt</property>
+                                            <property name="color">#747474</property>
+                                            <property name="contentType">plain</property>
+                                            <text-property name="content"><![CDATA[    2.1. Tipos de objetos digitales educativos]]></text-property>
+                                        </text>
+                                    </cell>
+                                    <cell id="1421">
+                                        <label id="1470">
+                                            <property name="fontSize">12pt</property>
+                                            <property name="color">#747474</property>
+                                            <text-property name="text">6</text-property>
+                                            <structure name="action">
+                                                <property name="linkType">bookmark-link</property>
+                                                <expression name="targetBookmark">"2.1"</expression>
+                                            </structure>
+                                        </label>
+                                    </cell>
+                                </row>
+                                <row id="1422">
+                                    <cell id="1423">
+                                        <text id="1451">
+                                            <property name="fontSize">10pt</property>
+                                            <property name="color">#747474</property>
+                                            <property name="contentType">plain</property>
+                                            <text-property name="content"><![CDATA[         2.1.1. Medias y Medias integradas]]></text-property>
+                                        </text>
+                                    </cell>
+                                    <cell id="1424">
+                                        <label id="1471">
+                                            <property name="fontSize">12pt</property>
+                                            <property name="color">#747474</property>
+                                            <text-property name="text">6</text-property>
+                                            <structure name="action">
+                                                <property name="linkType">bookmark-link</property>
+                                                <expression name="targetBookmark">"2.1.1"</expression>
+                                            </structure>
+                                        </label>
+                                    </cell>
+                                </row>
+                                <row id="1425">
+                                    <cell id="1426">
+                                        <text id="1452">
+                                            <property name="fontSize">10pt</property>
+                                            <property name="color">#747474</property>
+                                            <property name="contentType">plain</property>
+                                            <text-property name="content"><![CDATA[         2.1.2. Objetos de aprendizaje]]></text-property>
+                                        </text>
+                                    </cell>
+                                    <cell id="1427">
+                                        <label id="1472">
+                                            <property name="fontSize">12pt</property>
+                                            <property name="color">#747474</property>
+                                            <text-property name="text">6</text-property>
+                                            <structure name="action">
+                                                <property name="linkType">bookmark-link</property>
+                                                <expression name="targetBookmark">"2.1.2"</expression>
+                                            </structure>
+                                        </label>
+                                    </cell>
+                                </row>
+                                <row id="1428">
+                                    <cell id="1429">
+                                        <text id="1453">
+                                            <property name="fontSize">10pt</property>
+                                            <property name="color">#747474</property>
+                                            <property name="contentType">plain</property>
+                                            <text-property name="content"><![CDATA[         2.1.3. Secuencias Didácticas]]></text-property>
+                                        </text>
+                                    </cell>
+                                    <cell id="1430">
+                                        <label id="1473">
+                                            <property name="fontSize">12pt</property>
+                                            <property name="color">#747474</property>
+                                            <text-property name="text">7</text-property>
+                                            <structure name="action">
+                                                <property name="linkType">bookmark-link</property>
+                                                <expression name="targetBookmark">"2.1.3"</expression>
+                                            </structure>
+                                        </label>
+                                    </cell>
+                                </row>
+                                <row id="1431">
+                                    <cell id="1432">
+                                        <text id="1455">
+                                            <property name="fontSize">12pt</property>
+                                            <property name="color">#747474</property>
+                                            <property name="contentType">plain</property>
+                                            <text-property name="content"><![CDATA[    2.2. Clasificación y presentación del presente catálogo]]></text-property>
+                                        </text>
+                                    </cell>
+                                    <cell id="1433">
+                                        <label id="1474">
+                                            <property name="fontSize">12pt</property>
+                                            <property name="color">#747474</property>
+                                            <text-property name="text">8</text-property>
+                                            <structure name="action">
+                                                <property name="linkType">bookmark-link</property>
+                                                <expression name="targetBookmark">"2.2"</expression>
+                                            </structure>
+                                        </label>
+                                    </cell>
+                                </row>
+                                <row id="1434">
+                                    <cell id="1435">
+                                        <text id="1454">
+                                            <property name="fontSize">12pt</property>
+                                            <property name="color">#747474</property>
+                                            <property name="contentType">plain</property>
+                                            <text-property name="content"><![CDATA[    2.3. Lenguas de los Objetos Digitales Educativos]]></text-property>
+                                        </text>
+                                    </cell>
+                                    <cell id="1436">
+                                        <label id="1475">
+                                            <property name="fontSize">12pt</property>
+                                            <property name="color">#747474</property>
+                                            <text-property name="text">8</text-property>
+                                            <structure name="action">
+                                                <property name="linkType">bookmark-link</property>
+                                                <expression name="targetBookmark">"2.3"</expression>
+                                            </structure>
+                                        </label>
+                                    </cell>
+                                </row>
+                                <row id="1437">
+                                    <cell id="1438">
+                                        <text id="1456">
+                                            <property name="fontSize">16pt</property>
+                                            <property name="color">#FF0000</property>
+                                            <property name="contentType">html</property>
+                                            <text-property name="content"><![CDATA[3. CATÁLOGO DE OBJETOS DIGITALES EDUCATIVOS (SDS Y OAS)]]></text-property>
+                                        </text>
+                                    </cell>
+                                    <cell id="1439">
+                                        <label id="1476">
+                                            <property name="fontSize">12pt</property>
+                                            <property name="color">#FF0000</property>
+                                            <text-property name="text">9</text-property>
+                                            <structure name="action">
+                                                <property name="linkType">bookmark-link</property>
+                                                <expression name="targetBookmark">"3"</expression>
+                                            </structure>
+                                        </label>
+                                    </cell>
+                                </row>
+                            </detail>
+                            <footer>
+                                <row id="1440">
+                                    <cell id="1441"/>
+                                    <cell id="1442"/>
+                                </row>
+                            </footer>
+                        </table>
+                    </cell>
+                </row>
+            </footer>
+        </table>
+        <table id="489">
+            <property name="masterPage">MasterPage1</property>
+            <property name="width">100%</property>
+            <column id="518"/>
+            <detail>
+                <row id="492">
+                    <property name="height">0.0208333333in</property>
+                    <cell id="493">
+                        <text id="535">
+                            <property name="fontSize">20pt</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="color">#747474</property>
+                            <property name="textUnderline">none</property>
+                            <property name="borderBottomColor">#747474</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">1px</property>
+                            <property name="marginTop">0pt</property>
+                            <property name="paddingTop">1pt</property>
+                            <property name="paddingBottom">0pt</property>
+                            <property name="textAlign">left</property>
+                            <expression name="bookmark">"1"</expression>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[1.  INTRODUCCIÓN
+]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="494">
+                    <cell id="495">
+                        <text id="540">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                        <text id="536">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Red.es, junto con las distintas Administraciones educativas autonómicas y estatales, ha impulsado el programa Internet en el Aula que se encuadra dentro de las actuaciones previstas en el Plan Avanza.]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="496">
+                    <cell id="497">
+                        <text id="651">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="498">
+                    <cell id="499">
+                        <text id="542">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[La Entidad Pública Empresarial Red.es, adscrita al Ministerio de Industria, Turismo y Comercio a través de la Secretaría de Estado de Telecomunicaciones y para la Sociedad de la Información, tiene como misión contribuir al fomento y desarrollo de las telecomunicaciones y la sociedad de la información en nuestro país.]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="500">
+                    <cell id="501">
+                        <text id="652">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="502">
+                    <cell id="503">
+                        <text id="544">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="marginTop">0pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Las funciones de Red.es le han sido legalmente atribuidas en el artículo 55 de la Ley 14/2000, de 29 de diciembre, por el que se modifica la Disposición Adicional Sexta de la Ley 11/1998, de 24 de abril, General de Telecomunicaciones expresamente declarada en vigor por la Disposición derogatoria única de la Ley 32/2003 de 3 de noviembre General de Telecomunicaciones.]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="504">
+                    <cell id="505">
+                        <text id="1108">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="color">#FF0000</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[(http://www.red.es)]]></text-property>
+                        </text>
+                        <text id="653">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="506">
+                    <cell id="507">
+                        <text id="546">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[El Plan Avanza 2006-2010 para el desarrollo de la Sociedad de la Información y de convergencia con Europa y entre Comunidades Autónomas y Ciudades Autónomas (en adelante "Plan Avanza"), aprobado por el Consejo de Ministros del 4 de noviembre de 2005, se enmarca en los ejes estratégicos del Programa Nacional de Reformas diseñado por el Gobierno para cumplir con la Estrategia de Lisboa. En concreto, el Plan Avanza se integra en el eje estratégico de impulso a la I+D+i (Investigación+Desarrollo+innovación) que ha puesto en marcha el Gobierno a través del Programa Ingenio 2010.]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="508">
+                    <cell id="509">
+                        <text id="654">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="510">
+                    <cell id="511">
+                        <text id="548">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[El Plan Avanza se estructura en torno a cinco grandes áreas de actuación:]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="655">
+                    <cell id="656">
+                        <text id="657">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="512">
+                    <cell id="513">
+                        <text id="550">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[-     Hogar e Inclusión de Ciudadanos: el reto más importante en este área es hacer partícipes a los ciudadanos de las ventajas de utilizar Internet y las Tecnologías de la Información y la Comunicación (en adelante "TIC"). Para ello, las medidas que se ponen en marcha garantizan la inclusión de toda la población, facilitando el acceso y difundiendo servicios de utilidad de las nuevas tecnologías para mejorar la calidad de vida, la información y la participación del ciudadano en su comunidad.]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="514">
+                    <cell id="515">
+                        <text id="658">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="516">
+                    <cell id="517">
+                        <text id="552">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[-     Competitividad e Innovación: esta área de actuación incide en las medidas para impulsar el desarrollo del sector TIC en España y en la adopción de las Tecnologías de la Información y la Comunicación (TIC) por parte de las PYMEs.]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="553">
+                    <cell id="554">
+                        <text id="659">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="555">
+                    <cell id="556">
+                        <text id="564">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[-     Educación en la Era Digital: persigue incorporar las TIC en el proceso educativo e integrar a todos los agentes que participan en él.]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="561">
+                    <cell id="562">
+                        <text id="660">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="559">
+                    <cell id="560">
+                        <text id="566">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[-     Servicios Públicos Digitales: conseguir una Administración Electrónica plenamente
+desarrollada constituye un objetivo clave del Plan Avanza. La consecución de este objetivo incide directamente en el resto de los objetivos del Plan.]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="557">
+                    <cell id="558">
+                        <text id="661">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="568">
+                    <cell id="569">
+                        <text id="574">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[-     Contexto Digital: la existencia de una infraestructura de banda ancha segura, la identidad digital y la disponibilidad de una oferta de contenidos adecuados en red son los elementos que establecen el nuevo contexto digital, al actuar como catalizadores imprescindibles para el desarrollo de la Sociedad de la Información.]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="572">
+                    <cell id="573">
+                        <text id="662">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="570">
+                    <cell id="571">
+                        <text id="576">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[El Plan Avanza (http://www.planavanza.es) se orienta a conseguir la adecuada utilización de las TIC para contribuir al éxito de un modelo de crecimiento económico basado en el incremento de la competitividad y la productividad, la promoción de la igualdad social y regional y la mejora del bienestar y la calidad de vida de los ciudadanos.]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="577">
+                    <cell id="578">
+                        <text id="663">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="579">
+                    <cell id="580">
+                        <text id="607">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Es en relación al área "Educación en la Era Digital" donde se diseña y desarrolla el programa Internet en el Aula.]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="581">
+                    <cell id="582">
+                        <text id="608">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="664">
+                    <cell id="665">
+                        <text id="666">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="583">
+                    <cell id="584">
+                        <text id="609">
+                            <property name="fontSize">18pt</property>
+                            <property name="color">#FF0000</property>
+                            <expression name="bookmark">"1.1"</expression>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[1.1. Internet en el Aula]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="585">
+                    <cell id="586">
+                        <text id="610">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="587">
+                    <cell id="588">
+                        <text id="611">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Red.es, junto con las distintas Administraciones educativas autonómicas y estatales, ha impulsado el programa Internet en el Aula que se encuadra dentro de las actuaciones previstas en el Plan Avanza.]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="589">
+                    <cell id="590">
+                        <text id="667">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="591">
+                    <cell id="592">
+                        <text id="613">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Entre las actuaciones comprendidas dentro del Programa Internet en el Aula, Red.es, junto con el Ministerio de Educación, Política Social y Deporte (MEPSyD), el Ministerio de Industria, Turismo y Comercio (MITYC), y las Comunidades Autónomas y Ciudades Autónomas (CCAA), están desarrollando acciones con el objeto de apoyar la integración de las Tecnologías de la Información y la Comunicación (TIC) en la Educación, destinadas a centros de enseñanza financiados con fondos públicos de régimen general no universitario y de régimen especial, así como a centros de formación de profesores y escuelas universitarias de formación del profesorado.]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="593">
+                    <cell id="594">
+                        <text id="668">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="595">
+                    <cell id="596">
+                        <text id="615">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Una parte importante dentro de las acciones del programa Internet en el Aula está dedicada a la creación de nuevos contenidos educativos. Estas actuaciones van encaminadas a ofrecer materiales de apoyo al docente para su labor educativa haciendo uso de las TIC. Con este objetivo, se han puesto en marcha distintas acciones orientadas a dar cabida a la producción y puesta a disposición de los centros educativos, de materiales de muy diversas procedencias y condiciones o licencias de uso.]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="597">
+                    <cell id="598">
+                        <text id="616">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="599">
+                    <cell id="600">
+                        <text id="617">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Las Administraciones Públicas y el sector privado han aunado esfuerzos para generar y aplicar contenidos digitales curriculares en línea, y sentar las bases para potenciar la participación de ambos en la generalización del empleo de dichos contenidos en las aulas del sistema educativo español.]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="619">
+                    <cell id="620">
+                        <text id="669">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="601">
+                    <cell id="602">
+                        <text id="618">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[En el marco de las citadas actuaciones, Red.es ha desarrollado Objetos Dígitales Educativos con los siguientes objetivos:]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="603">
+                    <cell id="604">
+                        <text id="670">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="605">
+                    <cell id="606">
+                        <text id="621">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[-     Proporcionar un nuevo impulso a la cobertura curricular, contemplando para ello, las nuevas disposiciones generales introducidas por la LOE.]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="622">
+                    <cell id="623">
+                        <text id="671">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="624">
+                    <cell id="625">
+                        <text id="626">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[-     Afianzar un modelo de producción de contenidos educativos basado en la aplicación de
+modelos y normas estándar en el que se ha venido trabajando desde que empezó el programa
+Internet en el Aula.]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="627">
+                    <cell id="628">
+                        <text id="641">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="675">
+                    <cell id="676">
+                        <text id="677">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="629">
+                    <cell id="630">
+                        <text id="642">
+                            <property name="fontSize">18pt</property>
+                            <property name="color">#FF0000</property>
+                            <expression name="bookmark">"1.2"</expression>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[1.2. Financiación]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="631">
+                    <cell id="632">
+                        <text id="643">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="633">
+                    <cell id="634">
+                        <text id="644">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Los desarrollos de contenidos dígitales educativos cuentan con financiación procedente de fondos FEDER de los Programas Operativos FEDER. Estos programas pretenden dar un fuerte impulso a la disponibilidad y utilización de las telecomunicaciones y las tecnologías de la información, poniendo en marcha servicios y desplegando infraestructuras de redes y acceso a Internet de banda ancha en los ámbitos de mayor necesidad y cercanía al ciudadano (escuelas, bibliotecas, entornos rurales, etc.), así como creando contenidos digitales e implementando servicios que faciliten el acceso a los ciudadanos a la Sociedad de la Información.]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="635">
+                    <cell id="636">
+                        <text id="645">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="672">
+                    <cell id="673">
+                        <text id="674">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="637">
+                    <cell id="638">
+                        <text id="646">
+                            <property name="fontSize">18pt</property>
+                            <property name="color">#FF0000</property>
+                            <expression name="bookmark">"1.3"</expression>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[1.3. Licencia]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="639">
+                    <cell id="640">
+                        <text id="647">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="648">
+                    <cell id="649">
+                        <text id="650">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Los Objetos Digitales Educativos han sido realizados en el marco del programa Internet en el Aula.
+Este programa ha sido desarrollado y ejecutado por el Ministerio de Industria, Turismo y Comercio, la entidad pública empresarial Red.es, el Ministerio de Educación, Política Social y Deporte y las Consejerías de Educación de las distintas Comunidades Autónomas de España. Los materiales educativos digitales desarrollados en el marco del programa Internet en el Aula, pueden ser utilizados y adaptados en los términos de la licencia Reconocimiento-No comercial-Compartir Igual España de Creative Commons.]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+            </footer>
+        </table>
+        <table id="678">
+            <property name="masterPage">MasterPage2</property>
+            <property name="width">100%</property>
+            <property name="repeatHeader">false</property>
+            <column id="693"/>
+            <detail>
+                <row id="870">
+                    <cell id="871">
+                        <text id="694">
+                            <property name="fontSize">20pt</property>
+                            <property name="color">#747474</property>
+                            <property name="borderBottomColor">#747474</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">1px</property>
+                            <property name="textAlign">left</property>
+                            <expression name="bookmark">"2"</expression>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[2. CATÁLOGO DE OBJETOS DIGITALES EDUCATIVOS]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="681">
+                    <cell id="682">
+                        <text id="695">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="683">
+                    <cell id="684">
+                        <text id="696">
+                            <property name="fontSize">18pt</property>
+                            <property name="color">#FF0000</property>
+                            <expression name="bookmark">"2.1"</expression>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[2.1. Tipos de Objetos Digitales Educativos desarrollados]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="685">
+                    <cell id="686">
+                        <text id="697">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="687">
+                    <cell id="688">
+                        <text id="698">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Los contenidos se han desarrollado bajo el paradigma de Objetos Digitales Educativos reutilizables (ODEs). Esta concepción de los contenidos está fundada en una arquitectura modular de jerarquía creciente basada en modelos de agregación. Los niveles de agregación definen y estructuran la granularidad estructural y funcional de un ODE y atienden a una cobertura curricular aproximada, organizada en función de la disciplina y el nivel educativo.]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="689">
+                    <cell id="690">
+                        <text id="699">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="691">
+                    <cell id="692">
+                        <text id="700">
+                            <property name="fontSize">14pt</property>
+                            <property name="color">#FF0000</property>
+                            <expression name="bookmark">"2.1.1"</expression>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[2.1.1. Medias y Medias integrados]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="701">
+                    <cell id="702">
+                        <text id="713">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="703">
+                    <cell id="704">
+                        <text id="714">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Se trata o bien de recursos o elementos multimedia (media integrado), o bien de fragmentos de éstos (media), como por ejemplo, ilustración, fotografía, vídeo, locución, texto, hipertexto, etc.
+Son contenidos básicos, deslocalizados y reutilizables en diferentes contextos. Se refieren a la unidad de agregación más pequeña y no llevan asociada una función didáctica explícita: Medias y Medias integrados (MDs).]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="705">
+                    <cell id="706">
+                        <text id="715">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="707">
+                    <cell id="708">
+                        <text id="716">
+                            <property name="fontSize">14pt</property>
+                            <property name="color">#FF0000</property>
+                            <expression name="bookmark">"2.1.2"</expression>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[2.1.2. Objetos de Aprendizaje]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="709">
+                    <cell id="710">
+                        <text id="717">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="711">
+                    <cell id="712">
+                        <text id="718">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Son los ODEs más simples e indivisibles que conllevan una función didáctica explícita. Se obtienen al desarrollar o aplicar un diseño instructivo completo (contenidos, actividades, evaluación ..) a la combinación de uno o varios Medias o Medias Integrados. Se denominan Objetos de Aprendizaje (OAs). Los OAs se compondrán al menos de los siguientes elementos:]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="719">
+                    <cell id="720">
+                        <text id="769">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="721">
+                    <cell id="722">
+                        <text id="770">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[-     Contenido (conceptual, procedimental, actitudinal, competencial): posibilita al alumno el trabajo con uno o varios hechos, conceptos, principios y/o procedimientos que necesita conocer y comprender para alcanzar los objetivos didácticos del objeto de aprendizaje. Tanto la organización de la información como su representación podrá realizarse de diversas formas, atendiendo siempre al nivel educativo, el área de conocimiento y la metodología didáctica propuesta.]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="723">
+                    <cell id="724">
+                        <text id="771">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="725">
+                    <cell id="726">
+                        <text id="772">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[-     Actividad: propone al alumno un proceso realmente activo y de implicación para llegar a la comprensión de los conceptos e interiorización de los conocimientos identificados y explicitados en las fichas de diseño instructivo. Las actividades utilizan las soluciones metodológicas más apropiadas y eficientes desde el punto de vista del aprendizaje, teniendo en cuenta el tipo de contenidos, el tipo de alumno destinatario, los objetivos perseguidos y las posibilidades derivadas de la utilización del ordenador (interactividad, multimedia, trabajo cooperativo/colaborativo, resolución de problemas/casos, simulaciones, trabajos de investigación, creatividad, etc.).]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="727">
+                    <cell id="728">
+                        <text id="773">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="729">
+                    <cell id="730">
+                        <text id="774">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[-     Evaluación: todo OA llevará asociado un procedimiento de evaluación que permita contrastar en qué medida se han alcanzado los objetivos de aprendizaje asociados a dicho objeto, tanto en procesos de autoevaluación como de heteroevaluación. Esta evaluación estará referenciada en el OA, pero podrá funcionar también como un objeto independiente desagregado. Para que el proceso de enseñanza-aprendizaje sea consistente, el método de evaluación y sus respectivas herramientas deberán ir siempre acordes al método didáctico en que se basen las actividades de aprendizaje.]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="731">
+                    <cell id="732">
+                        <text id="775">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="733">
+                    <cell id="734">
+                        <text id="776">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[-     Ampliación o Extensión: ofrece al usuario pautas para la ampliación, adaptación o extensión de los objetivos propuestos, permitiendo también la contextualización y/o generalización de los conocimientos adquiridos. Estas podrán tomar diferentes formas: propuesta de actividades externas al objeto, con o sin medios tecnológicos, relación de fuentes documentales, recomendaciones sobre otros recursos o actividades vinculadas, etc.]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="735">
+                    <cell id="736">
+                        <text id="777">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="737">
+                    <cell id="738">
+                        <text id="778">
+                            <property name="fontSize">14pt</property>
+                            <property name="color">#FF0000</property>
+                            <expression name="bookmark">"2.1.3"</expression>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[2.1.3. Secuencias Didácticas]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="739">
+                    <cell id="740">
+                        <text id="779">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="741">
+                    <cell id="742">
+                        <text id="780">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Se obtienen al desarrollar y aplicar un diseño instructivo didáctico propio y completo (incluye secuenciación) a la combinación de varios OAs de nivel 2 y algunos de nivel 1. Presentan como rasgo distintivo el hecho de que la estructura del contenido se modela mediante el empaquetado (uso de organizations e ítems), y la secuenciación. La navegación se organiza mediante la secuenciación y navegación SCORM (IMS SS y SCOs). Las SDs se compondrán de, al menos, los siguientes elementos:]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="743">
+                    <cell id="744">
+                        <text id="781">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="745">
+                    <cell id="746">
+                        <text id="782">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[-     Mapa conceptual]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="747">
+                    <cell id="748">
+                        <text id="783">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="749">
+                    <cell id="750">
+                        <text id="784">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[-     Introducción]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="751">
+                    <cell id="752">
+                        <text id="785">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="753">
+                    <cell id="754">
+                        <text id="786">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[-     OAs (en el número que sea preciso para cumplir los objetivos didácticos de la Secuencia)]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="755">
+                    <cell id="756">
+                        <text id="787">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="757">
+                    <cell id="758">
+                        <text id="788">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[-     Evaluación]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="759">
+                    <cell id="760">
+                        <text id="789">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="761">
+                    <cell id="762">
+                        <text id="790">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[El orden, encadenamiento (secuenciación) y número de dichos elementos dependerá de los objetivos de aprendizaje, del tipo de contenido y la metodología didáctica seleccionada.]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="763">
+                    <cell id="764">
+                        <text id="815">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="765">
+                    <cell id="766">
+                        <text id="816">
+                            <property name="fontSize">18pt</property>
+                            <property name="color">#FF0000</property>
+                            <expression name="bookmark">"2.2"</expression>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[2.2. Clasificación y presentación del presente catálogo]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="767">
+                    <cell id="768">
+                        <text id="817">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="791">
+                    <cell id="792">
+                        <text id="818">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Los Objetos Digitales Educativos correspondientes a Secuenias Didáctias y Objetos de Aprendizaje se presentan en este catálogo atendiendo a su clasificción según el nivel educativo y la materia o disciplina a la que pertenecen dentro del currículo.]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="793">
+                    <cell id="794">
+                        <text id="819">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="795">
+                    <cell id="796">
+                        <text id="820">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Los Objetos Digitales Educativos correspondientes a Medias y Medias integrados se presentan respondiendo a su tipología (animaciones, imágenes, señales, sonidos y vídeos).]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="797">
+                    <cell id="798">
+                        <text id="821">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="799">
+                    <cell id="800">
+                        <text id="822">
+                            <property name="fontSize">18pt</property>
+                            <property name="color">#FF0000</property>
+                            <expression name="bookmark">"2.3"</expression>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[2.3. Lenguas de los Objetos Digitales Educativos]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="801">
+                    <cell id="802">
+                        <text id="823">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="803">
+                    <cell id="804">
+                        <text id="824">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[La mayoría de los Objetos Digitales Educativos presentados en este catálogo se han desarrollado en las siguientes lenguas:]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="805">
+                    <cell id="806">
+                        <text id="825">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="807">
+                    <cell id="808">
+                        <text id="826">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[-   Castellano                    -   Inglés]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="809">
+                    <cell id="810">
+                        <text id="827">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="811">
+                    <cell id="812">
+                        <text id="828">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[-   Catalán                         -   Euskera]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="813">
+                    <cell id="814">
+                        <text id="829">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<br>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="830">
+                    <cell id="831">
+                        <text id="832">
+                            <property name="fontFamily">"Arial"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[-   Gallego                         -   Valenciano]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+            </footer>
+        </table>
+        <table id="1018">
+            <property name="masterPage">MasterPage3</property>
+            <property name="canShrink">true</property>
+            <property name="width">100%</property>
+            <property name="dataSet">Data Set</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">descripcion</property>
+                    <expression name="expression">dataSetRow["descripcion"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">edad</property>
+                    <expression name="expression">dataSetRow["edad"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">identificador</property>
+                    <expression name="expression">dataSetRow["identificador"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">idioma</property>
+                    <expression name="expression">dataSetRow["idioma"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">idiomaTexto</property>
+                    <expression name="expression">dataSetRow["idiomaTexto"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">titulo</property>
+                    <expression name="expression">dataSetRow["titulo"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">urlImagen</property>
+                    <expression name="expression">dataSetRow["urlImagen"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">objetivos</property>
+                    <expression name="expression">dataSetRow["objetivos"]</expression>
+                    <property name="dataType">any</property>
+                </structure>
+                <structure>
+                    <property name="name">nivel1Cobertura</property>
+                    <expression name="expression">dataSetRow["nivel1Cobertura"]</expression>
+                    <property name="dataType">any</property>
+                </structure>
+                <structure>
+                    <property name="name">nivel2Cobertura</property>
+                    <expression name="expression">dataSetRow["nivel2Cobertura"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">nivel3Cobertura</property>
+                    <expression name="expression">dataSetRow["nivel3Cobertura"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">nombreAreaCurricular</property>
+                    <expression name="expression">dataSetRow["nombreAreaCurricular"]</expression>
+                    <property name="dataType">any</property>
+                </structure>
+            </list-property>
+            <property name="repeatHeader">false</property>
+            <property name="pageBreakInterval">100</property>
+            <column id="1027"/>
+            <header>
+                <row id="1019">
+                    <cell id="1020">
+                        <grid id="1082">
+                            <property name="width">100%</property>
+                            <column id="1083"/>
+                            <row id="1084">
+                                <cell id="1085">
+                                    <text id="1090">
+                                        <property name="fontSize">20pt</property>
+                                        <property name="color">#747474</property>
+                                        <property name="borderBottomColor">#747474</property>
+                                        <property name="borderBottomStyle">solid</property>
+                                        <property name="borderBottomWidth">1px</property>
+                                        <expression name="bookmark">"3"</expression>
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[3. CATÁLOGO DE OBJETOS DIGITALES EDUCATIVOS (SDS Y OAS)]]></text-property>
+                                    </text>
+                                </cell>
+                            </row>
+                        </grid>
+                    </cell>
+                </row>
+                <row id="1102">
+                    <cell id="1103">
+                        <text id="1104">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<BR>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+            </header>
+            <group id="1030">
+                <property name="groupName">NewTableGroup2</property>
+                <property name="interval">none</property>
+                <property name="sortDirection">asc</property>
+                <expression name="keyExpr">row["nivel1Cobertura"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue">row["nivel1Cobertura"]</expression>
+                </structure>
+                <property name="repeatHeader">false</property>
+                <property name="hideDetail">false</property>
+                <property name="pageBreakAfter">auto</property>
+                <property name="pageBreakBefore">auto</property>
+                <property name="pageBreakInside">auto</property>
+                <header>
+                    <row id="1031">
+                        <cell id="1032">
+                            <data id="1100">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">18pt</property>
+                                <property name="color">#FF0000</property>
+                                <property name="resultSetColumn">nivel1Cobertura</property>
+                            </data>
+                        </cell>
+                    </row>
+                </header>
+                <footer>
+                    <row id="1033">
+                        <cell id="1034"/>
+                    </row>
+                </footer>
+            </group>
+            <group id="1092">
+                <property name="groupName">NewTableGroup3</property>
+                <property name="interval">none</property>
+                <property name="sortDirection">asc</property>
+                <expression name="keyExpr">row["nivel2Cobertura"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue">row["nivel2Cobertura"]</expression>
+                </structure>
+                <property name="repeatHeader">false</property>
+                <property name="hideDetail">false</property>
+                <property name="pageBreakAfter">auto</property>
+                <property name="pageBreakBefore">auto</property>
+                <property name="pageBreakInside">auto</property>
+                <header>
+                    <row id="1105">
+                        <cell id="1106">
+                            <text id="1107">
+                                <property name="contentType">html</property>
+                                <text-property name="content"><![CDATA[<BR>]]></text-property>
+                            </text>
+                        </cell>
+                    </row>
+                    <row id="1093">
+                        <cell id="1094">
+                            <data id="1101">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">16pt</property>
+                                <property name="color">#FF0000</property>
+                                <property name="marginTop">0pt</property>
+                                <property name="paddingTop">1pt</property>
+                                <property name="textAlign">left</property>
+                                <property name="resultSetColumn">nivel2Cobertura</property>
+                            </data>
+                        </cell>
+                    </row>
+                </header>
+                <footer>
+                    <row id="1095">
+                        <cell id="1096"/>
+                    </row>
+                </footer>
+            </group>
+            <group id="1520">
+                <property name="groupName">NewTableGroup5</property>
+                <property name="interval">none</property>
+                <property name="sortDirection">asc</property>
+                <expression name="keyExpr">row["nivel3Cobertura"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue">row["nivel3Cobertura"]</expression>
+                </structure>
+                <property name="repeatHeader">false</property>
+                <property name="hideDetail">false</property>
+                <property name="pageBreakAfter">auto</property>
+                <property name="pageBreakBefore">auto</property>
+                <property name="pageBreakInside">auto</property>
+                <header>
+                    <row id="1521">
+                        <cell id="1522">
+                            <text id="1548">
+                                <property name="contentType">html</property>
+                                <text-property name="content"><![CDATA[<br>]]></text-property>
+                            </text>
+                            <data id="1525">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">14pt</property>
+                                <property name="color">#FF0000</property>
+                                <property name="resultSetColumn">nivel3Cobertura</property>
+                            </data>
+                        </cell>
+                    </row>
+                </header>
+                <footer>
+                    <row id="1523">
+                        <cell id="1524"/>
+                    </row>
+                </footer>
+            </group>
+            <group id="1541">
+                <property name="groupName">NewTableGroup6</property>
+                <property name="interval">none</property>
+                <property name="sortDirection">asc</property>
+                <expression name="keyExpr">row["idiomaTexto"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue">row["idiomaTexto"]</expression>
+                </structure>
+                <property name="repeatHeader">false</property>
+                <property name="hideDetail">false</property>
+                <property name="pageBreakAfter">auto</property>
+                <property name="pageBreakBefore">auto</property>
+                <property name="pageBreakInside">auto</property>
+                <header>
+                    <row id="1542">
+                        <cell id="1543">
+                            <text id="1547">
+                                <property name="contentType">html</property>
+                                <text-property name="content"><![CDATA[<br>]]></text-property>
+                            </text>
+                            <data id="1546">
+                                <property name="fontFamily">"Arial"</property>
+                                <property name="fontSize">12pt</property>
+                                <structure name="stringFormat">
+                                    <property name="category">></property>
+                                    <property name="pattern">></property>
+                                </structure>
+                                <property name="resultSetColumn">idiomaTexto</property>
+                            </data>
+                        </cell>
+                    </row>
+                </header>
+                <footer>
+                    <row id="1544">
+                        <cell id="1545"/>
+                    </row>
+                </footer>
+            </group>
+            <detail>
+                <row id="1021">
+                    <cell id="1022">
+                        <text id="1029">
+                            <property name="contentType">html</property>
+                            <text-property name="content"><![CDATA[<BR><BR>]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+                <row id="1023">
+                    <cell id="1024">
+                        <grid id="1037">
+                            <property name="borderBottomColor">#C0C0C0</property>
+                            <property name="borderBottomStyle">solid</property>
+                            <property name="borderBottomWidth">1px</property>
+                            <property name="borderLeftColor">#C0C0C0</property>
+                            <property name="borderLeftStyle">solid</property>
+                            <property name="borderLeftWidth">1px</property>
+                            <property name="borderRightColor">#C0C0C0</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">1px</property>
+                            <property name="borderTopColor">#C0C0C0</property>
+                            <property name="borderTopStyle">solid</property>
+                            <property name="borderTopWidth">1px</property>
+                            <property name="marginTop">0pt</property>
+                            <property name="textAlign">center</property>
+                            <property name="verticalAlign">middle</property>
+                            <property name="pageBreakAfter">auto</property>
+                            <property name="pageBreakBefore">avoid</property>
+                            <property name="pageBreakInside">auto</property>
+                            <property name="height">2.0833333333in</property>
+                            <property name="width">100%</property>
+                            <column id="1038">
+                                <property name="width">30%</property>
+                                <property name="fontSize">medium</property>
+                                <property name="marginBottom">0pt</property>
+                                <property name="textAlign">left</property>
+                                <property name="whiteSpace">normal</property>
+                                <property name="display">block</property>
+                                <property name="showIfBlank">false</property>
+                            </column>
+                            <column id="1039">
+                                <property name="width">70%</property>
+                            </column>
+                            <row id="1040">
+                                <cell id="1041">
+                                    <property name="height">210px</property>
+                                    <property name="width">210px</property>
+                                    <property name="borderRightColor">#EBEBEB</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderRightWidth">1px</property>
+                                    <property name="paddingTop">1pt</property>
+                                    <property name="textAlign">center</property>
+                                    <property name="verticalAlign">middle</property>
+                                    <property name="pageBreakAfter">auto</property>
+                                    <image id="1042">
+                                        <property name="height">70mm</property>
+                                        <property name="width">60mm</property>
+                                        <property name="source">url</property>
+                                        <expression name="uri">row["urlImagen"]</expression>
+                                    </image>
+                                </cell>
+                                <cell id="1043">
+                                    <property name="paddingTop">1pt</property>
+                                    <grid id="1044">
+                                        <property name="marginTop">0pt</property>
+                                        <property name="textAlign">left</property>
+                                        <property name="display">block</property>
+                                        <property name="pageBreakAfter">avoid</property>
+                                        <property name="pageBreakBefore">avoid</property>
+                                        <property name="pageBreakInside">avoid</property>
+                                        <property name="showIfBlank">false</property>
+                                        <property name="canShrink">true</property>
+                                        <property name="width">100%</property>
+                                        <column id="1045">
+                                            <property name="width">1.1354166667in</property>
+                                        </column>
+                                        <column id="1046">
+                                            <property name="width">88%</property>
+                                            <property name="textAlign">left</property>
+                                        </column>
+                                        <row id="1047">
+                                            <property name="height">0.3541666667in</property>
+                                            <cell id="1048">
+                                                <text id="1049">
+                                                    <property name="fontFamily">"Arial"</property>
+                                                    <property name="fontSize">12pt</property>
+                                                    <property name="fontWeight">bold</property>
+                                                    <property name="marginTop">0pt</property>
+                                                    <property name="paddingTop">1pt</property>
+                                                    <property name="textAlign">left</property>
+                                                    <property name="contentType">auto</property>
+                                                    <text-property name="content" key="titulo"><![CDATA[Título:]]></text-property>
+                                                </text>
+                                            </cell>
+                                            <cell id="1050">
+                                                <data id="1051">
+                                                    <property name="fontFamily">"Arial"</property>
+                                                    <property name="fontSize">12pt</property>
+                                                    <property name="marginTop">0pt</property>
+                                                    <property name="paddingTop">1pt</property>
+                                                    <property name="textAlign">left</property>
+                                                    <property name="whiteSpace">normal</property>
+                                                    <property name="canShrink">true</property>
+                                                    <property name="resultSetColumn">titulo</property>
+                                                </data>
+                                            </cell>
+                                        </row>
+                                        <row id="1486">
+                                            <property name="height">0.3541666667cm</property>
+                                            <cell id="1487"/>
+                                            <cell id="1488"/>
+                                        </row>
+                                        <row id="1052">
+                                            <property name="height">0.2395833333in</property>
+                                            <cell id="1053"/>
+                                            <cell id="1054">
+                                                <grid id="1055">
+                                                    <property name="width">100%</property>
+                                                    <column id="1056">
+                                                        <property name="width">70%</property>
+                                                    </column>
+                                                    <column id="1057">
+                                                        <property name="width">30%</property>
+                                                    </column>
+                                                    <row id="1058">
+                                                        <cell id="1059">
+                                                            <label id="1060">
+                                                                <property name="fontFamily">"Arial"</property>
+                                                                <property name="fontSize">12pt</property>
+                                                                <property name="color">#FF8080</property>
+                                                                <property name="textUnderline">underline</property>
+                                                                <property name="marginTop">0pt</property>
+                                                                <property name="paddingTop">1pt</property>
+                                                                <property name="textAlign">left</property>
+                                                                <property name="widows">2</property>
+                                                                <property name="height">20px</property>
+                                                                <property name="width">70%</property>
+                                                                <text-property name="text" key="visualizarContenido"></text-property>
+                                                                <structure name="action">
+                                                                    <property name="linkType">hyperlink</property>
+                                                                    <expression name="uri">params["RP_UrlFicha"]+"/"+row["idioma"]+"/"+row["identificador"]</expression>
+                                                                    <property name="targetWindow">_blank</property>
+                                                                </structure>
+                                                            </label>
+                                                        </cell>
+                                                        <cell id="1061">
+                                                            <property name="width">30%</property>
+                                                            <property name="canShrink">true</property>
+                                                        </cell>
+                                                    </row>
+                                                </grid>
+                                            </cell>
+                                        </row>
+                                        <row id="1498">
+                                            <property name="height">0.354cm</property>
+                                            <property name="borderTopColor">#C0C0C0</property>
+                                            <property name="borderTopStyle">solid</property>
+                                            <property name="borderTopWidth">1px</property>
+                                            <cell id="1499"/>
+                                            <cell id="1500"/>
+                                        </row>
+                                        <row id="1062">
+                                            <property name="height">0.3541666667cm</property>
+                                            <property name="borderBottomColor">#C0C0C0</property>
+                                            <property name="borderBottomStyle">solid</property>
+                                            <property name="borderBottomWidth">1px</property>
+                                            <cell id="1063">
+                                                <text id="1064">
+                                                    <property name="fontFamily">"Arial"</property>
+                                                    <property name="fontSize">12pt</property>
+                                                    <property name="fontWeight">bold</property>
+                                                    <property name="textAlign">left</property>
+                                                    <property name="contentType">auto</property>
+                                                    <text-property name="content" key="edad"><![CDATA[Edad]]></text-property>
+                                                </text>
+                                            </cell>
+                                            <cell id="1065">
+                                                <data id="1066">
+                                                    <property name="fontFamily">"Arial"</property>
+                                                    <property name="fontSize">12pt</property>
+                                                    <property name="textAlign">left</property>
+                                                    <property name="resultSetColumn">edad</property>
+                                                </data>
+                                            </cell>
+                                        </row>
+                                        <row id="1492">
+                                            <property name="height">0.5cm</property>
+                                            <property name="borderTopColor">#C0C0C0</property>
+                                            <property name="borderTopStyle">solid</property>
+                                            <property name="borderTopWidth">thin</property>
+                                            <cell id="1493"/>
+                                            <cell id="1494"/>
+                                        </row>
+                                        <row id="1067">
+                                            <property name="height">0.40625in</property>
+                                            <cell id="1068">
+                                                <text id="1069">
+                                                    <property name="fontFamily">"Arial"</property>
+                                                    <property name="fontSize">12pt</property>
+                                                    <property name="fontWeight">bold</property>
+                                                    <property name="marginTop">0pt</property>
+                                                    <property name="paddingTop">1pt</property>
+                                                    <property name="textAlign">left</property>
+                                                    <property name="contentType">auto</property>
+                                                    <text-property name="content" key="descripcion"><![CDATA[Descripción]]></text-property>
+                                                </text>
+                                            </cell>
+                                            <cell id="1070">
+                                                <data id="1071">
+                                                    <property name="fontFamily">"Arial"</property>
+                                                    <property name="fontSize">12pt</property>
+                                                    <property name="marginTop">0pt</property>
+                                                    <property name="paddingTop">1pt</property>
+                                                    <property name="textAlign">left</property>
+                                                    <property name="canShrink">true</property>
+                                                    <property name="resultSetColumn">descripcion</property>
+                                                </data>
+                                            </cell>
+                                        </row>
+                                        <row id="1489">
+                                            <property name="height">0.5cm</property>
+                                            <property name="borderTopColor">#C0C0C0</property>
+                                            <property name="borderTopStyle">solid</property>
+                                            <property name="borderTopWidth">1px</property>
+                                            <cell id="1490"/>
+                                            <cell id="1491"/>
+                                        </row>
+                                        <row id="1549">
+                                            <property name="height">0.521in</property>
+                                            <property name="borderBottomColor">#C0C0C0</property>
+                                            <property name="borderBottomStyle">solid</property>
+                                            <property name="borderBottomWidth">1px</property>
+                                            <cell id="1550">
+                                                <text id="1552">
+                                                    <property name="fontFamily">"Arial"</property>
+                                                    <property name="fontSize">12pt</property>
+                                                    <property name="fontWeight">bold</property>
+                                                    <property name="contentType">auto</property>
+                                                    <text-property name="content" key="areaCurricular"><![CDATA[Area Curricular]]></text-property>
+                                                </text>
+                                            </cell>
+                                            <cell id="1551">
+                                                <text-data id="1554">
+                                                    <property name="fontFamily">"Arial"</property>
+                                                    <property name="fontSize">12pt</property>
+                                                    <expression name="valueExpr">row["nombreAreaCurricular"]</expression>
+                                                    <property name="contentType">html</property>
+                                                </text-data>
+                                            </cell>
+                                        </row>
+                                        <row id="1501">
+                                            <property name="height">0.5cm</property>
+                                            <property name="borderTopColor">#C0C0C0</property>
+                                            <property name="borderTopStyle">solid</property>
+                                            <property name="borderTopWidth">1px</property>
+                                            <cell id="1502"/>
+                                            <cell id="1503"/>
+                                        </row>
+                                        <row id="1072">
+                                            <property name="height">0.5208333333in</property>
+                                            <property name="borderBottomColor">#C0C0C0</property>
+                                            <property name="borderBottomStyle">solid</property>
+                                            <property name="borderBottomWidth">1px</property>
+                                            <cell id="1073">
+                                                <text id="1074">
+                                                    <property name="fontFamily">"Arial"</property>
+                                                    <property name="fontSize">12pt</property>
+                                                    <property name="fontWeight">bold</property>
+                                                    <property name="textAlign">left</property>
+                                                    <property name="contentType">auto</property>
+                                                    <text-property name="content" key="objetivos"><![CDATA[Objetivos:]]></text-property>
+                                                </text>
+                                            </cell>
+                                            <cell id="1075">
+                                                <data id="1076">
+                                                    <property name="fontFamily">"Arial"</property>
+                                                    <property name="fontSize">12pt</property>
+                                                    <property name="marginTop">0pt</property>
+                                                    <property name="paddingTop">1pt</property>
+                                                    <property name="canShrink">true</property>
+                                                    <property name="resultSetColumn">objetivos</property>
+                                                </data>
+                                            </cell>
+                                        </row>
+                                        <row id="1495">
+                                            <property name="height">0.5cm</property>
+                                            <property name="borderTopColor">#C0C0C0</property>
+                                            <property name="borderTopStyle">solid</property>
+                                            <property name="borderTopWidth">1px</property>
+                                            <cell id="1496"/>
+                                            <cell id="1497"/>
+                                        </row>
+                                        <row id="1077">
+                                            <property name="height">0.3333333333in</property>
+                                            <cell id="1078">
+                                                <text id="1079">
+                                                    <property name="fontFamily">"Arial"</property>
+                                                    <property name="fontSize">12pt</property>
+                                                    <property name="fontWeight">bold</property>
+                                                    <property name="textAlign">left</property>
+                                                    <property name="contentType">auto</property>
+                                                    <text-property name="content" key="lengua"><![CDATA[Lengua]]></text-property>
+                                                </text>
+                                            </cell>
+                                            <cell id="1080">
+                                                <data id="1081">
+                                                    <property name="fontFamily">"Arial"</property>
+                                                    <property name="fontSize">12pt</property>
+                                                    <property name="textAlign">left</property>
+                                                    <property name="resultSetColumn">idiomaTexto</property>
+                                                </data>
+                                            </cell>
+                                        </row>
+                                    </grid>
+                                </cell>
+                            </row>
+                        </grid>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="1025">
+                    <cell id="1026"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>

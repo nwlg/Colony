@@ -1,0 +1,48 @@
+#continuar.action {}
+#continuar.action #form_submit {}
+
+#continuar.action .nombre {}
+#continuar.action .nombre .label {}
+#continuar.action .nombre .field {}
+#continuar.action .apellido1 {}
+#continuar.action .apellido1 .label {}
+#continuar.action .apellido1 .field {}
+#continuar.action .apellido2 {}
+#continuar.action .apellido2 .label {}
+#continuar.action .apellido2 .field {}
+#continuar.action .email {}
+#continuar.action .email .label {}
+#continuar.action .email .field {}
+#continuar.action .nif {}
+#continuar.action .nif .label {}
+#continuar.action .nif .field {}
+#continuar.action .usuario {}
+#continuar.action .usuario .label {}
+#continuar.action .usuario .field {}
+#continuar.action .clave {}
+#continuar.action .clave .label {}
+#continuar.action .clave .field {}
+#continuar.action .repitaClave {}
+#continuar.action .repitaClave .label {}
+#continuar.action .repitaClave .field {}
+#continuar.action .idioma {}
+#continuar.action .idioma .label {}
+#continuar.action .idioma .field {}
+#continuar.action .idiomaBusqueda {}
+#continuar.action .idiomaBusqueda .label {}
+#continuar.action .idiomaBusqueda .field {}
+#continuar.action .tipoEmpaquetador {}
+#continuar.action .tipoEmpaquetador .label {}
+#continuar.action .tipoEmpaquetador .field {}
+#continuar.action .id {}
+#continuar.action .id .label {}
+#continuar.action .id .field {}
+#continuar.action .openIdUrl {}
+#continuar.action .openIdUrl .label {}
+#continuar.action .openIdUrl .field {}
+
+#cancelar.action {}
+#cancelar.action #form_submit {}
+
+
+

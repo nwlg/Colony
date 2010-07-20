@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN" "http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+	<mapping wildcard="true" map-id="DEF_MAPPING_FAQ_FAQVO">
+		<class-a>es.pode.contenidos.negocio.faqs.dominio.FaqImpl</class-a>
+		<class-b>es.pode.contenidos.negocio.faqs.servicio.FaqVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_FAQVO_FAQ">
+		<class-a>es.pode.contenidos.negocio.faqs.servicio.FaqVO</class-a>
+		<class-b>es.pode.contenidos.negocio.faqs.dominio.FaqImpl</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_CATEGORIAFAQ_CATEGORIAFAQVO">
+		<class-a>es.pode.contenidos.negocio.faqs.dominio.CategoriaFaqImpl</class-a>
+		<class-b>es.pode.contenidos.negocio.faqs.servicio.CategoriaFaqVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_CATEGORIAFAQVO_CATEGORIAFAQ">
+		<class-a>es.pode.contenidos.negocio.faqs.servicio.CategoriaFaqVO</class-a>
+		<class-b>es.pode.contenidos.negocio.faqs.dominio.CategoriaFaqImpl</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_DESCRIPCIONFAQ_DESCRIPCIONFAQVO">
+		<class-a>es.pode.contenidos.negocio.faqs.dominio.DescripcionFaqImpl</class-a>
+		<class-b>es.pode.contenidos.negocio.faqs.servicio.DescripcionFaqVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_DESCRIPCIONFAQVO_DESCRIPCIONFAQ">
+		<class-a>es.pode.contenidos.negocio.faqs.servicio.DescripcionFaqVO</class-a>
+		<class-b>es.pode.contenidos.negocio.faqs.dominio.DescripcionFaqImpl</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_CATEGORIAIDIOMAFAQ_CATEGORIAIDIOMAFAQVO">
+		<class-a>es.pode.contenidos.negocio.faqs.dominio.CategoriaIdiomaFaqImpl</class-a>
+		<class-b>es.pode.contenidos.negocio.faqs.servicio.CategoriaIdiomaFaqVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_CATEGORIAIDIOMAFAQVO_CATEGORIAIDIOMAFAQ">
+		<class-a>es.pode.contenidos.negocio.faqs.servicio.CategoriaIdiomaFaqVO</class-a>
+		<class-b>es.pode.contenidos.negocio.faqs.dominio.CategoriaIdiomaFaqImpl</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_DESCDESCARGA_DESCDESCARGAVO">
+		<class-a>es.pode.contenidos.negocio.descargas.dominio.DescDescargaImpl</class-a>
+		<class-b>es.pode.contenidos.negocio.descargas.servicio.DescDescargaVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_DESCDESCARGAVO_DESCDESCARGA">
+		<class-a>es.pode.contenidos.negocio.descargas.servicio.DescDescargaVO</class-a>
+		<class-b>es.pode.contenidos.negocio.descargas.dominio.DescDescargaImpl</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_DESCARGA_DESCARGAVO">
+		<class-a>es.pode.contenidos.negocio.descargas.dominio.DescargaImpl</class-a>
+		<class-b>es.pode.contenidos.negocio.descargas.servicio.DescargaVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_DESCARGAVO_DESCARGA">
+		<class-a>es.pode.contenidos.negocio.descargas.servicio.DescargaVO</class-a>
+		<class-b>es.pode.contenidos.negocio.descargas.dominio.DescargaImpl</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_CONTENIDOODE_CONTENIDOODEVO">
+		<class-a>es.pode.contenidos.negocio.generacionDinamica.dominio.ContenidoODEImpl</class-a>
+		<class-b>es.pode.contenidos.negocio.generacionDinamica.servicio.ContenidoODEVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_CONTENIDOODEVO_CONTENIDOODE">
+		<class-a>es.pode.contenidos.negocio.generacionDinamica.servicio.ContenidoODEVO</class-a>
+		<class-b>es.pode.contenidos.negocio.generacionDinamica.dominio.ContenidoODEImpl</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_CATEGORIANOTICIA_CATEGORIANOTICIAVO">
+		<class-a>es.pode.contenidos.negocio.noticias.dominio.CategoriaNoticiaImpl</class-a>
+		<class-b>es.pode.contenidos.negocio.noticias.servicio.CategoriaNoticiaVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_CATEGORIANOTICIAVO_CATEGORIANOTICIA">
+		<class-a>es.pode.contenidos.negocio.noticias.servicio.CategoriaNoticiaVO</class-a>
+		<class-b>es.pode.contenidos.negocio.noticias.dominio.CategoriaNoticiaImpl</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_NOTICIA_NOTICIAVO">
+		<class-a>es.pode.contenidos.negocio.noticias.dominio.NoticiaImpl</class-a>
+		<class-b>es.pode.contenidos.negocio.noticias.servicio.NoticiaVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_NOTICIAVO_NOTICIA">
+		<class-a>es.pode.contenidos.negocio.noticias.servicio.NoticiaVO</class-a>
+		<class-b>es.pode.contenidos.negocio.noticias.dominio.NoticiaImpl</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_CATEGORIAIDIOMANOTICIA_CATEGORIAIDIOMANOTICIAVO">
+		<class-a>es.pode.contenidos.negocio.noticias.dominio.CategoriaIdiomaNoticiaImpl</class-a>
+		<class-b>es.pode.contenidos.negocio.noticias.servicio.CategoriaIdiomaNoticiaVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_CATEGORIAIDIOMANOTICIAVO_CATEGORIAIDIOMANOTICIA">
+		<class-a>es.pode.contenidos.negocio.noticias.servicio.CategoriaIdiomaNoticiaVO</class-a>
+		<class-b>es.pode.contenidos.negocio.noticias.dominio.CategoriaIdiomaNoticiaImpl</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_DESCRIPCIONNOTICIA_DESCRIPCIONNOTICIAVO">
+		<class-a>es.pode.contenidos.negocio.noticias.dominio.DescripcionNoticiaImpl</class-a>
+		<class-b>es.pode.contenidos.negocio.noticias.servicio.DescripcionNoticiaVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_DESCRIPCIONNOTICIAVO_DESCRIPCIONNOTICIA">
+		<class-a>es.pode.contenidos.negocio.noticias.servicio.DescripcionNoticiaVO</class-a>
+		<class-b>es.pode.contenidos.negocio.noticias.dominio.DescripcionNoticiaImpl</class-b>
+	</mapping>	
+</mappings>

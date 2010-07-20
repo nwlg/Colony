@@ -1,0 +1,4 @@
+<interactivityLevel>
+${load:source.xml}
+${load:value.xml}
+</interactivityLevel>

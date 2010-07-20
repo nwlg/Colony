@@ -1,0 +1,92 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'ver.metadatos.categorias.form.general.param.identificador.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.general.param.identificador.title"/></formatting:escape>',
+                'ver.metadatos.categorias.form.general.param.return.url.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.general.param.return.url.title"/></formatting:escape>',
+                'ver.metadatos.categorias.form.general.param.datos.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.general.param.datos.title"/></formatting:escape>',
+                'ver.metadatos.categorias.form.ciclo.de.vida.param.identificador.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.ciclo.de.vida.param.identificador.title"/></formatting:escape>',
+                'ver.metadatos.categorias.form.ciclo.de.vida.param.return.url.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.ciclo.de.vida.param.return.url.title"/></formatting:escape>',
+                'ver.metadatos.categorias.form.ciclo.de.vida.param.datos.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.ciclo.de.vida.param.datos.title"/></formatting:escape>',
+                'ver.metadatos.categorias.form.meta.metadatos.param.identificador.ode.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.meta.metadatos.param.identificador.ode.title"/></formatting:escape>',
+                'ver.metadatos.categorias.form.meta.metadatos.param.return.url.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.meta.metadatos.param.return.url.title"/></formatting:escape>',
+                'ver.metadatos.categorias.form.meta.metadatos.param.datos.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.meta.metadatos.param.datos.title"/></formatting:escape>',
+                'ver.metadatos.categorias.form.tecnica.param.identificador.ode.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.tecnica.param.identificador.ode.title"/></formatting:escape>',
+                'ver.metadatos.categorias.form.tecnica.param.return.url.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.tecnica.param.return.url.title"/></formatting:escape>',
+                'ver.metadatos.categorias.form.tecnica.param.datos.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.tecnica.param.datos.title"/></formatting:escape>',
+                'ver.metadatos.categorias.form.uso.educativo.param.identificador.ode.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.uso.educativo.param.identificador.ode.title"/></formatting:escape>',
+                'ver.metadatos.categorias.form.uso.educativo.param.return.url.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.uso.educativo.param.return.url.title"/></formatting:escape>',
+                'ver.metadatos.categorias.form.uso.educativo.param.datos.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.uso.educativo.param.datos.title"/></formatting:escape>',
+                'ver.metadatos.categorias.form.derechos.param.identificador.ode.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.derechos.param.identificador.ode.title"/></formatting:escape>',
+                'ver.metadatos.categorias.form.derechos.param.return.url.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.derechos.param.return.url.title"/></formatting:escape>',
+                'ver.metadatos.categorias.form.derechos.param.datos.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.derechos.param.datos.title"/></formatting:escape>',
+                'ver.metadatos.categorias.form.relacion.param.identificador.ode.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.relacion.param.identificador.ode.title"/></formatting:escape>',
+                'ver.metadatos.categorias.form.relacion.param.return.url.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.relacion.param.return.url.title"/></formatting:escape>',
+                'ver.metadatos.categorias.form.relacion.param.datos.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.relacion.param.datos.title"/></formatting:escape>',
+                'ver.metadatos.categorias.form.anotacion.param.identificador.ode.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.anotacion.param.identificador.ode.title"/></formatting:escape>',
+                'ver.metadatos.categorias.form.anotacion.param.return.url.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.anotacion.param.return.url.title"/></formatting:escape>',
+                'ver.metadatos.categorias.form.anotacion.param.datos.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.anotacion.param.datos.title"/></formatting:escape>',
+                'ver.metadatos.categorias.form.clasificacion.param.identificador.ode.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.clasificacion.param.identificador.ode.title"/></formatting:escape>',
+                'ver.metadatos.categorias.form.clasificacion.param.return.url.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.clasificacion.param.return.url.title"/></formatting:escape>',
+                'ver.metadatos.categorias.form.clasificacion.param.datos.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.clasificacion.param.datos.title"/></formatting:escape>',
+                'volverA':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.volver.a.title"/></formatting:escape>',
+                'volverA_no':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.volver.a.title.notallowed"/></formatting:escape>',
+                'volverA_reset':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.volver.a.title.reset"/></formatting:escape>',
+                'volverA_noreset':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.volver.a.title.reset.not.allowed"/></formatting:escape>',
+                'general':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.general.title"/></formatting:escape>',
+                'general_no':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.general.title.notallowed"/></formatting:escape>',
+                'general_reset':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.general.title.reset"/></formatting:escape>',
+                'general_noreset':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.general.title.reset.not.allowed"/></formatting:escape>',
+                'cicloDeVida':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.ciclo.de.vida.title"/></formatting:escape>',
+                'cicloDeVida_no':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.ciclo.de.vida.title.notallowed"/></formatting:escape>',
+                'cicloDeVida_reset':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.ciclo.de.vida.title.reset"/></formatting:escape>',
+                'cicloDeVida_noreset':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.ciclo.de.vida.title.reset.not.allowed"/></formatting:escape>',
+                'metaMetadatos':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.meta.metadatos.title"/></formatting:escape>',
+                'metaMetadatos_no':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.meta.metadatos.title.notallowed"/></formatting:escape>',
+                'metaMetadatos_reset':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.meta.metadatos.title.reset"/></formatting:escape>',
+                'metaMetadatos_noreset':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.meta.metadatos.title.reset.not.allowed"/></formatting:escape>',
+                'tecnica':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.tecnica.title"/></formatting:escape>',
+                'tecnica_no':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.tecnica.title.notallowed"/></formatting:escape>',
+                'tecnica_reset':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.tecnica.title.reset"/></formatting:escape>',
+                'tecnica_noreset':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.tecnica.title.reset.not.allowed"/></formatting:escape>',
+                'usoEducativo':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.uso.educativo.title"/></formatting:escape>',
+                'usoEducativo_no':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.uso.educativo.title.notallowed"/></formatting:escape>',
+                'usoEducativo_reset':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.uso.educativo.title.reset"/></formatting:escape>',
+                'usoEducativo_noreset':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.uso.educativo.title.reset.not.allowed"/></formatting:escape>',
+                'derechos':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.derechos.title"/></formatting:escape>',
+                'derechos_no':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.derechos.title.notallowed"/></formatting:escape>',
+                'derechos_reset':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.derechos.title.reset"/></formatting:escape>',
+                'derechos_noreset':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.derechos.title.reset.not.allowed"/></formatting:escape>',
+                'relacion':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.relacion.title"/></formatting:escape>',
+                'relacion_no':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.relacion.title.notallowed"/></formatting:escape>',
+                'relacion_reset':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.relacion.title.reset"/></formatting:escape>',
+                'relacion_noreset':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.relacion.title.reset.not.allowed"/></formatting:escape>',
+                'anotacion':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.anotacion.title"/></formatting:escape>',
+                'anotacion_no':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.anotacion.title.notallowed"/></formatting:escape>',
+                'anotacion_reset':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.anotacion.title.reset"/></formatting:escape>',
+                'anotacion_noreset':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.anotacion.title.reset.not.allowed"/></formatting:escape>',
+                'clasificacion':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.clasificacion.title"/></formatting:escape>',
+                'clasificacion_no':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.clasificacion.title.notallowed"/></formatting:escape>',
+                'clasificacion_reset':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.clasificacion.title.reset"/></formatting:escape>',
+                'clasificacion_noreset':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.categorias.form.clasificacion.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+
+
+
+
+
+
+</script>
+    </tiles:put>

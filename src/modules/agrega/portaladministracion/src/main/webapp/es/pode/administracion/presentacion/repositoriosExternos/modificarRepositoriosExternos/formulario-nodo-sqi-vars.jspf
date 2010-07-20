@@ -1,0 +1,32 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="urlServicio" value="${form.urlServicio}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="id" value="${form.id}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="gestorSesion" value="${form.gestorSesion}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="usuario" value="${form.usuario}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="descripcionNodo" value="${form.descripcionNodo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="nombreNodo" value="${form.nombreNodo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="clave" value="${form.clave}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="lenguajeConsulta" value="${form.lenguajeConsulta}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="lenguajeRespuesta" value="${form.lenguajeRespuesta}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="identificadorSesion" value="${form.identificadorSesion}"/>
+    </c:catch>
+</div>

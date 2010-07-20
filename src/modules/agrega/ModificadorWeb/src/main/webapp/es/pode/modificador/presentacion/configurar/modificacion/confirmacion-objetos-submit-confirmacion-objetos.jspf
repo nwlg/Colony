@@ -1,0 +1,49 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="submitConfirmacionObjetos" class="action">
+    <h3><bean:message key="configurar.modificacion.confirmacion.objetos.submit.confirmacion.objetos"/></h3>
+    <div class="trigger">
+        <html:form styleId="configurarModificacionConfirmacionObjetosSubmitConfirmacionObjetosForm" action="/ConfigurarModificacion/ConfirmacionObjetosSubmitConfirmacionObjetos" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="action">
+                        <td class="label"><bean:message key="configurar.modificacion.confirmacion.objetos.submit.confirmacion.objetos.param.action"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.action}"/>
+                           <input type="text" name="action" value="${value}" onmouseover="hints.show('configurar.modificacion.confirmacion.objetos.submit.confirmacion.objetos.param.action.title')" onmouseout="hints.hide()"  id="submitConfirmacionObjetosAction"/>
+                        </td>
+                    </tr>
+                    <tr class="paths">
+                        <td class="label"><bean:message key="configurar.modificacion.confirmacion.objetos.submit.confirmacion.objetos.param.paths"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.paths}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.pathsBackingList}">
+                                  <html:select name="form" property="pathsAsArray" onmouseover="hints.show('configurar.modificacion.confirmacion.objetos.submit.confirmacion.objetos.param.paths.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="submitConfirmacionObjetosPaths">
+                                      <html:optionsCollection name="form" property="pathsBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="pathsAsArray" onmouseover="hints.show('configurar.modificacion.confirmacion.objetos.submit.confirmacion.objetos.param.paths.title')" onmouseout="hints.hide()"  styleId="submitConfirmacionObjetosPaths"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('submitConfirmacionObjetos')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="configurar.modificacion.confirmacion.objetos.submit.confirmacion.objetos"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

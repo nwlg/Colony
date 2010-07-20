@@ -1,0 +1,48 @@
+
+    <tiles:put name="javascript" type="string">
+        <script type="text/javascript" language="Javascript1.1" src="<html:rewrite action="/formValidation"/>"></script>
+        <html:javascript formName="modificarNoticiaModificarPaso2ValidarFormularioForm" method="validateModificarPaso2ValidarFormularioForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+        <html:javascript formName="modificarNoticiaModificarPaso2VolverForm" method="validateModificarPaso2VolverForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'modificar.noticia.modificar.paso2.validar.formulario.param.id.noticia.title':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso2.validar.formulario.param.id.noticia.title"/></formatting:escape>',
+                'modificar.noticia.modificar.paso2.validar.formulario.param.imagen.title':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso2.validar.formulario.param.imagen.title"/></formatting:escape>',
+                'modificar.noticia.modificar.paso2.validar.formulario.param.alineamiento.title':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso2.validar.formulario.param.alineamiento.title"/></formatting:escape>',
+                'modificar.noticia.modificar.paso2.validar.formulario.param.estado.title':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso2.validar.formulario.param.estado.title"/></formatting:escape>',
+                'modificar.noticia.modificar.paso2.validar.formulario.param.categoria.title':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso2.validar.formulario.param.categoria.title"/></formatting:escape>',
+                'modificar.noticia.modificar.paso2.validar.formulario.param.nombre.imagen.title':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso2.validar.formulario.param.nombre.imagen.title"/></formatting:escape>',
+                'modificar.noticia.modificar.paso2.validar.formulario.param.castellano.title':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso2.validar.formulario.param.castellano.title"/></formatting:escape>',
+                'modificar.noticia.modificar.paso2.validar.formulario.param.catalan.title':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso2.validar.formulario.param.catalan.title"/></formatting:escape>',
+                'modificar.noticia.modificar.paso2.validar.formulario.param.euskera.title':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso2.validar.formulario.param.euskera.title"/></formatting:escape>',
+                'modificar.noticia.modificar.paso2.validar.formulario.param.ingles.title':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso2.validar.formulario.param.ingles.title"/></formatting:escape>',
+                'modificar.noticia.modificar.paso2.validar.formulario.param.valenciano.title':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso2.validar.formulario.param.valenciano.title"/></formatting:escape>',
+                'modificar.noticia.modificar.paso2.validar.formulario.param.gallego.title':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso2.validar.formulario.param.gallego.title"/></formatting:escape>',
+                'modificar.noticia.modificar.paso2.validar.formulario.param.activar.imagen.title':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso2.validar.formulario.param.activar.imagen.title"/></formatting:escape>',
+                'modificar.noticia.modificar.paso2.validar.formulario.param.nombre.imagen.vo.title':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso2.validar.formulario.param.nombre.imagen.vo.title"/></formatting:escape>',
+                'modificar.noticia.modificar.paso2.volver.param.alineamiento.title':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso2.volver.param.alineamiento.title"/></formatting:escape>',
+                'modificar.noticia.modificar.paso2.volver.param.categoria.title':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso2.volver.param.categoria.title"/></formatting:escape>',
+                'modificar.noticia.modificar.paso2.volver.param.estado.title':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso2.volver.param.estado.title"/></formatting:escape>',
+                'modificar.noticia.modificar.paso2.volver.param.nombre.imagen.title':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso2.volver.param.nombre.imagen.title"/></formatting:escape>',
+                'modificar.noticia.modificar.paso2.volver.param.activar.imagen.title':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso2.volver.param.activar.imagen.title"/></formatting:escape>',
+                'modificar.noticia.modificar.paso2.volver.param.nombre.imagen.vo.title':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso2.volver.param.nombre.imagen.vo.title"/></formatting:escape>',
+                'validarFormulario':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso2.validar.formulario.title"/></formatting:escape>',
+                'validarFormulario_no':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso2.validar.formulario.title.notallowed"/></formatting:escape>',
+                'validarFormulario_reset':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso2.validar.formulario.title.reset"/></formatting:escape>',
+                'validarFormulario_noreset':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso2.validar.formulario.title.reset.not.allowed"/></formatting:escape>',
+                'volver':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso2.volver.title"/></formatting:escape>',
+                'volver_no':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso2.volver.title.notallowed"/></formatting:escape>',
+                'volver_reset':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso2.volver.title.reset"/></formatting:escape>',
+                'volver_noreset':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso2.volver.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+</script>
+    </tiles:put>

@@ -1,0 +1,38 @@
+#seleccionaHijo.action {}
+#seleccionaHijo.action #form_submit {}
+
+#seleccionaHijo.action .id {}
+#seleccionaHijo.action .id .label {}
+#seleccionaHijo.action .id .field {}
+#seleccionaHijo.action .buscadorEmpaquetador {}
+#seleccionaHijo.action .buscadorEmpaquetador .label {}
+#seleccionaHijo.action .buscadorEmpaquetador .field {}
+
+#seleccionaPadre.action {}
+#seleccionaPadre.action #form_submit {}
+
+#seleccionaPadre.action .id {}
+#seleccionaPadre.action .id .label {}
+#seleccionaPadre.action .id .field {}
+#seleccionaPadre.action .buscadorEmpaquetador {}
+#seleccionaPadre.action .buscadorEmpaquetador .label {}
+#seleccionaPadre.action .buscadorEmpaquetador .field {}
+
+#volcarAreaCurricular.action {}
+#volcarAreaCurricular.action #form_submit {}
+
+#volcarAreaCurricular.action .areaCurricular {}
+#volcarAreaCurricular.action .areaCurricular .label {}
+#volcarAreaCurricular.action .areaCurricular .field {}
+#volcarAreaCurricular.action .tipoLayoutBuscador {}
+#volcarAreaCurricular.action .tipoLayoutBuscador .label {}
+#volcarAreaCurricular.action .tipoLayoutBuscador .field {}
+
+#cancelar.action {}
+#cancelar.action #form_submit {}
+
+#cancelar.action .tipoLayoutBuscador {}
+#cancelar.action .tipoLayoutBuscador .label {}
+#cancelar.action .tipoLayoutBuscador .field {}
+
+

@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="desactivar.usuario.resultado.desactivar.usuario.aceptar"/></h3>
+    <div class="trigger">
+        <form id="desactivarUsuarioResultadoDesactivarUsuarioAceptarForm" action='<html:rewrite action="/DesactivarUsuario/ResultadoDesactivarUsuarioAceptar"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+               <html:submit onmouseover="hints.show('Aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="desactivar.usuario.resultado.desactivar.usuario.aceptar"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

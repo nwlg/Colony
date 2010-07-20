@@ -1,0 +1,15 @@
+#submitAdvertencia.action {}
+#submitAdvertencia.action #form_submit {}
+
+#submitAdvertencia.action .action {}
+#submitAdvertencia.action .action .label {}
+#submitAdvertencia.action .action .field {}
+
+#buscar.action {}
+#buscar.action #form_submit {}
+
+#buscar.action .idiomaBuscador {}
+#buscar.action .idiomaBuscador .label {}
+#buscar.action .idiomaBuscador .field {}
+
+

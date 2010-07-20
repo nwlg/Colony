@@ -1,0 +1,159 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="volver" class="action">
+    <h3><bean:message key="descripcion.tarea.mostrar.informe.federado.volver"/></h3>
+    <div class="trigger">
+        <html:form styleId="descripcionTareaMostrarInformeFederadoVolverForm" action="/DescripcionTarea/MostrarInformeFederadoVolver" method="post" enctype="multipart/form-data" onsubmit="return validateMostrarInformeFederadoVolverForm(this);">
+            <table>
+                <tbody>
+                    <tr class="grupoTrabajo">
+                        <td class="label"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.param.grupo.trabajo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.grupoTrabajo}"/>
+                           <input type="text" name="grupoTrabajo" value="${value}" onmouseover="hints.show('descripcion.tarea.mostrar.informe.federado.volver.param.grupo.trabajo.title')" onmouseout="hints.hide()"  id="volverGrupoTrabajo"/>
+                        </td>
+                    </tr>
+                    <tr class="trigger">
+                        <td class="label"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.param.trigger"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.trigger}"/>
+                           <input type="text" name="trigger" value="${value}" onmouseover="hints.show('descripcion.tarea.mostrar.informe.federado.volver.param.trigger.title')" onmouseout="hints.hide()"  id="volverTrigger"/>
+                        </td>
+                    </tr>
+                    <tr class="grupoTrigger">
+                        <td class="label"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.param.grupo.trigger"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.grupoTrigger}"/>
+                           <input type="text" name="grupoTrigger" value="${value}" onmouseover="hints.show('descripcion.tarea.mostrar.informe.federado.volver.param.grupo.trigger.title')" onmouseout="hints.hide()"  id="volverGrupoTrigger"/>
+                        </td>
+                    </tr>
+                    <tr class="tipoTarea">
+                        <td class="label"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.param.tipo.tarea"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipoTarea}"/>
+                           <input type="text" name="tipoTarea" value="${value}" onmouseover="hints.show('descripcion.tarea.mostrar.informe.federado.volver.param.tipo.tarea.title')" onmouseout="hints.hide()"  id="volverTipoTarea"/>
+                        </td>
+                    </tr>
+                    <tr class="periodicidad">
+                        <td class="label"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.param.periodicidad"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.periodicidad}"/>
+                           <input type="text" name="periodicidad" value="${value}" onmouseover="hints.show('descripcion.tarea.mostrar.informe.federado.volver.param.periodicidad.title')" onmouseout="hints.hide()"  id="volverPeriodicidad"/>
+                        </td>
+                    </tr>
+                    <tr class="formato">
+                        <td class="label"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.param.formato"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.formato}"/>
+                           <input type="text" name="formato" value="${value}" onmouseover="hints.show('descripcion.tarea.mostrar.informe.federado.volver.param.formato.title')" onmouseout="hints.hide()"  id="volverFormato"/>
+                        </td>
+                    </tr>
+                    <tr class="informe">
+                        <td class="label"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.param.informe"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.informe}"/>
+                           <input type="text" name="informe" value="${value}" onmouseover="hints.show('descripcion.tarea.mostrar.informe.federado.volver.param.informe.title')" onmouseout="hints.hide()"  id="volverInforme"/>
+                        </td>
+                    </tr>
+                    <tr class="anio">
+                        <td class="label"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.param.anio"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.anio}"/>
+                           <input type="text" name="anio" value="${value}" onmouseover="hints.show('descripcion.tarea.mostrar.informe.federado.volver.param.anio.title')" onmouseout="hints.hide()"  id="volverAnio"/>
+                        </td>
+                    </tr>
+                    <tr class="mes">
+                        <td class="label"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.param.mes"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.mes}"/>
+                           <input type="text" name="mes" value="${value}" onmouseover="hints.show('descripcion.tarea.mostrar.informe.federado.volver.param.mes.title')" onmouseout="hints.hide()"  id="volverMes"/>
+                        </td>
+                    </tr>
+                    <tr class="dia">
+                        <td class="label"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.param.dia"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.dia}"/>
+                           <input type="text" name="dia" value="${value}" onmouseover="hints.show('descripcion.tarea.mostrar.informe.federado.volver.param.dia.title')" onmouseout="hints.hide()"  id="volverDia"/>
+                        </td>
+                    </tr>
+                    <tr class="hora">
+                        <td class="label"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.param.hora"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.hora}"/>
+                           <input type="text" name="hora" value="${value}" onmouseover="hints.show('descripcion.tarea.mostrar.informe.federado.volver.param.hora.title')" onmouseout="hints.hide()"  id="volverHora"/>
+                        </td>
+                    </tr>
+                    <tr class="minutos">
+                        <td class="label"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.param.minutos"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.minutos}"/>
+                           <input type="text" name="minutos" value="${value}" onmouseover="hints.show('descripcion.tarea.mostrar.informe.federado.volver.param.minutos.title')" onmouseout="hints.hide()"  id="volverMinutos"/>
+                        </td>
+                    </tr>
+                    <tr class="msgDescTrabajo">
+                        <td class="label"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.param.msg.desc.trabajo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.msgDescTrabajo}"/>
+                           <input type="text" name="msgDescTrabajo" value="${value}" onmouseover="hints.show('descripcion.tarea.mostrar.informe.federado.volver.param.msg.desc.trabajo.title')" onmouseout="hints.hide()"  id="volverMsgDescTrabajo"/>
+                        </td>
+                    </tr>
+                    <tr class="msgInforme">
+                        <td class="label"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.param.msg.informe"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.msgInforme}"/>
+                           <input type="text" name="msgInforme" value="${value}" onmouseover="hints.show('descripcion.tarea.mostrar.informe.federado.volver.param.msg.informe.title')" onmouseout="hints.hide()"  id="volverMsgInforme"/>
+                        </td>
+                    </tr>
+                    <tr class="msgNoInforme">
+                        <td class="label"><bean:message key="descripcion.tarea.mostrar.informe.federado.volver.param.msg.no.informe"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.msgNoInforme}"/>
+                           <input type="text" name="msgNoInforme" value="${value}" onmouseover="hints.show('descripcion.tarea.mostrar.informe.federado.volver.param.msg.no.informe.title')" onmouseout="hints.hide()"  id="volverMsgNoInforme"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Volver')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="descripcion.tarea.mostrar.informe.federado.volver"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="cancelar" class="action">
+    <h3><bean:message key="crear.tarea.formulario.inicio.cancelar"/></h3>
+    <div class="trigger">
+        <form id="crearTareaFormularioInicioCancelarForm" action='<html:rewrite action="/CrearTarea/FormularioInicioCancelar"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+               <html:submit onmouseover="hints.show('Cancelar')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="crear.tarea.formulario.inicio.cancelar"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

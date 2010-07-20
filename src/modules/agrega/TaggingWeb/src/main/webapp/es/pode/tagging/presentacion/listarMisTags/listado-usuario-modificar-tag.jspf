@@ -1,0 +1,33 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="modificarTag" class="action">
+    <h3><bean:message key="listar.mis.tags.listado.usuario.modificar.tag"/></h3>
+    <div class="trigger">
+        <html:form styleId="listarMisTagsListadoUsuarioModificarTagForm" action="/ListarMisTags/ListadoUsuarioModificarTag" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="tag">
+                        <td class="label"><bean:message key="listar.mis.tags.listado.usuario.modificar.tag.param.tag"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tag}"/>
+                           <input type="text" name="tag" value="${value}" onmouseover="hints.show('listar.mis.tags.listado.usuario.modificar.tag.param.tag.title')" onmouseout="hints.hide()"  id="modificarTagTag"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR,ROLE_CATALOGADOR,ROLE_PUBLICADOR,ROLE_DOCENTE">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('ModificarTag')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="listar.mis.tags.listado.usuario.modificar.tag"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

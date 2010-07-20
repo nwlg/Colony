@@ -1,0 +1,51 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="seleccionar" class="action">
+    <h3><bean:message key="navegar.lom.navegar.lom.seleccionar"/></h3>
+    <div class="trigger">
+        <html:form styleId="navegarLomNavegarLOMSeleccionarForm" action="/NavegarLom/NavegarLOMSeleccionar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="terminoLom">
+                        <td class="label"><bean:message key="navegar.lom.navegar.lom.seleccionar.param.termino.lom"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.terminoLom}"/>
+                           <input type="text" name="terminoLom" value="${value}" onmouseover="hints.show('navegar.lom.navegar.lom.seleccionar.param.termino.lom.title')" onmouseout="hints.hide()"  id="seleccionarTerminoLom"/>
+                        </td>
+                    </tr>
+                    <tr class="action">
+                        <td class="label"><bean:message key="navegar.lom.navegar.lom.seleccionar.param.action"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.action}"/>
+                           <input type="text" name="action" value="${value}" onmouseover="hints.show('navegar.lom.navegar.lom.seleccionar.param.action.title')" onmouseout="hints.hide()"  id="seleccionarAction"/>
+                        </td>
+                    </tr>
+                    <tr class="idTermino">
+                        <td class="label"><bean:message key="navegar.lom.navegar.lom.seleccionar.param.id.termino"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idTermino}"/>
+                           <input type="text" name="idTermino" value="${value}" onmouseover="hints.show('navegar.lom.navegar.lom.seleccionar.param.id.termino.title')" onmouseout="hints.hide()"  id="seleccionarIdTermino"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR,ROLE_ADMINISTRADOR,ROLE_ADMINISTRADOR,ROLE_ADMINISTRADOR,ROLE_ADMINISTRADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('seleccionar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="navegar.lom.navegar.lom.seleccionar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

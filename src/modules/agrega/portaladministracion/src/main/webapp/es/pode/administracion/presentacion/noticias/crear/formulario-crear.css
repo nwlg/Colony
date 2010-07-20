@@ -1,0 +1,60 @@
+#validarFormu.action {}
+#validarFormu.action #form_submit {}
+
+#validarFormu.action .categoria {}
+#validarFormu.action .categoria .label {}
+#validarFormu.action .categoria .field {}
+#validarFormu.action .alineamiento {}
+#validarFormu.action .alineamiento .label {}
+#validarFormu.action .alineamiento .field {}
+#validarFormu.action .imagen {}
+#validarFormu.action .imagen .label {}
+#validarFormu.action .imagen .field {}
+#validarFormu.action .estado {}
+#validarFormu.action .estado .label {}
+#validarFormu.action .estado .field {}
+#validarFormu.action .castellano {}
+#validarFormu.action .castellano .label {}
+#validarFormu.action .castellano .field {}
+#validarFormu.action .ingles {}
+#validarFormu.action .ingles .label {}
+#validarFormu.action .ingles .field {}
+#validarFormu.action .catalan {}
+#validarFormu.action .catalan .label {}
+#validarFormu.action .catalan .field {}
+#validarFormu.action .valenciano {}
+#validarFormu.action .valenciano .label {}
+#validarFormu.action .valenciano .field {}
+#validarFormu.action .gallego {}
+#validarFormu.action .gallego .label {}
+#validarFormu.action .gallego .field {}
+#validarFormu.action .euskera {}
+#validarFormu.action .euskera .label {}
+#validarFormu.action .euskera .field {}
+#validarFormu.action .nombreImagen {}
+#validarFormu.action .nombreImagen .label {}
+#validarFormu.action .nombreImagen .field {}
+#validarFormu.action .activarImagen {}
+#validarFormu.action .activarImagen .label {}
+#validarFormu.action .activarImagen .field {}
+
+#volver.action {}
+#volver.action #form_submit {}
+
+#volver.action .alineamiento {}
+#volver.action .alineamiento .label {}
+#volver.action .alineamiento .field {}
+#volver.action .categoria {}
+#volver.action .categoria .label {}
+#volver.action .categoria .field {}
+#volver.action .estado {}
+#volver.action .estado .label {}
+#volver.action .estado .field {}
+#volver.action .activarImagen {}
+#volver.action .activarImagen .label {}
+#volver.action .activarImagen .field {}
+#volver.action .nombreImagen {}
+#volver.action .nombreImagen .label {}
+#volver.action .nombreImagen .field {}
+
+

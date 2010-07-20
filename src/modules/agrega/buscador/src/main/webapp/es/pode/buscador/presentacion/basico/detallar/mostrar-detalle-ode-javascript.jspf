@@ -1,0 +1,133 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'detallar.odecu.mostrar.detalle.ode.descargar.param.localizador.ode.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.descargar.param.localizador.ode.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.descargar.param.identificador.ode.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.descargar.param.identificador.ode.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.descargar.param.busqueda.simple.avanzada.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.descargar.param.busqueda.simple.avanzada.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.descargar.param.tipo.layout.buscador.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.descargar.param.tipo.layout.buscador.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.descargar.param.mostrar.vuelta.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.descargar.param.mostrar.vuelta.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.previsualizar.param.localizador.ode.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.previsualizar.param.localizador.ode.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.previsualizar.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.previsualizar.param.idioma.buscador.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.previsualizar.param.id.localizador.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.previsualizar.param.id.localizador.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.previsualizar.param.identificador.ode.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.previsualizar.param.identificador.ode.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.previsualizar.param.titulo.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.previsualizar.param.titulo.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.previsualizar.param.busqueda.simple.avanzada.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.previsualizar.param.busqueda.simple.avanzada.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.previsualizar.param.tipo.busqueda.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.previsualizar.param.tipo.busqueda.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.previsualizar.param.tipo.layout.buscador.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.previsualizar.param.tipo.layout.buscador.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.previsualizar.param.seleccionar.secuencia.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.previsualizar.param.seleccionar.secuencia.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.previsualizar.param.mostrar.vuelta.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.previsualizar.param.mostrar.vuelta.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.enviar.mail.param.identificador.ode.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.enviar.mail.param.identificador.ode.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.enviar.mail.param.url.ode.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.enviar.mail.param.url.ode.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.enviar.mail.param.tipo.layout.buscador.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.enviar.mail.param.tipo.layout.buscador.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.enviar.mail.param.mostrar.vuelta.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.enviar.mail.param.mostrar.vuelta.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.autor.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.autor.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.buscador.contenido.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.buscador.contenido.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.busqueda.simple.avanzada.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.busqueda.simple.avanzada.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.c.s.secuencia.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.c.s.secuencia.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.contexto.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.contexto.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.descripcion.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.descripcion.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.edad.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.edad.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.anyo.publicacion.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.anyo.publicacion.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.formato.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.formato.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.idioma.buscador.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.area.curricular.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.area.curricular.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.pagina.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.pagina.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.proceso.cognitivo.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.proceso.cognitivo.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.recurso.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.recurso.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.titulo.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.titulo.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.valoracion.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.valoracion.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.mes.publicacion.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.mes.publicacion.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.dia.publicacion.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.dia.publicacion.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.area.curricular.busqueda.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.area.curricular.busqueda.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.tipo.visualizacion.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.tipo.visualizacion.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.tipo.busqueda.arbol.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.tipo.busqueda.arbol.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.tipo.busqueda.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.volver.busqueda.param.tipo.busqueda.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.consultar.metadatos.param.identificador.ode.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.consultar.metadatos.param.identificador.ode.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.que.es.esto.param.mostrar.vuelta.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.que.es.esto.param.mostrar.vuelta.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.agregacion.ode.param.titulo.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.agregacion.ode.param.titulo.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.agregacion.ode.param.identificador.ode.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.agregacion.ode.param.identificador.ode.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.agregacion.ode.param.agregacion.correcta.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.agregacion.ode.param.agregacion.correcta.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.agregacion.ode.param.tipo.layout.buscador.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.agregacion.ode.param.tipo.layout.buscador.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.agregacion.ode.param.tipo.agregacion.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.agregacion.ode.param.tipo.agregacion.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.agregacion.ode.param.idioma.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.agregacion.ode.param.idioma.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.listar.comentarios.param.id.ode.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.listar.comentarios.param.id.ode.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.listar.comentarios.param.titulo.ode.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.listar.comentarios.param.titulo.ode.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.listar.comentarios.param.imagen.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.listar.comentarios.param.imagen.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.listar.comentarios.param.idioma.ode.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.listar.comentarios.param.idioma.ode.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.listar.comentarios.param.tipo.layout.buscador.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.listar.comentarios.param.tipo.layout.buscador.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.valorar.ode.param.identificador.ode.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.valorar.ode.param.identificador.ode.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.valorar.ode.param.idioma.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.valorar.ode.param.idioma.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.valorar.ode.param.valoracion.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.valorar.ode.param.valoracion.title"/></formatting:escape>',
+                'detallar.odecu.mostrar.detalle.ode.valorar.ode.param.mostrar.vuelta.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.valorar.ode.param.mostrar.vuelta.title"/></formatting:escape>',
+                'descargar':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.descargar.title"/></formatting:escape>',
+                'descargar_no':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.descargar.title.notallowed"/></formatting:escape>',
+                'descargar_reset':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.descargar.title.reset"/></formatting:escape>',
+                'descargar_noreset':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.descargar.title.reset.not.allowed"/></formatting:escape>',
+                'previsualizar':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.previsualizar.title"/></formatting:escape>',
+                'previsualizar_no':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.previsualizar.title.notallowed"/></formatting:escape>',
+                'previsualizar_reset':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.previsualizar.title.reset"/></formatting:escape>',
+                'previsualizar_noreset':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.previsualizar.title.reset.not.allowed"/></formatting:escape>',
+                'enviarMail':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.enviar.mail.title"/></formatting:escape>',
+                'enviarMail_no':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.enviar.mail.title.notallowed"/></formatting:escape>',
+                'enviarMail_reset':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.enviar.mail.title.reset"/></formatting:escape>',
+                'enviarMail_noreset':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.enviar.mail.title.reset.not.allowed"/></formatting:escape>',
+                'volverBusqueda':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.volver.busqueda.title"/></formatting:escape>',
+                'volverBusqueda_no':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.volver.busqueda.title.notallowed"/></formatting:escape>',
+                'volverBusqueda_reset':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.volver.busqueda.title.reset"/></formatting:escape>',
+                'volverBusqueda_noreset':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.volver.busqueda.title.reset.not.allowed"/></formatting:escape>',
+                'consultarMetadatos':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.consultar.metadatos.title"/></formatting:escape>',
+                'consultarMetadatos_no':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.consultar.metadatos.title.notallowed"/></formatting:escape>',
+                'consultarMetadatos_reset':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.consultar.metadatos.title.reset"/></formatting:escape>',
+                'consultarMetadatos_noreset':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.consultar.metadatos.title.reset.not.allowed"/></formatting:escape>',
+                'gestionarPosicionado':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.gestionar.posicionado.title"/></formatting:escape>',
+                'gestionarPosicionado_no':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.gestionar.posicionado.title.notallowed"/></formatting:escape>',
+                'gestionarPosicionado_reset':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.gestionar.posicionado.title.reset"/></formatting:escape>',
+                'gestionarPosicionado_noreset':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.gestionar.posicionado.title.reset.not.allowed"/></formatting:escape>',
+                'queEsEsto':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.que.es.esto.title"/></formatting:escape>',
+                'queEsEsto_no':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.que.es.esto.title.notallowed"/></formatting:escape>',
+                'queEsEsto_reset':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.que.es.esto.title.reset"/></formatting:escape>',
+                'queEsEsto_noreset':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.que.es.esto.title.reset.not.allowed"/></formatting:escape>',
+                'introducirComentarios':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.introducir.comentarios.title"/></formatting:escape>',
+                'introducirComentarios_no':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.introducir.comentarios.title.notallowed"/></formatting:escape>',
+                'introducirComentarios_reset':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.introducir.comentarios.title.reset"/></formatting:escape>',
+                'introducirComentarios_noreset':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.introducir.comentarios.title.reset.not.allowed"/></formatting:escape>',
+                'agregacionOde':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.agregacion.ode.title"/></formatting:escape>',
+                'agregacionOde_no':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.agregacion.ode.title.notallowed"/></formatting:escape>',
+                'agregacionOde_reset':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.agregacion.ode.title.reset"/></formatting:escape>',
+                'agregacionOde_noreset':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.agregacion.ode.title.reset.not.allowed"/></formatting:escape>',
+                'listarComentarios':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.listar.comentarios.title"/></formatting:escape>',
+                'listarComentarios_no':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.listar.comentarios.title.notallowed"/></formatting:escape>',
+                'listarComentarios_reset':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.listar.comentarios.title.reset"/></formatting:escape>',
+                'listarComentarios_noreset':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.listar.comentarios.title.reset.not.allowed"/></formatting:escape>',
+                'anadirODEPersonal':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.anadir.odepersonal.title"/></formatting:escape>',
+                'anadirODEPersonal_no':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.anadir.odepersonal.title.notallowed"/></formatting:escape>',
+                'anadirODEPersonal_reset':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.anadir.odepersonal.title.reset"/></formatting:escape>',
+                'anadirODEPersonal_noreset':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.anadir.odepersonal.title.reset.not.allowed"/></formatting:escape>',
+                'valorarODE':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.valorar.ode.title"/></formatting:escape>',
+                'valorarODE_no':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.valorar.ode.title.notallowed"/></formatting:escape>',
+                'valorarODE_reset':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.valorar.ode.title.reset"/></formatting:escape>',
+                'valorarODE_noreset':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.mostrar.detalle.ode.valorar.ode.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+    </tiles:put>

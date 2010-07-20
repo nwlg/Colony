@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="activas" class="action">
+    <h3><bean:message key="no.activas.no.activas.activas"/></h3>
+    <div class="trigger">
+        <form id="noActivasNoActivasActivasForm" action='<html:rewrite action="/NoActivas/NoActivasActivas"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+               <html:submit onmouseover="hints.show('Activas')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="no.activas.no.activas.activas"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

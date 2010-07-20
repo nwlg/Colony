@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<document>
+    <properties>
+        <author email="harias@indra.es">Hector Arias</author>
+        <title>Guía Técnica Aplicaciones</title>
+    </properties>
+    <body>
+	<section name="Maquetado">
+		<li><strong><a href="maquetado.html#ind_1">Proceso de maquetado</a></strong></li>
+		<li><strong><a href="maquetado.html#ind_2">Estilos</a></strong></li>		
+		<li><strong><a href="maquetado.html#ind_3">Cambios pantalla confirmación</a></strong></li>
+		<li><strong><a href="maquetado.html#ind_4">Como devolver un dato a la pantalla padre desde una emergente (localidad)</a></strong></li>
+		<li><strong><a href="maquetado.html#ind_5">Como volver de un iframe a otro que lo llamó</a></strong></li>
+		<li><strong><a href="maquetado.html#ind_6">Cosas a tener en cuenta para hacer pantallas emergentes</a></strong></li>
+		<li><strong><a href="maquetado.html#ind_7">Cosas a tener en cuenta con las pestañas</a></strong></li>
+		<li><strong><a href="maquetado.html#ind_8">Archivos a congelar siempre</a></strong></li>
+		<a name="ind_1"></a>
+	</section>
+
+	<section name="Proceso de maquetado">
+		<p><strong>1º</strong> En los css las clases se ponen con un punto "." Delante .activo</p>
+		<p><strong>2º</strong> En los css los id se ponen con una "#" delante #activo</p>
+		<p><strong>3º</strong> Cada jsp genera un css que contiene las referencias a los id y clases de la página.</p>
+		<p>Formulario. Por ejemplo, si uno de los jspf que incluye el jsp tiene el siguiente formulario:</p>
+
+		<a name="enlace_imagen_01"></a>
+		<p align='center'><img src="images/maquetado_01.jpg"></img></p>				
+		
+		<p><span>El css habrá generado:</span></p>
+		<p><font color="blue">#action.action {}</font> ---Este referencia al div que engloba todo el formulario entero 
+		y podemos comprobar que el div tiene como <a href="maquetado.html#enlace_imagen_01">id="action"</a> 
+		y como clase <a href="maquetado.html#enlace_imagen_01">class="action"</a></p>
+		<p><font color="blue">#action.action #form_submit {}</font> ---Referencia al botón que está 
+		dentro del formulario, como está dentro del div que hemos mencionado antes ponemos 
+		lo mismo que antes y el id que tiene el botón <a href="maquetado.html#enlace_imagen_01">styleId="form_submit"</a></p>
+		<p><font color="blue">#action.action .nombreMadre {}</font> ---- Referencia a un campo del 
+		formulario, sigue estando dentro del div general y va seguido de la clase que tiene 
+		el tr <a href="maquetado.html#enlace_imagen_01">class="nombreMadre"</a></p>
+		<p><font color="blue">#action.action .nombreMadre .label {}</font> --- Referencia a la 
+		label del campo del formulario, sigue estando dentro del div general y va seguido de la 
+		clase que tiene el tr y seguido de la clase que tiene el td <a href="maquetado.html#enlace_imagen_01">class="label"</a></p>
+		<p><font color="blue">#action.action .nombreMadre .field {}</font> --- Referencia al 
+		componente del campo (caja de texto, combo...) del formulario, sigue estando dentro 
+		del div general y va seguido de la clase que tiene el tr y seguido de la clase que 
+		tiene el td <a href="maquetado.html#enlace_imagen_01">class="field".</a></p>
+		<p>Dentro de estas etiquetas que tiene generado este css vamos a poner los estilos de cada 
+		componente de la pantalla (para saber los estilos exactos dependiendo del componente 
+		y las imágenes correctas dependiendo del mismo mirar el apartado de Estilos , este 
+		apartado es para detectar las partes de nuestra pantalla en el css):</p>
+		<p><strong>1.</strong> En primer lugar enmarcamos el formulario con un borde y un fondo un poco mas claro, 
+		como si el formulario estuviera dentro de una caja, para ello ponemos los estilos 
+		deseados dentro del div que engloba todo el formulario:</p>
+		
+		<p align='center'><img src="images/maquetado_02.jpg"></img></p>
+		
+		<p><strong>2.</strong> En segundo lugar damos unos estilos al botón del formulario, para ello le ponemos 
+		una imagen y la ruta correcta de la misma:</p>
+		
+		<p align='center'><img src="images/maquetado_03.jpg"></img></p>
+		
+		<p><strong>3.</strong> En el tr de los campos del formulario no ponemos ningún estilo, se quedará vacío</p>
+		
+		<p align='center'><img src="images/maquetado_04.jpg"></img></p>
+		
+		<p><strong>4.</strong> En el td de los campos del formulario en la label solo tendremos 
+		que darle la posición absoluta donde va situado porque los estilos ya se encuentran 
+		definidos en el css general.</p>
+		
+		<p align='center'><img src="images/maquetado_05.jpg"></img></p>
+		
+		<p><strong>5.</strong> En el td de los campos del formulario en el campo tenemos que darle todos los estilos ya que dependiendo del componente pondremos unos u otros.</p>
+		<p>a) si el campo es una label solo ponemos la posición y el tipo de letra</p>
+		
+		<p align='center'><img src="images/maquetado_06.jpg"></img></p>
+		
+		<p>b) si el campo es una caja de texto, un combo, un textarea, en primer lugar tenemos que 
+		añadir el id del componente detrás de .field del siguiente modo:</p>
+		
+		<p align='center'><img src="images/maquetado_07.jpg"></img></p>
+		
+		<p>esto lo hacemos para que los estilos no los coja el td sino solo el campo. Y en segundo 
+		lugar se ponen los estilos</p>
+		
+		<p align='center'><img src="images/maquetado_08.jpg"></img></p>
+		
+		<p>c) si el campo es un check, debemos modificar el jspf para añadirle en el td de cada 
+		radio una clase, por ejemplo, &lt;td class="radio1"&gt; y así en el css ponemos los 
+		siguientes estilos para el campo sin ponerle el id:</p>
+		
+		<p align='center'><img src="images/maquetado_09.jpg"></img></p>
+		
+		<p>y después definimos las posiciones para cada uno de los radio, para referenciarlos 
+		ponemos td seguido de la clase que se pone con el punto delante:</p>
+		
+		<p align='center'><img src="images/maquetado_10.jpg"></img></p>
+		
+		<p><strong>4º Tabla.</strong> Si uno de los jspf que incluye el jsp tiene la siguiente tabla o lista:</p>
+		
+		<p align='center'><img src="images/maquetado_11.jpg"></img></p>
+		
+		<p>El css habrá generado:</p>
+		<p><font color="blue">#neoNeonatoVO.table {}</font> ---- Referencia a la lista entera, ya que es un div que la contiene con id="neoNeonatoVO" y la clase class="table" y que engloba todo el formulario que contiene la lista</p>
+		<p><font color="blue">#neoNeonatoVO.table td div {}</font> ---- hace referencia a todos los datos de la lista que se encuentran dentro de un td y div</p>
+		<p><font color="blue">#neoNeonatoVO.table th.numeroEpisodio {}</font> ---- referencia a la cabecera de una columna en concreto</p>
+		<p><font color="blue">#neoNeonatoVO.table td div.numeroEpisodio {}</font> ----referencia a las celdas de cada columna.</p>
+		
+		<p>Dentro de estas etiquetas que tiene generado este css vamos a poner los estilos de la 
+		lista de la pantalla (para saber los estilos exactos dependiendo del componente y 
+		las imágenes correctas dependiendo del mismo mirar el apartado de Estilos , este 
+		apartado es para detectar las partes de nuestra pantalla en el css):</p>
+		
+		<p><strong>1.</strong>En primer lugar damos una posición y unos márgenes a la lista, si 
+		esta tiene muchos campos se deberá poner el overflow-x:auto;</p>
+		
+		<p align='center'><img src="images/maquetado_12.jpg"></img></p>
+		
+		<p><strong>2.</strong>En Segundo lugar, si los datos de las celdas no caben en se dividen 
+		en dos filas debemos poner white-space:nowrap; para todos los td de todas las celdas</p>
+		
+		<p align='center'><img src="images/maquetado_13.jpg"></img></p>
+		
+		<p>y en cada una de las cabeceras de las columnas en las que suceda y como estos son links 
+		tenemos que poner una a delante.</p>
+		
+		<p align='center'><img src="images/maquetado_14.jpg"></img></p>
+		
+		<p><strong>3.</strong>Si la lista tiene scroll además de poner el overflow tendremos que 
+		cambiar de posición el div que engloba todo el formulario en el jspf y ponerlo que solo 
+		englobe a la lista, es decir:</p>
+		
+		<p align='center'><img src="images/maquetado_15.jpg"></img></p>
+		
+		<p><strong>4.</strong>Si la lista contiene botones en el jspf tendremos que ponerle a mano 
+		un id para poder crear un estilo para el mismo. Los botones se posicionara en la barra 
+		de herramientas. Por ejemplo:</p>
+		
+		<p align='center'><img src="images/maquetado_16.jpg"></img></p>
+		
+		<p><strong>5.</strong>Además de las etiquetas que genera para los estilos de la lista debemos 
+		posicionar también los botones de exportación.</p>
+		
+		<p align='center'><img src="images/maquetado_17.jpg"></img></p>
+		<p><span></span></p>
+		
+		
+		
+		<a name="ind_2"></a>
+	</section>
+	<section name="Estilos">
+		
+		<p><font color="red"><strong>Esta es la caja que enmarca el formulario con un color mas claro</strong></font></p>
+		<p>#aceptarPM.actino esta es el id con la clase que ya aparecerá generado en el css de cada jsp y cada uno se llamará según su pantalla o acción.</p>
+
+		<p align='center'><img src="images/maquetado_18.jpg"></img></p>
+
+		<p><font color="red"><strong>Botones normales con dibujo (Botón Buscar, Limpiar, Cancelar, Aceptar..)<p align='center'><img src="images/maquetado_19.jpg"></img></p></strong></font></p>
+
+		<p align='center'><img src="images/maquetado_20.jpg"></img></p>
+		
+		<p><font color="red"><strong>Botones normales sin dibujo (Botón volver) {IGUAL QUE EL QUE ACABAMOS DE VER PERO SIN IMAGEN }</strong></font></p>
+		
+		<p align='center'><img src="images/maquetado_21.jpg"></img></p>
+		
+		<p><font color="red"><strong>Botones para la barra de herramientas (Guardar, Nueva, Abrir,...)</strong></font></p>
+		
+		<p align='center'><img src="images/maquetado_22.jpg"></img></p>
+		<p align='center'><img src="images/maquetado_23.jpg"></img></p>
+		
+		<p><font color="red"><strong>Label</strong></font></p>
+		
+		<p align='center'><img src="images/maquetado_24.jpg"></img></p>
+		
+		<p><font color="red"><strong>Componentes (cajas de texto...) menos checks. Tenemos que especificar el id del componente 
+		(hay que ponerlo para cada componente)</strong></font></p>
+		
+		<p align='center'><img src="images/maquetado_25.jpg"></img></p>
+		
+		<p><font color="red"><strong>El titulo del formulario o lista</strong></font></p>
+		
+		<p align='center'><img src="images/maquetado_26.jpg"></img></p>
+		
+		<p><font color="red"><strong>Los títulos que aparecen para cada botón y cada parte de la página se ocultan</strong></font></p>
+		<p><center>#buscarProgramas.action h3 {display:none;}</center></p>
+		
+		<p><font color="red"><strong>Estilo para una lista</strong></font></p>
+		
+		<p align='center'><img src="images/maquetado_27.jpg"></img></p>
+		
+		<p><font color="red"><strong>[SOLO CUANDO LA LISTA TIENE SCROLL: para que los botones de la lista situados en la barra 
+		de herramientas no se muevan al mover el scroll es necesario cambiar el div que 
+		tiene la página jspf para que solo englobe a la tabla, que este abierto antes de 
+		&lt;display:table.....&gt; y que se cierre justo después del &lt;/display:table&gt;]</strong></font></p>
+		
+		<p><font color="red"><strong>Para que los datos de una lista no se dividan en dos columnas</strong></font></p>
+		<p>#listaPacientes.table td div {white-space:nowrap;} //siempre se pondría para esta situación</p>
+		<p>#listaPacientes.table th.pruPendiente a{white-space:nowrap;} //esto solo se pondría en la columna que tiene este problema</p>
+
+		<p><font color="red"><strong>Para posicionar los botones de Excel, CVS, ...</strong></font></p>
+		
+		<p align='center'><img src="images/maquetado_28.jpg"></img></p>
+		
+		<p><font color="red"><strong>La imagen de Ayuda esta oculta de momento, quitándole la propiedad de display o poniéndola 
+		a visible y posicionándola donde quieras</strong></font></p>
+		
+		<p><font color="red"><strong>La imagen de Ayuda esta oculta de momento, quitándole la 
+		propiedad de display o poniéndola a visible y posicionándola donde quieras</strong></font></p>
+		<p>#pageHelpSection {display:none;}</p>
+
+		<p><font color="red"><strong>Para quitar el rastro de migas</strong></font></p>
+		<p>#breadcrumbs {display: none;}</p>
+
+		<p><font color="red"><strong>Si queremos ocultar la barra de herramientas porque no es 
+		necesaria en una página</strong></font></p>
+		<p>#lyBarraHerramientasPersonas.BarraHerramientasSecundaria {display:none;}</p>
+
+		<p><font color="orange"><strong>Para las pestañas hay que añadir todos estos estilos al css poniéndole la posición correcta</strong></font></p>
+		
+		<p align='center'><img src="images/maquetado_29.jpg"></img></p>
+		<p align='center'><img src="images/maquetado_30.jpg"></img></p>
+		
+		<p><font color="red"><strong>A continuación hay que poner en el jsp los link para cada pestaña con sus estilos</strong></font></p>
+		
+		<p align='center'><img src="images/maquetado_31.jpg"></img></p>
+		
+		<p><font color="red"><strong>Además hay que poner en el jsp el div que contendrá los datos de cada una de las pestaña</strong></font></p>
+		<blockquote>
+		<p>&lt;div id="lContPest"&gt;</p>
+		<p>//incluir aqui los includes de los jspf que van dentro de la pestaña (formularios, listas ....)</p>
+    		<p>&lt;/div&gt;</p></blockquote>
+
+
+
+		<a name="ind_3"></a>
+	</section>
+	
+	<section name="1. CAMBIOS PANTALLA CONFIRMACIÓN">
+		
+		<p><font color="blue"><strong>pantallaConfirmacion(callback, 'Esta Seguro?');</strong></font></p>
+		
+		<ul type='disc'>
+		<li>Solo es necesario cambiar confirm.jsp y npa-common con la función PantallaConfirmación</li>
+		<li>Añadir la llamada de la función al botón. (no seria necesario modelar la pantalla de 
+		confirmación, el botón de Eliminar borraría directamente)</li>
+		</ul>
+
+		<p>Además se tiene que generar en el custom-resource.properties las siguientes entradas para 
+		que puedas ver bien la pantalla de eliminar:</p>
+		<blockquote>
+		<p>es.general.confirmacion.titulo= "titulo que quieres que aparezca en la pantalla de confirmación como: Confirmación de Borrado, o algo así"</p>
+		<p>es.general.confirmacion.boton_aceptar = Aceptar</p>
+		<p>es.general.confirmacion.boton_cancelar = Cancelar</p>
+	 	<p>neonatos.confirmacionEliminarNeonatos=¿Estas seguro que deseas eliminar?, para ello 
+	 	se puede poner como arriba 'Estas Seguro?' o mejor poner un bean:message para 
+	 	internacionalizarlo</p></blockquote>
+
+		<p><strong>botón: (cambiar el botón que será tipo submit a tipo button)</strong></p>
+		
+		<p align='center'><img src="images/maquetado_32.jpg"></img></p>
+
+		<p><strong>funciones</strong></p>
+
+		<p align='center'><img src="images/maquetado_33.jpg"></img></p>
+
+
+
+		<a name="ind_4"></a>		
+	</section>
+
+
+	<section name="2. COMO DEVOLVER UN DATO A LA PANTALLA PADRE DESDE UNA EMERGENTE (Localidad)">
+
+		<p><font color="blue"><strong>addRowHandlersForMultipleColumns('row',[2,3],['agregarLocalidad','agregarCodPostal']);</strong></font></p>
+		
+		<p>- Tan solo es necesario utilizar la función addRowHandlersForMultipleColumns ocultar el check y hacer que devuelva la el dato.</p>
+			
+		
+		<a name="ind_5"></a>
+	</section>
+	<section name="3. COMO VOLVER DE UN IFRAME A OTRO QUE LO LLAMÓ">
+	
+		<p>-Hay que preparar el modelado para que la pantalla llamada sepa quien la llamó para volver 
+		a ella. (En personas está hecho, preguntar a Juan)</p>
+		
+		
+		
+			
+		<a name="ind_6"></a>
+	</section>
+	<section name="4. COSAS A TENER EN CUENTA PARA HACER PANTALLAS EMERGENTES">
+
+		<p><font color="blue"><strong>showPopWin(contextPath +'/GestionInformacionEconomica/MuestraLaPantallaDeInformesDetalle.do?id=${row.id}',500,400,null);</strong></font></p>
+		
+		<ul type='disc'>
+		<li>Son pantallas independientes que no hacen nada sobre la pantalla de abajo.</li>
+		<li>Podemos copiar datos de la pantalla emergente a la de abajo (localidad o Poblaciones)</li>
+		<li>Podemos ejecutar una función callback (un submit, un reload, un refrest....)al volver 
+		sobre la pantalla de abajo poniendo la función donde pone null en el showPopWin y poniendo 
+		el hidePopWin (true) para que la función se ejecute, si ponemos hidePopWin() no se ejecuta 
+		(esto sirve para el volver y cancelar)</li>
+		</ul>
+		
+		<p>Para cerrar la ventana:</p>
+		<blockquote>
+		<p><font color="blue">window.parent.hidePopWin() o window.parent.hidePopWin(true)</font></p></blockquote>
+
+		
+		
+		<a name="ind_7"></a>
+	</section>
+
+
+	<section name="5. COSAS A TENER EN CUENTA CON LAS PESTAÑAS">
+
+		<p>-Pueden estar todos los datos de todas las pestañas en la misma página o</p>
+		<p>-Pueden estar en páginas separadas, pero para ello:</p>
+		<ul type='disc'>
+		<li>Las funciones generales deberían estar en todas las pestañas (Guardar y los links para poder pasar de una pestaña a otra...)</li>
+		<li>y las pestañas son links que al pulsarlos guardamos en sesión.</li>
+		</ul>
+
+
+
+		<a name="ind_8"></a>
+	</section>
+	
+	<section name="6. ARCHIVOS A CONGELAR SIEMPRE">
+	
+		<ul type='disc'>
+		<li>Carpeta Layout ( en el raíz</li>
+		<li>web/lib/ajaxtags-1.2.jar</li>
+		<li>taglib-imports.jspf ( en el raíz)</li>
+		<li>el war del escritorio</li>
+		</ul>
+	</section>	
+    </body>
+</document>	    	

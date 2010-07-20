@@ -1,0 +1,30 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'navegar.etb.seleccionar.ruta.submit.param.posicion.title':'<formatting:escape language="javascript"><bean:message key="navegar.etb.seleccionar.ruta.submit.param.posicion.title"/></formatting:escape>',
+                'navegar.etb.seleccionar.ruta.submit.param.id.termino.title':'<formatting:escape language="javascript"><bean:message key="navegar.etb.seleccionar.ruta.submit.param.id.termino.title"/></formatting:escape>',
+                'navegar.etb.seleccionar.ruta.submit.param.action.title':'<formatting:escape language="javascript"><bean:message key="navegar.etb.seleccionar.ruta.submit.param.action.title"/></formatting:escape>',
+                'navegar.etb.seleccionar.ruta.buscar.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="navegar.etb.seleccionar.ruta.buscar.param.idioma.buscador.title"/></formatting:escape>',
+                'navegar.etb.seleccionar.ruta.buscar.param.tipo.busqueda.title':'<formatting:escape language="javascript"><bean:message key="navegar.etb.seleccionar.ruta.buscar.param.tipo.busqueda.title"/></formatting:escape>',
+                'Submit':'<formatting:escape language="javascript"><bean:message key="navegar.etb.seleccionar.ruta.submit.title"/></formatting:escape>',
+                'Submit_no':'<formatting:escape language="javascript"><bean:message key="navegar.etb.seleccionar.ruta.submit.title.notallowed"/></formatting:escape>',
+                'Submit_reset':'<formatting:escape language="javascript"><bean:message key="navegar.etb.seleccionar.ruta.submit.title.reset"/></formatting:escape>',
+                'Submit_noreset':'<formatting:escape language="javascript"><bean:message key="navegar.etb.seleccionar.ruta.submit.title.reset.not.allowed"/></formatting:escape>',
+                'Buscar':'<formatting:escape language="javascript"><bean:message key="navegar.etb.seleccionar.ruta.buscar.title"/></formatting:escape>',
+                'Buscar_no':'<formatting:escape language="javascript"><bean:message key="navegar.etb.seleccionar.ruta.buscar.title.notallowed"/></formatting:escape>',
+                'Buscar_reset':'<formatting:escape language="javascript"><bean:message key="navegar.etb.seleccionar.ruta.buscar.title.reset"/></formatting:escape>',
+                'Buscar_noreset':'<formatting:escape language="javascript"><bean:message key="navegar.etb.seleccionar.ruta.buscar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+</script>
+    </tiles:put>

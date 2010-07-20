@@ -1,0 +1,5 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="historiales" value="${form.historiales}"/>
+    </c:catch>
+</div>

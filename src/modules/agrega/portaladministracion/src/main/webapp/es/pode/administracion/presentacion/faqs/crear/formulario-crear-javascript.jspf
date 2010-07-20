@@ -1,0 +1,36 @@
+
+    <tiles:put name="javascript" type="string">
+        <script type="text/javascript" language="Javascript1.1" src="<html:rewrite action="/formValidation"/>"></script>
+        <html:javascript formName="crearFAQFormularioCrearValidarFormuForm" method="validateFormularioCrearValidarFormuForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+        <html:javascript formName="crearFAQFormularioCrearVolverForm" method="validateFormularioCrearVolverForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'crear.faq.formulario.crear.validar.formu.param.categoria.title':'<formatting:escape language="javascript"><bean:message key="crear.faq.formulario.crear.validar.formu.param.categoria.title"/></formatting:escape>',
+                'crear.faq.formulario.crear.validar.formu.param.castellano.title':'<formatting:escape language="javascript"><bean:message key="crear.faq.formulario.crear.validar.formu.param.castellano.title"/></formatting:escape>',
+                'crear.faq.formulario.crear.validar.formu.param.ingles.title':'<formatting:escape language="javascript"><bean:message key="crear.faq.formulario.crear.validar.formu.param.ingles.title"/></formatting:escape>',
+                'crear.faq.formulario.crear.validar.formu.param.catalan.title':'<formatting:escape language="javascript"><bean:message key="crear.faq.formulario.crear.validar.formu.param.catalan.title"/></formatting:escape>',
+                'crear.faq.formulario.crear.validar.formu.param.valenciano.title':'<formatting:escape language="javascript"><bean:message key="crear.faq.formulario.crear.validar.formu.param.valenciano.title"/></formatting:escape>',
+                'crear.faq.formulario.crear.validar.formu.param.gallego.title':'<formatting:escape language="javascript"><bean:message key="crear.faq.formulario.crear.validar.formu.param.gallego.title"/></formatting:escape>',
+                'crear.faq.formulario.crear.validar.formu.param.euskera.title':'<formatting:escape language="javascript"><bean:message key="crear.faq.formulario.crear.validar.formu.param.euskera.title"/></formatting:escape>',
+                'crear.faq.formulario.crear.volver.param.categoria.title':'<formatting:escape language="javascript"><bean:message key="crear.faq.formulario.crear.volver.param.categoria.title"/></formatting:escape>',
+                'validarFormu':'<formatting:escape language="javascript"><bean:message key="crear.faq.formulario.crear.validar.formu.title"/></formatting:escape>',
+                'validarFormu_no':'<formatting:escape language="javascript"><bean:message key="crear.faq.formulario.crear.validar.formu.title.notallowed"/></formatting:escape>',
+                'validarFormu_reset':'<formatting:escape language="javascript"><bean:message key="crear.faq.formulario.crear.validar.formu.title.reset"/></formatting:escape>',
+                'validarFormu_noreset':'<formatting:escape language="javascript"><bean:message key="crear.faq.formulario.crear.validar.formu.title.reset.not.allowed"/></formatting:escape>',
+                'volver':'<formatting:escape language="javascript"><bean:message key="crear.faq.formulario.crear.volver.title"/></formatting:escape>',
+                'volver_no':'<formatting:escape language="javascript"><bean:message key="crear.faq.formulario.crear.volver.title.notallowed"/></formatting:escape>',
+                'volver_reset':'<formatting:escape language="javascript"><bean:message key="crear.faq.formulario.crear.volver.title.reset"/></formatting:escape>',
+                'volver_noreset':'<formatting:escape language="javascript"><bean:message key="crear.faq.formulario.crear.volver.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+</script>
+    </tiles:put>

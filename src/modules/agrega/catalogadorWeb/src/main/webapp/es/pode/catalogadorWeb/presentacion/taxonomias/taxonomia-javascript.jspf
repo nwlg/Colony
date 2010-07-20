@@ -1,0 +1,52 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'taxonomias.taxonomia.asociar.param.ruta.padrevo.title':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.asociar.param.ruta.padrevo.title"/></formatting:escape>',
+                'taxonomias.taxonomia.asociar.param.idioma.title':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.asociar.param.idioma.title"/></formatting:escape>',
+                'taxonomias.taxonomia.asociar.param.nom.taxonomia.title':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.asociar.param.nom.taxonomia.title"/></formatting:escape>',
+                'taxonomias.taxonomia.asociar.param.id.title':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.asociar.param.id.title"/></formatting:escape>',
+                'taxonomias.taxonomia.asociar.param.vocab.name.title':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.asociar.param.vocab.name.title"/></formatting:escape>',
+                'taxonomias.taxonomia.consultar.nodo.param.ruta.padrevo.title':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.consultar.nodo.param.ruta.padrevo.title"/></formatting:escape>',
+                'taxonomias.taxonomia.consultar.nodo.param.taxonesvo.title':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.consultar.nodo.param.taxonesvo.title"/></formatting:escape>',
+                'taxonomias.taxonomia.consultar.nodo.param.idioma.title':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.consultar.nodo.param.idioma.title"/></formatting:escape>',
+                'taxonomias.taxonomia.consultar.nodo.param.nom.taxonomia.title':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.consultar.nodo.param.nom.taxonomia.title"/></formatting:escape>',
+                'taxonomias.taxonomia.consultar.nodo.param.id.title':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.consultar.nodo.param.id.title"/></formatting:escape>',
+                'taxonomias.taxonomia.consultar.nodo.param.vocab.name.title':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.consultar.nodo.param.vocab.name.title"/></formatting:escape>',
+                'taxonomias.taxonomia.consulta.padre.param.taxonesvo.title':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.consulta.padre.param.taxonesvo.title"/></formatting:escape>',
+                'taxonomias.taxonomia.consulta.padre.param.ruta.padrevo.title':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.consulta.padre.param.ruta.padrevo.title"/></formatting:escape>',
+                'taxonomias.taxonomia.consulta.padre.param.idioma.title':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.consulta.padre.param.idioma.title"/></formatting:escape>',
+                'taxonomias.taxonomia.consulta.padre.param.nom.taxonomia.title':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.consulta.padre.param.nom.taxonomia.title"/></formatting:escape>',
+                'taxonomias.taxonomia.consulta.padre.param.id.title':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.consulta.padre.param.id.title"/></formatting:escape>',
+                'taxonomias.taxonomia.consulta.padre.param.vocab.name.title':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.consulta.padre.param.vocab.name.title"/></formatting:escape>',
+                'Asociar':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.asociar.title"/></formatting:escape>',
+                'Asociar_no':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.asociar.title.notallowed"/></formatting:escape>',
+                'Asociar_reset':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.asociar.title.reset"/></formatting:escape>',
+                'Asociar_noreset':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.asociar.title.reset.not.allowed"/></formatting:escape>',
+                'consultarNodo':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.consultar.nodo.title"/></formatting:escape>',
+                'consultarNodo_no':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.consultar.nodo.title.notallowed"/></formatting:escape>',
+                'consultarNodo_reset':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.consultar.nodo.title.reset"/></formatting:escape>',
+                'consultarNodo_noreset':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.consultar.nodo.title.reset.not.allowed"/></formatting:escape>',
+                'consultaPadre':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.consulta.padre.title"/></formatting:escape>',
+                'consultaPadre_no':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.consulta.padre.title.notallowed"/></formatting:escape>',
+                'consultaPadre_reset':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.consulta.padre.title.reset"/></formatting:escape>',
+                'consultaPadre_noreset':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.consulta.padre.title.reset.not.allowed"/></formatting:escape>',
+                'Cancelar':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.cancelar.title"/></formatting:escape>',
+                'Cancelar_no':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.cancelar.title.notallowed"/></formatting:escape>',
+                'Cancelar_reset':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.cancelar.title.reset"/></formatting:escape>',
+                'Cancelar_noreset':'<formatting:escape language="javascript"><bean:message key="taxonomias.taxonomia.cancelar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+</script>
+    </tiles:put>

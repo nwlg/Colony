@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+
+
+    <!-- ========================= DATASOURCE DEFINITION ========================= -->
+
+    <!-- Local DataSource that works in any environment -->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName"><value>com.mysql.jdbc.Driver</value></property>
+        <property name="username"><value>root</value></property>
+        <property name="password"><value>admin</value></property>
+        <property name="url"><value>jdbc:mysql://localhost:3306/auditoria</value></property>
+    </bean>
+
+    <!-- ====================== End of DATASOURCE DEFINITION ====================== -->
+
+    <!-- ===================== TRANSACTION MANAGER DEFINITION ========================= -->
+
+    <!-- (local) Transaction Manager -->
+    <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <property name="sessionFactory"><ref bean="sessionFactory"/></property>
+    </bean>
+
+    <!-- ===================== TRANSACTION MANAGER DEFINITION ========================= -->
+
+
+    <!-- ========================= GENERAL DEFINITIONS ========================= -->
+    <!-- Message source for this context, loaded from localized "messages_xx" files -->
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename"><value>messages</value></property>
+    </bean>
+
+	<bean id="beanMapper" class="net.sf.dozer.util.mapping.DozerBeanMapper" singleton="true">
+		<property name="mappingFiles">
+			<list>
+				<value>defaultDozerMappings_auditoria.xml</value>
+				<value>customDozerMappings_auditoria.xml</value>
+				<!-- dozer mappings merge-point -->
+			</list>
+		</property>
+	</bean>
+    <!-- applicationContext merge-point -->
+
+    <!-- Hibernate SessionFactory -->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource"><ref bean="dataSource"/></property>
+        <property name="mappingResources">
+            <list>
+                <value>es/pode/auditoria/negocio/dominio/Busqueda.hbm.xml</value>
+                <value>es/pode/auditoria/negocio/dominio/Operacion.hbm.xml</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+                <prop key="hibernate.cache.use_query_cache">false</prop>
+                <prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+                <prop key="hibernate.cache.query_cache_factory">org.hibernate.cache.StandardQueryCacheFactory</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- The Hibernate interceptor -->
+    <bean id="hibernateInterceptor" class="org.springframework.orm.hibernate3.HibernateInterceptor">
+        <property name="sessionFactory"><ref bean="sessionFactory"/></property>
+    </bean>
+
+    <!-- Busqueda Entity Proxy with inner Busqueda Entity implementation -->
+    <bean id="busquedaDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.auditoria.negocio.dominio.BusquedaDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.auditoria.negocio.dominio.BusquedaDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+    <!-- Operacion Entity Proxy with inner Operacion Entity implementation -->
+    <bean id="operacionDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.auditoria.negocio.dominio.OperacionDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.auditoria.negocio.dominio.OperacionDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+    <!-- ========================= Start of SERVICE DEFINITIONS ========================= -->
+
+    <!-- Service Transactional Interceptor -->
+    <bean id="serviceTransactionInterceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor">
+        <property name="transactionManager"><ref bean="transactionManager"/></property>
+        <property name="transactionAttributeSource">
+            <value>
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.registrarTrabajoPlan=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.registrarTrabajoFechaFinPlan=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.registrarTrabajoHijoPlan=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.registrarTrabajoInterrPlan=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.registrarOperacion=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeOperacionesRealizadas=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeNivelAgregacion=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeCoberturaCurricular=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeTerminosBusqueda=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeOdeUsuario=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeEstadoOdes=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.registrarBusqueda=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeLicenciasOdes=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeUsuarios=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeProcesosPlanificados=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeMasValorado=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeMasMostrado=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeMasPrevisualizados=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeMasVisualizados=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeMasDescargados=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeMasPesados=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.almacenarBusquedaBD=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.almacenarOperacionBD=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.obtenerInformes=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.crearGuardarInforme=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeOperacionUsuario=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeEstadoOdesTransicciones=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.crearInforme=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeOdeUsuarioOperacion=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.repositorio=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.crearInformesPortada=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.crearInformeRepositorio=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.obtenNumeroOperaciones=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeMasEnviado=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.crearGuardarInformeFederado=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaFederadaServicio.informeNivelAgregacionFederado=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaFederadaServicio.nivelAgregacionFederadoLocal=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaFederadaServicio.informeCoberturaFederado=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaFederadaServicio.coberturaFederadoLocal=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaFederadaServicio.informeOdesPublicadosFederado=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaFederadaServicio.odesPublicadosFederadoLocal=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaFederadaServicio.informeOdesIdiomaFederado=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaFederadaServicio.informeOdesIdiomaLocal=PROPAGATION_REQUIRED
+            </value>
+        </property>
+    </bean>
+
+    <!-- SrvAuditoriaServicio Service Proxy with inner SrvAuditoriaServicio Service Implementation -->
+    <bean id="srvAuditoriaServicio" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.auditoria.negocio.servicios.SrvAuditoriaServicioImpl">
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                <property name="busquedaDao"><ref bean="busquedaDao"/></property>
+                <property name="operacionDao"><ref bean="operacionDao"/></property>
+									            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceTransactionInterceptor</value>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvAuditoriaFederadaServicio Service Proxy with inner SrvAuditoriaFederadaServicio Service Implementation -->
+    <bean id="srvAuditoriaFederadaServicio" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.auditoria.negocio.servicios.SrvAuditoriaFederadaServicioImpl">
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+				            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.auditoria.negocio.servicios.SrvAuditoriaFederadaServicio</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceTransactionInterceptor</value>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- ========================= End of SERVICE DEFINITIONS ========================= -->
+
+    <!-- ========================= CONSTANTS PROPERTIES BEAN ========================= -->    
+    <bean id="propiedadesConstantes" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	      <property name="locations">
+		  <list>
+			  <value>classpath:spring.properties</value>
+		  </list>
+		  </property>
+    </bean>
+    <!-- ========================= END CONSTANTS PROPERTIES BEAN ========================= -->    
+</beans>

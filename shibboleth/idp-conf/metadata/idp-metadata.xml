@@ -1,0 +1,126 @@
+<EntityDescriptor entityID="https://identity.siriusit.co.uk/idp/shibboleth"
+                  xmlns="urn:oasis:names:tc:SAML:2.0:metadata"
+                  xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+                  xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+
+        <Extensions>
+            <shibmd:Scope regexp="false">siriusit.co.uk</shibmd:Scope>
+        </Extensions>
+
+        <KeyDescriptor>
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+MIIE/DCCA+SgAwIBAgILAQAAAAABI1DYtKgwDQYJKoZIhvcNAQEFBQAwajEjMCEG
+A1UECxMaT3JnYW5pemF0aW9uIFZhbGlkYXRpb24gQ0ExEzARBgNVBAoTCkdsb2Jh
+bFNpZ24xLjAsBgNVBAMTJUdsb2JhbFNpZ24gT3JnYW5pemF0aW9uIFZhbGlkYXRp
+b24gQ0EwHhcNMDkwODI1MDgzNzAyWhcNMTIwODI1MDgzNjU4WjCBlDELMAkGA1UE
+BhMCR0IxDzANBgNVBAgTBlN1cnJleTETMBEGA1UEBxMKQWRkbGVzdG9uZTEcMBoG
+A1UECxMTSWRlbnRpdHkgTWFuYWdlbWVudDEfMB0GA1UEChMWU2lyaXVzIENvcnBv
+cmF0aW9uIHBsYzEgMB4GA1UEAxMXaWRlbnRpdHkuc2lyaXVzaXQuY28udWswggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDCiMG1YDzfwiOMPw8KizrsjHVK
+ol33G04HI/v9wBbr+5xqRZBp3kKKM5OOLIiLJ84zsR4d47rquqakVc6H7cI3XUFd
+ZYpaZt+Vy6ff2eneOIfmLUlyScMvVfqxpu7BZ9Ktu627n48cZbjcAMSB4KRx9EnH
+Gobdy21s+vi4PLnPC22ZaQDoM1NkkNG4Bec4EFncAIFEfYj0Iy+4dNKmQ2pttM6E
+IazpfianuzOkeVI5I2s9z+84TugWyWIqpbYS/qKc1LkEY/1O98zmv290sXvul2LJ
+Cz9IeBMCd2+Mx9nQfd0j5aAemNXJk7zGo+qN/ZZDPiHw/8Qz7h1jDq+6qNw9AgMB
+AAGjggF2MIIBcjAfBgNVHSMEGDAWgBR9bSrsZqunUTarAmnxcI/EWQuaHzBJBggr
+BgEFBQcBAQQ9MDswOQYIKwYBBQUHMAKGLWh0dHA6Ly9zZWN1cmUuZ2xvYmFsc2ln
+bi5uZXQvY2FjZXJ0L29yZ3YxLmNydDA/BgNVHR8EODA2MDSgMqAwhi5odHRwOi8v
+Y3JsLmdsb2JhbHNpZ24ubmV0L09yZ2FuaXphdGlvblZhbDEuY3JsMB0GA1UdDgQW
+BBRuITtO3UMZPCeCDGPG4IEysSAX5zAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIF
+oDApBgNVHSUEIjAgBggrBgEFBQcDAQYIKwYBBQUHAwIGCisGAQQBgjcKAwMwSwYD
+VR0gBEQwQjBABgkrBgEEAaAyARQwMzAxBggrBgEFBQcCARYlaHR0cDovL3d3dy5n
+bG9iYWxzaWduLm5ldC9yZXBvc2l0b3J5LzARBglghkgBhvhCAQEEBAMCBsAwDQYJ
+KoZIhvcNAQEFBQADggEBAEytqpc6ZCf1bMFtux/JXjhJmNkUxthKShu+SujkBqCr
+O/e9vogToHdzXuQHMLkByIJjFuFjUwvh/5WhMgSyl3ei7o507eITjpJyGIEantgz
+rL5BvG5UTuqpyQ+vIVUn8rDoXNOBOlrv2vJu5G8Sr/RrMGrKfFZG76HbBZsMbefm
+AfDzHkc0grU2dGarw+oTgU7PCXHVPu+3qupXJSIEE81EQjx+Krs37isC1qWqZe0U
+OZPwZwy5yN6LXuZifkZwRa1YtJcCBrMklG6LYVqtA+TrHo1Cjxk+f5pICHSCrDWf
+1kWZhtmGCTknNnv9Rkmvq+Ycbjsba46ESgSpo8pTYB4=
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </KeyDescriptor>
+        
+        <ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding"
+                                   Location="https://identity.siriusit.co.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" 
+                                   index="1"/>
+
+        <ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP"
+                                   Location="https://identity.siriusit.co.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" 
+                                   index="2"/>
+                                   
+        <NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+
+        <SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" 
+                             Location="https://identity.siriusit.co.uk/idp/profile/Shibboleth/SSO" />
+        
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" 
+                             Location="https://identity.siriusit.co.uk/idp/profile/SAML2/POST/SSO" />
+
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" 
+                             Location="https://identity.siriusit.co.uk/idp/profile/SAML2/POST-SimpleSign/SSO" />
+        
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" 
+                             Location="https://identity.siriusit.co.uk/idp/profile/SAML2/Redirect/SSO" />
+    </IDPSSODescriptor>
+
+    <AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+
+        <Extensions>
+            <shibmd:Scope regexp="false">siriusit.co.uk</shibmd:Scope>
+        </Extensions>
+
+        <KeyDescriptor>
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+MIIE/DCCA+SgAwIBAgILAQAAAAABI1DYtKgwDQYJKoZIhvcNAQEFBQAwajEjMCEG
+A1UECxMaT3JnYW5pemF0aW9uIFZhbGlkYXRpb24gQ0ExEzARBgNVBAoTCkdsb2Jh
+bFNpZ24xLjAsBgNVBAMTJUdsb2JhbFNpZ24gT3JnYW5pemF0aW9uIFZhbGlkYXRp
+b24gQ0EwHhcNMDkwODI1MDgzNzAyWhcNMTIwODI1MDgzNjU4WjCBlDELMAkGA1UE
+BhMCR0IxDzANBgNVBAgTBlN1cnJleTETMBEGA1UEBxMKQWRkbGVzdG9uZTEcMBoG
+A1UECxMTSWRlbnRpdHkgTWFuYWdlbWVudDEfMB0GA1UEChMWU2lyaXVzIENvcnBv
+cmF0aW9uIHBsYzEgMB4GA1UEAxMXaWRlbnRpdHkuc2lyaXVzaXQuY28udWswggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDCiMG1YDzfwiOMPw8KizrsjHVK
+ol33G04HI/v9wBbr+5xqRZBp3kKKM5OOLIiLJ84zsR4d47rquqakVc6H7cI3XUFd
+ZYpaZt+Vy6ff2eneOIfmLUlyScMvVfqxpu7BZ9Ktu627n48cZbjcAMSB4KRx9EnH
+Gobdy21s+vi4PLnPC22ZaQDoM1NkkNG4Bec4EFncAIFEfYj0Iy+4dNKmQ2pttM6E
+IazpfianuzOkeVI5I2s9z+84TugWyWIqpbYS/qKc1LkEY/1O98zmv290sXvul2LJ
+Cz9IeBMCd2+Mx9nQfd0j5aAemNXJk7zGo+qN/ZZDPiHw/8Qz7h1jDq+6qNw9AgMB
+AAGjggF2MIIBcjAfBgNVHSMEGDAWgBR9bSrsZqunUTarAmnxcI/EWQuaHzBJBggr
+BgEFBQcBAQQ9MDswOQYIKwYBBQUHMAKGLWh0dHA6Ly9zZWN1cmUuZ2xvYmFsc2ln
+bi5uZXQvY2FjZXJ0L29yZ3YxLmNydDA/BgNVHR8EODA2MDSgMqAwhi5odHRwOi8v
+Y3JsLmdsb2JhbHNpZ24ubmV0L09yZ2FuaXphdGlvblZhbDEuY3JsMB0GA1UdDgQW
+BBRuITtO3UMZPCeCDGPG4IEysSAX5zAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIF
+oDApBgNVHSUEIjAgBggrBgEFBQcDAQYIKwYBBQUHAwIGCisGAQQBgjcKAwMwSwYD
+VR0gBEQwQjBABgkrBgEEAaAyARQwMzAxBggrBgEFBQcCARYlaHR0cDovL3d3dy5n
+bG9iYWxzaWduLm5ldC9yZXBvc2l0b3J5LzARBglghkgBhvhCAQEEBAMCBsAwDQYJ
+KoZIhvcNAQEFBQADggEBAEytqpc6ZCf1bMFtux/JXjhJmNkUxthKShu+SujkBqCr
+O/e9vogToHdzXuQHMLkByIJjFuFjUwvh/5WhMgSyl3ei7o507eITjpJyGIEantgz
+rL5BvG5UTuqpyQ+vIVUn8rDoXNOBOlrv2vJu5G8Sr/RrMGrKfFZG76HbBZsMbefm
+AfDzHkc0grU2dGarw+oTgU7PCXHVPu+3qupXJSIEE81EQjx+Krs37isC1qWqZe0U
+OZPwZwy5yN6LXuZifkZwRa1YtJcCBrMklG6LYVqtA+TrHo1Cjxk+f5pICHSCrDWf
+1kWZhtmGCTknNnv9Rkmvq+Ycbjsba46ESgSpo8pTYB4=
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </KeyDescriptor>
+
+        <AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" 
+                          Location="https://identity.siriusit.co.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery" />
+        
+        <AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP"
+                          Location="https://identity.siriusit.co.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery" />
+        
+        <NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+        
+    </AttributeAuthorityDescriptor>
+    
+</EntityDescriptor>    

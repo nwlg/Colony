@@ -1,0 +1,23 @@
+<div id="idCollection" class="table">
+    <display:table name="${form.idCollection}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="gestor-basico-id-collection.pdf" />
+
+        <display:column media="xml csv excel pdf"
+            titleKey="gestor.basico.gestor.basico.param.id.collection.title"
+            autolink="true" paramId="title"
+            property="title">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="title" paramId="title"
+            sortProperty="title" sortable="true"
+            titleKey="gestor.basico.gestor.basico.param.id.collection.title"
+            property="title" />
+   
+    </display:table>
+</div>
+

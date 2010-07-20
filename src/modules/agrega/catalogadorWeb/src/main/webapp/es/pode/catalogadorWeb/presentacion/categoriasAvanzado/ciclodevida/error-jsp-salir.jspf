@@ -1,0 +1,13 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="salir" class="action">
+    <h3><bean:message key="ciclo.de.vida.error.jsp.salir"/></h3>
+    <div class="trigger">
+        <form id="cicloDeVidaErrorJspSalirForm" action='<html:rewrite action="/CicloDeVida/ErrorJspSalir"/>' method="post">
+               <html:submit onmouseover="hints.show('Salir')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="ciclo.de.vida.error.jsp.salir"/>
+               </html:submit>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

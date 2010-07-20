@@ -1,0 +1,102 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'catalogador.avanzado.categorias.form.modificar.general.param.identificador.title':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.general.param.identificador.title"/></formatting:escape>',
+                'catalogador.avanzado.categorias.form.modificar.general.param.return.url.title':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.general.param.return.url.title"/></formatting:escape>',
+                'catalogador.avanzado.categorias.form.modificar.general.param.datos.title':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.general.param.datos.title"/></formatting:escape>',
+                'catalogador.avanzado.categorias.form.modificar.ciclo.de.vida.param.identificador.title':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.ciclo.de.vida.param.identificador.title"/></formatting:escape>',
+                'catalogador.avanzado.categorias.form.modificar.ciclo.de.vida.param.return.url.title':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.ciclo.de.vida.param.return.url.title"/></formatting:escape>',
+                'catalogador.avanzado.categorias.form.modificar.ciclo.de.vida.param.datos.title':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.ciclo.de.vida.param.datos.title"/></formatting:escape>',
+                'catalogador.avanzado.categorias.form.modificar.meta.metadatos.param.identificador.title':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.meta.metadatos.param.identificador.title"/></formatting:escape>',
+                'catalogador.avanzado.categorias.form.modificar.meta.metadatos.param.return.url.title':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.meta.metadatos.param.return.url.title"/></formatting:escape>',
+                'catalogador.avanzado.categorias.form.modificar.meta.metadatos.param.datos.title':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.meta.metadatos.param.datos.title"/></formatting:escape>',
+                'catalogador.avanzado.categorias.form.modificar.tecnica.param.identificador.title':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.tecnica.param.identificador.title"/></formatting:escape>',
+                'catalogador.avanzado.categorias.form.modificar.tecnica.param.return.url.title':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.tecnica.param.return.url.title"/></formatting:escape>',
+                'catalogador.avanzado.categorias.form.modificar.tecnica.param.datos.title':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.tecnica.param.datos.title"/></formatting:escape>',
+                'catalogador.avanzado.categorias.form.modificar.uso.educativo.param.identificador.title':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.uso.educativo.param.identificador.title"/></formatting:escape>',
+                'catalogador.avanzado.categorias.form.modificar.uso.educativo.param.return.url.title':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.uso.educativo.param.return.url.title"/></formatting:escape>',
+                'catalogador.avanzado.categorias.form.modificar.uso.educativo.param.datos.title':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.uso.educativo.param.datos.title"/></formatting:escape>',
+                'catalogador.avanzado.categorias.form.modificar.derechos.param.identificador.title':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.derechos.param.identificador.title"/></formatting:escape>',
+                'catalogador.avanzado.categorias.form.modificar.derechos.param.return.url.title':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.derechos.param.return.url.title"/></formatting:escape>',
+                'catalogador.avanzado.categorias.form.modificar.derechos.param.datos.title':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.derechos.param.datos.title"/></formatting:escape>',
+                'catalogador.avanzado.categorias.form.modificar.relacion.param.identificador.title':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.relacion.param.identificador.title"/></formatting:escape>',
+                'catalogador.avanzado.categorias.form.modificar.relacion.param.return.url.title':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.relacion.param.return.url.title"/></formatting:escape>',
+                'catalogador.avanzado.categorias.form.modificar.relacion.param.datos.title':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.relacion.param.datos.title"/></formatting:escape>',
+                'catalogador.avanzado.categorias.form.modificar.anotacion.param.identificador.title':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.anotacion.param.identificador.title"/></formatting:escape>',
+                'catalogador.avanzado.categorias.form.modificar.anotacion.param.return.url.title':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.anotacion.param.return.url.title"/></formatting:escape>',
+                'catalogador.avanzado.categorias.form.modificar.anotacion.param.datos.title':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.anotacion.param.datos.title"/></formatting:escape>',
+                'catalogador.avanzado.categorias.form.modificar.clasificacion.param.identificador.title':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.clasificacion.param.identificador.title"/></formatting:escape>',
+                'catalogador.avanzado.categorias.form.modificar.clasificacion.param.return.url.title':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.clasificacion.param.return.url.title"/></formatting:escape>',
+                'catalogador.avanzado.categorias.form.modificar.clasificacion.param.datos.title':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.clasificacion.param.datos.title"/></formatting:escape>',
+                'catalogador.avanzado.categorias.form.submit.param.identificador.title':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.submit.param.identificador.title"/></formatting:escape>',
+                'catalogador.avanzado.categorias.form.submit.param.return.url.title':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.submit.param.return.url.title"/></formatting:escape>',
+                'catalogador.avanzado.categorias.form.submit.param.datos.title':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.submit.param.datos.title"/></formatting:escape>',
+                'catalogador.avanzado.categorias.form.submit.param.accion.title':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.submit.param.accion.title"/></formatting:escape>',
+                'catalogador.avanzado.categorias.form.submit.param.mensajes.error.title':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.submit.param.mensajes.error.title"/></formatting:escape>',
+                'modificarGeneral':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.general.title"/></formatting:escape>',
+                'modificarGeneral_no':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.general.title.notallowed"/></formatting:escape>',
+                'modificarGeneral_reset':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.general.title.reset"/></formatting:escape>',
+                'modificarGeneral_noreset':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.general.title.reset.not.allowed"/></formatting:escape>',
+                'modificarCicloDeVida':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.ciclo.de.vida.title"/></formatting:escape>',
+                'modificarCicloDeVida_no':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.ciclo.de.vida.title.notallowed"/></formatting:escape>',
+                'modificarCicloDeVida_reset':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.ciclo.de.vida.title.reset"/></formatting:escape>',
+                'modificarCicloDeVida_noreset':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.ciclo.de.vida.title.reset.not.allowed"/></formatting:escape>',
+                'modificarMetaMetadatos':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.meta.metadatos.title"/></formatting:escape>',
+                'modificarMetaMetadatos_no':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.meta.metadatos.title.notallowed"/></formatting:escape>',
+                'modificarMetaMetadatos_reset':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.meta.metadatos.title.reset"/></formatting:escape>',
+                'modificarMetaMetadatos_noreset':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.meta.metadatos.title.reset.not.allowed"/></formatting:escape>',
+                'modificarTecnica':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.tecnica.title"/></formatting:escape>',
+                'modificarTecnica_no':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.tecnica.title.notallowed"/></formatting:escape>',
+                'modificarTecnica_reset':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.tecnica.title.reset"/></formatting:escape>',
+                'modificarTecnica_noreset':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.tecnica.title.reset.not.allowed"/></formatting:escape>',
+                'modificarUsoEducativo':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.uso.educativo.title"/></formatting:escape>',
+                'modificarUsoEducativo_no':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.uso.educativo.title.notallowed"/></formatting:escape>',
+                'modificarUsoEducativo_reset':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.uso.educativo.title.reset"/></formatting:escape>',
+                'modificarUsoEducativo_noreset':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.uso.educativo.title.reset.not.allowed"/></formatting:escape>',
+                'modificarDerechos':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.derechos.title"/></formatting:escape>',
+                'modificarDerechos_no':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.derechos.title.notallowed"/></formatting:escape>',
+                'modificarDerechos_reset':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.derechos.title.reset"/></formatting:escape>',
+                'modificarDerechos_noreset':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.derechos.title.reset.not.allowed"/></formatting:escape>',
+                'modificarRelacion':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.relacion.title"/></formatting:escape>',
+                'modificarRelacion_no':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.relacion.title.notallowed"/></formatting:escape>',
+                'modificarRelacion_reset':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.relacion.title.reset"/></formatting:escape>',
+                'modificarRelacion_noreset':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.relacion.title.reset.not.allowed"/></formatting:escape>',
+                'modificarAnotacion':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.anotacion.title"/></formatting:escape>',
+                'modificarAnotacion_no':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.anotacion.title.notallowed"/></formatting:escape>',
+                'modificarAnotacion_reset':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.anotacion.title.reset"/></formatting:escape>',
+                'modificarAnotacion_noreset':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.anotacion.title.reset.not.allowed"/></formatting:escape>',
+                'modificarClasificacion':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.clasificacion.title"/></formatting:escape>',
+                'modificarClasificacion_no':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.clasificacion.title.notallowed"/></formatting:escape>',
+                'modificarClasificacion_reset':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.clasificacion.title.reset"/></formatting:escape>',
+                'modificarClasificacion_noreset':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.modificar.clasificacion.title.reset.not.allowed"/></formatting:escape>',
+                'submit':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.submit.title"/></formatting:escape>',
+                'submit_no':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.submit.title.notallowed"/></formatting:escape>',
+                'submit_reset':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.submit.title.reset"/></formatting:escape>',
+                'submit_noreset':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.submit.title.reset.not.allowed"/></formatting:escape>',
+                'volver':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.volver.title"/></formatting:escape>',
+                'volver_no':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.volver.title.notallowed"/></formatting:escape>',
+                'volver_reset':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.volver.title.reset"/></formatting:escape>',
+                'volver_noreset':'<formatting:escape language="javascript"><bean:message key="catalogador.avanzado.categorias.form.volver.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+
+
+
+
+
+
+
+</script>
+    </tiles:put>

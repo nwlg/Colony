@@ -1,0 +1,8 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="extension" value="${form.extension}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="archivoVO" value="${form.archivoVO}"/>
+    </c:catch>
+</div>

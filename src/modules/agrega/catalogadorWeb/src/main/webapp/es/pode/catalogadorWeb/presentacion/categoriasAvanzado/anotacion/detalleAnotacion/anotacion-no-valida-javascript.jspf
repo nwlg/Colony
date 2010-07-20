@@ -1,0 +1,41 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'detalle.anotacion.cu.anotacion.no.valida.volver.param.titulo.anotacion.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.anotacion.no.valida.volver.param.titulo.anotacion.title"/></formatting:escape>',
+                'detalle.anotacion.cu.anotacion.no.valida.volver.param.identificador.ode.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.anotacion.no.valida.volver.param.identificador.ode.title"/></formatting:escape>',
+                'detalle.anotacion.cu.anotacion.no.valida.volver.param.boton.pulsado.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.anotacion.no.valida.volver.param.boton.pulsado.title"/></formatting:escape>',
+                'detalle.anotacion.cu.anotacion.no.valida.volver.param.nombre.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.anotacion.no.valida.volver.param.nombre.title"/></formatting:escape>',
+                'detalle.anotacion.cu.anotacion.no.valida.volver.param.organizacion.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.anotacion.no.valida.volver.param.organizacion.title"/></formatting:escape>',
+                'detalle.anotacion.cu.anotacion.no.valida.volver.param.email.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.anotacion.no.valida.volver.param.email.title"/></formatting:escape>',
+                'detalle.anotacion.cu.anotacion.no.valida.volver.param.dia.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.anotacion.no.valida.volver.param.dia.title"/></formatting:escape>',
+                'detalle.anotacion.cu.anotacion.no.valida.volver.param.mes.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.anotacion.no.valida.volver.param.mes.title"/></formatting:escape>',
+                'detalle.anotacion.cu.anotacion.no.valida.volver.param.anyo.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.anotacion.no.valida.volver.param.anyo.title"/></formatting:escape>',
+                'detalle.anotacion.cu.anotacion.no.valida.volver.param.thora.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.anotacion.no.valida.volver.param.thora.title"/></formatting:escape>',
+                'detalle.anotacion.cu.anotacion.no.valida.volver.param.tminuto.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.anotacion.no.valida.volver.param.tminuto.title"/></formatting:escape>',
+                'detalle.anotacion.cu.anotacion.no.valida.volver.param.tsegundo.p1.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.anotacion.no.valida.volver.param.tsegundo.p1.title"/></formatting:escape>',
+                'detalle.anotacion.cu.anotacion.no.valida.volver.param.tsegundo.p2.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.anotacion.no.valida.volver.param.tsegundo.p2.title"/></formatting:escape>',
+                'detalle.anotacion.cu.anotacion.no.valida.volver.param.meridiano.cero.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.anotacion.no.valida.volver.param.meridiano.cero.title"/></formatting:escape>',
+                'detalle.anotacion.cu.anotacion.no.valida.volver.param.combo.zona.h.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.anotacion.no.valida.volver.param.combo.zona.h.title"/></formatting:escape>',
+                'detalle.anotacion.cu.anotacion.no.valida.volver.param.zn.hora.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.anotacion.no.valida.volver.param.zn.hora.title"/></formatting:escape>',
+                'detalle.anotacion.cu.anotacion.no.valida.volver.param.zn.minutos.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.anotacion.no.valida.volver.param.zn.minutos.title"/></formatting:escape>',
+                'detalle.anotacion.cu.anotacion.no.valida.volver.param.descripcion.fecha.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.anotacion.no.valida.volver.param.descripcion.fecha.title"/></formatting:escape>',
+                'detalle.anotacion.cu.anotacion.no.valida.volver.param.combo.idioma.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.anotacion.no.valida.volver.param.combo.idioma.title"/></formatting:escape>',
+                'detalle.anotacion.cu.anotacion.no.valida.volver.param.descripcion.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.anotacion.no.valida.volver.param.descripcion.title"/></formatting:escape>',
+                'detalle.anotacion.cu.anotacion.no.valida.volver.param.mensajes.error.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.anotacion.no.valida.volver.param.mensajes.error.title"/></formatting:escape>',
+                'volver':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.anotacion.no.valida.volver.title"/></formatting:escape>',
+                'volver_no':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.anotacion.no.valida.volver.title.notallowed"/></formatting:escape>',
+                'volver_reset':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.anotacion.no.valida.volver.title.reset"/></formatting:escape>',
+                'volver_noreset':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.anotacion.no.valida.volver.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

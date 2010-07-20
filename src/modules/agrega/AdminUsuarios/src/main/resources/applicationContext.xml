@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <!-- ========================= GENERAL DEFINITIONS ========================= -->
+    <!-- Message source for this context, loaded from localized "messages_xx" files -->
+
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename"><value>messages</value></property>
+    </bean>
+
+	<bean id="beanMapper" class="net.sf.dozer.util.mapping.DozerBeanMapper" singleton="true">
+		<property name="mappingFiles">
+			<list>
+				<value>defaultDozerMappings.xml</value>
+				<value>customDozerMappings.xml</value>				
+				<!-- dozer mappings merge-point -->
+			</list>
+		</property>
+	</bean>
+
+    <!-- applicationContext merge-point -->
+
+    <!-- Hibernate SessionFactory -->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource"><ref bean="dataSource"/></property>
+        <property name="mappingResources">
+            <list>
+                <value>es/pode/adminusuarios/negocio/dominio/Grupo.hbm.xml</value>
+                <value>es/pode/adminusuarios/negocio/dominio/Rol.hbm.xml</value>
+                <value>es/pode/adminusuarios/negocio/dominio/Usuario.hbm.xml</value>
+                <value>es/pode/adminusuarios/negocio/dominio/GrupoTrabajo.hbm.xml</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
+                <prop key="hibernate.cache.use_query_cache">false</prop>
+                <prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+                <prop key="hibernate.cache.query_cache_factory">org.hibernate.cache.StandardQueryCacheFactory</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- The Hibernate interceptor -->
+    <bean id="hibernateInterceptor" class="org.springframework.orm.hibernate3.HibernateInterceptor">
+        <property name="sessionFactory"><ref bean="sessionFactory"/></property>
+    </bean>
+
+    <!-- Grupo Entity Proxy with inner Grupo Entity implementation -->
+    <bean id="grupoDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.adminusuarios.negocio.dominio.GrupoDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.adminusuarios.negocio.dominio.GrupoDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+    <!-- Rol Entity Proxy with inner Rol Entity implementation -->
+    <bean id="rolDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.adminusuarios.negocio.dominio.RolDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.adminusuarios.negocio.dominio.RolDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+    <!-- Usuario Entity Proxy with inner Usuario Entity implementation -->
+    <bean id="usuarioDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.adminusuarios.negocio.dominio.UsuarioDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.adminusuarios.negocio.dominio.UsuarioDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+    <!-- GrupoTrabajo Entity Proxy with inner GrupoTrabajo Entity implementation -->
+    <bean id="grupoTrabajoDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.adminusuarios.negocio.dominio.GrupoTrabajoDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.adminusuarios.negocio.dominio.GrupoTrabajoDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+    <!-- ========================= Start of SERVICE DEFINITIONS ========================= -->
+
+        <!-- Service Transactional Interceptor -->
+    <bean id="serviceTransactionInterceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor">
+        <property name="transactionManager"><ref bean="transactionManager"/></property>
+        <property name="transactionAttributeSource">
+            <value>
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.modificarGrupo=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.bajaGrupo=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.listarGrupos=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.descripcionGrupo=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.nuevaClave=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.modificarUsuario=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.listarRoles=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.altaUsuario=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.bajaUsuario=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.listarUsuarios=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.descripcionUsuario=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.listarRolesUsuario=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.altaGrupo=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.getRol=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.existeDescripcion=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.obtenerUsuario=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.existeUsuario=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.enviarCorreoBaja=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.obtenerDatosUsuario=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.obtenerUsuariosAdministrador=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.obtenerGrupoAdministrador=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.listarUsuariosPendientes=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.solicitarAltaUsuario=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.bajaUsuarioPendiente=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.usuariosActivos=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.getEmailAdmin=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.listarTodosUsuarios=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.listarUsuariosInactivos=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.activarUsuario=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.desactivarUsuario=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.obtenerListaUsuariosGrupoTrabajo=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.listarGruposTrabajo=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.descripcionGrupoTrabajo=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.bajaGrupoTrabajo=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.modificarGrupoTrabajo=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.getEmailPublicadores=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.obtenerUsuariosGrupo=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.obtenerUsuariosGrupoTrabajo=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.existeNombreTrabajo=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.altaGrupoTrabajo=PROPAGATION_REQUIRED
+                es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService.obtenerUsuarioConOpenId=PROPAGATION_REQUIRED
+            </value>
+        </property>
+    </bean>
+
+    <!-- SrvAdminUsuariosService Service Proxy with inner SrvAdminUsuariosService Service Implementation -->
+    <bean id="srvAdminUsuariosService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosServiceImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                <property name="usuarioDao"><ref bean="usuarioDao"/></property>
+                <property name="grupoDao"><ref bean="grupoDao"/></property>
+                <property name="rolDao"><ref bean="rolDao"/></property>
+                <property name="grupoTrabajoDao"><ref bean="grupoTrabajoDao"/></property>
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.adminusuarios.negocio.servicios.SrvAdminUsuariosService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                    <value>serviceTransactionInterceptor</value>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- ========================= End of SERVICE DEFINITIONS ========================= -->
+
+</beans>

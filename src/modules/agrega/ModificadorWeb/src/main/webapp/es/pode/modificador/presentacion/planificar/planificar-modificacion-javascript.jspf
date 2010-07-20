@@ -1,0 +1,31 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'planificar.planificar.modificacion.planificar.param.id.modificacion.title':'<formatting:escape language="javascript"><bean:message key="planificar.planificar.modificacion.planificar.param.id.modificacion.title"/></formatting:escape>',
+                'planificar.planificar.modificacion.planificar.param.horas.title':'<formatting:escape language="javascript"><bean:message key="planificar.planificar.modificacion.planificar.param.horas.title"/></formatting:escape>',
+                'planificar.planificar.modificacion.planificar.param.minutos.title':'<formatting:escape language="javascript"><bean:message key="planificar.planificar.modificacion.planificar.param.minutos.title"/></formatting:escape>',
+                'planificar.planificar.modificacion.planificar.param.action.title':'<formatting:escape language="javascript"><bean:message key="planificar.planificar.modificacion.planificar.param.action.title"/></formatting:escape>',
+                'planificar.planificar.modificacion.planificar.param.fecha.title':'<formatting:escape language="javascript"><bean:message key="planificar.planificar.modificacion.planificar.param.fecha.title"/></formatting:escape>',
+                'planificar.planificar.modificacion.buscar.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="planificar.planificar.modificacion.buscar.param.idioma.buscador.title"/></formatting:escape>',
+                'Planificar':'<formatting:escape language="javascript"><bean:message key="planificar.planificar.modificacion.planificar.title"/></formatting:escape>',
+                'Planificar_no':'<formatting:escape language="javascript"><bean:message key="planificar.planificar.modificacion.planificar.title.notallowed"/></formatting:escape>',
+                'Planificar_reset':'<formatting:escape language="javascript"><bean:message key="planificar.planificar.modificacion.planificar.title.reset"/></formatting:escape>',
+                'Planificar_noreset':'<formatting:escape language="javascript"><bean:message key="planificar.planificar.modificacion.planificar.title.reset.not.allowed"/></formatting:escape>',
+                'Buscar':'<formatting:escape language="javascript"><bean:message key="planificar.planificar.modificacion.buscar.title"/></formatting:escape>',
+                'Buscar_no':'<formatting:escape language="javascript"><bean:message key="planificar.planificar.modificacion.buscar.title.notallowed"/></formatting:escape>',
+                'Buscar_reset':'<formatting:escape language="javascript"><bean:message key="planificar.planificar.modificacion.buscar.title.reset"/></formatting:escape>',
+                'Buscar_noreset':'<formatting:escape language="javascript"><bean:message key="planificar.planificar.modificacion.buscar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+</script>
+    </tiles:put>

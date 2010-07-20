@@ -1,0 +1,71 @@
+#accionSubmit.action {}
+#accionSubmit.action #form_submit {}
+
+#accionSubmit.action .accion {}
+#accionSubmit.action .accion .label {}
+#accionSubmit.action .accion .field {}
+#accionSubmit.action .identificadorOde {}
+#accionSubmit.action .identificadorOde .label {}
+#accionSubmit.action .identificadorOde .field {}
+#accionSubmit.action .formatos {}
+#accionSubmit.action .formatos .label {}
+#accionSubmit.action .formatos .field {}
+#accionSubmit.action .comboFormato {}
+#accionSubmit.action .comboFormato .label {}
+#accionSubmit.action .comboFormato .field {}
+#accionSubmit.action .tamanio {}
+#accionSubmit.action .tamanio .label {}
+#accionSubmit.action .tamanio .field {}
+#accionSubmit.action .localizacion {}
+#accionSubmit.action .localizacion .label {}
+#accionSubmit.action .localizacion .field {}
+#accionSubmit.action .requerimiento {}
+#accionSubmit.action .requerimiento .label {}
+#accionSubmit.action .requerimiento .field {}
+#accionSubmit.action .agregadorOR {}
+#accionSubmit.action .agregadorOR .label {}
+#accionSubmit.action .agregadorOR .field {}
+#accionSubmit.action .comboTipo {}
+#accionSubmit.action .comboTipo .label {}
+#accionSubmit.action .comboTipo .field {}
+#accionSubmit.action .comboNombre {}
+#accionSubmit.action .comboNombre .label {}
+#accionSubmit.action .comboNombre .field {}
+#accionSubmit.action .descripcionInstalacion {}
+#accionSubmit.action .descripcionInstalacion .label {}
+#accionSubmit.action .descripcionInstalacion .field {}
+#accionSubmit.action .comboIdioma {}
+#accionSubmit.action .comboIdioma .label {}
+#accionSubmit.action .comboIdioma .field {}
+#accionSubmit.action .descripcionRequerimientos {}
+#accionSubmit.action .descripcionRequerimientos .label {}
+#accionSubmit.action .descripcionRequerimientos .field {}
+#accionSubmit.action .descripcionDuracion {}
+#accionSubmit.action .descripcionDuracion .label {}
+#accionSubmit.action .descripcionDuracion .field {}
+#accionSubmit.action .duracion {}
+#accionSubmit.action .duracion .label {}
+#accionSubmit.action .duracion .field {}
+#accionSubmit.action .anyo {}
+#accionSubmit.action .anyo .label {}
+#accionSubmit.action .anyo .field {}
+#accionSubmit.action .mes {}
+#accionSubmit.action .mes .label {}
+#accionSubmit.action .mes .field {}
+#accionSubmit.action .dia {}
+#accionSubmit.action .dia .label {}
+#accionSubmit.action .dia .field {}
+#accionSubmit.action .hora {}
+#accionSubmit.action .hora .label {}
+#accionSubmit.action .hora .field {}
+#accionSubmit.action .minutos {}
+#accionSubmit.action .minutos .label {}
+#accionSubmit.action .minutos .field {}
+#accionSubmit.action .segundosP1 {}
+#accionSubmit.action .segundosP1 .label {}
+#accionSubmit.action .segundosP1 .field {}
+#accionSubmit.action .segundosP2 {}
+#accionSubmit.action .segundosP2 .label {}
+#accionSubmit.action .segundosP2 .field {}
+
+

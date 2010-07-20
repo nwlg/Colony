@@ -1,0 +1,32 @@
+<div id="listadoUsosEdu" class="table">
+    <form id="listadoUsosEdu" name="" action="" method="post" enctype="multipart/form-data">
+    <display:table name="${form.listadoUsosEdu}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="usos-educativos-form-listado-usos-edu.pdf" />
+        <display:column media="html">
+            <input type="checkbox" name="tituloUsoEduRowSelectionAsArray" value="${row.tituloUsoEdu}" title='<bean:message key="select.deselect.this.row"/>'/>
+        </display:column>
+
+        <display:column media="xml csv excel pdf"
+            titleKey="uso.educativo.usos.educativos.form.param.listado.usos.edu.titulo.uso.edu"
+            autolink="true" paramId="tituloUsoEdu"
+            property="tituloUsoEdu">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="tituloUsoEdu" paramId="tituloUsoEdu"
+            sortProperty="tituloUsoEdu" sortable="true"
+            titleKey="uso.educativo.usos.educativos.form.param.listado.usos.edu.titulo.uso.edu"
+            property="tituloUsoEdu" />
+   
+    </display:table>
+    <c:if test="${!empty form.listadoUsosEdu}">
+            <input type="submit" value="<bean:message key="uso.educativo.usos.educativos.form.eliminar"/>" onclick="this.form.name='usoEducativoUsosEducativosFormEliminarForm';this.form.action='<html:rewrite action="/UsoEducativo/UsosEducativosFormEliminar"/>';" onmouseover="hints.show('Eliminar')" onmouseout="hints.hide()"/>
+            <input type="button" value="<bean:message key="select.deselect.all"/>" onclick="var boxes=this.form.elements['tituloUsoEduRowSelectionAsArray'];var setChecked=(boxes.length==0)?false:!boxes[0].checked;for(var i=0;i<boxes.length;i++)boxes[i].checked=setChecked;"/>
+    </c:if>
+    </form>
+</div>
+

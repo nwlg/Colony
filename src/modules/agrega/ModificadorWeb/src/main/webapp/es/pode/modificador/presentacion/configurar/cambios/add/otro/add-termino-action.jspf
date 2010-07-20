@@ -1,0 +1,42 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="action" class="action">
+    <h3><bean:message key="add.termino.add.termino.action"/></h3>
+    <div class="trigger">
+        <html:form styleId="addTerminoAddTerminoActionForm" action="/AddTermino/AddTerminoAction" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="action">
+                        <td class="label"><bean:message key="add.termino.add.termino.action.param.action"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.action}"/>
+                           <input type="text" name="action" value="${value}" onmouseover="hints.show('add.termino.add.termino.action.param.action.title')" onmouseout="hints.hide()"  id="actionAction"/>
+                        </td>
+                    </tr>
+                    <tr class="valor">
+                        <td class="label"><bean:message key="add.termino.add.termino.action.param.valor"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.valor}"/>
+                           <input type="text" name="valor" value="${value}" onmouseover="hints.show('add.termino.add.termino.action.param.valor.title')" onmouseout="hints.hide()"  id="actionValor"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('action')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="add.termino.add.termino.action"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

@@ -1,0 +1,11 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="archivos" value="${form.archivos}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="principal" value="${form.principal}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="dependencias" value="${form.dependencias}"/>
+    </c:catch>
+</div>

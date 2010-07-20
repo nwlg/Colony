@@ -1,0 +1,13 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="gestionarPosicionado" class="action">
+    <h3><bean:message key="detallar.odecu.mostrar.detalle.ode.gestionar.posicionado"/></h3>
+    <div class="trigger">
+        <form id="detallarODECUMostrarDetalleODEGestionarPosicionadoForm" action='<html:rewrite action="/DetallarODECU/MostrarDetalleODEGestionarPosicionado"/>' method="post">
+               <html:submit onmouseover="hints.show('gestionarPosicionado')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="detallar.odecu.mostrar.detalle.ode.gestionar.posicionado"/>
+               </html:submit>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

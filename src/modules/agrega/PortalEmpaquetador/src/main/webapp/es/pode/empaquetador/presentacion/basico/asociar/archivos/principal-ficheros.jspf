@@ -1,0 +1,23 @@
+<div id="ficheros" class="table">
+    <display:table name="${form.ficheros}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="principal-ficheros.pdf" />
+
+        <display:column media="xml csv excel pdf"
+            titleKey="asociacion.archivos.principal.param.ficheros.ficheros.href"
+            autolink="true" paramId="ficheros.href"
+            property="ficheros.href">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="ficheros.href" paramId="ficheros.href"
+            sortProperty="ficheros.href" sortable="true"
+            titleKey="asociacion.archivos.principal.param.ficheros.ficheros.href"
+            property="ficheros.href" />
+   
+    </display:table>
+</div>
+

@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="anadirODEPersonal" class="action">
+    <h3><bean:message key="detallar.odecu.mostrar.detalle.ode.anadir.odepersonal"/></h3>
+    <div class="trigger">
+        <form id="detallarODECUMostrarDetalleODEAnadirODEPersonalForm" action='<html:rewrite action="/DetallarODECU/MostrarDetalleODEAnadirODEPersonal"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_CATALOGADOR,ROLE_ADMINISTRADOR,ROLE_DOCENTE,ROLE_EMPAQUETADOR,ROLE_PUBLICADOR">
+               <html:submit onmouseover="hints.show('anadirODEPersonal')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="detallar.odecu.mostrar.detalle.ode.anadir.odepersonal"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

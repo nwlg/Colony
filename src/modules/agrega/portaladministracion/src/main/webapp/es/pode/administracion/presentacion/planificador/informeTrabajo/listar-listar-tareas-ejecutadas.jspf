@@ -1,0 +1,60 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="listarTareasEjecutadas" class="action">
+    <h3><bean:message key="informe.listar.listar.tareas.ejecutadas"/></h3>
+    <div class="trigger">
+        <html:form styleId="informeListarListarTareasEjecutadasForm" action="/Informe/ListarListarTareasEjecutadas" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="trabajo">
+                        <td class="label"><bean:message key="informe.listar.listar.tareas.ejecutadas.param.trabajo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.trabajo}"/>
+                           ${value}
+                        </td>
+                    </tr>
+                    <tr class="descripcion">
+                        <td class="label"><bean:message key="informe.listar.listar.tareas.ejecutadas.param.descripcion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.descripcion}"/>
+                           ${value}
+                        </td>
+                    </tr>
+                    <tr class="fechaInicio">
+                        <td class="label"><bean:message key="informe.listar.listar.tareas.ejecutadas.param.fecha.inicio"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.fechaInicio}"/>
+                           <input type="text" name="fechaInicio" value="${value}" onmouseover="hints.show('informe.listar.listar.tareas.ejecutadas.param.fecha.inicio.title')" onmouseout="hints.hide()"  id="listarTareasEjecutadasFechaInicio"/>
+                        </td>
+                    </tr>
+                    <tr class="fechaFin">
+                        <td class="label"><bean:message key="informe.listar.listar.tareas.ejecutadas.param.fecha.fin"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.fechaFin}"/>
+                           <input type="text" name="fechaFin" value="${value}" onmouseover="hints.show('informe.listar.listar.tareas.ejecutadas.param.fecha.fin.title')" onmouseout="hints.hide()"  id="listarTareasEjecutadasFechaFin"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('listarTareasEjecutadas')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="informe.listar.listar.tareas.ejecutadas"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

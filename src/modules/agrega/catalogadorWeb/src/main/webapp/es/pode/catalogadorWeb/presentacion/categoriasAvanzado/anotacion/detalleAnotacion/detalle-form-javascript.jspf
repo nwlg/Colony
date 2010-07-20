@@ -1,0 +1,40 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'detalle.anotacion.cu.detalle.form.submit.form.param.titulo.anotacion.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.detalle.form.submit.form.param.titulo.anotacion.title"/></formatting:escape>',
+                'detalle.anotacion.cu.detalle.form.submit.form.param.nombre.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.detalle.form.submit.form.param.nombre.title"/></formatting:escape>',
+                'detalle.anotacion.cu.detalle.form.submit.form.param.organizacion.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.detalle.form.submit.form.param.organizacion.title"/></formatting:escape>',
+                'detalle.anotacion.cu.detalle.form.submit.form.param.email.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.detalle.form.submit.form.param.email.title"/></formatting:escape>',
+                'detalle.anotacion.cu.detalle.form.submit.form.param.thora.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.detalle.form.submit.form.param.thora.title"/></formatting:escape>',
+                'detalle.anotacion.cu.detalle.form.submit.form.param.tminuto.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.detalle.form.submit.form.param.tminuto.title"/></formatting:escape>',
+                'detalle.anotacion.cu.detalle.form.submit.form.param.tsegundo.p1.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.detalle.form.submit.form.param.tsegundo.p1.title"/></formatting:escape>',
+                'detalle.anotacion.cu.detalle.form.submit.form.param.tsegundo.p2.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.detalle.form.submit.form.param.tsegundo.p2.title"/></formatting:escape>',
+                'detalle.anotacion.cu.detalle.form.submit.form.param.meridiano.cero.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.detalle.form.submit.form.param.meridiano.cero.title"/></formatting:escape>',
+                'detalle.anotacion.cu.detalle.form.submit.form.param.combo.zona.h.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.detalle.form.submit.form.param.combo.zona.h.title"/></formatting:escape>',
+                'detalle.anotacion.cu.detalle.form.submit.form.param.zh.hora.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.detalle.form.submit.form.param.zh.hora.title"/></formatting:escape>',
+                'detalle.anotacion.cu.detalle.form.submit.form.param.zh.minutos.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.detalle.form.submit.form.param.zh.minutos.title"/></formatting:escape>',
+                'detalle.anotacion.cu.detalle.form.submit.form.param.descripcion.fecha.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.detalle.form.submit.form.param.descripcion.fecha.title"/></formatting:escape>',
+                'detalle.anotacion.cu.detalle.form.submit.form.param.combo.idioma.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.detalle.form.submit.form.param.combo.idioma.title"/></formatting:escape>',
+                'detalle.anotacion.cu.detalle.form.submit.form.param.descripcion.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.detalle.form.submit.form.param.descripcion.title"/></formatting:escape>',
+                'detalle.anotacion.cu.detalle.form.submit.form.param.accion.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.detalle.form.submit.form.param.accion.title"/></formatting:escape>',
+                'detalle.anotacion.cu.detalle.form.submit.form.param.boton.pulsado.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.detalle.form.submit.form.param.boton.pulsado.title"/></formatting:escape>',
+                'detalle.anotacion.cu.detalle.form.submit.form.param.fecha.corta.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.detalle.form.submit.form.param.fecha.corta.title"/></formatting:escape>',
+                'detalle.anotacion.cu.detalle.form.submit.form.param.formato.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.detalle.form.submit.form.param.formato.title"/></formatting:escape>',
+                'detalle.anotacion.cu.detalle.form.submit.form.param.off.set.title':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.detalle.form.submit.form.param.off.set.title"/></formatting:escape>',
+                'submitForm':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.detalle.form.submit.form.title"/></formatting:escape>',
+                'submitForm_no':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.detalle.form.submit.form.title.notallowed"/></formatting:escape>',
+                'submitForm_reset':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.detalle.form.submit.form.title.reset"/></formatting:escape>',
+                'submitForm_noreset':'<formatting:escape language="javascript"><bean:message key="detalle.anotacion.cu.detalle.form.submit.form.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

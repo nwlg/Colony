@@ -1,0 +1,33 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="guardar" class="action">
+    <h3><bean:message key="gestor.recursos.gestor.recursos.guardar"/></h3>
+    <div class="trigger">
+        <html:form styleId="gestorRecursosGestorRecursosGuardarForm" action="/GestorRecursos/GestorRecursosGuardar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="returnURL">
+                        <td class="label"><bean:message key="gestor.recursos.gestor.recursos.guardar.param.return.url"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.returnURL}"/>
+                           <input type="text" name="returnURL" value="${value}" onmouseover="hints.show('gestor.recursos.gestor.recursos.guardar.param.return.url.title')" onmouseout="hints.hide()"  id="guardarReturnURL"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_DOCENTE,ROLE_ADMINISTRADOR,ROLE_CATALOGADOR,ROLE_PUBLICADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Guardar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="gestor.recursos.gestor.recursos.guardar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

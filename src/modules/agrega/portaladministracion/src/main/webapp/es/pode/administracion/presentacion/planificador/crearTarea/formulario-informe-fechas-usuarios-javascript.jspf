@@ -1,0 +1,47 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.anio.title':'<formatting:escape language="javascript"><bean:message key="crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.anio.title"/></formatting:escape>',
+                'crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.mes.title':'<formatting:escape language="javascript"><bean:message key="crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.mes.title"/></formatting:escape>',
+                'crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.dia.title':'<formatting:escape language="javascript"><bean:message key="crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.dia.title"/></formatting:escape>',
+                'crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.hora.title':'<formatting:escape language="javascript"><bean:message key="crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.hora.title"/></formatting:escape>',
+                'crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.minutos.title':'<formatting:escape language="javascript"><bean:message key="crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.minutos.title"/></formatting:escape>',
+                'crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.anio.desde.title':'<formatting:escape language="javascript"><bean:message key="crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.anio.desde.title"/></formatting:escape>',
+                'crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.mes.desde.title':'<formatting:escape language="javascript"><bean:message key="crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.mes.desde.title"/></formatting:escape>',
+                'crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.dia.desde.title':'<formatting:escape language="javascript"><bean:message key="crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.dia.desde.title"/></formatting:escape>',
+                'crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.anio.hasta.title':'<formatting:escape language="javascript"><bean:message key="crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.anio.hasta.title"/></formatting:escape>',
+                'crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.mes.hasta.title':'<formatting:escape language="javascript"><bean:message key="crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.mes.hasta.title"/></formatting:escape>',
+                'crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.dia.hasta.title':'<formatting:escape language="javascript"><bean:message key="crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.dia.hasta.title"/></formatting:escape>',
+                'crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.tipo.tarea.title':'<formatting:escape language="javascript"><bean:message key="crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.tipo.tarea.title"/></formatting:escape>',
+                'crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.trabajo.title':'<formatting:escape language="javascript"><bean:message key="crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.trabajo.title"/></formatting:escape>',
+                'crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.trigger.title':'<formatting:escape language="javascript"><bean:message key="crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.trigger.title"/></formatting:escape>',
+                'crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.usuarios.title':'<formatting:escape language="javascript"><bean:message key="crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.usuarios.title"/></formatting:escape>',
+                'crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.formato.title':'<formatting:escape language="javascript"><bean:message key="crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.formato.title"/></formatting:escape>',
+                'crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.informe.title':'<formatting:escape language="javascript"><bean:message key="crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.informe.title"/></formatting:escape>',
+                'crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.msg.desc.trabajo.title':'<formatting:escape language="javascript"><bean:message key="crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.msg.desc.trabajo.title"/></formatting:escape>',
+                'crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.msg.informe.title':'<formatting:escape language="javascript"><bean:message key="crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.msg.informe.title"/></formatting:escape>',
+                'crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.msg.no.informe.title':'<formatting:escape language="javascript"><bean:message key="crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.msg.no.informe.title"/></formatting:escape>',
+                'crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.periodicidad.title':'<formatting:escape language="javascript"><bean:message key="crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.periodicidad.title"/></formatting:escape>',
+                'crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.tarea.modificada.title':'<formatting:escape language="javascript"><bean:message key="crear.tarea.formulario.informe.fechas.usuarios.aceptar.param.tarea.modificada.title"/></formatting:escape>',
+                'Cancelar':'<formatting:escape language="javascript"><bean:message key="crear.tarea.formulario.informe.fechas.usuarios.cancelar.title"/></formatting:escape>',
+                'Cancelar_no':'<formatting:escape language="javascript"><bean:message key="crear.tarea.formulario.informe.fechas.usuarios.cancelar.title.notallowed"/></formatting:escape>',
+                'Cancelar_reset':'<formatting:escape language="javascript"><bean:message key="crear.tarea.formulario.informe.fechas.usuarios.cancelar.title.reset"/></formatting:escape>',
+                'Cancelar_noreset':'<formatting:escape language="javascript"><bean:message key="crear.tarea.formulario.informe.fechas.usuarios.cancelar.title.reset.not.allowed"/></formatting:escape>',
+                'Aceptar':'<formatting:escape language="javascript"><bean:message key="crear.tarea.formulario.informe.fechas.usuarios.aceptar.title"/></formatting:escape>',
+                'Aceptar_no':'<formatting:escape language="javascript"><bean:message key="crear.tarea.formulario.informe.fechas.usuarios.aceptar.title.notallowed"/></formatting:escape>',
+                'Aceptar_reset':'<formatting:escape language="javascript"><bean:message key="crear.tarea.formulario.informe.fechas.usuarios.aceptar.title.reset"/></formatting:escape>',
+                'Aceptar_noreset':'<formatting:escape language="javascript"><bean:message key="crear.tarea.formulario.informe.fechas.usuarios.aceptar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+</script>
+    </tiles:put>

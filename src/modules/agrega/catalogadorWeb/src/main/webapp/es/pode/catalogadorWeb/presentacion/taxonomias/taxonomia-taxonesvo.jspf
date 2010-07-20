@@ -1,0 +1,47 @@
+<div id="taxonesvo" class="table">
+    <display:table name="${form.taxonesvo}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="taxonomia-taxonesvo.pdf" />
+
+        <display:column media="xml csv excel pdf"
+            titleKey="taxonomias.taxonomia.param.taxonesvo.id"
+            autolink="true" paramId="id"
+            property="id">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="id" paramId="id"
+            sortProperty="id" sortable="true"
+            titleKey="taxonomias.taxonomia.param.taxonesvo.id"
+            >
+            <div class="id">
+		
+ <c:set var="value" value="${row.id}"/>
+ <input type="hidden" name="id" value="${value}" id="taxonesvoId${row_rowNum}"/>
+ ${value}
+            </div>
+       </display:column>
+   
+
+        <display:column media="xml csv excel pdf"
+            titleKey="taxonomias.taxonomia.param.taxonesvo.valor.tax"
+            autolink="true" paramId="valorTax"
+            property="valorTax">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="valorTax" paramId="valorTax"
+            sortProperty="valorTax" sortable="true"
+            titleKey="taxonomias.taxonomia.param.taxonesvo.valor.tax"
+            property="valorTax" />
+   
+        <display:column media="html">
+            <c:set var="link">'<html:rewrite action="/Taxonomias/TaxonomiaConsultarNodo"/>?rutaPadrevo='+getDiv('taxonesvoRutaPadrevo${row_rowNum}').value+'&taxonesvo='+getDiv('taxonesvoTaxonesvo${row_rowNum}').value+'&idioma='+getDiv('taxonesvoIdioma${row_rowNum}').value+'&nomTaxonomia='+getDiv('taxonesvoNomTaxonomia${row_rowNum}').value+'&id=${row.id}&vocabName='+getDiv('taxonesvoVocabName${row_rowNum}').value</c:set>
+            <nobr><html:link href="javascript:document.location=${link};" styleClass="buttonLink"><bean:message key="taxonomias.taxonomia.consultar.nodo"/></html:link></nobr>
+        </display:column>
+    </display:table>
+</div>
+

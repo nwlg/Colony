@@ -1,0 +1,39 @@
+#aceptar.action {}
+#aceptar.action #form_submit {}
+
+#aceptar.action .clave {}
+#aceptar.action .clave .label {}
+#aceptar.action .clave .field {}
+#aceptar.action .descripcionNodo {}
+#aceptar.action .descripcionNodo .label {}
+#aceptar.action .descripcionNodo .field {}
+#aceptar.action .gestorSesion {}
+#aceptar.action .gestorSesion .label {}
+#aceptar.action .gestorSesion .field {}
+#aceptar.action .id {}
+#aceptar.action .id .label {}
+#aceptar.action .id .field {}
+#aceptar.action .identificadorSesion {}
+#aceptar.action .identificadorSesion .label {}
+#aceptar.action .identificadorSesion .field {}
+#aceptar.action .lenguajeConsulta {}
+#aceptar.action .lenguajeConsulta .label {}
+#aceptar.action .lenguajeConsulta .field {}
+#aceptar.action .lenguajeRespuesta {}
+#aceptar.action .lenguajeRespuesta .label {}
+#aceptar.action .lenguajeRespuesta .field {}
+#aceptar.action .nombreNodo {}
+#aceptar.action .nombreNodo .label {}
+#aceptar.action .nombreNodo .field {}
+#aceptar.action .urlServicio {}
+#aceptar.action .urlServicio .label {}
+#aceptar.action .urlServicio .field {}
+#aceptar.action .usuario {}
+#aceptar.action .usuario .label {}
+#aceptar.action .usuario .field {}
+
+#cancelar.action {}
+#cancelar.action #form_submit {}
+
+
+

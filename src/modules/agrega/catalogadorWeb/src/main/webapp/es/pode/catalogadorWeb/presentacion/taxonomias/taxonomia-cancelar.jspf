@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="cancelar" class="action">
+    <h3><bean:message key="taxonomias.taxonomia.cancelar"/></h3>
+    <div class="trigger">
+        <form id="taxonomiasTaxonomiaCancelarForm" action='<html:rewrite action="/Taxonomias/TaxonomiaCancelar"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_PUBLICADOR,ROLE_DOCENTE,ROLE_CATALOGADOR,ROLE_ADMINISTRADOR,ROLE_ADMINISTRADOR,ROLE_CATALOGADOR,ROLE_DOCENTE,ROLE_PUBLICADOR">
+               <html:submit onmouseover="hints.show('Cancelar')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="taxonomias.taxonomia.cancelar"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

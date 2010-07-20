@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+
+
+    <!-- ========================= DATASOURCE DEFINITION ========================= -->
+
+    <!-- Local DataSource that works in any environment -->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName"><value>com.mysql.jdbc.Driver</value></property>
+        <property name="username"><value>root</value></property>
+        <property name="password"><value>admin</value></property>
+        <property name="url"><value>jdbc:mysql://127.0.0.1:3306/valoracion</value></property>
+    </bean>
+
+    <!-- ====================== End of DATASOURCE DEFINITION ====================== -->
+
+    <!-- ===================== TRANSACTION MANAGER DEFINITION ========================= -->
+
+    <!-- (local) Transaction Manager -->
+    <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <property name="sessionFactory"><ref bean="sessionFactory"/></property>
+    </bean>
+
+    <!-- ===================== TRANSACTION MANAGER DEFINITION ========================= -->
+
+
+    <!-- ========================= GENERAL DEFINITIONS ========================= -->
+    <!-- Message source for this context, loaded from localized "messages_xx" files -->
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename"><value>messages</value></property>
+    </bean>
+
+	<bean id="beanMapper" class="net.sf.dozer.util.mapping.DozerBeanMapper" singleton="true">
+		<property name="mappingFiles">
+			<list>
+				<value>defaultDozerMappings_valoracion.xml</value>
+				<value>customDozerMappings_valoracion.xml</value>
+				<!-- dozer mappings merge-point -->
+			</list>
+		</property>
+	</bean>
+    <!-- applicationContext merge-point -->
+
+    <!-- Hibernate SessionFactory -->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource"><ref bean="dataSource"/></property>
+        <property name="mappingResources">
+            <list>
+                <value>es/pode/valoracion/negocio/dominio/Comentario.hbm.xml</value>
+                <value>es/pode/valoracion/negocio/dominio/Valoracion.hbm.xml</value>
+                <value>es/pode/tagging/negocio/dominio/Tagging.hbm.xml</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+                <prop key="hibernate.cache.use_query_cache">false</prop>
+                <prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+                <prop key="hibernate.cache.query_cache_factory">org.hibernate.cache.StandardQueryCacheFactory</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- The Hibernate interceptor -->
+    <bean id="hibernateInterceptor" class="org.springframework.orm.hibernate3.HibernateInterceptor">
+        <property name="sessionFactory"><ref bean="sessionFactory"/></property>
+    </bean>
+
+    <!-- Comentario Entity Proxy with inner Comentario Entity implementation -->
+    <bean id="comentarioDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.valoracion.negocio.dominio.ComentarioDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.valoracion.negocio.dominio.ComentarioDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+    <!-- Valoracion Entity Proxy with inner Valoracion Entity implementation -->
+    <bean id="valoracionDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.valoracion.negocio.dominio.ValoracionDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.valoracion.negocio.dominio.ValoracionDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+    <!-- Tagging Entity Proxy with inner Tagging Entity implementation -->
+    <bean id="taggingDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.tagging.negocio.dominio.TaggingDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.tagging.negocio.dominio.TaggingDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+    <!-- ========================= Start of SERVICE DEFINITIONS ========================= -->
+
+    <!-- Service Transactional Interceptor -->
+    <bean id="serviceTransactionInterceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor">
+        <property name="transactionManager"><ref bean="transactionManager"/></property>
+        <property name="transactionAttributeSource">
+            <value>
+                es.pode.valoracion.negocio.servicios.SrvValoracionService.introducirComentario=PROPAGATION_REQUIRED
+                es.pode.valoracion.negocio.servicios.SrvValoracionService.consultarValoracion=PROPAGATION_REQUIRED
+                es.pode.valoracion.negocio.servicios.SrvValoracionService.recalcularValoracionODE=PROPAGATION_REQUIRED
+                es.pode.valoracion.negocio.servicios.SrvValoracionService.obtenerComentarios=PROPAGATION_REQUIRED
+                es.pode.valoracion.negocio.servicios.SrvValoracionService.eliminarComentarios=PROPAGATION_REQUIRED
+                es.pode.valoracion.negocio.servicios.SrvValoracionService.consultaValoracionDesdeHasta=PROPAGATION_REQUIRED
+                es.pode.valoracion.negocio.servicios.SrvValoracionService.obtenValoracionODEDesdeHasta=PROPAGATION_REQUIRED
+                es.pode.valoracion.negocio.servicios.SrvValoracionService.introducirValoracion=PROPAGATION_REQUIRED
+                es.pode.valoracion.negocio.servicios.SrvValoracionService.eliminarTodasValoraciones=PROPAGATION_REQUIRED
+                es.pode.valoracion.negocio.servicios.SrvValoracionService.eliminarTodosComentarios=PROPAGATION_REQUIRED
+                es.pode.valoracion.negocio.servicios.auditoria.SrvAuditoriaValoracionService.contenidosMasValorados=PROPAGATION_REQUIRED
+                es.pode.tagging.negocio.servicios.SrvTaggingServer.introducirTags=PROPAGATION_REQUIRED
+                es.pode.tagging.negocio.servicios.SrvTaggingServer.obtenerTagsDeUsuario=PROPAGATION_REQUIRED
+                es.pode.tagging.negocio.servicios.SrvTaggingServer.obtenerOdesDeTagYUsuario=PROPAGATION_REQUIRED
+                es.pode.tagging.negocio.servicios.SrvTaggingServer.obtenerTodosTags=PROPAGATION_REQUIRED
+                es.pode.tagging.negocio.servicios.SrvTaggingServer.obtenerOdesDeTag=PROPAGATION_REQUIRED
+                es.pode.tagging.negocio.servicios.SrvTaggingServer.eliminarTags=PROPAGATION_REQUIRED
+                es.pode.tagging.negocio.servicios.SrvTaggingServer.modificarTag=PROPAGATION_REQUIRED
+                es.pode.tagging.negocio.servicios.SrvTaggingServer.modificarTagDeUsuario=PROPAGATION_REQUIRED
+                es.pode.tagging.negocio.servicios.SrvTaggingServer.eliminarTagsDeUsuario=PROPAGATION_REQUIRED
+                es.pode.tagging.negocio.servicios.SrvTaggingServer.obtenerTagsDeOde=PROPAGATION_REQUIRED
+            </value>
+        </property>
+    </bean>
+
+    <!-- SrvValoracionService Service Proxy with inner SrvValoracionService Service Implementation -->
+    <bean id="srvValoracionService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.valoracion.negocio.servicios.SrvValoracionServiceImpl">
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                <property name="comentarioDao"><ref bean="comentarioDao"/></property>
+                <property name="valoracionDao"><ref bean="valoracionDao"/></property>
+	            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.valoracion.negocio.servicios.SrvValoracionService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceTransactionInterceptor</value>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvAuditoriaValoracionService Service Proxy with inner SrvAuditoriaValoracionService Service Implementation -->
+    <bean id="srvAuditoriaValoracionService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.valoracion.negocio.servicios.auditoria.SrvAuditoriaValoracionServiceImpl">
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                <property name="valoracionDao"><ref bean="valoracionDao"/></property>
+	                <property name="srvValoracionService"><ref bean="srvValoracionService"/></property>
+    	            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.valoracion.negocio.servicios.auditoria.SrvAuditoriaValoracionService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceTransactionInterceptor</value>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvTaggingServer Service Proxy with inner SrvTaggingServer Service Implementation -->
+    <bean id="srvTaggingServer" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.tagging.negocio.servicios.SrvTaggingServerImpl">
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                <property name="taggingDao"><ref bean="taggingDao"/></property>
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.tagging.negocio.servicios.SrvTaggingServer</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceTransactionInterceptor</value>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- ========================= End of SERVICE DEFINITIONS ========================= -->
+
+    <!-- ========================= CONSTANTS PROPERTIES BEAN ========================= -->    
+    <bean id="propiedadesConstantes" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	      <property name="locations">
+		  <list>
+			  <value>classpath:spring.properties</value>
+		  </list>
+		  </property>
+    </bean>
+    <!-- ========================= END CONSTANTS PROPERTIES BEAN ========================= -->    
+</beans>

@@ -1,0 +1,5 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="descargas" value="${form.descargas}"/>
+    </c:catch>
+</div>

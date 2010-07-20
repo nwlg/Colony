@@ -1,0 +1,21 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'importar.lomes.advertencia.submit.advertencia.param.accion.title':'<formatting:escape language="javascript"><bean:message key="importar.lomes.advertencia.submit.advertencia.param.accion.title"/></formatting:escape>',
+                'submitAdvertencia':'<formatting:escape language="javascript"><bean:message key="importar.lomes.advertencia.submit.advertencia.title"/></formatting:escape>',
+                'submitAdvertencia_no':'<formatting:escape language="javascript"><bean:message key="importar.lomes.advertencia.submit.advertencia.title.notallowed"/></formatting:escape>',
+                'submitAdvertencia_reset':'<formatting:escape language="javascript"><bean:message key="importar.lomes.advertencia.submit.advertencia.title.reset"/></formatting:escape>',
+                'submitAdvertencia_noreset':'<formatting:escape language="javascript"><bean:message key="importar.lomes.advertencia.submit.advertencia.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <!-- ========================= GENERAL DEFINITIONS ========================= -->
+    <!-- Message source for this context, loaded from localized "messages_xx" files -->
+
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename"><value>messages</value></property>
+    </bean>
+
+	<bean id="beanMapper" class="net.sf.dozer.util.mapping.DozerBeanMapper" singleton="true">
+		<property name="mappingFiles">
+			<list>
+				<value>defaultDozerMappings_publicacion.xml</value>
+				<value>customDozerMappings_publicacion.xml</value>
+			</list>
+		</property>
+	</bean>
+
+    <!-- applicationContext merge-point -->
+
+    <!-- Hibernate SessionFactory -->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource"><ref bean="dataSource"/></property>
+        <property name="mappingResources">
+            <list>
+                <value>es/pode/publicacion/negocio/dominio/Estado.hbm.xml</value>
+                <value>es/pode/publicacion/negocio/dominio/Transicion.hbm.xml</value>
+                <value>es/pode/publicacion/negocio/dominio/OdePublicado.hbm.xml</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
+                <prop key="hibernate.cache.use_query_cache">false</prop>
+                <prop key="hibernate.cache.provider_class">org.hibernate.cache.NoCacheProvider</prop>
+                <prop key="hibernate.cache.query_cache_factory">org.hibernate.cache.StandardQueryCacheFactory</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- The Hibernate interceptor -->
+    <bean id="hibernateInterceptor" class="org.springframework.orm.hibernate3.HibernateInterceptor">
+        <property name="sessionFactory"><ref bean="sessionFactory"/></property>
+    </bean>
+
+    <!-- Estado Entity Proxy with inner Estado Entity implementation -->
+    <bean id="estadoDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.publicacion.negocio.dominio.EstadoDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.publicacion.negocio.dominio.EstadoDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+    <!-- Transicion Entity Proxy with inner Transicion Entity implementation -->
+    <bean id="transicionDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.publicacion.negocio.dominio.TransicionDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.publicacion.negocio.dominio.TransicionDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+    <!-- OdePublicado Entity Proxy with inner OdePublicado Entity implementation -->
+    <bean id="odePublicadoDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.publicacion.negocio.dominio.OdePublicadoDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.publicacion.negocio.dominio.OdePublicadoDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+    <!-- ========================= Start of SERVICE DEFINITIONS ========================= -->
+
+       <!-- Service Transactional Interceptor -->
+    <bean id="serviceTransactionInterceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor">
+        <property name="transactionManager"><ref bean="transactionManager"/></property>
+        <property name="transactionAttributeSource">
+            <value>
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.obtenEstadoPorIdODE=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.obtenHistorialPorIdODE=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.rechazar=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.creacion=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.publicar=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.publicarPIF=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.noDisponible=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.proponerPublicacion=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.obtenODEsPublicados=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.obtenODEsCreadosPorUsuario=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.obtenODEsPropuestosPorUsuario=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.obtenODEsPublicadosPorUsuario=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.buscarODEsPorEstado=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.generaMEC=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.moveDir=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.obtenerUltimaTransicion=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.buscarODEsPorEstadoUsuario=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.crearPIF=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.obtenODEsRechazadosPorUsuario=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.eliminar=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.reindexarODEPublicado=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.reindexarODEsPublicados=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.regeneraIndiceIdioma=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.obtenODEsPropuestos=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.obtenODEsDespublicados=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.publicarDespublicado=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.obtenODEsDespublicadosPorUsuario=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.eliminarNoDisponibles=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.modificaODECreado=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.obtenLicenciaODE=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.obtenODEsPublicadosPorPagina=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.createImage4Ode=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.sendMessage=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.obtenODESPropuestosCatalogacion=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.obtenODESPropuestosCatalogacionPorUsuario=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.proponerCatalogacion=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.crearPIFCatalogado=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.crearPifConCuota=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.obtenODEsPropuestosCatalogacionPorUsuarios=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.obtenODESCompartidos=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.descompartirODE=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.compartirODE=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.crearDesdeURL=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.obtenODEsPropuestosPorUsuarios=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.obtenODEsCompartidosPorUsuarios=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvPublicacionService.obtenODEsDespublicadosPorUsuarios=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvAuditaPublicacionService.actividadTransiciones=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvAuditaPublicacionService.dimensionesODEsPublicados=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvAuditaPublicacionService.odesPorEstados=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvAuditaPublicacionService.odesPorUsuario=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvAuditaPublicacionService.titulosODEsPorID=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvAuditaPublicacionService.obtenerUltimosOdesPublicados=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvAuditaPublicacionService.odesPublicados=PROPAGATION_REQUIRED
+                es.pode.publicacion.negocio.servicios.SrvAuditaPublicacionService.odesPublicadosPorIdioma=PROPAGATION_REQUIRED
+            </value>
+        </property>
+    </bean>
+
+    <!-- SrvPublicacionService Service Proxy with inner SrvPublicacionService Service Implementation -->
+    <bean id="srvPublicacionService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.publicacion.negocio.servicios.SrvPublicacionServiceImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                <property name="transicionDao"><ref bean="transicionDao"/></property>
+                <property name="estadoDao"><ref bean="estadoDao"/></property>
+                <property name="odePublicadoDao"><ref bean="odePublicadoDao"/></property>
+			                <property name="scormDao"><ref bean="ScormDao"/></property>
+    			                <property name="zipDao"><ref bean="ZipDao"/></property>
+    								            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.publicacion.negocio.servicios.SrvPublicacionService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceSecurityInterceptor</value>
+                   <value>serviceTransactionInterceptor</value>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvAuditaPublicacionService Service Proxy with inner SrvAuditaPublicacionService Service Implementation -->
+    <bean id="srvAuditaPublicacionService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.publicacion.negocio.servicios.SrvAuditaPublicacionServiceImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                <property name="odePublicadoDao"><ref bean="odePublicadoDao"/></property>
+                <property name="transicionDao"><ref bean="transicionDao"/></property>
+                <property name="estadoDao"><ref bean="estadoDao"/></property>
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.publicacion.negocio.servicios.SrvAuditaPublicacionService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceSecurityInterceptor</value>
+                   <value>serviceTransactionInterceptor</value>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- ========================= End of SERVICE DEFINITIONS ========================= -->
+
+</beans>

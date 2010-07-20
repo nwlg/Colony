@@ -1,0 +1,46 @@
+<div id="taxonesVO" class="table">
+    <display:table name="${form.taxonesVO}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="tesauros-taxones-vo.pdf" />
+
+        <display:column media="xml csv excel pdf"
+            titleKey="tesauros.cu.tesauros.param.taxones.vo.id.tesauro"
+            autolink="true" paramId="idTesauro"
+            property="idTesauro">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="idTesauro" paramId="idTesauro"
+            sortProperty="idTesauro" sortable="true"
+            titleKey="tesauros.cu.tesauros.param.taxones.vo.id.tesauro"
+            >
+            <div class="idTesauro">
+		
+ <c:set var="value" value="${row.idTesauro}"/>
+ <input type="text" name="idTesauro" value="${value}" onmouseover="hints.show('tesauros.cu.tesauros.consulta.nodo.param.id.tesauro.title')" onmouseout="hints.hide()"  id="taxonesVOIdTesauro${row_rowNum}"/>
+            </div>
+       </display:column>
+   
+
+        <display:column media="xml csv excel pdf"
+            titleKey="tesauros.cu.tesauros.param.taxones.vo.valor.tax"
+            autolink="true" paramId="valorTax"
+            property="valorTax">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="valorTax" paramId="valorTax"
+            sortProperty="valorTax" sortable="true"
+            titleKey="tesauros.cu.tesauros.param.taxones.vo.valor.tax"
+            property="valorTax" />
+   
+        <display:column media="html">
+            <c:set var="link">'<html:rewrite action="/TesaurosCU/TesaurosConsultaNodo"/>?nomTesauros='+getDiv('taxonesVONomTesauros${row_rowNum}').value+'&idioma='+getDiv('taxonesVOIdioma${row_rowNum}').value+'&taxonesVO='+getDiv('taxonesVOTaxonesVO${row_rowNum}').value+'&rutaPadreVO='+getDiv('taxonesVORutaPadreVO${row_rowNum}').value+'&idTesauro='+getDiv('taxonesVOIdTesauro${row_rowNum}').value+'&esRuta='+getDiv('taxonesVOEsRuta${row_rowNum}').value+'&tituloTesauro='+getDiv('taxonesVOTituloTesauro${row_rowNum}').value</c:set>
+            <nobr><html:link href="javascript:document.location=${link};" styleClass="buttonLink"><bean:message key="tesauros.cu.tesauros.consulta.nodo"/></html:link></nobr>
+        </display:column>
+    </display:table>
+</div>
+

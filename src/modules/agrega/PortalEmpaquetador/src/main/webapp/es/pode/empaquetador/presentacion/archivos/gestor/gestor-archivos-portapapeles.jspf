@@ -1,0 +1,29 @@
+<div id="portapapeles" class="table">
+    <display:table name="${form.portapapeles}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="gestor-archivos-portapapeles.pdf" />
+
+        <display:column media="xml csv excel pdf"
+            titleKey="gestor.archivos.gestor.archivos.param.portapapeles.nombre"
+            autolink="true" paramId="nombre"
+            property="nombre">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="nombre" paramId="nombre"
+            sortProperty="nombre" sortable="true"
+            titleKey="gestor.archivos.gestor.archivos.param.portapapeles.nombre"
+            >
+            <div class="nombre">
+		
+ <c:set var="value" value="${row.nombre}"/>
+ <input type="text" name="nombre" value="${value}" onmouseover="hints.show('gestor.archivos.gestor.archivos.portapapeles.eliminar.param.nombre.title')" onmouseout="hints.hide()"  id="portapapelesNombre${row_rowNum}"/>
+            </div>
+       </display:column>
+   
+    </display:table>
+</div>
+

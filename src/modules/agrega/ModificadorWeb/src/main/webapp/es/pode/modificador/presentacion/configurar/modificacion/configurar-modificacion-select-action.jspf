@@ -1,0 +1,60 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="selectAction" class="action">
+    <h3><bean:message key="configurar.modificacion.configurar.modificacion.select.action"/></h3>
+    <div class="trigger">
+        <html:form styleId="configurarModificacionConfigurarModificacionSelectActionForm" action="/ConfigurarModificacion/ConfigurarModificacionSelectAction" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="action">
+                        <td class="label"><bean:message key="configurar.modificacion.configurar.modificacion.select.action.param.action"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.action}"/>
+                           <input type="text" name="action" value="${value}" onmouseover="hints.show('configurar.modificacion.configurar.modificacion.select.action.param.action.title')" onmouseout="hints.hide()"  id="selectActionAction"/>
+                        </td>
+                    </tr>
+                    <tr class="posiciones">
+                        <td class="label"><bean:message key="configurar.modificacion.configurar.modificacion.select.action.param.posiciones"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.posiciones}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.posicionesBackingList}">
+                                  <html:select name="form" property="posiciones" onmouseover="hints.show('configurar.modificacion.configurar.modificacion.select.action.param.posiciones.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="selectActionPosiciones">
+                                      <html:optionsCollection name="form" property="posicionesBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="posiciones" onmouseover="hints.show('configurar.modificacion.configurar.modificacion.select.action.param.posiciones.title')" onmouseout="hints.hide()"  styleId="selectActionPosiciones"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="idiomaBuscador">
+                        <td class="label"><bean:message key="configurar.modificacion.configurar.modificacion.select.action.param.idioma.buscador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idiomaBuscador}"/>
+                           <input type="text" name="idiomaBuscador" value="${value}" onmouseover="hints.show('configurar.modificacion.configurar.modificacion.select.action.param.idioma.buscador.title')" onmouseout="hints.hide()"  id="selectActionIdiomaBuscador"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('selectAction')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="configurar.modificacion.configurar.modificacion.select.action"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

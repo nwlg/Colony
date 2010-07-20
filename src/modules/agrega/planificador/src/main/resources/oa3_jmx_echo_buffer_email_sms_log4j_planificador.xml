@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<!-- Example configuration of an OA3 Adaptor.
+
+ Data originates: JMX Connector (listener)
+ Data processed : MessageEchoProcessor (prints the message to console)
+ Data processed : Buffer
+ Data terminates: Email, SMS, Logging (Log4j)
+-->
+
+<beans>
+
+    <!-- *************************** Start JMX Stuff *******************************************-->
+
+    <!-- Connector to the remote MBeanServer -->
+    <bean id="mbeanServerProxy" class="org.springframework.jmx.support.MBeanServerConnectionFactoryBean" lazy-init="false">
+		<property name="serviceUrl" value="service:jmx:rmi://localhost/jndi/rmi://localhost:33333/IBJMXConnector"/>	
+    </bean>
+
+<!-- You could have connectors to different MBeanServers
+	<bean id="mbeanServerProxy2" class="org.springframework.jmx.support.MBeanServerConnectionFactoryBean" lazy-init="false">
+         <property name="serviceUrl" value="service:jmx:rmi://localhost/jndi/rmi://otherHost:44444/IBJMXConnector"/>
+    </bean>-->
+
+    <!-- Bean that sets up the MBeans from which we are going to listen notifications -->
+	<bean id="jmxReadConnectorConfig" class="es.indra.ibuilder.jmx.notifications.ExtendedNotificationListenerBean" lazy-init="false">
+		<constructor-arg>
+			<ref bean="jmxReadConnector"></ref>
+		</constructor-arg>
+		
+		<property name="servers">
+            <list>
+                <ref bean="mbeanServerProxy"/>
+				<!-- Put your connectors to other MBeanServers here -->               
+				<!-- <ref bean="mbeanServerProxy2"/> -->
+            </list>
+		</property>
+		
+		<property name="mappedObjectNames">
+			<list>
+				<!-- Put other MBeans ObjectNames here-->
+			</list>
+		</property>
+	</bean>
+
+    <!-- Bean that registers the JMX connector with the remote MBeanServer to listen notifications -->
+    <bean id="listenersRegisterer" class="es.indra.ibuilder.jmx.notifications.RemoteNotificationListenerRegisterer">
+		<property name="notificationListeners">
+			<list>
+				<ref bean="jmxReadConnectorConfig"/>				
+            </list>
+        </property>        
+    </bean>    
+
+    <!-- JMX Read Connector -->
+    <bean id="jmxReadConnector" class="es.indra.ibuilder.jmx.notifications.oa3.connector.jmx.JMXReadConnector">
+        <property name="id" value="JMX Read Connector"/>
+    </bean>
+
+    <!-- *************************** End JMX Stuff *******************************************-->
+
+    <!-- Use the Default Transport -->
+    <bean id="transport" class="org.oa3.transport.NewSyncLocalTransport"/>
+
+
+    <!-- ************************* Start Adaptor Components ********************************** -->
+
+    <!-- JMX Inpoint -->
+    <bean id="JMXInpoint" class="org.oa3.node.AdaptorInpoint">
+        <property name="connector">
+            <ref bean="jmxReadConnector"/>
+        </property>
+        <property name="chainedNodes">
+            <list>
+                <ref bean="Echo"/>
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="Echo" class="org.oa3.node.Node">
+        <property name="processor">
+            <bean class="org.oa3.processor.echo.MessageEchoProcessor"/>
+        </property>
+        <property name="chainedNodes">
+            <list>
+                <ref bean="Buffer"/>
+            </list>
+        </property>
+    </bean>
+
+
+    <bean id="Buffer" class="org.oa3.node.BufferNode">
+        <property name="transport"> <ref bean="transport"/> </property>
+        <property name="outputEnabled" value="true"/>
+        <property name="chainedNodes">
+            <list>
+                <ref bean="EmailOutpoint"/>
+                <ref bean="SMSOutpoint"/>
+                <ref bean="LoggingOutpoint"/>
+            </list>
+        </property>
+    </bean>
+
+    <!-- Write payload to Email. -->
+    <bean id="EmailOutpoint" class="org.oa3.node.AdaptorOutpoint">
+        <property name="transport"><ref bean="transport"/></property>
+        <property name="connector">
+            <bean class="es.indra.ibuilder.jmx.notifications.oa3.connector.jmx.JMXNotificationListenerWriteConnector">
+                <property name="notificationListener"><ref bean="emailNotificationListener"/></property>
+            </bean>
+        </property>
+    </bean>
+
+    <!-- Write payload to SMS. --> 
+    <bean id="SMSOutpoint" class="org.oa3.node.AdaptorOutpoint">
+        <property name="transport"><ref bean="transport"/></property>
+        <property name="connector">
+            <bean class="es.indra.ibuilder.jmx.notifications.oa3.connector.jmx.JMXNotificationListenerWriteConnector">
+                <property name="notificationListener"><ref bean="smsNotificationListener"/></property>
+            </bean>
+        </property>
+    </bean>
+
+    <!-- Write payload to Log4j. -->
+    <bean id="LoggingOutpoint" class="org.oa3.node.AdaptorOutpoint">
+        <property name="transport"><ref bean="transport"/></property>
+        <property name="connector">
+            <bean class="es.indra.ibuilder.jmx.notifications.oa3.connector.jmx.JMXNotificationListenerWriteConnector">
+                <property name="notificationListener"><ref bean="loggingNotificationListener"/></property>
+            </bean>
+        </property>
+    </bean>
+    
+    <!-- ************************* End Adaptor Components ********************************** -->
+
+    <!-- ************************* JMX Listeners (used as OutPoints) ************************-->
+
+    <!-- Listeners that sends Emails using a SMTP server -->
+	<bean id="emailNotificationListener" class="es.indra.ibuilder.jmx.notifications.EmailNotificationListener">
+		<!-- Persistent queue used to store the notifications until they are sent by email -->
+		<property name="deliveryQueue">
+			<ref bean="emailNotificationsQueue"/>
+		</property>
+		<!-- mailhost_name_or_ip -->
+		<property name="mailhost"><value>some.mailhost.indra.es</value></property>
+		<!-- email address used in the "from" field -->
+		<property name="from"><value>myapp_administrator@indra.es</value></property>
+		<!-- some user with permissions to send emails -->
+		<property name="user"><value>myapp_administrator</value></property>
+		<!-- password of the user -->
+		<property name="password"><value>vErYDiFfIcUlTpWd</value></property>
+		<!-- list of emails (separed by commas) where the notifications will be sent -->
+		<property name="to"><value>admin1@indra.es,admin2@indra.es</value></property>
+	</bean>
+
+	<!-- Persistent queue used to store the notifications until they are sent by email -->
+	<bean id="emailNotificationsQueue" class="es.indra.ibuilder.jmx.notifications.PersistedNotificationQueue">
+		<!-- Bean used as deliverer -->
+		<constructor-arg>
+			<ref bean="emailNotificationListener"/>
+		</constructor-arg>
+		<!-- File used to persist the queue-->
+		<constructor-arg>
+			<value>EmailNotificationsQueue.xml</value>
+		</constructor-arg>
+		<!-- Pause between deliveries (in ms)-->
+		<property name="deliveryThreadSleepTime"><value>30000</value></property>
+		<!-- Time to check if the queue has been modified and has to be saved (in ms) -->
+		<property name="saveThreadSleepTime"><value>15000</value></property>		
+	</bean>
+    
+    
+    <!-- Listener that sends SMS using a GSM modem connected to a local serial port --> 
+	<bean id="smsNotificationListener" class="es.indra.ibuilder.jmx.notifications.SMSNotificationListener">
+		<!-- Persistent queue used to store the notifications until they are sent by SMS -->
+		<property name="deliveryQueue">
+			<ref bean="smsNotificationsQueue"/>
+		</property>
+		<!-- Serial port where the GSM modem is connected -->
+		<property name="port"><value>COM1</value></property>
+		<!-- Baud rate (consult your GSM modem manual) -->
+		<property name="baudRate"><value>19200</value></property>
+		<!-- Mobile number where the SMS is going to be sent (always with international format) -->
+		<property name="destinationNumber"><value>+34666666666</value></property>
+		<!-- Device manufacturer ("Generic" use to be OK) -->
+		<property name="deviceManufacturer"><value>Generic</value></property>
+		<!-- PIN of the SIM card -->
+		<property name="simPin"><value>9999</value></property>
+	</bean>
+
+	<!-- Persistent queue used to store the notifications until they are sent by SMS -->
+	<bean id="smsNotificationsQueue" class="es.indra.ibuilder.jmx.notifications.PersistedNotificationQueue">
+		<!-- Bean used as deliverer -->		
+		<constructor-arg>
+			<ref bean="smsNotificationListener"/>
+		</constructor-arg>
+		<!-- File used to persist the queue-->		
+		<constructor-arg>
+			<value>SMSNotificationsQueue.xml</value>
+		</constructor-arg>
+		<!-- Pause between deliveries (in ms)-->		
+		<property name="deliveryThreadSleepTime"><value>30000</value></property>
+		<!-- Time to check if the queue has been modified and has to be saved (in ms) -->		
+		<property name="saveThreadSleepTime"><value>15000</value></property>		
+	</bean> 
+    
+    <!-- Listener that sends the notifications to the Log4J subsystem -->
+    <bean id="loggingNotificationListener" class="es.indra.ibuilder.jmx.notifications.LoggingNotificationListener">
+    	<!-- Level used to send the notifications -->
+        <property name="notificationLevel"><value>WARN</value></property>
+    </bean>
+
+</beans>

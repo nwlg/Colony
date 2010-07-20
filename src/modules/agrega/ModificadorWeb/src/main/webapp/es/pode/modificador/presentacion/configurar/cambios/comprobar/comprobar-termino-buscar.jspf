@@ -1,0 +1,49 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="buscar" class="action">
+    <h3><bean:message key="comprobar.termino.comprobar.termino.buscar"/></h3>
+    <div class="trigger">
+        <html:form styleId="comprobarTerminoComprobarTerminoBuscarForm" action="/ComprobarTermino/ComprobarTerminoBuscar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="idiomaBuscador">
+                        <td class="label"><bean:message key="comprobar.termino.comprobar.termino.buscar.param.idioma.buscador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idiomaBuscador}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.idiomaBuscadorBackingList}">
+                                  <html:select name="form" property="idiomaBuscador" onmouseover="hints.show('comprobar.termino.comprobar.termino.buscar.param.idioma.buscador.title')" onmouseout="hints.hide()"  styleId="buscarIdiomaBuscador">
+                                      <html:optionsCollection name="form" property="idiomaBuscadorBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="idiomaBuscador" onmouseover="hints.show('comprobar.termino.comprobar.termino.buscar.param.idioma.buscador.title')" onmouseout="hints.hide()"  styleId="buscarIdiomaBuscador"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="tipoBusqueda">
+                        <td class="label"><bean:message key="comprobar.termino.comprobar.termino.buscar.param.tipo.busqueda"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipoBusqueda}"/>
+                           <input type="text" name="tipoBusqueda" value="${value}" onmouseover="hints.show('comprobar.termino.comprobar.termino.buscar.param.tipo.busqueda.title')" onmouseout="hints.hide()"  id="buscarTipoBusqueda"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('buscar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="comprobar.termino.comprobar.termino.buscar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

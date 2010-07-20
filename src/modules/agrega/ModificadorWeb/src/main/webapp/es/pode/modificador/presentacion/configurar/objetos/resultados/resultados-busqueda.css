@@ -1,0 +1,32 @@
+#buscar.action {}
+#buscar.action #form_submit {}
+
+#buscar.action .idiomaBuscador {}
+#buscar.action .idiomaBuscador .label {}
+#buscar.action .idiomaBuscador .field {}
+
+#eliminarTodos.action {}
+#eliminarTodos.action #form_submit {}
+
+
+#anadir.action {}
+#anadir.action #form_submit {}
+
+
+#resultados.table {}
+#resultados.table th {}
+#resultados.table td div {}
+
+#resultados.table th.titulo {}
+#resultados.table td div.titulo {}
+
+
+#seleccionados.table {}
+#seleccionados.table th {}
+#seleccionados.table td div {}
+
+#seleccionados.table th.titulo {}
+#seleccionados.table td div.titulo {}
+
+
+

@@ -1,0 +1,74 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'gestor.elementos.gestor.elementos.navegar.param.identifier.title':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.navegar.param.identifier.title"/></formatting:escape>',
+                'gestor.elementos.gestor.elementos.submit.param.identifier.title':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.submit.param.identifier.title"/></formatting:escape>',
+                'gestor.elementos.gestor.elementos.subir.param.identifier.title':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.subir.param.identifier.title"/></formatting:escape>',
+                'gestor.elementos.gestor.elementos.bajar.param.identifier.title':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.bajar.param.identifier.title"/></formatting:escape>',
+                'gestor.elementos.gestor.elementos.vista.param.vista.arbol.title':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.vista.param.vista.arbol.title"/></formatting:escape>',
+                'gestor.elementos.gestor.elementos.modificar.elemento.param.identifier.title':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.modificar.elemento.param.identifier.title"/></formatting:escape>',
+                'gestor.elementos.gestor.elementos.eliminar.portapapeles.param.identifier.title':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.eliminar.portapapeles.param.identifier.title"/></formatting:escape>',
+                'gestor.elementos.gestor.elementos.metadato.param.identifier.title':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.metadato.param.identifier.title"/></formatting:escape>',
+                'gestor.elementos.gestor.elementos.metadato.param.return.url.title':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.metadato.param.return.url.title"/></formatting:escape>',
+                'Navegar':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.navegar.title"/></formatting:escape>',
+                'Navegar_no':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.navegar.title.notallowed"/></formatting:escape>',
+                'Navegar_reset':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.navegar.title.reset"/></formatting:escape>',
+                'Navegar_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.navegar.title.reset.not.allowed"/></formatting:escape>',
+                'Submit':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.submit.title"/></formatting:escape>',
+                'Submit_no':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.submit.title.notallowed"/></formatting:escape>',
+                'Submit_reset':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.submit.title.reset"/></formatting:escape>',
+                'Submit_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.submit.title.reset.not.allowed"/></formatting:escape>',
+                'Subir':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.subir.title"/></formatting:escape>',
+                'Subir_no':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.subir.title.notallowed"/></formatting:escape>',
+                'Subir_reset':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.subir.title.reset"/></formatting:escape>',
+                'Subir_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.subir.title.reset.not.allowed"/></formatting:escape>',
+                'Bajar':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.bajar.title"/></formatting:escape>',
+                'Bajar_no':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.bajar.title.notallowed"/></formatting:escape>',
+                'Bajar_reset':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.bajar.title.reset"/></formatting:escape>',
+                'Bajar_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.bajar.title.reset.not.allowed"/></formatting:escape>',
+                'Vista':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.vista.title"/></formatting:escape>',
+                'Vista_no':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.vista.title.notallowed"/></formatting:escape>',
+                'Vista_reset':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.vista.title.reset"/></formatting:escape>',
+                'Vista_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.vista.title.reset.not.allowed"/></formatting:escape>',
+                'Modificar Elemento':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.modificar.elemento.title"/></formatting:escape>',
+                'Modificar Elemento_no':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.modificar.elemento.title.notallowed"/></formatting:escape>',
+                'Modificar Elemento_reset':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.modificar.elemento.title.reset"/></formatting:escape>',
+                'Modificar Elemento_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.modificar.elemento.title.reset.not.allowed"/></formatting:escape>',
+                'Secuencia':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.secuencia.title"/></formatting:escape>',
+                'Secuencia_no':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.secuencia.title.notallowed"/></formatting:escape>',
+                'Secuencia_reset':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.secuencia.title.reset"/></formatting:escape>',
+                'Secuencia_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.secuencia.title.reset.not.allowed"/></formatting:escape>',
+                'EliminarPortapapeles':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.eliminar.portapapeles.title"/></formatting:escape>',
+                'EliminarPortapapeles_no':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.eliminar.portapapeles.title.notallowed"/></formatting:escape>',
+                'EliminarPortapapeles_reset':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.eliminar.portapapeles.title.reset"/></formatting:escape>',
+                'EliminarPortapapeles_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.eliminar.portapapeles.title.reset.not.allowed"/></formatting:escape>',
+                'Vaciar Portapapeles':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.vaciar.portapapeles.title"/></formatting:escape>',
+                'Vaciar Portapapeles_no':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.vaciar.portapapeles.title.notallowed"/></formatting:escape>',
+                'Vaciar Portapapeles_reset':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.vaciar.portapapeles.title.reset"/></formatting:escape>',
+                'Vaciar Portapapeles_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.vaciar.portapapeles.title.reset.not.allowed"/></formatting:escape>',
+                'Metadato':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.metadato.title"/></formatting:escape>',
+                'Metadato_no':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.metadato.title.notallowed"/></formatting:escape>',
+                'Metadato_reset':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.metadato.title.reset"/></formatting:escape>',
+                'Metadato_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.elementos.gestor.elementos.metadato.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+
+
+
+
+
+
+</script>
+    </tiles:put>

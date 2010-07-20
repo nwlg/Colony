@@ -1,0 +1,27 @@
+<div id="organizaciones" class="table">
+    <display:table name="${form.organizaciones}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="organizaciones-organizaciones.pdf" />
+
+        <display:column media="xml csv excel pdf"
+            titleKey="organizacion.principal.organizaciones.param.organizaciones.title"
+            autolink="true" paramId="title"
+            property="title">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="title" paramId="title"
+            sortProperty="title" sortable="true"
+            titleKey="organizacion.principal.organizaciones.param.organizaciones.title"
+            >
+ <html:link action="/OrganizacionPrincipal/OrganizacionesAceptar?identifier=${row.identifier}&action=${row.action}" onmouseover="hints.show('Aceptar')" onmouseout="hints.hide()">
+     ${row.title}
+ </html:link>
+            </display:column>
+   
+    </display:table>
+</div>
+

@@ -1,0 +1,23 @@
+
+    <tiles:put name="javascript" type="string">
+        <script type="text/javascript" language="Javascript1.1" src="<html:rewrite action="/formValidation"/>"></script>
+        <html:javascript formName="crearFAQFormularioCategoriaValidaForm" method="validateFormularioCategoriaValidaForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'crear.faq.formulario.categoria.valida.param.categoria.title':'<formatting:escape language="javascript"><bean:message key="crear.faq.formulario.categoria.valida.param.categoria.title"/></formatting:escape>',
+                'valida':'<formatting:escape language="javascript"><bean:message key="crear.faq.formulario.categoria.valida.title"/></formatting:escape>',
+                'valida_no':'<formatting:escape language="javascript"><bean:message key="crear.faq.formulario.categoria.valida.title.notallowed"/></formatting:escape>',
+                'valida_reset':'<formatting:escape language="javascript"><bean:message key="crear.faq.formulario.categoria.valida.title.reset"/></formatting:escape>',
+                'valida_noreset':'<formatting:escape language="javascript"><bean:message key="crear.faq.formulario.categoria.valida.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

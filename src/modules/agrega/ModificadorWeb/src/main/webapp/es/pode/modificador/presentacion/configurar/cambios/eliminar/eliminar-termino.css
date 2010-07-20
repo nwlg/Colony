@@ -1,0 +1,30 @@
+#selectAction.action {}
+#selectAction.action #form_submit {}
+
+#selectAction.action .valor {}
+#selectAction.action .valor .label {}
+#selectAction.action .valor .field {}
+#selectAction.action .exprReg {}
+#selectAction.action .exprReg .label {}
+#selectAction.action .exprReg .field {}
+#selectAction.action .idioma {}
+#selectAction.action .idioma .label {}
+#selectAction.action .idioma .field {}
+#selectAction.action .alcance {}
+#selectAction.action .alcance .label {}
+#selectAction.action .alcance .field {}
+#selectAction.action .action {}
+#selectAction.action .action .label {}
+#selectAction.action .action .field {}
+
+#buscar.action {}
+#buscar.action #form_submit {}
+
+#buscar.action .idiomaBuscador {}
+#buscar.action .idiomaBuscador .label {}
+#buscar.action .idiomaBuscador .field {}
+#buscar.action .tipoBusqueda {}
+#buscar.action .tipoBusqueda .label {}
+#buscar.action .tipoBusqueda .field {}
+
+

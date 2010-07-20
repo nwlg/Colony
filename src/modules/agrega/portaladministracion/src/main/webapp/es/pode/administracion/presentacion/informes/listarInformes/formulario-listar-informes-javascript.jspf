@@ -1,0 +1,37 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'listar.informes.formulario.listar.informes.recuperar.param.nombre.title':'<formatting:escape language="javascript"><bean:message key="listar.informes.formulario.listar.informes.recuperar.param.nombre.title"/></formatting:escape>',
+                'listar.informes.formulario.listar.informes.eliminar.param.nombre.title':'<formatting:escape language="javascript"><bean:message key="listar.informes.formulario.listar.informes.eliminar.param.nombre.title"/></formatting:escape>',
+                'Recuperar':'<formatting:escape language="javascript"><bean:message key="listar.informes.formulario.listar.informes.recuperar.title"/></formatting:escape>',
+                'Recuperar_no':'<formatting:escape language="javascript"><bean:message key="listar.informes.formulario.listar.informes.recuperar.title.notallowed"/></formatting:escape>',
+                'Recuperar_reset':'<formatting:escape language="javascript"><bean:message key="listar.informes.formulario.listar.informes.recuperar.title.reset"/></formatting:escape>',
+                'Recuperar_noreset':'<formatting:escape language="javascript"><bean:message key="listar.informes.formulario.listar.informes.recuperar.title.reset.not.allowed"/></formatting:escape>',
+                'Eliminar':'<formatting:escape language="javascript"><bean:message key="listar.informes.formulario.listar.informes.eliminar.title"/></formatting:escape>',
+                'Eliminar_no':'<formatting:escape language="javascript"><bean:message key="listar.informes.formulario.listar.informes.eliminar.title.notallowed"/></formatting:escape>',
+                'Eliminar_reset':'<formatting:escape language="javascript"><bean:message key="listar.informes.formulario.listar.informes.eliminar.title.reset"/></formatting:escape>',
+                'Eliminar_noreset':'<formatting:escape language="javascript"><bean:message key="listar.informes.formulario.listar.informes.eliminar.title.reset.not.allowed"/></formatting:escape>',
+                'crearInforme':'<formatting:escape language="javascript"><bean:message key="listar.informes.formulario.listar.informes.crear.informe.title"/></formatting:escape>',
+                'crearInforme_no':'<formatting:escape language="javascript"><bean:message key="listar.informes.formulario.listar.informes.crear.informe.title.notallowed"/></formatting:escape>',
+                'crearInforme_reset':'<formatting:escape language="javascript"><bean:message key="listar.informes.formulario.listar.informes.crear.informe.title.reset"/></formatting:escape>',
+                'crearInforme_noreset':'<formatting:escape language="javascript"><bean:message key="listar.informes.formulario.listar.informes.crear.informe.title.reset.not.allowed"/></formatting:escape>',
+                'listarInformesFederados':'<formatting:escape language="javascript"><bean:message key="listar.informes.formulario.listar.informes.listar.informes.federados.title"/></formatting:escape>',
+                'listarInformesFederados_no':'<formatting:escape language="javascript"><bean:message key="listar.informes.formulario.listar.informes.listar.informes.federados.title.notallowed"/></formatting:escape>',
+                'listarInformesFederados_reset':'<formatting:escape language="javascript"><bean:message key="listar.informes.formulario.listar.informes.listar.informes.federados.title.reset"/></formatting:escape>',
+                'listarInformesFederados_noreset':'<formatting:escape language="javascript"><bean:message key="listar.informes.formulario.listar.informes.listar.informes.federados.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+</script>
+    </tiles:put>

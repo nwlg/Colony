@@ -1,0 +1,13 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="crearCatalogadores" class="action">
+    <h3><bean:message key="listar.catalogadores.formulario.listado.catalogadores.crear.catalogadores"/></h3>
+    <div class="trigger">
+        <form id="listarCatalogadoresFormularioListadoCatalogadoresCrearCatalogadoresForm" action='<html:rewrite action="/ListarCatalogadores/FormularioListadoCatalogadoresCrearCatalogadores"/>' method="post">
+               <html:submit onmouseover="hints.show('CrearCatalogadores')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="listar.catalogadores.formulario.listado.catalogadores.crear.catalogadores"/>
+               </html:submit>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

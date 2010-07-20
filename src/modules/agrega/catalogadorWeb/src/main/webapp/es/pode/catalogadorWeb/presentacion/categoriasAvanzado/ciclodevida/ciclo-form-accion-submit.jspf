@@ -1,0 +1,258 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="accionSubmit" class="action">
+    <h3><bean:message key="ciclo.de.vida.ciclo.form.accion.submit"/></h3>
+    <div class="trigger">
+        <html:form styleId="cicloDeVidaCicloFormAccionSubmitForm" action="/CicloDeVida/CicloFormAccionSubmit" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="accion">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.form.accion.submit.param.accion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.accion}"/>
+                           <input type="text" name="accion" value="${value}" onmouseover="hints.show('ciclo.de.vida.ciclo.form.accion.submit.param.accion.title')" onmouseout="hints.hide()"  id="accionSubmitAccion"/>
+                        </td>
+                    </tr>
+                    <tr class="identificadorOde">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.form.accion.submit.param.identificador.ode"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.identificadorOde}"/>
+                           <input type="text" name="identificadorOde" value="${value}" onmouseover="hints.show('ciclo.de.vida.ciclo.form.accion.submit.param.identificador.ode.title')" onmouseout="hints.hide()"  id="accionSubmitIdentificadorOde"/>
+                        </td>
+                    </tr>
+                    <tr class="versiones">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.form.accion.submit.param.versiones"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.versiones}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.versionesBackingList}">
+                                  <html:select name="form" property="versionesAsArray" onmouseover="hints.show('ciclo.de.vida.ciclo.form.accion.submit.param.versiones.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="accionSubmitVersiones">
+                                      <html:optionsCollection name="form" property="versionesBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="versionesAsArray" onmouseover="hints.show('ciclo.de.vida.ciclo.form.accion.submit.param.versiones.title')" onmouseout="hints.hide()"  styleId="accionSubmitVersiones"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="estatus">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.form.accion.submit.param.estatus"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.estatus}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.estatusBackingList}">
+                                  <html:select name="form" property="estatus" onmouseover="hints.show('ciclo.de.vida.ciclo.form.accion.submit.param.estatus.title')" onmouseout="hints.hide()"  styleId="accionSubmitEstatus">
+                                      <html:optionsCollection name="form" property="estatusBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="estatus" onmouseover="hints.show('ciclo.de.vida.ciclo.form.accion.submit.param.estatus.title')" onmouseout="hints.hide()"  styleId="accionSubmitEstatus"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="contribuciones">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.form.accion.submit.param.contribuciones"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.contribuciones}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.contribucionesBackingList}">
+                                  <html:select name="form" property="contribucionesAsArray" onmouseover="hints.show('ciclo.de.vida.ciclo.form.accion.submit.param.contribuciones.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="accionSubmitContribuciones">
+                                      <html:optionsCollection name="form" property="contribucionesBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="contribucionesAsArray" onmouseover="hints.show('ciclo.de.vida.ciclo.form.accion.submit.param.contribuciones.title')" onmouseout="hints.hide()"  styleId="accionSubmitContribuciones"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="crol">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.form.accion.submit.param.crol"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.crol}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.crolBackingList}">
+                                  <html:select name="form" property="crol" onmouseover="hints.show('ciclo.de.vida.ciclo.form.accion.submit.param.crol.title')" onmouseout="hints.hide()"  styleId="accionSubmitCrol">
+                                      <html:optionsCollection name="form" property="crolBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="crol" onmouseover="hints.show('ciclo.de.vida.ciclo.form.accion.submit.param.crol.title')" onmouseout="hints.hide()"  styleId="accionSubmitCrol"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="cidentidad">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.form.accion.submit.param.cidentidad"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.cidentidad}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.cidentidadBackingList}">
+                                  <html:select name="form" property="cidentidadAsArray" onmouseover="hints.show('ciclo.de.vida.ciclo.form.accion.submit.param.cidentidad.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="accionSubmitCidentidad">
+                                      <html:optionsCollection name="form" property="cidentidadBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="cidentidadAsArray" onmouseover="hints.show('ciclo.de.vida.ciclo.form.accion.submit.param.cidentidad.title')" onmouseout="hints.hide()"  styleId="accionSubmitCidentidad"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="fecha">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.form.accion.submit.param.fecha"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.fecha}"/>
+                           <input type="text" name="fecha" value="${value}" onmouseover="hints.show('ciclo.de.vida.ciclo.form.accion.submit.param.fecha.title')" onmouseout="hints.hide()"  id="accionSubmitFecha"/>
+                        </td>
+                    </tr>
+                    <tr class="hora">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.form.accion.submit.param.hora"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.hora}"/>
+                           <input type="text" name="hora" value="${value}" onmouseover="hints.show('ciclo.de.vida.ciclo.form.accion.submit.param.hora.title')" onmouseout="hints.hide()"  id="accionSubmitHora"/>
+                        </td>
+                    </tr>
+                    <tr class="minutos">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.form.accion.submit.param.minutos"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.minutos}"/>
+                           <input type="text" name="minutos" value="${value}" onmouseover="hints.show('ciclo.de.vida.ciclo.form.accion.submit.param.minutos.title')" onmouseout="hints.hide()"  id="accionSubmitMinutos"/>
+                        </td>
+                    </tr>
+                    <tr class="segundoP1">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.form.accion.submit.param.segundo.p1"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.segundoP1}"/>
+                           <input type="text" name="segundoP1" value="${value}" onmouseover="hints.show('ciclo.de.vida.ciclo.form.accion.submit.param.segundo.p1.title')" onmouseout="hints.hide()"  id="accionSubmitSegundoP1"/>
+                        </td>
+                    </tr>
+                    <tr class="segundoP2">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.form.accion.submit.param.segundo.p2"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.segundoP2}"/>
+                           <input type="text" name="segundoP2" value="${value}" onmouseover="hints.show('ciclo.de.vida.ciclo.form.accion.submit.param.segundo.p2.title')" onmouseout="hints.hide()"  id="accionSubmitSegundoP2"/>
+                        </td>
+                    </tr>
+                    <tr class="meridianocero">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.form.accion.submit.param.meridianocero"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.meridianocero}"/>
+                           <input type="text" name="meridianocero" value="${value}" onmouseover="hints.show('ciclo.de.vida.ciclo.form.accion.submit.param.meridianocero.title')" onmouseout="hints.hide()"  id="accionSubmitMeridianocero"/>
+                        </td>
+                    </tr>
+                    <tr class="comboZonaH">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.form.accion.submit.param.combo.zona.h"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.comboZonaH}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.comboZonaHBackingList}">
+                                  <html:select name="form" property="comboZonaH" onmouseover="hints.show('ciclo.de.vida.ciclo.form.accion.submit.param.combo.zona.h.title')" onmouseout="hints.hide()"  styleId="accionSubmitComboZonaH">
+                                      <html:optionsCollection name="form" property="comboZonaHBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="comboZonaH" onmouseover="hints.show('ciclo.de.vida.ciclo.form.accion.submit.param.combo.zona.h.title')" onmouseout="hints.hide()"  styleId="accionSubmitComboZonaH"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="zhHora">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.form.accion.submit.param.zh.hora"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.zhHora}"/>
+                           <input type="text" name="zhHora" value="${value}" onmouseover="hints.show('ciclo.de.vida.ciclo.form.accion.submit.param.zh.hora.title')" onmouseout="hints.hide()"  id="accionSubmitZhHora"/>
+                        </td>
+                    </tr>
+                    <tr class="zhMinutos">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.form.accion.submit.param.zh.minutos"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.zhMinutos}"/>
+                           <input type="text" name="zhMinutos" value="${value}" onmouseover="hints.show('ciclo.de.vida.ciclo.form.accion.submit.param.zh.minutos.title')" onmouseout="hints.hide()"  id="accionSubmitZhMinutos"/>
+                        </td>
+                    </tr>
+                    <tr class="descripciones">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.form.accion.submit.param.descripciones"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.descripciones}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.descripcionesBackingList}">
+                                  <html:select name="form" property="descripcionesAsArray" onmouseover="hints.show('ciclo.de.vida.ciclo.form.accion.submit.param.descripciones.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="accionSubmitDescripciones">
+                                      <html:optionsCollection name="form" property="descripcionesBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="descripcionesAsArray" onmouseover="hints.show('ciclo.de.vida.ciclo.form.accion.submit.param.descripciones.title')" onmouseout="hints.hide()"  styleId="accionSubmitDescripciones"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="comboIdioma">
+                        <td class="label"><bean:message key="ciclo.de.vida.ciclo.form.accion.submit.param.combo.idioma"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.comboIdioma}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.comboIdiomaBackingList}">
+                                  <html:select name="form" property="comboIdioma" onmouseover="hints.show('ciclo.de.vida.ciclo.form.accion.submit.param.combo.idioma.title')" onmouseout="hints.hide()"  styleId="accionSubmitComboIdioma">
+                                      <html:optionsCollection name="form" property="comboIdiomaBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="comboIdioma" onmouseover="hints.show('ciclo.de.vida.ciclo.form.accion.submit.param.combo.idioma.title')" onmouseout="hints.hide()"  styleId="accionSubmitComboIdioma"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR,ROLE_CATALOGADOR,ROLE_PUBLICADOR,ROLE_DOCENTE">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('accionSubmit')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="ciclo.de.vida.ciclo.form.accion.submit"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

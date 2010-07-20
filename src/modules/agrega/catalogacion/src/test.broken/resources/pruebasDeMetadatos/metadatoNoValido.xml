@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<lom xmlns="http://ltsc.ieee.org/xsd/LOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM D:\ProyectosST\parseadorXML1.1\src\esquema\LOM-ES\lomCustom.xsd">
+	<general>
+		<identifier>
+			<catalog>DOI</catalog>
+			<!--catalog>ATENEX</catalog-->
+			<entry>10.1000/ISBN1-900512-44-0</entry>
+			<!--entry>AT/ET0001</entry-->
+		</identifier>
+		<title>
+			<string>Título del objeto digital</string>
+		</title>
+		<language>eu</language>
+		<description>
+			<string>Unidad didáctica introductoria a la Ética en la que se tratan los conceptos básicos de esta disciplina, especialmente su especificidad humana y su fundamento antropológico</string>
+		</description>
+		<keyword>
+			<string>Ética</string>
+			<string>Moral</string>
+		</keyword>
+		<coverage>
+			<string>Cultura Occidental</string>
+		</coverage>
+		<structure>
+			<source> LOM-ESv1.0</source>
+			<value>atomic</value>
+		</structure>
+		<aggregationLevel>
+			<source>LOM-ESv1.0</source>
+			<value>3</value>
+		</aggregationLevel>
+	</general>
+</lom>

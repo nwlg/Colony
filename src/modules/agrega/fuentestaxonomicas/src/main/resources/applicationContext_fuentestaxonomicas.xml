@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <!-- ========================= GENERAL DEFINITIONS ========================= -->
+    <!-- Message source for this context, loaded from localized "messages_xx" files -->
+
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename"><value>messages</value></property>
+    </bean>
+
+	<bean id="beanMapper" class="net.sf.dozer.util.mapping.DozerBeanMapper" singleton="true">
+		<property name="mappingFiles">
+			<list>
+				<value>defaultDozerMappings_fuentestaxonomicas.xml</value>
+				<value>customDozerMappings_fuentestaxonomicas.xml</value>
+			</list>
+		</property>
+	</bean>
+
+    <!-- applicationContext merge-point -->
+
+    <!-- ========================= Start of SERVICE DEFINITIONS ========================= -->
+
+
+    <!-- SrvVocabulariosControladosService Service Proxy with inner SrvVocabulariosControladosService Service Implementation -->
+    <bean id="srvVocabulariosControladosService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.fuentestaxonomicas.negocio.servicio.SrvVocabulariosControladosServiceImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.fuentestaxonomicas.negocio.servicio.SrvVocabulariosControladosService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvTaxonomiaService Service Proxy with inner SrvTaxonomiaService Service Implementation -->
+    <bean id="srvTaxonomiaService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.fuentestaxonomicas.negocio.servicio.SrvTaxonomiaServiceImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.fuentestaxonomicas.negocio.servicio.SrvTaxonomiaService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvTesaurosServices Service Proxy with inner SrvTesaurosServices Service Implementation -->
+    <bean id="srvTesaurosServices" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.fuentestaxonomicas.negocio.servicio.SrvTesaurosServicesImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.fuentestaxonomicas.negocio.servicio.SrvTesaurosServices</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvEstructurasEducativasService Service Proxy with inner SrvEstructurasEducativasService Service Implementation -->
+    <bean id="srvEstructurasEducativasService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.fuentestaxonomicas.negocio.servicio.SrvEstructurasEducativasServiceImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+		                <property name="srvTesaurosServices"><ref bean="srvTesaurosServices"/></property>
+    		                <property name="srvTaxonomiaService"><ref bean="srvTaxonomiaService"/></property>
+    	            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.fuentestaxonomicas.negocio.servicio.SrvEstructurasEducativasService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+            </list>
+        </property>
+    </bean>
+
+    <!-- ========================= End of SERVICE DEFINITIONS ========================= -->
+
+</beans>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<modification-task xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="modificaciones.xsd">
+<changes>
+	<validation/>
+</changes>
+<objects>
+	<ode>
+		<published>false</published>
+		<path>odes/ode_erroneo</path>
+	</ode>
+	<ode>
+		<published>false</published>
+		<path>odes/ode_erroneo.zip</path>
+	</ode>
+	<ode>
+		<published>true</published>
+		<path>odes/es_20070727_2_0130101</path>
+	</ode>
+	<ode>
+		<published>false</published>
+		<path>odes/es_20070320_1_5004457.zip</path>
+	</ode>
+	<folder>
+		<path>odes/folder</path>
+	</folder>
+</objects>
+</modification-task>

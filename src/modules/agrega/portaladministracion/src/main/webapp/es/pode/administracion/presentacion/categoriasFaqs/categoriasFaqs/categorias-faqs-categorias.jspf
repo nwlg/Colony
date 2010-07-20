@@ -1,0 +1,34 @@
+<div id="categorias" class="table">
+    <form id="categorias" name="" action="" method="post" enctype="multipart/form-data">
+    <display:table name="${form.categorias}" uid="row"
+        export="false" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:column media="html">
+            <input type="checkbox" name="idRowSelectionAsArray" value="${row.id}" title='<bean:message key="select.deselect.this.row"/>'/>
+        </display:column>
+
+
+        <display:column media="html"
+            headerClass="id" paramId="id"
+            sortProperty="id" sortable="true"
+            titleKey="categorias.faqs.categorias.faqs.param.categorias.id"
+            >
+            <div class="id">
+		
+ <c:set var="value" value="${row.id}"/>
+ <input type="text" name="id" value="${value}" onmouseover="hints.show('categorias.faqs.categorias.faqs.modificar.param.id.title')" onmouseout="hints.hide()"  id="categoriasId${row_rowNum}"/>
+            </div>
+       </display:column>
+   
+    </display:table>
+    <c:if test="${!empty form.categorias}">
+            <input type="submit" value="<bean:message key="categorias.faqs.categorias.faqs.eliminar.categorias"/>" onclick="this.form.name='categoriasFaqsCategoriasFaqsEliminarCategoriasForm';this.form.action='<html:rewrite action="/CategoriasFaqs/CategoriasFaqsEliminarCategorias"/>';" onmouseover="hints.show('EliminarCategorias')" onmouseout="hints.hide()"/>
+            <input type="button" value="<bean:message key="select.deselect.all"/>" onclick="var boxes=this.form.elements['idRowSelectionAsArray'];var setChecked=(boxes.length==0)?false:!boxes[0].checked;for(var i=0;i<boxes.length;i++)boxes[i].checked=setChecked;"/>
+            <input type="submit" value="<bean:message key="categorias.faqs.categorias.faqs.eliminar"/>" onclick="this.form.name='categoriasFaqsCategoriasFaqsEliminarForm';this.form.action='<html:rewrite action="/CategoriasFaqs/CategoriasFaqsEliminar"/>';" onmouseover="hints.show('Eliminar')" onmouseout="hints.hide()"/>
+            <input type="button" value="<bean:message key="select.deselect.all"/>" onclick="var boxes=this.form.elements['idRowSelectionAsArray'];var setChecked=(boxes.length==0)?false:!boxes[0].checked;for(var i=0;i<boxes.length;i++)boxes[i].checked=setChecked;"/>
+    </c:if>
+    </form>
+</div>
+

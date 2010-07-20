@@ -1,0 +1,103 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="buscar" class="action">
+    <h3><bean:message key="tesauros.tesauros.form.buscar"/></h3>
+    <div class="trigger">
+        <html:form styleId="tesaurosTesaurosFormBuscarForm" action="/Tesauros/TesaurosFormBuscar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="taxonesvo">
+                        <td class="label"><bean:message key="tesauros.tesauros.form.buscar.param.taxonesvo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.taxonesvo}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.taxonesvoBackingList}">
+                                  <html:select name="form" property="taxonesvoAsArray" onmouseover="hints.show('tesauros.tesauros.form.buscar.param.taxonesvo.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="buscarTaxonesvo">
+                                      <html:optionsCollection name="form" property="taxonesvoBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="taxonesvoAsArray" onmouseover="hints.show('tesauros.tesauros.form.buscar.param.taxonesvo.title')" onmouseout="hints.hide()"  styleId="buscarTaxonesvo"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="idioma">
+                        <td class="label"><bean:message key="tesauros.tesauros.form.buscar.param.idioma"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idioma}"/>
+                           <input type="text" name="idioma" value="${value}" onmouseover="hints.show('tesauros.tesauros.form.buscar.param.idioma.title')" onmouseout="hints.hide()"  id="buscarIdioma"/>
+                        </td>
+                    </tr>
+                    <tr class="nomTesauro">
+                        <td class="label"><bean:message key="tesauros.tesauros.form.buscar.param.nom.tesauro"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.nomTesauro}"/>
+                           <input type="text" name="nomTesauro" value="${value}" onmouseover="hints.show('tesauros.tesauros.form.buscar.param.nom.tesauro.title')" onmouseout="hints.hide()"  id="buscarNomTesauro"/>
+                        </td>
+                    </tr>
+                    <tr class="rutaPadrevo">
+                        <td class="label"><bean:message key="tesauros.tesauros.form.buscar.param.ruta.padrevo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.rutaPadrevo}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.rutaPadrevoBackingList}">
+                                  <html:select name="form" property="rutaPadrevoAsArray" onmouseover="hints.show('tesauros.tesauros.form.buscar.param.ruta.padrevo.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="buscarRutaPadrevo">
+                                      <html:optionsCollection name="form" property="rutaPadrevoBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="rutaPadrevoAsArray" onmouseover="hints.show('tesauros.tesauros.form.buscar.param.ruta.padrevo.title')" onmouseout="hints.hide()"  styleId="buscarRutaPadrevo"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="id">
+                        <td class="label"><bean:message key="tesauros.tesauros.form.buscar.param.id"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.id}"/>
+                           <input type="text" name="id" value="${value}" onmouseover="hints.show('tesauros.tesauros.form.buscar.param.id.title')" onmouseout="hints.hide()"  id="buscarId"/>
+                        </td>
+                    </tr>
+                    <tr class="textoBusqueda">
+                        <td class="label"><bean:message key="tesauros.tesauros.form.buscar.param.texto.busqueda"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.textoBusqueda}"/>
+                           <input type="text" name="textoBusqueda" value="${value}" onmouseover="hints.show('tesauros.tesauros.form.buscar.param.texto.busqueda.title')" onmouseout="hints.hide()"  id="buscarTextoBusqueda"/>
+                        </td>
+                    </tr>
+                    <tr class="vocabName">
+                        <td class="label"><bean:message key="tesauros.tesauros.form.buscar.param.vocab.name"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.vocabName}"/>
+                           <input type="text" name="vocabName" value="${value}" onmouseover="hints.show('tesauros.tesauros.form.buscar.param.vocab.name.title')" onmouseout="hints.hide()"  id="buscarVocabName"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('buscar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="tesauros.tesauros.form.buscar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

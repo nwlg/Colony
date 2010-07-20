@@ -1,0 +1,46 @@
+<div id="rutaPadrevo" class="table">
+    <display:table name="${form.rutaPadrevo}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="taxonomia-ruta-padrevo.pdf" />
+
+        <display:column media="xml csv excel pdf"
+            titleKey="taxonomias.taxonomia.param.ruta.padrevo.id"
+            autolink="true" paramId="id"
+            property="id">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="id" paramId="id"
+            sortProperty="id" sortable="true"
+            titleKey="taxonomias.taxonomia.param.ruta.padrevo.id"
+            >
+            <div class="id">
+		
+ <c:set var="value" value="${row.id}"/>
+ <input type="text" name="id" value="${value}" onmouseover="hints.show('taxonomias.taxonomia.consulta.padre.param.id.title')" onmouseout="hints.hide()"  id="rutaPadrevoId${row_rowNum}"/>
+            </div>
+       </display:column>
+   
+
+        <display:column media="xml csv excel pdf"
+            titleKey="taxonomias.taxonomia.param.ruta.padrevo.valor.tax"
+            autolink="true" paramId="valorTax"
+            property="valorTax">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="valorTax" paramId="valorTax"
+            sortProperty="valorTax" sortable="true"
+            titleKey="taxonomias.taxonomia.param.ruta.padrevo.valor.tax"
+            property="valorTax" />
+   
+        <display:column media="html">
+            <c:set var="link">'<html:rewrite action="/Taxonomias/TaxonomiaConsultaPadre"/>?taxonesvo='+getDiv('rutaPadrevoTaxonesvo${row_rowNum}').value+'&rutaPadrevo='+getDiv('rutaPadrevoRutaPadrevo${row_rowNum}').value+'&idioma='+getDiv('rutaPadrevoIdioma${row_rowNum}').value+'&nomTaxonomia='+getDiv('rutaPadrevoNomTaxonomia${row_rowNum}').value+'&id='+getDiv('rutaPadrevoId${row_rowNum}').value+'&vocabName='+getDiv('rutaPadrevoVocabName${row_rowNum}').value</c:set>
+            <nobr><html:link href="javascript:document.location=${link};" styleClass="buttonLink"><bean:message key="taxonomias.taxonomia.consulta.padre"/></html:link></nobr>
+        </display:column>
+    </display:table>
+</div>
+

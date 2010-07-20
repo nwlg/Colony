@@ -1,0 +1,33 @@
+<div id="categoriasNoticias" class="table">
+    <form id="categoriasNoticias" name="" action="" method="post" enctype="multipart/form-data">
+    <display:table name="${form.categoriasNoticias}" uid="row"
+        export="false" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:column media="html">
+            <input type="checkbox" name="idCategoriaNoticiaRowSelectionAsArray" value="${row.idCategoriaNoticia}" title='<bean:message key="select.deselect.this.row"/>'/>
+        </display:column>
+
+
+        <display:column media="html"
+            headerClass="idCategoriaNoticia" paramId="idCategoriaNoticia"
+            sortProperty="idCategoriaNoticia" sortable="true"
+            titleKey="categorias.noticias.cu.categorias.noticias.param.categorias.noticias.id.categoria.noticia"
+            >
+            <div class="idCategoriaNoticia">
+		
+ <c:set var="value" value="${row.idCategoriaNoticia}"/>
+ <html:link action="/CategoriasNoticiasCU/CategoriasNoticiasModificar?idCategoriaNoticia=${row.idCategoriaNoticia}" onmouseover="hints.show('categorias.noticias.cu.categorias.noticias.modificar.param.id.categoria.noticia.title')" onmouseout="hints.hide()">${row.idCategoriaNoticia}</html:link>
+ <input type="hidden" name="idCategoriaNoticia" value="${value}" id="categoriasNoticiasIdCategoriaNoticia${row_rowNum}"/>
+            </div>
+       </display:column>
+   
+    </display:table>
+    <c:if test="${!empty form.categoriasNoticias}">
+            <input type="submit" value="<bean:message key="categorias.noticias.cu.categorias.noticias.eliminar"/>" onclick="this.form.name='categoriasNoticiasCUCategoriasNoticiasEliminarForm';this.form.action='<html:rewrite action="/CategoriasNoticiasCU/CategoriasNoticiasEliminar"/>';" onmouseover="hints.show('Eliminar')" onmouseout="hints.hide()"/>
+            <input type="button" value="<bean:message key="select.deselect.all"/>" onclick="var boxes=this.form.elements['idCategoriaNoticiaRowSelectionAsArray'];var setChecked=(boxes.length==0)?false:!boxes[0].checked;for(var i=0;i<boxes.length;i++)boxes[i].checked=setChecked;"/>
+    </c:if>
+    </form>
+</div>
+

@@ -1,0 +1,8 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="gruposDeleted" value="${form.gruposDeleted}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="descripcionBaja" value="${form.descripcionBaja}"/>
+    </c:catch>
+</div>

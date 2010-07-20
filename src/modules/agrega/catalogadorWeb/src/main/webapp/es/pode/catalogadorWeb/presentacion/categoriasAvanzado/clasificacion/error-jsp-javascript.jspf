@@ -1,0 +1,20 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'Salida':'<formatting:escape language="javascript"><bean:message key="clasificacion.error.jsp.salida.title"/></formatting:escape>',
+                'Salida_no':'<formatting:escape language="javascript"><bean:message key="clasificacion.error.jsp.salida.title.notallowed"/></formatting:escape>',
+                'Salida_reset':'<formatting:escape language="javascript"><bean:message key="clasificacion.error.jsp.salida.title.reset"/></formatting:escape>',
+                'Salida_noreset':'<formatting:escape language="javascript"><bean:message key="clasificacion.error.jsp.salida.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

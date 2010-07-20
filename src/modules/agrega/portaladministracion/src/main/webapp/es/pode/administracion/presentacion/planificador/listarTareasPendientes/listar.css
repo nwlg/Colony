@@ -1,0 +1,37 @@
+#listarTareasPendientes.action {}
+#listarTareasPendientes.action #form_submit {}
+
+
+#crearTarea.action {}
+#crearTarea.action #form_submit {}
+
+
+#listarTareasEnEjecucion.action {}
+#listarTareasEnEjecucion.action #form_submit {}
+
+
+#listarTareasEjecutadas.action {}
+#listarTareasEjecutadas.action #form_submit {}
+
+
+#tareasPendientes.table {}
+#tareasPendientes.table th {}
+#tareasPendientes.table td div {}
+
+#tareasPendientes.table th.trabajo {}
+#tareasPendientes.table td div.trabajo {}
+
+#tareasPendientes.table th.grupoTrabajo {}
+#tareasPendientes.table td div.grupoTrabajo {}
+
+#tareasPendientes.table th.trigger {}
+#tareasPendientes.table td div.trigger {}
+
+#tareasPendientes.table th.grupoTrigger {}
+#tareasPendientes.table td div.grupoTrigger {}
+
+#tareasPendientes.table th.fechaInicio {}
+#tareasPendientes.table td div.fechaInicio {}
+
+
+

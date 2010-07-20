@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN" "http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+	<mapping wildcard="true" map-id="DEF_MAPPING_COMENTARIO_COMENTARIOVO">
+		<class-a>es.pode.valoracion.negocio.dominio.ComentarioImpl</class-a>
+		<class-b>es.pode.valoracion.negocio.servicios.ComentarioVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_COMENTARIOVO_COMENTARIO">
+		<class-a>es.pode.valoracion.negocio.servicios.ComentarioVO</class-a>
+		<class-b>es.pode.valoracion.negocio.dominio.ComentarioImpl</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_VALORACION_VALORACIONVO">
+		<class-a>es.pode.valoracion.negocio.dominio.ValoracionImpl</class-a>
+		<class-b>es.pode.valoracion.negocio.servicios.ValoracionVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_VALORACIONVO_VALORACION">
+		<class-a>es.pode.valoracion.negocio.servicios.ValoracionVO</class-a>
+		<class-b>es.pode.valoracion.negocio.dominio.ValoracionImpl</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_VALORACION_VALORACIONIDODEVO">
+		<class-a>es.pode.valoracion.negocio.dominio.ValoracionImpl</class-a>
+		<class-b>es.pode.valoracion.negocio.servicios.auditoria.ValoracionIdODEVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_VALORACIONIDODEVO_VALORACION">
+		<class-a>es.pode.valoracion.negocio.servicios.auditoria.ValoracionIdODEVO</class-a>
+		<class-b>es.pode.valoracion.negocio.dominio.ValoracionImpl</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_TAGGING_TAGGINGVO">
+		<class-a>es.pode.tagging.negocio.dominio.TaggingImpl</class-a>
+		<class-b>es.pode.tagging.negocio.servicios.TaggingVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_TAGGINGVO_TAGGING">
+		<class-a>es.pode.tagging.negocio.servicios.TaggingVO</class-a>
+		<class-b>es.pode.tagging.negocio.dominio.TaggingImpl</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_TAGGING_TAGVO">
+		<class-a>es.pode.tagging.negocio.dominio.TaggingImpl</class-a>
+		<class-b>es.pode.tagging.negocio.servicios.TagVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_TAGVO_TAGGING">
+		<class-a>es.pode.tagging.negocio.servicios.TagVO</class-a>
+		<class-b>es.pode.tagging.negocio.dominio.TaggingImpl</class-b>
+	</mapping>	
+</mappings>

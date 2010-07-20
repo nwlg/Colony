@@ -1,0 +1,23 @@
+<div id="arboles" class="table">
+    <display:table name="${form.arboles}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="catalogador-form-arboles.pdf" />
+
+        <display:column media="xml csv excel pdf"
+            titleKey="catalogador.basico.catalogador.form.param.arboles.id.arbol"
+            autolink="true" paramId="idArbol"
+            property="idArbol">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="idArbol" paramId="idArbol"
+            sortProperty="idArbol" sortable="true"
+            titleKey="catalogador.basico.catalogador.form.param.arboles.id.arbol"
+            property="idArbol" />
+   
+    </display:table>
+</div>
+

@@ -1,0 +1,6 @@
+<contribute>
+${load:template.2.3.1.xml}
+${load:entity.xml}
+<!-- Mas entity -->
+${load:date.xml}
+</contribute>

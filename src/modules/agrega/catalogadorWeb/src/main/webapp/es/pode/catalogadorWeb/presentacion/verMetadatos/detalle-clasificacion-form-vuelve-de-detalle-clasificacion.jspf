@@ -1,0 +1,76 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="vuelveDeDetalleClasificacion" class="action">
+    <h3><bean:message key="ver.metadatos.detalle.clasificacion.form.vuelve.de.detalle.clasificacion"/></h3>
+    <div class="trigger">
+        <html:form styleId="verMetadatosDetalleClasificacionFormVuelveDeDetalleClasificacionForm" action="/VerMetadatos/DetalleClasificacionFormVuelveDeDetalleClasificacion" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="proposito">
+                        <td class="label"><bean:message key="ver.metadatos.detalle.clasificacion.form.vuelve.de.detalle.clasificacion.param.proposito"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.proposito}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.propositoBackingList}">
+                                  <html:select name="form" property="proposito" onmouseover="hints.show('ver.metadatos.detalle.clasificacion.form.vuelve.de.detalle.clasificacion.param.proposito.title')" onmouseout="hints.hide()"  styleId="vuelveDeDetalleClasificacionProposito">
+                                      <html:optionsCollection name="form" property="propositoBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="proposito" onmouseover="hints.show('ver.metadatos.detalle.clasificacion.form.vuelve.de.detalle.clasificacion.param.proposito.title')" onmouseout="hints.hide()"  styleId="vuelveDeDetalleClasificacionProposito"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="source">
+                        <td class="label"><bean:message key="ver.metadatos.detalle.clasificacion.form.vuelve.de.detalle.clasificacion.param.source"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.source}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.sourceBackingList}">
+                                  <html:select name="form" property="source" onmouseover="hints.show('ver.metadatos.detalle.clasificacion.form.vuelve.de.detalle.clasificacion.param.source.title')" onmouseout="hints.hide()"  styleId="vuelveDeDetalleClasificacionSource">
+                                      <html:optionsCollection name="form" property="sourceBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="source" onmouseover="hints.show('ver.metadatos.detalle.clasificacion.form.vuelve.de.detalle.clasificacion.param.source.title')" onmouseout="hints.hide()"  styleId="vuelveDeDetalleClasificacionSource"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="comboIdioma">
+                        <td class="label"><bean:message key="ver.metadatos.detalle.clasificacion.form.vuelve.de.detalle.clasificacion.param.combo.idioma"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.comboIdioma}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.comboIdiomaBackingList}">
+                                  <html:select name="form" property="comboIdioma" onmouseover="hints.show('ver.metadatos.detalle.clasificacion.form.vuelve.de.detalle.clasificacion.param.combo.idioma.title')" onmouseout="hints.hide()"  styleId="vuelveDeDetalleClasificacionComboIdioma">
+                                      <html:optionsCollection name="form" property="comboIdiomaBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="comboIdioma" onmouseover="hints.show('ver.metadatos.detalle.clasificacion.form.vuelve.de.detalle.clasificacion.param.combo.idioma.title')" onmouseout="hints.hide()"  styleId="vuelveDeDetalleClasificacionComboIdioma"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('vuelveDeDetalleClasificacion')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="ver.metadatos.detalle.clasificacion.form.vuelve.de.detalle.clasificacion"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

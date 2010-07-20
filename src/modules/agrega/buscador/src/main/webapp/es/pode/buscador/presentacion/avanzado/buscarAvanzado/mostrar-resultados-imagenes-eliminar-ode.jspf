@@ -1,0 +1,14 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="eliminarODE" class="action">
+    <h3><bean:message key="buscar.avanzado.cu.mostrar.resultados.imagenes.eliminar.ode"/></h3>
+    <div class="trigger">
+        <html:form styleId="buscarAvanzadoCUMostrarResultadosImagenesEliminarODEForm" action="/BuscarAvanzadoCU/MostrarResultadosImagenesEliminarODE" method="post" enctype="multipart/form-data">
+            <%@ include file="/es/pode/buscador/presentacion/avanzado/buscarAvanzado/mostrar-resultados-imagenes-resultadosVO.jspf" %>
+               <html:submit onmouseover="hints.show('eliminarODE')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="buscar.avanzado.cu.mostrar.resultados.imagenes.eliminar.ode"/>
+               </html:submit>	
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

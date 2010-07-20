@@ -1,0 +1,13 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="vuelveDeRelaciones" class="action">
+    <h3><bean:message key="ver.metadatos.relaciones.form.vuelve.de.relaciones"/></h3>
+    <div class="trigger">
+        <form id="verMetadatosRelacionesFormVuelveDeRelacionesForm" action='<html:rewrite action="/VerMetadatos/RelacionesFormVuelveDeRelaciones"/>' method="post">
+               <html:submit onmouseover="hints.show('vuelveDeRelaciones')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="ver.metadatos.relaciones.form.vuelve.de.relaciones"/>
+               </html:submit>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

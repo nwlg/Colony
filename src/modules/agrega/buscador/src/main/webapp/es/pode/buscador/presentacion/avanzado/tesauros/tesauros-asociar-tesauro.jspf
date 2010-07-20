@@ -1,0 +1,94 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="asociarTesauro" class="action">
+    <h3><bean:message key="tesauros.cu.tesauros.asociar.tesauro"/></h3>
+    <div class="trigger">
+        <html:form styleId="tesaurosCUTesaurosAsociarTesauroForm" action="/TesaurosCU/TesaurosAsociarTesauro" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="nomTesauros">
+                        <td class="label"><bean:message key="tesauros.cu.tesauros.asociar.tesauro.param.nom.tesauros"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.nomTesauros}"/>
+                           <input type="text" name="nomTesauros" value="${value}" onmouseover="hints.show('tesauros.cu.tesauros.asociar.tesauro.param.nom.tesauros.title')" onmouseout="hints.hide()"  id="asociarTesauroNomTesauros"/>
+                        </td>
+                    </tr>
+                    <tr class="idioma">
+                        <td class="label"><bean:message key="tesauros.cu.tesauros.asociar.tesauro.param.idioma"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idioma}"/>
+                           <input type="text" name="idioma" value="${value}" onmouseover="hints.show('tesauros.cu.tesauros.asociar.tesauro.param.idioma.title')" onmouseout="hints.hide()"  id="asociarTesauroIdioma"/>
+                        </td>
+                    </tr>
+                    <tr class="idTesauro">
+                        <td class="label"><bean:message key="tesauros.cu.tesauros.asociar.tesauro.param.id.tesauro"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idTesauro}"/>
+                           <input type="text" name="idTesauro" value="${value}" onmouseover="hints.show('tesauros.cu.tesauros.asociar.tesauro.param.id.tesauro.title')" onmouseout="hints.hide()"  id="asociarTesauroIdTesauro"/>
+                        </td>
+                    </tr>
+                    <tr class="taxonesVO">
+                        <td class="label"><bean:message key="tesauros.cu.tesauros.asociar.tesauro.param.taxones.vo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.taxonesVO}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.taxonesVOBackingList}">
+                                  <html:select name="form" property="taxonesVOAsArray" onmouseover="hints.show('tesauros.cu.tesauros.asociar.tesauro.param.taxones.vo.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="asociarTesauroTaxonesVO">
+                                      <html:optionsCollection name="form" property="taxonesVOBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="taxonesVOAsArray" onmouseover="hints.show('tesauros.cu.tesauros.asociar.tesauro.param.taxones.vo.title')" onmouseout="hints.hide()"  styleId="asociarTesauroTaxonesVO"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="rutaPadreVO">
+                        <td class="label"><bean:message key="tesauros.cu.tesauros.asociar.tesauro.param.ruta.padre.vo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.rutaPadreVO}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.rutaPadreVOBackingList}">
+                                  <html:select name="form" property="rutaPadreVOAsArray" onmouseover="hints.show('tesauros.cu.tesauros.asociar.tesauro.param.ruta.padre.vo.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="asociarTesauroRutaPadreVO">
+                                      <html:optionsCollection name="form" property="rutaPadreVOBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="rutaPadreVOAsArray" onmouseover="hints.show('tesauros.cu.tesauros.asociar.tesauro.param.ruta.padre.vo.title')" onmouseout="hints.hide()"  styleId="asociarTesauroRutaPadreVO"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="tipoLayoutBuscador">
+                        <td class="label"><bean:message key="tesauros.cu.tesauros.asociar.tesauro.param.tipo.layout.buscador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipoLayoutBuscador}"/>
+                           <input type="text" name="tipoLayoutBuscador" value="${value}" onmouseover="hints.show('tesauros.cu.tesauros.asociar.tesauro.param.tipo.layout.buscador.title')" onmouseout="hints.hide()"  id="asociarTesauroTipoLayoutBuscador"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('asociarTesauro')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="tesauros.cu.tesauros.asociar.tesauro"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

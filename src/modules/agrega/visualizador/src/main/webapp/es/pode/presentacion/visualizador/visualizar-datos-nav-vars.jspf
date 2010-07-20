@@ -1,0 +1,20 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="contador" value="${form.contador}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="secuencia" value="${form.secuencia}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="usuario" value="${form.usuario}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="identificador" value="${form.identificador}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="datosSalida" value="${form.datosSalida}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="localizacion" value="${form.localizacion}"/>
+    </c:catch>
+</div>

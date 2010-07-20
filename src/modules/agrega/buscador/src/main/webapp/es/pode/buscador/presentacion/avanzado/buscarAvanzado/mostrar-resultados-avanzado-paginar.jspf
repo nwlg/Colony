@@ -1,0 +1,13 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="paginar" class="action">
+    <h3><bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.paginar"/></h3>
+    <div class="trigger">
+        <form id="buscarAvanzadoCUMostrarResultadosAvanzadoPaginarForm" action='<html:rewrite action="/BuscarAvanzadoCU/MostrarResultadosAvanzadoPaginar"/>' method="post">
+               <html:submit onmouseover="hints.show('paginar')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="buscar.avanzado.cu.mostrar.resultados.avanzado.paginar"/>
+               </html:submit>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

@@ -1,0 +1,23 @@
+#buscar.action {}
+#buscar.action #form_submit {}
+
+#buscar.action .idiomaBuscador {}
+#buscar.action .idiomaBuscador .label {}
+#buscar.action .idiomaBuscador .field {}
+
+#selectOrigin.action {}
+#selectOrigin.action #form_submit {}
+
+
+#odes.table {}
+#odes.table th {}
+#odes.table td div {}
+
+#odes.table th.nombre {}
+#odes.table td div.nombre {}
+
+#odes.table th.resultado {}
+#odes.table td div.resultado {}
+
+
+

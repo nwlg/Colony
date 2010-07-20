@@ -1,0 +1,51 @@
+#aceptar.action {}
+#aceptar.action #form_submit {}
+
+#aceptar.action .id {}
+#aceptar.action .id .label {}
+#aceptar.action .id .field {}
+#aceptar.action .tipoEmpaquetador {}
+#aceptar.action .tipoEmpaquetador .label {}
+#aceptar.action .tipoEmpaquetador .field {}
+#aceptar.action .idiomaBusqueda {}
+#aceptar.action .idiomaBusqueda .label {}
+#aceptar.action .idiomaBusqueda .field {}
+#aceptar.action .idioma {}
+#aceptar.action .idioma .label {}
+#aceptar.action .idioma .field {}
+#aceptar.action .repitaClave {}
+#aceptar.action .repitaClave .label {}
+#aceptar.action .repitaClave .field {}
+#aceptar.action .clave {}
+#aceptar.action .clave .label {}
+#aceptar.action .clave .field {}
+#aceptar.action .email {}
+#aceptar.action .email .label {}
+#aceptar.action .email .field {}
+#aceptar.action .NIF {}
+#aceptar.action .NIF .label {}
+#aceptar.action .NIF .field {}
+#aceptar.action .apellido2 {}
+#aceptar.action .apellido2 .label {}
+#aceptar.action .apellido2 .field {}
+#aceptar.action .apellido1 {}
+#aceptar.action .apellido1 .label {}
+#aceptar.action .apellido1 .field {}
+#aceptar.action .nombre {}
+#aceptar.action .nombre .label {}
+#aceptar.action .nombre .field {}
+#aceptar.action .tipoCatalogador {}
+#aceptar.action .tipoCatalogador .label {}
+#aceptar.action .tipoCatalogador .field {}
+#aceptar.action .cuota {}
+#aceptar.action .cuota .label {}
+#aceptar.action .cuota .field {}
+#aceptar.action .openIdUrl {}
+#aceptar.action .openIdUrl .label {}
+#aceptar.action .openIdUrl .field {}
+
+#cancelar.action {}
+#cancelar.action #form_submit {}
+
+
+

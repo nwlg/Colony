@@ -1,0 +1,85 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="modificar.nodo.formulario.modificar.nodo.aceptar"/></h3>
+    <div class="trigger">
+        <html:form styleId="modificarNodoFormularioModificarNodoAceptarForm" action="/ModificarNodo/FormularioModificarNodoAceptar" method="post" enctype="multipart/form-data" onsubmit="return validateFormularioModificarNodoAceptarForm(this);">
+            <table>
+                <tbody>
+                    <tr class="id">
+                        <td class="label"><bean:message key="modificar.nodo.formulario.modificar.nodo.aceptar.param.id"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.id}"/>
+                           <input type="text" name="id" value="${value}" onmouseover="hints.show('modificar.nodo.formulario.modificar.nodo.aceptar.param.id.title')" onmouseout="hints.hide()"  id="aceptarId"/>
+                        </td>
+                    </tr>
+                    <tr class="nodo">
+                        <td class="label"><bean:message key="modificar.nodo.formulario.modificar.nodo.aceptar.param.nodo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.nodo}"/>
+                           <input type="text" name="nodo" value="${value}" onmouseover="hints.show('modificar.nodo.formulario.modificar.nodo.aceptar.param.nodo.title')" onmouseout="hints.hide()"  id="aceptarNodo"/>
+                        </td>
+                    </tr>
+                    <tr class="url">
+                        <td class="label"><bean:message key="modificar.nodo.formulario.modificar.nodo.aceptar.param.url"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.url}"/>
+                           <input type="text" name="url" value="${value}" onmouseover="hints.show('modificar.nodo.formulario.modificar.nodo.aceptar.param.url.title')" onmouseout="hints.hide()"  id="aceptarUrl"/>
+                        </td>
+                    </tr>
+                    <tr class="puerto">
+                        <td class="label"><bean:message key="modificar.nodo.formulario.modificar.nodo.aceptar.param.puerto"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.puerto}"/>
+                           <input type="text" name="puerto" value="${value}" onmouseover="hints.show('modificar.nodo.formulario.modificar.nodo.aceptar.param.puerto.title')" onmouseout="hints.hide()"  id="aceptarPuerto"/>
+                        </td>
+                    </tr>
+                    <tr class="ccaa">
+                        <td class="label"><bean:message key="modificar.nodo.formulario.modificar.nodo.aceptar.param.ccaa"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.ccaa}"/>
+                           <input type="text" name="ccaa" value="${value}" onmouseover="hints.show('modificar.nodo.formulario.modificar.nodo.aceptar.param.ccaa.title')" onmouseout="hints.hide()"  id="aceptarCcaa"/>
+                        </td>
+                    </tr>
+                    <tr class="urlWS">
+                        <td class="label"><bean:message key="modificar.nodo.formulario.modificar.nodo.aceptar.param.url.ws"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.urlWS}"/>
+                           <input type="text" name="urlWS" value="${value}" onmouseover="hints.show('modificar.nodo.formulario.modificar.nodo.aceptar.param.url.ws.title')" onmouseout="hints.hide()"  id="aceptarUrlWS"/>
+                        </td>
+                    </tr>
+                    <tr class="idNodo">
+                        <td class="label"><bean:message key="modificar.nodo.formulario.modificar.nodo.aceptar.param.id.nodo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idNodo}"/>
+                           <input type="text" name="idNodo" value="${value}" onmouseover="hints.show('modificar.nodo.formulario.modificar.nodo.aceptar.param.id.nodo.title')" onmouseout="hints.hide()"  id="aceptarIdNodo"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="modificar.nodo.formulario.modificar.nodo.aceptar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

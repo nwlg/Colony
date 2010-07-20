@@ -1,0 +1,32 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="descripciones" value="${form.descripciones}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idiomas" value="${form.idiomas}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="comboIdioma" value="${form.comboIdioma}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="ambitos" value="${form.ambitos}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="palabrasClave" value="${form.palabrasClave}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="identificadores" value="${form.identificadores}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="estructura" value="${form.estructura}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="nivelAgregacion" value="${form.nivelAgregacion}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="titulos" value="${form.titulos}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="identificadorOde" value="${form.identificadorOde}"/>
+    </c:catch>
+</div>

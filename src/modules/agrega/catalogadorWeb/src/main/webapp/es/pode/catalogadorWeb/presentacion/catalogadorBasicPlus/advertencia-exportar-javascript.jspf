@@ -1,0 +1,30 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'catalogador.basic.plus.advertencia.exportar.submit.param.accion.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basic.plus.advertencia.exportar.submit.param.accion.title"/></formatting:escape>',
+                'catalogador.basic.plus.advertencia.exportar.submit.param.arboles.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basic.plus.advertencia.exportar.submit.param.arboles.title"/></formatting:escape>',
+                'catalogador.basic.plus.advertencia.exportar.submit.param.contexto.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basic.plus.advertencia.exportar.submit.param.contexto.title"/></formatting:escape>',
+                'catalogador.basic.plus.advertencia.exportar.submit.param.descripcion.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basic.plus.advertencia.exportar.submit.param.descripcion.title"/></formatting:escape>',
+                'catalogador.basic.plus.advertencia.exportar.submit.param.edad.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basic.plus.advertencia.exportar.submit.param.edad.title"/></formatting:escape>',
+                'catalogador.basic.plus.advertencia.exportar.submit.param.idioma.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basic.plus.advertencia.exportar.submit.param.idioma.title"/></formatting:escape>',
+                'catalogador.basic.plus.advertencia.exportar.submit.param.idioma.destinatario.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basic.plus.advertencia.exportar.submit.param.idioma.destinatario.title"/></formatting:escape>',
+                'catalogador.basic.plus.advertencia.exportar.submit.param.proceso.cognitivo.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basic.plus.advertencia.exportar.submit.param.proceso.cognitivo.title"/></formatting:escape>',
+                'catalogador.basic.plus.advertencia.exportar.submit.param.tipo.recurso.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basic.plus.advertencia.exportar.submit.param.tipo.recurso.title"/></formatting:escape>',
+                'catalogador.basic.plus.advertencia.exportar.submit.param.titulo.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basic.plus.advertencia.exportar.submit.param.titulo.title"/></formatting:escape>',
+                'submit':'<formatting:escape language="javascript"><bean:message key="catalogador.basic.plus.advertencia.exportar.submit.title"/></formatting:escape>',
+                'submit_no':'<formatting:escape language="javascript"><bean:message key="catalogador.basic.plus.advertencia.exportar.submit.title.notallowed"/></formatting:escape>',
+                'submit_reset':'<formatting:escape language="javascript"><bean:message key="catalogador.basic.plus.advertencia.exportar.submit.title.reset"/></formatting:escape>',
+                'submit_noreset':'<formatting:escape language="javascript"><bean:message key="catalogador.basic.plus.advertencia.exportar.submit.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

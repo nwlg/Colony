@@ -1,0 +1,330 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="accionSubmit" class="action">
+    <h3><bean:message key="tecnica.tecnica.form.accion.submit"/></h3>
+    <div class="trigger">
+        <html:form styleId="tecnicaTecnicaFormAccionSubmitForm" action="/Tecnica/TecnicaFormAccionSubmit" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="accion">
+                        <td class="label"><bean:message key="tecnica.tecnica.form.accion.submit.param.accion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.accion}"/>
+                           <input type="text" name="accion" value="${value}" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.accion.title')" onmouseout="hints.hide()"  id="accionSubmitAccion"/>
+                        </td>
+                    </tr>
+                    <tr class="identificadorOde">
+                        <td class="label"><bean:message key="tecnica.tecnica.form.accion.submit.param.identificador.ode"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.identificadorOde}"/>
+                           <input type="text" name="identificadorOde" value="${value}" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.identificador.ode.title')" onmouseout="hints.hide()"  id="accionSubmitIdentificadorOde"/>
+                        </td>
+                    </tr>
+                    <tr class="formatos">
+                        <td class="label"><bean:message key="tecnica.tecnica.form.accion.submit.param.formatos"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.formatos}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.formatosBackingList}">
+                                  <html:select name="form" property="formatosAsArray" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.formatos.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="accionSubmitFormatos">
+                                      <html:optionsCollection name="form" property="formatosBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="formatosAsArray" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.formatos.title')" onmouseout="hints.hide()"  styleId="accionSubmitFormatos"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="comboFormato">
+                        <td class="label"><bean:message key="tecnica.tecnica.form.accion.submit.param.combo.formato"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.comboFormato}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.comboFormatoBackingList}">
+                                  <html:select name="form" property="comboFormato" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.combo.formato.title')" onmouseout="hints.hide()"  styleId="accionSubmitComboFormato">
+                                      <html:optionsCollection name="form" property="comboFormatoBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="comboFormato" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.combo.formato.title')" onmouseout="hints.hide()"  styleId="accionSubmitComboFormato"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="tamanio">
+                        <td class="label"><bean:message key="tecnica.tecnica.form.accion.submit.param.tamanio"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tamanio}"/>
+                           <input type="text" name="tamanio" value="${value}" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.tamanio.title')" onmouseout="hints.hide()"  id="accionSubmitTamanio"/>
+                        </td>
+                    </tr>
+                    <tr class="localizacion">
+                        <td class="label"><bean:message key="tecnica.tecnica.form.accion.submit.param.localizacion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.localizacion}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.localizacionBackingList}">
+                                  <html:select name="form" property="localizacionAsArray" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.localizacion.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="accionSubmitLocalizacion">
+                                      <html:optionsCollection name="form" property="localizacionBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="localizacionAsArray" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.localizacion.title')" onmouseout="hints.hide()"  styleId="accionSubmitLocalizacion"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="requerimiento">
+                        <td class="label"><bean:message key="tecnica.tecnica.form.accion.submit.param.requerimiento"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.requerimiento}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.requerimientoBackingList}">
+                                  <html:select name="form" property="requerimientoAsArray" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.requerimiento.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="accionSubmitRequerimiento">
+                                      <html:optionsCollection name="form" property="requerimientoBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="requerimientoAsArray" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.requerimiento.title')" onmouseout="hints.hide()"  styleId="accionSubmitRequerimiento"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="agregadorOR">
+                        <td class="label"><bean:message key="tecnica.tecnica.form.accion.submit.param.agregador.or"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.agregadorOR}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.agregadorORBackingList}">
+                                  <html:select name="form" property="agregadorORAsArray" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.agregador.or.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="accionSubmitAgregadorOR">
+                                      <html:optionsCollection name="form" property="agregadorORBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="agregadorORAsArray" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.agregador.or.title')" onmouseout="hints.hide()"  styleId="accionSubmitAgregadorOR"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="comboTipo">
+                        <td class="label"><bean:message key="tecnica.tecnica.form.accion.submit.param.combo.tipo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.comboTipo}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.comboTipoBackingList}">
+                                  <html:select name="form" property="comboTipo" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.combo.tipo.title')" onmouseout="hints.hide()"  styleId="accionSubmitComboTipo">
+                                      <html:optionsCollection name="form" property="comboTipoBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="comboTipo" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.combo.tipo.title')" onmouseout="hints.hide()"  styleId="accionSubmitComboTipo"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="comboNombre">
+                        <td class="label"><bean:message key="tecnica.tecnica.form.accion.submit.param.combo.nombre"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.comboNombre}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.comboNombreBackingList}">
+                                  <html:select name="form" property="comboNombre" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.combo.nombre.title')" onmouseout="hints.hide()"  styleId="accionSubmitComboNombre">
+                                      <html:optionsCollection name="form" property="comboNombreBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="comboNombre" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.combo.nombre.title')" onmouseout="hints.hide()"  styleId="accionSubmitComboNombre"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="descripcionInstalacion">
+                        <td class="label"><bean:message key="tecnica.tecnica.form.accion.submit.param.descripcion.instalacion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.descripcionInstalacion}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.descripcionInstalacionBackingList}">
+                                  <html:select name="form" property="descripcionInstalacionAsArray" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.descripcion.instalacion.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="accionSubmitDescripcionInstalacion">
+                                      <html:optionsCollection name="form" property="descripcionInstalacionBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="descripcionInstalacionAsArray" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.descripcion.instalacion.title')" onmouseout="hints.hide()"  styleId="accionSubmitDescripcionInstalacion"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="comboIdioma">
+                        <td class="label"><bean:message key="tecnica.tecnica.form.accion.submit.param.combo.idioma"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.comboIdioma}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.comboIdiomaBackingList}">
+                                  <html:select name="form" property="comboIdioma" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.combo.idioma.title')" onmouseout="hints.hide()"  styleId="accionSubmitComboIdioma">
+                                      <html:optionsCollection name="form" property="comboIdiomaBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="comboIdioma" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.combo.idioma.title')" onmouseout="hints.hide()"  styleId="accionSubmitComboIdioma"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="descripcionRequerimientos">
+                        <td class="label"><bean:message key="tecnica.tecnica.form.accion.submit.param.descripcion.requerimientos"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.descripcionRequerimientos}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.descripcionRequerimientosBackingList}">
+                                  <html:select name="form" property="descripcionRequerimientosAsArray" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.descripcion.requerimientos.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="accionSubmitDescripcionRequerimientos">
+                                      <html:optionsCollection name="form" property="descripcionRequerimientosBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="descripcionRequerimientosAsArray" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.descripcion.requerimientos.title')" onmouseout="hints.hide()"  styleId="accionSubmitDescripcionRequerimientos"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="descripcionDuracion">
+                        <td class="label"><bean:message key="tecnica.tecnica.form.accion.submit.param.descripcion.duracion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.descripcionDuracion}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.descripcionDuracionBackingList}">
+                                  <html:select name="form" property="descripcionDuracionAsArray" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.descripcion.duracion.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="accionSubmitDescripcionDuracion">
+                                      <html:optionsCollection name="form" property="descripcionDuracionBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="descripcionDuracionAsArray" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.descripcion.duracion.title')" onmouseout="hints.hide()"  styleId="accionSubmitDescripcionDuracion"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="duracion">
+                        <td class="label"><bean:message key="tecnica.tecnica.form.accion.submit.param.duracion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.duracion}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.duracionBackingList}">
+                                  <html:select name="form" property="duracionAsArray" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.duracion.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="accionSubmitDuracion">
+                                      <html:optionsCollection name="form" property="duracionBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="duracionAsArray" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.duracion.title')" onmouseout="hints.hide()"  styleId="accionSubmitDuracion"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="anyo">
+                        <td class="label"><bean:message key="tecnica.tecnica.form.accion.submit.param.anyo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.anyo}"/>
+                           <input type="text" name="anyo" value="${value}" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.anyo.title')" onmouseout="hints.hide()"  id="accionSubmitAnyo"/>
+                        </td>
+                    </tr>
+                    <tr class="mes">
+                        <td class="label"><bean:message key="tecnica.tecnica.form.accion.submit.param.mes"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.mes}"/>
+                           <input type="text" name="mes" value="${value}" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.mes.title')" onmouseout="hints.hide()"  id="accionSubmitMes"/>
+                        </td>
+                    </tr>
+                    <tr class="dia">
+                        <td class="label"><bean:message key="tecnica.tecnica.form.accion.submit.param.dia"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.dia}"/>
+                           <input type="text" name="dia" value="${value}" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.dia.title')" onmouseout="hints.hide()"  id="accionSubmitDia"/>
+                        </td>
+                    </tr>
+                    <tr class="hora">
+                        <td class="label"><bean:message key="tecnica.tecnica.form.accion.submit.param.hora"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.hora}"/>
+                           <input type="text" name="hora" value="${value}" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.hora.title')" onmouseout="hints.hide()"  id="accionSubmitHora"/>
+                        </td>
+                    </tr>
+                    <tr class="minutos">
+                        <td class="label"><bean:message key="tecnica.tecnica.form.accion.submit.param.minutos"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.minutos}"/>
+                           <input type="text" name="minutos" value="${value}" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.minutos.title')" onmouseout="hints.hide()"  id="accionSubmitMinutos"/>
+                        </td>
+                    </tr>
+                    <tr class="segundosP1">
+                        <td class="label"><bean:message key="tecnica.tecnica.form.accion.submit.param.segundos.p1"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.segundosP1}"/>
+                           <input type="text" name="segundosP1" value="${value}" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.segundos.p1.title')" onmouseout="hints.hide()"  id="accionSubmitSegundosP1"/>
+                        </td>
+                    </tr>
+                    <tr class="segundosP2">
+                        <td class="label"><bean:message key="tecnica.tecnica.form.accion.submit.param.segundos.p2"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.segundosP2}"/>
+                           <input type="text" name="segundosP2" value="${value}" onmouseover="hints.show('tecnica.tecnica.form.accion.submit.param.segundos.p2.title')" onmouseout="hints.hide()"  id="accionSubmitSegundosP2"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR,ROLE_CATALOGADOR,ROLE_PUBLICADOR,ROLE_DOCENTE">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('accionSubmit')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="tecnica.tecnica.form.accion.submit"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

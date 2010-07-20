@@ -1,0 +1,32 @@
+<div id="resultados" class="table">
+    <form id="resultados" name="" action="" method="post" enctype="multipart/form-data">
+    <display:table name="${form.resultados}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="resultados-busqueda-resultados.pdf" />
+        <display:column media="html">
+            <input type="checkbox" name="localizadorODERowSelectionAsArray" value="${row.localizadorODE}" title='<bean:message key="select.deselect.this.row"/>'/>
+        </display:column>
+
+        <display:column media="xml csv excel pdf"
+            titleKey="resultados.buscar.objeto.resultados.busqueda.param.resultados.titulo"
+            autolink="true" paramId="titulo"
+            property="titulo">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="titulo" paramId="titulo"
+            sortProperty="titulo" sortable="true"
+            titleKey="resultados.buscar.objeto.resultados.busqueda.param.resultados.titulo"
+            property="titulo" />
+   
+    </display:table>
+    <c:if test="${!empty form.resultados}">
+            <input type="submit" value="<bean:message key="resultados.buscar.objeto.resultados.busqueda.submit"/>" onclick="this.form.name='resultadosBuscarObjetoResultadosBusquedaSubmitForm';this.form.action='<html:rewrite action="/ResultadosBuscarObjeto/ResultadosBusquedaSubmit"/>';" onmouseover="hints.show('submit')" onmouseout="hints.hide()"/>
+            <input type="button" value="<bean:message key="select.deselect.all"/>" onclick="var boxes=this.form.elements['localizadorODERowSelectionAsArray'];var setChecked=(boxes.length==0)?false:!boxes[0].checked;for(var i=0;i<boxes.length;i++)boxes[i].checked=setChecked;"/>
+    </c:if>
+    </form>
+</div>
+

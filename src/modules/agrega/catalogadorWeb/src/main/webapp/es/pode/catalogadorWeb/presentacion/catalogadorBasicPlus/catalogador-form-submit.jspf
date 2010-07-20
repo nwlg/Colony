@@ -1,0 +1,96 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="submit" class="action">
+    <h3><bean:message key="catalogador.basic.plus.catalogador.form.submit"/></h3>
+    <div class="trigger">
+        <html:form styleId="catalogadorBasicPlusCatalogadorFormSubmitForm" action="/CatalogadorBasicPlus/CatalogadorFormSubmit" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="idArbol">
+                        <td class="label"><bean:message key="catalogador.basic.plus.catalogador.form.submit.param.id.arbol"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idArbol}"/>
+                           <input type="text" name="idArbol" value="${value}" onmouseover="hints.show('catalogador.basic.plus.catalogador.form.submit.param.id.arbol.title')" onmouseout="hints.hide()"  id="submitIdArbol"/>
+                        </td>
+                    </tr>
+                    <tr class="arboles">
+                        <td class="label"><bean:message key="catalogador.basic.plus.catalogador.form.submit.param.arboles"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.arboles}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.arbolesBackingList}">
+                                  <html:select name="form" property="arbolesAsArray" onmouseover="hints.show('catalogador.basic.plus.catalogador.form.submit.param.arboles.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="submitArboles">
+                                      <html:optionsCollection name="form" property="arbolesBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="arbolesAsArray" onmouseover="hints.show('catalogador.basic.plus.catalogador.form.submit.param.arboles.title')" onmouseout="hints.hide()"  styleId="submitArboles"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="idiomaDestinatario">
+                        <td class="label"><bean:message key="catalogador.basic.plus.catalogador.form.submit.param.idioma.destinatario"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idiomaDestinatario}"/>
+                           <input type="text" name="idiomaDestinatario" value="${value}" onmouseover="hints.show('catalogador.basic.plus.catalogador.form.submit.param.idioma.destinatario.title')" onmouseout="hints.hide()"  id="submitIdiomaDestinatario"/>
+                        </td>
+                    </tr>
+                    <tr class="tipoRecurso">
+                        <td class="label"><bean:message key="catalogador.basic.plus.catalogador.form.submit.param.tipo.recurso"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipoRecurso}"/>
+                           <input type="text" name="tipoRecurso" value="${value}" onmouseover="hints.show('catalogador.basic.plus.catalogador.form.submit.param.tipo.recurso.title')" onmouseout="hints.hide()"  id="submitTipoRecurso"/>
+                        </td>
+                    </tr>
+                    <tr class="descripcion">
+                        <td class="label"><bean:message key="catalogador.basic.plus.catalogador.form.submit.param.descripcion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.descripcion}"/>
+                           <input type="text" name="descripcion" value="${value}" onmouseover="hints.show('catalogador.basic.plus.catalogador.form.submit.param.descripcion.title')" onmouseout="hints.hide()"  id="submitDescripcion"/>
+                        </td>
+                    </tr>
+                    <tr class="idioma">
+                        <td class="label"><bean:message key="catalogador.basic.plus.catalogador.form.submit.param.idioma"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idioma}"/>
+                           <input type="text" name="idioma" value="${value}" onmouseover="hints.show('catalogador.basic.plus.catalogador.form.submit.param.idioma.title')" onmouseout="hints.hide()"  id="submitIdioma"/>
+                        </td>
+                    </tr>
+                    <tr class="titulo">
+                        <td class="label"><bean:message key="catalogador.basic.plus.catalogador.form.submit.param.titulo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.titulo}"/>
+                           <input type="text" name="titulo" value="${value}" onmouseover="hints.show('catalogador.basic.plus.catalogador.form.submit.param.titulo.title')" onmouseout="hints.hide()"  id="submitTitulo"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR,ROLE_CATALOGADOR,ROLE_DOCENTE,ROLE_PUBLICADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Submit')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="catalogador.basic.plus.catalogador.form.submit"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

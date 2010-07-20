@@ -1,0 +1,27 @@
+#aceptar.action {}
+#aceptar.action #form_submit {}
+
+#aceptar.action .idioma {}
+#aceptar.action .idioma .label {}
+#aceptar.action .idioma .field {}
+#aceptar.action .busquedaSimpleAvanzada {}
+#aceptar.action .busquedaSimpleAvanzada .label {}
+#aceptar.action .busquedaSimpleAvanzada .field {}
+#aceptar.action .numeroResultados {}
+#aceptar.action .numeroResultados .label {}
+#aceptar.action .numeroResultados .field {}
+
+#buscar.action {}
+#buscar.action #form_submit {}
+
+#buscar.action .idiomaBuscador {}
+#buscar.action .idiomaBuscador .label {}
+#buscar.action .idiomaBuscador .field {}
+#buscar.action .tipoBusqueda {}
+#buscar.action .tipoBusqueda .label {}
+#buscar.action .tipoBusqueda .field {}
+#buscar.action .numeroResultados {}
+#buscar.action .numeroResultados .label {}
+#buscar.action .numeroResultados .field {}
+
+

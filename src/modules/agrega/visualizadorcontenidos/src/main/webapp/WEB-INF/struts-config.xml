@@ -1,0 +1,1535 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+    "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+    <!-- display-name merge point -->
+
+    <!-- description merge point -->
+
+    <data-sources>
+        <!-- data-sources merge point -->
+    </data-sources>
+
+    <form-beans>
+        <!-- form-beans merge-point -->
+        <form-bean
+            name="portadaNoticiasCategoriaForm"
+            type="es.pode.visualizador.presentacion.portada.NoticiasCategoriaFormImpl" />
+        <form-bean
+            name="portadaPortadaForm"
+            type="es.pode.visualizador.presentacion.portada.PortadaFormImpl" />
+        <form-bean
+            name="portadaNoticiasVerForm"
+            type="es.pode.visualizador.presentacion.portada.NoticiasVerFormImpl" />
+        <form-bean
+            name="noticiaNoticiaCategoriaForm"
+            type="es.pode.visualizador.presentacion.noticia.NoticiaCategoriaFormImpl" />
+        <form-bean
+            name="noticiaNoticiaForm"
+            type="es.pode.visualizador.presentacion.noticia.NoticiaFormImpl" />
+        <form-bean
+            name="faqsListadoFaqsCategoriaForm"
+            type="es.pode.visualizador.presentacion.faqs.ListadoFaqsCategoriaFormImpl" />
+        <form-bean
+            name="faqsFaqsForm"
+            type="es.pode.visualizador.presentacion.faqs.FaqsFormImpl" />
+        <form-bean
+            name="noticiasNoticiasVerForm"
+            type="es.pode.visualizador.presentacion.noticias.NoticiasVerFormImpl" />
+        <form-bean
+            name="noticiasNoticiasForm"
+            type="es.pode.visualizador.presentacion.noticias.NoticiasFormImpl" />
+        <form-bean
+            name="noticiasNoticiasPorCategoriaForm"
+            type="es.pode.visualizador.presentacion.noticias.NoticiasPorCategoriaFormImpl" />
+        <form-bean
+            name="recuerdoUsuarioRecuerdoUsuarioForm"
+            type="es.pode.visualizador.presentacion.recuerdoUsuario.RecuerdoUsuarioFormImpl" />
+        <form-bean
+            name="recuerdoUsuarioFormularioRecuerdoUsuarioAceptarForm"
+            type="es.pode.visualizador.presentacion.recuerdoUsuario.FormularioRecuerdoUsuarioAceptarFormImpl" />
+        <form-bean
+            name="modificarPerfilModificarPerfilForm"
+            type="es.pode.visualizador.presentacion.modificarPerfil.ModificarPerfilFormImpl" />
+        <form-bean
+            name="modificarPerfilFormularioIniciaAceptarForm"
+            type="es.pode.visualizador.presentacion.modificarPerfil.FormularioIniciaAceptarFormImpl" />
+        <form-bean
+            name="solicitarBajaUsuarioSolicitarBajaUsuarioForm"
+            type="es.pode.visualizador.presentacion.solicitarBajaUsuario.SolicitarBajaUsuarioFormImpl" />
+        <form-bean
+            name="solicitarBajaUsuarioConfirmacionSolicitudBajaAceptarForm"
+            type="es.pode.visualizador.presentacion.solicitarBajaUsuario.ConfirmacionSolicitudBajaAceptarFormImpl" />
+        <form-bean
+            name="agregadorFeedsCUFormularioQueEsEstoVolverForm"
+            type="es.pode.visualizador.presentacion.feeds.agregadorFeeds.FormularioQueEsEstoVolverFormImpl" />
+        <form-bean
+            name="agregadorFeedsCUAgregadorFeedsCUForm"
+            type="es.pode.visualizador.presentacion.feeds.agregadorFeeds.AgregadorFeedsCUFormImpl" />
+        <form-bean
+            name="descargasDescargasDescargaForm"
+            type="es.pode.visualizador.presentacion.descargas.DescargasDescargaFormImpl" />
+        <form-bean
+            name="descargasDescargasDescargaForm"
+            type="es.pode.visualizador.presentacion.descargas.DescargasDescargaFormImpl" />
+        <form-bean
+            name="descargasDescargasForm"
+            type="es.pode.visualizador.presentacion.descargas.DescargasFormImpl" />
+        <form-bean
+            name="agregaSliderAgregaSliderForm"
+            type="es.pode.visualizador.presentacion.agregaSlider.AgregaSliderFormImpl" />
+        <form-bean
+            name="agregaSliderFiltroKeywordsSiguienteForm"
+            type="es.pode.visualizador.presentacion.agregaSlider.FiltroKeywordsSiguienteFormImpl" />
+        <form-bean
+            name="informesInformesForm"
+            type="es.pode.visualizador.presentacion.informes.InformesFormImpl" />
+        <form-bean
+            name="agregaContenidoDinamicoAgregaContenidoDinamicoForm"
+            type="es.pode.visualizador.presentacion.agregaContenidoDinamico.AgregaContenidoDinamicoFormImpl" />
+        <form-bean
+            name="idiomaCUIdiomaCUForm"
+            type="es.pode.visualizador.presentacion.idioma.IdiomaCUFormImpl" />
+    </form-beans>
+
+    <global-exceptions>
+        <!-- global-exceptions merge point -->
+        <exception
+            handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+            type="java.lang.Throwable"
+            key="error.exception.message"
+            path="/error-page.jsp?code=exception&amp;exception=true"
+            scope="request" />
+    </global-exceptions>
+
+    <global-forwards>
+        
+        <forward
+            name="portada"
+            path="/Portada/Portada.do"
+            redirect="false" />
+        <forward
+            name="portada.auth"
+            path="/PortadaAuth/PortadaAuth.do"
+            redirect="false" />
+        <forward
+            name="noticia"
+            path="/Noticia/Noticia.do"
+            redirect="false" />
+        <forward
+            name="faqs"
+            path="/Faqs/Faqs.do"
+            redirect="false" />
+        <forward
+            name="noticias"
+            path="/Noticias/Noticias.do"
+            redirect="false" />
+        <forward
+            name="mapa"
+            path="/Mapa/Mapa.do"
+            redirect="false" />
+        <forward
+            name="contacto"
+            path="/Contacto/Contacto.do"
+            redirect="false" />
+        <forward
+            name="informacion.legal"
+            path="/InformacionLegal/InformacionLegal.do"
+            redirect="false" />
+        <forward
+            name="politica.privacidad"
+            path="/PoliticaPrivacidad/PoliticaPrivacidad.do"
+            redirect="false" />
+        <forward
+            name="solicitar.alta.usuario.cu"
+            path="/SolicitarAltaUsuarioCU/SolicitarAltaUsuarioCU.do"
+            redirect="false" />
+        <forward
+            name="recuerdo.usuario"
+            path="/RecuerdoUsuario/RecuerdoUsuario.do"
+            redirect="false" />
+        <forward
+            name="modificar.perfil"
+            path="/ModificarPerfil/ModificarPerfil.do"
+            redirect="false" />
+        <forward
+            name="solicitar.baja.usuario"
+            path="/SolicitarBajaUsuario/SolicitarBajaUsuario.do"
+            redirect="false" />
+        <forward
+            name="acceso"
+            path="/Acceso/Acceso.do"
+            redirect="false" />
+        <forward
+            name="salir"
+            path="/Salir/Salir.do"
+            redirect="false" />
+        <forward
+            name="acerca.de.agrega"
+            path="/AcercaDeAgrega/AcercaDeAgrega.do"
+            redirect="false" />
+        <forward
+            name="accesibilidad"
+            path="/Accesibilidad/Accesibilidad.do"
+            redirect="false" />
+        <forward
+            name="agregador.feeds.cu"
+            path="/AgregadorFeedsCU/AgregadorFeedsCU.do"
+            redirect="false" />
+        <forward
+            name="listar.feeds.cu"
+            path="/ListarFeedsCU/ListarFeedsCU.do"
+            redirect="false" />
+        <forward
+            name="descargas"
+            path="/Descargas/Descargas.do"
+            redirect="false" />
+        <forward
+            name="agrega.slider"
+            path="/AgregaSlider/AgregaSlider.do"
+            redirect="false" />
+        <forward
+            name="informes"
+            path="/Informes/Informes.do"
+            redirect="false" />
+        <forward
+            name="conexion.flash"
+            path="/ConexionFlash/ConexionFlash.do"
+            redirect="false" />
+        <forward
+            name="contenido.dinamico"
+            path="/ContenidoDinamico/ContenidoDinamico.do"
+            redirect="false" />
+        <forward
+            name="utilidades"
+            path="/Utilidades/Utilidades.do"
+            redirect="false" />
+        <forward
+            name="agrega.contenido.dinamico"
+            path="/AgregaContenidoDinamico/AgregaContenidoDinamico.do"
+            redirect="false" />
+        <forward
+            name="idioma.cu"
+            path="/IdiomaCU/IdiomaCU.do"
+            redirect="false" />
+        <forward
+            name="motor.busqueda.cu"
+            path="/MotorBusquedaCU/MotorBusquedaCU.do"
+            redirect="false" />
+    </global-forwards>
+
+    <action-mappings>
+        <!-- action-mappings merge-point -->
+        <action
+            path="/Portada/NoticiasCategoria"
+            type="es.pode.visualizador.presentacion.portada.NoticiasCategoria"
+            name="portadaNoticiasCategoriaForm"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/portada/noticias.jsp"
+            unknown="false"
+            validate="true">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="portada.noticias.categoria.exception"
+                path="/es/pode/visualizador/presentacion/portada/noticias.jsp"
+                scope="request" />
+            <forward
+                name="noticias"
+                path="/Noticias/Noticias.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/Portada/NoticiasMapa"
+            type="es.pode.visualizador.presentacion.portada.NoticiasMapa"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/portada/noticias.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="portada.noticias.mapa.exception"
+                path="/es/pode/visualizador/presentacion/portada/noticias.jsp"
+                scope="request" />
+            <forward
+                name="mapa"
+                path="/Mapa/Mapa.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/Portada/NoticiasAcercaDeAgrega"
+            type="es.pode.visualizador.presentacion.portada.NoticiasAcercaDeAgrega"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/portada/noticias.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="portada.noticias.acerca.de.agrega.exception"
+                path="/es/pode/visualizador/presentacion/portada/noticias.jsp"
+                scope="request" />
+            <forward
+                name="acerca.de.agrega"
+                path="/AcercaDeAgrega/AcercaDeAgrega.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/Portada/NoticiasInformacionLegal"
+            type="es.pode.visualizador.presentacion.portada.NoticiasInformacionLegal"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/portada/noticias.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="portada.noticias.informacion.legal.exception"
+                path="/es/pode/visualizador/presentacion/portada/noticias.jsp"
+                scope="request" />
+            <forward
+                name="informacion.legal"
+                path="/InformacionLegal/InformacionLegal.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/Portada/NoticiasContacto"
+            type="es.pode.visualizador.presentacion.portada.NoticiasContacto"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/portada/noticias.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="portada.noticias.contacto.exception"
+                path="/es/pode/visualizador/presentacion/portada/noticias.jsp"
+                scope="request" />
+            <forward
+                name="contacto"
+                path="/Contacto/Contacto.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/Portada/NoticiasDescargas"
+            type="es.pode.visualizador.presentacion.portada.NoticiasDescargas"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/portada/noticias.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="portada.noticias.descargas.exception"
+                path="/es/pode/visualizador/presentacion/portada/noticias.jsp"
+                scope="request" />
+            <forward
+                name="descargas"
+                path="/Descargas/Descargas.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/Portada/Portada"
+            type="es.pode.visualizador.presentacion.portada.Portada"
+            name="portadaPortadaForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="noticias"
+                path="/es/pode/visualizador/presentacion/portada/noticias.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/Portada/NoticiasPoliticaPrivacidad"
+            type="es.pode.visualizador.presentacion.portada.NoticiasPoliticaPrivacidad"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/portada/noticias.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="portada.noticias.politica.privacidad.exception"
+                path="/es/pode/visualizador/presentacion/portada/noticias.jsp"
+                scope="request" />
+            <forward
+                name="politica.privacidad"
+                path="/PoliticaPrivacidad/PoliticaPrivacidad.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/Portada/NoticiasAcceso"
+            type="es.pode.visualizador.presentacion.portada.NoticiasAcceso"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/portada/noticias.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="portada.noticias.acceso.exception"
+                path="/es/pode/visualizador/presentacion/portada/noticias.jsp"
+                scope="request" />
+            <forward
+                name="acceso"
+                path="/Acceso/Acceso.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/Portada/NoticiasAccesibilidad"
+            type="es.pode.visualizador.presentacion.portada.NoticiasAccesibilidad"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/portada/noticias.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="portada.noticias.accesibilidad.exception"
+                path="/es/pode/visualizador/presentacion/portada/noticias.jsp"
+                scope="request" />
+            <forward
+                name="accesibilidad"
+                path="/Accesibilidad/Accesibilidad.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/Portada/NoticiasVer"
+            type="es.pode.visualizador.presentacion.portada.NoticiasVer"
+            name="portadaNoticiasVerForm"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/portada/noticias.jsp"
+            unknown="false"
+            validate="true">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="portada.noticias.ver.exception"
+                path="/es/pode/visualizador/presentacion/portada/noticias.jsp"
+                scope="request" />
+            <forward
+                name="ver"
+                path="/Noticia/Noticia.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/visualizador/presentacion/portada/PortadaHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/portada/Portada_help.jsp"/>
+        <action
+            path="/NoticiasHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/portada/noticias_help.jsp"/>
+        <action
+            path="/PortadaAuth/PortadaAuth"
+            type="es.pode.visualizador.presentacion.portada.PortadaAuth"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="portada"
+                path="/Portada/Portada.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/visualizador/presentacion/portada/PortadaAuthHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/portada/Portada-Auth_help.jsp"/>
+        <action
+            path="/Noticia/NoticiaCategoria"
+            type="es.pode.visualizador.presentacion.noticia.NoticiaCategoria"
+            name="noticiaNoticiaCategoriaForm"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/noticia/noticia.jsp"
+            unknown="false"
+            validate="true">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="noticia.noticia.categoria.exception"
+                path="/es/pode/visualizador/presentacion/noticia/noticia.jsp"
+                scope="request" />
+            <forward
+                name="noticias"
+                path="/Noticias/Noticias.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/Noticia/NoticiaAccesibilidad"
+            type="es.pode.visualizador.presentacion.noticia.NoticiaAccesibilidad"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/noticia/noticia.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="noticia.noticia.accesibilidad.exception"
+                path="/es/pode/visualizador/presentacion/noticia/noticia.jsp"
+                scope="request" />
+            <forward
+                name="accesibilidad"
+                path="/Accesibilidad/Accesibilidad.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/Noticia/NoticiaVerMasNoticias"
+            type="es.pode.visualizador.presentacion.noticia.NoticiaVerMasNoticias"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/noticia/noticia.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="noticia.noticia.ver.mas.noticias.exception"
+                path="/es/pode/visualizador/presentacion/noticia/noticia.jsp"
+                scope="request" />
+            <forward
+                name="ver.mas.noticias"
+                path="/Portada/Portada.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/Noticia/Noticia"
+            type="es.pode.visualizador.presentacion.noticia.Noticia"
+            name="noticiaNoticiaForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="noticia"
+                path="/es/pode/visualizador/presentacion/noticia/noticia.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/visualizador/presentacion/noticia/NoticiaHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/noticia/Noticia_help.jsp"/>
+        <action
+            path="/NoticiaHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/noticia/noticia_help.jsp"/>
+        <action
+            path="/Faqs/ListadoFaqsCategoria"
+            type="es.pode.visualizador.presentacion.faqs.ListadoFaqsCategoria"
+            name="faqsListadoFaqsCategoriaForm"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/faqs/listado-faqs.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="faqs.listado.faqs.categoria.exception"
+                path="/es/pode/visualizador/presentacion/faqs/listado-faqs.jsp"
+                scope="request" />
+            <forward
+                name="listado.faqs"
+                path="/es/pode/visualizador/presentacion/faqs/listado-faqs.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/Faqs/ListadoFaqsAccesibilidad"
+            type="es.pode.visualizador.presentacion.faqs.ListadoFaqsAccesibilidad"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/faqs/listado-faqs.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="faqs.listado.faqs.accesibilidad.exception"
+                path="/es/pode/visualizador/presentacion/faqs/listado-faqs.jsp"
+                scope="request" />
+            <forward
+                name="accesibilidad"
+                path="/Accesibilidad/Accesibilidad.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/Faqs/Faqs"
+            type="es.pode.visualizador.presentacion.faqs.Faqs"
+            name="faqsFaqsForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="listado.faqs"
+                path="/es/pode/visualizador/presentacion/faqs/listado-faqs.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/visualizador/presentacion/faqs/FaqsHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/faqs/Faqs_help.jsp"/>
+        <action
+            path="/ListadoFaqsHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/faqs/listado-faqs_help.jsp"/>
+        <action
+            path="/Noticias/NoticiasAccesibilidad"
+            type="es.pode.visualizador.presentacion.noticias.NoticiasAccesibilidad"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/noticias/noticias.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="noticias.noticias.accesibilidad.exception"
+                path="/es/pode/visualizador/presentacion/noticias/noticias.jsp"
+                scope="request" />
+            <forward
+                name="accesibilidad"
+                path="/Accesibilidad/Accesibilidad.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/Noticias/NoticiasVer"
+            type="es.pode.visualizador.presentacion.noticias.NoticiasVer"
+            name="noticiasNoticiasVerForm"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/noticias/noticias.jsp"
+            unknown="false"
+            validate="true">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="noticias.noticias.ver.exception"
+                path="/es/pode/visualizador/presentacion/noticias/noticias.jsp"
+                scope="request" />
+            <forward
+                name="ver"
+                path="/Noticia/Noticia.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/Noticias/Noticias"
+            type="es.pode.visualizador.presentacion.noticias.Noticias"
+            name="noticiasNoticiasForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="noticias"
+                path="/es/pode/visualizador/presentacion/noticias/noticias.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/Noticias/NoticiasPorCategoria"
+            type="es.pode.visualizador.presentacion.noticias.NoticiasPorCategoria"
+            name="noticiasNoticiasPorCategoriaForm"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/noticias/noticias.jsp"
+            unknown="false"
+            validate="true">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="noticias.noticias.por.categoria.exception"
+                path="/es/pode/visualizador/presentacion/noticias/noticias.jsp"
+                scope="request" />
+            <forward
+                name="noticias"
+                path="/es/pode/visualizador/presentacion/noticias/noticias.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/visualizador/presentacion/noticias/NoticiasHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/noticias/Noticias_help.jsp"/>
+        <action
+            path="/NoticiasHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/noticias/noticias_help.jsp"/>
+        <action
+            path="/Mapa/Mapa"
+            type="es.pode.visualizador.presentacion.mapa.Mapa"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="mapa"
+                path="/es/pode/visualizador/presentacion/mapa/mapa.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/visualizador/presentacion/mapa/MapaHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/mapa/Mapa_help.jsp"/>
+        <action
+            path="/MapaHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/mapa/mapa_help.jsp"/>
+        <action
+            path="/Contacto/Contacto"
+            type="es.pode.visualizador.presentacion.contacto.Contacto"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="contacto"
+                path="/es/pode/visualizador/presentacion/contacto/contacto.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/visualizador/presentacion/contacto/ContactoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/contacto/contacto_help.jsp"/>
+        <action
+            path="/Accesibilidad2Help"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/contacto/accesibilidad2_help.jsp"/>
+        <action
+            path="/ContactoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/contacto/contacto_help.jsp"/>
+        <action
+            path="/InformacionLegal/InformacionLegal"
+            type="es.pode.visualizador.presentacion.informacionLegal.InformacionLegal"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="informacion.legal"
+                path="/es/pode/visualizador/presentacion/informacionLegal/informacion-legal.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/visualizador/presentacion/informacionLegal/InformacionLegalHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/informacionLegal/Informacion-Legal_help.jsp"/>
+        <action
+            path="/AcercaDeAgregaHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/informacionLegal/acerca-de-agrega_help.jsp"/>
+        <action
+            path="/InformacionLegalHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/informacionLegal/informacion-legal_help.jsp"/>
+        <action
+            path="/PoliticaPrivacidad/PoliticaPrivacidad"
+            type="es.pode.visualizador.presentacion.politicaPrivacidad.PoliticaPrivacidad"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="politica.privacidad"
+                path="/es/pode/visualizador/presentacion/politicaPrivacidad/politica-privacidad.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/visualizador/presentacion/politicaPrivacidad/PoliticaPrivacidadHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/politicaPrivacidad/Politica-Privacidad_help.jsp"/>
+        <action
+            path="/PoliticaPrivacidadHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/politicaPrivacidad/politica-privacidad_help.jsp"/>
+        <action
+            path="/SolicitarAltaUsuarioCU/FormularioInicialVolver"
+            type="es.pode.visualizador.presentacion.solicitarAltaUsuario.FormularioInicialVolver"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/solicitarAltaUsuario/formulario-inicial.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="solicitar.alta.usuario.cu.formulario.inicial.volver.exception"
+                path="/es/pode/visualizador/presentacion/solicitarAltaUsuario/formulario-inicial.jsp"
+                scope="request" />
+            <forward
+                name="volver"
+                path="/Portada/Portada.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/SolicitarAltaUsuarioCU/SolicitarAltaUsuarioCU"
+            type="es.pode.visualizador.presentacion.solicitarAltaUsuario.SolicitarAltaUsuarioCU"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="formulario.inicial"
+                path="/es/pode/visualizador/presentacion/solicitarAltaUsuario/formulario-inicial.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/visualizador/presentacion/solicitarAltaUsuario/SolicitarAltaUsuarioCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/solicitarAltaUsuario/Solicitar-Alta-Usuario-CU_help.jsp"/>
+        <action
+            path="/FormularioInicialHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/solicitarAltaUsuario/formulario-inicial_help.jsp"/>
+        <action
+            path="/RecuerdoUsuario/FormularioRecuerdoUsuarioCancelar"
+            type="es.pode.visualizador.presentacion.recuerdoUsuario.FormularioRecuerdoUsuarioCancelar"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/recuerdoUsuario/formulario-recuerdo-usuario.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="recuerdo.usuario.formulario.recuerdo.usuario.cancelar.exception"
+                path="/es/pode/visualizador/presentacion/recuerdoUsuario/formulario-recuerdo-usuario.jsp"
+                scope="request" />
+            <forward
+                name="cancelar"
+                path="/Portada/Portada.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/RecuerdoUsuario/ConfirmacionEnvioCorreoAceptar"
+            type="es.pode.visualizador.presentacion.recuerdoUsuario.ConfirmacionEnvioCorreoAceptar"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/recuerdoUsuario/confirmacion-envio-correo.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="recuerdo.usuario.confirmacion.envio.correo.aceptar.exception"
+                path="/es/pode/visualizador/presentacion/recuerdoUsuario/confirmacion-envio-correo.jsp"
+                scope="request" />
+            <forward
+                name="aceptar"
+                path="/Portada/Portada.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/RecuerdoUsuario/RecuerdoUsuario"
+            type="es.pode.visualizador.presentacion.recuerdoUsuario.RecuerdoUsuario"
+            name="recuerdoUsuarioRecuerdoUsuarioForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="formulario.recuerdo.usuario"
+                path="/es/pode/visualizador/presentacion/recuerdoUsuario/formulario-recuerdo-usuario.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/RecuerdoUsuario/FormularioRecuerdoUsuarioAceptar"
+            type="es.pode.visualizador.presentacion.recuerdoUsuario.FormularioRecuerdoUsuarioAceptar"
+            name="recuerdoUsuarioFormularioRecuerdoUsuarioAceptarForm"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/recuerdoUsuario/formulario-recuerdo-usuario.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="recuerdo.usuario.formulario.recuerdo.usuario.aceptar.exception"
+                path="/es/pode/visualizador/presentacion/recuerdoUsuario/formulario-recuerdo-usuario.jsp"
+                scope="request" />
+            <forward
+                name="confirmacion.envio.correo"
+                path="/es/pode/visualizador/presentacion/recuerdoUsuario/confirmacion-envio-correo.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/visualizador/presentacion/recuerdoUsuario/RecuerdoUsuarioHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/recuerdoUsuario/Recuerdo-Usuario_help.jsp"/>
+        <action
+            path="/ConfirmacionEnvioCorreoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/recuerdoUsuario/confirmacion-envio-correo_help.jsp"/>
+        <action
+            path="/FormularioRecuerdoUsuarioHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/recuerdoUsuario/formulario-recuerdo-usuario_help.jsp"/>
+        <action
+            path="/ModificarPerfil/FormularioIniciaCancelar"
+            type="es.pode.visualizador.presentacion.modificarPerfil.FormularioIniciaCancelar"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/modificarPerfil/formulario-inicia.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="modificar.perfil.formulario.inicia.cancelar.exception"
+                path="/es/pode/visualizador/presentacion/modificarPerfil/formulario-inicia.jsp"
+                scope="request" />
+            <forward
+                name="cancelar"
+                path="/Portada/Portada.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ModificarPerfil/ConfirmacionModificacionAceptar"
+            type="es.pode.visualizador.presentacion.modificarPerfil.ConfirmacionModificacionAceptar"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/modificarPerfil/confirmacion-modificacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="modificar.perfil.confirmacion.modificacion.aceptar.exception"
+                path="/es/pode/visualizador/presentacion/modificarPerfil/confirmacion-modificacion.jsp"
+                scope="request" />
+            <forward
+                name="aceptar"
+                path="/Portada/Portada.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ModificarPerfil/ModificarPerfil"
+            type="es.pode.visualizador.presentacion.modificarPerfil.ModificarPerfil"
+            name="modificarPerfilModificarPerfilForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="formulario.inicia"
+                path="/es/pode/visualizador/presentacion/modificarPerfil/formulario-inicia.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/ModificarPerfil/FormularioIniciaAceptar"
+            type="es.pode.visualizador.presentacion.modificarPerfil.FormularioIniciaAceptar"
+            name="modificarPerfilFormularioIniciaAceptarForm"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/modificarPerfil/formulario-inicia.jsp"
+            unknown="false"
+            validate="true">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="modificar.perfil.formulario.inicia.aceptar.exception"
+                path="/es/pode/visualizador/presentacion/modificarPerfil/formulario-inicia.jsp"
+                scope="request" />
+            <forward
+                name="confirmacion.modificacion"
+                path="/es/pode/visualizador/presentacion/modificarPerfil/confirmacion-modificacion.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/visualizador/presentacion/modificarPerfil/ModificarPerfilHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/modificarPerfil/Modificar-Perfil_help.jsp"/>
+        <action
+            path="/ConfirmacionModificacionHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/modificarPerfil/confirmacion-modificacion_help.jsp"/>
+        <action
+            path="/FormularioIniciaHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/modificarPerfil/formulario-inicia_help.jsp"/>
+        <action
+            path="/SolicitarBajaUsuario/SolicitarBajaUsuario"
+            type="es.pode.visualizador.presentacion.solicitarBajaUsuario.SolicitarBajaUsuario"
+            name="solicitarBajaUsuarioSolicitarBajaUsuarioForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="confirmacion.solicitud.baja"
+                path="/es/pode/visualizador/presentacion/solicitarBajaUsuario/confirmacion-solicitud-baja.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/SolicitarBajaUsuario/ConfirmacionSolicitudBajaCancelar"
+            type="es.pode.visualizador.presentacion.solicitarBajaUsuario.ConfirmacionSolicitudBajaCancelar"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/solicitarBajaUsuario/confirmacion-solicitud-baja.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="solicitar.baja.usuario.confirmacion.solicitud.baja.cancelar.exception"
+                path="/es/pode/visualizador/presentacion/solicitarBajaUsuario/confirmacion-solicitud-baja.jsp"
+                scope="request" />
+            <forward
+                name="cancelar"
+                path="/Portada/Portada.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/SolicitarBajaUsuario/ConfirmacionSolicitudBajaAceptar"
+            type="es.pode.visualizador.presentacion.solicitarBajaUsuario.ConfirmacionSolicitudBajaAceptar"
+            name="solicitarBajaUsuarioConfirmacionSolicitudBajaAceptarForm"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/solicitarBajaUsuario/confirmacion-solicitud-baja.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="solicitar.baja.usuario.confirmacion.solicitud.baja.aceptar.exception"
+                path="/es/pode/visualizador/presentacion/solicitarBajaUsuario/confirmacion-solicitud-baja.jsp"
+                scope="request" />
+            <forward
+                name="confirmacion.envio.correo"
+                path="/es/pode/visualizador/presentacion/solicitarBajaUsuario/confirmacion-envio-correo.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/SolicitarBajaUsuario/ConfirmacionEnvioCorreoAceptar"
+            type="es.pode.visualizador.presentacion.solicitarBajaUsuario.ConfirmacionEnvioCorreoAceptar"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/solicitarBajaUsuario/confirmacion-envio-correo.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="solicitar.baja.usuario.confirmacion.envio.correo.aceptar.exception"
+                path="/es/pode/visualizador/presentacion/solicitarBajaUsuario/confirmacion-envio-correo.jsp"
+                scope="request" />
+            <forward
+                name="aceptar"
+                path="/Portada/Portada.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/visualizador/presentacion/solicitarBajaUsuario/SolicitarBajaUsuarioHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/solicitarBajaUsuario/Solicitar-Baja-Usuario_help.jsp"/>
+        <action
+            path="/ConfirmacionEnvioCorreoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/solicitarBajaUsuario/confirmacion-envio-correo_help.jsp"/>
+        <action
+            path="/ConfirmacionSolicitudBajaHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/solicitarBajaUsuario/confirmacion-solicitud-baja_help.jsp"/>
+        <action
+            path="/Acceso/Acceso"
+            type="es.pode.visualizador.presentacion.acceso.Acceso"
+            scope="request"
+            unknown="false"
+            validate="false">
+        </action>
+        <action
+            path="/es/pode/visualizador/presentacion/acceso/AccesoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/acceso/acceso_help.jsp"/>
+        <action
+            path="/Salir/Salir"
+            type="es.pode.visualizador.presentacion.salir.Salir"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="logout"
+                path="/es/pode/visualizador/presentacion/salir/logout.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/visualizador/presentacion/salir/SalirHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/salir/Salir_help.jsp"/>
+        <action
+            path="/AcercaDeAgrega/AcercaDeAgrega"
+            type="es.pode.visualizador.presentacion.acercaDeAgrega.AcercaDeAgrega"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="acerca.de.agrega"
+                path="/es/pode/visualizador/presentacion/acercaDeAgrega/acerca-de-agrega.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/visualizador/presentacion/acercaDeAgrega/AcercaDeAgregaHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/acercaDeAgrega/Acerca-De-Agrega_help.jsp"/>
+        <action
+            path="/AcercaDeAgregaHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/acercaDeAgrega/acerca-de-agrega_help.jsp"/>
+        <action
+            path="/Accesibilidad/Accesibilidad"
+            type="es.pode.visualizador.presentacion.accesibilidad.Accesibilidad"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="accesibilidad"
+                path="/es/pode/visualizador/presentacion/accesibilidad/accesibilidad.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/visualizador/presentacion/accesibilidad/AccesibilidadHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/accesibilidad/Accesibilidad_help.jsp"/>
+        <action
+            path="/AccesibilidadHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/accesibilidad/accesibilidad_help.jsp"/>
+        <action
+            path="/AgregadorFeedsCU/FormularioQueEsEstoVolver"
+            type="es.pode.visualizador.presentacion.feeds.agregadorFeeds.FormularioQueEsEstoVolver"
+            name="agregadorFeedsCUFormularioQueEsEstoVolverForm"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/feeds/agregadorFeeds/formulario-que-es-esto.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="agregador.feeds.cu.formulario.que.es.esto.volver.exception"
+                path="/es/pode/visualizador/presentacion/feeds/agregadorFeeds/formulario-que-es-esto.jsp"
+                scope="request" />
+            <forward
+                name="formulario.agregador.feeds"
+                path="/es/pode/visualizador/presentacion/feeds/agregadorFeeds/formulario-agregador-feeds.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/AgregadorFeedsCU/FormularioAgregadorFeedsListar"
+            type="es.pode.visualizador.presentacion.feeds.agregadorFeeds.FormularioAgregadorFeedsListar"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/feeds/agregadorFeeds/formulario-agregador-feeds.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="agregador.feeds.cu.formulario.agregador.feeds.listar.exception"
+                path="/es/pode/visualizador/presentacion/feeds/agregadorFeeds/formulario-agregador-feeds.jsp"
+                scope="request" />
+            <forward
+                name="listar"
+                path="/ListarFeedsCU/ListarFeedsCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/AgregadorFeedsCU/AgregadorFeedsCU"
+            type="es.pode.visualizador.presentacion.feeds.agregadorFeeds.AgregadorFeedsCU"
+            name="agregadorFeedsCUAgregadorFeedsCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="formulario.agregador.feeds"
+                path="/es/pode/visualizador/presentacion/feeds/agregadorFeeds/formulario-agregador-feeds.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/AgregadorFeedsCU/FormularioAgregadorFeedsQueEsEsto"
+            type="es.pode.visualizador.presentacion.feeds.agregadorFeeds.FormularioAgregadorFeedsQueEsEsto"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/feeds/agregadorFeeds/formulario-agregador-feeds.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="agregador.feeds.cu.formulario.agregador.feeds.que.es.esto.exception"
+                path="/es/pode/visualizador/presentacion/feeds/agregadorFeeds/formulario-agregador-feeds.jsp"
+                scope="request" />
+            <forward
+                name="formulario.que.es.esto"
+                path="/es/pode/visualizador/presentacion/feeds/agregadorFeeds/formulario-que-es-esto.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/visualizador/presentacion/feeds/agregadorFeeds/AgregadorFeedsCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/feeds/agregadorFeeds/agregador-Feeds-CU_help.jsp"/>
+        <action
+            path="/FormularioAgregadorFeedsHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/feeds/agregadorFeeds/formulario-agregador-feeds_help.jsp"/>
+        <action
+            path="/FormularioQueEsEstoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/feeds/agregadorFeeds/formulario-que-es-esto_help.jsp"/>
+        <action
+            path="/ListarFeedsCU/ListarFeedsCU"
+            type="es.pode.visualizador.presentacion.feeds.listarFeeds.ListarFeedsCU"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="listar.feeds"
+                path="/es/pode/visualizador/presentacion/feeds/listarFeeds/listar-feeds.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/ListarFeedsCU/ListarFeedsVolver"
+            type="es.pode.visualizador.presentacion.feeds.listarFeeds.ListarFeedsVolver"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/feeds/listarFeeds/listar-feeds.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="listar.feeds.cu.listar.feeds.volver.exception"
+                path="/es/pode/visualizador/presentacion/feeds/listarFeeds/listar-feeds.jsp"
+                scope="request" />
+            <forward
+                name="volver"
+                path="/AgregadorFeedsCU/AgregadorFeedsCU.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/visualizador/presentacion/feeds/listarFeeds/ListarFeedsCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/feeds/listarFeeds/listar-Feeds-CU_help.jsp"/>
+        <action
+            path="/ListarFeedsHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/feeds/listarFeeds/listar-feeds_help.jsp"/>
+        <action
+            path="/Descargas/DescargasDescarga"
+            type="es.pode.visualizador.presentacion.descargas.DescargasDescarga"
+            name="descargasDescargasDescargaForm"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/descargas/descargas.jsp"
+            unknown="false"
+            validate="true">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="descargas.descargas.descarga.exception"
+                path="/es/pode/visualizador/presentacion/descargas/descargas.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/Descargas/DescargasDescarga"
+            type="es.pode.visualizador.presentacion.descargas.DescargasDescarga"
+            name="descargasDescargasDescargaForm"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/descargas/descargas.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="descargas.descargas.descarga.exception"
+                path="/es/pode/visualizador/presentacion/descargas/descargas.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/Descargas/Descargas"
+            type="es.pode.visualizador.presentacion.descargas.Descargas"
+            name="descargasDescargasForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="descargas"
+                path="/es/pode/visualizador/presentacion/descargas/descargas.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/visualizador/presentacion/descargas/DescargasHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/descargas/Descargas_help.jsp"/>
+        <action
+            path="/DescargasHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/descargas/descargas_help.jsp"/>
+        <action
+            path="/AgregaSlider/CodigoEmbebidoVolver"
+            type="es.pode.visualizador.presentacion.agregaSlider.CodigoEmbebidoVolver"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/agregaSlider/codigo-embebido.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="agrega.slider.codigo.embebido.volver.exception"
+                path="/es/pode/visualizador/presentacion/agregaSlider/codigo-embebido.jsp"
+                scope="request" />
+            <forward
+                name="volver"
+                path="/Portada/Portada.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/AgregaSlider/AgregaSlider"
+            type="es.pode.visualizador.presentacion.agregaSlider.AgregaSlider"
+            name="agregaSliderAgregaSliderForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="filtro.keywords"
+                path="/es/pode/visualizador/presentacion/agregaSlider/filtro-keywords.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/AgregaSlider/FiltroKeywordsSiguiente"
+            type="es.pode.visualizador.presentacion.agregaSlider.FiltroKeywordsSiguiente"
+            name="agregaSliderFiltroKeywordsSiguienteForm"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/agregaSlider/filtro-keywords.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="agrega.slider.filtro.keywords.siguiente.exception"
+                path="/es/pode/visualizador/presentacion/agregaSlider/filtro-keywords.jsp"
+                scope="request" />
+            <forward
+                name="codigo.embebido"
+                path="/es/pode/visualizador/presentacion/agregaSlider/codigo-embebido.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/visualizador/presentacion/agregaSlider/AgregaSliderHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/agregaSlider/agrega-Slider_help.jsp"/>
+        <action
+            path="/FiltroKeywordsHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/agregaSlider/filtro-keywords_help.jsp"/>
+        <action
+            path="/CodigoEmbebidoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/agregaSlider/codigo-embebido_help.jsp"/>
+        <action
+            path="/Informes/Informes"
+            type="es.pode.visualizador.presentacion.informes.Informes"
+            name="informesInformesForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="formulario.listar.informes"
+                path="/es/pode/visualizador/presentacion/informes/formulario-listar-informes.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/visualizador/presentacion/informes/InformesHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/informes/Informes_help.jsp"/>
+        <action
+            path="/FormularioListarInformesHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/informes/formulario-listar-informes_help.jsp"/>
+        <action
+            path="/ConexionFlash/ConexionFlash"
+            type="es.pode.visualizador.presentacion.conexionFlash.ConexionFlash"
+            scope="request"
+            unknown="false"
+            validate="false">
+        </action>
+        <action
+            path="/es/pode/visualizador/presentacion/conexionFlash/ConexionFlashHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/conexionFlash/conexion-Flash_help.jsp"/>
+        <action
+            path="/ContenidoDinamico/ContenidoDinamico"
+            type="es.pode.visualizador.presentacion.contenidoDinamico.ContenidoDinamico"
+            scope="request"
+            unknown="false"
+            validate="false">
+        </action>
+        <action
+            path="/es/pode/visualizador/presentacion/contenidoDinamico/ContenidoDinamicoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/contenidoDinamico/contenido-Dinamico_help.jsp"/>
+        <action
+            path="/Utilidades/Utilidades"
+            type="es.pode.visualizador.presentacion.utilidades.Utilidades"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="utilidades"
+                path="/es/pode/visualizador/presentacion/utilidades/utilidades.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/visualizador/presentacion/utilidades/UtilidadesHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/utilidades/utilidades_help.jsp"/>
+        <action
+            path="/UtilidadesHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/utilidades/utilidades_help.jsp"/>
+        <action
+            path="/AgregaContenidoDinamico/AgregaContenidoDinamicoVolver"
+            type="es.pode.visualizador.presentacion.agregaContenidoDinamico.AgregaContenidoDinamicoVolver"
+            scope="request"
+            input="/es/pode/visualizador/presentacion/agregaContenidoDinamico/agrega-contenido-dinamico.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="agrega.contenido.dinamico.agrega.contenido.dinamico.volver.exception"
+                path="/es/pode/visualizador/presentacion/agregaContenidoDinamico/agrega-contenido-dinamico.jsp"
+                scope="request" />
+            <forward
+                name="volver"
+                path="/Portada/Portada.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/AgregaContenidoDinamico/AgregaContenidoDinamico"
+            type="es.pode.visualizador.presentacion.agregaContenidoDinamico.AgregaContenidoDinamico"
+            name="agregaContenidoDinamicoAgregaContenidoDinamicoForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="agrega.contenido.dinamico"
+                path="/es/pode/visualizador/presentacion/agregaContenidoDinamico/agrega-contenido-dinamico.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/visualizador/presentacion/agregaContenidoDinamico/AgregaContenidoDinamicoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/agregaContenidoDinamico/agrega-Contenido-Dinamico_help.jsp"/>
+        <action
+            path="/AgregaContenidoDinamicoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/agregaContenidoDinamico/agrega-contenido-dinamico_help.jsp"/>
+        <action
+            path="/IdiomaCU/IdiomaCU"
+            type="es.pode.visualizador.presentacion.idioma.IdiomaCU"
+            name="idiomaCUIdiomaCUForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+        </action>
+        <action
+            path="/es/pode/visualizador/presentacion/idioma/IdiomaCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/idioma/idioma-CU_help.jsp"/>
+        <action
+            path="/MotorBusquedaCU/MotorBusquedaCU"
+            type="es.pode.visualizador.presentacion.motorBusqueda.MotorBusquedaCU"
+            scope="request"
+            unknown="false"
+            validate="false">
+        </action>
+        <action
+            path="/es/pode/visualizador/presentacion/motorBusqueda/MotorBusquedaCUHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/visualizador/presentacion/motorBusqueda/motor-Busqueda-CU_help.jsp"/>
+        <action
+            path="/applicationHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/application-help.jsp"/>
+        <action
+            path="/calendar"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/calendar-js.jsp"/>
+        <action
+            path="/formValidation"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/form-validation.jsp"/>
+        <action
+            path="/login"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/login/login-form.jsp"/>
+        <action
+            path="/logincaptcha"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/login/login-form.jsp"/>  
+        <action
+            path="/captcha-image"
+            type="es.indra.ibuilder.security.captcha.ImageCaptchaAction"
+            scope="request"/>  
+    </action-mappings>
+
+    <!-- controller merge point -->
+
+    <!-- message-resources merge-point -->
+    <message-resources parameter="application-resources" null="false"/>
+
+    <!-- plug-in merge-point -->
+    
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property property="pathnames" value="/WEB-INF/validation.xml,/WEB-INF/validator-rules.xml"/>
+        <set-property property="stopOnFirstError" value="false"/>
+    </plug-in>
+
+    <plug-in className="org.apache.struts.tiles.TilesPlugin">
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml"/>
+        <set-property property="definitions-parser-validate" value="true"/>
+        <set-property property="moduleAware" value="true"/>
+    </plug-in>
+
+<!--
+  UNCOMMENT TO EXPOSE THE STRUTS-MENU TAGLIB
+
+    <plug-in className="net.sf.navigator.menu.MenuPlugIn">
+        <set-property property="menuConfig" value="/WEB-INF/menu-config.xml"/>
+    </plug-in>
+-->
+</struts-config>

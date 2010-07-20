@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<MenuConfig>
+
+    <Displayers>
+        <Displayer name="listMenu" type="net.sf.navigator.displayer.ListMenuDisplayer"/>
+    </Displayers>
+
+    <Menus>
+        <Menu name="objetos.personales.cu.title" title="objetos.personales.cu.title" tooltip="objetos.personales.cu.online.help">
+            <Item name="ver.historial.cu.title" title="ver.historial.cu.title" tooltip="ver.historial.cu.online.help" action="/VerHistorialCU/VerHistorialCU">
+            </Item>
+            <Item name="importar.cu.title" title="importar.cu.title" tooltip="importar.cu.online.help" action="/ImportarCU/ImportarCU">
+            </Item>
+            <Item name="exportar.cu.title" title="exportar.cu.title" tooltip="exportar.cu.online.help" action="/ExportarCU/ExportarCU">
+            </Item>
+            <Item name="proponer.catalogacion.cu.title" title="proponer.catalogacion.cu.title" tooltip="proponer.catalogacion.cu.online.help" action="/ProponerCatalogacionCU/ProponerCatalogacionCU">
+            </Item>
+            <Item name="objetos.propuestos.cu.title" title="objetos.propuestos.cu.title" tooltip="objetos.propuestos.cu.online.help">
+                            <Item name="objetos.publicados.cu.title" title="objetos.publicados.cu.title" tooltip="objetos.publicados.cu.online.help">
+                                    <Item name="ver.historial.cu.title" title="ver.historial.cu.title" tooltip="ver.historial.cu.online.help" action="/VerHistorialCU/VerHistorialCU">
+                    </Item>
+                </Item>
+                            <Item name="ver.historial.cu.title" title="ver.historial.cu.title" tooltip="ver.historial.cu.online.help" action="/VerHistorialCU/VerHistorialCU">
+                </Item>
+            </Item>
+            <Item name="objetos.publicados.cu.title" title="objetos.publicados.cu.title" tooltip="objetos.publicados.cu.online.help">
+                            <Item name="objetos.propuestos.cu.title" title="objetos.propuestos.cu.title" tooltip="objetos.propuestos.cu.online.help">
+                                    <Item name="ver.historial.cu.title" title="ver.historial.cu.title" tooltip="ver.historial.cu.online.help" action="/VerHistorialCU/VerHistorialCU">
+                    </Item>
+                </Item>
+                            <Item name="ver.historial.cu.title" title="ver.historial.cu.title" tooltip="ver.historial.cu.online.help" action="/VerHistorialCU/VerHistorialCU">
+                </Item>
+            </Item>
+            <Item name="eliminar.personales.cu.title" title="eliminar.personales.cu.title" tooltip="eliminar.personales.cu.online.help" action="/EliminarPersonalesCU/EliminarPersonalesCU">
+            </Item>
+        </Menu>
+    </Menus>
+
+</MenuConfig>

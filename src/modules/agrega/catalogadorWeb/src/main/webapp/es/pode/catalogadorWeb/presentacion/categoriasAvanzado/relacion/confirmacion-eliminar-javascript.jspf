@@ -1,0 +1,27 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'relacion.confirmacion.eliminar.datos.asesion.param.listado.relaciones.title':'<formatting:escape language="javascript"><bean:message key="relacion.confirmacion.eliminar.datos.asesion.param.listado.relaciones.title"/></formatting:escape>',
+                'relacion.confirmacion.eliminar.datos.asesion.param.titulo.relacion.title':'<formatting:escape language="javascript"><bean:message key="relacion.confirmacion.eliminar.datos.asesion.param.titulo.relacion.title"/></formatting:escape>',
+                'datosASesion':'<formatting:escape language="javascript"><bean:message key="relacion.confirmacion.eliminar.datos.asesion.title"/></formatting:escape>',
+                'datosASesion_no':'<formatting:escape language="javascript"><bean:message key="relacion.confirmacion.eliminar.datos.asesion.title.notallowed"/></formatting:escape>',
+                'datosASesion_reset':'<formatting:escape language="javascript"><bean:message key="relacion.confirmacion.eliminar.datos.asesion.title.reset"/></formatting:escape>',
+                'datosASesion_noreset':'<formatting:escape language="javascript"><bean:message key="relacion.confirmacion.eliminar.datos.asesion.title.reset.not.allowed"/></formatting:escape>',
+                'CancelarEliminar':'<formatting:escape language="javascript"><bean:message key="relacion.confirmacion.eliminar.cancelar.eliminar.title"/></formatting:escape>',
+                'CancelarEliminar_no':'<formatting:escape language="javascript"><bean:message key="relacion.confirmacion.eliminar.cancelar.eliminar.title.notallowed"/></formatting:escape>',
+                'CancelarEliminar_reset':'<formatting:escape language="javascript"><bean:message key="relacion.confirmacion.eliminar.cancelar.eliminar.title.reset"/></formatting:escape>',
+                'CancelarEliminar_noreset':'<formatting:escape language="javascript"><bean:message key="relacion.confirmacion.eliminar.cancelar.eliminar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+</script>
+    </tiles:put>

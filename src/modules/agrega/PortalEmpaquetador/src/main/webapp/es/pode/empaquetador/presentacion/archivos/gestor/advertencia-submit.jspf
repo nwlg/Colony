@@ -1,0 +1,41 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="submit" class="action">
+    <h3><bean:message key="gestor.archivos.advertencia.submit"/></h3>
+    <div class="trigger">
+        <html:form styleId="gestorArchivosAdvertenciaSubmitForm" action="/GestorArchivos/AdvertenciaSubmit" method="post" enctype="multipart/form-data" onsubmit="">
+            <%@ include file="/es/pode/empaquetador/presentacion/archivos/gestor/advertencia-submit-hidden-params.jspf" %>
+            <table>
+                <tbody>
+                    <tr class="archivosVO">
+                        <td class="label"><bean:message key="gestor.archivos.advertencia.submit.param.archivos.vo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.archivosVO}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.archivosVOBackingList}">
+                                  <html:select name="form" property="archivosVOAsArray" onmouseover="hints.show('gestor.archivos.advertencia.submit.param.archivos.vo.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="submitArchivosVO">
+                                      <html:optionsCollection name="form" property="archivosVOBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="archivosVOAsArray" onmouseover="hints.show('gestor.archivos.advertencia.submit.param.archivos.vo.title')" onmouseout="hints.hide()"  styleId="submitArchivosVO"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Submit')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="gestor.archivos.advertencia.submit"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

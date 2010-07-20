@@ -1,0 +1,38 @@
+
+    <tiles:put name="javascript" type="string">
+        <script type="text/javascript" language="Javascript1.1" src="<html:rewrite action="/formValidation"/>"></script>
+        <html:javascript formName="modificarFAQModificarDosValidarFormuForm" method="validateModificarDosValidarFormuForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+        <html:javascript formName="modificarFAQModificarDosVolverForm" method="validateModificarDosVolverForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'modificar.faq.modificar.dos.validar.formu.param.id.title':'<formatting:escape language="javascript"><bean:message key="modificar.faq.modificar.dos.validar.formu.param.id.title"/></formatting:escape>',
+                'modificar.faq.modificar.dos.validar.formu.param.categoria.title':'<formatting:escape language="javascript"><bean:message key="modificar.faq.modificar.dos.validar.formu.param.categoria.title"/></formatting:escape>',
+                'modificar.faq.modificar.dos.validar.formu.param.castellano.title':'<formatting:escape language="javascript"><bean:message key="modificar.faq.modificar.dos.validar.formu.param.castellano.title"/></formatting:escape>',
+                'modificar.faq.modificar.dos.validar.formu.param.ingles.title':'<formatting:escape language="javascript"><bean:message key="modificar.faq.modificar.dos.validar.formu.param.ingles.title"/></formatting:escape>',
+                'modificar.faq.modificar.dos.validar.formu.param.catalan.title':'<formatting:escape language="javascript"><bean:message key="modificar.faq.modificar.dos.validar.formu.param.catalan.title"/></formatting:escape>',
+                'modificar.faq.modificar.dos.validar.formu.param.valenciano.title':'<formatting:escape language="javascript"><bean:message key="modificar.faq.modificar.dos.validar.formu.param.valenciano.title"/></formatting:escape>',
+                'modificar.faq.modificar.dos.validar.formu.param.gallego.title':'<formatting:escape language="javascript"><bean:message key="modificar.faq.modificar.dos.validar.formu.param.gallego.title"/></formatting:escape>',
+                'modificar.faq.modificar.dos.validar.formu.param.euskera.title':'<formatting:escape language="javascript"><bean:message key="modificar.faq.modificar.dos.validar.formu.param.euskera.title"/></formatting:escape>',
+                'modificar.faq.modificar.dos.volver.param.id.title':'<formatting:escape language="javascript"><bean:message key="modificar.faq.modificar.dos.volver.param.id.title"/></formatting:escape>',
+                'modificar.faq.modificar.dos.volver.param.categoria.title':'<formatting:escape language="javascript"><bean:message key="modificar.faq.modificar.dos.volver.param.categoria.title"/></formatting:escape>',
+                'validarFormu':'<formatting:escape language="javascript"><bean:message key="modificar.faq.modificar.dos.validar.formu.title"/></formatting:escape>',
+                'validarFormu_no':'<formatting:escape language="javascript"><bean:message key="modificar.faq.modificar.dos.validar.formu.title.notallowed"/></formatting:escape>',
+                'validarFormu_reset':'<formatting:escape language="javascript"><bean:message key="modificar.faq.modificar.dos.validar.formu.title.reset"/></formatting:escape>',
+                'validarFormu_noreset':'<formatting:escape language="javascript"><bean:message key="modificar.faq.modificar.dos.validar.formu.title.reset.not.allowed"/></formatting:escape>',
+                'volver':'<formatting:escape language="javascript"><bean:message key="modificar.faq.modificar.dos.volver.title"/></formatting:escape>',
+                'volver_no':'<formatting:escape language="javascript"><bean:message key="modificar.faq.modificar.dos.volver.title.notallowed"/></formatting:escape>',
+                'volver_reset':'<formatting:escape language="javascript"><bean:message key="modificar.faq.modificar.dos.volver.title.reset"/></formatting:escape>',
+                'volver_noreset':'<formatting:escape language="javascript"><bean:message key="modificar.faq.modificar.dos.volver.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+</script>
+    </tiles:put>

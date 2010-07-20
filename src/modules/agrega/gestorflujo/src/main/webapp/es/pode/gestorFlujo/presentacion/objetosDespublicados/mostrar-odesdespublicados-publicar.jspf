@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="publicar" class="action">
+    <h3><bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.publicar"/></h3>
+    <div class="trigger">
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR,ROLE_PUBLICADOR">
+            <p>
+                <html:link action="/ObjetosDespublicadosCU/MostrarODESDespublicadosPublicar?idUsuario=${form.idUsuario}&titulo=${form.titulo}&idODE=${form.idODE}&esDespublicado=${form.esDespublicado}" onmouseover="hints.show('Publicar')" onmouseout="hints.hide()">
+                    <bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.publicar"/>
+                </html:link>
+            </p>
+			</authz:authorize>	
+    </div>
+
+</div>
+ <br class="clr"/>

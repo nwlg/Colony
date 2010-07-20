@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.15" id="1">
+    <list-property name="configVars">
+        <structure>
+            <property name="name">__isdisplay__RP_fechaDesde_8_0</property>
+            <property name="value">2007-01-01T00:00:00-00:00</property>
+        </structure>
+        <structure>
+            <property name="name">__isdisplay__RP_fechaHasta_9_1</property>
+            <property name="value">2008-01-01T00:00:00-00:00</property>
+        </structure>
+        <structure>
+            <property name="name">__isdisplay__RP_rangoFechas_10_2</property>
+            <property name="value">01/01/2007 - 01/01/2008</property>
+        </structure>
+        <structure>
+            <property name="name">RP_rangoFechas_10_3</property>
+            <property name="value">01/01/2007 - 01/01/2008</property>
+        </structure>
+        <structure>
+            <property name="name">RP_rangoFechas_10_type_</property>
+            <property name="value">string</property>
+        </structure>
+        <structure>
+            <property name="name">RP_fechaHasta_9_4</property>
+            <property name="value">2008-01-01T00:00:00-00:00</property>
+        </structure>
+        <structure>
+            <property name="name">RP_fechaHasta_9_type_</property>
+            <property name="value">string</property>
+        </structure>
+        <structure>
+            <property name="name">RP_fechaDesde_8_5</property>
+            <property name="value">2007-01-01T00:00:00-00:00</property>
+        </structure>
+        <structure>
+            <property name="name">RP_fechaDesde_8_type_</property>
+            <property name="value">string</property>
+        </structure>
+    </list-property>
+    <styles>
+        <style name="crosstab" id="2">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab-cell" id="3">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+</report>

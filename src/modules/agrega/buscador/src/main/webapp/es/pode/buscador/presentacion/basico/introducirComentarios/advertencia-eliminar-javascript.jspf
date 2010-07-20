@@ -1,0 +1,28 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'introducir.comentarios.cu.advertencia.eliminar.analiza.pulsacion.param.ids.title':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.advertencia.eliminar.analiza.pulsacion.param.ids.title"/></formatting:escape>',
+                'introducir.comentarios.cu.advertencia.eliminar.analiza.pulsacion.param.id.ode.title':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.advertencia.eliminar.analiza.pulsacion.param.id.ode.title"/></formatting:escape>',
+                'introducir.comentarios.cu.advertencia.eliminar.analiza.pulsacion.param.imagen.title':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.advertencia.eliminar.analiza.pulsacion.param.imagen.title"/></formatting:escape>',
+                'introducir.comentarios.cu.advertencia.eliminar.analiza.pulsacion.param.tipo.layout.buscador.title':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.advertencia.eliminar.analiza.pulsacion.param.tipo.layout.buscador.title"/></formatting:escape>',
+                'introducir.comentarios.cu.advertencia.eliminar.analiza.pulsacion.param.action.title':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.advertencia.eliminar.analiza.pulsacion.param.action.title"/></formatting:escape>',
+                'introducir.comentarios.cu.advertencia.eliminar.analiza.pulsacion.param.mostrar.vuelta.title':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.advertencia.eliminar.analiza.pulsacion.param.mostrar.vuelta.title"/></formatting:escape>',
+                'introducir.comentarios.cu.advertencia.eliminar.analiza.pulsacion.param.busqueda.simple.avanzada.title':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.advertencia.eliminar.analiza.pulsacion.param.busqueda.simple.avanzada.title"/></formatting:escape>',
+                'introducir.comentarios.cu.advertencia.eliminar.analiza.pulsacion.param.url.ode.title':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.advertencia.eliminar.analiza.pulsacion.param.url.ode.title"/></formatting:escape>',
+                'analizaPulsacion':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.advertencia.eliminar.analiza.pulsacion.title"/></formatting:escape>',
+                'analizaPulsacion_no':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.advertencia.eliminar.analiza.pulsacion.title.notallowed"/></formatting:escape>',
+                'analizaPulsacion_reset':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.advertencia.eliminar.analiza.pulsacion.title.reset"/></formatting:escape>',
+                'analizaPulsacion_noreset':'<formatting:escape language="javascript"><bean:message key="introducir.comentarios.cu.advertencia.eliminar.analiza.pulsacion.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

@@ -1,0 +1,58 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="submitConfirmacion" class="action">
+    <h3><bean:message key="modificaciones.ejecutadas.confirmacion.submit.confirmacion"/></h3>
+    <div class="trigger">
+        <html:form styleId="modificacionesEjecutadasConfirmacionSubmitConfirmacionForm" action="/ModificacionesEjecutadas/ConfirmacionSubmitConfirmacion" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="action">
+                        <td class="label"><bean:message key="modificaciones.ejecutadas.confirmacion.submit.confirmacion.param.action"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.action}"/>
+                           <input type="text" name="action" value="${value}" onmouseover="hints.show('modificaciones.ejecutadas.confirmacion.submit.confirmacion.param.action.title')" onmouseout="hints.hide()"  id="submitConfirmacionAction"/>
+                        </td>
+                    </tr>
+                    <tr class="idModificacion">
+                        <td class="label"><bean:message key="modificaciones.ejecutadas.confirmacion.submit.confirmacion.param.id.modificacion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idModificacion}"/>
+                           <input type="text" name="idModificacion" value="${value}" onmouseover="hints.show('modificaciones.ejecutadas.confirmacion.submit.confirmacion.param.id.modificacion.title')" onmouseout="hints.hide()"  id="submitConfirmacionIdModificacion"/>
+                        </td>
+                    </tr>
+                    <tr class="idModificaciones">
+                        <td class="label"><bean:message key="modificaciones.ejecutadas.confirmacion.submit.confirmacion.param.id.modificaciones"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idModificaciones}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.idModificacionesBackingList}">
+                                  <html:select name="form" property="idModificaciones" onmouseover="hints.show('modificaciones.ejecutadas.confirmacion.submit.confirmacion.param.id.modificaciones.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="submitConfirmacionIdModificaciones">
+                                      <html:optionsCollection name="form" property="idModificacionesBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="idModificaciones" onmouseover="hints.show('modificaciones.ejecutadas.confirmacion.submit.confirmacion.param.id.modificaciones.title')" onmouseout="hints.hide()"  styleId="submitConfirmacionIdModificaciones"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('submitConfirmacion')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="modificaciones.ejecutadas.confirmacion.submit.confirmacion"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

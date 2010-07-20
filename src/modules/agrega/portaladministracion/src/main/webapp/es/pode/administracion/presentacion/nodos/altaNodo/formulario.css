@@ -1,0 +1,24 @@
+#cancelar.action {}
+#cancelar.action #form_submit {}
+
+
+#aceptar.action {}
+#aceptar.action #form_submit {}
+
+#aceptar.action .nodo {}
+#aceptar.action .nodo .label {}
+#aceptar.action .nodo .field {}
+#aceptar.action .url {}
+#aceptar.action .url .label {}
+#aceptar.action .url .field {}
+#aceptar.action .puerto {}
+#aceptar.action .puerto .label {}
+#aceptar.action .puerto .field {}
+#aceptar.action .comunidad {}
+#aceptar.action .comunidad .label {}
+#aceptar.action .comunidad .field {}
+#aceptar.action .urlWS {}
+#aceptar.action .urlWS .label {}
+#aceptar.action .urlWS .field {}
+
+

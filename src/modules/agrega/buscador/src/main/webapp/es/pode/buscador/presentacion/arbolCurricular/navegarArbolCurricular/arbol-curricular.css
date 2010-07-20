@@ -1,0 +1,40 @@
+#seleccionarHijo.action {}
+#seleccionarHijo.action #form_submit {}
+
+#seleccionarHijo.action .id {}
+#seleccionarHijo.action .id .label {}
+#seleccionarHijo.action .id .field {}
+#seleccionarHijo.action .tipoLayoutBuscador {}
+#seleccionarHijo.action .tipoLayoutBuscador .label {}
+#seleccionarHijo.action .tipoLayoutBuscador .field {}
+
+#seleccionarPadre.action {}
+#seleccionarPadre.action #form_submit {}
+
+#seleccionarPadre.action .id {}
+#seleccionarPadre.action .id .label {}
+#seleccionarPadre.action .id .field {}
+#seleccionarPadre.action .tipoLayoutBuscador {}
+#seleccionarPadre.action .tipoLayoutBuscador .label {}
+#seleccionarPadre.action .tipoLayoutBuscador .field {}
+
+#listarODEArea.action {}
+#listarODEArea.action #form_submit {}
+
+#listarODEArea.action .areaCurricularBusqueda {}
+#listarODEArea.action .areaCurricularBusqueda .label {}
+#listarODEArea.action .areaCurricularBusqueda .field {}
+#listarODEArea.action .rutaArbol {}
+#listarODEArea.action .rutaArbol .label {}
+#listarODEArea.action .rutaArbol .field {}
+#listarODEArea.action .idiomaBuscador {}
+#listarODEArea.action .idiomaBuscador .label {}
+#listarODEArea.action .idiomaBuscador .field {}
+#listarODEArea.action .idioma {}
+#listarODEArea.action .idioma .label {}
+#listarODEArea.action .idioma .field {}
+#listarODEArea.action .numMaxResultados {}
+#listarODEArea.action .numMaxResultados .label {}
+#listarODEArea.action .numMaxResultados .field {}
+
+

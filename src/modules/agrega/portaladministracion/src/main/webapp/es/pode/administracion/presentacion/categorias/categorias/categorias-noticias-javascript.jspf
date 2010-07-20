@@ -1,0 +1,41 @@
+
+    <tiles:put name="javascript" type="string">
+        <script type="text/javascript" language="Javascript1.1" src="<html:rewrite action="/formValidation"/>"></script>
+        <html:javascript formName="categoriasNoticiasCUCategoriasNoticiasModificarForm" method="validateCategoriasNoticiasModificarForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+        <html:javascript formName="categoriasNoticiasCUCategoriasNoticiasVerCateForm" method="validateCategoriasNoticiasVerCateForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'categorias.noticias.cu.categorias.noticias.modificar.param.id.categoria.noticia.title':'<formatting:escape language="javascript"><bean:message key="categorias.noticias.cu.categorias.noticias.modificar.param.id.categoria.noticia.title"/></formatting:escape>',
+                'categorias.noticias.cu.categorias.noticias.ver.cate.param.id.categoria.noticia.title':'<formatting:escape language="javascript"><bean:message key="categorias.noticias.cu.categorias.noticias.ver.cate.param.id.categoria.noticia.title"/></formatting:escape>',
+                'categorias.noticias.cu.categorias.noticias.eliminar.param.id.categoria.noticia.title':'<formatting:escape language="javascript"><bean:message key="categorias.noticias.cu.categorias.noticias.eliminar.param.id.categoria.noticia.title"/></formatting:escape>',
+                'Modificar':'<formatting:escape language="javascript"><bean:message key="categorias.noticias.cu.categorias.noticias.modificar.title"/></formatting:escape>',
+                'Modificar_no':'<formatting:escape language="javascript"><bean:message key="categorias.noticias.cu.categorias.noticias.modificar.title.notallowed"/></formatting:escape>',
+                'Modificar_reset':'<formatting:escape language="javascript"><bean:message key="categorias.noticias.cu.categorias.noticias.modificar.title.reset"/></formatting:escape>',
+                'Modificar_noreset':'<formatting:escape language="javascript"><bean:message key="categorias.noticias.cu.categorias.noticias.modificar.title.reset.not.allowed"/></formatting:escape>',
+                'verCate':'<formatting:escape language="javascript"><bean:message key="categorias.noticias.cu.categorias.noticias.ver.cate.title"/></formatting:escape>',
+                'verCate_no':'<formatting:escape language="javascript"><bean:message key="categorias.noticias.cu.categorias.noticias.ver.cate.title.notallowed"/></formatting:escape>',
+                'verCate_reset':'<formatting:escape language="javascript"><bean:message key="categorias.noticias.cu.categorias.noticias.ver.cate.title.reset"/></formatting:escape>',
+                'verCate_noreset':'<formatting:escape language="javascript"><bean:message key="categorias.noticias.cu.categorias.noticias.ver.cate.title.reset.not.allowed"/></formatting:escape>',
+                'Eliminar':'<formatting:escape language="javascript"><bean:message key="categorias.noticias.cu.categorias.noticias.eliminar.title"/></formatting:escape>',
+                'Eliminar_no':'<formatting:escape language="javascript"><bean:message key="categorias.noticias.cu.categorias.noticias.eliminar.title.notallowed"/></formatting:escape>',
+                'Eliminar_reset':'<formatting:escape language="javascript"><bean:message key="categorias.noticias.cu.categorias.noticias.eliminar.title.reset"/></formatting:escape>',
+                'Eliminar_noreset':'<formatting:escape language="javascript"><bean:message key="categorias.noticias.cu.categorias.noticias.eliminar.title.reset.not.allowed"/></formatting:escape>',
+                'Crear':'<formatting:escape language="javascript"><bean:message key="categorias.noticias.cu.categorias.noticias.crear.title"/></formatting:escape>',
+                'Crear_no':'<formatting:escape language="javascript"><bean:message key="categorias.noticias.cu.categorias.noticias.crear.title.notallowed"/></formatting:escape>',
+                'Crear_reset':'<formatting:escape language="javascript"><bean:message key="categorias.noticias.cu.categorias.noticias.crear.title.reset"/></formatting:escape>',
+                'Crear_noreset':'<formatting:escape language="javascript"><bean:message key="categorias.noticias.cu.categorias.noticias.crear.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+</script>
+    </tiles:put>

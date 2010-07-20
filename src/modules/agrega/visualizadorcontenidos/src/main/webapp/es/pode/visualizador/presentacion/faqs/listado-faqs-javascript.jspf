@@ -1,0 +1,25 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'Accesibilidad':'<formatting:escape language="javascript"><bean:message key="faqs.listado.faqs.accesibilidad.title"/></formatting:escape>',
+                'Accesibilidad_no':'<formatting:escape language="javascript"><bean:message key="faqs.listado.faqs.accesibilidad.title.notallowed"/></formatting:escape>',
+                'Accesibilidad_reset':'<formatting:escape language="javascript"><bean:message key="faqs.listado.faqs.accesibilidad.title.reset"/></formatting:escape>',
+                'Accesibilidad_noreset':'<formatting:escape language="javascript"><bean:message key="faqs.listado.faqs.accesibilidad.title.reset.not.allowed"/></formatting:escape>',
+                'categoria':'<formatting:escape language="javascript"><bean:message key="faqs.listado.faqs.categoria.title"/></formatting:escape>',
+                'categoria_no':'<formatting:escape language="javascript"><bean:message key="faqs.listado.faqs.categoria.title.notallowed"/></formatting:escape>',
+                'categoria_reset':'<formatting:escape language="javascript"><bean:message key="faqs.listado.faqs.categoria.title.reset"/></formatting:escape>',
+                'categoria_noreset':'<formatting:escape language="javascript"><bean:message key="faqs.listado.faqs.categoria.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+</script>
+    </tiles:put>

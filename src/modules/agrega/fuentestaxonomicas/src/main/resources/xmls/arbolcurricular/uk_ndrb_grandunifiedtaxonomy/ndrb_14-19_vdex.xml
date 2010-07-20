@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ndrb vdex vocab for 14-19 Diploma
+===================================================================
+=
+= Copyright 2009 Sirius Corporation plc and Duncan Gibb
+= 
+= This is Free Software, licenced under the GNU General Public
+= License ("GPL").  Version 3 of the GPL shall apply unless a
+= later version has been published by the Free Software
+= Software Foundation ("FSF") at the time you receive this
+= software, in which case that later version shall apply instead.
+= At your your option, you may apply any version of the GPL
+= published by the FSF later than that prescribed above.
+=
+= This software is supplied "as is" and "with all faults".
+= There is ABSOLUTELY NO WARRANTY.  Please refer to the relevant
+= section of the licence for more details.
+=
+= If you do not have a copy of the licence, please refer to
+= <http://www.gnu.org/licenses/>.
+=
+===================================================================
+=
+= Based on part of the content of
+= "taxon path single file proposal_V02.doc"
+= supplied by Fiona Iglesias, Northwest Learning Grid.
+=
+===================================================================
+-->
+<vdex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns="http://www.imsglobal.org/xsd/imsvdex_v1p0"
+      xsi:schemaLocation="http://www.imsglobal.org/xsd/imsvdex_v1p0 http://www.imsglobal.org/xsd/imsvdex_v1p0.xsd"
+      orderSignificant="true"
+      profileType="hierarchicalTokenTerms"
+      language="en">
+  <vocabName>
+    <langstring>ndrb 14-19 Diploma vocabulary</langstring>
+  </vocabName>
+  <vocabIdentifier>UK_ndrb_14-19_diploma_2009-09-22</vocabIdentifier>
+  <term>
+    <termIdentifier>ConstrBuilt</termIdentifier>
+    <caption>
+      <langstring>Construction and the built environment</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>CreatMedia</termIdentifier>
+    <caption>
+      <langstring>Creative and media</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>Eng</termIdentifier>
+    <caption>
+      <langstring>Engineering</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>IT</termIdentifier>
+    <caption>
+      <langstring>Information technology</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>SocHealthDev</termIdentifier>
+    <caption>
+      <langstring>Society, health and development</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>BusAdminFin</termIdentifier>
+    <caption>
+      <langstring>Business, administration and finance</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>EnvLand</termIdentifier>
+    <caption>
+      <langstring>Environmental and land-based studies</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>HairBeau</termIdentifier>
+    <caption>
+      <langstring>Hair and beauty studies</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>Hospitality</termIdentifier>
+    <caption>
+      <langstring>Hospitality</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>ManufProdDes</termIdentifier>
+    <caption>
+      <langstring>Manufacturing and product design</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>PubSvcs</termIdentifier>
+    <caption>
+      <langstring>Public services</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>Retail</termIdentifier>
+    <caption>
+      <langstring>Retail business</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>SportLeis</termIdentifier>
+    <caption>
+      <langstring>Sport and active leisure</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>TravTour</termIdentifier>
+    <caption>
+      <langstring>Travel and tourism</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>HumSocSci</termIdentifier>
+    <caption>
+      <langstring>Humanities and social sciences</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>LangIntComm</termIdentifier>
+    <caption>
+      <langstring>Languagues and international communication</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>Sc</termIdentifier>
+    <caption>
+      <langstring>Science</langstring>
+    </caption>
+  </term>
+</vdex>

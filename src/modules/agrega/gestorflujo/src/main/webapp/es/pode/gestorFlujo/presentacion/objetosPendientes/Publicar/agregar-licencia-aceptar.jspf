@@ -1,0 +1,58 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="publicar.cu.agregar.licencia.aceptar"/></h3>
+    <div class="trigger">
+        <html:form styleId="publicarCUAgregarLicenciaAceptarForm" action="/PublicarCU/AgregarLicenciaAceptar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="tipoLicenciaSeleccionada">
+                        <td class="label"><bean:message key="publicar.cu.agregar.licencia.aceptar.param.tipo.licencia.seleccionada"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipoLicenciaSeleccionada}"/>
+                           <input type="text" name="tipoLicenciaSeleccionada" value="${value}" onmouseover="hints.show('publicar.cu.agregar.licencia.aceptar.param.tipo.licencia.seleccionada.title')" onmouseout="hints.hide()"  id="aceptarTipoLicenciaSeleccionada"/>
+                        </td>
+                    </tr>
+                    <tr class="comunidadesSeleccionadas">
+                        <td class="label"><bean:message key="publicar.cu.agregar.licencia.aceptar.param.comunidades.seleccionadas"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.comunidadesSeleccionadas}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.comunidadesSeleccionadasBackingList}">
+                                  <html:select name="form" property="comunidadesSeleccionadasAsArray" onmouseover="hints.show('publicar.cu.agregar.licencia.aceptar.param.comunidades.seleccionadas.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="aceptarComunidadesSeleccionadas">
+                                      <html:optionsCollection name="form" property="comunidadesSeleccionadasBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="comunidadesSeleccionadasAsArray" onmouseover="hints.show('publicar.cu.agregar.licencia.aceptar.param.comunidades.seleccionadas.title')" onmouseout="hints.hide()"  styleId="aceptarComunidadesSeleccionadas"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="universal">
+                        <td class="label"><bean:message key="publicar.cu.agregar.licencia.aceptar.param.universal"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.universal}"/>
+                           <input type="text" name="universal" value="${value}" onmouseover="hints.show('publicar.cu.agregar.licencia.aceptar.param.universal.title')" onmouseout="hints.hide()"  id="aceptarUniversal"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="publicar.cu.agregar.licencia.aceptar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

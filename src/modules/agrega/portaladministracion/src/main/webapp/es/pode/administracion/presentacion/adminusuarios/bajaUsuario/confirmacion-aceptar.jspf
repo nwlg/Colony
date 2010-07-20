@@ -1,0 +1,49 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="baja.usuario.confirmacion.aceptar"/></h3>
+    <div class="trigger">
+        <html:form styleId="bajaUsuarioConfirmacionAceptarForm" action="/BajaUsuario/ConfirmacionAceptar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="listaId">
+                        <td class="label"><bean:message key="baja.usuario.confirmacion.aceptar.param.lista.id"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.listaId}"/>
+                           <input type="text" name="listaId" value="${value}" onmouseover="hints.show('baja.usuario.confirmacion.aceptar.param.lista.id.title')" onmouseout="hints.hide()"  id="aceptarListaId"/>
+                        </td>
+                    </tr>
+                    <tr class="usuarios">
+                        <td class="label"><bean:message key="baja.usuario.confirmacion.aceptar.param.usuarios"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.usuarios}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.usuariosBackingList}">
+                                  <html:select name="form" property="usuarios" onmouseover="hints.show('baja.usuario.confirmacion.aceptar.param.usuarios.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="aceptarUsuarios">
+                                      <html:optionsCollection name="form" property="usuariosBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="usuarios" onmouseover="hints.show('baja.usuario.confirmacion.aceptar.param.usuarios.title')" onmouseout="hints.hide()"  styleId="aceptarUsuarios"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="baja.usuario.confirmacion.aceptar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

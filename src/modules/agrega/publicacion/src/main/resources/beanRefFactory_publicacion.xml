@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans
+    PUBLIC "-//SPRING//DTD BEAN//EN"
+           "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+    <bean id="beanRefFactory"
+         class="org.springframework.context.support.ClassPathXmlApplicationContext">
+        <constructor-arg>
+           <list>
+                <value>user-applicationContext_publicacion.xml</value>
+                <value>applicationContext-acegiSecurity_publicacion.xml</value>
+		<value>applicationContext-acegiSecurity-frontend_publicacion.xml</value>
+                <value>applicationContext_publicacion.xml</value>
+                <value>applicationContext-dataSource_publicacion.xml</value>                
+   				<value>applicationContext-jms_publicacion.xml</value>
+   		<value>applicationContext-external_publicacion.xml</value>
+                <!-- beanRefFactory merge-point -->
+
+           </list>
+        </constructor-arg>
+    </bean>
+
+</beans>

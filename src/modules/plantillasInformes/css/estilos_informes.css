@@ -1,0 +1,149 @@
+	
+		h1 {
+		display:block;
+		width:131px;
+		margin:10px auto 20px auto;
+		height:52px;
+		background:transparent url("/img/logo_agrega.jpg") 0 0 no-repeat;}
+		
+		.negrita {font-weight:bold}
+		.negrita_02 td {font-weight:bold;background:#c6c6c6;}
+		.negrita_02 td.titulo {width:100px}
+		
+		table {
+		font:normal 18px "Trebuchet MS",Verdana,Arial, sans-serif;
+		color:#333;
+		width:100%;
+		border-collapse: collapse;
+		border:0;
+		text-align:left !important;}
+		
+		.subtitular  {
+		border:0;
+		width:250px;
+		font:normal 12px "Trebuchet MS",Verdana,Arial, sans-serif;}
+		
+		.subtitular_02  {
+		border:0;
+		width:137px;
+		font:normal 12px "Trebuchet MS",Verdana,Arial, sans-serif;}
+		
+		.subtitular td,
+		.subtitular_02 td {
+		padding:7px  5px 0   0;}
+				
+		.rango {padding-top:10px !important}
+		
+			
+		td.centrado {text-align:center !important}
+		td.alineado {text-align:left !important}
+		.alineado {text-align:left !important}
+		table table tr.tr_gris td {background:#EFEFEF }
+				
+		th {
+		white-space:nowrap;
+		padding:0 5px;
+		background:#EBF2F8;
+		height:20px;
+		border-bottom:1px solid #D0D0F3;
+		font-weight:bold;
+		line-height:190%}
+		
+		body {padding:10px;}
+		
+		
+		#pie_pagina {
+text-align:right;
+clear:both;
+padding-top:4.4em;
+padding-right:10px;
+padding-left:0;
+font-size:60%;
+background:#fff;}
+
+* html pie_pagina {
+padding-top:4.6em;
+}
+
+*+html pie_pagina {
+padding-right:5px;
+}
+
+#pie_pagina  ul {
+list-style-type:none;
+text-align:left;
+margin-top:40px;
+display:block;}
+
+*+html #pie_pagina  ul {
+margin-top:10px;
+padding-top:20px;
+}
+
+#pie_pagina ul li {
+display:inline;}
+
+#pie_pagina  a#info:hover {text-decoration:none;}
+
+#pie_pagina  a#politica:hover {text-decoration:none;}
+
+#pie_pagina  a#info {
+padding-right:10px;
+background:transparent  url("../img/barrita.gif") 100% 60% no-repeat;}
+
+#pie_pagina a#politica {
+padding-left:6px;
+}
+
+#pie_pagina  ul li  {height:1.3em;}
+
+#pie_pagina  ul li  a {
+color:#151515;
+padding-right:10px;
+float:left;
+margin-left:9px;
+display:block;}
+
+
+#pie_pagina  ul li a span {
+text-indent:-10000px;
+overflow:hidden;
+position:absolute;} 
+
+#pie_pagina  ul li  a#avanza {
+width:115px;
+height:38px;
+background:transparent url("../img/avanza.gif") 0 50% no-repeat;}
+
+#pie_pagina  ul li  a#industria {
+width:92px;
+height:48px;
+margin-left:3px;
+background:transparent url("../img/industria.gif") 0 50% no-repeat;}
+
+#pie_pagina  ul li  a#redes {
+width:65px;
+height:38px;
+background:transparent url("../img/red.gif") 0 50% no-repeat;}
+
+#pie_pagina  ul li  a#educacion {
+width:92px;
+padding-right:0;
+height:48px;
+margin-left:3px;
+background:transparent url("../img/educacion.gif") 0 50% no-repeat;}
+
+#pie_pagina  ul li  a#gobespania {
+width:92px;
+margin-left:0;
+padding-right:0;
+height:48px;
+background:transparent url("../img/gobierno_espana.gif")  0 50%  no-repeat;}
+
+
+#pie_pagina  ul li  a#feder {
+width:169px;
+height:48px;
+background:transparent url("../img/logo_feder.jpg")  0 0 no-repeat;}
+
+.oculto, hr {display: none;}

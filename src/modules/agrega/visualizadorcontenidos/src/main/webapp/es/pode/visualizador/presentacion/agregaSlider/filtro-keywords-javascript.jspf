@@ -1,0 +1,22 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'agrega.slider.filtro.keywords.siguiente.param.idiomas.combo.title':'<formatting:escape language="javascript"><bean:message key="agrega.slider.filtro.keywords.siguiente.param.idiomas.combo.title"/></formatting:escape>',
+                'agrega.slider.filtro.keywords.siguiente.param.keywords.title':'<formatting:escape language="javascript"><bean:message key="agrega.slider.filtro.keywords.siguiente.param.keywords.title"/></formatting:escape>',
+                'Siguiente':'<formatting:escape language="javascript"><bean:message key="agrega.slider.filtro.keywords.siguiente.title"/></formatting:escape>',
+                'Siguiente_no':'<formatting:escape language="javascript"><bean:message key="agrega.slider.filtro.keywords.siguiente.title.notallowed"/></formatting:escape>',
+                'Siguiente_reset':'<formatting:escape language="javascript"><bean:message key="agrega.slider.filtro.keywords.siguiente.title.reset"/></formatting:escape>',
+                'Siguiente_noreset':'<formatting:escape language="javascript"><bean:message key="agrega.slider.filtro.keywords.siguiente.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

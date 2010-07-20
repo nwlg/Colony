@@ -1,0 +1,32 @@
+#detalleClasificacion.action {}
+#detalleClasificacion.action #form_submit {}
+
+#detalleClasificacion.action .identificadorOde {}
+#detalleClasificacion.action .identificadorOde .label {}
+#detalleClasificacion.action .identificadorOde .field {}
+#detalleClasificacion.action .tituloClasificacion {}
+#detalleClasificacion.action .tituloClasificacion .label {}
+#detalleClasificacion.action .tituloClasificacion .field {}
+#detalleClasificacion.action .botonPulsado {}
+#detalleClasificacion.action .botonPulsado .label {}
+#detalleClasificacion.action .botonPulsado .field {}
+
+#cancelar.action {}
+#cancelar.action #form_submit {}
+
+#cancelar.action .identificadorOde {}
+#cancelar.action .identificadorOde .label {}
+#cancelar.action .identificadorOde .field {}
+#cancelar.action .listadoClasificacion {}
+#cancelar.action .listadoClasificacion .label {}
+#cancelar.action .listadoClasificacion .field {}
+
+#listadoClasificacion.table {}
+#listadoClasificacion.table th {}
+#listadoClasificacion.table td div {}
+
+#listadoClasificacion.table th.tituloClasificacion {}
+#listadoClasificacion.table td div.tituloClasificacion {}
+
+
+

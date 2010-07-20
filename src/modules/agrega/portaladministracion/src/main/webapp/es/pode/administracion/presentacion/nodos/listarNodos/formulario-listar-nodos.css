@@ -1,0 +1,33 @@
+#crearNodo.action {}
+#crearNodo.action #form_submit {}
+
+
+#modificarNodo.action {}
+#modificarNodo.action #form_submit {}
+
+#modificarNodo.action .id {}
+#modificarNodo.action .id .label {}
+#modificarNodo.action .id .field {}
+
+#verNodo.action {}
+#verNodo.action #form_submit {}
+
+#verNodo.action .id {}
+#verNodo.action .id .label {}
+#verNodo.action .id .field {}
+
+#nodos.table {}
+#nodos.table th {}
+#nodos.table td div {}
+
+#nodos.table th.id {}
+#nodos.table td div.id {}
+
+#nodos.table th.nodo {}
+#nodos.table td div.nodo {}
+
+#nodos.table th.url {}
+#nodos.table td div.url {}
+
+
+

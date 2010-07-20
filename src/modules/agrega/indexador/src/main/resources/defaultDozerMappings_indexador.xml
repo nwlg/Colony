@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN" "http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+	<mapping wildcard="true" map-id="DEF_MAPPING_INDICE_INDICEVO">
+		<class-a>es.pode.indexador.negocio.dominio.IndiceImpl</class-a>
+		<class-b>es.pode.indexador.negocio.servicios.indexado.IndiceVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_INDICEVO_INDICE">
+		<class-a>es.pode.indexador.negocio.servicios.indexado.IndiceVO</class-a>
+		<class-b>es.pode.indexador.negocio.dominio.IndiceImpl</class-b>
+	</mapping>	
+</mappings>

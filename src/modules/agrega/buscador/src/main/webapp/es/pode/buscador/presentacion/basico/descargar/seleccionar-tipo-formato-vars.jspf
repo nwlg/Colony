@@ -1,0 +1,23 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="mostrarVuelta" value="${form.mostrarVuelta}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="titulo" value="${form.titulo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="busquedaSimpleAvanzada" value="${form.busquedaSimpleAvanzada}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idioma" value="${form.idioma}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tipoLayoutBuscador" value="${form.tipoLayoutBuscador}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="formato" value="${form.formato}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tipoBusqueda" value="${form.tipoBusqueda}"/>
+    </c:catch>
+</div>

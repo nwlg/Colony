@@ -1,0 +1,40 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="exportar" class="action">
+    <h3><bean:message key="listar.taxonomias.form.listar.taxonomias.exportar"/></h3>
+    <div class="trigger">
+        <html:form styleId="listarTaxonomiasFormListarTaxonomiasExportarForm" action="/ListarTaxonomias/FormListarTaxonomiasExportar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="nombre">
+                        <td class="label"><bean:message key="listar.taxonomias.form.listar.taxonomias.exportar.param.nombre"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.nombre}"/>
+                           <input type="text" name="nombre" value="${value}" onmouseover="hints.show('listar.taxonomias.form.listar.taxonomias.exportar.param.nombre.title')" onmouseout="hints.hide()"  id="exportarNombre"/>
+                        </td>
+                    </tr>
+                    <tr class="tipo">
+                        <td class="label"><bean:message key="listar.taxonomias.form.listar.taxonomias.exportar.param.tipo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipo}"/>
+                           <input type="text" name="tipo" value="${value}" onmouseover="hints.show('listar.taxonomias.form.listar.taxonomias.exportar.param.tipo.title')" onmouseout="hints.hide()"  id="exportarTipo"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('exportar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="listar.taxonomias.form.listar.taxonomias.exportar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

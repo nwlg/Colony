@@ -1,0 +1,32 @@
+#volver.action {}
+#volver.action #form_submit {}
+
+#volver.action .tituloRelacion {}
+#volver.action .tituloRelacion .label {}
+#volver.action .tituloRelacion .field {}
+#volver.action .identificadorOde {}
+#volver.action .identificadorOde .label {}
+#volver.action .identificadorOde .field {}
+#volver.action .botonPulsado {}
+#volver.action .botonPulsado .label {}
+#volver.action .botonPulsado .field {}
+#volver.action .comboIdioma {}
+#volver.action .comboIdioma .label {}
+#volver.action .comboIdioma .field {}
+#volver.action .descripcion {}
+#volver.action .descripcion .label {}
+#volver.action .descripcion .field {}
+#volver.action .tipo {}
+#volver.action .tipo .label {}
+#volver.action .tipo .field {}
+#volver.action .catalogo {}
+#volver.action .catalogo .label {}
+#volver.action .catalogo .field {}
+#volver.action .entrada {}
+#volver.action .entrada .label {}
+#volver.action .entrada .field {}
+#volver.action .mensajesError {}
+#volver.action .mensajesError .label {}
+#volver.action .mensajesError .field {}
+
+

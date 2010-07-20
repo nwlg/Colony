@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<modification-task xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="modificaciones.xsd">
+<changes>
+	<modification>
+		<lom-term>lom.technical.format</lom-term>
+		<value>text/html</value>
+		<new-value>image/gif</new-value>
+		<reg-exp>false</reg-exp>
+		<replace-all>false</replace-all>
+		<main-lom-only>true</main-lom-only>
+	</modification>
+	<validation/>
+	<addition>
+		<lom-term>lom.educational</lom-term>
+		<new-value><![CDATA[<learningResourceType><source>LOM-ESv1.0</source><value>narrative text</value></learningResourceType>]]></new-value>
+		<term-type>otro</term-type>
+		<main-lom-only>true</main-lom-only>
+	</addition>
+	<modification>
+		<lom-term>lom.general.coverage.string</lom-term>
+		<value>Universal</value>
+		<language>es</language>
+		<new-value>Para todos</new-value>
+		<reg-exp>false</reg-exp>
+		<replace-all>false</replace-all>
+		<main-lom-only>true</main-lom-only>
+	</modification>
+	<removal>
+		<lom-term>lom.general.coverage.string</lom-term>
+		<value>Publicidad.*</value>
+		<reg-exp>true</reg-exp>
+		<main-lom-only>true</main-lom-only>
+	</removal>
+	<check>
+		<lom-term>lom.general.coverage.string</lom-term>
+		<value>Publicidad.*</value>
+		<reg-exp>true</reg-exp>
+		<main-lom-only>true</main-lom-only>
+	</check>
+</changes>
+<objects>
+	<folder>
+		<path>odes/folder</path>
+	</folder>
+</objects>
+</modification-task>

@@ -1,0 +1,8 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="idModificado" value="${form.idModificado}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="categorias" value="${form.categorias}"/>
+    </c:catch>
+</div>

@@ -1,0 +1,13 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="volver" class="action">
+    <h3><bean:message key="catalogador.basico.catalogador.form.volver"/></h3>
+    <div class="trigger">
+        <form id="catalogadorBasicoCatalogadorFormVolverForm" action='<html:rewrite action="/CatalogadorBasico/CatalogadorFormVolver"/>' method="post">
+               <html:submit onmouseover="hints.show('volver')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="catalogador.basico.catalogador.form.volver"/>
+               </html:submit>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

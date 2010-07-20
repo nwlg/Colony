@@ -1,0 +1,35 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'navegar.arbol.curricular.navegar.arbol.curricular.navegar.param.id.termino.title':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.navegar.arbol.curricular.navegar.param.id.termino.title"/></formatting:escape>',
+                'navegar.arbol.curricular.navegar.arbol.curricular.buscar.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.navegar.arbol.curricular.buscar.param.idioma.buscador.title"/></formatting:escape>',
+                'navegar.arbol.curricular.navegar.arbol.curricular.buscar.param.tipo.busqueda.title':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.navegar.arbol.curricular.buscar.param.tipo.busqueda.title"/></formatting:escape>',
+                'navegar.arbol.curricular.navegar.arbol.curricular.select.action.param.action.title':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.navegar.arbol.curricular.select.action.param.action.title"/></formatting:escape>',
+                'navegar.arbol.curricular.navegar.arbol.curricular.select.action.param.id.termino.title':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.navegar.arbol.curricular.select.action.param.id.termino.title"/></formatting:escape>',
+                'navegar':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.navegar.arbol.curricular.navegar.title"/></formatting:escape>',
+                'navegar_no':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.navegar.arbol.curricular.navegar.title.notallowed"/></formatting:escape>',
+                'navegar_reset':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.navegar.arbol.curricular.navegar.title.reset"/></formatting:escape>',
+                'navegar_noreset':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.navegar.arbol.curricular.navegar.title.reset.not.allowed"/></formatting:escape>',
+                'buscar':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.navegar.arbol.curricular.buscar.title"/></formatting:escape>',
+                'buscar_no':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.navegar.arbol.curricular.buscar.title.notallowed"/></formatting:escape>',
+                'buscar_reset':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.navegar.arbol.curricular.buscar.title.reset"/></formatting:escape>',
+                'buscar_noreset':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.navegar.arbol.curricular.buscar.title.reset.not.allowed"/></formatting:escape>',
+                'selectAction':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.navegar.arbol.curricular.select.action.title"/></formatting:escape>',
+                'selectAction_no':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.navegar.arbol.curricular.select.action.title.notallowed"/></formatting:escape>',
+                'selectAction_reset':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.navegar.arbol.curricular.select.action.title.reset"/></formatting:escape>',
+                'selectAction_noreset':'<formatting:escape language="javascript"><bean:message key="navegar.arbol.curricular.navegar.arbol.curricular.select.action.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+</script>
+    </tiles:put>

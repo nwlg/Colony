@@ -1,0 +1,27 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'derechos.valido.ok.volver.param.identificador.ode.title':'<formatting:escape language="javascript"><bean:message key="derechos.valido.ok.volver.param.identificador.ode.title"/></formatting:escape>',
+                'derechos.valido.ok.volver.param.coste.title':'<formatting:escape language="javascript"><bean:message key="derechos.valido.ok.volver.param.coste.title"/></formatting:escape>',
+                'derechos.valido.ok.volver.param.copy.restricciones.title':'<formatting:escape language="javascript"><bean:message key="derechos.valido.ok.volver.param.copy.restricciones.title"/></formatting:escape>',
+                'derechos.valido.ok.volver.param.descripciones.title':'<formatting:escape language="javascript"><bean:message key="derechos.valido.ok.volver.param.descripciones.title"/></formatting:escape>',
+                'derechos.valido.ok.volver.param.combo.idioma.title':'<formatting:escape language="javascript"><bean:message key="derechos.valido.ok.volver.param.combo.idioma.title"/></formatting:escape>',
+                'derechos.valido.ok.volver.param.tipo.acceso.title':'<formatting:escape language="javascript"><bean:message key="derechos.valido.ok.volver.param.tipo.acceso.title"/></formatting:escape>',
+                'derechos.valido.ok.volver.param.listado.comunidades.title':'<formatting:escape language="javascript"><bean:message key="derechos.valido.ok.volver.param.listado.comunidades.title"/></formatting:escape>',
+                'volver':'<formatting:escape language="javascript"><bean:message key="derechos.valido.ok.volver.title"/></formatting:escape>',
+                'volver_no':'<formatting:escape language="javascript"><bean:message key="derechos.valido.ok.volver.title.notallowed"/></formatting:escape>',
+                'volver_reset':'<formatting:escape language="javascript"><bean:message key="derechos.valido.ok.volver.title.reset"/></formatting:escape>',
+                'volver_noreset':'<formatting:escape language="javascript"><bean:message key="derechos.valido.ok.volver.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

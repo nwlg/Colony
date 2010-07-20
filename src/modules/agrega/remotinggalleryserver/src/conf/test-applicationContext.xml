@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+  	<bean id="propiedadesConstantes" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	      <property name="locations">
+		  <list>
+			  	<value>classpath:agrega.properties</value>
+		  </list>
+		  </property>
+		  <property name="ignoreUnresolvablePlaceholders">
+		  		<value>true</value>
+		  </property>	  
+	</bean>
+	
+	<bean id="remotingGalleryServer" class="es.agrega.galeriaimg.rmi.GaleriaImgServerImpl">
+		<property name="uploadsPath" value="${path.generatedimgs}"/>
+		<property name="htmlScriptPath" value="${script.html.generatedimgs}"/>
+		<property name="imgScriptPath" value="${script.img.generatedimgs}"/>
+		<property name="resizedExtensions" value="${img.resize.extension}"/>
+	</bean>
+
+</beans>

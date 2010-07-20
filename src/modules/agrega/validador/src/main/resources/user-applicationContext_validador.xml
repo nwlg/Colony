@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+<import resource="parseadorXML-applicationContext.xml"/>
+	
+  <bean id="propiedadesConstantes" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+      <property name="locations">
+	  <list>
+		  	<value>classpath:spring.properties</value>
+	  </list>
+	  </property>
+	  <property name="ignoreUnresolvablePlaceholders">
+	  		<value>true</value>
+	  </property>	  
+  </bean>
+  <bean id="beanMapperAux" class="net.sf.dozer.util.mapping.DozerBeanMapper" singleton="true">
+		<property name="mappingFiles">
+			<list>
+				<value>customDozerMappings.xml</value>
+			</list>
+		</property>
+	</bean>
+	
+   
+</beans>

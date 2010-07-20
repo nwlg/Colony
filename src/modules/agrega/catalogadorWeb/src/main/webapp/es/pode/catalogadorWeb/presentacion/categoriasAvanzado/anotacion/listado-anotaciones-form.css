@@ -1,0 +1,35 @@
+#detalles.action {}
+#detalles.action #form_submit {}
+
+#detalles.action .tituloAnotacion {}
+#detalles.action .tituloAnotacion .label {}
+#detalles.action .tituloAnotacion .field {}
+#detalles.action .identificadorOde {}
+#detalles.action .identificadorOde .label {}
+#detalles.action .identificadorOde .field {}
+#detalles.action .botonPulsado {}
+#detalles.action .botonPulsado .label {}
+#detalles.action .botonPulsado .field {}
+
+#inicioAvanzado.action {}
+#inicioAvanzado.action #form_submit {}
+
+#inicioAvanzado.action .identificadorOde {}
+#inicioAvanzado.action .identificadorOde .label {}
+#inicioAvanzado.action .identificadorOde .field {}
+#inicioAvanzado.action .tituloAnotacion {}
+#inicioAvanzado.action .tituloAnotacion .label {}
+#inicioAvanzado.action .tituloAnotacion .field {}
+#inicioAvanzado.action .listadoAnotaciones {}
+#inicioAvanzado.action .listadoAnotaciones .label {}
+#inicioAvanzado.action .listadoAnotaciones .field {}
+
+#listadoAnotaciones.table {}
+#listadoAnotaciones.table th {}
+#listadoAnotaciones.table td div {}
+
+#listadoAnotaciones.table th.tituloAnotacion {}
+#listadoAnotaciones.table td div.tituloAnotacion {}
+
+
+

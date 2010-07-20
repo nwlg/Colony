@@ -1,0 +1,13 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="mostrarAvanzadoQuisoDecir" class="action">
+    <h3><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.mostrar.avanzado.quiso.decir"/></h3>
+    <div class="trigger">
+        <form id="buscarAvanzadoCUMostrarQuisoDecirAvanzadoMostrarAvanzadoQuisoDecirForm" action='<html:rewrite action="/BuscarAvanzadoCU/MostrarQuisoDecirAvanzadoMostrarAvanzadoQuisoDecir"/>' method="post">
+               <html:submit onmouseover="hints.show('mostrarAvanzadoQuisoDecir')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.mostrar.avanzado.quiso.decir"/>
+               </html:submit>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

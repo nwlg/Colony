@@ -1,0 +1,78 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="submit" class="action">
+    <h3><bean:message key="alta.taxonomias.form.nueva.taxonomia.submit"/></h3>
+    <div class="trigger">
+        <html:form styleId="altaTaxonomiasFormNuevaTaxonomiaSubmitForm" action="/AltaTaxonomias/FormNuevaTaxonomiaSubmit" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="action">
+                        <td class="label"><bean:message key="alta.taxonomias.form.nueva.taxonomia.submit.param.action"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.action}"/>
+                           <input type="text" name="action" value="${value}" onmouseover="hints.show('alta.taxonomias.form.nueva.taxonomia.submit.param.action.title')" onmouseout="hints.hide()"  id="submitAction"/>
+                        </td>
+                    </tr>
+                    <tr class="fichero1">
+                        <td class="label"><bean:message key="alta.taxonomias.form.nueva.taxonomia.submit.param.fichero1"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.fichero1}"/>
+                           <html:file name="form" property="fichero1" onmouseover="hints.show('alta.taxonomias.form.nueva.taxonomia.submit.param.fichero1.title')" onmouseout="hints.hide()"  styleId="submitFichero1"/>
+                        </td>
+                    </tr>
+                    <tr class="fichero2">
+                        <td class="label"><bean:message key="alta.taxonomias.form.nueva.taxonomia.submit.param.fichero2"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.fichero2}"/>
+                           <html:file name="form" property="fichero2" onmouseover="hints.show('alta.taxonomias.form.nueva.taxonomia.submit.param.fichero2.title')" onmouseout="hints.hide()"  styleId="submitFichero2"/>
+                        </td>
+                    </tr>
+                    <tr class="fichero3">
+                        <td class="label"><bean:message key="alta.taxonomias.form.nueva.taxonomia.submit.param.fichero3"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.fichero3}"/>
+                           <html:file name="form" property="fichero3" onmouseover="hints.show('alta.taxonomias.form.nueva.taxonomia.submit.param.fichero3.title')" onmouseout="hints.hide()"  styleId="submitFichero3"/>
+                        </td>
+                    </tr>
+                    <tr class="fichero4">
+                        <td class="label"><bean:message key="alta.taxonomias.form.nueva.taxonomia.submit.param.fichero4"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.fichero4}"/>
+                           <html:file name="form" property="fichero4" onmouseover="hints.show('alta.taxonomias.form.nueva.taxonomia.submit.param.fichero4.title')" onmouseout="hints.hide()"  styleId="submitFichero4"/>
+                        </td>
+                    </tr>
+                    <tr class="fichero5">
+                        <td class="label"><bean:message key="alta.taxonomias.form.nueva.taxonomia.submit.param.fichero5"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.fichero5}"/>
+                           <html:file name="form" property="fichero5" onmouseover="hints.show('alta.taxonomias.form.nueva.taxonomia.submit.param.fichero5.title')" onmouseout="hints.hide()"  styleId="submitFichero5"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Submit')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="alta.taxonomias.form.nueva.taxonomia.submit"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

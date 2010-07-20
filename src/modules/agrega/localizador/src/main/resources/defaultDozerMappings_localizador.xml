@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN" "http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+	<mapping wildcard="true" map-id="DEF_MAPPING_LOCALIZADOR_LOCALIZADORVO">
+		<class-a>es.pode.localizador.negocio.dominio.LocalizadorImpl</class-a>
+		<class-b>es.pode.localizador.negocio.servicios.LocalizadorVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_LOCALIZADORVO_LOCALIZADOR">
+		<class-a>es.pode.localizador.negocio.servicios.LocalizadorVO</class-a>
+		<class-b>es.pode.localizador.negocio.dominio.LocalizadorImpl</class-b>
+	</mapping>	
+</mappings>

@@ -1,0 +1,43 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'resultados.buscar.objeto.resultados.busqueda.buscar.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="resultados.buscar.objeto.resultados.busqueda.buscar.param.idioma.buscador.title"/></formatting:escape>',
+                'resultados.buscar.objeto.resultados.busqueda.submit.param.localizador.ode.title':'<formatting:escape language="javascript"><bean:message key="resultados.buscar.objeto.resultados.busqueda.submit.param.localizador.ode.title"/></formatting:escape>',
+                'resultados.buscar.objeto.resultados.busqueda.eliminar.param.path.title':'<formatting:escape language="javascript"><bean:message key="resultados.buscar.objeto.resultados.busqueda.eliminar.param.path.title"/></formatting:escape>',
+                'buscar':'<formatting:escape language="javascript"><bean:message key="resultados.buscar.objeto.resultados.busqueda.buscar.title"/></formatting:escape>',
+                'buscar_no':'<formatting:escape language="javascript"><bean:message key="resultados.buscar.objeto.resultados.busqueda.buscar.title.notallowed"/></formatting:escape>',
+                'buscar_reset':'<formatting:escape language="javascript"><bean:message key="resultados.buscar.objeto.resultados.busqueda.buscar.title.reset"/></formatting:escape>',
+                'buscar_noreset':'<formatting:escape language="javascript"><bean:message key="resultados.buscar.objeto.resultados.busqueda.buscar.title.reset.not.allowed"/></formatting:escape>',
+                'submit':'<formatting:escape language="javascript"><bean:message key="resultados.buscar.objeto.resultados.busqueda.submit.title"/></formatting:escape>',
+                'submit_no':'<formatting:escape language="javascript"><bean:message key="resultados.buscar.objeto.resultados.busqueda.submit.title.notallowed"/></formatting:escape>',
+                'submit_reset':'<formatting:escape language="javascript"><bean:message key="resultados.buscar.objeto.resultados.busqueda.submit.title.reset"/></formatting:escape>',
+                'submit_noreset':'<formatting:escape language="javascript"><bean:message key="resultados.buscar.objeto.resultados.busqueda.submit.title.reset.not.allowed"/></formatting:escape>',
+                'EliminarTodos':'<formatting:escape language="javascript"><bean:message key="resultados.buscar.objeto.resultados.busqueda.eliminar.todos.title"/></formatting:escape>',
+                'EliminarTodos_no':'<formatting:escape language="javascript"><bean:message key="resultados.buscar.objeto.resultados.busqueda.eliminar.todos.title.notallowed"/></formatting:escape>',
+                'EliminarTodos_reset':'<formatting:escape language="javascript"><bean:message key="resultados.buscar.objeto.resultados.busqueda.eliminar.todos.title.reset"/></formatting:escape>',
+                'EliminarTodos_noreset':'<formatting:escape language="javascript"><bean:message key="resultados.buscar.objeto.resultados.busqueda.eliminar.todos.title.reset.not.allowed"/></formatting:escape>',
+                'eliminar':'<formatting:escape language="javascript"><bean:message key="resultados.buscar.objeto.resultados.busqueda.eliminar.title"/></formatting:escape>',
+                'eliminar_no':'<formatting:escape language="javascript"><bean:message key="resultados.buscar.objeto.resultados.busqueda.eliminar.title.notallowed"/></formatting:escape>',
+                'eliminar_reset':'<formatting:escape language="javascript"><bean:message key="resultados.buscar.objeto.resultados.busqueda.eliminar.title.reset"/></formatting:escape>',
+                'eliminar_noreset':'<formatting:escape language="javascript"><bean:message key="resultados.buscar.objeto.resultados.busqueda.eliminar.title.reset.not.allowed"/></formatting:escape>',
+                'Anadir':'<formatting:escape language="javascript"><bean:message key="resultados.buscar.objeto.resultados.busqueda.anadir.title"/></formatting:escape>',
+                'Anadir_no':'<formatting:escape language="javascript"><bean:message key="resultados.buscar.objeto.resultados.busqueda.anadir.title.notallowed"/></formatting:escape>',
+                'Anadir_reset':'<formatting:escape language="javascript"><bean:message key="resultados.buscar.objeto.resultados.busqueda.anadir.title.reset"/></formatting:escape>',
+                'Anadir_noreset':'<formatting:escape language="javascript"><bean:message key="resultados.buscar.objeto.resultados.busqueda.anadir.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+
+</script>
+    </tiles:put>

@@ -1,0 +1,121 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="previsualizar" class="action">
+    <h3><bean:message key="detallar.odecu.mostrar.detalle.ode.previsualizar"/></h3>
+    <div class="trigger">
+        <html:form styleId="detallarODECUMostrarDetalleODEPrevisualizarForm" action="/DetallarODECU/MostrarDetalleODEPrevisualizar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="localizadorODE">
+                        <td class="label"><bean:message key="detallar.odecu.mostrar.detalle.ode.previsualizar.param.localizador.ode"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.localizadorODE}"/>
+                           ${value}
+                        </td>
+                    </tr>
+                    <tr class="idiomaBuscador">
+                        <td class="label"><bean:message key="detallar.odecu.mostrar.detalle.ode.previsualizar.param.idioma.buscador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idiomaBuscador}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.idiomaBuscadorBackingList}">
+                                  <html:select name="form" property="idiomaBuscador" onmouseover="hints.show('detallar.odecu.mostrar.detalle.ode.previsualizar.param.idioma.buscador.title')" onmouseout="hints.hide()"  styleId="previsualizarIdiomaBuscador">
+                                      <html:optionsCollection name="form" property="idiomaBuscadorBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="idiomaBuscador" onmouseover="hints.show('detallar.odecu.mostrar.detalle.ode.previsualizar.param.idioma.buscador.title')" onmouseout="hints.hide()"  styleId="previsualizarIdiomaBuscador"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="idLocalizador">
+                        <td class="label"><bean:message key="detallar.odecu.mostrar.detalle.ode.previsualizar.param.id.localizador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idLocalizador}"/>
+                           <input type="text" name="idLocalizador" value="${value}" onmouseover="hints.show('detallar.odecu.mostrar.detalle.ode.previsualizar.param.id.localizador.title')" onmouseout="hints.hide()"  id="previsualizarIdLocalizador"/>
+                        </td>
+                    </tr>
+                    <tr class="identificadorODE">
+                        <td class="label"><bean:message key="detallar.odecu.mostrar.detalle.ode.previsualizar.param.identificador.ode"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.identificadorODE}"/>
+                           <input type="text" name="identificadorODE" value="${value}" onmouseover="hints.show('detallar.odecu.mostrar.detalle.ode.previsualizar.param.identificador.ode.title')" onmouseout="hints.hide()"  id="previsualizarIdentificadorODE"/>
+                        </td>
+                    </tr>
+                    <tr class="titulo">
+                        <td class="label"><bean:message key="detallar.odecu.mostrar.detalle.ode.previsualizar.param.titulo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.titulo}"/>
+                           <input type="text" name="titulo" value="${value}" onmouseover="hints.show('detallar.odecu.mostrar.detalle.ode.previsualizar.param.titulo.title')" onmouseout="hints.hide()"  id="previsualizarTitulo"/>
+                        </td>
+                    </tr>
+                    <tr class="busquedaSimpleAvanzada">
+                        <td class="label"><bean:message key="detallar.odecu.mostrar.detalle.ode.previsualizar.param.busqueda.simple.avanzada"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.busquedaSimpleAvanzada}"/>
+                           <input type="text" name="busquedaSimpleAvanzada" value="${value}" onmouseover="hints.show('detallar.odecu.mostrar.detalle.ode.previsualizar.param.busqueda.simple.avanzada.title')" onmouseout="hints.hide()"  id="previsualizarBusquedaSimpleAvanzada"/>
+                        </td>
+                    </tr>
+                    <tr class="tipoBusqueda">
+                        <td class="label"><bean:message key="detallar.odecu.mostrar.detalle.ode.previsualizar.param.tipo.busqueda"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipoBusqueda}"/>
+                           <input type="text" name="tipoBusqueda" value="${value}" onmouseover="hints.show('detallar.odecu.mostrar.detalle.ode.previsualizar.param.tipo.busqueda.title')" onmouseout="hints.hide()"  id="previsualizarTipoBusqueda"/>
+                        </td>
+                    </tr>
+                    <tr class="tipoLayoutBuscador">
+                        <td class="label"><bean:message key="detallar.odecu.mostrar.detalle.ode.previsualizar.param.tipo.layout.buscador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipoLayoutBuscador}"/>
+                           <input type="text" name="tipoLayoutBuscador" value="${value}" onmouseover="hints.show('detallar.odecu.mostrar.detalle.ode.previsualizar.param.tipo.layout.buscador.title')" onmouseout="hints.hide()"  id="previsualizarTipoLayoutBuscador"/>
+                        </td>
+                    </tr>
+                    <tr class="seleccionarSecuencia">
+                        <td class="label"><bean:message key="detallar.odecu.mostrar.detalle.ode.previsualizar.param.seleccionar.secuencia"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.seleccionarSecuencia}"/>
+                           <input type="checkbox" name="seleccionarSecuencia" value="on" <c:if test="${value}">checked="checked" </c:if>onmouseover="hints.show('detallar.odecu.mostrar.detalle.ode.previsualizar.param.seleccionar.secuencia.title')" onmouseout="hints.hide()"  id="previsualizarSeleccionarSecuencia"/>
+                        </td>
+                    </tr>
+                    <tr class="mostrarVuelta">
+                        <td class="label"><bean:message key="detallar.odecu.mostrar.detalle.ode.previsualizar.param.mostrar.vuelta"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.mostrarVuelta}"/>
+                           <input type="checkbox" name="mostrarVuelta" value="on" <c:if test="${value}">checked="checked" </c:if>onmouseover="hints.show('detallar.odecu.mostrar.detalle.ode.previsualizar.param.mostrar.vuelta.title')" onmouseout="hints.hide()"  id="previsualizarMostrarVuelta"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('previsualizar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="detallar.odecu.mostrar.detalle.ode.previsualizar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

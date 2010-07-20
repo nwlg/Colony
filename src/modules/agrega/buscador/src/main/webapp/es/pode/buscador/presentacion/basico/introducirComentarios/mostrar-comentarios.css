@@ -1,0 +1,62 @@
+#insertarComentario.action {}
+#insertarComentario.action #form_submit {}
+
+#insertarComentario.action .titulo {}
+#insertarComentario.action .titulo .label {}
+#insertarComentario.action .titulo .field {}
+#insertarComentario.action .valoracion {}
+#insertarComentario.action .valoracion .label {}
+#insertarComentario.action .valoracion .field {}
+#insertarComentario.action .comentario {}
+#insertarComentario.action .comentario .label {}
+#insertarComentario.action .comentario .field {}
+#insertarComentario.action .idODE {}
+#insertarComentario.action .idODE .label {}
+#insertarComentario.action .idODE .field {}
+#insertarComentario.action .conInaprop {}
+#insertarComentario.action .conInaprop .label {}
+#insertarComentario.action .conInaprop .field {}
+#insertarComentario.action .tituloODE {}
+#insertarComentario.action .tituloODE .label {}
+#insertarComentario.action .tituloODE .field {}
+#insertarComentario.action .imagen {}
+#insertarComentario.action .imagen .label {}
+#insertarComentario.action .imagen .field {}
+#insertarComentario.action .idiomaODE {}
+#insertarComentario.action .idiomaODE .label {}
+#insertarComentario.action .idiomaODE .field {}
+#insertarComentario.action .tipoLayoutBuscador {}
+#insertarComentario.action .tipoLayoutBuscador .label {}
+#insertarComentario.action .tipoLayoutBuscador .field {}
+#insertarComentario.action .mostrarVuelta {}
+#insertarComentario.action .mostrarVuelta .label {}
+#insertarComentario.action .mostrarVuelta .field {}
+#insertarComentario.action .busquedaSimpleAvanzada {}
+#insertarComentario.action .busquedaSimpleAvanzada .label {}
+#insertarComentario.action .busquedaSimpleAvanzada .field {}
+#insertarComentario.action .urlODE {}
+#insertarComentario.action .urlODE .label {}
+#insertarComentario.action .urlODE .field {}
+
+#cancelar.action {}
+#cancelar.action #form_submit {}
+
+#cancelar.action .idODE {}
+#cancelar.action .idODE .label {}
+#cancelar.action .idODE .field {}
+#cancelar.action .idiomaODE {}
+#cancelar.action .idiomaODE .label {}
+#cancelar.action .idiomaODE .field {}
+#cancelar.action .tituloODE {}
+#cancelar.action .tituloODE .label {}
+#cancelar.action .tituloODE .field {}
+
+#comentarios.table {}
+#comentarios.table th {}
+#comentarios.table td div {}
+
+#comentarios.table th.id {}
+#comentarios.table td div.id {}
+
+
+

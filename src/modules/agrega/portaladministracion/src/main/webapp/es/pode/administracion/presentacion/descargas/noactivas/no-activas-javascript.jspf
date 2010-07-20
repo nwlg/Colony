@@ -1,0 +1,28 @@
+
+    <tiles:put name="javascript" type="string">
+        <script type="text/javascript" language="Javascript1.1" src="<html:rewrite action="/formValidation"/>"></script>
+        <html:javascript formName="noActivasNoActivasActivarForm" method="validateNoActivasActivarForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'no.activas.no.activas.activar.param.identificador.title':'<formatting:escape language="javascript"><bean:message key="no.activas.no.activas.activar.param.identificador.title"/></formatting:escape>',
+                'activar':'<formatting:escape language="javascript"><bean:message key="no.activas.no.activas.activar.title"/></formatting:escape>',
+                'activar_no':'<formatting:escape language="javascript"><bean:message key="no.activas.no.activas.activar.title.notallowed"/></formatting:escape>',
+                'activar_reset':'<formatting:escape language="javascript"><bean:message key="no.activas.no.activas.activar.title.reset"/></formatting:escape>',
+                'activar_noreset':'<formatting:escape language="javascript"><bean:message key="no.activas.no.activas.activar.title.reset.not.allowed"/></formatting:escape>',
+                'Activas':'<formatting:escape language="javascript"><bean:message key="no.activas.no.activas.activas.title"/></formatting:escape>',
+                'Activas_no':'<formatting:escape language="javascript"><bean:message key="no.activas.no.activas.activas.title.notallowed"/></formatting:escape>',
+                'Activas_reset':'<formatting:escape language="javascript"><bean:message key="no.activas.no.activas.activas.title.reset"/></formatting:escape>',
+                'Activas_noreset':'<formatting:escape language="javascript"><bean:message key="no.activas.no.activas.activas.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+</script>
+    </tiles:put>

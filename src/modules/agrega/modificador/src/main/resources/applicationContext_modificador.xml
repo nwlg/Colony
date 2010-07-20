@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <!-- ========================= GENERAL DEFINITIONS ========================= -->
+    <!-- Message source for this context, loaded from localized "messages_xx" files -->
+
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename"><value>messages</value></property>
+    </bean>
+
+	<bean id="beanMapper" class="net.sf.dozer.util.mapping.DozerBeanMapper" singleton="true">
+		<property name="mappingFiles">
+			<list>
+				<value>defaultDozerMappings_modificador.xml</value>
+				<value>customDozerMappings_modificador.xml</value>
+			</list>
+		</property>
+	</bean>
+
+    <!-- applicationContext merge-point -->
+
+    <!-- Hibernate SessionFactory -->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource"><ref bean="dataSource"/></property>
+        <property name="mappingResources">
+            <list>
+                <value>es/pode/modificador/negocio/dominio/Modificacion.hbm.xml</value>
+                <value>es/pode/modificador/negocio/dominio/ResultadoModificacion.hbm.xml</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
+                <prop key="hibernate.cache.use_query_cache">false</prop>
+                <prop key="hibernate.cache.provider_class">org.hibernate.cache.NoCacheProvider</prop>
+                <prop key="hibernate.cache.query_cache_factory">org.hibernate.cache.StandardQueryCacheFactory</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- The Hibernate interceptor -->
+    <bean id="hibernateInterceptor" class="org.springframework.orm.hibernate3.HibernateInterceptor">
+        <property name="sessionFactory"><ref bean="sessionFactory"/></property>
+    </bean>
+
+    <!-- Modificacion Entity Proxy with inner Modificacion Entity implementation -->
+    <bean id="modificacionDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.modificador.negocio.dominio.ModificacionDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.modificador.negocio.dominio.ModificacionDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+    <!-- ResultadoModificacion Entity Proxy with inner ResultadoModificacion Entity implementation -->
+    <bean id="resultadoModificacionDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.modificador.negocio.dominio.ResultadoModificacionDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.modificador.negocio.dominio.ResultadoModificacionDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+    <!-- ========================= Start of SERVICE DEFINITIONS ========================= -->
+
+      <!-- Service Transactional Interceptor -->
+    <bean id="serviceTransactionInterceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor">
+        <property name="transactionManager"><ref bean="transactionManager"/></property>
+        <property name="transactionAttributeSource">
+            <value>
+                es.pode.modificador.negocio.servicio.SrvHerramientaModificacion.obtenerTipos=PROPAGATION_REQUIRED
+                es.pode.modificador.negocio.servicio.SrvHerramientaModificacion.validar=PROPAGATION_REQUIRED
+                es.pode.modificador.negocio.servicio.SrvHerramientaModificacion.obtenerModificacionesConfiguradas=PROPAGATION_REQUIRED
+                es.pode.modificador.negocio.servicio.SrvHerramientaModificacion.obtenerModificacion=PROPAGATION_REQUIRED
+                es.pode.modificador.negocio.servicio.SrvHerramientaModificacion.recuperarResultadoODE=PROPAGATION_REQUIRED
+                es.pode.modificador.negocio.servicio.SrvHerramientaModificacion.restaurar=PROPAGATION_REQUIRED
+                es.pode.modificador.negocio.servicio.SrvHerramientaModificacion.ejecutarModificacion=PROPAGATION_REQUIRED
+                es.pode.modificador.negocio.servicio.SrvHerramientaModificacion.eliminarModificacion=PROPAGATION_REQUIRED
+                es.pode.modificador.negocio.servicio.SrvHerramientaModificacion.obtenerModificacionesEjecutadas=PROPAGATION_REQUIRED
+                es.pode.modificador.negocio.servicio.SrvHerramientaModificacion.obtenerResultadoModificacion=PROPAGATION_REQUIRED
+                es.pode.modificador.negocio.servicio.SrvHerramientaModificacion.importarModificacion=PROPAGATION_REQUIRED
+                es.pode.modificador.negocio.servicio.SrvHerramientaModificacion.exportarModificacion=PROPAGATION_REQUIRED
+                es.pode.modificador.negocio.servicio.SrvHerramientaModificacion.configurar=PROPAGATION_REQUIRED
+                es.pode.modificador.negocio.servicio.SrvHerramientaModificacion.recuperarPlantillaLomes=PROPAGATION_REQUIRED
+                es.pode.modificador.negocio.servicio.SrvHerramientaModificacion.simularModificacion=PROPAGATION_REQUIRED
+                es.pode.modificador.negocio.servicio.SrvHerramientaModificacion.obtenerModificacionesEnEjecucion=PROPAGATION_REQUIRED
+                es.pode.modificador.negocio.servicio.SrvHerramientaModificacion.registrarResultadosTarea=PROPAGATION_REQUIRED
+                es.pode.modificador.negocio.servicio.SrvHerramientaModificacion.obtenerFormularioModificar=PROPAGATION_REQUIRED
+                es.pode.modificador.negocio.servicio.SrvHerramientaModificacion.navegarLom=PROPAGATION_REQUIRED
+                es.pode.modificador.negocio.servicio.SrvHerramientaModificacion.navegarArbolCurricular=PROPAGATION_REQUIRED
+                es.pode.modificador.negocio.servicio.SrvHerramientaModificacion.navegarTesauro=PROPAGATION_REQUIRED
+                es.pode.modificador.negocio.servicio.SrvHerramientaModificacion.generarArbolCurricular=PROPAGATION_REQUIRED
+                es.pode.modificador.negocio.servicio.SrvHerramientaModificacion.planificarModificacion=PROPAGATION_REQUIRED
+                es.pode.modificador.negocio.servicio.SrvHerramientaModificacion.desprogramarTarea=PROPAGATION_REQUIRED
+                es.pode.modificador.negocio.servicio.SrvHerramientaModificacion.obtenerConfiguracionTarea=PROPAGATION_REQUIRED
+                es.pode.modificador.negocio.servicio.SrvHerramientaModificacion.generarETB=PROPAGATION_REQUIRED
+                es.pode.modificador.negocio.servicio.SrvHerramientaModificacion.chequearResultadosODE=PROPAGATION_REQUIRED
+            </value>
+        </property>
+    </bean>
+
+    <!-- SrvHerramientaModificacion Service Proxy with inner SrvHerramientaModificacion Service Implementation -->
+    <bean id="srvHerramientaModificacion" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.modificador.negocio.servicio.SrvHerramientaModificacionImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                <property name="modificacionDao"><ref bean="modificacionDao"/></property>
+                <property name="resultadoModificacionDao"><ref bean="resultadoModificacionDao"/></property>
+							            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.modificador.negocio.servicio.SrvHerramientaModificacion</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceSecurityInterceptor</value>
+                  <value>serviceTransactionInterceptor</value>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- ========================= End of SERVICE DEFINITIONS ========================= -->
+
+</beans>

@@ -1,0 +1,27 @@
+#cancelar.action {}
+#cancelar.action #form_submit {}
+
+
+#aceptar.action {}
+#aceptar.action #form_submit {}
+
+#aceptar.action .ficheroODE1 {}
+#aceptar.action .ficheroODE1 .label {}
+#aceptar.action .ficheroODE1 .field {}
+#aceptar.action .ficheroODE2 {}
+#aceptar.action .ficheroODE2 .label {}
+#aceptar.action .ficheroODE2 .field {}
+#aceptar.action .ficheroODE3 {}
+#aceptar.action .ficheroODE3 .label {}
+#aceptar.action .ficheroODE3 .field {}
+#aceptar.action .ficheroODE4 {}
+#aceptar.action .ficheroODE4 .label {}
+#aceptar.action .ficheroODE4 .field {}
+#aceptar.action .ficheroODE5 {}
+#aceptar.action .ficheroODE5 .label {}
+#aceptar.action .ficheroODE5 .field {}
+#aceptar.action .espacioLibre {}
+#aceptar.action .espacioLibre .label {}
+#aceptar.action .espacioLibre .field {}
+
+

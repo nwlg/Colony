@@ -1,0 +1,22 @@
+body, ul, div, fieldset, form, h1, h2, h3, h4, html, img, input, legend, li, object, ol, pre, select, span, table, tr, td {
+margin:0;
+padding:0;}
+
+body {
+background:#fff;
+color:#000;
+padding-left:0.5em;
+font-family:"Trebuchet MS",Verdana,Arial,Sans-serif;}
+
+a:link {color:#9A0404;background:#fff;}
+
+ul {left:1em;position:relative;margin-top:0.8em;}
+ol {left:2em;position:relative;margin-top:0.8em;}
+
+h1 {margin-bottom:0.4em}
+
+h3, #lateral2 {margin-bottom:0.8em}
+
+#destacados {margin-top:0.8em;}
+#contenido  {margin:0.8em 0 0.8em 0}
+#listado_clientes  {margin:0.8em 0 0.8em 0}

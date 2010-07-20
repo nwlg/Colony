@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN" "http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+	<!-- Put your custom dozer mappings here -->
+	
+	<!-- Entidades VO -->
+	
+	<mapping>
+		<class-a bean-factory="es.pode.modificador.negocio.utilidades.EstadosTareaFactory">es.pode.modificador.negocio.utilidades.EstadosTarea</class-a>
+		<class-b bean-factory="es.pode.modificador.negocio.utilidades.EstadosTareaFactory">es.pode.modificador.negocio.utilidades.EstadosTarea</class-b>
+	</mapping>
+	
+	<!-- Mapeos de configuracion a VOs -->
+	<mapping wildcard="false">
+		<class-a>es.pode.modificador.negocio.cambios.configuracion.castor.ModificationTask</class-a>
+		<class-b>es.pode.modificador.negocio.servicio.vo.ConfiguracionTarea</class-b>
+		<field>
+			<a>changes</a>
+			<b>cambios</b>
+		</field>
+		<field>
+			<a>objects</a>
+			<b>objetos</b>
+		</field>
+	</mapping>
+	
+	<mapping wildcard="false">
+		<class-a>es.pode.modificador.negocio.cambios.configuracion.castor.Changes</class-a>
+		<class-b>es.pode.modificador.negocio.servicio.vo.Changes</class-b>
+		<field custom-converter="es.pode.modificador.negocio.cambios.configuracion.dozer.converters.Changes2VOConverter">
+			<a>changesTypeItem</a>
+			<b>cambios</b>
+			<a-hint>es.pode.modificador.negocio.cambios.configuracion.castor.ChangesTypeItem</a-hint>
+			<b-hint>es.pode.modificador.negocio.servicio.vo.Change</b-hint>
+		</field>
+	</mapping>
+	
+	
+	
+	<mapping map-null="false" wildcard="false">
+		<class-a>es.pode.modificador.negocio.cambios.configuracion.castor.Objects</class-a>
+		<class-b>es.pode.modificador.negocio.servicio.vo.Objects</class-b>
+		<field>
+			<a>folder</a>
+			<b>paths</b>
+		</field>
+		<field>
+			<a>ode</a>
+			<b>objetos</b>
+		</field>
+	</mapping>
+	
+	
+	<mapping  map-null="false"  wildcard="false">
+		<class-a>es.pode.modificador.negocio.cambios.configuracion.castor.Folder</class-a>
+		<class-b>es.pode.modificador.negocio.servicio.vo.Folder</class-b>
+		<field>
+			<a>path</a>
+			<b>path</b>
+		</field>
+	</mapping>
+	
+	<mapping map-null="false" wildcard="false">
+		<class-a>es.pode.modificador.negocio.cambios.configuracion.castor.Ode</class-a>
+		<class-b>es.pode.modificador.negocio.servicio.vo.ODE</class-b>
+		<field>
+			<a>published</a>
+			<b>published</b>
+		</field>
+		<field>
+			<a>path</a>
+			<b>path</b>
+		</field>
+	</mapping>
+
+	
+	<!-- Mapeos de configuracion a clases de cambio -->
+	
+</mappings>

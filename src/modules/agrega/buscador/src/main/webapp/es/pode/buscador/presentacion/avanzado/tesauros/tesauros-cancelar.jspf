@@ -1,0 +1,49 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="cancelar" class="action">
+    <h3><bean:message key="tesauros.cu.tesauros.cancelar"/></h3>
+    <div class="trigger">
+        <html:form styleId="tesaurosCUTesaurosCancelarForm" action="/TesaurosCU/TesaurosCancelar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="tipoLayoutBuscador">
+                        <td class="label"><bean:message key="tesauros.cu.tesauros.cancelar.param.tipo.layout.buscador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipoLayoutBuscador}"/>
+                           <input type="text" name="tipoLayoutBuscador" value="${value}" onmouseover="hints.show('tesauros.cu.tesauros.cancelar.param.tipo.layout.buscador.title')" onmouseout="hints.hide()"  id="cancelarTipoLayoutBuscador"/>
+                        </td>
+                    </tr>
+                    <tr class="nomTesauros">
+                        <td class="label"><bean:message key="tesauros.cu.tesauros.cancelar.param.nom.tesauros"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.nomTesauros}"/>
+                           <input type="text" name="nomTesauros" value="${value}" onmouseover="hints.show('tesauros.cu.tesauros.cancelar.param.nom.tesauros.title')" onmouseout="hints.hide()"  id="cancelarNomTesauros"/>
+                        </td>
+                    </tr>
+                    <tr class="idTesauro">
+                        <td class="label"><bean:message key="tesauros.cu.tesauros.cancelar.param.id.tesauro"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idTesauro}"/>
+                           <input type="text" name="idTesauro" value="${value}" onmouseover="hints.show('tesauros.cu.tesauros.cancelar.param.id.tesauro.title')" onmouseout="hints.hide()"  id="cancelarIdTesauro"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('cancelar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="tesauros.cu.tesauros.cancelar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

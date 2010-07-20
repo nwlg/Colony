@@ -1,0 +1,223 @@
+#descargar.action {}
+#descargar.action #form_submit {}
+
+#descargar.action .localizadorODE {}
+#descargar.action .localizadorODE .label {}
+#descargar.action .localizadorODE .field {}
+#descargar.action .identificadorODE {}
+#descargar.action .identificadorODE .label {}
+#descargar.action .identificadorODE .field {}
+#descargar.action .busquedaSimpleAvanzada {}
+#descargar.action .busquedaSimpleAvanzada .label {}
+#descargar.action .busquedaSimpleAvanzada .field {}
+#descargar.action .tipoLayoutBuscador {}
+#descargar.action .tipoLayoutBuscador .label {}
+#descargar.action .tipoLayoutBuscador .field {}
+#descargar.action .mostrarVuelta {}
+#descargar.action .mostrarVuelta .label {}
+#descargar.action .mostrarVuelta .field {}
+
+#previsualizar.action {}
+#previsualizar.action #form_submit {}
+
+#previsualizar.action .localizadorODE {}
+#previsualizar.action .localizadorODE .label {}
+#previsualizar.action .localizadorODE .field {}
+#previsualizar.action .idiomaBuscador {}
+#previsualizar.action .idiomaBuscador .label {}
+#previsualizar.action .idiomaBuscador .field {}
+#previsualizar.action .idLocalizador {}
+#previsualizar.action .idLocalizador .label {}
+#previsualizar.action .idLocalizador .field {}
+#previsualizar.action .identificadorODE {}
+#previsualizar.action .identificadorODE .label {}
+#previsualizar.action .identificadorODE .field {}
+#previsualizar.action .titulo {}
+#previsualizar.action .titulo .label {}
+#previsualizar.action .titulo .field {}
+#previsualizar.action .busquedaSimpleAvanzada {}
+#previsualizar.action .busquedaSimpleAvanzada .label {}
+#previsualizar.action .busquedaSimpleAvanzada .field {}
+#previsualizar.action .tipoBusqueda {}
+#previsualizar.action .tipoBusqueda .label {}
+#previsualizar.action .tipoBusqueda .field {}
+#previsualizar.action .tipoLayoutBuscador {}
+#previsualizar.action .tipoLayoutBuscador .label {}
+#previsualizar.action .tipoLayoutBuscador .field {}
+#previsualizar.action .seleccionarSecuencia {}
+#previsualizar.action .seleccionarSecuencia .label {}
+#previsualizar.action .seleccionarSecuencia .field {}
+#previsualizar.action .mostrarVuelta {}
+#previsualizar.action .mostrarVuelta .label {}
+#previsualizar.action .mostrarVuelta .field {}
+
+#enviarMail.action {}
+#enviarMail.action #form_submit {}
+
+#enviarMail.action .identificadorODE {}
+#enviarMail.action .identificadorODE .label {}
+#enviarMail.action .identificadorODE .field {}
+#enviarMail.action .urlODE {}
+#enviarMail.action .urlODE .label {}
+#enviarMail.action .urlODE .field {}
+#enviarMail.action .tipoLayoutBuscador {}
+#enviarMail.action .tipoLayoutBuscador .label {}
+#enviarMail.action .tipoLayoutBuscador .field {}
+#enviarMail.action .mostrarVuelta {}
+#enviarMail.action .mostrarVuelta .label {}
+#enviarMail.action .mostrarVuelta .field {}
+
+#volverBusqueda.action {}
+#volverBusqueda.action #form_submit {}
+
+#volverBusqueda.action .autor {}
+#volverBusqueda.action .autor .label {}
+#volverBusqueda.action .autor .field {}
+#volverBusqueda.action .buscadorContenido {}
+#volverBusqueda.action .buscadorContenido .label {}
+#volverBusqueda.action .buscadorContenido .field {}
+#volverBusqueda.action .busquedaSimpleAvanzada {}
+#volverBusqueda.action .busquedaSimpleAvanzada .label {}
+#volverBusqueda.action .busquedaSimpleAvanzada .field {}
+#volverBusqueda.action .c_s_secuencia {}
+#volverBusqueda.action .c_s_secuencia .label {}
+#volverBusqueda.action .c_s_secuencia .field {}
+#volverBusqueda.action .contexto {}
+#volverBusqueda.action .contexto .label {}
+#volverBusqueda.action .contexto .field {}
+#volverBusqueda.action .descripcion {}
+#volverBusqueda.action .descripcion .label {}
+#volverBusqueda.action .descripcion .field {}
+#volverBusqueda.action .edad {}
+#volverBusqueda.action .edad .label {}
+#volverBusqueda.action .edad .field {}
+#volverBusqueda.action .anyoPublicacion {}
+#volverBusqueda.action .anyoPublicacion .label {}
+#volverBusqueda.action .anyoPublicacion .field {}
+#volverBusqueda.action .formato {}
+#volverBusqueda.action .formato .label {}
+#volverBusqueda.action .formato .field {}
+#volverBusqueda.action .idiomaBuscador {}
+#volverBusqueda.action .idiomaBuscador .label {}
+#volverBusqueda.action .idiomaBuscador .field {}
+#volverBusqueda.action .areaCurricular {}
+#volverBusqueda.action .areaCurricular .label {}
+#volverBusqueda.action .areaCurricular .field {}
+#volverBusqueda.action .pagina {}
+#volverBusqueda.action .pagina .label {}
+#volverBusqueda.action .pagina .field {}
+#volverBusqueda.action .procesoCognitivo {}
+#volverBusqueda.action .procesoCognitivo .label {}
+#volverBusqueda.action .procesoCognitivo .field {}
+#volverBusqueda.action .recurso {}
+#volverBusqueda.action .recurso .label {}
+#volverBusqueda.action .recurso .field {}
+#volverBusqueda.action .titulo {}
+#volverBusqueda.action .titulo .label {}
+#volverBusqueda.action .titulo .field {}
+#volverBusqueda.action .valoracion {}
+#volverBusqueda.action .valoracion .label {}
+#volverBusqueda.action .valoracion .field {}
+#volverBusqueda.action .mesPublicacion {}
+#volverBusqueda.action .mesPublicacion .label {}
+#volverBusqueda.action .mesPublicacion .field {}
+#volverBusqueda.action .diaPublicacion {}
+#volverBusqueda.action .diaPublicacion .label {}
+#volverBusqueda.action .diaPublicacion .field {}
+#volverBusqueda.action .areaCurricularBusqueda {}
+#volverBusqueda.action .areaCurricularBusqueda .label {}
+#volverBusqueda.action .areaCurricularBusqueda .field {}
+#volverBusqueda.action .tipoVisualizacion {}
+#volverBusqueda.action .tipoVisualizacion .label {}
+#volverBusqueda.action .tipoVisualizacion .field {}
+#volverBusqueda.action .tipoBusquedaArbol {}
+#volverBusqueda.action .tipoBusquedaArbol .label {}
+#volverBusqueda.action .tipoBusquedaArbol .field {}
+#volverBusqueda.action .tipoBusqueda {}
+#volverBusqueda.action .tipoBusqueda .label {}
+#volverBusqueda.action .tipoBusqueda .field {}
+
+#consultarMetadatos.action {}
+#consultarMetadatos.action #form_submit {}
+
+#consultarMetadatos.action .identificadorODE {}
+#consultarMetadatos.action .identificadorODE .label {}
+#consultarMetadatos.action .identificadorODE .field {}
+
+#gestionarPosicionado.action {}
+#gestionarPosicionado.action #form_submit {}
+
+
+#queEsEsto.action {}
+#queEsEsto.action #form_submit {}
+
+#queEsEsto.action .mostrarVuelta {}
+#queEsEsto.action .mostrarVuelta .label {}
+#queEsEsto.action .mostrarVuelta .field {}
+
+#introducirComentarios.action {}
+#introducirComentarios.action #form_submit {}
+
+
+#agregacionOde.action {}
+#agregacionOde.action #form_submit {}
+
+#agregacionOde.action .titulo {}
+#agregacionOde.action .titulo .label {}
+#agregacionOde.action .titulo .field {}
+#agregacionOde.action .identificadorODE {}
+#agregacionOde.action .identificadorODE .label {}
+#agregacionOde.action .identificadorODE .field {}
+#agregacionOde.action .agregacionCorrecta {}
+#agregacionOde.action .agregacionCorrecta .label {}
+#agregacionOde.action .agregacionCorrecta .field {}
+#agregacionOde.action .tipoLayoutBuscador {}
+#agregacionOde.action .tipoLayoutBuscador .label {}
+#agregacionOde.action .tipoLayoutBuscador .field {}
+#agregacionOde.action .tipoAgregacion {}
+#agregacionOde.action .tipoAgregacion .label {}
+#agregacionOde.action .tipoAgregacion .field {}
+#agregacionOde.action .idioma {}
+#agregacionOde.action .idioma .label {}
+#agregacionOde.action .idioma .field {}
+
+#listarComentarios.action {}
+#listarComentarios.action #form_submit {}
+
+#listarComentarios.action .idODE {}
+#listarComentarios.action .idODE .label {}
+#listarComentarios.action .idODE .field {}
+#listarComentarios.action .tituloODE {}
+#listarComentarios.action .tituloODE .label {}
+#listarComentarios.action .tituloODE .field {}
+#listarComentarios.action .imagen {}
+#listarComentarios.action .imagen .label {}
+#listarComentarios.action .imagen .field {}
+#listarComentarios.action .idiomaODE {}
+#listarComentarios.action .idiomaODE .label {}
+#listarComentarios.action .idiomaODE .field {}
+#listarComentarios.action .tipoLayoutBuscador {}
+#listarComentarios.action .tipoLayoutBuscador .label {}
+#listarComentarios.action .tipoLayoutBuscador .field {}
+
+#anadirODEPersonal.action {}
+#anadirODEPersonal.action #form_submit {}
+
+
+#valorarODE.action {}
+#valorarODE.action #form_submit {}
+
+#valorarODE.action .identificadorODE {}
+#valorarODE.action .identificadorODE .label {}
+#valorarODE.action .identificadorODE .field {}
+#valorarODE.action .idioma {}
+#valorarODE.action .idioma .label {}
+#valorarODE.action .idioma .field {}
+#valorarODE.action .valoracion {}
+#valorarODE.action .valoracion .label {}
+#valorarODE.action .valoracion .field {}
+#valorarODE.action .mostrarVuelta {}
+#valorarODE.action .mostrarVuelta .label {}
+#valorarODE.action .mostrarVuelta .field {}
+
+

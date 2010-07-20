@@ -1,0 +1,17 @@
+#submit.action {}
+#submit.action #form_submit {}
+
+#submit.action .identifier {}
+#submit.action .identifier .label {}
+#submit.action .identifier .field {}
+#submit.action .title {}
+#submit.action .title .label {}
+#submit.action .title .field {}
+#submit.action .esModificar {}
+#submit.action .esModificar .label {}
+#submit.action .esModificar .field {}
+#submit.action .action {}
+#submit.action .action .label {}
+#submit.action .action .field {}
+
+

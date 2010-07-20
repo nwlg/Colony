@@ -1,0 +1,37 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'catalogador.basico.catalogador.form.submit.param.titulo.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.catalogador.form.submit.param.titulo.title"/></formatting:escape>',
+                'catalogador.basico.catalogador.form.submit.param.idioma.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.catalogador.form.submit.param.idioma.title"/></formatting:escape>',
+                'catalogador.basico.catalogador.form.submit.param.descripcion.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.catalogador.form.submit.param.descripcion.title"/></formatting:escape>',
+                'catalogador.basico.catalogador.form.submit.param.tipo.recurso.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.catalogador.form.submit.param.tipo.recurso.title"/></formatting:escape>',
+                'catalogador.basico.catalogador.form.submit.param.idioma.destinatario.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.catalogador.form.submit.param.idioma.destinatario.title"/></formatting:escape>',
+                'catalogador.basico.catalogador.form.submit.param.arboles.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.catalogador.form.submit.param.arboles.title"/></formatting:escape>',
+                'catalogador.basico.catalogador.form.submit.param.id.arbol.title':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.catalogador.form.submit.param.id.arbol.title"/></formatting:escape>',
+                'volver':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.catalogador.form.volver.title"/></formatting:escape>',
+                'volver_no':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.catalogador.form.volver.title.notallowed"/></formatting:escape>',
+                'volver_reset':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.catalogador.form.volver.title.reset"/></formatting:escape>',
+                'volver_noreset':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.catalogador.form.volver.title.reset.not.allowed"/></formatting:escape>',
+                'Submit':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.catalogador.form.submit.title"/></formatting:escape>',
+                'Submit_no':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.catalogador.form.submit.title.notallowed"/></formatting:escape>',
+                'Submit_reset':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.catalogador.form.submit.title.reset"/></formatting:escape>',
+                'Submit_noreset':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.catalogador.form.submit.title.reset.not.allowed"/></formatting:escape>',
+                'Importar':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.catalogador.form.importar.title"/></formatting:escape>',
+                'Importar_no':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.catalogador.form.importar.title.notallowed"/></formatting:escape>',
+                'Importar_reset':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.catalogador.form.importar.title.reset"/></formatting:escape>',
+                'Importar_noreset':'<formatting:escape language="javascript"><bean:message key="catalogador.basico.catalogador.form.importar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+</script>
+    </tiles:put>

@@ -1,0 +1,16 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="eliminar" class="action">
+    <h3><bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.eliminar"/></h3>
+    <div class="trigger">
+			<authz:authorize  ifAnyGranted="ROLE_CATALOGADOR">
+        <html:form styleId="objetosDespublicadosCUMostrarODESDespublicadosEliminarForm" action="/ObjetosDespublicadosCU/MostrarODESDespublicadosEliminar" method="post" enctype="multipart/form-data">
+            <%@ include file="/es/pode/gestorFlujo/presentacion/objetosDespublicados/mostrar-odesdespublicados-listaODES.jspf" %>
+               <html:submit onmouseover="hints.show('Eliminar')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.eliminar"/>
+               </html:submit>	
+        </html:form>
+			</authz:authorize>	
+    </div>
+
+</div>
+ <br class="clr"/>

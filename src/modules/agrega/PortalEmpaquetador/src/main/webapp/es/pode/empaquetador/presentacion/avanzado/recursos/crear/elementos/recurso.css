@@ -1,0 +1,47 @@
+#crear.action {}
+#crear.action #form_submit {}
+
+#crear.action .action {}
+#crear.action .action .label {}
+#crear.action .action .field {}
+
+#organizaciones.action {}
+#organizaciones.action #form_submit {}
+
+
+#archivos.action {}
+#archivos.action #form_submit {}
+
+
+#submanifiestos.action {}
+#submanifiestos.action #form_submit {}
+
+
+#recursos.action {}
+#recursos.action #form_submit {}
+
+
+#submitPrincipal.action {}
+#submitPrincipal.action #form_submit {}
+
+#submitPrincipal.action .action {}
+#submitPrincipal.action .action .label {}
+#submitPrincipal.action .action .field {}
+
+#archivos.table {}
+#archivos.table th {}
+#archivos.table td div {}
+
+#archivos.table th.nombre {}
+#archivos.table td div.nombre {}
+
+
+#dependencias.table {}
+#dependencias.table th {}
+#dependencias.table td div {}
+
+#dependencias.table th.identifier {}
+#dependencias.table td div.identifier {}
+
+
+

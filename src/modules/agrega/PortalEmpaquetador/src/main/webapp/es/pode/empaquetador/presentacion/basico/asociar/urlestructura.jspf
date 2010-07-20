@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="estructura" class="action">
+    <h3><bean:message key="asociar.url.estructura"/></h3>
+    <div class="trigger">
+        <form id="asociarURLEstructuraForm" action='<html:rewrite action="/Asociar/URLEstructura"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_DOCENTE,ROLE_CATALOGADOR,ROLE_PUBLICADOR,ROLE_ADMINISTRADOR">
+               <html:submit onmouseover="hints.show('Estructura')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="asociar.url.estructura"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

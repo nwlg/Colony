@@ -1,0 +1,27 @@
+#crearNodoSQI.action {}
+#crearNodoSQI.action #form_submit {}
+
+
+#modificarNodoSQI.action {}
+#modificarNodoSQI.action #form_submit {}
+
+#modificarNodoSQI.action .id {}
+#modificarNodoSQI.action .id .label {}
+#modificarNodoSQI.action .id .field {}
+
+#verNodoSQI.action {}
+#verNodoSQI.action #form_submit {}
+
+#verNodoSQI.action .id {}
+#verNodoSQI.action .id .label {}
+#verNodoSQI.action .id .field {}
+
+#nodos.table {}
+#nodos.table th {}
+#nodos.table td div {}
+
+#nodos.table th.id {}
+#nodos.table td div.id {}
+
+
+

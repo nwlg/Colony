@@ -1,0 +1,33 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="volver" class="action">
+    <h3><bean:message key="exportar.lomes.lomes.no.valido.volver"/></h3>
+    <div class="trigger">
+        <html:form styleId="exportarLomesLomesNoValidoVolverForm" action="/ExportarLomes/LomesNoValidoVolver" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="regreso">
+                        <td class="label"><bean:message key="exportar.lomes.lomes.no.valido.volver.param.regreso"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.regreso}"/>
+                           <input type="text" name="regreso" value="${value}" onmouseover="hints.show('exportar.lomes.lomes.no.valido.volver.param.regreso.title')" onmouseout="hints.hide()"  id="volverRegreso"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR,ROLE_CATALOGADOR,ROLE_PUBLICADOR,ROLE_DOCENTE">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Volver')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="exportar.lomes.lomes.no.valido.volver"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//Spring//DTD Bean//EN" 
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<!-- Application Context -->
+<beans>    
+<!-- Importo el contexto de parseadorXML.jar -->
+    <import resource="parseadorXML-applicationContext.xml"/>
+    <!--          External Beans               -->
+    <bean id="ScormDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.parseadorXML.SCORM2004Dao">
+            	<property name="beanMapper">
+             		<ref bean="beanMapperODEs"/>
+         		</property>
+         	</bean>
+        </property>       
+    </bean>  
+    <bean id="ZipDao" class="es.pode.soporte.zip.TrueZipDaoImpl">
+   </bean> 
+   <bean id="beanMapperAux" class="net.sf.dozer.util.mapping.DozerBeanMapper" singleton="true">
+		<property name="mappingFiles">
+			<list>
+				<value>customDozerMappings_entregar.xml</value>
+			</list>
+		</property>
+	</bean>
+   <bean id="EntregarDozerDao" class="es.pode.entregar.servicio.dominio.EntregarDozerDao">
+		<property name="beanMapperAux">
+			<ref local="beanMapperAux"/>
+		</property>
+		<property name="scorm">
+			<ref bean="scorm2004Dao"/>
+		</property>
+	</bean>
+</beans>
+  

@@ -1,0 +1,32 @@
+<div id="tags" class="table">
+    <form id="tags" name="" action="" method="post" enctype="multipart/form-data">
+    <display:table name="${form.tags}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="listado-tags-tags.pdf" />
+        <display:column media="html">
+            <input type="checkbox" name="tagRowSelectionAsArray" value="${row.tag}" title='<bean:message key="select.deselect.this.row"/>'/>
+        </display:column>
+
+        <display:column media="xml csv excel pdf"
+            titleKey="listar.tag.listado.tags.param.tags.tag"
+            autolink="true" paramId="tag"
+            property="tag">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="tag" paramId="tag"
+            sortProperty="tag" sortable="true"
+            titleKey="listar.tag.listado.tags.param.tags.tag"
+            property="tag" />
+   
+    </display:table>
+    <c:if test="${!empty form.tags}">
+            <input type="submit" value="<bean:message key="listar.tag.listado.tags.eliminar"/>" onclick="this.form.name='listarTagListadoTagsEliminarForm';this.form.action='<html:rewrite action="/ListarTag/ListadoTagsEliminar"/>';" onmouseover="hints.show('Eliminar')" onmouseout="hints.hide()"/>
+            <input type="button" value="<bean:message key="select.deselect.all"/>" onclick="var boxes=this.form.elements['tagRowSelectionAsArray'];var setChecked=(boxes.length==0)?false:!boxes[0].checked;for(var i=0;i<boxes.length;i++)boxes[i].checked=setChecked;"/>
+    </c:if>
+    </form>
+</div>
+

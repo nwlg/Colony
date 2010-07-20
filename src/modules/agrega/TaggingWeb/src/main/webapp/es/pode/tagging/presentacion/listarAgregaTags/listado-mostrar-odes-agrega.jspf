@@ -1,0 +1,31 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="mostrarOdesAgrega" class="action">
+    <h3><bean:message key="listar.agrega.tags.listado.mostrar.odes.agrega"/></h3>
+    <div class="trigger">
+        <html:form styleId="listarAgregaTagsListadoMostrarOdesAgregaForm" action="/ListarAgregaTags/ListadoMostrarOdesAgrega" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="tag">
+                        <td class="label"><bean:message key="listar.agrega.tags.listado.mostrar.odes.agrega.param.tag"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tag}"/>
+                           <input type="text" name="tag" value="${value}" onmouseover="hints.show('listar.agrega.tags.listado.mostrar.odes.agrega.param.tag.title')" onmouseout="hints.hide()"  id="mostrarOdesAgregaTag"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('MostrarOdesAgrega')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="listar.agrega.tags.listado.mostrar.odes.agrega"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

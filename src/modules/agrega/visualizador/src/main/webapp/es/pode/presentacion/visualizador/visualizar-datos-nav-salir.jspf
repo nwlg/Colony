@@ -1,0 +1,13 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="salir" class="action">
+    <h3><bean:message key="visualizar.visualizar.datos.nav.salir"/></h3>
+    <div class="trigger">
+        <form id="visualizarVisualizarDatosNavSalirForm" action='<html:rewrite action="/Visualizar/VisualizarDatosNavSalir"/>' method="post">
+               <html:submit onmouseover="hints.show('Salir')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="visualizar.visualizar.datos.nav.salir"/>
+               </html:submit>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

@@ -1,0 +1,16 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="submit" class="action">
+    <h3><bean:message key="modificaciones.pendientes.listado.submit"/></h3>
+    <div class="trigger">
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR,ROLE_ADMINISTRADOR">
+        <html:form styleId="modificacionesPendientesListadoSubmitForm" action="/ModificacionesPendientes/ListadoSubmit" method="post" enctype="multipart/form-data">
+            <%@ include file="/es/pode/modificador/presentacion/pendientes/listado-modificaciones.jspf" %>
+               <html:submit onmouseover="hints.show('Submit')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="modificaciones.pendientes.listado.submit"/>
+               </html:submit>	
+        </html:form>
+			</authz:authorize>	
+    </div>
+
+</div>
+ <br class="clr"/>

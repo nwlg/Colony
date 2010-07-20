@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="filterInvocationInterceptor" class="org.acegisecurity.intercept.web.FilterSecurityInterceptor">
+   	
+		<!-- La gestion de autenticacion se pasa al AuthenticationManager (gestor de autenticacion) de la aplicacion -->
+		<property name="authenticationManager"><ref bean="authenticationManager"/></property>
+		<!-- La toma de decisiones sobre la autorizacion se delega al AccessDecisionManager (gestor de autorizacion) de la aplicacion -->
+		<property name="accessDecisionManager"><ref bean="accessDecisionManager"/></property>
+		
+		<property name="objectDefinitionSource">
+			<value>
+				PATTERN_TYPE_APACHE_ANT
+				/Noticias/*=ROLE_ADMINISTRADOR  
+							
+				/CrearNoticia/*=ROLE_ADMINISTRADOR  
+							
+				/EliminarNoticias/*=ROLE_ADMINISTRADOR  
+							
+				/ModificarNoticia/*=ROLE_ADMINISTRADOR  
+							
+				/VerNoticia/*=ROLE_ADMINISTRADOR  
+							
+				/ListarTareasPendientes/*=ROLE_ADMINISTRADOR  
+							
+				/ListarTareasEjecutadas/*=ROLE_ADMINISTRADOR  
+							
+				/ListarTareasEnEjecucion/*=ROLE_ADMINISTRADOR  
+							
+				/CrearTarea/*=ROLE_ADMINISTRADOR  
+							
+				/EliminarTrabajo/*=ROLE_ADMINISTRADOR  
+							
+				/EliminarTareas/*=ROLE_ADMINISTRADOR  
+							
+				/EjecutarTarea/*=ROLE_ADMINISTRADOR  
+							
+				/Informe/*=ROLE_ADMINISTRADOR  
+							
+				/PararTarea/*=ROLE_ADMINISTRADOR  
+							
+				/ObtenerTCargaODEs/*=ROLE_ADMINISTRADOR  
+							
+				/DescripcionTarea/*=ROLE_ADMINISTRADOR  
+							
+				/BajaUsuario/*=ROLE_ADMINISTRADOR  
+							
+				/AltaUsuario/*=ROLE_ADMINISTRADOR  
+							
+				/ModificarUsuario/*=ROLE_ADMINISTRADOR  
+							
+				/VerGrupo/*=ROLE_ADMINISTRADOR  
+							
+				/AltaGrupo/*=ROLE_ADMINISTRADOR  
+							
+				/BajaGrupo/*=ROLE_ADMINISTRADOR  
+							
+				/ModificarGrupo/*=ROLE_ADMINISTRADOR  
+							
+				/VerUsuario/*=ROLE_ADMINISTRADOR  
+							
+				/ListarUsuarios/*=ROLE_ADMINISTRADOR  
+							
+				/ListarGrupos/*=ROLE_ADMINISTRADOR  
+							
+				/AltaUsuarioPendiente/*=ROLE_ADMINISTRADOR  
+							
+				/ListarUsuariosPendientes/*=ROLE_ADMINISTRADOR  
+							
+				/VerUsuarioPendiente/*=ROLE_ADMINISTRADOR  
+							
+				/ListarUsuariosInactivos/*=ROLE_ADMINISTRADOR  
+							
+				/ActivarUsuario/*=ROLE_ADMINISTRADOR  
+							
+				/DesactivarUsuario/*=ROLE_ADMINISTRADOR  
+							
+				/VerUsuarioInactivo/*=ROLE_ADMINISTRADOR  
+							
+				/AltaNodo/*=ROLE_ADMINISTRADOR  
+							
+				/BajaNodo/*=ROLE_ADMINISTRADOR  
+							
+				/ModificarNodo/*=ROLE_ADMINISTRADOR  
+							
+				/ListarNodos/*=ROLE_ADMINISTRADOR  
+							
+				/VerNodo/*=ROLE_ADMINISTRADOR  
+							
+				/EliminarLog/*=ROLE_ADMINISTRADOR  
+							
+				/ListarLog/*=ROLE_ADMINISTRADOR  
+							
+				/CrearInforme/*=ROLE_ADMINISTRADOR  
+							
+				/ListarInformes/*=ROLE_ADMINISTRADOR  
+							
+				/EliminarInforme/*=ROLE_ADMINISTRADOR  
+							
+				/ListarInformesFederados/*=ROLE_ADMINISTRADOR  
+							
+				/EliminarInformesFederados/*=ROLE_ADMINISTRADOR  
+							
+				/ListarArboles/*=ROLE_ADMINISTRADOR  
+							
+				/AltaArboles/*=ROLE_ADMINISTRADOR  
+							
+				/BajaArboles/*=ROLE_ADMINISTRADOR  
+							
+				/AltaTaxonomias/*=ROLE_ADMINISTRADOR  
+							
+				/BajaTaxonomias/*=ROLE_ADMINISTRADOR  
+							
+				/ListarTaxonomias/*=ROLE_ADMINISTRADOR  
+							
+				/AltaTesauros/*=ROLE_ADMINISTRADOR  
+							
+				/BajaTesauros/*=ROLE_ADMINISTRADOR  
+							
+				/ListarTesauros/*=ROLE_ADMINISTRADOR  
+							
+				/MonitorizarNodos/*=ROLE_ADMINISTRADOR  
+							
+				/PortadaAdministracion/*=ROLE_ADMINISTRADOR,ROLE_PUBLICADOR,ROLE_EMPAQUETADOR,ROLE_DOCENTE,ROLE_CATALOGADOR,ROLE_INACTIVO  
+							
+				/Activas/*=ROLE_ADMINISTRADOR  
+							
+				/NoActivas/*=ROLE_ADMINISTRADOR  
+							
+				/CrearDescarga/*=ROLE_ADMINISTRADOR  
+							
+				/CategoriasNoticiasCU/*=ROLE_ADMINISTRADOR  
+							
+				/CrearCategoriaNoticiaCU/*=ROLE_ADMINISTRADOR  
+							
+				/ModificarCategoriaNoticiaCU/*=ROLE_ADMINISTRADOR  
+							
+				/VerCategoria/*=ROLE_ADMINISTRADOR  
+							
+				/EliminarCategoriaNoticiaCU/*=ROLE_ADMINISTRADOR  
+							
+				/AltaNodoSQI/*=ROLE_ADMINISTRADOR  
+							
+				/BajaNodoSQI/*=ROLE_ADMINISTRADOR  
+							
+				/ListarNodosSQI/*=ROLE_ADMINISTRADOR  
+							
+				/ModificarNodosSQI/*=ROLE_ADMINISTRADOR  
+							
+				/VerNodoSQI/*=ROLE_ADMINISTRADOR  
+							
+				/CategoriasFaqs/*=ROLE_ADMINISTRADOR  
+							
+				/CrearCategoriaFaq/*=ROLE_ADMINISTRADOR  
+							
+				/EliminarCategoriaFaq/*=ROLE_ADMINISTRADOR  
+							
+				/VerCategoriaFaq/*=ROLE_ADMINISTRADOR  
+							
+				/ModificarCategoriaFaq/*=ROLE_ADMINISTRADOR  
+							
+				/Faqs/*=ROLE_ADMINISTRADOR  
+							
+				/EliminarFAQ/*=ROLE_ADMINISTRADOR  
+							
+				/CrearFAQ/*=ROLE_ADMINISTRADOR  
+							
+				/ModificarFAQ/*=ROLE_ADMINISTRADOR  
+							
+				/VerFaq/*=ROLE_ADMINISTRADOR  
+							
+				/logincaptcha.do*=ROLE_ANONYMOUS
+				/login.do*=ROLE_ANONYMOUS
+				/layout/*=ROLE_ANONYMOUS
+				/captcha*=ROLE_ANONYMOUS
+				/casfailed.jsp*=ROLE_ANONYMOUS				
+				/**=ROLE_ANONYMOUS
+			</value>
+		</property>
+	</bean>
+	
+	<bean id="channelProcessingFilter" class="org.acegisecurity.securechannel.ChannelProcessingFilter">
+		<property name="channelDecisionManager"><ref bean="channelDecisionManager"/></property>
+		<property name="filterInvocationDefinitionSource">
+			<value>
+				PATTERN_TYPE_APACHE_ANT
+				/login.do*=REQUIRES_CAPTCHA_ABOVE_THRESOLD_REQUESTS,  REQUIRES_INSECURE_CHANNEL   
+
+				/**=REQUIRES_INSECURE_CHANNEL
+			</value>
+		</property>
+	</bean>
+
+</beans>   	
+   	

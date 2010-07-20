@@ -1,0 +1,30 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'detalle.clasificacion.detalle.clasificacion.submit.param.accion.title':'<formatting:escape language="javascript"><bean:message key="detalle.clasificacion.detalle.clasificacion.submit.param.accion.title"/></formatting:escape>',
+                'detalle.clasificacion.detalle.clasificacion.submit.param.titulo.clasificacion.title':'<formatting:escape language="javascript"><bean:message key="detalle.clasificacion.detalle.clasificacion.submit.param.titulo.clasificacion.title"/></formatting:escape>',
+                'detalle.clasificacion.detalle.clasificacion.submit.param.razon.title':'<formatting:escape language="javascript"><bean:message key="detalle.clasificacion.detalle.clasificacion.submit.param.razon.title"/></formatting:escape>',
+                'detalle.clasificacion.detalle.clasificacion.submit.param.ruta.taxonomica.title':'<formatting:escape language="javascript"><bean:message key="detalle.clasificacion.detalle.clasificacion.submit.param.ruta.taxonomica.title"/></formatting:escape>',
+                'detalle.clasificacion.detalle.clasificacion.submit.param.source.title':'<formatting:escape language="javascript"><bean:message key="detalle.clasificacion.detalle.clasificacion.submit.param.source.title"/></formatting:escape>',
+                'detalle.clasificacion.detalle.clasificacion.submit.param.combo.idioma.title':'<formatting:escape language="javascript"><bean:message key="detalle.clasificacion.detalle.clasificacion.submit.param.combo.idioma.title"/></formatting:escape>',
+                'detalle.clasificacion.detalle.clasificacion.submit.param.descripciones.title':'<formatting:escape language="javascript"><bean:message key="detalle.clasificacion.detalle.clasificacion.submit.param.descripciones.title"/></formatting:escape>',
+                'detalle.clasificacion.detalle.clasificacion.submit.param.palabras.clave.title':'<formatting:escape language="javascript"><bean:message key="detalle.clasificacion.detalle.clasificacion.submit.param.palabras.clave.title"/></formatting:escape>',
+                'detalle.clasificacion.detalle.clasificacion.submit.param.boton.pulsado.title':'<formatting:escape language="javascript"><bean:message key="detalle.clasificacion.detalle.clasificacion.submit.param.boton.pulsado.title"/></formatting:escape>',
+                'detalle.clasificacion.detalle.clasificacion.submit.param.vocab.name.title':'<formatting:escape language="javascript"><bean:message key="detalle.clasificacion.detalle.clasificacion.submit.param.vocab.name.title"/></formatting:escape>',
+                'submit':'<formatting:escape language="javascript"><bean:message key="detalle.clasificacion.detalle.clasificacion.submit.title"/></formatting:escape>',
+                'submit_no':'<formatting:escape language="javascript"><bean:message key="detalle.clasificacion.detalle.clasificacion.submit.title.notallowed"/></formatting:escape>',
+                'submit_reset':'<formatting:escape language="javascript"><bean:message key="detalle.clasificacion.detalle.clasificacion.submit.title.reset"/></formatting:escape>',
+                'submit_noreset':'<formatting:escape language="javascript"><bean:message key="detalle.clasificacion.detalle.clasificacion.submit.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

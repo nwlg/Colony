@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+  <bean id="propiedadesConstantes" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+      <property name="locations">
+	  <list>
+		  	<value>classpath:spring.properties</value>
+	  </list>
+	  </property>
+	  <property name="ignoreUnresolvablePlaceholders">
+	  		<value>true</value>
+	  </property>	  
+  </bean>
+
+   <bean id="registradorInterceptor" class="es.pode.soporte.auditoria.registrar.ServiceRegistrarInterceptor"></bean>
+
+	<bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+	      <property name="beanNames"><value>*SrvEntregarServiceImpl*</value></property>
+	      <property name="interceptorNames">
+	             <list>
+	                    <value>registradorInterceptor</value>
+	             </list>
+	      </property>
+      </bean>
+
+  <!-- <bean id="beanMapperAux" class="net.sf.dozer.util.mapping.DozerBeanMapper" singleton="true">
+		<property name="mappingFiles">
+			<list>
+				<value>customDozerMappings_entregar.xml</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="entregarDozerDao" class="es.pode.entregar.servicio.dominio.EntregarDozerDao">
+		<property name="beanMapperAux">
+			<ref local="beanMapperAux"/>
+		</property>
+		<property name="scorm">
+			<ref bean="scorm2004Dao"/>
+		</property>
+	</bean>
+ -->
+</beans>

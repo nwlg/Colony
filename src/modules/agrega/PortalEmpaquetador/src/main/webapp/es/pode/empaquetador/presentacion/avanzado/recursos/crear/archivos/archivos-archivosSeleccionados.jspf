@@ -1,0 +1,29 @@
+<div id="archivosSeleccionados" class="table">
+    <display:table name="${form.archivosSeleccionados}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="archivos-archivos-seleccionados.pdf" />
+
+        <display:column media="xml csv excel pdf"
+            titleKey="crear.recurso.avanzado.archivos.archivos.param.archivos.seleccionados.href"
+            autolink="true" paramId="href"
+            property="href">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="href" paramId="href"
+            sortProperty="href" sortable="true"
+            titleKey="crear.recurso.avanzado.archivos.archivos.param.archivos.seleccionados.href"
+            >
+            <div class="href">
+		
+ <c:set var="value" value="${row.href}"/>
+ <input type="text" name="href" value="${value}" onmouseover="hints.show('crear.recurso.avanzado.archivos.archivos.eliminar.param.href.title')" onmouseout="hints.hide()"  id="archivosSeleccionadosHref${row_rowNum}"/>
+            </div>
+       </display:column>
+   
+    </display:table>
+</div>
+

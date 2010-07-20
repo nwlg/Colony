@@ -1,0 +1,4 @@
+<interactivityType>
+${load:source.xml}
+${load:value.xml}
+</interactivityType>

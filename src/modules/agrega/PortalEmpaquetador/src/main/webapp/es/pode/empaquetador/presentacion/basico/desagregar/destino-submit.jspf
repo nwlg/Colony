@@ -1,0 +1,42 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="submit" class="action">
+    <h3><bean:message key="desagregar.basico.destino.submit"/></h3>
+    <div class="trigger">
+        <html:form styleId="desagregarBasicoDestinoSubmitForm" action="/DesagregarBasico/DestinoSubmit" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="action">
+                        <td class="label"><bean:message key="desagregar.basico.destino.submit.param.action"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.action}"/>
+                           <input type="text" name="action" value="${value}" onmouseover="hints.show('desagregar.basico.destino.submit.param.action.title')" onmouseout="hints.hide()"  id="submitAction"/>
+                        </td>
+                    </tr>
+                    <tr class="destino">
+                        <td class="label"><bean:message key="desagregar.basico.destino.submit.param.destino"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.destino}"/>
+                           <input type="text" name="destino" value="${value}" onmouseover="hints.show('desagregar.basico.destino.submit.param.destino.title')" onmouseout="hints.hide()"  id="submitDestino"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_DOCENTE,ROLE_CATALOGADOR,ROLE_PUBLICADOR,ROLE_ADMINISTRADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Submit')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="desagregar.basico.destino.submit"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

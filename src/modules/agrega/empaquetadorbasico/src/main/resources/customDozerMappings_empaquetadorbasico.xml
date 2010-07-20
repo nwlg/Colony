@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN" "http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+	<!-- Mapeo para objetos Fichero -->
+	<mapping wildcard="true">
+		<class-a>
+			es.pode.empaquetador.negocio.gestionficheros.Fichero
+		</class-a>
+		<class-b>
+			es.pode.empaquetador.negocio.servicio.FicheroVO
+		</class-b>
+		<field copy-by-reference="true">
+			<a>datos</a>
+			<b>datos</b>
+		</field>
+	</mapping>
+	<!-- Mapeo para VOs de ODEs basicos -->
+	<mapping wildcard="false" map-null="false" type="one-way">
+		<class-a>es.pode.empaquetador.negocio.servicio.OdeVO</class-a>
+		<class-b>es.pode.parseadorXML.castor.Manifest</class-b>
+		<field>
+			<a>identifier</a>
+			<b>identifier</b>
+		</field>
+		<field>
+			<a>ruta</a>
+			<b>base</b>
+		</field>
+		<field>
+			<a>metadata</a>
+			<b>metadata</b>
+		</field>
+		<field>
+			<a>organizacionPrincipal</a>
+			<b>organizations.default</b>
+		</field>
+	</mapping>
+
+	<mapping wildcard="false" map-null="false" type="one-way">
+		<class-a>es.pode.parseadorXML.castor.Manifest</class-a>
+		<class-b>es.pode.empaquetador.negocio.servicio.OdeVO</class-b>
+
+		<field>
+			<a>identifier</a>
+			<b>identifier</b>
+		</field>
+		<field>
+			<a>base</a>
+			<b>ruta</b>
+		</field>
+		<field>
+			<a>metadata</a>
+			<b>metadata</b>
+		</field>
+		<field>
+			<a>organizations.default</a>
+			<b>organizacionPrincipal</b>
+		</field>
+		<field relationship-type="non-cumulative">
+			<a>resources.resource</a>
+			<b>recursos</b>
+		</field>
+		<field relationship-type="non-cumulative">
+			<a>organizations.organization</a>
+			<b>organizaciones</b>
+		</field>
+		<field relationship-type="non-cumulative">
+			<a>manifest</a>
+			<b>submanifiestos</b>
+		</field>
+		<field custom-converter="es.pode.empaquetador.negocio.utilidades.LomVOConverter">
+			<a>metadata.grp_any.anyObject</a>
+			<b>lom</b>
+		</field>
+	</mapping>
+
+	<mapping wildcard="false" map-null="false">
+		<class-a>
+			es.pode.empaquetador.negocio.servicio.MetadataVO
+		</class-a>
+		<class-b>es.pode.parseadorXML.castor.Metadata</class-b>
+		<field>
+			<a>schema</a>
+			<b>schema</b>
+		</field>
+		<field>
+			<a>schemaVersion</a>
+			<b>schemaVersion</b>
+		</field>
+	</mapping>
+
+
+
+	<mapping wildcard="false" map-null="false" type="one-way">
+		<class-a>
+			es.pode.empaquetador.negocio.servicio.OrganizacionVO
+		</class-a>
+		<class-b>es.pode.parseadorXML.castor.Organization</class-b>
+		<field>
+			<a>title</a>
+			<b>title</b>
+		</field>
+		<field>
+			<a>identifier</a>
+			<b>identifier</b>
+		</field>
+	</mapping>
+
+	<mapping wildcard="false" map-null="false" type="one-way">
+		<class-a>es.pode.parseadorXML.castor.Organization</class-a>
+		<class-b>
+			es.pode.empaquetador.negocio.servicio.OrganizacionVO
+		</class-b>
+		<field>
+			<a>title</a>
+			<b>title</b>
+		</field>
+		<field>
+			<a>identifier</a>
+			<b>identifier</b>
+		</field>
+		<field relationship-type="non-cumulative">
+
+			<a>grp_any.anyObject</a>
+			<b>secuencia</b>
+			<a-hint>es.pode.parseadorXML.castor.Sequencing</a-hint>
+			<b-hint>
+				es.pode.empaquetador.negocio.servicio.SecuenciaVO
+			</b-hint>
+		</field>
+		<field relationship-type="non-cumulative">
+			<a>item</a>
+			<b>grupos</b>
+			<a-hint>es.pode.parseadorXML.castor.Item</a-hint>
+			<b-hint>
+				es.pode.empaquetador.negocio.servicio.GrupoVO
+			</b-hint>
+		</field>
+		<field custom-converter="es.pode.empaquetador.negocio.utilidades.LomVOConverter">
+			<a>metadata.grp_any.anyObject</a>
+			<b>lom</b>
+		</field>
+	</mapping>
+
+	<mapping wildcard="false" map-null="false" type="one-way">
+		<class-a>es.pode.empaquetador.negocio.servicio.GrupoVO</class-a>
+		<class-b>es.pode.parseadorXML.castor.Item</class-b>
+		<field>
+			<a>identifier</a>
+			<b>identifier</b>
+		</field>
+		<field>
+			<a>title</a>
+			<b>title</b>
+		</field>
+		<field>
+			<a>isvisible</a>
+			<b>isvisible</b>
+		</field>
+		<field>
+			<a>elementoReferenciado</a>
+			<b>identifierref</b>
+		</field>		
+	</mapping>
+
+	<mapping wildcard="false" map-null="false" type="one-way">
+		<class-a>es.pode.parseadorXML.castor.Item</class-a>
+		<class-b>es.pode.empaquetador.negocio.servicio.GrupoVO</class-b>
+		<field>
+			<a>identifier</a>
+			<b>identifier</b>
+		</field>
+		<field>
+			<a>title</a>
+			<b>title</b>
+		</field>
+		<field>
+			<a>isvisible</a>
+			<b>isvisible</b>
+		</field>
+		<field>
+			<a>identifierref</a>
+			<b>elementoReferenciado</b>
+		</field>
+		<field relationship-type="non-cumulative">
+			<a>item</a>
+			<b>grupos</b>
+			<a-hint>es.pode.parseadorXML.castor.Item</a-hint>
+			<b-hint>
+				es.pode.empaquetador.negocio.servicio.GrupoVO
+			</b-hint>
+		</field>
+		<field
+			custom-converter="es.pode.empaquetador.negocio.utilidades.SecuenciaVOConverter">
+			<a>grp_any.anyObject</a>
+			<b>secuencia</b>
+			<a-hint>es.pode.parseadorXML.castor.Sequencing</a-hint>
+			<b-hint>
+				es.pode.empaquetador.negocio.servicio.SecuenciaVO
+			</b-hint>
+		</field>
+		<field
+			custom-converter="es.pode.empaquetador.negocio.utilidades.TimeLimitActionVOConverter">
+			<a>grp_any.anyObject</a>
+			<b>timeLimitAction</b>
+		</field>
+		<field
+			custom-converter="es.pode.empaquetador.negocio.utilidades.DataFromLMSVOConverter">
+			<a>grp_any.anyObject</a>
+			<b>dataFromLMS</b>
+		</field>
+		<field
+			custom-converter="es.pode.empaquetador.negocio.utilidades.CompletionThresholdVOConverter">
+			<a>grp_any.anyObject</a>
+			<b>completionThreshold</b>
+		</field>
+		<field
+			custom-converter="es.pode.empaquetador.negocio.utilidades.PresentationVOConverter">
+			<a>grp_any.anyObject</a>
+			<b>presentation</b>
+		</field>
+		<field custom-converter="es.pode.empaquetador.negocio.utilidades.LomVOConverter">
+			<a>metadata.grp_any.anyObject</a>
+			<b>lom</b>
+		</field>
+	</mapping>
+
+
+	<mapping wildcard="false">
+		<class-a>
+			es.pode.empaquetador.negocio.servicio.SecuenciaVO
+		</class-a>
+		<class-b>es.pode.parseadorXML.castor.Sequencing</class-b>
+		<field>
+			<a>controlMode</a>
+			<b>controlMode</b>
+		</field>
+	</mapping>
+	<mapping wildcard="false">
+		<class-a>
+			es.pode.empaquetador.negocio.servicio.ControlModeVO
+		</class-a>
+		<class-b>es.pode.parseadorXML.castor.ControlMode</class-b>
+		<field>
+			<a>choice</a>
+			<b>choice</b>
+		</field>
+		<field>
+			<a>choiceExit</a>
+			<b>choiceExit</b>
+		</field>
+		<field>
+			<a>flow</a>
+			<b>flow</b>
+		</field>
+		<field>
+			<a>forwardOnly</a>
+			<b>forwardOnly</b>
+		</field>
+	</mapping>
+
+	<mapping wildcard="false" type="one-way" map-null="false">
+		<class-a>
+			es.pode.empaquetador.negocio.servicio.RecursoVO
+		</class-a>
+		<class-b>es.pode.parseadorXML.castor.Resource</class-b>
+		<field>
+			<a>identifier</a>
+			<b>identifier</b>
+		</field>
+		<field>
+			<a>href</a>
+			<b>href</b>
+		</field>
+		<field>
+			<a>type</a>
+			<b>type</b>
+		</field>
+		<field>
+			<a>scormType</a>
+			<b>scormType</b>
+		</field>
+		<field relationship-type="non-cumulative">
+			<a>fileList</a>
+			<b>file</b>
+		</field>
+		<field>
+			<a>dependencias</a>
+			<b>dependency</b>
+		</field>
+	</mapping>
+
+	<mapping wildcard="false" type="one-way">
+		<class-a>es.pode.parseadorXML.castor.Resource</class-a>
+		<class-b>
+			es.pode.empaquetador.negocio.servicio.RecursoVO
+		</class-b>
+		<field>
+			<a>identifier</a>
+			<b>identifier</b>
+		</field>
+		<field>
+			<a>href</a>
+			<b>href</b>
+		</field>
+		<field>
+			<a>type</a>
+			<b>type</b>
+		</field>
+		<field>
+			<a>scormType</a>
+			<b>scormType</b>
+		</field>
+		<field relationship-type="non-cumulative">
+			<a>file</a>
+			<b>fileList</b>
+		</field>
+		<field>
+			<a>dependency</a>
+			<b>dependencias</b>
+		</field>
+		<field custom-converter="es.pode.empaquetador.negocio.utilidades.LomVOConverter">
+			<a>metadata.grp_any.anyObject</a>
+			<b>lom</b>
+		</field>
+	</mapping>
+
+
+	<mapping wildcard="false" type="one-way">
+		<class-a>es.pode.empaquetador.negocio.servicio.FileVO</class-a>
+		<class-b>es.pode.parseadorXML.castor.File</class-b>
+		<field>
+			<a>href</a>
+			<b>href</b>
+		</field>
+	</mapping>
+	
+	<mapping wildcard="false" type="one-way">
+		<class-a>es.pode.parseadorXML.castor.File</class-a>
+		<class-b>es.pode.empaquetador.negocio.servicio.FileVO</class-b>
+		<field>
+			<a>href</a>
+			<b>href</b>
+		</field>
+		<field custom-converter="es.pode.empaquetador.negocio.utilidades.LomVOConverter">
+			<a>metadata.grp_any.anyObject</a>
+			<b>lom</b>
+		</field>
+	</mapping>
+	
+	
+	<mapping wildcard="false" type="one-way">
+		<class-a>es.pode.empaquetador.negocio.servicio.DependenciaVO</class-a>
+		<class-b>es.pode.parseadorXML.castor.Dependency</class-b>
+		<field>
+			<a>idRef</a>
+			<b>identifierref</b>
+		</field>
+	</mapping>
+	
+	<mapping wildcard="false" type="one-way">
+		<class-a>es.pode.parseadorXML.castor.Dependency</class-a>
+		<class-b>es.pode.empaquetador.negocio.servicio.DependenciaVO</class-b>
+		<field>
+			<a>identifierref</a>
+			<b>idRef</b>
+		</field>
+	</mapping>
+	
+	
+	
+	
+	<mapping wildcard="true" map-null="false">
+		<class-a>es.pode.parseadorXML.castor.Organization</class-a>
+		<class-b>es.pode.parseadorXML.castor.Organization</class-b>
+		<field relationship-type="non-cumulative">
+			<a>item</a>
+			<b>item</b>
+		</field>
+		<field relationship-type="non-cumulative">
+			<a>grp_any</a>
+			<b>grp_any</b>
+		</field>
+	</mapping>
+	<mapping wildcard="true" map-null="false">
+		<class-a>es.pode.parseadorXML.castor.Item</class-a>
+		<class-b>es.pode.parseadorXML.castor.Item</class-b>
+		<field relationship-type="non-cumulative">
+			<a>item</a>
+			<b>item</b>
+		</field>
+	</mapping>
+	<mapping wildcard="true" map-null="false">
+		<class-a>es.pode.parseadorXML.castor.Resources</class-a>
+		<class-b>es.pode.parseadorXML.castor.Resources</class-b>
+		<field relationship-type="non-cumulative">
+			<a>resource</a>
+			<b>resource</b>
+		</field>
+	</mapping>
+	<mapping wildcard="true" map-null="false">
+		<class-a>es.pode.parseadorXML.castor.Resource</class-a>
+		<class-b>es.pode.parseadorXML.castor.Resource</class-b>
+		<field relationship-type="non-cumulative">
+			<a>file</a>
+			<b>file</b>
+		</field>
+	</mapping>
+
+	<mapping wildcard="true" map-null="false">
+		<class-a>es.pode.parseadorXML.castor.Manifest</class-a>
+		<class-b>es.pode.parseadorXML.castor.Manifest</class-b>
+		<field relationship-type="non-cumulative">
+			<a>manifest</a>
+			<b>manifest</b>
+		</field>
+	</mapping>
+	<!-- Mapeo de Lom a LomVO para informacion del Ode -->
+	<mapping wildcard="false" stop-on-errors="false" map-null="false">
+		<class-a>
+			es.pode.catalogacion.negocio.servicios.LomBasicoVO
+		</class-a>
+		<class-b>es.pode.empaquetador.negocio.servicio.LomVO</class-b>
+		<field>
+			<a>general.titulo</a>
+			<b>titulo</b>
+		</field>
+		<field>
+			<a>general.idioma</a>
+			<b>idioma</b>
+		</field>
+		<field>
+			<a>general.desc</a>
+			<b>descripcion</b>
+		</field>
+	</mapping>
+</mappings>

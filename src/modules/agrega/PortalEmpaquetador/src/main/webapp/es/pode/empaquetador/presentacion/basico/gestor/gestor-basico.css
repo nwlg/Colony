@@ -1,0 +1,61 @@
+#vistaCarpeta.action {}
+#vistaCarpeta.action #form_submit {}
+
+#vistaCarpeta.action .vistaCarpeta {}
+#vistaCarpeta.action .vistaCarpeta .label {}
+#vistaCarpeta.action .vistaCarpeta .field {}
+
+#vaciarPortapapeles.action {}
+#vaciarPortapapeles.action #form_submit {}
+
+
+#secuencia.action {}
+#secuencia.action #form_submit {}
+
+
+#catalogar.action {}
+#catalogar.action #form_submit {}
+
+#catalogar.action .identifier {}
+#catalogar.action .identifier .label {}
+#catalogar.action .identifier .field {}
+#catalogar.action .returnURL {}
+#catalogar.action .returnURL .label {}
+#catalogar.action .returnURL .field {}
+
+#archivos.action {}
+#archivos.action #form_submit {}
+
+
+#guardar.action {}
+#guardar.action #form_submit {}
+
+#guardar.action .returnURL {}
+#guardar.action .returnURL .label {}
+#guardar.action .returnURL .field {}
+
+#portapapeles.table {}
+#portapapeles.table th {}
+#portapapeles.table td div {}
+
+#portapapeles.table th.title {}
+#portapapeles.table td div.title {}
+
+
+#idCollection.table {}
+#idCollection.table th {}
+#idCollection.table td div {}
+
+#idCollection.table th.title {}
+#idCollection.table td div.title {}
+
+
+#grupos.table {}
+#grupos.table th {}
+#grupos.table td div {}
+
+#grupos.table th.title {}
+#grupos.table td div.title {}
+
+
+

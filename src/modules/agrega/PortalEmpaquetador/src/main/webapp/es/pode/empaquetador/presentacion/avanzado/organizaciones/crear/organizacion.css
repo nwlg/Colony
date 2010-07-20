@@ -1,0 +1,27 @@
+#submit.action {}
+#submit.action #form_submit {}
+
+#submit.action .title {}
+#submit.action .title .label {}
+#submit.action .title .field {}
+#submit.action .action {}
+#submit.action .action .label {}
+#submit.action .action .field {}
+
+#archivos.action {}
+#archivos.action #form_submit {}
+
+
+#recursos.action {}
+#recursos.action #form_submit {}
+
+
+#submanifiestos.action {}
+#submanifiestos.action #form_submit {}
+
+
+#organizaciones.action {}
+#organizaciones.action #form_submit {}
+
+
+

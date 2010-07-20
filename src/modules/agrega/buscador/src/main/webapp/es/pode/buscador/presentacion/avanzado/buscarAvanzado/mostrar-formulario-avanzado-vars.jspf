@@ -1,0 +1,89 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="buscadorContenido" value="${form.buscadorContenido}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="contadorAmbito" value="${form.contadorAmbito}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="formato" value="${form.formato}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tipoBusqueda" value="${form.tipoBusqueda}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="anyoPublicacion" value="${form.anyoPublicacion}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="areaCurricular" value="${form.areaCurricular}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="anterior" value="${form.anterior}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="valoracion" value="${form.valoracion}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="comunidadesSeleccionadas" value="${form.comunidadesSeleccionadas}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="contadorPropiedadesContenido" value="${form.contadorPropiedadesContenido}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="edad" value="${form.edad}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="c_s_secuencia" value="${form.c_s_secuencia}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="enlaceComunidadesSeleccionadas" value="${form.enlaceComunidadesSeleccionadas}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="diaPublicacion" value="${form.diaPublicacion}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="recurso" value="${form.recurso}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="contexto" value="${form.contexto}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="autor" value="${form.autor}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="descripcion" value="${form.descripcion}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="nivelAgregacion" value="${form.nivelAgregacion}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="horaPublicacion" value="${form.horaPublicacion}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idiomaBuscador" value="${form.idiomaBuscador}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="procesoCognitivo" value="${form.procesoCognitivo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="mostrarAmbito" value="${form.mostrarAmbito}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="titulo" value="${form.titulo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="contadorAreasCurriculares" value="${form.contadorAreasCurriculares}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="enlaceTodoAgrega" value="${form.enlaceTodoAgrega}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="mesPublicacion" value="${form.mesPublicacion}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="comunidades" value="${form.comunidades}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="sinResultados" value="${form.sinResultados}"/>
+    </c:catch>
+</div>

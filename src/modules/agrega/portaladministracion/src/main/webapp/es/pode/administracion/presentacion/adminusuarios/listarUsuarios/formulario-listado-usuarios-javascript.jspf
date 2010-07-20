@@ -1,0 +1,63 @@
+
+    <tiles:put name="javascript" type="string">
+        <script type="text/javascript" language="Javascript1.1" src="<html:rewrite action="/formValidation"/>"></script>
+        <html:javascript formName="listarUsuariosFormularioListadoUsuariosModificarForm" method="validateFormularioListadoUsuariosModificarForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+        <html:javascript formName="listarUsuariosFormularioListadoUsuariosVerUsuarioForm" method="validateFormularioListadoUsuariosVerUsuarioForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+        <html:javascript formName="listarUsuariosFormularioListadoUsuariosDesactivarUsuarioForm" method="validateFormularioListadoUsuariosDesactivarUsuarioForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'listar.usuarios.formulario.listado.usuarios.modificar.param.id.title':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.modificar.param.id.title"/></formatting:escape>',
+                'listar.usuarios.formulario.listado.usuarios.ver.usuario.param.id.title':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.ver.usuario.param.id.title"/></formatting:escape>',
+                'listar.usuarios.formulario.listado.usuarios.baja.param.id.title':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.baja.param.id.title"/></formatting:escape>',
+                'listar.usuarios.formulario.listado.usuarios.desactivar.usuario.param.id.title':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.desactivar.usuario.param.id.title"/></formatting:escape>',
+                'CrearUsuario':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.crear.usuario.title"/></formatting:escape>',
+                'CrearUsuario_no':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.crear.usuario.title.notallowed"/></formatting:escape>',
+                'CrearUsuario_reset':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.crear.usuario.title.reset"/></formatting:escape>',
+                'CrearUsuario_noreset':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.crear.usuario.title.reset.not.allowed"/></formatting:escape>',
+                'Modificar':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.modificar.title"/></formatting:escape>',
+                'Modificar_no':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.modificar.title.notallowed"/></formatting:escape>',
+                'Modificar_reset':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.modificar.title.reset"/></formatting:escape>',
+                'Modificar_noreset':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.modificar.title.reset.not.allowed"/></formatting:escape>',
+                'VerUsuario':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.ver.usuario.title"/></formatting:escape>',
+                'VerUsuario_no':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.ver.usuario.title.notallowed"/></formatting:escape>',
+                'VerUsuario_reset':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.ver.usuario.title.reset"/></formatting:escape>',
+                'VerUsuario_noreset':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.ver.usuario.title.reset.not.allowed"/></formatting:escape>',
+                'Baja':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.baja.title"/></formatting:escape>',
+                'Baja_no':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.baja.title.notallowed"/></formatting:escape>',
+                'Baja_reset':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.baja.title.reset"/></formatting:escape>',
+                'Baja_noreset':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.baja.title.reset.not.allowed"/></formatting:escape>',
+                'ListarUsuariosPendientes':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.listar.usuarios.pendientes.title"/></formatting:escape>',
+                'ListarUsuariosPendientes_no':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.listar.usuarios.pendientes.title.notallowed"/></formatting:escape>',
+                'ListarUsuariosPendientes_reset':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.listar.usuarios.pendientes.title.reset"/></formatting:escape>',
+                'ListarUsuariosPendientes_noreset':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.listar.usuarios.pendientes.title.reset.not.allowed"/></formatting:escape>',
+                'DesactivarUsuario':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.desactivar.usuario.title"/></formatting:escape>',
+                'DesactivarUsuario_no':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.desactivar.usuario.title.notallowed"/></formatting:escape>',
+                'DesactivarUsuario_reset':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.desactivar.usuario.title.reset"/></formatting:escape>',
+                'DesactivarUsuario_noreset':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.desactivar.usuario.title.reset.not.allowed"/></formatting:escape>',
+                'listarUsuariosPendientes':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.listar.usuarios.pendientes.title"/></formatting:escape>',
+                'listarUsuariosPendientes_no':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.listar.usuarios.pendientes.title.notallowed"/></formatting:escape>',
+                'listarUsuariosPendientes_reset':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.listar.usuarios.pendientes.title.reset"/></formatting:escape>',
+                'listarUsuariosPendientes_noreset':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.listar.usuarios.pendientes.title.reset.not.allowed"/></formatting:escape>',
+                'ListarUsuariosInactivos':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.listar.usuarios.inactivos.title"/></formatting:escape>',
+                'ListarUsuariosInactivos_no':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.listar.usuarios.inactivos.title.notallowed"/></formatting:escape>',
+                'ListarUsuariosInactivos_reset':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.listar.usuarios.inactivos.title.reset"/></formatting:escape>',
+                'ListarUsuariosInactivos_noreset':'<formatting:escape language="javascript"><bean:message key="listar.usuarios.formulario.listado.usuarios.listar.usuarios.inactivos.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+
+
+
+
+</script>
+    </tiles:put>

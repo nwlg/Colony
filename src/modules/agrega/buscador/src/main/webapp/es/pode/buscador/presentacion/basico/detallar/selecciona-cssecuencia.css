@@ -1,0 +1,15 @@
+#cancelar.action {}
+#cancelar.action #form_submit {}
+
+
+#mostrarODECSSecuencia.action {}
+#mostrarODECSSecuencia.action #form_submit {}
+
+#mostrarODECSSecuencia.action .identificadorODE {}
+#mostrarODECSSecuencia.action .identificadorODE .label {}
+#mostrarODECSSecuencia.action .identificadorODE .field {}
+#mostrarODECSSecuencia.action .tipoVisualizador {}
+#mostrarODECSSecuencia.action .tipoVisualizador .label {}
+#mostrarODECSSecuencia.action .tipoVisualizador .field {}
+
+

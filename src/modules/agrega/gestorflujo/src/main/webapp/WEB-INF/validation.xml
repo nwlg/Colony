@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE form-validation PUBLIC
+    "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1//EN"
+    "http://jakarta.apache.org/commons/dtds/validator_1_1.dtd">
+
+<form-validation>
+
+    <formset>
+    
+
+        <form name="objetosPersonalesCUMostrarODESPersonalesImportarForm">
+            <field property="espacioLibre" depends="long">
+
+                <arg position="0" key="objetos.personales.cu.mostrar.odespersonales.importar.param.espacio.libre" />
+            </field>
+        </form>
+        <form name="importarCUSeleccionarRecursoImportadoAceptarForm">
+            <field property="espacioLibre" depends="long">
+
+                <arg position="0" key="importar.cu.seleccionar.recurso.importado.aceptar.param.espacio.libre" />
+            </field>
+        </form>
+<!--RLA-->
+
+<!--/RLA-->
+    </formset>
+
+</form-validation>

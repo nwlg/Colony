@@ -1,0 +1,33 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="importarCompartido" class="action">
+    <h3><bean:message key="objetos.compartidos.cu.mostrar.odescompartidos.importar.compartido"/></h3>
+    <div class="trigger">
+        <html:form styleId="objetosCompartidosCUMostrarODESCompartidosImportarCompartidoForm" action="/ObjetosCompartidosCU/MostrarODESCompartidosImportarCompartido" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="idODE">
+                        <td class="label"><bean:message key="objetos.compartidos.cu.mostrar.odescompartidos.importar.compartido.param.id.ode"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idODE}"/>
+                           <input type="text" name="idODE" value="${value}" onmouseover="hints.show('objetos.compartidos.cu.mostrar.odescompartidos.importar.compartido.param.id.ode.title')" onmouseout="hints.hide()"  id="importarCompartidoIdODE"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR,ROLE_DOCENTE">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('importarCompartido')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="objetos.compartidos.cu.mostrar.odescompartidos.importar.compartido"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

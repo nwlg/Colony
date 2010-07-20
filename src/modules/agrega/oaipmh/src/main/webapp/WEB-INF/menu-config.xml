@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<MenuConfig>
+
+    <Displayers>
+        <Displayer name="listMenu" type="net.sf.navigator.displayer.ListMenuDisplayer"/>
+    </Displayers>
+
+    <Menus>
+        <Menu name="oai.pmh.request.title" title="oai.pmh.request.title" tooltip="oai.pmh.request.online.help">
+        </Menu>
+    </Menus>
+
+</MenuConfig>

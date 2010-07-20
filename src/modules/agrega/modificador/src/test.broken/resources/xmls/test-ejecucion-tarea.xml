@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<modification-task xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="modificaciones.xsd">
+<changes>
+	<check>
+		<lom-term>lom.rights.access.accessType.value</lom-term>
+		<value>[uU]ni.*</value>
+		<reg-exp>true</reg-exp>
+		<main-lom-only>true</main-lom-only>
+	</check>
+	<modification>
+		<lom-term>lom.technical.format</lom-term>
+		<value>text/html</value>
+		<new-value>image/gif</new-value>
+		<reg-exp>false</reg-exp>
+		<replace-all>false</replace-all>
+		<main-lom-only>true</main-lom-only>
+	</modification>
+	<addition>
+		<lom-term>lom.classification.taxonPath</lom-term>
+		<new-value><![CDATA[<taxonPath>
+                    <source uniqueElementName="source">
+                        <string language="es">Árbol curricular LOE 2006</string>
+                    </source>
+                    <taxon>
+                        <id uniqueElementName="id">1</id>
+                        <entry>
+                            <string language="es">Educación Infantil</string>
+                        </entry>
+                    </taxon>
+                    <taxon>
+                        <id uniqueElementName="id">1.1</id>
+                        <entry>
+                            <string language="es">Segundo Ciclo</string>
+                        </entry>
+                    </taxon>
+                    <taxon>
+                        <id uniqueElementName="id">1.1.2</id>
+                        <entry>
+                            <string language="es">Conocimiento del entorno</string>
+                        </entry>
+                    </taxon>
+                    <taxon>
+                        <id uniqueElementName="id">1.1.2.3</id>
+                        <entry>
+                            <string language="es">Cultura y vida en sociedad</string>
+                        </entry>
+                    </taxon>
+                </taxonPath>]]></new-value>
+		<term-type>arbol-curricular</term-type>
+		<main-lom-only>false</main-lom-only>
+	</addition>
+	<addition>
+		<lom-term>lom.relation</lom-term>
+		<new-value><![CDATA[<relation>
+        <kind>
+          <source>LOM-ESv1.0</source>
+          <value>ispartof</value>
+        </kind>
+        <resource>
+          <identifier>
+            <catalog>Catálogo unificado mec-red.es-ccaa de identificación de ODE</catalog>
+            <entry>es_20070518_3_0040200</entry>
+          </identifier>
+          <description>
+            <string>Secuencia didáctica en la que se abordan cuestiones como la estrategia publicitaria, la planificación de campañas y los diferentes medios de los que se vale el mensaje publicitario para llegar a su destinatario.</string>
+          </description>
+        </resource>
+      </relation>]]></new-value>
+		<term-type>otro</term-type>
+		<main-lom-only>true</main-lom-only>
+	</addition>
+	<removal>
+		<lom-term>lom.technical.format</lom-term>
+		<value>image.*</value>
+		<reg-exp>true</reg-exp>
+		<main-lom-only>true</main-lom-only>
+	</removal>
+	<!-- Este cambio tiene como objetivo provocar un fallo de validacion -->
+	<!-- <removal>
+		<lom-term>lom.educational</lom-term>
+		<main-lom-only>true</main-lom-only>
+	</removal> -->
+</changes>
+<objects>
+	<folder>
+		<path>odes/folder</path>
+	</folder>
+</objects>
+</modification-task>

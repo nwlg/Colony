@@ -1,0 +1,68 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="minutos" value="${form.minutos}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="descripcionRequerimientos" value="${form.descripcionRequerimientos}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="requerimiento" value="${form.requerimiento}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="comboTipo" value="${form.comboTipo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="descripcionInstalacion" value="${form.descripcionInstalacion}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="descripcionDuracion" value="${form.descripcionDuracion}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="segundosP2" value="${form.segundosP2}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="dia" value="${form.dia}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="segundosP1" value="${form.segundosP1}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="duracion" value="${form.duracion}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="agregadorOR" value="${form.agregadorOR}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="hora" value="${form.hora}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="comboNombre" value="${form.comboNombre}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="mes" value="${form.mes}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tamanio" value="${form.tamanio}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="comboIdioma" value="${form.comboIdioma}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="localizacion" value="${form.localizacion}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="anyo" value="${form.anyo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="mensajesError" value="${form.mensajesError}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="formatos" value="${form.formatos}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="comboFormato" value="${form.comboFormato}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="identificadorOde" value="${form.identificadorOde}"/>
+    </c:catch>
+</div>

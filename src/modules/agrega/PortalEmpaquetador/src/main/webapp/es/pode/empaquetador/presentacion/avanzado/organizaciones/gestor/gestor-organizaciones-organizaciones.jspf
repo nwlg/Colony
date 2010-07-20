@@ -1,0 +1,38 @@
+<div id="organizaciones" class="table">
+    <form id="organizaciones" name="" action="" method="post" enctype="multipart/form-data">
+    <display:table name="${form.organizaciones}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="gestor-organizaciones-organizaciones.pdf" />
+        <display:column media="html">
+            <input type="checkbox" name="identifierRowSelectionAsArray" value="${row.identifier}" title='<bean:message key="select.deselect.this.row"/>'/>
+        </display:column>
+
+        <display:column media="xml csv excel pdf"
+            titleKey="gestor.organizaciones.gestor.organizaciones.param.organizaciones.title"
+            autolink="true" paramId="title"
+            property="title">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="title" paramId="title"
+            sortProperty="title" sortable="true"
+            titleKey="gestor.organizaciones.gestor.organizaciones.param.organizaciones.title"
+            >
+            <div class="title">
+		
+ <c:set var="value" value="${row.title}"/>
+ <input type="text" name="title" value="${value}" onmouseover="hints.show('gestor.organizaciones.gestor.organizaciones.modificar.param.title.title')" onmouseout="hints.hide()"  id="organizacionesTitle${row_rowNum}"/>
+            </div>
+       </display:column>
+   
+    </display:table>
+    <c:if test="${!empty form.organizaciones}">
+            <input type="submit" value="<bean:message key="gestor.organizaciones.gestor.organizaciones.submit"/>" onclick="this.form.name='gestorOrganizacionesGestorOrganizacionesSubmitForm';this.form.action='<html:rewrite action="/GestorOrganizaciones/GestorOrganizacionesSubmit"/>';" onmouseover="hints.show('Submit')" onmouseout="hints.hide()"/>
+            <input type="button" value="<bean:message key="select.deselect.all"/>" onclick="var boxes=this.form.elements['identifierRowSelectionAsArray'];var setChecked=(boxes.length==0)?false:!boxes[0].checked;for(var i=0;i<boxes.length;i++)boxes[i].checked=setChecked;"/>
+    </c:if>
+    </form>
+</div>
+

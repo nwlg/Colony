@@ -1,0 +1,32 @@
+#verHistorial.action {}
+#verHistorial.action #form_submit {}
+
+#verHistorial.action .idODE {}
+#verHistorial.action .idODE .label {}
+#verHistorial.action .idODE .field {}
+#verHistorial.action .titulo {}
+#verHistorial.action .titulo .label {}
+#verHistorial.action .titulo .field {}
+
+#pendientes.action {}
+#pendientes.action #form_submit {}
+
+#pendientes.action .idiomaBuscador {}
+#pendientes.action .idiomaBuscador .label {}
+#pendientes.action .idiomaBuscador .field {}
+#pendientes.action .tipoBuscador {}
+#pendientes.action .tipoBuscador .label {}
+#pendientes.action .tipoBuscador .field {}
+
+#listaODES.table {}
+#listaODES.table th {}
+#listaODES.table td div {}
+
+#listaODES.table th.idODE {}
+#listaODES.table td div.idODE {}
+
+#listaODES.table th.titulo {}
+#listaODES.table td div.titulo {}
+
+
+

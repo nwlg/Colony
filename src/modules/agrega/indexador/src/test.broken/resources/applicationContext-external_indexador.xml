@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//Spring//DTD Bean//EN" 
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<!-- Application Context -->
+<beans>    
+    <!--          External Beans               -->
+
+<import resource="parseadorXML-applicationContext.xml" />                                               
+<bean id="ScormDao" class="es.pode.parseadorXML.SCORM2004Dao"> 
+<property name="beanMapper">
+  <ref bean="beanMapperODEs"/>
+</property>
+                       
+</bean>                                                
+                                               
+<bean id="LomesDao" class="es.pode.parseadorXML.LomESDao"> 
+<property name="beanMapper">
+  <ref bean="beanMapperODEs"/>
+</property>
+                       
+</bean>                                                
+</beans>
+
+  

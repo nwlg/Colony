@@ -1,0 +1,36 @@
+<div id="odes" class="table">
+    <display:table name="${form.odes}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="informe-tarea-odes.pdf" />
+
+        <display:column media="xml csv excel pdf"
+            titleKey="informe.tarea.informe.tarea.param.odes.nombre"
+            autolink="true" paramId="nombre"
+            property="nombre">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="nombre" paramId="nombre"
+            sortProperty="nombre" sortable="true"
+            titleKey="informe.tarea.informe.tarea.param.odes.nombre"
+            property="nombre" />
+   
+
+        <display:column media="xml csv excel pdf"
+            titleKey="informe.tarea.informe.tarea.param.odes.resultado"
+            autolink="true" paramId="resultado"
+            property="resultado">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="resultado" paramId="resultado"
+            sortProperty="resultado" sortable="true"
+            titleKey="informe.tarea.informe.tarea.param.odes.resultado"
+            property="resultado" />
+   
+    </display:table>
+</div>
+

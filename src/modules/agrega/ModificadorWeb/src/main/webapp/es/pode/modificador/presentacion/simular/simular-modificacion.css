@@ -1,0 +1,21 @@
+#submitConfirmacion.action {}
+#submitConfirmacion.action #form_submit {}
+
+#submitConfirmacion.action .action {}
+#submitConfirmacion.action .action .label {}
+#submitConfirmacion.action .action .field {}
+#submitConfirmacion.action .idModificacion {}
+#submitConfirmacion.action .idModificacion .label {}
+#submitConfirmacion.action .idModificacion .field {}
+#submitConfirmacion.action .resultados {}
+#submitConfirmacion.action .resultados .label {}
+#submitConfirmacion.action .resultados .field {}
+
+#buscar.action {}
+#buscar.action #form_submit {}
+
+#buscar.action .idiomaBuscador {}
+#buscar.action .idiomaBuscador .label {}
+#buscar.action .idiomaBuscador .field {}
+
+

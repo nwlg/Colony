@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="propiedadesConstantes"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:spring.properties</value>
+			</list>
+		</property>
+		<property name="ignoreUnresolvablePlaceholders">
+			<value>true</value>
+		</property>
+	</bean>
+	<!-- JMS Queue Template -->
+  	<bean id="jmsTemplateSrvAuditoriaServicio"
+		class="org.springframework.jms.core.JmsTemplate">
+		<property name="connectionFactory">
+			<ref
+				bean="internalJmsQueueConnectionFactorySrvAuditoriaRecibirServicio" />
+		</property>
+		<property name="defaultDestination">
+			<ref bean="destinationSrvAuditoriaRecibirServicio" />
+		</property>
+		<property name="receiveTimeout">
+			<value>30000</value>
+		</property>
+	</bean>
+	<!-- <bean id="SrvAuditoriaServicio"
+		class="es.pode.auditoria.negocio.servicios.SrvAuditoriaServicioImpl">
+	</bean>--> 
+	<bean class="es.indra.sawa.support.wiring.WiringPostProcessor">
+		<property name="propertyMappings">
+			<list>
+				<value>.*SrvAuditoriaServicioImpl.*;jmsTemplate;jmsTemplateSrvAuditoriaServicio</value>
+				<value>.*SrvAuditoriaRecibirServicioImpl.*;srvAuditoriaServicio;SrvAuditoriaServicio</value>
+			</list>
+		</property>
+	</bean>
+</beans>

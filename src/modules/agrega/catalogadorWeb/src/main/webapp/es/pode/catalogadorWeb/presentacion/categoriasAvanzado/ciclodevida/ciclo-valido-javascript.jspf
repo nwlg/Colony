@@ -1,0 +1,40 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'ciclo.de.vida.ciclo.valido.volver.param.identificador.ode.title':'<formatting:escape language="javascript"><bean:message key="ciclo.de.vida.ciclo.valido.volver.param.identificador.ode.title"/></formatting:escape>',
+                'ciclo.de.vida.ciclo.valido.volver.param.versiones.title':'<formatting:escape language="javascript"><bean:message key="ciclo.de.vida.ciclo.valido.volver.param.versiones.title"/></formatting:escape>',
+                'ciclo.de.vida.ciclo.valido.volver.param.estatus.title':'<formatting:escape language="javascript"><bean:message key="ciclo.de.vida.ciclo.valido.volver.param.estatus.title"/></formatting:escape>',
+                'ciclo.de.vida.ciclo.valido.volver.param.contribuciones.title':'<formatting:escape language="javascript"><bean:message key="ciclo.de.vida.ciclo.valido.volver.param.contribuciones.title"/></formatting:escape>',
+                'ciclo.de.vida.ciclo.valido.volver.param.descripciones.title':'<formatting:escape language="javascript"><bean:message key="ciclo.de.vida.ciclo.valido.volver.param.descripciones.title"/></formatting:escape>',
+                'ciclo.de.vida.ciclo.valido.volver.param.combo.idioma.title':'<formatting:escape language="javascript"><bean:message key="ciclo.de.vida.ciclo.valido.volver.param.combo.idioma.title"/></formatting:escape>',
+                'ciclo.de.vida.ciclo.valido.volver.param.mensajes.error.title':'<formatting:escape language="javascript"><bean:message key="ciclo.de.vida.ciclo.valido.volver.param.mensajes.error.title"/></formatting:escape>',
+                'ciclo.de.vida.ciclo.valido.volver.param.crol.title':'<formatting:escape language="javascript"><bean:message key="ciclo.de.vida.ciclo.valido.volver.param.crol.title"/></formatting:escape>',
+                'ciclo.de.vida.ciclo.valido.volver.param.cidentidad.title':'<formatting:escape language="javascript"><bean:message key="ciclo.de.vida.ciclo.valido.volver.param.cidentidad.title"/></formatting:escape>',
+                'ciclo.de.vida.ciclo.valido.volver.param.dia.title':'<formatting:escape language="javascript"><bean:message key="ciclo.de.vida.ciclo.valido.volver.param.dia.title"/></formatting:escape>',
+                'ciclo.de.vida.ciclo.valido.volver.param.mes.title':'<formatting:escape language="javascript"><bean:message key="ciclo.de.vida.ciclo.valido.volver.param.mes.title"/></formatting:escape>',
+                'ciclo.de.vida.ciclo.valido.volver.param.anyo.title':'<formatting:escape language="javascript"><bean:message key="ciclo.de.vida.ciclo.valido.volver.param.anyo.title"/></formatting:escape>',
+                'ciclo.de.vida.ciclo.valido.volver.param.hora.title':'<formatting:escape language="javascript"><bean:message key="ciclo.de.vida.ciclo.valido.volver.param.hora.title"/></formatting:escape>',
+                'ciclo.de.vida.ciclo.valido.volver.param.minutos.title':'<formatting:escape language="javascript"><bean:message key="ciclo.de.vida.ciclo.valido.volver.param.minutos.title"/></formatting:escape>',
+                'ciclo.de.vida.ciclo.valido.volver.param.segundo.p1.title':'<formatting:escape language="javascript"><bean:message key="ciclo.de.vida.ciclo.valido.volver.param.segundo.p1.title"/></formatting:escape>',
+                'ciclo.de.vida.ciclo.valido.volver.param.segundo.p2.title':'<formatting:escape language="javascript"><bean:message key="ciclo.de.vida.ciclo.valido.volver.param.segundo.p2.title"/></formatting:escape>',
+                'ciclo.de.vida.ciclo.valido.volver.param.meridianocero.title':'<formatting:escape language="javascript"><bean:message key="ciclo.de.vida.ciclo.valido.volver.param.meridianocero.title"/></formatting:escape>',
+                'ciclo.de.vida.ciclo.valido.volver.param.combo.zona.h.title':'<formatting:escape language="javascript"><bean:message key="ciclo.de.vida.ciclo.valido.volver.param.combo.zona.h.title"/></formatting:escape>',
+                'ciclo.de.vida.ciclo.valido.volver.param.zh.hora.title':'<formatting:escape language="javascript"><bean:message key="ciclo.de.vida.ciclo.valido.volver.param.zh.hora.title"/></formatting:escape>',
+                'ciclo.de.vida.ciclo.valido.volver.param.zh.minutos.title':'<formatting:escape language="javascript"><bean:message key="ciclo.de.vida.ciclo.valido.volver.param.zh.minutos.title"/></formatting:escape>',
+                'volver':'<formatting:escape language="javascript"><bean:message key="ciclo.de.vida.ciclo.valido.volver.title"/></formatting:escape>',
+                'volver_no':'<formatting:escape language="javascript"><bean:message key="ciclo.de.vida.ciclo.valido.volver.title.notallowed"/></formatting:escape>',
+                'volver_reset':'<formatting:escape language="javascript"><bean:message key="ciclo.de.vida.ciclo.valido.volver.title.reset"/></formatting:escape>',
+                'volver_noreset':'<formatting:escape language="javascript"><bean:message key="ciclo.de.vida.ciclo.valido.volver.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

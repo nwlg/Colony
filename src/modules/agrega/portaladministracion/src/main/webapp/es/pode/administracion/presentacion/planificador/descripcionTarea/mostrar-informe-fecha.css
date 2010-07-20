@@ -1,0 +1,68 @@
+#volver.action {}
+#volver.action #form_submit {}
+
+#volver.action .grupoTrabajo {}
+#volver.action .grupoTrabajo .label {}
+#volver.action .grupoTrabajo .field {}
+#volver.action .trigger {}
+#volver.action .trigger .label {}
+#volver.action .trigger .field {}
+#volver.action .grupoTrigger {}
+#volver.action .grupoTrigger .label {}
+#volver.action .grupoTrigger .field {}
+#volver.action .tipoTarea {}
+#volver.action .tipoTarea .label {}
+#volver.action .tipoTarea .field {}
+#volver.action .periodicidad {}
+#volver.action .periodicidad .label {}
+#volver.action .periodicidad .field {}
+#volver.action .formato {}
+#volver.action .formato .label {}
+#volver.action .formato .field {}
+#volver.action .informe {}
+#volver.action .informe .label {}
+#volver.action .informe .field {}
+#volver.action .anio {}
+#volver.action .anio .label {}
+#volver.action .anio .field {}
+#volver.action .mes {}
+#volver.action .mes .label {}
+#volver.action .mes .field {}
+#volver.action .dia {}
+#volver.action .dia .label {}
+#volver.action .dia .field {}
+#volver.action .hora {}
+#volver.action .hora .label {}
+#volver.action .hora .field {}
+#volver.action .minutos {}
+#volver.action .minutos .label {}
+#volver.action .minutos .field {}
+#volver.action .anioDesde {}
+#volver.action .anioDesde .label {}
+#volver.action .anioDesde .field {}
+#volver.action .mesDesde {}
+#volver.action .mesDesde .label {}
+#volver.action .mesDesde .field {}
+#volver.action .diaDesde {}
+#volver.action .diaDesde .label {}
+#volver.action .diaDesde .field {}
+#volver.action .anioHasta {}
+#volver.action .anioHasta .label {}
+#volver.action .anioHasta .field {}
+#volver.action .mesHasta {}
+#volver.action .mesHasta .label {}
+#volver.action .mesHasta .field {}
+#volver.action .diaHasta {}
+#volver.action .diaHasta .label {}
+#volver.action .diaHasta .field {}
+#volver.action .msgDescTrabajo {}
+#volver.action .msgDescTrabajo .label {}
+#volver.action .msgDescTrabajo .field {}
+#volver.action .msgInforme {}
+#volver.action .msgInforme .label {}
+#volver.action .msgInforme .field {}
+#volver.action .msgNoInforme {}
+#volver.action .msgNoInforme .label {}
+#volver.action .msgNoInforme .field {}
+
+

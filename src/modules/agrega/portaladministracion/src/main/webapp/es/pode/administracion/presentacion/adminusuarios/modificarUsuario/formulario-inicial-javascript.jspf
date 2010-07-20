@@ -1,0 +1,42 @@
+
+    <tiles:put name="javascript" type="string">
+        <script type="text/javascript" language="Javascript1.1" src="<html:rewrite action="/formValidation"/>"></script>
+        <html:javascript formName="modificarUsuarioFormularioInicialContinuarForm" method="validateFormularioInicialContinuarForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'modificar.usuario.formulario.inicial.continuar.param.nombre.title':'<formatting:escape language="javascript"><bean:message key="modificar.usuario.formulario.inicial.continuar.param.nombre.title"/></formatting:escape>',
+                'modificar.usuario.formulario.inicial.continuar.param.apellido1.title':'<formatting:escape language="javascript"><bean:message key="modificar.usuario.formulario.inicial.continuar.param.apellido1.title"/></formatting:escape>',
+                'modificar.usuario.formulario.inicial.continuar.param.apellido2.title':'<formatting:escape language="javascript"><bean:message key="modificar.usuario.formulario.inicial.continuar.param.apellido2.title"/></formatting:escape>',
+                'modificar.usuario.formulario.inicial.continuar.param.email.title':'<formatting:escape language="javascript"><bean:message key="modificar.usuario.formulario.inicial.continuar.param.email.title"/></formatting:escape>',
+                'modificar.usuario.formulario.inicial.continuar.param.nif.title':'<formatting:escape language="javascript"><bean:message key="modificar.usuario.formulario.inicial.continuar.param.nif.title"/></formatting:escape>',
+                'modificar.usuario.formulario.inicial.continuar.param.usuario.title':'<formatting:escape language="javascript"><bean:message key="modificar.usuario.formulario.inicial.continuar.param.usuario.title"/></formatting:escape>',
+                'modificar.usuario.formulario.inicial.continuar.param.clave.title':'<formatting:escape language="javascript"><bean:message key="modificar.usuario.formulario.inicial.continuar.param.clave.title"/></formatting:escape>',
+                'modificar.usuario.formulario.inicial.continuar.param.repita.clave.title':'<formatting:escape language="javascript"><bean:message key="modificar.usuario.formulario.inicial.continuar.param.repita.clave.title"/></formatting:escape>',
+                'modificar.usuario.formulario.inicial.continuar.param.idioma.title':'<formatting:escape language="javascript"><bean:message key="modificar.usuario.formulario.inicial.continuar.param.idioma.title"/></formatting:escape>',
+                'modificar.usuario.formulario.inicial.continuar.param.idioma.busqueda.title':'<formatting:escape language="javascript"><bean:message key="modificar.usuario.formulario.inicial.continuar.param.idioma.busqueda.title"/></formatting:escape>',
+                'modificar.usuario.formulario.inicial.continuar.param.tipo.empaquetador.title':'<formatting:escape language="javascript"><bean:message key="modificar.usuario.formulario.inicial.continuar.param.tipo.empaquetador.title"/></formatting:escape>',
+                'modificar.usuario.formulario.inicial.continuar.param.id.title':'<formatting:escape language="javascript"><bean:message key="modificar.usuario.formulario.inicial.continuar.param.id.title"/></formatting:escape>',
+                'modificar.usuario.formulario.inicial.continuar.param.tipo.catalogador.title':'<formatting:escape language="javascript"><bean:message key="modificar.usuario.formulario.inicial.continuar.param.tipo.catalogador.title"/></formatting:escape>',
+                'modificar.usuario.formulario.inicial.continuar.param.cuota.title':'<formatting:escape language="javascript"><bean:message key="modificar.usuario.formulario.inicial.continuar.param.cuota.title"/></formatting:escape>',
+                'modificar.usuario.formulario.inicial.continuar.param.open.id.url.title':'<formatting:escape language="javascript"><bean:message key="modificar.usuario.formulario.inicial.continuar.param.open.id.url.title"/></formatting:escape>',
+                'Continuar':'<formatting:escape language="javascript"><bean:message key="modificar.usuario.formulario.inicial.continuar.title"/></formatting:escape>',
+                'Continuar_no':'<formatting:escape language="javascript"><bean:message key="modificar.usuario.formulario.inicial.continuar.title.notallowed"/></formatting:escape>',
+                'Continuar_reset':'<formatting:escape language="javascript"><bean:message key="modificar.usuario.formulario.inicial.continuar.title.reset"/></formatting:escape>',
+                'Continuar_noreset':'<formatting:escape language="javascript"><bean:message key="modificar.usuario.formulario.inicial.continuar.title.reset.not.allowed"/></formatting:escape>',
+                'Cancelar':'<formatting:escape language="javascript"><bean:message key="modificar.usuario.formulario.inicial.cancelar.title"/></formatting:escape>',
+                'Cancelar_no':'<formatting:escape language="javascript"><bean:message key="modificar.usuario.formulario.inicial.cancelar.title.notallowed"/></formatting:escape>',
+                'Cancelar_reset':'<formatting:escape language="javascript"><bean:message key="modificar.usuario.formulario.inicial.cancelar.title.reset"/></formatting:escape>',
+                'Cancelar_noreset':'<formatting:escape language="javascript"><bean:message key="modificar.usuario.formulario.inicial.cancelar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+</script>
+    </tiles:put>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="propiedadesConstantes" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:spring.properties</value>
+			</list>
+		</property>
+	  <property name="ignoreUnresolvablePlaceholders">
+	  		<value>true</value>
+	  </property>	  
+	</bean>
+
+	<bean id="zipDao" class="es.pode.soporte.zip.TrueZipDaoImpl"/>
+	
+	<bean id="modificadorProperties" class="es.pode.modificador.negocio.cambios.configuracion.ModificadorProperties"/>
+
+	<bean id="configuracionDao" class="es.pode.modificador.negocio.cambios.configuracion.ConfiguracionDao"/>
+
+	<import resource="parseadorXML-applicationContext.xml"/>
+
+	<bean id="factoriaCambios" class="es.pode.modificador.negocio.cambios.FactoriaCambios">
+		<property name="zipDao" ref="zipDao"/>
+		<property name="props" ref="modificadorProperties"/>
+		<property name="lomesDao" ref="lomesDao"/>
+		<property name="scormDao" ref="scorm2004Dao"></property>
+	</bean>
+	
+	<bean id="generadorTaxonomias" class="es.pode.modificador.negocio.cambios.configuracion.GeneradorTaxonomias">
+		<property name="props" ref="modificadorProperties"/>
+		<property name="lomesDao" ref="lomesDao"/>
+	</bean>
+	
+	<bean id="template" class="es.pode.modificador.negocio.cambios.configuracion.AdditionTemplateComposer"/>
+	<!-- jmsTemplate para el sender de mensajes SrvHerramientaModificacionService -->
+	<bean id="jmsTemplateSrvHerramientaModificacionService" class="org.springframework.jms.core.JmsTemplate">
+		<property name="connectionFactory">
+            <ref bean="internalJmsQueueConnectionFactorySrvTareasModificacionService"/>
+        </property>
+        <property name="defaultDestination">
+            <ref bean="destinationSrvTareasModificacionService"/>
+        </property>
+       <property name="receiveTimeout">
+            <value>30000</value>
+        </property>
+	</bean>
+
+	<bean class="es.indra.sawa.support.wiring.WiringPostProcessor">
+		<property name="propertyMappings">
+			<list>
+				<value>.*SrvHerramientaModificacion.*;props;modificadorProperties</value>
+				<value>.*SrvHerramientaModificacion.*;factoriaCambios;factoriaCambios</value>
+				<value>.*SrvHerramientaModificacion.*;configuracionDao;configuracionDao</value>
+				<value>.*SrvHerramientaModificacion.*;jmsTemplate;jmsTemplateSrvHerramientaModificacionService</value>
+				<value>.*SrvTareasModificacion.*;modificacionDao;modificacionDao</value>
+				<value>.*SrvTareasModificacion.*;resultadoModificacionDao;resultadoModificacionDao</value>
+				<value>.*SrvTareasModificacion.*;props;modificadorProperties</value>
+				<value>.*SrvTareasModificacion.*;factoriaCambios;factoriaCambios</value>
+				<value>.*SrvTareasModificacion.*;configuracionDao;configuracionDao</value>
+				<value>.*SrvTareasModificacion.*;mapper;beanMapper</value>	
+				<value>.*SrvHerramientaModificacion.*;template;template</value>	
+				<value>.*SrvHerramientaModificacion.*;generadorTaxonomias;generadorTaxonomias</value>					
+				<value>.*SrvHerramientaModificacion.*;zipDao;zipDao</value>					
+			</list>
+		</property>
+	</bean>
+
+</beans>

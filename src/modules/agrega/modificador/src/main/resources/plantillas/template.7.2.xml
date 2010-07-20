@@ -1,0 +1,6 @@
+<resource>
+	${load:identifier.xml}
+	<!-- Opcional -->
+	${load:description.xml}
+	<!-- Mas descripciones -->
+</resource>

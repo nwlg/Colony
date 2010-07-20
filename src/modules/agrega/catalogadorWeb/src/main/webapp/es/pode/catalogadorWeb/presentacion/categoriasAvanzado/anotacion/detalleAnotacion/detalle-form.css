@@ -1,0 +1,65 @@
+#submitForm.action {}
+#submitForm.action #form_submit {}
+
+#submitForm.action .tituloAnotacion {}
+#submitForm.action .tituloAnotacion .label {}
+#submitForm.action .tituloAnotacion .field {}
+#submitForm.action .nombre {}
+#submitForm.action .nombre .label {}
+#submitForm.action .nombre .field {}
+#submitForm.action .organizacion {}
+#submitForm.action .organizacion .label {}
+#submitForm.action .organizacion .field {}
+#submitForm.action .email {}
+#submitForm.action .email .label {}
+#submitForm.action .email .field {}
+#submitForm.action .thora {}
+#submitForm.action .thora .label {}
+#submitForm.action .thora .field {}
+#submitForm.action .tminuto {}
+#submitForm.action .tminuto .label {}
+#submitForm.action .tminuto .field {}
+#submitForm.action .tsegundoP1 {}
+#submitForm.action .tsegundoP1 .label {}
+#submitForm.action .tsegundoP1 .field {}
+#submitForm.action .tsegundoP2 {}
+#submitForm.action .tsegundoP2 .label {}
+#submitForm.action .tsegundoP2 .field {}
+#submitForm.action .meridianoCero {}
+#submitForm.action .meridianoCero .label {}
+#submitForm.action .meridianoCero .field {}
+#submitForm.action .comboZonaH {}
+#submitForm.action .comboZonaH .label {}
+#submitForm.action .comboZonaH .field {}
+#submitForm.action .zhHora {}
+#submitForm.action .zhHora .label {}
+#submitForm.action .zhHora .field {}
+#submitForm.action .zhMinutos {}
+#submitForm.action .zhMinutos .label {}
+#submitForm.action .zhMinutos .field {}
+#submitForm.action .descripcionFecha {}
+#submitForm.action .descripcionFecha .label {}
+#submitForm.action .descripcionFecha .field {}
+#submitForm.action .comboIdioma {}
+#submitForm.action .comboIdioma .label {}
+#submitForm.action .comboIdioma .field {}
+#submitForm.action .descripcion {}
+#submitForm.action .descripcion .label {}
+#submitForm.action .descripcion .field {}
+#submitForm.action .accion {}
+#submitForm.action .accion .label {}
+#submitForm.action .accion .field {}
+#submitForm.action .botonPulsado {}
+#submitForm.action .botonPulsado .label {}
+#submitForm.action .botonPulsado .field {}
+#submitForm.action .fechaCorta {}
+#submitForm.action .fechaCorta .label {}
+#submitForm.action .fechaCorta .field {}
+#submitForm.action .formato {}
+#submitForm.action .formato .label {}
+#submitForm.action .formato .field {}
+#submitForm.action .offSet {}
+#submitForm.action .offSet .label {}
+#submitForm.action .offSet .field {}
+
+

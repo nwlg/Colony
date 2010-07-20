@@ -1,0 +1,8 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="barraSubmanifiestos" value="${form.barraSubmanifiestos}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="submanifiestos" value="${form.submanifiestos}"/>
+    </c:catch>
+</div>

@@ -1,0 +1,32 @@
+<div id="archivos" class="table">
+    <form id="archivos" name="" action="" method="post" enctype="multipart/form-data">
+    <display:table name="${form.archivos}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="recurso-archivos.pdf" />
+        <display:column media="html">
+            <input type="checkbox" name="hrefRowSelectionAsArray" value="${row.href}" title='<bean:message key="select.deselect.this.row"/>'/>
+        </display:column>
+
+        <display:column media="xml csv excel pdf"
+            titleKey="crear.recurso.avanzado.elementos.recurso.param.archivos.nombre"
+            autolink="true" paramId="nombre"
+            property="nombre">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="nombre" paramId="nombre"
+            sortProperty="nombre" sortable="true"
+            titleKey="crear.recurso.avanzado.elementos.recurso.param.archivos.nombre"
+            property="nombre" />
+   
+    </display:table>
+    <c:if test="${!empty form.archivos}">
+            <input type="submit" value="<bean:message key="crear.recurso.avanzado.elementos.recurso.submit.archivos"/>" onclick="this.form.name='crearRecursoAvanzadoElementosRecursoSubmitArchivosForm';this.form.action='<html:rewrite action="/CrearRecursoAvanzadoElementos/RecursoSubmitArchivos"/>';" onmouseover="hints.show('SubmitArchivos')" onmouseout="hints.hide()"/>
+            <input type="button" value="<bean:message key="select.deselect.all"/>" onclick="var boxes=this.form.elements['hrefRowSelectionAsArray'];var setChecked=(boxes.length==0)?false:!boxes[0].checked;for(var i=0;i<boxes.length;i++)boxes[i].checked=setChecked;"/>
+    </c:if>
+    </form>
+</div>
+

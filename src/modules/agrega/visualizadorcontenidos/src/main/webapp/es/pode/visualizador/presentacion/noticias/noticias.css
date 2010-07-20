@@ -1,0 +1,22 @@
+#accesibilidad.action {}
+#accesibilidad.action #form_submit {}
+
+
+#noticias.table {}
+#noticias.table th {}
+#noticias.table td div {}
+
+#noticias.table th.titulo {}
+#noticias.table td div.titulo {}
+
+#noticias.table th.fechaPublicacion {}
+#noticias.table td div.fechaPublicacion {}
+
+#noticias.table th.resumen {}
+#noticias.table td div.resumen {}
+
+#noticias.table th.categoria.nombre {}
+#noticias.table td div.categoria.nombre {}
+
+
+

@@ -1,0 +1,24 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'exportar.recursos.avanzado.formulario.exportar.select.action.param.nombre.title':'<formatting:escape language="javascript"><bean:message key="exportar.recursos.avanzado.formulario.exportar.select.action.param.nombre.title"/></formatting:escape>',
+                'exportar.recursos.avanzado.formulario.exportar.select.action.param.destino.title':'<formatting:escape language="javascript"><bean:message key="exportar.recursos.avanzado.formulario.exportar.select.action.param.destino.title"/></formatting:escape>',
+                'exportar.recursos.avanzado.formulario.exportar.select.action.param.action.title':'<formatting:escape language="javascript"><bean:message key="exportar.recursos.avanzado.formulario.exportar.select.action.param.action.title"/></formatting:escape>',
+                'exportar.recursos.avanzado.formulario.exportar.select.action.param.recursos.vo.title':'<formatting:escape language="javascript"><bean:message key="exportar.recursos.avanzado.formulario.exportar.select.action.param.recursos.vo.title"/></formatting:escape>',
+                'selectAction':'<formatting:escape language="javascript"><bean:message key="exportar.recursos.avanzado.formulario.exportar.select.action.title"/></formatting:escape>',
+                'selectAction_no':'<formatting:escape language="javascript"><bean:message key="exportar.recursos.avanzado.formulario.exportar.select.action.title.notallowed"/></formatting:escape>',
+                'selectAction_reset':'<formatting:escape language="javascript"><bean:message key="exportar.recursos.avanzado.formulario.exportar.select.action.title.reset"/></formatting:escape>',
+                'selectAction_noreset':'<formatting:escape language="javascript"><bean:message key="exportar.recursos.avanzado.formulario.exportar.select.action.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

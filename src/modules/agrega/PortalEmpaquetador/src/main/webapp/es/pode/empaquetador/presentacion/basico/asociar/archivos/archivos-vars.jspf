@@ -1,0 +1,14 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="ficherosSeleccionados" value="${form.ficherosSeleccionados}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="ficheros" value="${form.ficheros}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="path" value="${form.path}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="arbol" value="${form.arbol}"/>
+    </c:catch>
+</div>

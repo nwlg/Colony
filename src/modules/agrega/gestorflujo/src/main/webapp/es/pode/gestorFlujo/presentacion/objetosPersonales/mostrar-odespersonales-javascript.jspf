@@ -1,0 +1,70 @@
+
+    <tiles:put name="javascript" type="string">
+        <script type="text/javascript" language="Javascript1.1" src="<html:rewrite action="/formValidation"/>"></script>
+        <html:javascript formName="objetosPersonalesCUMostrarODESPersonalesImportarForm" method="validateMostrarODESPersonalesImportarForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'objetos.personales.cu.mostrar.odespersonales.ver.historial.param.id.ode.title':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.ver.historial.param.id.ode.title"/></formatting:escape>',
+                'objetos.personales.cu.mostrar.odespersonales.ver.historial.param.titulo.title':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.ver.historial.param.titulo.title"/></formatting:escape>',
+                'objetos.personales.cu.mostrar.odespersonales.importar.param.id.usuario.title':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.importar.param.id.usuario.title"/></formatting:escape>',
+                'objetos.personales.cu.mostrar.odespersonales.importar.param.espacio.libre.title':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.importar.param.espacio.libre.title"/></formatting:escape>',
+                'objetos.personales.cu.mostrar.odespersonales.exportar.param.id.ode.title':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.exportar.param.id.ode.title"/></formatting:escape>',
+                'objetos.personales.cu.mostrar.odespersonales.exportar.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.exportar.param.idioma.buscador.title"/></formatting:escape>',
+                'objetos.personales.cu.mostrar.odespersonales.exportar.param.titulo.title':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.exportar.param.titulo.title"/></formatting:escape>',
+                'objetos.personales.cu.mostrar.odespersonales.proponer.param.id.ode.title':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.proponer.param.id.ode.title"/></formatting:escape>',
+                'objetos.personales.cu.mostrar.odespersonales.proponer.param.id.usuario.title':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.proponer.param.id.usuario.title"/></formatting:escape>',
+                'objetos.personales.cu.mostrar.odespersonales.proponer.param.titulo.title':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.proponer.param.titulo.title"/></formatting:escape>',
+                'objetos.personales.cu.mostrar.odespersonales.eliminar.param.id.ode.title':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.eliminar.param.id.ode.title"/></formatting:escape>',
+                'objetos.personales.cu.mostrar.odespersonales.compartir.param.id.ode.title':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.compartir.param.id.ode.title"/></formatting:escape>',
+                'objetos.personales.cu.mostrar.odespersonales.compartir.param.compartido.sn.title':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.compartir.param.compartido.sn.title"/></formatting:escape>',
+                'VerHistorial':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.ver.historial.title"/></formatting:escape>',
+                'VerHistorial_no':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.ver.historial.title.notallowed"/></formatting:escape>',
+                'VerHistorial_reset':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.ver.historial.title.reset"/></formatting:escape>',
+                'VerHistorial_noreset':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.ver.historial.title.reset.not.allowed"/></formatting:escape>',
+                'Importar':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.importar.title"/></formatting:escape>',
+                'Importar_no':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.importar.title.notallowed"/></formatting:escape>',
+                'Importar_reset':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.importar.title.reset"/></formatting:escape>',
+                'Importar_noreset':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.importar.title.reset.not.allowed"/></formatting:escape>',
+                'Exportar':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.exportar.title"/></formatting:escape>',
+                'Exportar_no':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.exportar.title.notallowed"/></formatting:escape>',
+                'Exportar_reset':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.exportar.title.reset"/></formatting:escape>',
+                'Exportar_noreset':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.exportar.title.reset.not.allowed"/></formatting:escape>',
+                'Proponer':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.proponer.title"/></formatting:escape>',
+                'Proponer_no':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.proponer.title.notallowed"/></formatting:escape>',
+                'Proponer_reset':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.proponer.title.reset"/></formatting:escape>',
+                'Proponer_noreset':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.proponer.title.reset.not.allowed"/></formatting:escape>',
+                'Propuestos':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.propuestos.title"/></formatting:escape>',
+                'Propuestos_no':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.propuestos.title.notallowed"/></formatting:escape>',
+                'Propuestos_reset':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.propuestos.title.reset"/></formatting:escape>',
+                'Propuestos_noreset':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.propuestos.title.reset.not.allowed"/></formatting:escape>',
+                'Publicados':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.publicados.title"/></formatting:escape>',
+                'Publicados_no':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.publicados.title.notallowed"/></formatting:escape>',
+                'Publicados_reset':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.publicados.title.reset"/></formatting:escape>',
+                'Publicados_noreset':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.publicados.title.reset.not.allowed"/></formatting:escape>',
+                'Eliminar':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.eliminar.title"/></formatting:escape>',
+                'Eliminar_no':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.eliminar.title.notallowed"/></formatting:escape>',
+                'Eliminar_reset':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.eliminar.title.reset"/></formatting:escape>',
+                'Eliminar_noreset':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.eliminar.title.reset.not.allowed"/></formatting:escape>',
+                'Compartir':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.compartir.title"/></formatting:escape>',
+                'Compartir_no':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.compartir.title.notallowed"/></formatting:escape>',
+                'Compartir_reset':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.compartir.title.reset"/></formatting:escape>',
+                'Compartir_noreset':'<formatting:escape language="javascript"><bean:message key="objetos.personales.cu.mostrar.odespersonales.compartir.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+
+
+
+
+</script>
+    </tiles:put>

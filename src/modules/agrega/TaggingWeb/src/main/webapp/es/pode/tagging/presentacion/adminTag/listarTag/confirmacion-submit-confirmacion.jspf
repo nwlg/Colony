@@ -1,0 +1,31 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="submitConfirmacion" class="action">
+    <h3><bean:message key="listar.tag.confirmacion.submit.confirmacion"/></h3>
+    <div class="trigger">
+        <html:form styleId="listarTagConfirmacionSubmitConfirmacionForm" action="/ListarTag/ConfirmacionSubmitConfirmacion" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="accion">
+                        <td class="label"><bean:message key="listar.tag.confirmacion.submit.confirmacion.param.accion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.accion}"/>
+                           <input type="text" name="accion" value="${value}" onmouseover="hints.show('listar.tag.confirmacion.submit.confirmacion.param.accion.title')" onmouseout="hints.hide()"  id="submitConfirmacionAccion"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('submitConfirmacion')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="listar.tag.confirmacion.submit.confirmacion"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

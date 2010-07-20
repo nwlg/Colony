@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns:lomes="http://ltsc.ieee.org/xsd/LOM" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3" xmlns:imsss="http://www.imsglobal.org/xsd/imsss" xmlns:adlseq="http://www.adlnet.org/xsd/adlseq_v1p3" xmlns:adlnav="http://www.adlnet.org/xsd/adlnav_v1p3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd http://ltsc.ieee.org/xsd/LOM lom.xsd http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd http://www.adlnet.org/xsd/adlseq_v1p3 adlseq_v1p3.xsd http://www.adlnet.org/xsd/adlnav_v1p3 adlnav_v1p3.xsd" identifier="es_20070727_3_0150500">
+	<metadata>
+		<schema>ADL SCORM</schema>
+		<schemaversion>2004 3rd Edition</schemaversion>
+		<lomes:lom>
+			<lomes:general uniqueElementName="general">
+				<lomes:identifier>
+					<lomes:catalog uniqueElementName="catalog">Catálogo unificado mec-red.es-ccaa de identificación de ODE</lomes:catalog>
+					<lomes:entry uniqueElementName="entry">es_20070727_3_0150500</lomes:entry>
+				</lomes:identifier>
+				<lomes:title uniqueElementName="title">
+					<lomes:string>Las estaciones, la ropa y la casa.</lomes:string>
+				</lomes:title>
+				<lomes:language>es</lomes:language>
+				<lomes:description>
+					<lomes:string>Conceptos básicos relacionados con la observación del tiempo, los vestidos y el lugar donde vivimos.</lomes:string>
+				</lomes:description>
+				<lomes:keyword>
+					<lomes:string>Estaciones del año</lomes:string>
+				</lomes:keyword>
+				<lomes:keyword>
+					<lomes:string>Ropa</lomes:string>
+				</lomes:keyword>
+				<lomes:keyword>
+					<lomes:string>Casa</lomes:string>
+				</lomes:keyword>
+				<lomes:keyword>
+					<lomes:string>Educación Infantil</lomes:string>
+				</lomes:keyword>
+				<lomes:coverage>
+					<lomes:string>Universal</lomes:string>
+				</lomes:coverage>
+				<lomes:structure uniqueElementName="structure">
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">hierarchical</lomes:value>
+				</lomes:structure>
+				<lomes:aggregationLevel uniqueElementName="aggregationLevel">
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">2</lomes:value>
+				</lomes:aggregationLevel>
+			</lomes:general>
+			<lomes:lifeCycle uniqueElementName="lifeCycle">
+				<lomes:version uniqueElementName="version">
+					<lomes:string>V1.0</lomes:string>
+				</lomes:version>
+				<lomes:status uniqueElementName="status">
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">final</lomes:value>
+				</lomes:status>
+				<lomes:contribute>
+					<lomes:role uniqueElementName="role">
+						<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+						<lomes:value uniqueElementName="value">publisher</lomes:value>
+					</lomes:role>
+					<lomes:entity>BEGIN:VCARD VERSION:3.0 FN: administrador EMAIL;TYPE=INTERNET:  ORG: </lomes:entity>
+					<lomes:date uniqueElementName="date">
+						<lomes:dateTime uniqueElementName="dateTime">2008-03-27</lomes:dateTime>
+						<lomes:description>
+							<lomes:string>Fecha de publicación en Agrega</lomes:string>
+						</lomes:description>
+					</lomes:date>
+				</lomes:contribute>
+				<lomes:contribute>
+					<lomes:role uniqueElementName="role">
+						<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+						<lomes:value uniqueElementName="value">publisher</lomes:value>
+					</lomes:role>
+					<lomes:entity>BEGIN:VCARD VERSION:3.0 FN: Contenido digital educativo creado,catalogado y financiado con fondos FEDER dentro del expediente 502/06-Lote1 EMAIL;TYPE=INTERNET:sugerencias@red.es ORG: RED.ES END:VCARD</lomes:entity>
+					<lomes:date uniqueElementName="date">
+						<lomes:dateTime uniqueElementName="dateTime">2008-06-01</lomes:dateTime>
+						<lomes:description>
+							<lomes:string>Fecha de publicación en Agrega</lomes:string>
+						</lomes:description>
+					</lomes:date>
+				</lomes:contribute>
+				<lomes:contribute>
+					<lomes:role uniqueElementName="role">
+						<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+						<lomes:value uniqueElementName="value">publisher</lomes:value>
+					</lomes:role>
+					<lomes:entity>BEGIN:VCARD VERSION:3.0 FN: Contenido digital educativo creado,catalogado y financiado con fondos FEDER dentro del expediente 502/06-Lote1 EMAIL;TYPE=INTERNET:sugerencias@red.es ORG: RED.ES END:VCARD</lomes:entity>
+					<lomes:date uniqueElementName="date">
+						<lomes:dateTime uniqueElementName="dateTime">2008-06-01</lomes:dateTime>
+						<lomes:description>
+							<lomes:string>Fecha de publicación en Agrega</lomes:string>
+						</lomes:description>
+					</lomes:date>
+				</lomes:contribute>
+				<lomes:contribute>
+					<lomes:role uniqueElementName="role">
+						<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+						<lomes:value uniqueElementName="value">author</lomes:value>
+					</lomes:role>
+					<lomes:entity>BEGIN:VCARD VERSION:3.0 FN: Mercedes Álvarez Sierra, Pilar Fernández Martínez, Manuela González Tello, Charo Monforte Gómez, Arantxa Martínez García, David Cantos Vila, Rosa Mª Fernández Fernández, Ana Isabel Álvarez Sánchez, Florencio Bermejo del Hoyo, Teresa Pacheco Román, Miriam Olga Cecilia Martínez, Isabel Abelleira Bardanca, Manuel Gesto Pan, José Leonardo Fariña García, Rosa Mª Barreiro Carujo, Rosario Belda Otero, Javier Rouco Ferreiro, María Casal Montero, Angels Pons Sans, Infinity Group, José Sánchez Rodriguez, Damián Lozano Rivas, Antonio Jerez Gómez, Auxi Quintana Navas-Chaveli , Ininatus, Gil Gijón Canal, David Bravo Montarelo, José Antonio Aivar Mateo, Alberto Melchor Herrera, Carmen Luisa Padrón Nápoles, José Luis López Fernández EMAIL;TYPE=INTERNET:ORG:END:VCARD</lomes:entity>
+					<lomes:date uniqueElementName="date">
+						<lomes:dateTime uniqueElementName="dateTime">2005-12-31</lomes:dateTime>
+						<lomes:description>
+							<lomes:string>Fecha de creación de la secuencia didáctica</lomes:string>
+						</lomes:description>
+					</lomes:date>
+				</lomes:contribute>
+				<lomes:contribute>
+					<lomes:role uniqueElementName="role">
+						<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+						<lomes:value uniqueElementName="value">editor</lomes:value>
+					</lomes:role>
+					<lomes:entity>BEGIN:VCARD VERSION:3.0 FN: Centro Nacional de Información y Comunicación Educativa EMAIL;TYPE=INTERNET: webmaster@cnice.mec.es ORG:Ministerio de Educación y Ciencia de España END:VCARD</lomes:entity>
+					<lomes:date uniqueElementName="date">
+						<lomes:dateTime uniqueElementName="dateTime">2005-12-31</lomes:dateTime>
+						<lomes:description>
+							<lomes:string>Fecha de publicación de la secuencia didáctica</lomes:string>
+						</lomes:description>
+					</lomes:date>
+				</lomes:contribute>
+			</lomes:lifeCycle>
+			<lomes:metaMetadata uniqueElementName="metaMetadata">
+				<lomes:identifier>
+					<lomes:catalog uniqueElementName="catalog">Catálogo unificado mec-red.es-ccaa-meta de identificación de instancias de metadatos de ODE</lomes:catalog>
+					<lomes:entry uniqueElementName="entry">es_20070727_3_0150500-meta</lomes:entry>
+				</lomes:identifier>
+				<lomes:contribute>
+					<lomes:role uniqueElementName="role">
+						<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+						<lomes:value uniqueElementName="value">validator</lomes:value>
+					</lomes:role>
+					<lomes:entity>BEGIN:VCARD VERSION:3.0 FN: Contenido digital educativo creado,catalogado y financiado con fondos FEDER dentro del expediente 502/06-Lote1 EMAIL;TYPE=INTERNET:sugerencias@red.es ORG: RED.ES END:VCARD</lomes:entity>
+					<lomes:date uniqueElementName="date">
+						<lomes:dateTime uniqueElementName="dateTime">2008-06-01</lomes:dateTime>
+						<lomes:description>
+							<lomes:string>Fecha de publicación en Agrega</lomes:string>
+						</lomes:description>
+					</lomes:date>
+				</lomes:contribute>
+				<lomes:contribute>
+					<lomes:role uniqueElementName="role">
+						<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+						<lomes:value uniqueElementName="value">validator</lomes:value>
+					</lomes:role>
+					<lomes:entity>BEGIN:VCARD VERSION:3.0 FN: Contenido digital educativo creado,catalogado y financiado con fondos FEDER dentro del expediente 502/06-Lote1 EMAIL;TYPE=INTERNET:sugerencias@red.es ORG: RED.ES END:VCARD</lomes:entity>
+					<lomes:date uniqueElementName="date">
+						<lomes:dateTime uniqueElementName="dateTime">2008-06-01</lomes:dateTime>
+						<lomes:description>
+							<lomes:string>Fecha de publicación en Agrega</lomes:string>
+						</lomes:description>
+					</lomes:date>
+				</lomes:contribute>
+				<lomes:contribute>
+					<lomes:role uniqueElementName="role">
+						<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+						<lomes:value uniqueElementName="value">creator</lomes:value>
+					</lomes:role>
+					<lomes:entity>BEGIN:VCARD VERSION:3.0 FN: EMAIL;TYPE=INTERNET:ORG: Santillana Educación S.L. e Indra Sistemas S.A. END:VCARD</lomes:entity>
+					<lomes:date uniqueElementName="date">
+						<lomes:dateTime uniqueElementName="dateTime">2007-07-09</lomes:dateTime>
+						<lomes:description>
+							<lomes:string>Fecha de catalogación de la secuencia didáctica</lomes:string>
+						</lomes:description>
+					</lomes:date>
+				</lomes:contribute>
+				<lomes:metadataSchema>LOM-ES V1.0</lomes:metadataSchema>
+				<lomes:language>es</lomes:language>
+			</lomes:metaMetadata>
+			<lomes:technical uniqueElementName="technical">
+				<lomes:format>application/x-shockwave-flash</lomes:format>
+				<lomes:format>text/html</lomes:format>
+				<lomes:format>application/pdf</lomes:format>
+				<lomes:size uniqueElementName="size">3997696</lomes:size>
+				<lomes:requirement>
+					<lomes:orComposite>
+						<lomes:type uniqueElementName="type">
+							<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+							<lomes:value uniqueElementName="value">browser</lomes:value>
+						</lomes:type>
+						<lomes:name uniqueElementName="name">
+							<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+							<lomes:value uniqueElementName="value">any</lomes:value>
+						</lomes:name>
+						<lomes:minimumVersion uniqueElementName="minimumVersion">Flash Player 7</lomes:minimumVersion>
+					</lomes:orComposite>
+				</lomes:requirement>
+				<lomes:otherPlatformRequirements>
+					<lomes:string>Plugin de Flash Player</lomes:string>
+				</lomes:otherPlatformRequirements>
+			</lomes:technical>
+			<lomes:educational>
+				<lomes:interactivityType uniqueElementName="interactivityType">
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">mixed</lomes:value>
+				</lomes:interactivityType>
+				<lomes:learningResourceType>
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">illustration</lomes:value>
+				</lomes:learningResourceType>
+				<lomes:learningResourceType>
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">voice-over</lomes:value>
+				</lomes:learningResourceType>
+				<lomes:learningResourceType>
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">master class</lomes:value>
+				</lomes:learningResourceType>
+				<lomes:learningResourceType>
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">sound effect</lomes:value>
+				</lomes:learningResourceType>
+				<lomes:learningResourceType>
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">closed exercise or problem</lomes:value>
+				</lomes:learningResourceType>
+				<lomes:learningResourceType>
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">animation</lomes:value>
+				</lomes:learningResourceType>
+				<lomes:interactivityLevel uniqueElementName="interactivityLevel">
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">medium</lomes:value>
+				</lomes:interactivityLevel>
+				<lomes:semanticDensity uniqueElementName="semanticDensity">
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">medium</lomes:value>
+				</lomes:semanticDensity>
+				<lomes:intendedEndUserRole>
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">general public</lomes:value>
+				</lomes:intendedEndUserRole>
+				<lomes:intendedEndUserRole>
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">group</lomes:value>
+				</lomes:intendedEndUserRole>
+				<lomes:context>
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">mixed</lomes:value>
+				</lomes:context>
+				<lomes:context>
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">mixed</lomes:value>
+				</lomes:context>
+				<lomes:context>
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">distance</lomes:value>
+				</lomes:context>
+				<lomes:typicalAgeRange>
+					<lomes:string>Para alumnos entre 3-6 años</lomes:string>
+				</lomes:typicalAgeRange>
+				<lomes:difficulty uniqueElementName="difficulty">
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">medium</lomes:value>
+				</lomes:difficulty>
+				<lomes:description>
+					<lomes:string>Ser capaz de conocer algunos aspecto del otoño, de conocer diversos aspectos sobre el invierno, de conocer diversos aspectos de la primavera, de conocer diferentes aspectos del verano, de conocer las diferentes prendas de vestir adecuadas para cada estación, de conocer las principales partes de la casa (cocina, baño, salita, dormitorio) a través del juego con su representación gráfica y con el lenguaje escrito.</lomes:string>
+				</lomes:description>
+				<lomes:language>es</lomes:language>
+				<lomes:cognitiveProcess uniqueElementName="cognitiveProcess">
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">observe</lomes:value>
+				</lomes:cognitiveProcess>
+				<lomes:cognitiveProcess uniqueElementName="cognitiveProcess">
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">understand</lomes:value>
+				</lomes:cognitiveProcess>
+				<lomes:cognitiveProcess uniqueElementName="cognitiveProcess">
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">recognize</lomes:value>
+				</lomes:cognitiveProcess>
+				<lomes:cognitiveProcess uniqueElementName="cognitiveProcess">
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">create</lomes:value>
+				</lomes:cognitiveProcess>
+				<lomes:cognitiveProcess uniqueElementName="cognitiveProcess">
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">consider</lomes:value>
+				</lomes:cognitiveProcess>
+				<lomes:cognitiveProcess uniqueElementName="cognitiveProcess">
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">organize</lomes:value>
+				</lomes:cognitiveProcess>
+			</lomes:educational>
+			<lomes:rights uniqueElementName="rights">
+				<lomes:cost uniqueElementName="cost">
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">no</lomes:value>
+				</lomes:cost>
+				<lomes:copyrightAndOtherRestrictions uniqueElementName="copyrightAndOtherRestrictions">
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">creative commons: attribution - non commercial - share alike</lomes:value>
+				</lomes:copyrightAndOtherRestrictions>
+				<lomes:description>
+					<lomes:string>La utilización de estos contenidos es universal, gratuita y abierta, siempre y cuando se trate de un uso educativo no comercial. Las acciones, productos y utilidades derivadas de su utilización no podrán, en consecuencia, generar ningún tipo de lucro. Asimismo, es obligada la referencia a la fuente.</lomes:string>
+				</lomes:description>
+				<lomes:access uniqueElementName="access">
+					<lomes:accessType uniqueElementName="accessType">
+						<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+						<lomes:value uniqueElementName="value">universal</lomes:value>
+					</lomes:accessType>
+					<lomes:description>
+						<lomes:string>No existen restricciones</lomes:string>
+					</lomes:description>
+				</lomes:access>
+			</lomes:rights>
+			<lomes:relation>
+				<lomes:kind uniqueElementName="kind">
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">ispartof</lomes:value>
+				</lomes:kind>
+				<lomes:resource uniqueElementName="resource">
+					<lomes:identifier>
+						<lomes:catalog uniqueElementName="catalog">Catálogo unificado mec-red.es-ccaa de identificación de ODE</lomes:catalog>
+						<lomes:entry uniqueElementName="entry">es_20070727_4_0150000</lomes:entry>
+					</lomes:identifier>
+					<lomes:description>
+						<lomes:string>El objetivo de este proyecto es la de incorporar las herramientas multimedia a la Educación Infantil. También pretendemos que sirva de referente para la reflexión, análisis y discusión para lograr una mejora en la labor de los que ya trabajan con ordenadores en la mencionada etapa educativa. Esperamos, por último, que pueda construir un marco conceptual y metodológico y, a la vez, lograr transmitir nuestra experiencia en este campo. Todas las herramientas multimedia que utilizamos tienen un gran número de posibilidades, lo que las confiere y las consagra como un recurso tecnológico muy interesante para introducirlo en nuestros procesos de enseñanza-aprendizaje. No obstante, no debemos perder de vista la idea de que se trata precisamente de eso, de un recurso más, de un instrumento que utilizamos para facilitar la adquisición de aprendizajes, para favorecer una mayor fluidez en el proceso de enseñanzaaprendizaje.</lomes:string>
+					</lomes:description>
+				</lomes:resource>
+			</lomes:relation>
+			<lomes:classification>
+				<lomes:purpose uniqueElementName="purpose">
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">educational level</lomes:value>
+				</lomes:purpose>
+				<lomes:taxonPath>
+					<lomes:source uniqueElementName="source">
+						<lomes:string>Nivel educativo LOM-ESv1.0</lomes:string>
+					</lomes:source>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">2</lomes:id>
+						<lomes:entry>
+							<lomes:string>Educación infantil</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+				</lomes:taxonPath>
+				<lomes:keyword>
+					<lomes:string>Infantil</lomes:string>
+				</lomes:keyword>
+			</lomes:classification>
+			<lomes:classification>
+				<lomes:purpose uniqueElementName="purpose">
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">discipline</lomes:value>
+				</lomes:purpose>
+				<lomes:taxonPath>
+					<lomes:source uniqueElementName="source">
+						<lomes:string>Árbol curricular LOE 2006</lomes:string>
+					</lomes:source>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">1</lomes:id>
+						<lomes:entry>
+							<lomes:string>Educación infantil</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">1.1</lomes:id>
+						<lomes:entry>
+							<lomes:string>Segundo ciclo</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">1.1.1</lomes:id>
+						<lomes:entry>
+							<lomes:string>Conocimiento de sí mismo y autonomía personal ( MEC )</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+				</lomes:taxonPath>
+				<lomes:taxonPath>
+					<lomes:source uniqueElementName="source">
+						<lomes:string>Árbol curricular LOE 2006</lomes:string>
+					</lomes:source>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">1</lomes:id>
+						<lomes:entry>
+							<lomes:string>Educación infantil</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">1.1</lomes:id>
+						<lomes:entry>
+							<lomes:string>Segundo ciclo</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">1.1.2</lomes:id>
+						<lomes:entry>
+							<lomes:string>Conocimiento del entorno</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+				</lomes:taxonPath>
+				<lomes:keyword>
+					<lomes:string>Cuidado personal</lomes:string>
+				</lomes:keyword>
+				<lomes:keyword>
+					<lomes:string>conocimiento del entorno</lomes:string>
+				</lomes:keyword>
+			</lomes:classification>
+			<lomes:classification>
+				<lomes:purpose uniqueElementName="purpose">
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">competency</lomes:value>
+				</lomes:purpose>
+				<lomes:taxonPath>
+					<lomes:source uniqueElementName="source">
+						<lomes:string>Competencia LOM-ESv1.0</lomes:string>
+					</lomes:source>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">1</lomes:id>
+						<lomes:entry>
+							<lomes:string>Competencias generales y personales</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">1.4</lomes:id>
+						<lomes:entry>
+							<lomes:string>Autoestima</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+				</lomes:taxonPath>
+				<lomes:taxonPath>
+					<lomes:source uniqueElementName="source">
+						<lomes:string>Competencia LOM-ESv1.0</lomes:string>
+					</lomes:source>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">1</lomes:id>
+						<lomes:entry>
+							<lomes:string>Competencias generales y personales</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">1.9</lomes:id>
+						<lomes:entry>
+							<lomes:string>Conocimiento de los principios básicos de la naturaleza</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+				</lomes:taxonPath>
+				<lomes:taxonPath>
+					<lomes:source uniqueElementName="source">
+						<lomes:string>Competencia LOM-ESv1.0</lomes:string>
+					</lomes:source>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">1</lomes:id>
+						<lomes:entry>
+							<lomes:string>Competencias generales y personales</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">1.24</lomes:id>
+						<lomes:entry>
+							<lomes:string>Reconocimiento y respeto a las diferencias individuales</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+				</lomes:taxonPath>
+				<lomes:taxonPath>
+					<lomes:source uniqueElementName="source">
+						<lomes:string>Competencia LOM-ESv1.0</lomes:string>
+					</lomes:source>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">2</lomes:id>
+						<lomes:entry>
+							<lomes:string>Competencias académicas</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">2.7</lomes:id>
+						<lomes:entry>
+							<lomes:string>Escuchar para entender y aprender</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+				</lomes:taxonPath>
+				<lomes:taxonPath>
+					<lomes:source uniqueElementName="source">
+						<lomes:string>Competencia LOM-ESv1.0</lomes:string>
+					</lomes:source>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">2</lomes:id>
+						<lomes:entry>
+							<lomes:string>Competencias académicas</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">2.20</lomes:id>
+						<lomes:entry>
+							<lomes:string>Utilizar las TIC de manera segura y crítica</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+				</lomes:taxonPath>
+				<lomes:keyword>
+					<lomes:string>Autonomía personal</lomes:string>
+				</lomes:keyword>
+				<lomes:keyword>
+					<lomes:string>adquirir</lomes:string>
+				</lomes:keyword>
+				<lomes:keyword>
+					<lomes:string>desarrollar</lomes:string>
+				</lomes:keyword>
+			</lomes:classification>
+			<lomes:classification>
+				<lomes:purpose uniqueElementName="purpose">
+					<lomes:source uniqueElementName="source">LOM-ESv1.0</lomes:source>
+					<lomes:value uniqueElementName="value">accessibility restrictions</lomes:value>
+				</lomes:purpose>
+				<lomes:taxonPath>
+					<lomes:source uniqueElementName="source">
+						<lomes:string>Accesibilidad LOM-ESv1.0</lomes:string>
+					</lomes:source>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">1</lomes:id>
+						<lomes:entry>
+							<lomes:string>DECLARACIÓN DEL MODO DE ACCESO AL SIGUIENTE NIVEL</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">1.1</lomes:id>
+						<lomes:entry>
+							<lomes:string>Modo de presentación de la información en el acceso</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">1.1.1</lomes:id>
+						<lomes:entry>
+							<lomes:string>Auditivo (con voz o sonido)</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">1.1.1.1</lomes:id>
+						<lomes:entry>
+							<lomes:string>Informativo</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+				</lomes:taxonPath>
+				<lomes:taxonPath>
+					<lomes:source uniqueElementName="source">
+						<lomes:string>Accesibilidad LOM-ESv1.0</lomes:string>
+					</lomes:source>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">1</lomes:id>
+						<lomes:entry>
+							<lomes:string>DECLARACIÓN DEL MODO DE ACCESO AL SIGUIENTE NIVEL</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">1.1</lomes:id>
+						<lomes:entry>
+							<lomes:string>Modo de presentación de la información en el acceso</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">1.1.4</lomes:id>
+						<lomes:entry>
+							<lomes:string>Visual</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">1.1.4.1</lomes:id>
+						<lomes:entry>
+							<lomes:string>Informativo</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+				</lomes:taxonPath>
+				<lomes:taxonPath>
+					<lomes:source uniqueElementName="source">
+						<lomes:string>Accesibilidad LOM-ESv1.0</lomes:string>
+					</lomes:source>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">1</lomes:id>
+						<lomes:entry>
+							<lomes:string>DECLARACIÓN DEL MODO DE ACCESO AL SIGUIENTE NIVEL</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">1.2</lomes:id>
+						<lomes:entry>
+							<lomes:string>Modo de interacción para el acceso (revisar los modos de interacción)</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">1.2.1</lomes:id>
+						<lomes:entry>
+							<lomes:string>Por ratón u otros dispositivos apuntadores</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+				</lomes:taxonPath>
+				<lomes:taxonPath>
+					<lomes:source uniqueElementName="source">
+						<lomes:string>Accesibilidad LOM-ESv1.0</lomes:string>
+					</lomes:source>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">2</lomes:id>
+						<lomes:entry>
+							<lomes:string>DECLARACIÓN DEL MODO DE INTERACCION EN LA ACTIVIDAD DE APRENDIZAJE</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">2.1</lomes:id>
+						<lomes:entry>
+							<lomes:string>Modo de presentación de la información dentro del objeto</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">2.1.4</lomes:id>
+						<lomes:entry>
+							<lomes:string>Visual (sólo por icono)</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">2.1.4.1</lomes:id>
+						<lomes:entry>
+							<lomes:string>Informativo</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+				</lomes:taxonPath>
+				<lomes:taxonPath>
+					<lomes:source uniqueElementName="source">
+						<lomes:string>Accesibilidad LOM-ESv1.0</lomes:string>
+					</lomes:source>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">2</lomes:id>
+						<lomes:entry>
+							<lomes:string>DECLARACIÓN DEL MODO DE INTERACCION EN LA ACTIVIDAD DE APRENDIZAJE</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">2.2</lomes:id>
+						<lomes:entry>
+							<lomes:string>Permite control flexible (tiene más de una opción de interacción)</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">2.2.2</lomes:id>
+						<lomes:entry>
+							<lomes:string>No</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+				</lomes:taxonPath>
+				<lomes:taxonPath>
+					<lomes:source uniqueElementName="source">
+						<lomes:string>Accesibilidad LOM-ESv1.0</lomes:string>
+					</lomes:source>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">2</lomes:id>
+						<lomes:entry>
+							<lomes:string>DECLARACIÓN DEL MODO DE INTERACCION EN LA ACTIVIDAD DE APRENDIZAJE</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">2.3</lomes:id>
+						<lomes:entry>
+							<lomes:string>Modos de interacción dentro de la actividad</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">2.3.2</lomes:id>
+						<lomes:entry>
+							<lomes:string>Control total por ratón u otros dispositivos apuntadores (hardware específico, tableta,...)</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+				</lomes:taxonPath>
+				<lomes:taxonPath>
+					<lomes:source uniqueElementName="source">
+						<lomes:string>Accesibilidad LOM-ESv1.0</lomes:string>
+					</lomes:source>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">3</lomes:id>
+						<lomes:entry>
+							<lomes:string>TRABAJA A PANTALLA COMPLETA</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">3.2</lomes:id>
+						<lomes:entry>
+							<lomes:string>No</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+				</lomes:taxonPath>
+				<lomes:taxonPath>
+					<lomes:source uniqueElementName="source">
+						<lomes:string>Accesibilidad LOM-ESv1.0</lomes:string>
+					</lomes:source>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">4</lomes:id>
+						<lomes:entry>
+							<lomes:string>RESOLUCION DE PANTALLA NATIVA</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">4.1</lomes:id>
+						<lomes:entry>
+							<lomes:string>800 x 600</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+				</lomes:taxonPath>
+				<lomes:taxonPath>
+					<lomes:source uniqueElementName="source">
+						<lomes:string>Accesibilidad LOM-ESv1.0</lomes:string>
+					</lomes:source>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">5</lomes:id>
+						<lomes:entry>
+							<lomes:string>PERMITE CAMBIO DE RESOLUCION CON AJUSTE DE CONTENIDO</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">5.1</lomes:id>
+						<lomes:entry>
+							<lomes:string>Funciona con auto-ajuste</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+				</lomes:taxonPath>
+				<lomes:taxonPath>
+					<lomes:source uniqueElementName="source">
+						<lomes:string>Accesibilidad LOM-ESv1.0</lomes:string>
+					</lomes:source>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">6</lomes:id>
+						<lomes:entry>
+							<lomes:string>PERMITE ADAPTAR LA VISUALIZACION</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">6.2</lomes:id>
+						<lomes:entry>
+							<lomes:string>No</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+				</lomes:taxonPath>
+				<lomes:taxonPath>
+					<lomes:source uniqueElementName="source">
+						<lomes:string>Accesibilidad LOM-ESv1.0</lomes:string>
+					</lomes:source>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">9</lomes:id>
+						<lomes:entry>
+							<lomes:string>TIENE CONTROL DEL TIEMPO DE EJECUCION</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">9.1</lomes:id>
+						<lomes:entry>
+							<lomes:string>Sí</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+				</lomes:taxonPath>
+				<lomes:taxonPath>
+					<lomes:source uniqueElementName="source">
+						<lomes:string>Accesibilidad LOM-ESv1.0</lomes:string>
+					</lomes:source>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">10</lomes:id>
+						<lomes:entry>
+							<lomes:string>TIPO DE CONTADOR DE EJECUCION</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">10.1</lomes:id>
+						<lomes:entry>
+							<lomes:string>Hacia delante modificable</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+				</lomes:taxonPath>
+				<lomes:taxonPath>
+					<lomes:source uniqueElementName="source">
+						<lomes:string>Accesibilidad LOM-ESv1.0</lomes:string>
+					</lomes:source>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">10</lomes:id>
+						<lomes:entry>
+							<lomes:string>TIPO DE CONTADOR DE EJECUCION</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+					<lomes:taxon>
+						<lomes:id uniqueElementName="id">10.3</lomes:id>
+						<lomes:entry>
+							<lomes:string>Hacia atrás modificable</lomes:string>
+						</lomes:entry>
+					</lomes:taxon>
+				</lomes:taxonPath>
+				<lomes:keyword>
+					<lomes:string>auditivo</lomes:string>
+				</lomes:keyword>
+				<lomes:keyword>
+					<lomes:string>Visual</lomes:string>
+				</lomes:keyword>
+				<lomes:keyword>
+					<lomes:string>por ratón</lomes:string>
+				</lomes:keyword>
+				<lomes:keyword>
+					<lomes:string>informativo</lomes:string>
+				</lomes:keyword>
+			</lomes:classification>
+		</lomes:lom>
+	</metadata>
+	<organizations default="ORG-479F44D03570E95E7AAB1EAAAB20EF93">
+		<organization identifier="ORG-479F44D03570E95E7AAB1EAAAB20EF93" structure="hierarchical">
+			<title>Las estaciones</title>
+			<item identifier="ITEM-FB01069358AE79AF07E770B5513BF91C" identifierref="RES-195E120575BB6FBAD2A2051C6A950297" isvisible="true">
+				<title>Primavera</title>
+			</item>
+			<item identifier="ITEM-1DD5F7BE9302D1361A5B79601E58B925" identifierref="RES-12A4F41EAC7D5149D07E576A9B6DDFBE" isvisible="true">
+				<title>Verano</title>
+			</item>
+			<item identifier="ITEM-47D944CAD35CB79DCE2F14DA2E9BB3F4" identifierref="RES-3AD1E04CD2049A33E8C53BCC4C6CE5F2" isvisible="true">
+				<title>Otoño</title>
+			</item>
+			<item identifier="ITEM-C8C0654E645650EC21A0ED91775634F8" identifierref="RES-7DD7F140393D1065A5218C861826BA70" isvisible="true">
+				<title>Invierno</title>
+			</item>
+			<item identifier="ITEM-039437A92593E60BD1F9E01CFB76C9DF" identifierref="RES-43F4246FBB7CE11DAE88ABDEEFB6F5A7" isvisible="true">
+				<title>Cambia el clima</title>
+			</item>
+			<item identifier="ITEM-F4BD454B5C6F253C599E6E31CC0DDC6A" identifierref="RES-621EE3B80735A36933EEA01AB4D8CD66" isvisible="true">
+				<title>Juega con las estaciones y la ropa</title>
+			</item>
+		</organization>
+	</organizations>
+	<resources>
+		<resource identifier="RES-3AD1E04CD2049A33E8C53BCC4C6CE5F2" type="webcontent" adlcp:scormType="asset" href="oa01_otonio/contenido/a_aa03_07vf.htm">
+			<file href="oa01_otonio/contenido/a_aa03_07vf.htm"/>
+		</resource>
+		<resource identifier="RES-7DD7F140393D1065A5218C861826BA70" type="webcontent" adlcp:scormType="asset" href="oa02_invierno/contenido/a_aa03_10vf.htm">
+			<file href="oa02_invierno/contenido/a_aa03_10vf.htm"/>
+		</resource>
+		<resource identifier="RES-195E120575BB6FBAD2A2051C6A950297" type="webcontent" adlcp:scormType="asset" href="oa03_primavera/contenido/a_aa03_08vf.htm">
+			<file href="oa03_primavera/contenido/a_aa03_08vf.htm"/>
+		</resource>
+		<resource identifier="RES-12A4F41EAC7D5149D07E576A9B6DDFBE" type="webcontent" adlcp:scormType="asset" href="oa04_verano/contenido/a_aa03_09vf.htm">
+			<file href="oa04_verano/contenido/a_aa03_09vf.htm"/>
+		</resource>
+		<resource identifier="RES-43F4246FBB7CE11DAE88ABDEEFB6F5A7" type="webcontent" adlcp:scormType="asset" href="oa05_cambia_clima/contenido/aa_00vf.htm">
+			<file href="oa05_cambia_clima/contenido/aa_00vf.htm"/>
+		</resource>
+		<resource identifier="RES-621EE3B80735A36933EEA01AB4D8CD66" type="webcontent" adlcp:scormType="asset" href="oa05_juega_estaciones_ropa/contenido/a_aa03_06vf.htm">
+			<file href="oa05_juega_estaciones_ropa/contenido/a_aa03_06vf.htm"/>
+		</resource>
+	</resources>
+</manifest>

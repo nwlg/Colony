@@ -1,0 +1,28 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'configurar.nombre.crear.modificacion.buscar.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="configurar.nombre.crear.modificacion.buscar.param.idioma.buscador.title"/></formatting:escape>',
+                'configurar.nombre.crear.modificacion.continuar.param.nombre.title':'<formatting:escape language="javascript"><bean:message key="configurar.nombre.crear.modificacion.continuar.param.nombre.title"/></formatting:escape>',
+                'configurar.nombre.crear.modificacion.continuar.param.action.title':'<formatting:escape language="javascript"><bean:message key="configurar.nombre.crear.modificacion.continuar.param.action.title"/></formatting:escape>',
+                'Buscar':'<formatting:escape language="javascript"><bean:message key="configurar.nombre.crear.modificacion.buscar.title"/></formatting:escape>',
+                'Buscar_no':'<formatting:escape language="javascript"><bean:message key="configurar.nombre.crear.modificacion.buscar.title.notallowed"/></formatting:escape>',
+                'Buscar_reset':'<formatting:escape language="javascript"><bean:message key="configurar.nombre.crear.modificacion.buscar.title.reset"/></formatting:escape>',
+                'Buscar_noreset':'<formatting:escape language="javascript"><bean:message key="configurar.nombre.crear.modificacion.buscar.title.reset.not.allowed"/></formatting:escape>',
+                'Continuar':'<formatting:escape language="javascript"><bean:message key="configurar.nombre.crear.modificacion.continuar.title"/></formatting:escape>',
+                'Continuar_no':'<formatting:escape language="javascript"><bean:message key="configurar.nombre.crear.modificacion.continuar.title.notallowed"/></formatting:escape>',
+                'Continuar_reset':'<formatting:escape language="javascript"><bean:message key="configurar.nombre.crear.modificacion.continuar.title.reset"/></formatting:escape>',
+                'Continuar_noreset':'<formatting:escape language="javascript"><bean:message key="configurar.nombre.crear.modificacion.continuar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+</script>
+    </tiles:put>

@@ -1,0 +1,26 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'alta.usuario.formulario.alta.usuario.aceptar.param.id.title':'<formatting:escape language="javascript"><bean:message key="alta.usuario.formulario.alta.usuario.aceptar.param.id.title"/></formatting:escape>',
+                'Aceptar':'<formatting:escape language="javascript"><bean:message key="alta.usuario.formulario.alta.usuario.aceptar.title"/></formatting:escape>',
+                'Aceptar_no':'<formatting:escape language="javascript"><bean:message key="alta.usuario.formulario.alta.usuario.aceptar.title.notallowed"/></formatting:escape>',
+                'Aceptar_reset':'<formatting:escape language="javascript"><bean:message key="alta.usuario.formulario.alta.usuario.aceptar.title.reset"/></formatting:escape>',
+                'Aceptar_noreset':'<formatting:escape language="javascript"><bean:message key="alta.usuario.formulario.alta.usuario.aceptar.title.reset.not.allowed"/></formatting:escape>',
+                'Cancelar':'<formatting:escape language="javascript"><bean:message key="alta.usuario.formulario.alta.usuario.cancelar.title"/></formatting:escape>',
+                'Cancelar_no':'<formatting:escape language="javascript"><bean:message key="alta.usuario.formulario.alta.usuario.cancelar.title.notallowed"/></formatting:escape>',
+                'Cancelar_reset':'<formatting:escape language="javascript"><bean:message key="alta.usuario.formulario.alta.usuario.cancelar.title.reset"/></formatting:escape>',
+                'Cancelar_noreset':'<formatting:escape language="javascript"><bean:message key="alta.usuario.formulario.alta.usuario.cancelar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+</script>
+    </tiles:put>

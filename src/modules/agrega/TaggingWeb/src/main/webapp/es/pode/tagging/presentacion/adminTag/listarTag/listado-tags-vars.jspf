@@ -1,0 +1,11 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="tags" value="${form.tags}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="newTag" value="${form.newTag}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tagOld" value="${form.tagOld}"/>
+    </c:catch>
+</div>

@@ -1,0 +1,122 @@
+#volverA.action {}
+#volverA.action #form_submit {}
+
+
+#general.action {}
+#general.action #form_submit {}
+
+#general.action .identificador {}
+#general.action .identificador .label {}
+#general.action .identificador .field {}
+#general.action .returnURL {}
+#general.action .returnURL .label {}
+#general.action .returnURL .field {}
+#general.action .datos {}
+#general.action .datos .label {}
+#general.action .datos .field {}
+
+#cicloDeVida.action {}
+#cicloDeVida.action #form_submit {}
+
+#cicloDeVida.action .identificador {}
+#cicloDeVida.action .identificador .label {}
+#cicloDeVida.action .identificador .field {}
+#cicloDeVida.action .returnURL {}
+#cicloDeVida.action .returnURL .label {}
+#cicloDeVida.action .returnURL .field {}
+#cicloDeVida.action .datos {}
+#cicloDeVida.action .datos .label {}
+#cicloDeVida.action .datos .field {}
+
+#metaMetadatos.action {}
+#metaMetadatos.action #form_submit {}
+
+#metaMetadatos.action .identificadorOde {}
+#metaMetadatos.action .identificadorOde .label {}
+#metaMetadatos.action .identificadorOde .field {}
+#metaMetadatos.action .returnURL {}
+#metaMetadatos.action .returnURL .label {}
+#metaMetadatos.action .returnURL .field {}
+#metaMetadatos.action .datos {}
+#metaMetadatos.action .datos .label {}
+#metaMetadatos.action .datos .field {}
+
+#tecnica.action {}
+#tecnica.action #form_submit {}
+
+#tecnica.action .identificadorOde {}
+#tecnica.action .identificadorOde .label {}
+#tecnica.action .identificadorOde .field {}
+#tecnica.action .returnURL {}
+#tecnica.action .returnURL .label {}
+#tecnica.action .returnURL .field {}
+#tecnica.action .datos {}
+#tecnica.action .datos .label {}
+#tecnica.action .datos .field {}
+
+#usoEducativo.action {}
+#usoEducativo.action #form_submit {}
+
+#usoEducativo.action .identificadorOde {}
+#usoEducativo.action .identificadorOde .label {}
+#usoEducativo.action .identificadorOde .field {}
+#usoEducativo.action .returnURL {}
+#usoEducativo.action .returnURL .label {}
+#usoEducativo.action .returnURL .field {}
+#usoEducativo.action .datos {}
+#usoEducativo.action .datos .label {}
+#usoEducativo.action .datos .field {}
+
+#derechos.action {}
+#derechos.action #form_submit {}
+
+#derechos.action .identificadorOde {}
+#derechos.action .identificadorOde .label {}
+#derechos.action .identificadorOde .field {}
+#derechos.action .returnURL {}
+#derechos.action .returnURL .label {}
+#derechos.action .returnURL .field {}
+#derechos.action .datos {}
+#derechos.action .datos .label {}
+#derechos.action .datos .field {}
+
+#relacion.action {}
+#relacion.action #form_submit {}
+
+#relacion.action .identificadorOde {}
+#relacion.action .identificadorOde .label {}
+#relacion.action .identificadorOde .field {}
+#relacion.action .returnURL {}
+#relacion.action .returnURL .label {}
+#relacion.action .returnURL .field {}
+#relacion.action .datos {}
+#relacion.action .datos .label {}
+#relacion.action .datos .field {}
+
+#anotacion.action {}
+#anotacion.action #form_submit {}
+
+#anotacion.action .identificadorOde {}
+#anotacion.action .identificadorOde .label {}
+#anotacion.action .identificadorOde .field {}
+#anotacion.action .returnURL {}
+#anotacion.action .returnURL .label {}
+#anotacion.action .returnURL .field {}
+#anotacion.action .datos {}
+#anotacion.action .datos .label {}
+#anotacion.action .datos .field {}
+
+#clasificacion.action {}
+#clasificacion.action #form_submit {}
+
+#clasificacion.action .identificadorOde {}
+#clasificacion.action .identificadorOde .label {}
+#clasificacion.action .identificadorOde .field {}
+#clasificacion.action .returnURL {}
+#clasificacion.action .returnURL .label {}
+#clasificacion.action .returnURL .field {}
+#clasificacion.action .datos {}
+#clasificacion.action .datos .label {}
+#clasificacion.action .datos .field {}
+
+

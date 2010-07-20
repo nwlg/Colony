@@ -1,0 +1,14 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="usuariosAsociados" value="${form.usuariosAsociados}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="listaId" value="${form.listaId}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="ids" value="${form.ids}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="gruposTrabajo" value="${form.gruposTrabajo}"/>
+    </c:catch>
+</div>

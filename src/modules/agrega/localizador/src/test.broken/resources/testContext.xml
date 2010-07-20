@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+
+
+    <!-- ========================= DATASOURCE DEFINITION ========================= -->
+
+    <!-- Local DataSource that works in any environment -->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName"><value>com.mysql.jdbc.Driver</value></property>
+        <property name="username"><value>root</value></property>
+        <property name="password"><value>admin</value></property>
+        <property name="url"><value>jdbc:mysql://localhost:3306/localizador</value></property>
+    </bean>
+
+    <!-- ====================== End of DATASOURCE DEFINITION ====================== -->
+
+    <!-- ===================== TRANSACTION MANAGER DEFINITION ========================= -->
+
+    <!-- (local) Transaction Manager -->
+    <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <property name="sessionFactory"><ref bean="sessionFactory"/></property>
+    </bean>
+
+    <!-- ===================== TRANSACTION MANAGER DEFINITION ========================= -->
+
+
+    <!-- ========================= GENERAL DEFINITIONS ========================= -->
+    <!-- Message source for this context, loaded from localized "messages_xx" files -->
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename"><value>messages</value></property>
+    </bean>
+
+	<bean id="beanMapper" class="net.sf.dozer.util.mapping.DozerBeanMapper" singleton="true">
+		<property name="mappingFiles">
+			<list>
+				<value>defaultDozerMappings_localizador.xml</value>
+				<value>customDozerMappings_localizador.xml</value>
+				<!-- dozer mappings merge-point -->
+			</list>
+		</property>
+	</bean>
+    <!-- applicationContext merge-point -->
+
+    <!-- Hibernate SessionFactory -->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource"><ref bean="dataSource"/></property>
+        <property name="mappingResources">
+            <list>
+                <value>es/pode/localizador/negocio/dominio/Localizador.hbm.xml</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+                <prop key="hibernate.cache.use_query_cache">false</prop>
+                <prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+                <prop key="hibernate.cache.query_cache_factory">org.hibernate.cache.StandardQueryCacheFactory</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- The Hibernate interceptor -->
+    <bean id="hibernateInterceptor" class="org.springframework.orm.hibernate3.HibernateInterceptor">
+        <property name="sessionFactory"><ref bean="sessionFactory"/></property>
+    </bean>
+
+    <!-- Localizador Entity Proxy with inner Localizador Entity implementation -->
+    <bean id="localizadorDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.localizador.negocio.dominio.LocalizadorDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.localizador.negocio.dominio.LocalizadorDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+    <!-- ========================= Start of SERVICE DEFINITIONS ========================= -->
+
+    <!-- Service Transactional Interceptor -->
+    <bean id="serviceTransactionInterceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor">
+        <property name="transactionManager"><ref bean="transactionManager"/></property>
+        <property name="transactionAttributeSource">
+            <value>
+                es.pode.localizador.negocio.servicios.SrvLocalizadorService.crearLocalizadorNoPublicado=PROPAGATION_REQUIRED
+                es.pode.localizador.negocio.servicios.SrvLocalizadorService.crearLocalizadorPublicado=PROPAGATION_REQUIRED
+                es.pode.localizador.negocio.servicios.SrvLocalizadorService.consultaLocalizador=PROPAGATION_REQUIRED
+                es.pode.localizador.negocio.servicios.SrvLocalizadorService.buscarLocalizadoresPorId=PROPAGATION_REQUIRED
+                es.pode.localizador.negocio.servicios.SrvLocalizadorService.eliminarLocalizador=PROPAGATION_REQUIRED
+                es.pode.localizador.negocio.servicios.SrvLocalizadorService.consultaLocalizadorNoPublicado=PROPAGATION_REQUIRED
+                es.pode.localizador.negocio.servicios.SrvLocalizadorService.consultaEspacioLocalizadores=PROPAGATION_REQUIRED
+                es.pode.localizador.negocio.servicios.SrvLocalizadorService.consultaEspacioLocalizador=PROPAGATION_REQUIRED
+                es.pode.localizador.negocio.servicios.SrvLocalizadorService.actualizaEspacioLocalizador=PROPAGATION_REQUIRED
+                es.pode.localizador.negocio.servicios.SrvLocalizadorService.calculaEspacioLocalizador=PROPAGATION_REQUIRED
+            </value>
+        </property>
+    </bean>
+
+    <!-- SrvLocalizadorService Service Proxy with inner SrvLocalizadorService Service Implementation -->
+    <bean id="srvLocalizadorService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.localizador.negocio.servicios.SrvLocalizadorServiceImpl">
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                <property name="localizadorDao"><ref bean="localizadorDao"/></property>
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.localizador.negocio.servicios.SrvLocalizadorService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceTransactionInterceptor</value>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- ========================= End of SERVICE DEFINITIONS ========================= -->
+
+    <!-- ========================= CONSTANTS PROPERTIES BEAN ========================= -->    
+    <bean id="propiedadesConstantes" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	      <property name="locations">
+		  <list>
+			  <value>classpath:spring.properties</value>
+		  </list>
+		  </property>
+    </bean>
+    <!-- ========================= END CONSTANTS PROPERTIES BEAN ========================= -->    
+</beans>

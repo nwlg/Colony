@@ -1,0 +1,15 @@
+#cancelar.action {}
+#cancelar.action #form_submit {}
+
+
+#aceptar.action {}
+#aceptar.action #form_submit {}
+
+#aceptar.action .usuario {}
+#aceptar.action .usuario .label {}
+#aceptar.action .usuario .field {}
+#aceptar.action .resultadoEnvio {}
+#aceptar.action .resultadoEnvio .label {}
+#aceptar.action .resultadoEnvio .field {}
+
+

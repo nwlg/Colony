@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<MenuConfig>
+
+    <Displayers>
+        <Displayer name="listMenu" type="net.sf.navigator.displayer.ListMenuDisplayer"/>
+    </Displayers>
+
+    <Menus>
+        <Menu name="listar.odecu.title" title="listar.odecu.title" tooltip="listar.odecu.online.help">
+            <Item name="buscar.avanzado.cu.title" title="buscar.avanzado.cu.title" tooltip="buscar.avanzado.cu.online.help">
+                            <Item name="area.curricular.cu.title" title="area.curricular.cu.title" tooltip="area.curricular.cu.online.help" action="/AreaCurricularCU/AreaCurricularCU">
+                </Item>
+                            <Item name="detallar.odecu.title" title="detallar.odecu.title" tooltip="detallar.odecu.online.help">
+                                    <Item name="descargar.odecu.title" title="descargar.odecu.title" tooltip="descargar.odecu.online.help" action="/DescargarODECU/DescargarODECU">
+                    </Item>
+                                    <Item name="listar.odearea.cu.title" title="listar.odearea.cu.title" tooltip="listar.odearea.cu.online.help">
+                                            <Item name="navegar.arbol.curricular.cu.title" title="navegar.arbol.curricular.cu.title" tooltip="navegar.arbol.curricular.cu.online.help" action="/NavegarArbolCurricularCU/NavegarArbolCurricularCU">
+                        </Item>
+                    </Item>
+                                    <Item name="enviar.mail.cu.title" title="enviar.mail.cu.title" tooltip="enviar.mail.cu.online.help" action="/EnviarMailCU/EnviarMailCU">
+                    </Item>
+                                    <Item name="listar.odetesauro.cu.title" title="listar.odetesauro.cu.title" tooltip="listar.odetesauro.cu.online.help">
+                                            <Item name="navegar.tesauro.cu.title" title="navegar.tesauro.cu.title" tooltip="navegar.tesauro.cu.online.help" action="/NavegarTesauroCU/NavegarTesauroCU">
+                        </Item>
+                    </Item>
+                                    <Item name="introducir.comentarios.cu.title" title="introducir.comentarios.cu.title" tooltip="introducir.comentarios.cu.online.help" action="/IntroducirComentariosCU/IntroducirComentariosCU">
+                    </Item>
+                                    <Item name="listar.comentarios.cu.title" title="listar.comentarios.cu.title" tooltip="listar.comentarios.cu.online.help" action="/ListarComentariosCU/ListarComentariosCU">
+                    </Item>
+                                    <Item name="anadir.carpeta.personal.cu.title" title="anadir.carpeta.personal.cu.title" tooltip="anadir.carpeta.personal.cu.online.help" action="/AnadirCarpetaPersonalCU/AnadirCarpetaPersonalCU">
+                    </Item>
+                </Item>
+                            <Item name="eliminar.odes.cu.title" title="eliminar.odes.cu.title" tooltip="eliminar.odes.cu.online.help" action="/EliminarOdesCU/EliminarOdesCU">
+                </Item>
+                            <Item name="tesauros.cu.title" title="tesauros.cu.title" tooltip="tesauros.cu.online.help" action="/TesaurosCU/TesaurosCU">
+                </Item>
+                            <Item name="busqueda.sqicu.title" title="busqueda.sqicu.title" tooltip="busqueda.sqicu.online.help" action="/BusquedaSQICU/BusquedaSQICU">
+                </Item>
+            </Item>
+        </Menu>
+    </Menus>
+
+</MenuConfig>

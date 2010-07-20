@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <!-- ========================= GENERAL DEFINITIONS ========================= -->
+    <!-- Message source for this context, loaded from localized "messages_xx" files -->
+
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename"><value>messages</value></property>
+    </bean>
+
+	<bean id="beanMapper" class="net.sf.dozer.util.mapping.DozerBeanMapper" singleton="true">
+		<property name="mappingFiles">
+			<list>
+				<value>defaultDozerMappings_validador.xml</value>
+				<value>customDozerMappings_validador.xml</value>
+			</list>
+		</property>
+	</bean>
+
+    <!-- applicationContext merge-point -->
+
+    <!-- ========================= Start of SERVICE DEFINITIONS ========================= -->
+
+
+    <!-- SrvValidadorService Service Proxy with inner SrvValidadorService Service Implementation -->
+    <bean id="srvValidadorService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.validador.negocio.servicio.SrvValidadorServiceImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+	                <property name="scormDao"><ref bean="ScormDao"/></property>
+    		                <property name="lomesDao"><ref bean="LomesDao"/></property>
+    	            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.validador.negocio.servicio.SrvValidadorService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceSecurityInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvValidadorVDEXService Service Proxy with inner SrvValidadorVDEXService Service Implementation -->
+    <bean id="srvValidadorVDEXService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.validador.negocio.servicio.SrvValidadorVDEXServiceImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.validador.negocio.servicio.SrvValidadorVDEXService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceSecurityInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- ========================= End of SERVICE DEFINITIONS ========================= -->
+
+</beans>

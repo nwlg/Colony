@@ -1,0 +1,27 @@
+#ejecutandose.action {}
+#ejecutandose.action #form_submit {}
+
+
+#pendientes.action {}
+#pendientes.action #form_submit {}
+
+
+#busqueda.action {}
+#busqueda.action #form_submit {}
+
+#busqueda.action .idiomaBuscador {}
+#busqueda.action .idiomaBuscador .label {}
+#busqueda.action .idiomaBuscador .field {}
+
+#modificaciones.table {}
+#modificaciones.table th {}
+#modificaciones.table td div {}
+
+#modificaciones.table th.nombre {}
+#modificaciones.table td div.nombre {}
+
+#modificaciones.table th.resultado {}
+#modificaciones.table td div.resultado {}
+
+
+

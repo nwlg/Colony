@@ -1,0 +1,32 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="idiomaDestinatario" value="${form.idiomaDestinatario}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tipoRecurso" value="${form.tipoRecurso}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="titulo" value="${form.titulo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="usuario" value="${form.usuario}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="arboles" value="${form.arboles}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="identificador" value="${form.identificador}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="descripcion" value="${form.descripcion}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idioma" value="${form.idioma}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="returnURL" value="${form.returnURL}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idiomaPortal" value="${form.idiomaPortal}"/>
+    </c:catch>
+</div>

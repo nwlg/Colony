@@ -1,0 +1,53 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="minutos" value="${form.minutos}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="segundoP2" value="${form.segundoP2}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="descripciones" value="${form.descripciones}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="segundoP1" value="${form.segundoP1}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="cidentidad" value="${form.cidentidad}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="meridianocero" value="${form.meridianocero}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="zhHora" value="${form.zhHora}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="hora" value="${form.hora}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="versiones" value="${form.versiones}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="crol" value="${form.crol}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="comboIdioma" value="${form.comboIdioma}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="zhMinutos" value="${form.zhMinutos}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="contribuciones" value="${form.contribuciones}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="fechaCorta" value="${form.fechaCorta}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="estatus" value="${form.estatus}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="comboZonaH" value="${form.comboZonaH}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="identificadorOde" value="${form.identificadorOde}"/>
+    </c:catch>
+</div>

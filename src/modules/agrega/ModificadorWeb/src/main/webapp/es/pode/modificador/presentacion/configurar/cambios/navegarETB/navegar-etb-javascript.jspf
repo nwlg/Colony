@@ -1,0 +1,35 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'navegar.etb.navegar.etb.navegar.param.id.termino.title':'<formatting:escape language="javascript"><bean:message key="navegar.etb.navegar.etb.navegar.param.id.termino.title"/></formatting:escape>',
+                'navegar.etb.navegar.etb.buscar.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="navegar.etb.navegar.etb.buscar.param.idioma.buscador.title"/></formatting:escape>',
+                'navegar.etb.navegar.etb.buscar.param.tipo.busqueda.title':'<formatting:escape language="javascript"><bean:message key="navegar.etb.navegar.etb.buscar.param.tipo.busqueda.title"/></formatting:escape>',
+                'navegar.etb.navegar.etb.seleccionar.param.id.termino.title':'<formatting:escape language="javascript"><bean:message key="navegar.etb.navegar.etb.seleccionar.param.id.termino.title"/></formatting:escape>',
+                'navegar.etb.navegar.etb.seleccionar.param.action.title':'<formatting:escape language="javascript"><bean:message key="navegar.etb.navegar.etb.seleccionar.param.action.title"/></formatting:escape>',
+                'navegar':'<formatting:escape language="javascript"><bean:message key="navegar.etb.navegar.etb.navegar.title"/></formatting:escape>',
+                'navegar_no':'<formatting:escape language="javascript"><bean:message key="navegar.etb.navegar.etb.navegar.title.notallowed"/></formatting:escape>',
+                'navegar_reset':'<formatting:escape language="javascript"><bean:message key="navegar.etb.navegar.etb.navegar.title.reset"/></formatting:escape>',
+                'navegar_noreset':'<formatting:escape language="javascript"><bean:message key="navegar.etb.navegar.etb.navegar.title.reset.not.allowed"/></formatting:escape>',
+                'buscar':'<formatting:escape language="javascript"><bean:message key="navegar.etb.navegar.etb.buscar.title"/></formatting:escape>',
+                'buscar_no':'<formatting:escape language="javascript"><bean:message key="navegar.etb.navegar.etb.buscar.title.notallowed"/></formatting:escape>',
+                'buscar_reset':'<formatting:escape language="javascript"><bean:message key="navegar.etb.navegar.etb.buscar.title.reset"/></formatting:escape>',
+                'buscar_noreset':'<formatting:escape language="javascript"><bean:message key="navegar.etb.navegar.etb.buscar.title.reset.not.allowed"/></formatting:escape>',
+                'seleccionar':'<formatting:escape language="javascript"><bean:message key="navegar.etb.navegar.etb.seleccionar.title"/></formatting:escape>',
+                'seleccionar_no':'<formatting:escape language="javascript"><bean:message key="navegar.etb.navegar.etb.seleccionar.title.notallowed"/></formatting:escape>',
+                'seleccionar_reset':'<formatting:escape language="javascript"><bean:message key="navegar.etb.navegar.etb.seleccionar.title.reset"/></formatting:escape>',
+                'seleccionar_noreset':'<formatting:escape language="javascript"><bean:message key="navegar.etb.navegar.etb.seleccionar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+</script>
+    </tiles:put>

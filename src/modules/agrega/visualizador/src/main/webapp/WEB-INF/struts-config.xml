@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+    "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+    <!-- display-name merge point -->
+
+    <!-- description merge point -->
+
+    <data-sources>
+        <!-- data-sources merge point -->
+    </data-sources>
+
+    <form-beans>
+        <!-- form-beans merge-point -->
+        <form-bean
+            name="visualizarVisualizarForm"
+            type="es.pode.presentacion.visualizador.VisualizarFormImpl" />
+        <form-bean
+            name="visualizarVisualizarDatosNavSecuenciaNodoForm"
+            type="es.pode.presentacion.visualizador.VisualizarDatosNavSecuenciaNodoFormImpl" />
+        <form-bean
+            name="visualizarVisualizarDatosNavSecuenciaBotonForm"
+            type="es.pode.presentacion.visualizador.VisualizarDatosNavSecuenciaBotonFormImpl" />
+        <form-bean
+            name="contenidoInapropiadoContenidoInapropiadoForm"
+            type="es.pode.presentacion.contenidoInapropiado.ContenidoInapropiadoFormImpl" />
+        <form-bean
+            name="taggingTaggingForm"
+            type="es.pode.presentacion.tagging.TaggingFormImpl" />
+        <form-bean
+            name="visualizarAdlVisualizarAdlForm"
+            type="es.pode.presentacion.visualizadorAdl.VisualizarAdlFormImpl" />
+        <form-bean
+            name="visualizarAdlLmsmainDatosBorrarForm"
+            type="es.pode.presentacion.visualizadorAdl.LmsmainDatosBorrarFormImpl" />
+    </form-beans>
+
+    <global-exceptions>
+        <!-- global-exceptions merge point -->
+        <exception
+            handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+            type="java.lang.Throwable"
+            key="error.exception.message"
+            path="/error-page.jsp?code=exception&amp;exception=true"
+            scope="request" />
+    </global-exceptions>
+
+    <global-forwards>
+        
+        <forward
+            name="visualizar"
+            path="/Visualizar/Visualizar.do"
+            redirect="false" />
+        <forward
+            name="contenido.inapropiado"
+            path="/ContenidoInapropiado/ContenidoInapropiado.do"
+            redirect="false" />
+        <forward
+            name="tagging"
+            path="/Tagging/Tagging.do"
+            redirect="false" />
+        <forward
+            name="visualizar.adl"
+            path="/VisualizarAdl/VisualizarAdl.do"
+            redirect="false" />
+    </global-forwards>
+
+    <action-mappings>
+        <!-- action-mappings merge-point -->
+        <action
+            path="/Visualizar/VisualizarDatosFin"
+            type="es.pode.presentacion.visualizador.VisualizarDatosFin"
+            scope="request"
+            input="/es/pode/presentacion/visualizador/visualizar-datos.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="visualizar.visualizar.datos.fin.exception"
+                path="/es/pode/presentacion/visualizador/visualizar-datos.jsp"
+                scope="request" />
+            <forward
+                name="fin"
+                path="/Visualizar/Visualizar.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/Visualizar/Visualizar"
+            type="es.pode.presentacion.visualizador.Visualizar"
+            name="visualizarVisualizarForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="visualizar.datos"
+                path="/es/pode/presentacion/visualizador/visualizar-datos.jsp"
+                redirect="false" />
+            <forward
+                name="visualizar.datos.nav"
+                path="/es/pode/presentacion/visualizador/visualizar-datos-nav.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/Visualizar/VisualizarDatosNavSecuenciaNodo"
+            type="es.pode.presentacion.visualizador.VisualizarDatosNavSecuenciaNodo"
+            name="visualizarVisualizarDatosNavSecuenciaNodoForm"
+            scope="request"
+            input="/es/pode/presentacion/visualizador/visualizar-datos-nav.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="visualizar.visualizar.datos.nav.secuencia.nodo.exception"
+                path="/es/pode/presentacion/visualizador/visualizar-datos-nav.jsp"
+                scope="request" />
+            <forward
+                name="carga.nodos"
+                path="/es/pode/presentacion/visualizador/visualizar-datos-nav.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/Visualizar/VisualizarDatosNavSecuenciaBoton"
+            type="es.pode.presentacion.visualizador.VisualizarDatosNavSecuenciaBoton"
+            name="visualizarVisualizarDatosNavSecuenciaBotonForm"
+            scope="request"
+            input="/es/pode/presentacion/visualizador/visualizar-datos-nav.jsp"
+            unknown="false"
+            validate="true">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="visualizar.visualizar.datos.nav.secuencia.boton.exception"
+                path="/es/pode/presentacion/visualizador/visualizar-datos-nav.jsp"
+                scope="request" />
+            <forward
+                name="carga.botones"
+                path="/es/pode/presentacion/visualizador/visualizar-datos-nav.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/Visualizar/VisualizarDatosNavSalir"
+            type="es.pode.presentacion.visualizador.VisualizarDatosNavSalir"
+            scope="request"
+            input="/es/pode/presentacion/visualizador/visualizar-datos-nav.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="visualizar.visualizar.datos.nav.salir.exception"
+                path="/es/pode/presentacion/visualizador/visualizar-datos-nav.jsp"
+                scope="request" />
+            <forward
+                name="salir"
+                path="/Visualizar/Visualizar.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/presentacion/visualizador/VisualizarHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/presentacion/visualizador/Visualizar_help.jsp"/>
+        <action
+            path="/VisualizarDatosHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/presentacion/visualizador/visualizar-datos_help.jsp"/>
+        <action
+            path="/VisualizarDatosNavHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/presentacion/visualizador/visualizar-datos-nav_help.jsp"/>
+        <action
+            path="/ContenidoInapropiado/ContenidoInapropiado"
+            type="es.pode.presentacion.contenidoInapropiado.ContenidoInapropiado"
+            name="contenidoInapropiadoContenidoInapropiadoForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+        </action>
+        <action
+            path="/es/pode/presentacion/contenidoInapropiado/ContenidoInapropiadoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/presentacion/contenidoInapropiado/Contenido-Inapropiado_help.jsp"/>
+        <action
+            path="/Tagging/Tagging"
+            type="es.pode.presentacion.tagging.Tagging"
+            name="taggingTaggingForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+        </action>
+        <action
+            path="/es/pode/presentacion/tagging/TaggingHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/presentacion/tagging/Tagging_help.jsp"/>
+        <action
+            path="/VisualizarAdl/LmsmainFin"
+            type="es.pode.presentacion.visualizadorAdl.LmsmainFin"
+            scope="request"
+            input="/es/pode/presentacion/visualizadorAdl/lmsmain.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="visualizar.adl.lmsmain.fin.exception"
+                path="/es/pode/presentacion/visualizadorAdl/lmsmain.jsp"
+                scope="request" />
+            <forward
+                name="fin"
+                path="/VisualizarAdl/VisualizarAdl.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/VisualizarAdl/VisualizarAdl"
+            type="es.pode.presentacion.visualizadorAdl.VisualizarAdl"
+            name="visualizarAdlVisualizarAdlForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="datos"
+                path="/es/pode/presentacion/visualizadorAdl/lmsmain.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/VisualizarAdl/LmsmainDatosBorrar"
+            type="es.pode.presentacion.visualizadorAdl.LmsmainDatosBorrar"
+            name="visualizarAdlLmsmainDatosBorrarForm"
+            scope="request"
+            input="/es/pode/presentacion/visualizadorAdl/lmsmain.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="visualizar.adl.lmsmain.datos.borrar.exception"
+                path="/es/pode/presentacion/visualizadorAdl/lmsmain.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/es/pode/presentacion/visualizadorAdl/VisualizarAdlHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/presentacion/visualizadorAdl/Visualizar-Adl_help.jsp"/>
+        <action
+            path="/LmsmainHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/presentacion/visualizadorAdl/lmsmain_help.jsp"/>
+        <action
+            path="/applicationHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/application-help.jsp"/>
+        <action
+            path="/calendar"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/calendar-js.jsp"/>
+        <action
+            path="/formValidation"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/form-validation.jsp"/>
+        <action
+            path="/login"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/login/login-form.jsp"/>
+        <action
+            path="/logincaptcha"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/login/login-form.jsp"/>  
+        <action
+            path="/captcha-image"
+            type="es.indra.ibuilder.security.captcha.ImageCaptchaAction"
+            scope="request"/>  
+    </action-mappings>
+
+    <!-- controller merge point -->
+
+    <!-- message-resources merge-point -->
+    <message-resources parameter="application-resources" null="false"/>
+
+    <!-- plug-in merge-point -->
+    
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property property="pathnames" value="/WEB-INF/validation.xml,/WEB-INF/validator-rules.xml"/>
+        <set-property property="stopOnFirstError" value="false"/>
+    </plug-in>
+
+    <plug-in className="org.apache.struts.tiles.TilesPlugin">
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml"/>
+        <set-property property="definitions-parser-validate" value="true"/>
+        <set-property property="moduleAware" value="true"/>
+    </plug-in>
+
+<!--
+  UNCOMMENT TO EXPOSE THE STRUTS-MENU TAGLIB
+
+    <plug-in className="net.sf.navigator.menu.MenuPlugIn">
+        <set-property property="menuConfig" value="/WEB-INF/menu-config.xml"/>
+    </plug-in>
+-->
+</struts-config>

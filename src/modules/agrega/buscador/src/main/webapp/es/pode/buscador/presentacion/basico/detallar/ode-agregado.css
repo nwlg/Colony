@@ -1,0 +1,74 @@
+#agregarNuevo.action {}
+#agregarNuevo.action #form_submit {}
+
+#agregarNuevo.action .autor {}
+#agregarNuevo.action .autor .label {}
+#agregarNuevo.action .autor .field {}
+#agregarNuevo.action .buscadorContenido {}
+#agregarNuevo.action .buscadorContenido .label {}
+#agregarNuevo.action .buscadorContenido .field {}
+#agregarNuevo.action .busquedaSimpleAvanzada {}
+#agregarNuevo.action .busquedaSimpleAvanzada .label {}
+#agregarNuevo.action .busquedaSimpleAvanzada .field {}
+#agregarNuevo.action .c_s_secuencia {}
+#agregarNuevo.action .c_s_secuencia .label {}
+#agregarNuevo.action .c_s_secuencia .field {}
+#agregarNuevo.action .contexto {}
+#agregarNuevo.action .contexto .label {}
+#agregarNuevo.action .contexto .field {}
+#agregarNuevo.action .descripcion {}
+#agregarNuevo.action .descripcion .label {}
+#agregarNuevo.action .descripcion .field {}
+#agregarNuevo.action .edad {}
+#agregarNuevo.action .edad .label {}
+#agregarNuevo.action .edad .field {}
+#agregarNuevo.action .anyoPublicacion {}
+#agregarNuevo.action .anyoPublicacion .label {}
+#agregarNuevo.action .anyoPublicacion .field {}
+#agregarNuevo.action .formato {}
+#agregarNuevo.action .formato .label {}
+#agregarNuevo.action .formato .field {}
+#agregarNuevo.action .idiomaBuscador {}
+#agregarNuevo.action .idiomaBuscador .label {}
+#agregarNuevo.action .idiomaBuscador .field {}
+#agregarNuevo.action .areaCurricular {}
+#agregarNuevo.action .areaCurricular .label {}
+#agregarNuevo.action .areaCurricular .field {}
+#agregarNuevo.action .pagina {}
+#agregarNuevo.action .pagina .label {}
+#agregarNuevo.action .pagina .field {}
+#agregarNuevo.action .procesoCognitivo {}
+#agregarNuevo.action .procesoCognitivo .label {}
+#agregarNuevo.action .procesoCognitivo .field {}
+#agregarNuevo.action .recurso {}
+#agregarNuevo.action .recurso .label {}
+#agregarNuevo.action .recurso .field {}
+#agregarNuevo.action .titulo {}
+#agregarNuevo.action .titulo .label {}
+#agregarNuevo.action .titulo .field {}
+#agregarNuevo.action .valoracion {}
+#agregarNuevo.action .valoracion .label {}
+#agregarNuevo.action .valoracion .field {}
+#agregarNuevo.action .mesPublicacion {}
+#agregarNuevo.action .mesPublicacion .label {}
+#agregarNuevo.action .mesPublicacion .field {}
+#agregarNuevo.action .diaPublicacion {}
+#agregarNuevo.action .diaPublicacion .label {}
+#agregarNuevo.action .diaPublicacion .field {}
+#agregarNuevo.action .areaCurricularBusqueda {}
+#agregarNuevo.action .areaCurricularBusqueda .label {}
+#agregarNuevo.action .areaCurricularBusqueda .field {}
+#agregarNuevo.action .tipoVisualizacion {}
+#agregarNuevo.action .tipoVisualizacion .label {}
+#agregarNuevo.action .tipoVisualizacion .field {}
+#agregarNuevo.action .tipoBusquedaArbol {}
+#agregarNuevo.action .tipoBusquedaArbol .label {}
+#agregarNuevo.action .tipoBusquedaArbol .field {}
+#agregarNuevo.action .tipoBusqueda {}
+#agregarNuevo.action .tipoBusqueda .label {}
+#agregarNuevo.action .tipoBusqueda .field {}
+#agregarNuevo.action .tipoLayoutBuscador {}
+#agregarNuevo.action .tipoLayoutBuscador .label {}
+#agregarNuevo.action .tipoLayoutBuscador .field {}
+
+

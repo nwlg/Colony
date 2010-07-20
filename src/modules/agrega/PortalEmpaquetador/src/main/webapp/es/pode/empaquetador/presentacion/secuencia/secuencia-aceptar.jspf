@@ -1,0 +1,113 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="editar.secuencia.secuencia.aceptar"/></h3>
+    <div class="trigger">
+        <html:form styleId="editarSecuenciaSecuenciaAceptarForm" action="/EditarSecuencia/SecuenciaAceptar" method="post" enctype="multipart/form-data" onsubmit="return validateSecuenciaAceptarForm(this);">
+            <%@ include file="/es/pode/empaquetador/presentacion/secuencia/secuencia-aceptar-hidden-params.jspf" %>
+            <table>
+                <tbody>
+                    <tr class="choice">
+                        <td class="label"><nobr><bean:message key="editar.secuencia.secuencia.aceptar.param.choice"/> <div class="important">*</div></nobr></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.choice}"/>
+                           <table>
+                               <tr>
+                                   <td>
+                                       <html:radio name="form" property="choice" value="0" onmouseover="hints.show('editar.secuencia.secuencia.aceptar.param.choice.title')" onmouseout="hints.hide()"  styleId="aceptarChoice"/>
+                                       <bean:message key="editar.secuencia.secuencia.aceptar.param.choice.0"/>
+                                   </td>
+                               </tr>
+                               <tr>
+                                   <td>
+                                       <html:radio name="form" property="choice" value="1" onmouseover="hints.show('editar.secuencia.secuencia.aceptar.param.choice.title')" onmouseout="hints.hide()"  styleId="aceptarChoice"/>
+                                       <bean:message key="editar.secuencia.secuencia.aceptar.param.choice.1"/>
+                                   </td>
+                               </tr>
+                           </table>
+                        </td>
+                    </tr>
+                    <tr class="choiceExit">
+                        <td class="label"><nobr><bean:message key="editar.secuencia.secuencia.aceptar.param.choice.exit"/> <div class="important">*</div></nobr></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.choiceExit}"/>
+                           <table>
+                               <tr>
+                                   <td>
+                                       <html:radio name="form" property="choiceExit" value="0" onmouseover="hints.show('editar.secuencia.secuencia.aceptar.param.choice.exit.title')" onmouseout="hints.hide()"  styleId="aceptarChoiceExit"/>
+                                       <bean:message key="editar.secuencia.secuencia.aceptar.param.choice.exit.0"/>
+                                   </td>
+                               </tr>
+                               <tr>
+                                   <td>
+                                       <html:radio name="form" property="choiceExit" value="1" onmouseover="hints.show('editar.secuencia.secuencia.aceptar.param.choice.exit.title')" onmouseout="hints.hide()"  styleId="aceptarChoiceExit"/>
+                                       <bean:message key="editar.secuencia.secuencia.aceptar.param.choice.exit.1"/>
+                                   </td>
+                               </tr>
+                           </table>
+                        </td>
+                    </tr>
+                    <tr class="flow">
+                        <td class="label"><nobr><bean:message key="editar.secuencia.secuencia.aceptar.param.flow"/> <div class="important">*</div></nobr></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.flow}"/>
+                           <table>
+                               <tr>
+                                   <td>
+                                       <html:radio name="form" property="flow" value="0" onmouseover="hints.show('editar.secuencia.secuencia.aceptar.param.flow.title')" onmouseout="hints.hide()"  styleId="aceptarFlow"/>
+                                       <bean:message key="editar.secuencia.secuencia.aceptar.param.flow.0"/>
+                                   </td>
+                               </tr>
+                               <tr>
+                                   <td>
+                                       <html:radio name="form" property="flow" value="1" onmouseover="hints.show('editar.secuencia.secuencia.aceptar.param.flow.title')" onmouseout="hints.hide()"  styleId="aceptarFlow"/>
+                                       <bean:message key="editar.secuencia.secuencia.aceptar.param.flow.1"/>
+                                   </td>
+                               </tr>
+                           </table>
+                        </td>
+                    </tr>
+                    <tr class="forwardOnly">
+                        <td class="label"><nobr><bean:message key="editar.secuencia.secuencia.aceptar.param.forward.only"/> <div class="important">*</div></nobr></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.forwardOnly}"/>
+                           <table>
+                               <tr>
+                                   <td>
+                                       <html:radio name="form" property="forwardOnly" value="0" onmouseover="hints.show('editar.secuencia.secuencia.aceptar.param.forward.only.title')" onmouseout="hints.hide()"  styleId="aceptarForwardOnly"/>
+                                       <bean:message key="editar.secuencia.secuencia.aceptar.param.forward.only.0"/>
+                                   </td>
+                               </tr>
+                               <tr>
+                                   <td>
+                                       <html:radio name="form" property="forwardOnly" value="1" onmouseover="hints.show('editar.secuencia.secuencia.aceptar.param.forward.only.title')" onmouseout="hints.hide()"  styleId="aceptarForwardOnly"/>
+                                       <bean:message key="editar.secuencia.secuencia.aceptar.param.forward.only.1"/>
+                                   </td>
+                               </tr>
+                           </table>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_DOCENTE,ROLE_CATALOGADOR,ROLE_PUBLICADOR,ROLE_ADMINISTRADOR,ROLE_DOCENTE,ROLE_ADMINISTRADOR,ROLE_CATALOGADOR,ROLE_PUBLICADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="editar.secuencia.secuencia.aceptar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

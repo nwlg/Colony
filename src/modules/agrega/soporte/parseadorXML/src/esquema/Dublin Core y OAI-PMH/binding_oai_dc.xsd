@@ -1,0 +1,53 @@
+<binding xmlns="http://www.castor.org/SourceGenerator/Binding" 
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+            xsi:schemaLocation="http://www.castor.org/SourceGenerator/Binding D:\castorlomes\esquemas_dc\binding_oai_dc.xsd" 
+            >
+
+  <elementBinding name="/title">
+      <java-class name="DcTitle"/>
+   </elementBinding>
+   <elementBinding name="/creator">
+      <java-class name="DcCreator"/>
+   </elementBinding>
+   <elementBinding name="/subject">
+      <java-class name="DcSubject"/>
+   </elementBinding>
+   <elementBinding name="/description">
+      <java-class name="DcDescription"/>
+   </elementBinding>
+   <elementBinding name="/publisher">
+      <java-class name="DcPublisher"/>
+   </elementBinding>
+   <elementBinding name="/contributor">
+      <java-class name="DcContributor"/>
+   </elementBinding>
+   <elementBinding name="/date">
+      <java-class name="DcDate"/>
+   </elementBinding>   
+   <elementBinding name="/type">
+      <java-class name="DcType"/>
+   </elementBinding>
+   <elementBinding name="/format">
+      <java-class name="DcFormat"/>
+   </elementBinding>
+   <elementBinding name="/identifier">
+      <java-class name="DcIdentifier"/>
+   </elementBinding>
+   <elementBinding name="/source">
+      <java-class name="DcSource"/>
+   </elementBinding>
+   <elementBinding name="/language">
+      <java-class name="DcLanguage"/>
+   </elementBinding>
+   <elementBinding name="/relation">
+      <java-class name="DcRelation"/>
+   </elementBinding>
+   <elementBinding name="/coverage">
+      <java-class name="DcCoverage"/>
+   </elementBinding>
+   <elementBinding name="/rights">
+      <java-class name="DcRights"/>
+   </elementBinding>   
+      
+
+</binding>

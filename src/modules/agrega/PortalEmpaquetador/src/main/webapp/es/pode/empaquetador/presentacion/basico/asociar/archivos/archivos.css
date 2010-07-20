@@ -1,0 +1,30 @@
+#submit.action {}
+#submit.action #form_submit {}
+
+#submit.action .action {}
+#submit.action .action .label {}
+#submit.action .action .field {}
+
+#archivos.action {}
+#archivos.action #form_submit {}
+
+#archivos.action .identifier {}
+#archivos.action .identifier .label {}
+#archivos.action .identifier .field {}
+
+#estructura.action {}
+#estructura.action #form_submit {}
+
+#estructura.action .identifier {}
+#estructura.action .identifier .label {}
+#estructura.action .identifier .field {}
+
+#ficheros.table {}
+#ficheros.table th {}
+#ficheros.table td div {}
+
+#ficheros.table th.nombre {}
+#ficheros.table td div.nombre {}
+
+
+

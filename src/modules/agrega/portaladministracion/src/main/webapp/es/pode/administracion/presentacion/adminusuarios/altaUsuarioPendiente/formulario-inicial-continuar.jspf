@@ -1,0 +1,166 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="continuar" class="action">
+    <h3><bean:message key="alta.usuario.pendiente.formulario.inicial.continuar"/></h3>
+    <div class="trigger">
+        <html:form styleId="altaUsuarioPendienteFormularioInicialContinuarForm" action="/AltaUsuarioPendiente/FormularioInicialContinuar" method="post" enctype="multipart/form-data" onsubmit="return validateFormularioInicialContinuarForm(this);">
+            <table>
+                <tbody>
+                    <tr class="nombre">
+                        <td class="label"><bean:message key="alta.usuario.pendiente.formulario.inicial.continuar.param.nombre"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.nombre}"/>
+                           <input type="text" name="nombre" value="${value}" onmouseover="hints.show('alta.usuario.pendiente.formulario.inicial.continuar.param.nombre.title')" onmouseout="hints.hide()"  id="continuarNombre"/>
+                        </td>
+                    </tr>
+                    <tr class="apellido1">
+                        <td class="label"><bean:message key="alta.usuario.pendiente.formulario.inicial.continuar.param.apellido1"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.apellido1}"/>
+                           <input type="text" name="apellido1" value="${value}" onmouseover="hints.show('alta.usuario.pendiente.formulario.inicial.continuar.param.apellido1.title')" onmouseout="hints.hide()"  id="continuarApellido1"/>
+                        </td>
+                    </tr>
+                    <tr class="apellido2">
+                        <td class="label"><bean:message key="alta.usuario.pendiente.formulario.inicial.continuar.param.apellido2"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.apellido2}"/>
+                           <input type="text" name="apellido2" value="${value}" onmouseover="hints.show('alta.usuario.pendiente.formulario.inicial.continuar.param.apellido2.title')" onmouseout="hints.hide()"  id="continuarApellido2"/>
+                        </td>
+                    </tr>
+                    <tr class="email">
+                        <td class="label"><bean:message key="alta.usuario.pendiente.formulario.inicial.continuar.param.email"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.email}"/>
+                           <input type="text" name="email" value="${value}" onmouseover="hints.show('alta.usuario.pendiente.formulario.inicial.continuar.param.email.title')" onmouseout="hints.hide()"  id="continuarEmail"/>
+                        </td>
+                    </tr>
+                    <tr class="nif">
+                        <td class="label"><bean:message key="alta.usuario.pendiente.formulario.inicial.continuar.param.nif"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.nif}"/>
+                           <input type="text" name="nif" value="${value}" onmouseover="hints.show('alta.usuario.pendiente.formulario.inicial.continuar.param.nif.title')" onmouseout="hints.hide()"  id="continuarNif"/>
+                        </td>
+                    </tr>
+                    <tr class="usuario">
+                        <td class="label"><bean:message key="alta.usuario.pendiente.formulario.inicial.continuar.param.usuario"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.usuario}"/>
+                           <input type="text" name="usuario" value="${value}" onmouseover="hints.show('alta.usuario.pendiente.formulario.inicial.continuar.param.usuario.title')" onmouseout="hints.hide()"  id="continuarUsuario"/>
+                        </td>
+                    </tr>
+                    <tr class="clave">
+                        <td class="label"><bean:message key="alta.usuario.pendiente.formulario.inicial.continuar.param.clave"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.clave}"/>
+                           <input type="text" name="clave" value="${value}" onmouseover="hints.show('alta.usuario.pendiente.formulario.inicial.continuar.param.clave.title')" onmouseout="hints.hide()"  id="continuarClave"/>
+                        </td>
+                    </tr>
+                    <tr class="repitaClave">
+                        <td class="label"><bean:message key="alta.usuario.pendiente.formulario.inicial.continuar.param.repita.clave"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.repitaClave}"/>
+                           <input type="text" name="repitaClave" value="${value}" onmouseover="hints.show('alta.usuario.pendiente.formulario.inicial.continuar.param.repita.clave.title')" onmouseout="hints.hide()"  id="continuarRepitaClave"/>
+                        </td>
+                    </tr>
+                    <tr class="idioma">
+                        <td class="label"><bean:message key="alta.usuario.pendiente.formulario.inicial.continuar.param.idioma"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idioma}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.idiomaBackingList}">
+                                  <html:select name="form" property="idioma" onmouseover="hints.show('alta.usuario.pendiente.formulario.inicial.continuar.param.idioma.title')" onmouseout="hints.hide()"  styleId="continuarIdioma">
+                                      <html:optionsCollection name="form" property="idiomaBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="idioma" onmouseover="hints.show('alta.usuario.pendiente.formulario.inicial.continuar.param.idioma.title')" onmouseout="hints.hide()"  styleId="continuarIdioma"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="idiomaBusqueda">
+                        <td class="label"><bean:message key="alta.usuario.pendiente.formulario.inicial.continuar.param.idioma.busqueda"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idiomaBusqueda}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.idiomaBusquedaBackingList}">
+                                  <html:select name="form" property="idiomaBusqueda" onmouseover="hints.show('alta.usuario.pendiente.formulario.inicial.continuar.param.idioma.busqueda.title')" onmouseout="hints.hide()"  styleId="continuarIdiomaBusqueda">
+                                      <html:optionsCollection name="form" property="idiomaBusquedaBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="idiomaBusqueda" onmouseover="hints.show('alta.usuario.pendiente.formulario.inicial.continuar.param.idioma.busqueda.title')" onmouseout="hints.hide()"  styleId="continuarIdiomaBusqueda"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="tipoEmpaquetador">
+                        <td class="label"><bean:message key="alta.usuario.pendiente.formulario.inicial.continuar.param.tipo.empaquetador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipoEmpaquetador}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.tipoEmpaquetadorBackingList}">
+                                  <html:select name="form" property="tipoEmpaquetador" onmouseover="hints.show('alta.usuario.pendiente.formulario.inicial.continuar.param.tipo.empaquetador.title')" onmouseout="hints.hide()"  styleId="continuarTipoEmpaquetador">
+                                      <html:optionsCollection name="form" property="tipoEmpaquetadorBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="tipoEmpaquetador" onmouseover="hints.show('alta.usuario.pendiente.formulario.inicial.continuar.param.tipo.empaquetador.title')" onmouseout="hints.hide()"  styleId="continuarTipoEmpaquetador"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="id">
+                        <td class="label"><bean:message key="alta.usuario.pendiente.formulario.inicial.continuar.param.id"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.id}"/>
+                           <input type="text" name="id" value="${value}" onmouseover="hints.show('alta.usuario.pendiente.formulario.inicial.continuar.param.id.title')" onmouseout="hints.hide()"  id="continuarId"/>
+                        </td>
+                    </tr>
+                    <tr class="openIdUrl">
+                        <td class="label"><bean:message key="alta.usuario.pendiente.formulario.inicial.continuar.param.open.id.url"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.openIdUrl}"/>
+                           <input type="text" name="openIdUrl" value="${value}" onmouseover="hints.show('alta.usuario.pendiente.formulario.inicial.continuar.param.open.id.url.title')" onmouseout="hints.hide()"  id="continuarOpenIdUrl"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Continuar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="alta.usuario.pendiente.formulario.inicial.continuar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

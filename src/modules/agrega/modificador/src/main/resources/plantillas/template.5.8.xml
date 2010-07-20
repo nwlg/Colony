@@ -1,0 +1,4 @@
+<difficulty>
+${load:source.xml}
+${load:value.xml}
+</difficulty>

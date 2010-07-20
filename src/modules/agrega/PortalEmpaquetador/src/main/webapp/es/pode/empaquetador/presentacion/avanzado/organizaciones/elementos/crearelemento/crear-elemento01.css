@@ -1,0 +1,29 @@
+#submit.action {}
+#submit.action #form_submit {}
+
+#submit.action .title {}
+#submit.action .title .label {}
+#submit.action .title .field {}
+#submit.action .referenciado {}
+#submit.action .referenciado .label {}
+#submit.action .referenciado .field {}
+#submit.action .action {}
+#submit.action .action .label {}
+#submit.action .action .field {}
+#submit.action .timeLimitAction {}
+#submit.action .timeLimitAction .label {}
+#submit.action .timeLimitAction .field {}
+#submit.action .dataFromLMS {}
+#submit.action .dataFromLMS .label {}
+#submit.action .dataFromLMS .field {}
+#submit.action .completionThreshold {}
+#submit.action .completionThreshold .label {}
+#submit.action .completionThreshold .field {}
+#submit.action .selectPresentation {}
+#submit.action .selectPresentation .label {}
+#submit.action .selectPresentation .field {}
+#submit.action .isVisible {}
+#submit.action .isVisible .label {}
+#submit.action .isVisible .field {}
+
+

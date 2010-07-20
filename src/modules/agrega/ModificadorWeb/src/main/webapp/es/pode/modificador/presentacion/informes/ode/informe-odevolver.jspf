@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="volver" class="action">
+    <h3><bean:message key="informe.ode.informe.ode.volver"/></h3>
+    <div class="trigger">
+        <form id="informeODEInformeODEVolverForm" action='<html:rewrite action="/InformeODE/InformeODEVolver"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+               <html:submit onmouseover="hints.show('Volver')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="informe.ode.informe.ode.volver"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

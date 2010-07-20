@@ -1,0 +1,38 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'activas.activas.modificar.param.identificador.title':'<formatting:escape language="javascript"><bean:message key="activas.activas.modificar.param.identificador.title"/></formatting:escape>',
+                'activas.activas.desactivar.param.identificador.title':'<formatting:escape language="javascript"><bean:message key="activas.activas.desactivar.param.identificador.title"/></formatting:escape>',
+                'activas.activas.submit.param.identificador.title':'<formatting:escape language="javascript"><bean:message key="activas.activas.submit.param.identificador.title"/></formatting:escape>',
+                'Modificar':'<formatting:escape language="javascript"><bean:message key="activas.activas.modificar.title"/></formatting:escape>',
+                'Modificar_no':'<formatting:escape language="javascript"><bean:message key="activas.activas.modificar.title.notallowed"/></formatting:escape>',
+                'Modificar_reset':'<formatting:escape language="javascript"><bean:message key="activas.activas.modificar.title.reset"/></formatting:escape>',
+                'Modificar_noreset':'<formatting:escape language="javascript"><bean:message key="activas.activas.modificar.title.reset.not.allowed"/></formatting:escape>',
+                'NoActivas':'<formatting:escape language="javascript"><bean:message key="activas.activas.no.activas.title"/></formatting:escape>',
+                'NoActivas_no':'<formatting:escape language="javascript"><bean:message key="activas.activas.no.activas.title.notallowed"/></formatting:escape>',
+                'NoActivas_reset':'<formatting:escape language="javascript"><bean:message key="activas.activas.no.activas.title.reset"/></formatting:escape>',
+                'NoActivas_noreset':'<formatting:escape language="javascript"><bean:message key="activas.activas.no.activas.title.reset.not.allowed"/></formatting:escape>',
+                'Desactivar':'<formatting:escape language="javascript"><bean:message key="activas.activas.desactivar.title"/></formatting:escape>',
+                'Desactivar_no':'<formatting:escape language="javascript"><bean:message key="activas.activas.desactivar.title.notallowed"/></formatting:escape>',
+                'Desactivar_reset':'<formatting:escape language="javascript"><bean:message key="activas.activas.desactivar.title.reset"/></formatting:escape>',
+                'Desactivar_noreset':'<formatting:escape language="javascript"><bean:message key="activas.activas.desactivar.title.reset.not.allowed"/></formatting:escape>',
+                'Submit':'<formatting:escape language="javascript"><bean:message key="activas.activas.submit.title"/></formatting:escape>',
+                'Submit_no':'<formatting:escape language="javascript"><bean:message key="activas.activas.submit.title.notallowed"/></formatting:escape>',
+                'Submit_reset':'<formatting:escape language="javascript"><bean:message key="activas.activas.submit.title.reset"/></formatting:escape>',
+                'Submit_noreset':'<formatting:escape language="javascript"><bean:message key="activas.activas.submit.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+</script>
+    </tiles:put>

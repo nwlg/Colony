@@ -1,0 +1,47 @@
+
+    <tiles:put name="javascript" type="string">
+        <script type="text/javascript" language="Javascript1.1" src="<html:rewrite action="/formValidation"/>"></script>
+        <html:javascript formName="categoriasFaqsCategoriasFaqsVerCategoriaForm" method="validateCategoriasFaqsVerCategoriaForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+        <html:javascript formName="categoriasFaqsCategoriasFaqsModificarForm" method="validateCategoriasFaqsModificarForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'categorias.faqs.categorias.faqs.eliminar.categorias.param.id.title':'<formatting:escape language="javascript"><bean:message key="categorias.faqs.categorias.faqs.eliminar.categorias.param.id.title"/></formatting:escape>',
+                'categorias.faqs.categorias.faqs.eliminar.param.id.title':'<formatting:escape language="javascript"><bean:message key="categorias.faqs.categorias.faqs.eliminar.param.id.title"/></formatting:escape>',
+                'categorias.faqs.categorias.faqs.ver.categoria.param.id.title':'<formatting:escape language="javascript"><bean:message key="categorias.faqs.categorias.faqs.ver.categoria.param.id.title"/></formatting:escape>',
+                'categorias.faqs.categorias.faqs.modificar.param.id.title':'<formatting:escape language="javascript"><bean:message key="categorias.faqs.categorias.faqs.modificar.param.id.title"/></formatting:escape>',
+                'EliminarCategorias':'<formatting:escape language="javascript"><bean:message key="categorias.faqs.categorias.faqs.eliminar.categorias.title"/></formatting:escape>',
+                'EliminarCategorias_no':'<formatting:escape language="javascript"><bean:message key="categorias.faqs.categorias.faqs.eliminar.categorias.title.notallowed"/></formatting:escape>',
+                'EliminarCategorias_reset':'<formatting:escape language="javascript"><bean:message key="categorias.faqs.categorias.faqs.eliminar.categorias.title.reset"/></formatting:escape>',
+                'EliminarCategorias_noreset':'<formatting:escape language="javascript"><bean:message key="categorias.faqs.categorias.faqs.eliminar.categorias.title.reset.not.allowed"/></formatting:escape>',
+                'Eliminar':'<formatting:escape language="javascript"><bean:message key="categorias.faqs.categorias.faqs.eliminar.title"/></formatting:escape>',
+                'Eliminar_no':'<formatting:escape language="javascript"><bean:message key="categorias.faqs.categorias.faqs.eliminar.title.notallowed"/></formatting:escape>',
+                'Eliminar_reset':'<formatting:escape language="javascript"><bean:message key="categorias.faqs.categorias.faqs.eliminar.title.reset"/></formatting:escape>',
+                'Eliminar_noreset':'<formatting:escape language="javascript"><bean:message key="categorias.faqs.categorias.faqs.eliminar.title.reset.not.allowed"/></formatting:escape>',
+                'Crear':'<formatting:escape language="javascript"><bean:message key="categorias.faqs.categorias.faqs.crear.title"/></formatting:escape>',
+                'Crear_no':'<formatting:escape language="javascript"><bean:message key="categorias.faqs.categorias.faqs.crear.title.notallowed"/></formatting:escape>',
+                'Crear_reset':'<formatting:escape language="javascript"><bean:message key="categorias.faqs.categorias.faqs.crear.title.reset"/></formatting:escape>',
+                'Crear_noreset':'<formatting:escape language="javascript"><bean:message key="categorias.faqs.categorias.faqs.crear.title.reset.not.allowed"/></formatting:escape>',
+                'VerCategoria':'<formatting:escape language="javascript"><bean:message key="categorias.faqs.categorias.faqs.ver.categoria.title"/></formatting:escape>',
+                'VerCategoria_no':'<formatting:escape language="javascript"><bean:message key="categorias.faqs.categorias.faqs.ver.categoria.title.notallowed"/></formatting:escape>',
+                'VerCategoria_reset':'<formatting:escape language="javascript"><bean:message key="categorias.faqs.categorias.faqs.ver.categoria.title.reset"/></formatting:escape>',
+                'VerCategoria_noreset':'<formatting:escape language="javascript"><bean:message key="categorias.faqs.categorias.faqs.ver.categoria.title.reset.not.allowed"/></formatting:escape>',
+                'Modificar':'<formatting:escape language="javascript"><bean:message key="categorias.faqs.categorias.faqs.modificar.title"/></formatting:escape>',
+                'Modificar_no':'<formatting:escape language="javascript"><bean:message key="categorias.faqs.categorias.faqs.modificar.title.notallowed"/></formatting:escape>',
+                'Modificar_reset':'<formatting:escape language="javascript"><bean:message key="categorias.faqs.categorias.faqs.modificar.title.reset"/></formatting:escape>',
+                'Modificar_noreset':'<formatting:escape language="javascript"><bean:message key="categorias.faqs.categorias.faqs.modificar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+
+</script>
+    </tiles:put>

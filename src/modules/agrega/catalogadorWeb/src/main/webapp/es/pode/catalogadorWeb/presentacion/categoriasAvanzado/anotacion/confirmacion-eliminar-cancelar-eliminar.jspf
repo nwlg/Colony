@@ -1,0 +1,13 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="cancelarEliminar" class="action">
+    <h3><bean:message key="anotacion.confirmacion.eliminar.cancelar.eliminar"/></h3>
+    <div class="trigger">
+        <form id="anotacionConfirmacionEliminarCancelarEliminarForm" action='<html:rewrite action="/Anotacion/ConfirmacionEliminarCancelarEliminar"/>' method="post">
+               <html:submit onmouseover="hints.show('CancelarEliminar')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="anotacion.confirmacion.eliminar.cancelar.eliminar"/>
+               </html:submit>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

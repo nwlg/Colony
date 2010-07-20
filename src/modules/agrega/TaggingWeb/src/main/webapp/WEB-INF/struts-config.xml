@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+    "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+    <!-- display-name merge point -->
+
+    <!-- description merge point -->
+
+    <data-sources>
+        <!-- data-sources merge point -->
+    </data-sources>
+
+    <form-beans>
+        <!-- form-beans merge-point -->
+        <form-bean
+            name="inicioTaggingInicioTaggingForm"
+            type="es.pode.tagging.presentacion.inicioTagging.InicioTaggingFormImpl" />
+        <form-bean
+            name="listarMisTagsListarMisTagsForm"
+            type="es.pode.tagging.presentacion.listarMisTags.ListarMisTagsFormImpl" />
+        <form-bean
+            name="listarMisTagsListadoUsuarioMostrarOdesForm"
+            type="es.pode.tagging.presentacion.listarMisTags.ListadoUsuarioMostrarOdesFormImpl" />
+        <form-bean
+            name="listarMisTagsConfirmacionEliminarSubmitConfirmacionForm"
+            type="es.pode.tagging.presentacion.listarMisTags.ConfirmacionEliminarSubmitConfirmacionFormImpl" />
+        <form-bean
+            name="listarMisTagsListadoUsuarioModificarTagForm"
+            type="es.pode.tagging.presentacion.listarMisTags.ListadoUsuarioModificarTagFormImpl" />
+        <form-bean
+            name="listarMisTagsListadoUsuarioEliminarForm"
+            type="es.pode.tagging.presentacion.listarMisTags.ListadoUsuarioEliminarFormImpl" />
+        <form-bean
+            name="listarAgregaTagsListadoMostrarOdesAgregaForm"
+            type="es.pode.tagging.presentacion.listarAgregaTags.ListadoMostrarOdesAgregaFormImpl" />
+        <form-bean
+            name="listarAgregaTagsListarAgregaTagsForm"
+            type="es.pode.tagging.presentacion.listarAgregaTags.ListarAgregaTagsFormImpl" />
+        <form-bean
+            name="mostrarOdesMisTagsMostrarOdesMisTagsForm"
+            type="es.pode.tagging.presentacion.mostrarOdesMisTags.MostrarOdesMisTagsFormImpl" />
+        <form-bean
+            name="mostrarOdesAgregaTagsMostrarOdesAgregaTagsForm"
+            type="es.pode.tagging.presentacion.mostrarOdesAgregaTags.MostrarOdesAgregaTagsFormImpl" />
+        <form-bean
+            name="modificarTagModificarSelectActionForm"
+            type="es.pode.tagging.presentacion.modificarTag.ModificarSelectActionFormImpl" />
+        <form-bean
+            name="modificarTagModificarTagForm"
+            type="es.pode.tagging.presentacion.modificarTag.ModificarTagFormImpl" />
+        <form-bean
+            name="listarTagListarTagForm"
+            type="es.pode.tagging.presentacion.adminTag.listarTag.ListarTagFormImpl" />
+        <form-bean
+            name="listarTagConfirmacionSubmitConfirmacionForm"
+            type="es.pode.tagging.presentacion.adminTag.listarTag.ConfirmacionSubmitConfirmacionFormImpl" />
+        <form-bean
+            name="listarTagListadoTagsEliminarForm"
+            type="es.pode.tagging.presentacion.adminTag.listarTag.ListadoTagsEliminarFormImpl" />
+        <form-bean
+            name="listarTagListadoTagsModificarForm"
+            type="es.pode.tagging.presentacion.adminTag.listarTag.ListadoTagsModificarFormImpl" />
+        <form-bean
+            name="listarTagListadoTagsMostrarOdesForm"
+            type="es.pode.tagging.presentacion.adminTag.listarTag.ListadoTagsMostrarOdesFormImpl" />
+        <form-bean
+            name="modificarModificarForm"
+            type="es.pode.tagging.presentacion.adminTag.modificar.ModificarFormImpl" />
+        <form-bean
+            name="modificarModificarSelectActionForm"
+            type="es.pode.tagging.presentacion.adminTag.modificar.ModificarSelectActionFormImpl" />
+        <form-bean
+            name="mostrarOdesMostrarOdesForm"
+            type="es.pode.tagging.presentacion.adminTag.mostrarOdes.MostrarOdesFormImpl" />
+    </form-beans>
+
+    <global-exceptions>
+        <!-- global-exceptions merge point -->
+        <exception
+            handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+            type="java.lang.Throwable"
+            key="error.exception.message"
+            path="/error-page.jsp?code=exception&amp;exception=true"
+            scope="request" />
+    </global-exceptions>
+
+    <global-forwards>
+        
+        <forward
+            name="inicio.tagging"
+            path="/InicioTagging/InicioTagging.do"
+            redirect="false" />
+        <forward
+            name="listar.mis.tags"
+            path="/ListarMisTags/ListarMisTags.do"
+            redirect="false" />
+        <forward
+            name="listar.agrega.tags"
+            path="/ListarAgregaTags/ListarAgregaTags.do"
+            redirect="false" />
+        <forward
+            name="mostrar.odes.mis.tags"
+            path="/MostrarOdesMisTags/MostrarOdesMisTags.do"
+            redirect="false" />
+        <forward
+            name="mostrar.odes.agrega.tags"
+            path="/MostrarOdesAgregaTags/MostrarOdesAgregaTags.do"
+            redirect="false" />
+        <forward
+            name="modificar.tag"
+            path="/ModificarTag/ModificarTag.do"
+            redirect="false" />
+        <forward
+            name="listar.tag"
+            path="/ListarTag/ListarTag.do"
+            redirect="false" />
+        <forward
+            name="modificar"
+            path="/Modificar/Modificar.do"
+            redirect="false" />
+        <forward
+            name="mostrar.odes"
+            path="/MostrarOdes/MostrarOdes.do"
+            redirect="false" />
+    </global-forwards>
+
+    <action-mappings>
+        <!-- action-mappings merge-point -->
+        <action
+            path="/InicioTagging/InicioTagging"
+            type="es.pode.tagging.presentacion.inicioTagging.InicioTagging"
+            name="inicioTaggingInicioTaggingForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="listar.agrega.tags"
+                path="/ListarAgregaTags/ListarAgregaTags.do"
+                redirect="false" />
+            <forward
+                name="listar.mis.tags"
+                path="/ListarMisTags/ListarMisTags.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/tagging/presentacion/inicioTagging/InicioTaggingHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/tagging/presentacion/inicioTagging/Inicio-Tagging_help.jsp"/>
+        <action
+            path="/ListadoUsuarioHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/tagging/presentacion/inicioTagging/listado-usuario_help.jsp"/>
+        <action
+            path="/ListadoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/tagging/presentacion/inicioTagging/listado_help.jsp"/>
+        <action
+            path="/ListarMisTags/ListarMisTags"
+            type="es.pode.tagging.presentacion.listarMisTags.ListarMisTags"
+            name="listarMisTagsListarMisTagsForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="listado.usuario"
+                path="/es/pode/tagging/presentacion/listarMisTags/listado-usuario.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/ListarMisTags/ListadoUsuarioMostrarOdes"
+            type="es.pode.tagging.presentacion.listarMisTags.ListadoUsuarioMostrarOdes"
+            name="listarMisTagsListadoUsuarioMostrarOdesForm"
+            scope="request"
+            input="/es/pode/tagging/presentacion/listarMisTags/listado-usuario.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="listar.mis.tags.listado.usuario.mostrar.odes.exception"
+                path="/es/pode/tagging/presentacion/listarMisTags/listado-usuario.jsp"
+                scope="request" />
+            <forward
+                name="mostrar.odes"
+                path="/MostrarOdesMisTags/MostrarOdesMisTags.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/ListarMisTags/ConfirmacionEliminarSubmitConfirmacion"
+            type="es.pode.tagging.presentacion.listarMisTags.ConfirmacionEliminarSubmitConfirmacion"
+            name="listarMisTagsConfirmacionEliminarSubmitConfirmacionForm"
+            scope="request"
+            input="/es/pode/tagging/presentacion/listarMisTags/confirmacion-eliminar.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="listar.mis.tags.confirmacion.eliminar.submit.confirmacion.exception"
+                path="/es/pode/tagging/presentacion/listarMisTags/confirmacion-eliminar.jsp"
+                scope="request" />
+            <forward
+                name="listado.usuario"
+                path="/es/pode/tagging/presentacion/listarMisTags/listado-usuario.jsp"
+                redirect="true" />
+        </action>
+        <action
+            path="/ListarMisTags/ListadoUsuarioModificarTag"
+            type="es.pode.tagging.presentacion.listarMisTags.ListadoUsuarioModificarTag"
+            name="listarMisTagsListadoUsuarioModificarTagForm"
+            scope="request"
+            input="/es/pode/tagging/presentacion/listarMisTags/listado-usuario.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="listar.mis.tags.listado.usuario.modificar.tag.exception"
+                path="/es/pode/tagging/presentacion/listarMisTags/listado-usuario.jsp"
+                scope="request" />
+            <forward
+                name="modificar.tag"
+                path="/ModificarTag/ModificarTag.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/ListarMisTags/ListadoUsuarioEliminar"
+            type="es.pode.tagging.presentacion.listarMisTags.ListadoUsuarioEliminar"
+            name="listarMisTagsListadoUsuarioEliminarForm"
+            scope="request"
+            input="/es/pode/tagging/presentacion/listarMisTags/listado-usuario.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="listar.mis.tags.listado.usuario.eliminar.exception"
+                path="/es/pode/tagging/presentacion/listarMisTags/listado-usuario.jsp"
+                scope="request" />
+            <forward
+                name="confirmacion.eliminar"
+                path="/es/pode/tagging/presentacion/listarMisTags/confirmacion-eliminar.jsp"
+                redirect="true" />
+        </action>
+        <action
+            path="/es/pode/tagging/presentacion/listarMisTags/ListarMisTagsHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/tagging/presentacion/listarMisTags/Listar-Mis-Tags_help.jsp"/>
+        <action
+            path="/ListadoUsuarioHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/tagging/presentacion/listarMisTags/listado-usuario_help.jsp"/>
+        <action
+            path="/ConfirmacionEliminarHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/tagging/presentacion/listarMisTags/confirmacion-eliminar_help.jsp"/>
+        <action
+            path="/ListarAgregaTags/ListadoMostrarOdesAgrega"
+            type="es.pode.tagging.presentacion.listarAgregaTags.ListadoMostrarOdesAgrega"
+            name="listarAgregaTagsListadoMostrarOdesAgregaForm"
+            scope="request"
+            input="/es/pode/tagging/presentacion/listarAgregaTags/listado.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="listar.agrega.tags.listado.mostrar.odes.agrega.exception"
+                path="/es/pode/tagging/presentacion/listarAgregaTags/listado.jsp"
+                scope="request" />
+            <forward
+                name="mostrar.odes.agrega"
+                path="/MostrarOdesAgregaTags/MostrarOdesAgregaTags.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/ListarAgregaTags/ListarAgregaTags"
+            type="es.pode.tagging.presentacion.listarAgregaTags.ListarAgregaTags"
+            name="listarAgregaTagsListarAgregaTagsForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="listado"
+                path="/es/pode/tagging/presentacion/listarAgregaTags/listado.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/tagging/presentacion/listarAgregaTags/ListarAgregaTagsHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/tagging/presentacion/listarAgregaTags/Listar-Agrega-Tags_help.jsp"/>
+        <action
+            path="/ListadoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/tagging/presentacion/listarAgregaTags/listado_help.jsp"/>
+        <action
+            path="/MostrarOdesMisTags/ListadoOdesVolver"
+            type="es.pode.tagging.presentacion.mostrarOdesMisTags.ListadoOdesVolver"
+            scope="request"
+            input="/es/pode/tagging/presentacion/mostrarOdesMisTags/listado-odes.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="mostrar.odes.mis.tags.listado.odes.volver.exception"
+                path="/es/pode/tagging/presentacion/mostrarOdesMisTags/listado-odes.jsp"
+                scope="request" />
+            <forward
+                name="volver"
+                path="/ListarMisTags/ListarMisTags.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/MostrarOdesMisTags/MostrarOdesMisTags"
+            type="es.pode.tagging.presentacion.mostrarOdesMisTags.MostrarOdesMisTags"
+            name="mostrarOdesMisTagsMostrarOdesMisTagsForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="listado.odes"
+                path="/es/pode/tagging/presentacion/mostrarOdesMisTags/listado-odes.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/tagging/presentacion/mostrarOdesMisTags/MostrarOdesMisTagsHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/tagging/presentacion/mostrarOdesMisTags/Mostrar-Odes-Mis-Tags_help.jsp"/>
+        <action
+            path="/ListadoOdesHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/tagging/presentacion/mostrarOdesMisTags/listado-odes_help.jsp"/>
+        <action
+            path="/MostrarOdesAgregaTags/ListadoOdesVolver"
+            type="es.pode.tagging.presentacion.mostrarOdesAgregaTags.ListadoOdesVolver"
+            scope="request"
+            input="/es/pode/tagging/presentacion/mostrarOdesAgregaTags/listado-odes.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="mostrar.odes.agrega.tags.listado.odes.volver.exception"
+                path="/es/pode/tagging/presentacion/mostrarOdesAgregaTags/listado-odes.jsp"
+                scope="request" />
+            <forward
+                name="volver"
+                path="/ListarAgregaTags/ListarAgregaTags.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/MostrarOdesAgregaTags/MostrarOdesAgregaTags"
+            type="es.pode.tagging.presentacion.mostrarOdesAgregaTags.MostrarOdesAgregaTags"
+            name="mostrarOdesAgregaTagsMostrarOdesAgregaTagsForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="listado.odes"
+                path="/es/pode/tagging/presentacion/mostrarOdesAgregaTags/listado-odes.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/tagging/presentacion/mostrarOdesAgregaTags/MostrarOdesAgregaTagsHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/tagging/presentacion/mostrarOdesAgregaTags/Mostrar-Odes-Agrega-Tags_help.jsp"/>
+        <action
+            path="/ListadoOdesHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/tagging/presentacion/mostrarOdesAgregaTags/listado-odes_help.jsp"/>
+        <action
+            path="/ModificarTag/ModificarSelectAction"
+            type="es.pode.tagging.presentacion.modificarTag.ModificarSelectAction"
+            name="modificarTagModificarSelectActionForm"
+            scope="request"
+            input="/es/pode/tagging/presentacion/modificarTag/modificar.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="modificar.tag.modificar.select.action.exception"
+                path="/es/pode/tagging/presentacion/modificarTag/modificar.jsp"
+                scope="request" />
+            <forward
+                name="listar.mis.tags"
+                path="/ListarMisTags/ListarMisTags.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ModificarTag/ModificarTag"
+            type="es.pode.tagging.presentacion.modificarTag.ModificarTag"
+            name="modificarTagModificarTagForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="modificar"
+                path="/es/pode/tagging/presentacion/modificarTag/modificar.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/tagging/presentacion/modificarTag/ModificarTagHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/tagging/presentacion/modificarTag/Modificar-Tag_help.jsp"/>
+        <action
+            path="/ModificarHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/tagging/presentacion/modificarTag/modificar_help.jsp"/>
+        <action
+            path="/ListarTag/ListarTag"
+            type="es.pode.tagging.presentacion.adminTag.listarTag.ListarTag"
+            name="listarTagListarTagForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="listado.tags"
+                path="/es/pode/tagging/presentacion/adminTag/listarTag/listado-tags.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/ListarTag/ConfirmacionSubmitConfirmacion"
+            type="es.pode.tagging.presentacion.adminTag.listarTag.ConfirmacionSubmitConfirmacion"
+            name="listarTagConfirmacionSubmitConfirmacionForm"
+            scope="request"
+            input="/es/pode/tagging/presentacion/adminTag/listarTag/confirmacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="listar.tag.confirmacion.submit.confirmacion.exception"
+                path="/es/pode/tagging/presentacion/adminTag/listarTag/confirmacion.jsp"
+                scope="request" />
+            <forward
+                name="listado.tags"
+                path="/es/pode/tagging/presentacion/adminTag/listarTag/listado-tags.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/ListarTag/ListadoTagsEliminar"
+            type="es.pode.tagging.presentacion.adminTag.listarTag.ListadoTagsEliminar"
+            name="listarTagListadoTagsEliminarForm"
+            scope="request"
+            input="/es/pode/tagging/presentacion/adminTag/listarTag/listado-tags.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="listar.tag.listado.tags.eliminar.exception"
+                path="/es/pode/tagging/presentacion/adminTag/listarTag/listado-tags.jsp"
+                scope="request" />
+            <forward
+                name="confirmacion"
+                path="/es/pode/tagging/presentacion/adminTag/listarTag/confirmacion.jsp"
+                redirect="true" />
+        </action>
+        <action
+            path="/ListarTag/ListadoTagsModificar"
+            type="es.pode.tagging.presentacion.adminTag.listarTag.ListadoTagsModificar"
+            name="listarTagListadoTagsModificarForm"
+            scope="request"
+            input="/es/pode/tagging/presentacion/adminTag/listarTag/listado-tags.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="listar.tag.listado.tags.modificar.exception"
+                path="/es/pode/tagging/presentacion/adminTag/listarTag/listado-tags.jsp"
+                scope="request" />
+            <forward
+                name="modificar"
+                path="/Modificar/Modificar.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/ListarTag/ListadoTagsMostrarOdes"
+            type="es.pode.tagging.presentacion.adminTag.listarTag.ListadoTagsMostrarOdes"
+            name="listarTagListadoTagsMostrarOdesForm"
+            scope="request"
+            input="/es/pode/tagging/presentacion/adminTag/listarTag/listado-tags.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="listar.tag.listado.tags.mostrar.odes.exception"
+                path="/es/pode/tagging/presentacion/adminTag/listarTag/listado-tags.jsp"
+                scope="request" />
+            <forward
+                name="mostrar.odes"
+                path="/MostrarOdes/MostrarOdes.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/es/pode/tagging/presentacion/adminTag/listarTag/ListarTagHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/tagging/presentacion/adminTag/listarTag/Listar-Tag_help.jsp"/>
+        <action
+            path="/ListadoTagsHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/tagging/presentacion/adminTag/listarTag/listado-tags_help.jsp"/>
+        <action
+            path="/ConfirmacionHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/tagging/presentacion/adminTag/listarTag/confirmacion_help.jsp"/>
+        <action
+            path="/Modificar/Modificar"
+            type="es.pode.tagging.presentacion.adminTag.modificar.Modificar"
+            name="modificarModificarForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="modificar"
+                path="/es/pode/tagging/presentacion/adminTag/modificar/modificar.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/Modificar/ModificarSelectAction"
+            type="es.pode.tagging.presentacion.adminTag.modificar.ModificarSelectAction"
+            name="modificarModificarSelectActionForm"
+            scope="request"
+            input="/es/pode/tagging/presentacion/adminTag/modificar/modificar.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="modificar.modificar.select.action.exception"
+                path="/es/pode/tagging/presentacion/adminTag/modificar/modificar.jsp"
+                scope="request" />
+            <forward
+                name="listar.tag"
+                path="/ListarTag/ListarTag.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/tagging/presentacion/adminTag/modificar/ModificarHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/tagging/presentacion/adminTag/modificar/Modificar_help.jsp"/>
+        <action
+            path="/ModificarHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/tagging/presentacion/adminTag/modificar/modificar_help.jsp"/>
+        <action
+            path="/MostrarOdes/ListadoOdesAdminVolver"
+            type="es.pode.tagging.presentacion.adminTag.mostrarOdes.ListadoOdesAdminVolver"
+            scope="request"
+            input="/es/pode/tagging/presentacion/adminTag/mostrarOdes/listado-odes-admin.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="mostrar.odes.listado.odes.admin.volver.exception"
+                path="/es/pode/tagging/presentacion/adminTag/mostrarOdes/listado-odes-admin.jsp"
+                scope="request" />
+            <forward
+                name="volver"
+                path="/ListarTag/ListarTag.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/MostrarOdes/MostrarOdes"
+            type="es.pode.tagging.presentacion.adminTag.mostrarOdes.MostrarOdes"
+            name="mostrarOdesMostrarOdesForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="listado.odes.admin"
+                path="/es/pode/tagging/presentacion/adminTag/mostrarOdes/listado-odes-admin.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/tagging/presentacion/adminTag/mostrarOdes/MostrarOdesHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/tagging/presentacion/adminTag/mostrarOdes/Mostrar-Odes_help.jsp"/>
+        <action
+            path="/ListadoOdesAdminHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/tagging/presentacion/adminTag/mostrarOdes/listado-odes-admin_help.jsp"/>
+        <action
+            path="/applicationHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/application-help.jsp"/>
+        <action
+            path="/calendar"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/calendar-js.jsp"/>
+        <action
+            path="/formValidation"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/form-validation.jsp"/>
+        <action
+            path="/login"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/login/login-form.jsp"/>
+        <action
+            path="/logincaptcha"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/login/login-form.jsp"/>  
+        <action
+            path="/captcha-image"
+            type="es.indra.ibuilder.security.captcha.ImageCaptchaAction"
+            scope="request"/>  
+    </action-mappings>
+
+    <!-- controller merge point -->
+
+    <!-- message-resources merge-point -->
+    <message-resources parameter="application-resources" null="false"/>
+
+    <!-- plug-in merge-point -->
+    
+    <plug-in className="org.apache.struts.tiles.TilesPlugin">
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml"/>
+        <set-property property="definitions-parser-validate" value="true"/>
+        <set-property property="moduleAware" value="true"/>
+    </plug-in>
+
+<!--
+  UNCOMMENT TO EXPOSE THE STRUTS-MENU TAGLIB
+
+    <plug-in className="net.sf.navigator.menu.MenuPlugIn">
+        <set-property property="menuConfig" value="/WEB-INF/menu-config.xml"/>
+    </plug-in>
+-->
+</struts-config>

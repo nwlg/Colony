@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+
+    <!-- 
+        Logging appenders define where and how logging messages are logged.
+     -->
+    <appender name="DS_LOG" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>$DS_HOME$/logs/discoveryService.log</File>
+        <ImmediateFlush>true</ImmediateFlush>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>$DS_HOME$/logs/discovery-%d{yyyy-MM-dd}.log</FileNamePattern>
+        </rollingPolicy>
+
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%date{HH:mm:ss.SSS} %level [%logger] %msg%n%ex{full}%n</Pattern>
+        </layout>
+    </appender>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <ImmediateFlush>true</ImmediateFlush>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%date{HH:mm:ss.SSS} %level [%logger] %msg%n%ex{full}%n</Pattern>
+        </layout>
+    </appender>
+    
+    <!--
+        Loggers define indicate which packages/categories are logged, at which level, and to which appender.
+        Levels: ALL, ERROR, WARN, INFO, DEBUG, OFF
+    -->
+
+    <!-- Logs DS, but not OpenSAML, messages -->
+    <logger name="edu.internet2.middleware.shibboleth">
+        <level value="WARN" />
+        <!-- Appender, DS_LOG, is inherited from the root logger -->
+    </logger>
+
+    <!-- Logs OpenSAML, but not DS, messages -->
+    <logger name="org.opensaml">
+        <level value="INFO" />
+        <!-- Appender, DS_LOG, is inherited from the root logger -->
+    </logger>
+
+    <root>
+        <level value="WARN" />
+        <appender-ref ref="DS_LOG" />
+    </root>
+
+</configuration>

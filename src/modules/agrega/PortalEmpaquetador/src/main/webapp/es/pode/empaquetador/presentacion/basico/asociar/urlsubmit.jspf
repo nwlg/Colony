@@ -1,0 +1,43 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="submit" class="action">
+    <h3><bean:message key="asociar.url.submit"/></h3>
+    <div class="trigger">
+        <html:form styleId="asociarURLSubmitForm" action="/Asociar/URLSubmit" method="post" enctype="multipart/form-data" onsubmit="">
+            <%@ include file="/es/pode/empaquetador/presentacion/basico/asociar/urlsubmit-hidden-params.jspf" %>
+            <table>
+                <tbody>
+                    <tr class="url">
+                        <td class="label"><bean:message key="asociar.url.submit.param.url"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.url}"/>
+                           <input type="text" name="url" value="${value}" onmouseover="hints.show('asociar.url.submit.param.url.title')" onmouseout="hints.hide()"  id="submitUrl"/>
+                        </td>
+                    </tr>
+                    <tr class="tipo">
+                        <td class="label"><bean:message key="asociar.url.submit.param.tipo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipo}"/>
+                           <input type="text" name="tipo" value="${value}" onmouseover="hints.show('asociar.url.submit.param.tipo.title')" onmouseout="hints.hide()"  id="submitTipo"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_DOCENTE,ROLE_CATALOGADOR,ROLE_PUBLICADOR,ROLE_ADMINISTRADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Submit')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="asociar.url.submit"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

@@ -1,0 +1,62 @@
+<div id="noticias" class="table">
+    <display:table name="${form.noticias}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="10" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="noticias-noticias.pdf" />
+
+        <display:column media="xml csv excel pdf"
+            titleKey="noticias.noticias.param.noticias.titulo"
+            autolink="true" paramId="titulo"
+            property="titulo">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="titulo" paramId="titulo"
+            sortProperty="titulo" sortable="true"
+            titleKey="noticias.noticias.param.noticias.titulo"
+            property="titulo" />
+   
+
+        <display:column media="xml csv excel pdf"
+            titleKey="noticias.noticias.param.noticias.fecha.publicacion"
+            autolink="true" paramId="fechaPublicacion"
+            property="fechaPublicacion">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="fechaPublicacion" paramId="fechaPublicacion"
+            sortProperty="fechaPublicacion" sortable="true"
+            titleKey="noticias.noticias.param.noticias.fecha.publicacion"
+            property="fechaPublicacion" />
+   
+
+        <display:column media="xml csv excel pdf"
+            titleKey="noticias.noticias.param.noticias.resumen"
+            autolink="true" paramId="resumen"
+            property="resumen">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="resumen" paramId="resumen"
+            sortProperty="resumen" sortable="true"
+            titleKey="noticias.noticias.param.noticias.resumen"
+            property="resumen" />
+   
+
+        <display:column media="xml csv excel pdf"
+            titleKey="noticias.noticias.param.noticias.categoria.nombre"
+            autolink="true" paramId="categoria.nombre"
+            property="categoria.nombre">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="categoria.nombre" paramId="categoria.nombre"
+            sortProperty="categoria.nombre" sortable="true"
+            titleKey="noticias.noticias.param.noticias.categoria.nombre"
+            property="categoria.nombre" />
+   
+    </display:table>
+</div>
+

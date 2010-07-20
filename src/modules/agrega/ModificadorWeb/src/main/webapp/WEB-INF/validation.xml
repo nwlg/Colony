@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE form-validation PUBLIC
+    "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1//EN"
+    "http://jakarta.apache.org/commons/dtds/validator_1_1.dtd">
+
+<form-validation>
+
+    <formset>
+    
+
+        <form name="modificacionesPendientesListadoEjecutarForm">
+            <field property="idModificacion" depends="long">
+
+                <arg position="0" key="modificaciones.pendientes.listado.ejecutar.param.id.modificacion" />
+            </field>
+        </form>
+        <form name="modificacionesPendientesListadoExportarForm">
+            <field property="idModificacion" depends="long">
+
+                <arg position="0" key="modificaciones.pendientes.listado.exportar.param.id.modificacion" />
+            </field>
+        </form>
+        <form name="simularModificacionSimularModificacionSubmitConfirmacionForm">
+            <field property="idModificacion" depends="long">
+
+                <arg position="0" key="simular.modificacion.simular.modificacion.submit.confirmacion.param.id.modificacion" />
+            </field>
+        </form>
+<!--RLA-->
+
+<!--/RLA-->
+    </formset>
+
+</form-validation>

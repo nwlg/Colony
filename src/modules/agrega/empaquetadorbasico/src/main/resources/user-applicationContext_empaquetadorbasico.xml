@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="propiedadesConstantes"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:spring.properties</value>
+			</list>
+		</property>
+		<property name="ignoreUnresolvablePlaceholders">
+			<value>true</value>
+		</property>
+
+	</bean>
+
+	<bean id="ficheroDAO"
+		class="es.pode.empaquetador.negocio.gestionficheros.FicheroDaoImpl">
+		<property name="beanMapperAux">
+			<ref bean="beanMapper" />
+		</property>
+	</bean>
+
+	<bean id="cacheEmpaquetacion" class="es.pode.empaquetador.negocio.servicio.CacheEmpaquetacion" singleton="true">
+	</bean>
+	
+	<bean id="utilidades" class="es.pode.empaquetador.negocio.utilidades.Utilidades">
+	</bean>
+
+	<bean id="mapOdeVOListener"
+		class="es.pode.empaquetador.negocio.utilidades.MapOdeVOListener" singleton="true">
+	</bean>
+
+	<bean id="listenerList" class="java.util.ArrayList">
+		<constructor-arg>
+			<list>
+				<ref bean="mapOdeVOListener"/>
+			</list>
+		</constructor-arg>
+	</bean>
+
+	<bean class="es.indra.sawa.support.wiring.WiringPostProcessor">
+		<property name="propertyMappings">
+			<list>
+				<value>beanMapper;eventListeners;listenerList</value>
+				<value>.*SrvGestorManifestService.*;cacheEmpaquetacion;cacheEmpaquetacion</value>
+				<value>.*SrvEmpaquetadorBasicoService.*;cacheEmpaquetacion;cacheEmpaquetacion</value>
+				<value>.*SrvGestorManifestService.*;utilidades;utilidades</value>
+				<value>.*SrvEmpaquetadorBasicoService.*;utilidades;utilidades</value>
+				<value>.*SrvGestorArchivosService.*;utilidades;utilidades</value>
+				<value>.*SrvFachadaAgregarService.*;utilidades;utilidades</value>
+			</list>
+		</property>
+	</bean>
+
+</beans>

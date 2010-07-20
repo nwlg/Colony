@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="alta" class="action">
+    <h3><bean:message key="listar.taxonomias.form.listar.taxonomias.alta"/></h3>
+    <div class="trigger">
+        <form id="listarTaxonomiasFormListarTaxonomiasAltaForm" action='<html:rewrite action="/ListarTaxonomias/FormListarTaxonomiasAlta"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+               <html:submit onmouseover="hints.show('Alta')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="listar.taxonomias.form.listar.taxonomias.alta"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

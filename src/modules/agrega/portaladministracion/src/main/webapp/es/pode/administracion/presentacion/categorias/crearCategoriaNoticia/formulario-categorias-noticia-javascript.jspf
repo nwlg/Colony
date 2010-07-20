@@ -1,0 +1,22 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'crear.categoria.noticia.cu.formulario.categorias.noticia.valida.formulario.param.nombre.categoria.title':'<formatting:escape language="javascript"><bean:message key="crear.categoria.noticia.cu.formulario.categorias.noticia.valida.formulario.param.nombre.categoria.title"/></formatting:escape>',
+                'crear.categoria.noticia.cu.formulario.categorias.noticia.valida.formulario.param.idiomas.title':'<formatting:escape language="javascript"><bean:message key="crear.categoria.noticia.cu.formulario.categorias.noticia.valida.formulario.param.idiomas.title"/></formatting:escape>',
+                'validaFormulario':'<formatting:escape language="javascript"><bean:message key="crear.categoria.noticia.cu.formulario.categorias.noticia.valida.formulario.title"/></formatting:escape>',
+                'validaFormulario_no':'<formatting:escape language="javascript"><bean:message key="crear.categoria.noticia.cu.formulario.categorias.noticia.valida.formulario.title.notallowed"/></formatting:escape>',
+                'validaFormulario_reset':'<formatting:escape language="javascript"><bean:message key="crear.categoria.noticia.cu.formulario.categorias.noticia.valida.formulario.title.reset"/></formatting:escape>',
+                'validaFormulario_noreset':'<formatting:escape language="javascript"><bean:message key="crear.categoria.noticia.cu.formulario.categorias.noticia.valida.formulario.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

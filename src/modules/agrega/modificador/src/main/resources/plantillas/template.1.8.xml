@@ -1,0 +1,4 @@
+<aggregationLevel>
+	${load:source.xml}
+	${load:value.xml}
+</aggregationLevel>

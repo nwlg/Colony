@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="filterInvocationInterceptor" class="org.acegisecurity.intercept.web.FilterSecurityInterceptor">
+   	
+		<!-- La gestion de autenticacion se pasa al AuthenticationManager (gestor de autenticacion) de la aplicacion -->
+		<property name="authenticationManager"><ref bean="authenticationManager"/></property>
+		<!-- La toma de decisiones sobre la autorizacion se delega al AccessDecisionManager (gestor de autorizacion) de la aplicacion -->
+		<property name="accessDecisionManager"><ref bean="accessDecisionManager"/></property>
+		
+		<property name="objectDefinitionSource">
+			<value>
+				PATTERN_TYPE_APACHE_ANT
+
+				/BuscarAvanzadoCU/MostrarResultadosImagenesPaginarImagenes.do*=ROLE_ANONYMOUS
+
+				/BuscarAvanzadoCU/MostrarQuisoDecirAvanzadoBuscarQuisoDecir.do*=ROLE_ANONYMOUS
+
+				/BuscarAvanzadoCU/MostrarResultadosImagenesGenerarRSS.do*=ROLE_ANONYMOUS
+
+				/BuscarAvanzadoCU/MostrarQuisoDecirAvanzadoMostrarAvanzadoQuisoDecir.do*=ROLE_ANONYMOUS
+
+				/BuscarAvanzadoCU/*=ROLE_EMPAQUETADOR,ROLE_CATALOGADOR,ROLE_PUBLICADOR,ROLE_ADMINISTRADOR,ROLE_DOCENTE,ROLE_DEMOUSER
+
+				/DescargarODECU/*=ROLE_EMPAQUETADOR,ROLE_CATALOGADOR,ROLE_PUBLICADOR,ROLE_ADMINISTRADOR,ROLE_DOCENTE,ROLE_DEMOUSER
+
+				/EnviarMailCU/*=ROLE_EMPAQUETADOR,ROLE_CATALOGADOR,ROLE_PUBLICADOR,ROLE_ADMINISTRADOR,ROLE_DOCENTE,ROLE_DEMOUSER
+							
+				/IntroducirComentariosCU/*=ROLE_EMPAQUETADOR,ROLE_PUBLICADOR,ROLE_DOCENTE,ROLE_CATALOGADOR,ROLE_ADMINISTRADOR,ROLE_DEMOUSER  
+							
+				/AnadirCarpetaPersonalCU/*=ROLE_CATALOGADOR,ROLE_ADMINISTRADOR,ROLE_DOCENTE,ROLE_EMPAQUETADOR,ROLE_PUBLICADOR  
+							
+				/NavegarArbolCurricularCU/*=ROLE_DOCENTE,ROLE_EMPAQUETADOR,ROLE_CATALOGADOR,ROLE_PUBLICADOR,ROLE_ADMINISTRADOR  
+							
+				/ListarODEAreaCU/*=ROLE_PUBLICADOR,ROLE_CATALOGADOR,ROLE_EMPAQUETADOR,ROLE_DOCENTE,ROLE_ADMINISTRADOR  
+							
+				/NavegarTesauroCU/*=ROLE_DOCENTE,ROLE_EMPAQUETADOR,ROLE_CATALOGADOR,ROLE_PUBLICADOR,ROLE_ADMINISTRADOR  
+							
+				/ListarODETesauroCU/*=ROLE_DOCENTE,ROLE_CATALOGADOR,ROLE_ADMINISTRADOR,ROLE_PUBLICADOR,ROLE_EMPAQUETADOR  
+							
+				/SeleccionTipoBusquedaCU/*=ROLE_ADMINISTRADOR,ROLE_EMPAQUETADOR,ROLE_PUBLICADOR,ROLE_DOCENTE,ROLE_CATALOGADOR  
+							
+				/logincaptcha.do*=ROLE_ANONYMOUS
+				/login.do*=ROLE_ANONYMOUS
+				/layout/*=ROLE_ANONYMOUS
+				/captcha*=ROLE_ANONYMOUS
+				/casfailed.jsp*=ROLE_ANONYMOUS				
+				/**=ROLE_ANONYMOUS
+			</value>
+		</property>
+	</bean>
+	
+	<bean id="channelProcessingFilter" class="org.acegisecurity.securechannel.ChannelProcessingFilter">
+		<property name="channelDecisionManager"><ref bean="channelDecisionManager"/></property>
+		<property name="filterInvocationDefinitionSource">
+			<value>
+				PATTERN_TYPE_APACHE_ANT
+				/login.do*=  REQUIRES_INSECURE_CHANNEL   
+
+				/**=REQUIRES_INSECURE_CHANNEL
+			</value>
+		</property>
+	</bean>
+
+</beans>   	
+   	

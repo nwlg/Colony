@@ -1,0 +1,29 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="timeLimit" value="${form.timeLimit}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="completionThreshold" value="${form.completionThreshold}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="title" value="${form.title}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="isVisible" value="${form.isVisible}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="presentation" value="${form.presentation}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="selectPresentation" value="${form.selectPresentation}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="referenciado" value="${form.referenciado}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="timeLimitAction" value="${form.timeLimitAction}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="dataFromLMS" value="${form.dataFromLMS}"/>
+    </c:catch>
+</div>

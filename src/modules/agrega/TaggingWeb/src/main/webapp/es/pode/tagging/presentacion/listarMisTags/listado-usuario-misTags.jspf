@@ -1,0 +1,32 @@
+<div id="misTags" class="table">
+    <form id="misTags" name="" action="" method="post" enctype="multipart/form-data">
+    <display:table name="${form.misTags}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="listado-usuario-mis-tags.pdf" />
+        <display:column media="html">
+            <input type="checkbox" name="tagRowSelectionAsArray" value="${row.tag}" title='<bean:message key="select.deselect.this.row"/>'/>
+        </display:column>
+
+        <display:column media="xml csv excel pdf"
+            titleKey="listar.mis.tags.listado.usuario.param.mis.tags.tag"
+            autolink="true" paramId="tag"
+            property="tag">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="tag" paramId="tag"
+            sortProperty="tag" sortable="true"
+            titleKey="listar.mis.tags.listado.usuario.param.mis.tags.tag"
+            property="tag" />
+   
+    </display:table>
+    <c:if test="${!empty form.misTags}">
+            <input type="submit" value="<bean:message key="listar.mis.tags.listado.usuario.eliminar"/>" onclick="this.form.name='listarMisTagsListadoUsuarioEliminarForm';this.form.action='<html:rewrite action="/ListarMisTags/ListadoUsuarioEliminar"/>';" onmouseover="hints.show('Eliminar')" onmouseout="hints.hide()"/>
+            <input type="button" value="<bean:message key="select.deselect.all"/>" onclick="var boxes=this.form.elements['tagRowSelectionAsArray'];var setChecked=(boxes.length==0)?false:!boxes[0].checked;for(var i=0;i<boxes.length;i++)boxes[i].checked=setChecked;"/>
+    </c:if>
+    </form>
+</div>
+

@@ -1,0 +1,5 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="tareasEnEjecucion" value="${form.tareasEnEjecucion}"/>
+    </c:catch>
+</div>

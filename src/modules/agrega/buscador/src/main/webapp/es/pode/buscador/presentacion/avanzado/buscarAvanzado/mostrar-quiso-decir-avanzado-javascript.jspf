@@ -1,0 +1,53 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.anyo.publicacion.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.anyo.publicacion.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.mes.publicacion.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.mes.publicacion.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.dia.publicacion.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.dia.publicacion.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.autor.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.autor.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.buscador.contenido.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.buscador.contenido.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.c.s.secuencia.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.c.s.secuencia.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.comunidades.seleccionadas.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.comunidades.seleccionadas.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.enlace.comunidades.seleccionadas.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.enlace.comunidades.seleccionadas.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.contexto.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.contexto.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.descripcion.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.descripcion.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.edad.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.edad.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.formato.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.formato.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.idioma.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.idioma.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.idioma.buscador.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.buscador.contenido.solo.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.buscador.contenido.solo.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.tipo.busqueda.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.tipo.busqueda.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.tipo.visualizacion.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.tipo.visualizacion.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.tipo.layout.buscador.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.tipo.layout.buscador.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.id.tesauro.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.id.tesauro.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.nivel.agregacion.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.nivel.agregacion.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.keyword.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.keyword.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.mostrar.ambito.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.mostrar.ambito.title"/></formatting:escape>',
+                'buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.id.tesauro.sugerencia.title':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.param.id.tesauro.sugerencia.title"/></formatting:escape>',
+                'buscarQuisoDecir':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.title"/></formatting:escape>',
+                'buscarQuisoDecir_no':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.title.notallowed"/></formatting:escape>',
+                'buscarQuisoDecir_reset':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.title.reset"/></formatting:escape>',
+                'buscarQuisoDecir_noreset':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.buscar.quiso.decir.title.reset.not.allowed"/></formatting:escape>',
+                'quisoDecir':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.quiso.decir.title"/></formatting:escape>',
+                'quisoDecir_no':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.quiso.decir.title.notallowed"/></formatting:escape>',
+                'quisoDecir_reset':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.quiso.decir.title.reset"/></formatting:escape>',
+                'quisoDecir_noreset':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.quiso.decir.title.reset.not.allowed"/></formatting:escape>',
+                'mostrarAvanzadoQuisoDecir':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.mostrar.avanzado.quiso.decir.title"/></formatting:escape>',
+                'mostrarAvanzadoQuisoDecir_no':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.mostrar.avanzado.quiso.decir.title.notallowed"/></formatting:escape>',
+                'mostrarAvanzadoQuisoDecir_reset':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.mostrar.avanzado.quiso.decir.title.reset"/></formatting:escape>',
+                'mostrarAvanzadoQuisoDecir_noreset':'<formatting:escape language="javascript"><bean:message key="buscar.avanzado.cu.mostrar.quiso.decir.avanzado.mostrar.avanzado.quiso.decir.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+</script>
+    </tiles:put>

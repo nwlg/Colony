@@ -1,0 +1,17 @@
+/*
+ * IE7 compatibility hack
+ *
+ * For some reason, MS seem incapable of writing a browser that follows the standards
+ * set by everyone. Here are the things that don't quite work under IE7. 
+ * We separate the quirks into a separate file in the hope that we can get rid of
+ * them one day...
+ */
+
+/*
+.lb_bubble_content {
+        padding-top: 10px;
+	padding-bottom: 10px;
+        padding-left: 10px;
+}
+*/
+

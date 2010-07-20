@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<bean id="simpleBean" class="es.pode.soporte.test.servicios.SimpleTestBean">
+	
+		<property name="firstProperty" value="uno"></property>
+	</bean>
+	
+
+	<bean id="overridedSimpleBean" class="es.pode.soporte.test.servicios.SimpleTestBean">
+		<property name="firstProperty" value="uno"></property>
+	</bean>
+	
+	<bean id="firstPropertyOverride" class="java.lang.String">
+		<constructor-arg value="otro-uno"></constructor-arg>
+	</bean>
+	
+	<bean id="secondProperty" class="java.lang.String" >
+	
+		<constructor-arg value="dos"></constructor-arg>
+	</bean>
+	
+	<bean class="es.pode.soporte.servicios.WiringPostProcessor">
+		<property name="propertyMappings">
+			<list>
+				<value>simpleBean;secondProperty</value>
+				<value>simpleBean;firstProperty;firstProperty.*</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean class="es.pode.soporte.servicios.WiringPostProcessor">
+		<property name="propertyMappings">
+			<list>
+				<value>overridedSimpleBean;secondProperty</value>
+				<value>overridedSimpleBean;firstProperty;firstProperty.*</value>
+			</list>
+		</property>
+		<property name="allowPropertyOverride" value="true"/>
+		
+	</bean>
+	
+	
+	
+</beans>

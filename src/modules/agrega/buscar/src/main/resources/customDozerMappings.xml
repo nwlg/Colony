@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN" "http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+		<mapping wildcard="true" stop-on-errors="true" map-id="DEF_MAPPING_CCAA_CCAAVO">
+		<class-a>
+			es.pode.buscar.negocio.administrar.dominio.CcaaImpl
+		</class-a>
+		<class-b>
+			es.pode.buscar.negocio.administrar.servicio.CcaaVO
+		</class-b>
+		<field>
+			<a>id</a>
+			<b>id</b>
+		</field>
+		<field>
+			<a>codigo</a>
+			<b>codigo</b>
+		</field>
+		<field>
+			<a>descripcion</a>
+			<b>descripcion</b>
+		</field>
+	</mapping>
+		<mapping wildcard="true" stop-on-errors="true" map-id="DEF_MAPPING_NODO_NODOVOPRIME">
+		<class-a>
+			es.pode.buscar.negocio.administrar.dominio.NodoImpl
+		</class-a>
+		<class-b>
+			es.pode.buscar.negocio.administrar.servicio.NodoVO
+		</class-b>
+		<field>
+			<a>id</a>
+			<b>id</b>
+		</field>
+		<field>
+			<a>nodo</a>
+			<b>nodo</b>
+		</field>
+		<field>
+			<a>url</a>
+			<b>url</b>
+		</field>
+		<field>
+			<a>fechaAlta</a>
+			<b>fechaAlta</b>
+		</field>
+		<field>
+			<a>puerto</a>
+			<b>puerto</b>
+		</field>
+		<field>
+			<a>ccaa</a>
+			<b>ccaa</b>
+			<a-hint>
+			es.pode.buscar.negocio.administrar.dominio.CcaaImpl
+		  	</a-hint>
+			<b-hint>
+		  	  es.pode.buscar.negocio.administrar.servicio.CcaaVO
+			</b-hint>
+		</field>
+		<field>
+			<a>servicio</a>
+			<b>servicio</b>
+			<a-hint>
+			es.pode.buscar.negocio.administrar.dominio.ServicioImpl
+		  	</a-hint>
+			<b-hint>
+		  	  es.pode.buscar.negocio.administrar.servicio.ServicioVO
+			</b-hint>
+		</field>
+		
+	</mapping>
+		<mapping wildcard="true" stop-on-errors="true" map-id="DEF_MAPPING_SERVICIO_SERVICIOVO">
+		<class-a>
+			es.pode.buscar.negocio.administrar.dominio.ServicioImpl
+		</class-a>
+		<class-b>
+			es.pode.buscar.negocio.administrar.servicio.ServicioVO
+		</class-b>
+		<field>
+			<a>id</a>
+			<b>id</b>
+		</field>
+		<field>
+			<a>descripcion</a>
+			<b>descripcion</b>
+		</field>
+		<field>
+			<a>url</a>
+			<b>url</b>
+		</field>
+		<field>
+			<a>nombre</a>
+			<b>nombre</b>
+		</field>
+	</mapping>
+	<mapping wildcard="true" stop-on-errors="true" map-id="DEF_MAPPING_NODOSQI_NODOSQIVOPRIME">
+		<class-a>
+			es.pode.buscar.negocio.nodosSQI.dominio.NodoSQIImpl
+		</class-a>
+		<class-b>
+			es.pode.buscar.negocio.nodosSQI.servicio.NodoSQIVO
+		</class-b>
+		
+	</mapping>
+	<mapping wildcard="true" stop-on-errors="true" map-id="DEF_MAPPING_NODOSQI_NODODESCRIPCIONSQIVOPRIME">
+		<class-a>
+			es.pode.buscar.negocio.nodosSQI.dominio.NodoSQIImpl
+		</class-a>
+		<class-b>
+			es.pode.buscar.negocio.nodosSQI.servicio.NodoDescripcionSQIVO
+		</class-b>
+		
+	</mapping>
+</mappings>

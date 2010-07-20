@@ -1,0 +1,33 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="desactivarUsuario" class="action">
+    <h3><bean:message key="listar.usuarios.formulario.listado.usuarios.desactivar.usuario"/></h3>
+    <div class="trigger">
+        <html:form styleId="listarUsuariosFormularioListadoUsuariosDesactivarUsuarioForm" action="/ListarUsuarios/FormularioListadoUsuariosDesactivarUsuario" method="post" enctype="multipart/form-data" onsubmit="return validateFormularioListadoUsuariosDesactivarUsuarioForm(this);">
+            <table>
+                <tbody>
+                    <tr class="id">
+                        <td class="label"><bean:message key="listar.usuarios.formulario.listado.usuarios.desactivar.usuario.param.id"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.id}"/>
+                           <input type="text" name="id" value="${value}" onmouseover="hints.show('listar.usuarios.formulario.listado.usuarios.desactivar.usuario.param.id.title')" onmouseout="hints.hide()"  id="desactivarUsuarioId"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('DesactivarUsuario')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="listar.usuarios.formulario.listado.usuarios.desactivar.usuario"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

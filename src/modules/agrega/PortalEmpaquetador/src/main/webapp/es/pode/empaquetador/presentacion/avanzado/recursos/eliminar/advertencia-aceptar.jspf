@@ -1,0 +1,51 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="eliminar.recursos.advertencia.aceptar"/></h3>
+    <div class="trigger">
+        <html:form styleId="eliminarRecursosAdvertenciaAceptarForm" action="/EliminarRecursos/AdvertenciaAceptar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="recursosVO">
+                        <td class="label"><bean:message key="eliminar.recursos.advertencia.aceptar.param.recursos.vo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.recursosVO}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.recursosVOBackingList}">
+                                  <html:select name="form" property="recursosVOAsArray" onmouseover="hints.show('eliminar.recursos.advertencia.aceptar.param.recursos.vo.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="aceptarRecursosVO">
+                                      <html:optionsCollection name="form" property="recursosVOBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="recursosVOAsArray" onmouseover="hints.show('eliminar.recursos.advertencia.aceptar.param.recursos.vo.title')" onmouseout="hints.hide()"  styleId="aceptarRecursosVO"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="action">
+                        <td class="label"><bean:message key="eliminar.recursos.advertencia.aceptar.param.action"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.action}"/>
+                           <input type="text" name="action" value="${value}" onmouseover="hints.show('eliminar.recursos.advertencia.aceptar.param.action.title')" onmouseout="hints.hide()"  id="aceptarAction"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_DOCENTE,ROLE_ADMINISTRADOR,ROLE_CATALOGADOR,ROLE_PUBLICADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="eliminar.recursos.advertencia.aceptar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

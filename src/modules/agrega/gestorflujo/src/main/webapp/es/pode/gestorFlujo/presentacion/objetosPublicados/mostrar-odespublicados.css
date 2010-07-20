@@ -1,0 +1,33 @@
+#personales.action {}
+#personales.action #form_submit {}
+
+
+#propuestos.action {}
+#propuestos.action #form_submit {}
+
+#propuestos.action .idiomaBuscador {}
+#propuestos.action .idiomaBuscador .label {}
+#propuestos.action .idiomaBuscador .field {}
+
+#verHistorial.action {}
+#verHistorial.action #form_submit {}
+
+#verHistorial.action .idODE {}
+#verHistorial.action .idODE .label {}
+#verHistorial.action .idODE .field {}
+#verHistorial.action .titulo {}
+#verHistorial.action .titulo .label {}
+#verHistorial.action .titulo .field {}
+
+#listaODES.table {}
+#listaODES.table th {}
+#listaODES.table td div {}
+
+#listaODES.table th.idODE {}
+#listaODES.table td div.idODE {}
+
+#listaODES.table th.titulo {}
+#listaODES.table td div.titulo {}
+
+
+

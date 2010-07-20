@@ -1,0 +1,132 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="submitForm" class="action">
+    <h3><bean:message key="detalle.relacion.cu.detalle.relacion.form.submit.form"/></h3>
+    <div class="trigger">
+        <html:form styleId="detalleRelacionCUDetalleRelacionFormSubmitFormForm" action="/DetalleRelacionCU/DetalleRelacionFormSubmitForm" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="accion">
+                        <td class="label"><bean:message key="detalle.relacion.cu.detalle.relacion.form.submit.form.param.accion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.accion}"/>
+                           <input type="text" name="accion" value="${value}" onmouseover="hints.show('detalle.relacion.cu.detalle.relacion.form.submit.form.param.accion.title')" onmouseout="hints.hide()"  id="submitFormAccion"/>
+                        </td>
+                    </tr>
+                    <tr class="tituloRelacion">
+                        <td class="label"><bean:message key="detalle.relacion.cu.detalle.relacion.form.submit.form.param.titulo.relacion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tituloRelacion}"/>
+                           <input type="text" name="tituloRelacion" value="${value}" onmouseover="hints.show('detalle.relacion.cu.detalle.relacion.form.submit.form.param.titulo.relacion.title')" onmouseout="hints.hide()"  id="submitFormTituloRelacion"/>
+                        </td>
+                    </tr>
+                    <tr class="identificadorOde">
+                        <td class="label"><bean:message key="detalle.relacion.cu.detalle.relacion.form.submit.form.param.identificador.ode"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.identificadorOde}"/>
+                           <input type="text" name="identificadorOde" value="${value}" onmouseover="hints.show('detalle.relacion.cu.detalle.relacion.form.submit.form.param.identificador.ode.title')" onmouseout="hints.hide()"  id="submitFormIdentificadorOde"/>
+                        </td>
+                    </tr>
+                    <tr class="botonPulsado">
+                        <td class="label"><bean:message key="detalle.relacion.cu.detalle.relacion.form.submit.form.param.boton.pulsado"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.botonPulsado}"/>
+                           <input type="text" name="botonPulsado" value="${value}" onmouseover="hints.show('detalle.relacion.cu.detalle.relacion.form.submit.form.param.boton.pulsado.title')" onmouseout="hints.hide()"  id="submitFormBotonPulsado"/>
+                        </td>
+                    </tr>
+                    <tr class="comboIdioma">
+                        <td class="label"><bean:message key="detalle.relacion.cu.detalle.relacion.form.submit.form.param.combo.idioma"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.comboIdioma}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.comboIdiomaBackingList}">
+                                  <html:select name="form" property="comboIdioma" onmouseover="hints.show('detalle.relacion.cu.detalle.relacion.form.submit.form.param.combo.idioma.title')" onmouseout="hints.hide()"  styleId="submitFormComboIdioma">
+                                      <html:optionsCollection name="form" property="comboIdiomaBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="comboIdioma" onmouseover="hints.show('detalle.relacion.cu.detalle.relacion.form.submit.form.param.combo.idioma.title')" onmouseout="hints.hide()"  styleId="submitFormComboIdioma"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="descripcion">
+                        <td class="label"><bean:message key="detalle.relacion.cu.detalle.relacion.form.submit.form.param.descripcion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.descripcion}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.descripcionBackingList}">
+                                  <html:select name="form" property="descripcionAsArray" onmouseover="hints.show('detalle.relacion.cu.detalle.relacion.form.submit.form.param.descripcion.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="submitFormDescripcion">
+                                      <html:optionsCollection name="form" property="descripcionBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="descripcionAsArray" onmouseover="hints.show('detalle.relacion.cu.detalle.relacion.form.submit.form.param.descripcion.title')" onmouseout="hints.hide()"  styleId="submitFormDescripcion"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="tipo">
+                        <td class="label"><bean:message key="detalle.relacion.cu.detalle.relacion.form.submit.form.param.tipo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipo}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.tipoBackingList}">
+                                  <html:select name="form" property="tipo" onmouseover="hints.show('detalle.relacion.cu.detalle.relacion.form.submit.form.param.tipo.title')" onmouseout="hints.hide()"  styleId="submitFormTipo">
+                                      <html:optionsCollection name="form" property="tipoBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="tipo" onmouseover="hints.show('detalle.relacion.cu.detalle.relacion.form.submit.form.param.tipo.title')" onmouseout="hints.hide()"  styleId="submitFormTipo"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="catalogo">
+                        <td class="label"><bean:message key="detalle.relacion.cu.detalle.relacion.form.submit.form.param.catalogo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.catalogo}"/>
+                           <input type="text" name="catalogo" value="${value}" onmouseover="hints.show('detalle.relacion.cu.detalle.relacion.form.submit.form.param.catalogo.title')" onmouseout="hints.hide()"  id="submitFormCatalogo"/>
+                        </td>
+                    </tr>
+                    <tr class="entrada">
+                        <td class="label"><bean:message key="detalle.relacion.cu.detalle.relacion.form.submit.form.param.entrada"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.entrada}"/>
+                           <input type="text" name="entrada" value="${value}" onmouseover="hints.show('detalle.relacion.cu.detalle.relacion.form.submit.form.param.entrada.title')" onmouseout="hints.hide()"  id="submitFormEntrada"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR,ROLE_CATALOGADOR,ROLE_PUBLICADOR,ROLE_DOCENTE">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('submitForm')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="detalle.relacion.cu.detalle.relacion.form.submit.form"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

@@ -1,0 +1,175 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptarGuardar" class="action">
+    <h3><bean:message key="catalogador.basico.guardarpres.aceptar.guardar"/></h3>
+    <div class="trigger">
+        <html:form styleId="catalogadorBasicoGuardarpresAceptarGuardarForm" action="/CatalogadorBasico/GuardarpresAceptarGuardar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="titulo">
+                        <td class="label"><bean:message key="catalogador.basico.guardarpres.aceptar.guardar.param.titulo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.titulo}"/>
+                           <input type="text" name="titulo" value="${value}" onmouseover="hints.show('catalogador.basico.guardarpres.aceptar.guardar.param.titulo.title')" onmouseout="hints.hide()"  id="aceptarGuardarTitulo"/>
+                        </td>
+                    </tr>
+                    <tr class="idioma">
+                        <td class="label"><bean:message key="catalogador.basico.guardarpres.aceptar.guardar.param.idioma"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idioma}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.idiomaBackingList}">
+                                  <html:select name="form" property="idioma" onmouseover="hints.show('catalogador.basico.guardarpres.aceptar.guardar.param.idioma.title')" onmouseout="hints.hide()"  styleId="aceptarGuardarIdioma">
+                                      <html:optionsCollection name="form" property="idiomaBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="idioma" onmouseover="hints.show('catalogador.basico.guardarpres.aceptar.guardar.param.idioma.title')" onmouseout="hints.hide()"  styleId="aceptarGuardarIdioma"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="descripcion">
+                        <td class="label"><bean:message key="catalogador.basico.guardarpres.aceptar.guardar.param.descripcion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.descripcion}"/>
+                           <textarea name="descripcion" onmouseover="hints.show('catalogador.basico.guardarpres.aceptar.guardar.param.descripcion.title')" onmouseout="hints.hide()"  id="aceptarGuardarDescripcion">${value}</textarea>
+                        </td>
+                    </tr>
+                    <tr class="tipoRecurso">
+                        <td class="label"><bean:message key="catalogador.basico.guardarpres.aceptar.guardar.param.tipo.recurso"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipoRecurso}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.tipoRecursoBackingList}">
+                                  <html:select name="form" property="tipoRecurso" onmouseover="hints.show('catalogador.basico.guardarpres.aceptar.guardar.param.tipo.recurso.title')" onmouseout="hints.hide()"  styleId="aceptarGuardarTipoRecurso">
+                                      <html:optionsCollection name="form" property="tipoRecursoBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="tipoRecurso" onmouseover="hints.show('catalogador.basico.guardarpres.aceptar.guardar.param.tipo.recurso.title')" onmouseout="hints.hide()"  styleId="aceptarGuardarTipoRecurso"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="contexto">
+                        <td class="label"><bean:message key="catalogador.basico.guardarpres.aceptar.guardar.param.contexto"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.contexto}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.contextoBackingList}">
+                                  <html:select name="form" property="contexto" onmouseover="hints.show('catalogador.basico.guardarpres.aceptar.guardar.param.contexto.title')" onmouseout="hints.hide()"  styleId="aceptarGuardarContexto">
+                                      <html:optionsCollection name="form" property="contextoBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="contexto" onmouseover="hints.show('catalogador.basico.guardarpres.aceptar.guardar.param.contexto.title')" onmouseout="hints.hide()"  styleId="aceptarGuardarContexto"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="edad">
+                        <td class="label"><bean:message key="catalogador.basico.guardarpres.aceptar.guardar.param.edad"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.edad}"/>
+                           <input type="text" name="edad" value="${value}" onmouseover="hints.show('catalogador.basico.guardarpres.aceptar.guardar.param.edad.title')" onmouseout="hints.hide()"  id="aceptarGuardarEdad"/>
+                        </td>
+                    </tr>
+                    <tr class="idiomaDestinatario">
+                        <td class="label"><bean:message key="catalogador.basico.guardarpres.aceptar.guardar.param.idioma.destinatario"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idiomaDestinatario}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.idiomaDestinatarioBackingList}">
+                                  <html:select name="form" property="idiomaDestinatario" onmouseover="hints.show('catalogador.basico.guardarpres.aceptar.guardar.param.idioma.destinatario.title')" onmouseout="hints.hide()"  styleId="aceptarGuardarIdiomaDestinatario">
+                                      <html:optionsCollection name="form" property="idiomaDestinatarioBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="idiomaDestinatario" onmouseover="hints.show('catalogador.basico.guardarpres.aceptar.guardar.param.idioma.destinatario.title')" onmouseout="hints.hide()"  styleId="aceptarGuardarIdiomaDestinatario"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="procesoCognitivo">
+                        <td class="label"><bean:message key="catalogador.basico.guardarpres.aceptar.guardar.param.proceso.cognitivo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.procesoCognitivo}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.procesoCognitivoBackingList}">
+                                  <html:select name="form" property="procesoCognitivo" onmouseover="hints.show('catalogador.basico.guardarpres.aceptar.guardar.param.proceso.cognitivo.title')" onmouseout="hints.hide()"  styleId="aceptarGuardarProcesoCognitivo">
+                                      <html:optionsCollection name="form" property="procesoCognitivoBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="procesoCognitivo" onmouseover="hints.show('catalogador.basico.guardarpres.aceptar.guardar.param.proceso.cognitivo.title')" onmouseout="hints.hide()"  styleId="aceptarGuardarProcesoCognitivo"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="identificador">
+                        <td class="label"><bean:message key="catalogador.basico.guardarpres.aceptar.guardar.param.identificador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.identificador}"/>
+                           <input type="text" name="identificador" value="${value}" onmouseover="hints.show('catalogador.basico.guardarpres.aceptar.guardar.param.identificador.title')" onmouseout="hints.hide()"  id="aceptarGuardarIdentificador"/>
+                        </td>
+                    </tr>
+                    <tr class="usuario">
+                        <td class="label"><bean:message key="catalogador.basico.guardarpres.aceptar.guardar.param.usuario"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.usuario}"/>
+                           <input type="text" name="usuario" value="${value}" onmouseover="hints.show('catalogador.basico.guardarpres.aceptar.guardar.param.usuario.title')" onmouseout="hints.hide()"  id="aceptarGuardarUsuario"/>
+                        </td>
+                    </tr>
+                    <tr class="arboles">
+                        <td class="label"><bean:message key="catalogador.basico.guardarpres.aceptar.guardar.param.arboles"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.arboles}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.arbolesBackingList}">
+                                  <html:select name="form" property="arbolesAsArray" onmouseover="hints.show('catalogador.basico.guardarpres.aceptar.guardar.param.arboles.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="aceptarGuardarArboles">
+                                      <html:optionsCollection name="form" property="arbolesBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="arbolesAsArray" onmouseover="hints.show('catalogador.basico.guardarpres.aceptar.guardar.param.arboles.title')" onmouseout="hints.hide()"  styleId="aceptarGuardarArboles"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('aceptarGuardar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="catalogador.basico.guardarpres.aceptar.guardar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

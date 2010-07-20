@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <!-- ========================= GENERAL DEFINITIONS ========================= -->
+    <!-- Message source for this context, loaded from localized "messages_xx" files -->
+
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename"><value>messages</value></property>
+    </bean>
+
+	<bean id="beanMapper" class="net.sf.dozer.util.mapping.DozerBeanMapper" singleton="true">
+		<property name="mappingFiles">
+			<list>
+				<value>defaultDozerMappings_empaquetadorbasico.xml</value>
+				<value>customDozerMappings_empaquetadorbasico.xml</value>
+			</list>
+		</property>
+	</bean>
+
+    <!-- applicationContext merge-point -->
+
+    <!-- ========================= Start of SERVICE DEFINITIONS ========================= -->
+
+
+    <!-- SrvGestorArchivosService Service Proxy with inner SrvGestorArchivosService Service Implementation -->
+    <bean id="srvGestorArchivosService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.empaquetador.negocio.servicio.SrvGestorArchivosServiceImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+	                <property name="zipDao"><ref bean="ZipDao"/></property>
+    		            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.empaquetador.negocio.servicio.SrvGestorArchivosService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceSecurityInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvGestorManifestService Service Proxy with inner SrvGestorManifestService Service Implementation -->
+    <bean id="srvGestorManifestService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.empaquetador.negocio.servicio.SrvGestorManifestServiceImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+	                <property name="srvGestorArchivosService"><ref bean="srvGestorArchivosService"/></property>
+    			                <property name="scormDao"><ref bean="ScormDao"/></property>
+    			                <property name="zipDao"><ref bean="ZipDao"/></property>
+    						            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.empaquetador.negocio.servicio.SrvGestorManifestService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceSecurityInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvEmpaquetadorBasicoService Service Proxy with inner SrvEmpaquetadorBasicoService Service Implementation -->
+    <bean id="srvEmpaquetadorBasicoService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.empaquetador.negocio.servicio.SrvEmpaquetadorBasicoServiceImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+	                <property name="srvGestorManifestService"><ref bean="srvGestorManifestService"/></property>
+    		                <property name="srvGestorArchivosService"><ref bean="srvGestorArchivosService"/></property>
+    		                <property name="zipDao"><ref bean="ZipDao"/></property>
+    				                <property name="scormDao"><ref bean="ScormDao"/></property>
+    		            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.empaquetador.negocio.servicio.SrvEmpaquetadorBasicoService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceSecurityInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvFachadaAgregarService Service Proxy with inner SrvFachadaAgregarService Service Implementation -->
+    <bean id="srvFachadaAgregarService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.empaquetador.negocio.servicio.SrvFachadaAgregarServiceImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+	                <property name="srvGestorManifestService"><ref bean="srvGestorManifestService"/></property>
+    		                <property name="srvEmpaquetadorBasicoService"><ref bean="srvEmpaquetadorBasicoService"/></property>
+    		                <property name="scormDao"><ref bean="ScormDao"/></property>
+    				            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.empaquetador.negocio.servicio.SrvFachadaAgregarService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceSecurityInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- ========================= End of SERVICE DEFINITIONS ========================= -->
+
+</beans>

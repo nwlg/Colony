@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <bean id="contextSource"
+        class="org.springframework.ldap.support.LdapContextSource">
+        <property name="url" value="ldap://172.26.253.223:389/ou=usuarios,dc=agrega,dc=indra,dc=es" />
+         <property name="userName" value="cn=Administrador,dc=agrega,dc=indra,dc=es" />
+        <property name="password" value="indra2007"/>
+          </bean>
+    <bean id="ldapTemplate" class="org.springframework.ldap.LdapTemplate">
+        <constructor-arg ref="contextSource" />
+    </bean>
+    <bean id="ldapContact"
+        class="es.pode.adminusuarios.negocio.comun.LDAPContactDAO">
+        <property name="ldapTemplate" ref="ldapTemplate" />
+    </bean>
+</beans>

@@ -1,0 +1,13 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="volver" class="action">
+    <h3><bean:message key="listar.feeds.cu.listar.feeds.volver"/></h3>
+    <div class="trigger">
+        <form id="listarFeedsCUListarFeedsVolverForm" action='<html:rewrite action="/ListarFeedsCU/ListarFeedsVolver"/>' method="post">
+               <html:submit onmouseover="hints.show('volver')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="listar.feeds.cu.listar.feeds.volver"/>
+               </html:submit>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

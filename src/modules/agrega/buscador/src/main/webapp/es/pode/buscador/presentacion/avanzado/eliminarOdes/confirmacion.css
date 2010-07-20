@@ -1,0 +1,58 @@
+#cancelar.action {}
+#cancelar.action #form_submit {}
+
+#cancelar.action .idioma {}
+#cancelar.action .idioma .label {}
+#cancelar.action .idioma .field {}
+#cancelar.action .busquedaSimpleAvanzada {}
+#cancelar.action .busquedaSimpleAvanzada .label {}
+#cancelar.action .busquedaSimpleAvanzada .field {}
+#cancelar.action .numeroResultados {}
+#cancelar.action .numeroResultados .label {}
+#cancelar.action .numeroResultados .field {}
+
+#aceptar.action {}
+#aceptar.action #form_submit {}
+
+#aceptar.action .listaIds {}
+#aceptar.action .listaIds .label {}
+#aceptar.action .listaIds .field {}
+#aceptar.action .odesDeleted {}
+#aceptar.action .odesDeleted .label {}
+#aceptar.action .odesDeleted .field {}
+#aceptar.action .tipoBusqueda {}
+#aceptar.action .tipoBusqueda .label {}
+#aceptar.action .tipoBusqueda .field {}
+#aceptar.action .idiomaBuscador {}
+#aceptar.action .idiomaBuscador .label {}
+#aceptar.action .idiomaBuscador .field {}
+#aceptar.action .idHits {}
+#aceptar.action .idHits .label {}
+#aceptar.action .idHits .field {}
+#aceptar.action .idioma {}
+#aceptar.action .idioma .label {}
+#aceptar.action .idioma .field {}
+#aceptar.action .busquedaSimpleAvanzada {}
+#aceptar.action .busquedaSimpleAvanzada .label {}
+#aceptar.action .busquedaSimpleAvanzada .field {}
+#aceptar.action .tipoLayoutBuscador {}
+#aceptar.action .tipoLayoutBuscador .label {}
+#aceptar.action .tipoLayoutBuscador .field {}
+#aceptar.action .numeroResultados {}
+#aceptar.action .numeroResultados .label {}
+#aceptar.action .numeroResultados .field {}
+
+#buscar.action {}
+#buscar.action #form_submit {}
+
+#buscar.action .idiomaBuscador {}
+#buscar.action .idiomaBuscador .label {}
+#buscar.action .idiomaBuscador .field {}
+#buscar.action .tipoBusqueda {}
+#buscar.action .tipoBusqueda .label {}
+#buscar.action .tipoBusqueda .field {}
+#buscar.action .numeroResultados {}
+#buscar.action .numeroResultados .label {}
+#buscar.action .numeroResultados .field {}
+
+

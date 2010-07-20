@@ -1,0 +1,29 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'importar.modificacion.importar.modificacion.buscar.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="importar.modificacion.importar.modificacion.buscar.param.idioma.buscador.title"/></formatting:escape>',
+                'importar.modificacion.importar.modificacion.buscar.param.tipo.busqueda.title':'<formatting:escape language="javascript"><bean:message key="importar.modificacion.importar.modificacion.buscar.param.tipo.busqueda.title"/></formatting:escape>',
+                'importar.modificacion.importar.modificacion.importar.param.fichero.title':'<formatting:escape language="javascript"><bean:message key="importar.modificacion.importar.modificacion.importar.param.fichero.title"/></formatting:escape>',
+                'importar.modificacion.importar.modificacion.importar.param.action.title':'<formatting:escape language="javascript"><bean:message key="importar.modificacion.importar.modificacion.importar.param.action.title"/></formatting:escape>',
+                'Buscar':'<formatting:escape language="javascript"><bean:message key="importar.modificacion.importar.modificacion.buscar.title"/></formatting:escape>',
+                'Buscar_no':'<formatting:escape language="javascript"><bean:message key="importar.modificacion.importar.modificacion.buscar.title.notallowed"/></formatting:escape>',
+                'Buscar_reset':'<formatting:escape language="javascript"><bean:message key="importar.modificacion.importar.modificacion.buscar.title.reset"/></formatting:escape>',
+                'Buscar_noreset':'<formatting:escape language="javascript"><bean:message key="importar.modificacion.importar.modificacion.buscar.title.reset.not.allowed"/></formatting:escape>',
+                'Importar':'<formatting:escape language="javascript"><bean:message key="importar.modificacion.importar.modificacion.importar.title"/></formatting:escape>',
+                'Importar_no':'<formatting:escape language="javascript"><bean:message key="importar.modificacion.importar.modificacion.importar.title.notallowed"/></formatting:escape>',
+                'Importar_reset':'<formatting:escape language="javascript"><bean:message key="importar.modificacion.importar.modificacion.importar.title.reset"/></formatting:escape>',
+                'Importar_noreset':'<formatting:escape language="javascript"><bean:message key="importar.modificacion.importar.modificacion.importar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+</script>
+    </tiles:put>

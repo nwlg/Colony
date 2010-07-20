@@ -1,0 +1,103 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="modificar.noticia.modificar.paso1.aceptar"/></h3>
+    <div class="trigger">
+        <html:form styleId="modificarNoticiaModificarPaso1AceptarForm" action="/ModificarNoticia/ModificarPaso1Aceptar" method="post" enctype="multipart/form-data" onsubmit="return validateModificarPaso1AceptarForm(this);">
+            <table>
+                <tbody>
+                    <tr class="idNoticia">
+                        <td class="label"><bean:message key="modificar.noticia.modificar.paso1.aceptar.param.id.noticia"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idNoticia}"/>
+                           <input type="text" name="idNoticia" value="${value}" onmouseover="hints.show('modificar.noticia.modificar.paso1.aceptar.param.id.noticia.title')" onmouseout="hints.hide()"  id="aceptarIdNoticia"/>
+                        </td>
+                    </tr>
+                    <tr class="imagen">
+                        <td class="label"><bean:message key="modificar.noticia.modificar.paso1.aceptar.param.imagen"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.imagen}"/>
+                           <html:file name="form" property="imagen" onmouseover="hints.show('modificar.noticia.modificar.paso1.aceptar.param.imagen.title')" onmouseout="hints.hide()"  styleId="aceptarImagen"/>
+                        </td>
+                    </tr>
+                    <tr class="alineamiento">
+                        <td class="label"><bean:message key="modificar.noticia.modificar.paso1.aceptar.param.alineamiento"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.alineamiento}"/>
+                           <input type="text" name="alineamiento" value="${value}" onmouseover="hints.show('modificar.noticia.modificar.paso1.aceptar.param.alineamiento.title')" onmouseout="hints.hide()"  id="aceptarAlineamiento"/>
+                        </td>
+                    </tr>
+                    <tr class="estado">
+                        <td class="label"><bean:message key="modificar.noticia.modificar.paso1.aceptar.param.estado"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.estado}"/>
+                           <input type="checkbox" name="estado" value="on" <c:if test="${value}">checked="checked" </c:if>onmouseover="hints.show('modificar.noticia.modificar.paso1.aceptar.param.estado.title')" onmouseout="hints.hide()"  id="aceptarEstado"/>
+                        </td>
+                    </tr>
+                    <tr class="categoria">
+                        <td class="label"><bean:message key="modificar.noticia.modificar.paso1.aceptar.param.categoria"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.categoria}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.categoriaBackingList}">
+                                  <html:select name="form" property="categoria" onmouseover="hints.show('modificar.noticia.modificar.paso1.aceptar.param.categoria.title')" onmouseout="hints.hide()"  styleId="aceptarCategoria">
+                                      <html:optionsCollection name="form" property="categoriaBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="categoria" onmouseover="hints.show('modificar.noticia.modificar.paso1.aceptar.param.categoria.title')" onmouseout="hints.hide()"  styleId="aceptarCategoria"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="nombreImagen">
+                        <td class="label"><bean:message key="modificar.noticia.modificar.paso1.aceptar.param.nombre.imagen"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.nombreImagen}"/>
+                           <input type="text" name="nombreImagen" value="${value}" onmouseover="hints.show('modificar.noticia.modificar.paso1.aceptar.param.nombre.imagen.title')" onmouseout="hints.hide()"  id="aceptarNombreImagen"/>
+                        </td>
+                    </tr>
+                    <tr class="activarImagen">
+                        <td class="label"><bean:message key="modificar.noticia.modificar.paso1.aceptar.param.activar.imagen"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.activarImagen}"/>
+                           <input type="text" name="activarImagen" value="${value}" onmouseover="hints.show('modificar.noticia.modificar.paso1.aceptar.param.activar.imagen.title')" onmouseout="hints.hide()"  id="aceptarActivarImagen"/>
+                        </td>
+                    </tr>
+                    <tr class="nombreImagenVO">
+                        <td class="label"><bean:message key="modificar.noticia.modificar.paso1.aceptar.param.nombre.imagen.vo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.nombreImagenVO}"/>
+                           <input type="text" name="nombreImagenVO" value="${value}" onmouseover="hints.show('modificar.noticia.modificar.paso1.aceptar.param.nombre.imagen.vo.title')" onmouseout="hints.hide()"  id="aceptarNombreImagenVO"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="modificar.noticia.modificar.paso1.aceptar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

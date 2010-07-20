@@ -1,0 +1,115 @@
+<div id="tareasPendientes" class="table">
+    <form id="tareasPendientes" name="" action="" method="post" enctype="multipart/form-data">
+    <display:table name="${form.tareasPendientes}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="listar-tareas-pendientes.pdf" />
+        <display:column media="html">
+            <input type="checkbox" name="trabajoRowSelectionAsArray" value="${row.trabajo}" title='<bean:message key="select.deselect.this.row"/>'/>
+        </display:column>
+
+        <display:column media="xml csv excel pdf"
+            titleKey="listar.tareas.pendientes.listar.param.tareas.pendientes.trabajo"
+            autolink="true" paramId="trabajo"
+            property="trabajo">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="trabajo" paramId="trabajo"
+            sortProperty="trabajo" sortable="true"
+            titleKey="listar.tareas.pendientes.listar.param.tareas.pendientes.trabajo"
+            >
+            <div class="trabajo">
+		
+ <c:set var="value" value="${row.trabajo}"/>
+ <html:link action="/ListarTareasPendientes/ListarModificar?trabajo=${row.trabajo}&grupoTrabajo=${row.grupoTrabajo}&trigger=${row.trigger}&grupoTrigger=${row.grupoTrigger}" onmouseover="hints.show('listar.tareas.pendientes.listar.modificar.param.trabajo.title')" onmouseout="hints.hide()">${row.trabajo}</html:link>
+ <input type="hidden" name="trabajo" value="${value}" id="tareasPendientesTrabajo${row_rowNum}"/>
+            </div>
+       </display:column>
+   
+
+        <display:column media="xml csv excel pdf"
+            titleKey="listar.tareas.pendientes.listar.param.tareas.pendientes.grupo.trabajo"
+            autolink="true" paramId="grupoTrabajo"
+            property="grupoTrabajo">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="grupoTrabajo" paramId="grupoTrabajo"
+            sortProperty="grupoTrabajo" sortable="true"
+            titleKey="listar.tareas.pendientes.listar.param.tareas.pendientes.grupo.trabajo"
+            >
+            <div class="grupoTrabajo">
+		
+ <c:set var="value" value="${row.grupoTrabajo}"/>
+ <input type="text" name="grupoTrabajo" value="${value}" onmouseover="hints.show('listar.tareas.pendientes.listar.ejecutar.tarea.param.grupo.trabajo.title')" onmouseout="hints.hide()"  id="tareasPendientesGrupoTrabajo${row_rowNum}"/>
+            </div>
+       </display:column>
+   
+
+        <display:column media="xml csv excel pdf"
+            titleKey="listar.tareas.pendientes.listar.param.tareas.pendientes.trigger"
+            autolink="true" paramId="trigger"
+            property="trigger">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="trigger" paramId="trigger"
+            sortProperty="trigger" sortable="true"
+            titleKey="listar.tareas.pendientes.listar.param.tareas.pendientes.trigger"
+            >
+            <div class="trigger">
+		
+ <c:set var="value" value="${row.trigger}"/>
+ <html:link action="/ListarTareasPendientes/ListarEjecutarTarea?trabajo=${row.trabajo}&grupoTrabajo=${row.grupoTrabajo}&trigger=${row.trigger}&grupoTrigger=${row.grupoTrigger}" onmouseover="hints.show('listar.tareas.pendientes.listar.ejecutar.tarea.param.trigger.title')" onmouseout="hints.hide()">${row.trigger}</html:link>
+ <input type="hidden" name="trigger" value="${value}" id="tareasPendientesTrigger${row_rowNum}"/>
+            </div>
+       </display:column>
+   
+
+        <display:column media="xml csv excel pdf"
+            titleKey="listar.tareas.pendientes.listar.param.tareas.pendientes.grupo.trigger"
+            autolink="true" paramId="grupoTrigger"
+            property="grupoTrigger">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="grupoTrigger" paramId="grupoTrigger"
+            sortProperty="grupoTrigger" sortable="true"
+            titleKey="listar.tareas.pendientes.listar.param.tareas.pendientes.grupo.trigger"
+            >
+            <div class="grupoTrigger">
+		
+ <c:set var="value" value="${row.grupoTrigger}"/>
+ <input type="hidden" name="grupoTrigger" value="${value}" id="tareasPendientesGrupoTrigger${row_rowNum}"/>
+ ${value}
+            </div>
+       </display:column>
+   
+
+        <display:column media="xml csv excel pdf"
+            titleKey="listar.tareas.pendientes.listar.param.tareas.pendientes.fecha.inicio"
+            autolink="true" paramId="fechaInicio"
+            property="fechaInicio">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="fechaInicio" paramId="fechaInicio"
+            sortProperty="fechaInicio" sortable="true"
+            titleKey="listar.tareas.pendientes.listar.param.tareas.pendientes.fecha.inicio"
+            >
+ <html:link action="/ListarTareasPendientes/ListarMostrar?trabajo=${row.trabajo}&grupoTrabajo=${row.grupoTrabajo}&trigger=${row.trigger}&grupoTrigger=${row.grupoTrigger}" onmouseover="hints.show('Mostrar')" onmouseout="hints.hide()">
+     ${row.fechaInicio}
+ </html:link>
+            </display:column>
+   
+    </display:table>
+    <c:if test="${!empty form.tareasPendientes}">
+            <input type="submit" value="<bean:message key="listar.tareas.pendientes.listar.eliminar"/>" onclick="this.form.name='listarTareasPendientesListarEliminarForm';this.form.action='<html:rewrite action="/ListarTareasPendientes/ListarEliminar"/>';" onmouseover="hints.show('Eliminar')" onmouseout="hints.hide()"/>
+            <input type="button" value="<bean:message key="select.deselect.all"/>" onclick="var boxes=this.form.elements['trabajoRowSelectionAsArray'];var setChecked=(boxes.length==0)?false:!boxes[0].checked;for(var i=0;i<boxes.length;i++)boxes[i].checked=setChecked;"/>
+    </c:if>
+    </form>
+</div>
+

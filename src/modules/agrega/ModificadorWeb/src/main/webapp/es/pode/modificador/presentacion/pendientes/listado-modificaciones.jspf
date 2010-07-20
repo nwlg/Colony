@@ -1,0 +1,45 @@
+<div id="modificaciones" class="table">
+    <form id="modificaciones" name="" action="" method="post" enctype="multipart/form-data">
+    <display:table name="${form.modificaciones}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="listado-modificaciones.pdf" />
+        <display:column media="html">
+            <input type="checkbox" name="idModificacionRowSelectionAsArray" value="${row.idModificacion}" title='<bean:message key="select.deselect.this.row"/>'/>
+        </display:column>
+
+        <display:column media="xml csv excel pdf"
+            titleKey="modificaciones.pendientes.listado.param.modificaciones.nombre"
+            autolink="true" paramId="nombre"
+            property="nombre">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="nombre" paramId="nombre"
+            sortProperty="nombre" sortable="true"
+            titleKey="modificaciones.pendientes.listado.param.modificaciones.nombre"
+            property="nombre" />
+   
+
+        <display:column media="xml csv excel pdf"
+            titleKey="modificaciones.pendientes.listado.param.modificaciones.fecha.ejecucion"
+            autolink="true" paramId="fechaEjecucion"
+            property="fechaEjecucion">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="fechaEjecucion" paramId="fechaEjecucion"
+            sortProperty="fechaEjecucion" sortable="true"
+            titleKey="modificaciones.pendientes.listado.param.modificaciones.fecha.ejecucion"
+            property="fechaEjecucion" />
+   
+    </display:table>
+    <c:if test="${!empty form.modificaciones}">
+            <input type="submit" value="<bean:message key="modificaciones.pendientes.listado.submit"/>" onclick="this.form.name='modificacionesPendientesListadoSubmitForm';this.form.action='<html:rewrite action="/ModificacionesPendientes/ListadoSubmit"/>';" onmouseover="hints.show('Submit')" onmouseout="hints.hide()"/>
+            <input type="button" value="<bean:message key="select.deselect.all"/>" onclick="var boxes=this.form.elements['idModificacionRowSelectionAsArray'];var setChecked=(boxes.length==0)?false:!boxes[0].checked;for(var i=0;i<boxes.length;i++)boxes[i].checked=setChecked;"/>
+    </c:if>
+    </form>
+</div>
+

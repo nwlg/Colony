@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//Spring//DTD Bean//EN" 
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<!-- Application Context -->
+<beans>
+
+    
+    <!--          JMS Spring Beans               -->
+    
+    
+    
+    
+    
+ 
+    <!-- JNDI Environment Template -->
+    <bean id="jndiTemplateSrvTareaModificadorService" class="org.springframework.jndi.JndiTemplate">
+        <property name="environment">
+            <props>
+                <prop key="java.naming.factory.initial">org.jnp.interfaces.NamingContextFactory</prop>
+                <prop key="java.naming.provider.url">localhost</prop>
+           </props>
+        </property>
+    </bean>
+
+    <!-- JMS Queue Connection Factory -->
+    <bean id="internalJmsQueueConnectionFactorySrvTareaModificadorService"
+        	class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiTemplate">
+            <ref bean="jndiTemplateSrvTareaModificadorService"/>
+        </property>
+        <property name="jndiName">
+            <value>UIL2ConnectionFactory</value>
+        </property>
+    </bean>
+
+    <!-- JMS Destination -->
+    <bean id="destinationSrvTareaModificadorService"
+        class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiTemplate">
+            <ref bean="jndiTemplateSrvTareaModificadorService"/>
+        </property>
+        <property name="jndiName">
+            <value>queue/modificador</value>
+        </property>
+    </bean>
+    
+    <!-- JMS Reply Destination -->
+    <bean id="replySrvTareaModificadorService"
+        class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiTemplate">
+            <ref bean="jndiTemplateSrvTareaModificadorService"/>
+        </property>
+        <property name="jndiName">
+            <value>queue/C</value>
+        </property>
+    </bean>
+
+    <!-- JMS Queue Template -->
+    <bean id="jmsTemplateSrvTareaModificadorService" class="org.springframework.jms.core.JmsTemplate">
+        <property name="connectionFactory">
+            <ref bean="internalJmsQueueConnectionFactorySrvTareaModificadorService"/>
+        </property>
+        <property name="defaultDestination">
+            <ref bean="destinationSrvTareaModificadorService"/>
+        </property>
+       <property name="receiveTimeout">
+            <value>30000</value>
+        </property>
+    </bean>
+    
+    
+	 <bean id="SrvTareaModificadorService" class="es.pode.planificador.negocio.servicios.jms.SrvTareaModificadorServiceImpl">
+        <property name="jmsTemplate">
+			<ref bean="jmsTemplateSrvTareaModificadorService"/>
+		</property>
+		<property name="reply">
+			<ref bean="replySrvTareaModificadorService"/>
+		</property>
+	</bean> 
+  </beans>
+

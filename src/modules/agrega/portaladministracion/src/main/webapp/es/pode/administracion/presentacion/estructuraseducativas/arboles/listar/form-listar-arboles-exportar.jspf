@@ -1,0 +1,31 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="exportar" class="action">
+    <h3><bean:message key="listar.arboles.form.listar.arboles.exportar"/></h3>
+    <div class="trigger">
+        <html:form styleId="listarArbolesFormListarArbolesExportarForm" action="/ListarArboles/FormListarArbolesExportar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="nombre">
+                        <td class="label"><bean:message key="listar.arboles.form.listar.arboles.exportar.param.nombre"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.nombre}"/>
+                           <input type="text" name="nombre" value="${value}" onmouseover="hints.show('listar.arboles.form.listar.arboles.exportar.param.nombre.title')" onmouseout="hints.hide()"  id="exportarNombre"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('exportar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="listar.arboles.form.listar.arboles.exportar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

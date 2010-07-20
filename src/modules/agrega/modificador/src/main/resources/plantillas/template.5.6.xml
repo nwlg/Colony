@@ -1,0 +1,4 @@
+<context>
+${load:source.xml}
+${load:value.xml}
+</context>

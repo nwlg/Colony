@@ -1,0 +1,14 @@
+#validarFormulario.action {}
+#validarFormulario.action #form_submit {}
+
+#validarFormulario.action .id {}
+#validarFormulario.action .id .label {}
+#validarFormulario.action .id .field {}
+#validarFormulario.action .nombreCategoria {}
+#validarFormulario.action .nombreCategoria .label {}
+#validarFormulario.action .nombreCategoria .field {}
+#validarFormulario.action .idiomas {}
+#validarFormulario.action .idiomas .label {}
+#validarFormulario.action .idiomas .field {}
+
+

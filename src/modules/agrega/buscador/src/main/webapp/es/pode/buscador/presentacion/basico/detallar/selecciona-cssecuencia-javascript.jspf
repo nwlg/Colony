@@ -1,0 +1,27 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'detallar.odecu.selecciona.cssecuencia.mostrar.odecssecuencia.param.identificador.ode.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.selecciona.cssecuencia.mostrar.odecssecuencia.param.identificador.ode.title"/></formatting:escape>',
+                'detallar.odecu.selecciona.cssecuencia.mostrar.odecssecuencia.param.tipo.visualizador.title':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.selecciona.cssecuencia.mostrar.odecssecuencia.param.tipo.visualizador.title"/></formatting:escape>',
+                'cancelar':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.selecciona.cssecuencia.cancelar.title"/></formatting:escape>',
+                'cancelar_no':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.selecciona.cssecuencia.cancelar.title.notallowed"/></formatting:escape>',
+                'cancelar_reset':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.selecciona.cssecuencia.cancelar.title.reset"/></formatting:escape>',
+                'cancelar_noreset':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.selecciona.cssecuencia.cancelar.title.reset.not.allowed"/></formatting:escape>',
+                'mostrarODECSSecuencia':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.selecciona.cssecuencia.mostrar.odecssecuencia.title"/></formatting:escape>',
+                'mostrarODECSSecuencia_no':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.selecciona.cssecuencia.mostrar.odecssecuencia.title.notallowed"/></formatting:escape>',
+                'mostrarODECSSecuencia_reset':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.selecciona.cssecuencia.mostrar.odecssecuencia.title.reset"/></formatting:escape>',
+                'mostrarODECSSecuencia_noreset':'<formatting:escape language="javascript"><bean:message key="detallar.odecu.selecciona.cssecuencia.mostrar.odecssecuencia.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+</script>
+    </tiles:put>

@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="alta" class="action">
+    <h3><bean:message key="listar.arboles.form.listar.arboles.alta"/></h3>
+    <div class="trigger">
+        <form id="listarArbolesFormListarArbolesAltaForm" action='<html:rewrite action="/ListarArboles/FormListarArbolesAlta"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+               <html:submit onmouseover="hints.show('Alta')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="listar.arboles.form.listar.arboles.alta"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

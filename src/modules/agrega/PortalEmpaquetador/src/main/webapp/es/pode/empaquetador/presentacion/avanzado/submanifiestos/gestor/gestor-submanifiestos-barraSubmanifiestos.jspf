@@ -1,0 +1,23 @@
+<div id="barraSubmanifiestos" class="table">
+    <display:table name="${form.barraSubmanifiestos}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="gestor-submanifiestos-barra-submanifiestos.pdf" />
+
+        <display:column media="xml csv excel pdf"
+            titleKey="gestor.submanifiestos.gestor.submanifiestos.param.barra.submanifiestos.lom.titulo"
+            autolink="true" paramId="lom.titulo"
+            property="lom.titulo">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="lom.titulo" paramId="lom.titulo"
+            sortProperty="lom.titulo" sortable="true"
+            titleKey="gestor.submanifiestos.gestor.submanifiestos.param.barra.submanifiestos.lom.titulo"
+            property="lom.titulo" />
+   
+    </display:table>
+</div>
+

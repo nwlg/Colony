@@ -1,0 +1,56 @@
+<div id="informeTrabajo" class="table">
+    <display:table name="${form.informeTrabajo}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="listar-informe-trabajo.pdf" />
+
+        <display:column media="xml csv excel pdf"
+            titleKey="informe.listar.param.informe.trabajo.descripcion"
+            autolink="true" paramId="descripcion"
+            property="descripcion">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="descripcion" paramId="descripcion"
+            sortProperty="descripcion" sortable="true"
+            titleKey="informe.listar.param.informe.trabajo.descripcion"
+            >
+            <div class="descripcion">
+		
+ <c:set var="value" value="${row.descripcion}"/>
+ <html:link action="/Informe/ListarDescripcion?descripcion=${row.descripcion}&id=${row.id}" onmouseover="hints.show('informe.listar.descripcion.param.descripcion.title')" onmouseout="hints.hide()">${row.descripcion}</html:link>
+ <input type="hidden" name="descripcion" value="${value}" id="informeTrabajoDescripcion${row_rowNum}"/>
+            </div>
+       </display:column>
+   
+
+        <display:column media="xml csv excel pdf"
+            titleKey="informe.listar.param.informe.trabajo.fecha"
+            autolink="true" paramId="fecha"
+            property="fecha">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="fecha" paramId="fecha"
+            sortProperty="fecha" sortable="true"
+            titleKey="informe.listar.param.informe.trabajo.fecha"
+            property="fecha" />
+   
+
+        <display:column media="xml csv excel pdf"
+            titleKey="informe.listar.param.informe.trabajo.estado"
+            autolink="true" paramId="estado"
+            property="estado">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="estado" paramId="estado"
+            sortProperty="estado" sortable="true"
+            titleKey="informe.listar.param.informe.trabajo.estado"
+            property="estado" />
+   
+    </display:table>
+</div>
+

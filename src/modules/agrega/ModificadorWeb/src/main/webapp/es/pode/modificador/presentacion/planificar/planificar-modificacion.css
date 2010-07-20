@@ -1,0 +1,27 @@
+#planificar.action {}
+#planificar.action #form_submit {}
+
+#planificar.action .idModificacion {}
+#planificar.action .idModificacion .label {}
+#planificar.action .idModificacion .field {}
+#planificar.action .horas {}
+#planificar.action .horas .label {}
+#planificar.action .horas .field {}
+#planificar.action .minutos {}
+#planificar.action .minutos .label {}
+#planificar.action .minutos .field {}
+#planificar.action .action {}
+#planificar.action .action .label {}
+#planificar.action .action .field {}
+#planificar.action .fecha {}
+#planificar.action .fecha .label {}
+#planificar.action .fecha .field {}
+
+#buscar.action {}
+#buscar.action #form_submit {}
+
+#buscar.action .idiomaBuscador {}
+#buscar.action .idiomaBuscador .label {}
+#buscar.action .idiomaBuscador .field {}
+
+

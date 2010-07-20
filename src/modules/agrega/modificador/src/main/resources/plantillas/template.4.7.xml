@@ -1,0 +1,4 @@
+<duration>
+${load:duration.xml}
+${load:description.xml}
+</duration>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<MenuConfig>
+
+    <Displayers>
+        <Displayer name="listMenu" type="net.sf.navigator.displayer.ListMenuDisplayer"/>
+    </Displayers>
+
+    <Menus>
+        <Menu name="modificaciones.pendientes.title" title="modificaciones.pendientes.title" tooltip="modificaciones.pendientes.online.help">
+            <Item name="modificaciones.ejecutandose.title" title="modificaciones.ejecutandose.title" tooltip="modificaciones.ejecutandose.online.help">
+                            <Item name="modificaciones.ejecutadas.title" title="modificaciones.ejecutadas.title" tooltip="modificaciones.ejecutadas.online.help">
+                                    <Item name="informe.tarea.title" title="informe.tarea.title" tooltip="informe.tarea.online.help">
+                                            <Item name="informe.ode.title" title="informe.ode.title" tooltip="informe.ode.online.help" action="/InformeODE/InformeODE">
+                        </Item>
+                    </Item>
+                </Item>
+            </Item>
+            <Item name="modificaciones.ejecutadas.title" title="modificaciones.ejecutadas.title" tooltip="modificaciones.ejecutadas.online.help">
+                            <Item name="informe.tarea.title" title="informe.tarea.title" tooltip="informe.tarea.online.help">
+                                    <Item name="informe.ode.title" title="informe.ode.title" tooltip="informe.ode.online.help" action="/InformeODE/InformeODE">
+                    </Item>
+                </Item>
+                            <Item name="modificaciones.ejecutandose.title" title="modificaciones.ejecutandose.title" tooltip="modificaciones.ejecutandose.online.help" action="/ModificacionesEjecutandose/ModificacionesEjecutandose">
+                </Item>
+            </Item>
+            <Item name="configurar.nombre.title" title="configurar.nombre.title" tooltip="configurar.nombre.online.help">
+                            <Item name="configurar.modificacion.title" title="configurar.modificacion.title" tooltip="configurar.modificacion.online.help">
+                                    <Item name="configurar.cambios.title" title="configurar.cambios.title" tooltip="configurar.cambios.online.help">
+                                            <Item name="tipo.anadir.title" title="tipo.anadir.title" tooltip="tipo.anadir.online.help">
+                                                    <Item name="navegar.lom.title" title="navegar.lom.title" tooltip="navegar.lom.online.help">
+                                                            <Item name="comprobar.termino.title" title="comprobar.termino.title" tooltip="comprobar.termino.online.help">
+                                                                    <Item name="cerrar.title" title="cerrar.title" tooltip="cerrar.online.help" action="/Cerrar/Cerrar">
+                                    </Item>
+                                </Item>
+                                                            <Item name="eliminar.termino.title" title="eliminar.termino.title" tooltip="eliminar.termino.online.help">
+                                                                    <Item name="cerrar.title" title="cerrar.title" tooltip="cerrar.online.help" action="/Cerrar/Cerrar">
+                                    </Item>
+                                </Item>
+                                                            <Item name="modificar.termino.title" title="modificar.termino.title" tooltip="modificar.termino.online.help">
+                                                                    <Item name="cerrar.title" title="cerrar.title" tooltip="cerrar.online.help" action="/Cerrar/Cerrar">
+                                    </Item>
+                                </Item>
+                                                            <Item name="add.termino.title" title="add.termino.title" tooltip="add.termino.online.help">
+                                                                    <Item name="cerrar.title" title="cerrar.title" tooltip="cerrar.online.help" action="/Cerrar/Cerrar">
+                                    </Item>
+                                </Item>
+                            </Item>
+                                                    <Item name="navegar.etb.title" title="navegar.etb.title" tooltip="navegar.etb.online.help">
+                                                            <Item name="cerrar.title" title="cerrar.title" tooltip="cerrar.online.help" action="/Cerrar/Cerrar">
+                                </Item>
+                            </Item>
+                                                    <Item name="navegar.arbol.curricular.title" title="navegar.arbol.curricular.title" tooltip="navegar.arbol.curricular.online.help">
+                                                            <Item name="cerrar.title" title="cerrar.title" tooltip="cerrar.online.help" action="/Cerrar/Cerrar">
+                                </Item>
+                            </Item>
+                        </Item>
+                                            <Item name="cerrar.title" title="cerrar.title" tooltip="cerrar.online.help" action="/Cerrar/Cerrar">
+                        </Item>
+                                            <Item name="navegar.lom.title" title="navegar.lom.title" tooltip="navegar.lom.online.help">
+                                                    <Item name="comprobar.termino.title" title="comprobar.termino.title" tooltip="comprobar.termino.online.help">
+                                                            <Item name="cerrar.title" title="cerrar.title" tooltip="cerrar.online.help" action="/Cerrar/Cerrar">
+                                </Item>
+                            </Item>
+                                                    <Item name="eliminar.termino.title" title="eliminar.termino.title" tooltip="eliminar.termino.online.help">
+                                                            <Item name="cerrar.title" title="cerrar.title" tooltip="cerrar.online.help" action="/Cerrar/Cerrar">
+                                </Item>
+                            </Item>
+                                                    <Item name="modificar.termino.title" title="modificar.termino.title" tooltip="modificar.termino.online.help">
+                                                            <Item name="cerrar.title" title="cerrar.title" tooltip="cerrar.online.help" action="/Cerrar/Cerrar">
+                                </Item>
+                            </Item>
+                                                    <Item name="add.termino.title" title="add.termino.title" tooltip="add.termino.online.help">
+                                                            <Item name="cerrar.title" title="cerrar.title" tooltip="cerrar.online.help" action="/Cerrar/Cerrar">
+                                </Item>
+                            </Item>
+                                                    <Item name="tipo.anadir.title" title="tipo.anadir.title" tooltip="tipo.anadir.online.help">
+                                                            <Item name="navegar.etb.title" title="navegar.etb.title" tooltip="navegar.etb.online.help">
+                                                                    <Item name="cerrar.title" title="cerrar.title" tooltip="cerrar.online.help" action="/Cerrar/Cerrar">
+                                    </Item>
+                                </Item>
+                                                            <Item name="navegar.arbol.curricular.title" title="navegar.arbol.curricular.title" tooltip="navegar.arbol.curricular.online.help">
+                                                                    <Item name="cerrar.title" title="cerrar.title" tooltip="cerrar.online.help" action="/Cerrar/Cerrar">
+                                    </Item>
+                                </Item>
+                            </Item>
+                        </Item>
+                    </Item>
+                                    <Item name="configurar.objetos.title" title="configurar.objetos.title" tooltip="configurar.objetos.online.help">
+                                            <Item name="indicar.ruta.title" title="indicar.ruta.title" tooltip="indicar.ruta.online.help" action="/IndicarRuta/IndicarRuta">
+                        </Item>
+                                            <Item name="buscar.objetos.title" title="buscar.objetos.title" tooltip="buscar.objetos.online.help">
+                                                    <Item name="resultados.buscar.objeto.title" title="resultados.buscar.objeto.title" tooltip="resultados.buscar.objeto.online.help" action="/ResultadosBuscarObjeto/ResultadosBuscarObjeto">
+                            </Item>
+                        </Item>
+                    </Item>
+                                    <Item name="simular.modificacion.title" title="simular.modificacion.title" tooltip="simular.modificacion.online.help">
+                                            <Item name="informe.tarea.title" title="informe.tarea.title" tooltip="informe.tarea.online.help">
+                                                    <Item name="informe.ode.title" title="informe.ode.title" tooltip="informe.ode.online.help" action="/InformeODE/InformeODE">
+                            </Item>
+                                                    <Item name="modificaciones.ejecutadas.title" title="modificaciones.ejecutadas.title" tooltip="modificaciones.ejecutadas.online.help">
+                                                            <Item name="modificaciones.ejecutandose.title" title="modificaciones.ejecutandose.title" tooltip="modificaciones.ejecutandose.online.help" action="/ModificacionesEjecutandose/ModificacionesEjecutandose">
+                                </Item>
+                            </Item>
+                        </Item>
+                    </Item>
+                </Item>
+            </Item>
+            <Item name="planificar.title" title="planificar.title" tooltip="planificar.online.help" action="/Planificar/Planificar">
+            </Item>
+            <Item name="importar.modificacion.title" title="importar.modificacion.title" tooltip="importar.modificacion.online.help">
+                            <Item name="configurar.nombre.title" title="configurar.nombre.title" tooltip="configurar.nombre.online.help">
+                                    <Item name="configurar.modificacion.title" title="configurar.modificacion.title" tooltip="configurar.modificacion.online.help">
+                                            <Item name="configurar.cambios.title" title="configurar.cambios.title" tooltip="configurar.cambios.online.help">
+                                                    <Item name="tipo.anadir.title" title="tipo.anadir.title" tooltip="tipo.anadir.online.help">
+                                                            <Item name="navegar.lom.title" title="navegar.lom.title" tooltip="navegar.lom.online.help">
+                                                                    <Item name="comprobar.termino.title" title="comprobar.termino.title" tooltip="comprobar.termino.online.help">
+                                                                            <Item name="cerrar.title" title="cerrar.title" tooltip="cerrar.online.help" action="/Cerrar/Cerrar">
+                                        </Item>
+                                    </Item>
+                                                                    <Item name="eliminar.termino.title" title="eliminar.termino.title" tooltip="eliminar.termino.online.help">
+                                                                            <Item name="cerrar.title" title="cerrar.title" tooltip="cerrar.online.help" action="/Cerrar/Cerrar">
+                                        </Item>
+                                    </Item>
+                                                                    <Item name="modificar.termino.title" title="modificar.termino.title" tooltip="modificar.termino.online.help">
+                                                                            <Item name="cerrar.title" title="cerrar.title" tooltip="cerrar.online.help" action="/Cerrar/Cerrar">
+                                        </Item>
+                                    </Item>
+                                                                    <Item name="add.termino.title" title="add.termino.title" tooltip="add.termino.online.help">
+                                                                            <Item name="cerrar.title" title="cerrar.title" tooltip="cerrar.online.help" action="/Cerrar/Cerrar">
+                                        </Item>
+                                    </Item>
+                                </Item>
+                                                            <Item name="navegar.etb.title" title="navegar.etb.title" tooltip="navegar.etb.online.help">
+                                                                    <Item name="cerrar.title" title="cerrar.title" tooltip="cerrar.online.help" action="/Cerrar/Cerrar">
+                                    </Item>
+                                </Item>
+                                                            <Item name="navegar.arbol.curricular.title" title="navegar.arbol.curricular.title" tooltip="navegar.arbol.curricular.online.help">
+                                                                    <Item name="cerrar.title" title="cerrar.title" tooltip="cerrar.online.help" action="/Cerrar/Cerrar">
+                                    </Item>
+                                </Item>
+                            </Item>
+                                                    <Item name="cerrar.title" title="cerrar.title" tooltip="cerrar.online.help" action="/Cerrar/Cerrar">
+                            </Item>
+                                                    <Item name="navegar.lom.title" title="navegar.lom.title" tooltip="navegar.lom.online.help">
+                                                            <Item name="comprobar.termino.title" title="comprobar.termino.title" tooltip="comprobar.termino.online.help">
+                                                                    <Item name="cerrar.title" title="cerrar.title" tooltip="cerrar.online.help" action="/Cerrar/Cerrar">
+                                    </Item>
+                                </Item>
+                                                            <Item name="eliminar.termino.title" title="eliminar.termino.title" tooltip="eliminar.termino.online.help">
+                                                                    <Item name="cerrar.title" title="cerrar.title" tooltip="cerrar.online.help" action="/Cerrar/Cerrar">
+                                    </Item>
+                                </Item>
+                                                            <Item name="modificar.termino.title" title="modificar.termino.title" tooltip="modificar.termino.online.help">
+                                                                    <Item name="cerrar.title" title="cerrar.title" tooltip="cerrar.online.help" action="/Cerrar/Cerrar">
+                                    </Item>
+                                </Item>
+                                                            <Item name="add.termino.title" title="add.termino.title" tooltip="add.termino.online.help">
+                                                                    <Item name="cerrar.title" title="cerrar.title" tooltip="cerrar.online.help" action="/Cerrar/Cerrar">
+                                    </Item>
+                                </Item>
+                                                            <Item name="tipo.anadir.title" title="tipo.anadir.title" tooltip="tipo.anadir.online.help">
+                                                                    <Item name="navegar.etb.title" title="navegar.etb.title" tooltip="navegar.etb.online.help">
+                                                                            <Item name="cerrar.title" title="cerrar.title" tooltip="cerrar.online.help" action="/Cerrar/Cerrar">
+                                        </Item>
+                                    </Item>
+                                                                    <Item name="navegar.arbol.curricular.title" title="navegar.arbol.curricular.title" tooltip="navegar.arbol.curricular.online.help">
+                                                                            <Item name="cerrar.title" title="cerrar.title" tooltip="cerrar.online.help" action="/Cerrar/Cerrar">
+                                        </Item>
+                                    </Item>
+                                </Item>
+                            </Item>
+                        </Item>
+                                            <Item name="configurar.objetos.title" title="configurar.objetos.title" tooltip="configurar.objetos.online.help">
+                                                    <Item name="indicar.ruta.title" title="indicar.ruta.title" tooltip="indicar.ruta.online.help" action="/IndicarRuta/IndicarRuta">
+                            </Item>
+                                                    <Item name="buscar.objetos.title" title="buscar.objetos.title" tooltip="buscar.objetos.online.help">
+                                                            <Item name="resultados.buscar.objeto.title" title="resultados.buscar.objeto.title" tooltip="resultados.buscar.objeto.online.help" action="/ResultadosBuscarObjeto/ResultadosBuscarObjeto">
+                                </Item>
+                            </Item>
+                        </Item>
+                                            <Item name="simular.modificacion.title" title="simular.modificacion.title" tooltip="simular.modificacion.online.help">
+                                                    <Item name="informe.tarea.title" title="informe.tarea.title" tooltip="informe.tarea.online.help">
+                                                            <Item name="informe.ode.title" title="informe.ode.title" tooltip="informe.ode.online.help" action="/InformeODE/InformeODE">
+                                </Item>
+                                                            <Item name="modificaciones.ejecutadas.title" title="modificaciones.ejecutadas.title" tooltip="modificaciones.ejecutadas.online.help">
+                                                                    <Item name="modificaciones.ejecutandose.title" title="modificaciones.ejecutandose.title" tooltip="modificaciones.ejecutandose.online.help" action="/ModificacionesEjecutandose/ModificacionesEjecutandose">
+                                    </Item>
+                                </Item>
+                            </Item>
+                        </Item>
+                    </Item>
+                </Item>
+            </Item>
+        </Menu>
+    </Menus>
+
+</MenuConfig>

@@ -1,0 +1,18 @@
+#detalleAnotacion.action {}
+#detalleAnotacion.action #form_submit {}
+
+#detalleAnotacion.action .identificadorOde {}
+#detalleAnotacion.action .identificadorOde .label {}
+#detalleAnotacion.action .identificadorOde .field {}
+#detalleAnotacion.action .listadoAnotaciones {}
+#detalleAnotacion.action .listadoAnotaciones .label {}
+#detalleAnotacion.action .listadoAnotaciones .field {}
+#detalleAnotacion.action .botonPulsado {}
+#detalleAnotacion.action .botonPulsado .label {}
+#detalleAnotacion.action .botonPulsado .field {}
+
+#vuelveDeAnotaciones.action {}
+#vuelveDeAnotaciones.action #form_submit {}
+
+
+

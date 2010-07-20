@@ -1,0 +1,15 @@
+#datosAsesion.action {}
+#datosAsesion.action #form_submit {}
+
+#datosAsesion.action .tituloAnotacion {}
+#datosAsesion.action .tituloAnotacion .label {}
+#datosAsesion.action .tituloAnotacion .field {}
+#datosAsesion.action .listadoAnotaciones {}
+#datosAsesion.action .listadoAnotaciones .label {}
+#datosAsesion.action .listadoAnotaciones .field {}
+
+#cancelarEliminar.action {}
+#cancelarEliminar.action #form_submit {}
+
+
+

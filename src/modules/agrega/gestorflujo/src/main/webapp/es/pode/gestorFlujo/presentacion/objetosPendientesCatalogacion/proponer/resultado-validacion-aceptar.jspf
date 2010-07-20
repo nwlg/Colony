@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="proponer.cu.resultado.validacion.aceptar"/></h3>
+    <div class="trigger">
+        <form id="proponerCUResultadoValidacionAceptarForm" action='<html:rewrite action="/ProponerCU/ResultadoValidacionAceptar"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR,ROLE_CATALOGADOR">
+               <html:submit onmouseover="hints.show('aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="proponer.cu.resultado.validacion.aceptar"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

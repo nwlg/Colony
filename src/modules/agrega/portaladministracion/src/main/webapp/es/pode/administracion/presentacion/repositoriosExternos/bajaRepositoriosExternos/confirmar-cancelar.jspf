@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="cancelar" class="action">
+    <h3><bean:message key="baja.nodo.sqi.confirmar.cancelar"/></h3>
+    <div class="trigger">
+        <form id="bajaNodoSQIConfirmarCancelarForm" action='<html:rewrite action="/BajaNodoSQI/ConfirmarCancelar"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+               <html:submit onmouseover="hints.show('Cancelar')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="baja.nodo.sqi.confirmar.cancelar"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

@@ -1,0 +1,33 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="modificar" class="action">
+    <h3><bean:message key="listar.tag.listado.tags.modificar"/></h3>
+    <div class="trigger">
+        <html:form styleId="listarTagListadoTagsModificarForm" action="/ListarTag/ListadoTagsModificar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="tag">
+                        <td class="label"><bean:message key="listar.tag.listado.tags.modificar.param.tag"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tag}"/>
+                           <input type="text" name="tag" value="${value}" onmouseover="hints.show('listar.tag.listado.tags.modificar.param.tag.title')" onmouseout="hints.hide()"  id="modificarTag"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Modificar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="listar.tag.listado.tags.modificar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

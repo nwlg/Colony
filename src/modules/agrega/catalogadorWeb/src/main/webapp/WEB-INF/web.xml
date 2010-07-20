@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+         version="2.4">
+
+    <context-param>
+   		<param-name>url_portal</param-name>
+   		<param-value>PortalEmpaquetador/Inicio/Inicio.do</param-value>
+	</context-param>
+    <context-param>
+   		<param-name>url_buscador</param-name>
+   		<param-value>buscador/ListarODECU/ListarODECU.do</param-value>
+	</context-param> 
+	<context-param>
+   		<param-name>url_descargas</param-name>
+   		<param-value>buscador/DescargarODECU/DescargarODECU.do</param-value>
+	</context-param>
+	<context-param>
+   		<param-name>url_portada</param-name>
+   		<param-value>visualizadorcontenidos/Portada/Portada.do</param-value>
+	</context-param> 
+	<context-param>
+   		<param-name>url_ayuda</param-name>
+   		<param-value>PortalEmpaquetador/ayuda/index.html</param-value>
+	</context-param>
+	<context-param>
+   		<param-name>url_ayuda2</param-name>
+   		<param-value>visualizadorcontenidos/ayuda/ayuda.html</param-value>
+	</context-param>
+	<context-param>
+   		<param-name>url_politicaPrivacidad</param-name>
+   		<param-value>visualizadorcontenidos/PoliticaPrivacidad/PoliticaPrivacidad.do</param-value>
+	</context-param>
+	<context-param>
+   		<param-name>url_acercaDeAgrega</param-name>
+   		<param-value>visualizadorcontenidos/AcercaDeAgrega/AcercaDeAgrega.do</param-value>
+	</context-param>
+	<context-param>
+   		<param-name>url_informacionLegal</param-name>
+   		<param-value>visualizadorcontenidos/InformacionLegal/InformacionLegal.do</param-value>
+	</context-param>
+	<context-param>
+   		<param-name>url_contacto</param-name>
+   		<param-value>visualizadorcontenidos/Contacto/Contacto.do</param-value>
+	</context-param>
+	<context-param>
+   		<param-name>url_noticias</param-name>
+   		<param-value>visualizadorcontenidos/Noticias/Noticias.do</param-value>
+	</context-param> 
+	    <context-param>
+   		<param-name>url_faqs_admin</param-name>
+   		<param-value>portaladministracion/Faqs/Faqs.do</param-value>
+	</context-param> 
+	<context-param>
+   		<param-name>url_noticias_admin</param-name>
+   		<param-value>portaladministracion/Noticias/Noticias.do</param-value>
+	</context-param> 
+	<context-param>
+   		<param-name>url_faqs</param-name>
+   		<param-value>visualizadorcontenidos/Faqs/Faqs.do</param-value>
+	</context-param>
+	<context-param>
+   		<param-name>url_accesibilidad</param-name>
+   		<param-value>visualizadorcontenidos/Accesibilidad/Accesibilidad.do</param-value>
+	</context-param>
+	<context-param>
+   		<param-name>url_mapa</param-name>
+   		<param-value>visualizadorcontenidos/Mapa/Mapa.do</param-value>
+	</context-param>
+	
+	<context-param>
+   		<param-name>url_objetos</param-name>
+   		<param-value>PortalEmpaquetador/Inicio/Inicio.do</param-value>
+	</context-param>
+	<context-param>
+   		<param-name>url_planificador</param-name>
+   		<param-value>portaladministracion/ListarTareasPendientes/ListarTareasPendientes.do</param-value>
+	</context-param>
+	<context-param>
+   		<param-name>url_portaladministracion</param-name>
+   		<param-value>portaladministracion/</param-value>
+	</context-param>
+	<context-param>
+   		<param-name>url_visualizadorPaginacion</param-name>
+   		<param-value>visualizador</param-value>
+	</context-param>
+	<context-param>
+   		<param-name>url_visualizador</param-name>
+   		<param-value>visualizador-1/Visualizar/Visualizar.do</param-value>
+	</context-param>
+
+	<context-param>
+   		<param-name>url_Offline</param-name>
+   		<param-value>/herramientaoffline/InicialCU/InicialCU.do</param-value>
+	</context-param>
+	<context-param>
+		<param-name>url_detalle</param-name>
+		<param-value>buscador/DetallarODECU/DetallarODECU.do</param-value>
+	</context-param>
+	<context-param>
+		<param-name>url_incidencias</param-name>
+		<param-value>http://incidencias.agrega.indra.es/</param-value>
+	</context-param>
+	
+	<context-param>
+   		<param-name>max_res_pagina</param-name>
+   		<param-value>10</param-value>
+	</context-param>
+	<context-param>
+   		<param-name>num_max_paginas</param-name>
+   		<param-value>10</param-value>
+	</context-param>
+	<context-param>
+   		<param-name>max_res_totales</param-name>
+   		<param-value>10000</param-value>
+	</context-param>
+    <context-param> 
+        <param-name>contextConfigLocation</param-name> 
+        <param-value>
+        	classpath:applicationContext-acegiSecurity_catalogadorWeb.xml
+        	classpath:applicationContext-acegiSecurity-frontend_catalogadorWeb.xml
+        </param-value> 
+    </context-param>              
+
+		<filter>
+                    <filter-name>LanguageFilter</filter-name>
+                    <filter-class>es.agrega.soporte.filter.LanguageFilter</filter-class>
+                </filter>
+                <filter>
+                    <filter-name>HelpFilter</filter-name>
+                    <filter-class>es.agrega.soporte.filter.HelpFilter</filter-class>
+                    <init-param>
+    					<param-name>HELP_URL</param-name>
+						<param-value>/wiki/index.php</param-value>
+					</init-param>
+                </filter>
+    <filter>
+        <filter-name>ResponseOverrideFilter</filter-name>
+        <filter-class>org.displaytag.filter.ResponseOverrideFilter</filter-class>
+    </filter>
+
+	
+	<!-- Acegi filter that filters all the requests to check if they're authorized -->
+    <filter>
+        <filter-name>Acegi_Filter</filter-name>
+        <filter-class>org.acegisecurity.util.FilterToBeanProxy</filter-class>
+        <init-param>
+            <param-name>targetBean</param-name>
+            <param-value>filterChainProxy</param-value>
+        </init-param>
+    </filter>
+
+
+	<!-- Acegi filter mapping should be the first in order to effectively protect all the resources -->
+    <filter-mapping>
+        <filter-name>Acegi_Filter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+                <filter-mapping>
+                    <filter-name>LanguageFilter</filter-name>
+                    <url-pattern>/*</url-pattern>
+                </filter-mapping>
+                <filter-mapping>
+                    <filter-name>HelpFilter</filter-name>
+                    <url-pattern>/*</url-pattern>
+                </filter-mapping>
+    <filter-mapping>
+        <filter-name>ResponseOverrideFilter</filter-name>
+        <url-pattern>*.do</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>ResponseOverrideFilter</filter-name>
+        <url-pattern>*.jsp</url-pattern>
+    </filter-mapping>
+
+
+    <listener>
+        <listener-class>org.apache.axis.transport.http.AxisHTTPSessionListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <servlet>
+        <display-name>Apache-Axis Servlet</display-name>
+        <servlet-name>AxisServlet</servlet-name>
+        <servlet-class>org.apache.axis.transport.http.AxisServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>action</servlet-name>
+        <servlet-class>org.andromda.presentation.bpm4struts.ActionServlet</servlet-class>
+        <init-param>
+            <param-name>config</param-name>
+            <param-value>/WEB-INF/struts-config.xml</param-value>
+        </init-param>
+        <init-param>
+            <param-name>debug</param-name>
+            <param-value>3</param-value>
+        </init-param>
+        <init-param>
+            <param-name>detail</param-name>
+            <param-value>3</param-value>
+        </init-param>
+        <init-param>
+            <param-name>validate</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
+            <param-name>listings</param-name>
+            <param-value>false</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <!-- precompilation merge-point -->
+    <servlet-mapping>
+        <servlet-name>AxisServlet</servlet-name>
+        <url-pattern>/servlet/AxisServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AxisServlet</servlet-name>
+        <url-pattern>*.jws</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AxisServlet</servlet-name>
+        <url-pattern>/services/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>action</servlet-name>
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
+    
+    <!-- session-config merge-point -->
+    
+    <mime-mapping>
+        <extension>wsdl</extension>
+        <mime-type>text/xml</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>xsd</extension>
+        <mime-type>text/xml</mime-type>
+    </mime-mapping>
+
+    <welcome-file-list>
+        
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    
+    
+    <error-page>
+        <error-code>400</error-code>
+        <location><![CDATA[/error-page.jsp?code=400]]></location>
+    </error-page>
+    <error-page>
+        <error-code>403</error-code>
+        <location><![CDATA[/error-page.jsp?code=403]]></location>
+    </error-page>
+    <error-page>
+        <error-code>404</error-code>
+        <location><![CDATA[/error-page.jsp?code=404&resource=true]]></location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location><![CDATA[/error-page.jsp?code=500&exception=true]]></location>
+    </error-page>
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location><![CDATA[/error-page.jsp?code=exception&exception=true]]></location>
+    </error-page>
+
+    <!-- taglib merge-point -->
+    <!-- resource-ref merge-point -->
+
+    
+</web-app>

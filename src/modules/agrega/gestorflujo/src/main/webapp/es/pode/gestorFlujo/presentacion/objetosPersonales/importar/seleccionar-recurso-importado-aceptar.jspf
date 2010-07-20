@@ -1,0 +1,76 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="importar.cu.seleccionar.recurso.importado.aceptar"/></h3>
+    <div class="trigger">
+        <html:form styleId="importarCUSeleccionarRecursoImportadoAceptarForm" action="/ImportarCU/SeleccionarRecursoImportadoAceptar" method="post" enctype="multipart/form-data" onsubmit="return validateSeleccionarRecursoImportadoAceptarForm(this);">
+            <table>
+                <tbody>
+                    <tr class="ficheroODE1">
+                        <td class="label"><bean:message key="importar.cu.seleccionar.recurso.importado.aceptar.param.fichero.ode1"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.ficheroODE1}"/>
+                           <html:file name="form" property="ficheroODE1" onmouseover="hints.show('importar.cu.seleccionar.recurso.importado.aceptar.param.fichero.ode1.title')" onmouseout="hints.hide()"  styleId="aceptarFicheroODE1"/>
+                        </td>
+                    </tr>
+                    <tr class="ficheroODE2">
+                        <td class="label"><bean:message key="importar.cu.seleccionar.recurso.importado.aceptar.param.fichero.ode2"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.ficheroODE2}"/>
+                           <html:file name="form" property="ficheroODE2" onmouseover="hints.show('importar.cu.seleccionar.recurso.importado.aceptar.param.fichero.ode2.title')" onmouseout="hints.hide()"  styleId="aceptarFicheroODE2"/>
+                        </td>
+                    </tr>
+                    <tr class="ficheroODE3">
+                        <td class="label"><bean:message key="importar.cu.seleccionar.recurso.importado.aceptar.param.fichero.ode3"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.ficheroODE3}"/>
+                           <html:file name="form" property="ficheroODE3" onmouseover="hints.show('importar.cu.seleccionar.recurso.importado.aceptar.param.fichero.ode3.title')" onmouseout="hints.hide()"  styleId="aceptarFicheroODE3"/>
+                        </td>
+                    </tr>
+                    <tr class="ficheroODE4">
+                        <td class="label"><bean:message key="importar.cu.seleccionar.recurso.importado.aceptar.param.fichero.ode4"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.ficheroODE4}"/>
+                           <html:file name="form" property="ficheroODE4" onmouseover="hints.show('importar.cu.seleccionar.recurso.importado.aceptar.param.fichero.ode4.title')" onmouseout="hints.hide()"  styleId="aceptarFicheroODE4"/>
+                        </td>
+                    </tr>
+                    <tr class="ficheroODE5">
+                        <td class="label"><bean:message key="importar.cu.seleccionar.recurso.importado.aceptar.param.fichero.ode5"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.ficheroODE5}"/>
+                           <html:file name="form" property="ficheroODE5" onmouseover="hints.show('importar.cu.seleccionar.recurso.importado.aceptar.param.fichero.ode5.title')" onmouseout="hints.hide()"  styleId="aceptarFicheroODE5"/>
+                        </td>
+                    </tr>
+                    <tr class="espacioLibre">
+                        <td class="label"><bean:message key="importar.cu.seleccionar.recurso.importado.aceptar.param.espacio.libre"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.espacioLibre}"/>
+                           <input type="text" name="espacioLibre" value="${value}" onmouseover="hints.show('importar.cu.seleccionar.recurso.importado.aceptar.param.espacio.libre.title')" onmouseout="hints.hide()"  id="aceptarEspacioLibre"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="importar.cu.seleccionar.recurso.importado.aceptar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

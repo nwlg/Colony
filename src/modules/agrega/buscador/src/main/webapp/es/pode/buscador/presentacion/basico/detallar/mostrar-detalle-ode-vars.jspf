@@ -1,0 +1,122 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="idLocalizador" value="${form.idLocalizador}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="posicionamientoAnterior" value="${form.posicionamientoAnterior}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="licencias" value="${form.licencias}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="buscadorContenido" value="${form.buscadorContenido}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="areaCurricularBusqueda" value="${form.areaCurricularBusqueda}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="posicionamientoSiguiente" value="${form.posicionamientoSiguiente}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="numVecesVisto" value="${form.numVecesVisto}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="agregarFederado" value="${form.agregarFederado}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="formato" value="${form.formato}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tipoLayoutBuscador" value="${form.tipoLayoutBuscador}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tipoBusqueda" value="${form.tipoBusqueda}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tesauroBusqueda" value="${form.tesauroBusqueda}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="numVecesDescargado" value="${form.numVecesDescargado}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="mostrarVuelta" value="${form.mostrarVuelta}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="valoracion" value="${form.valoracion}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="pagina" value="${form.pagina}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tamanio" value="${form.tamanio}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idiomaODE" value="${form.idiomaODE}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="identificadorODE" value="${form.identificadorODE}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="existeSesion" value="${form.existeSesion}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="seleccionarSecuencia" value="${form.seleccionarSecuencia}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="imagenAmpliada" value="${form.imagenAmpliada}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="numVecesEnviado" value="${form.numVecesEnviado}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="nodoOrigen" value="${form.nodoOrigen}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="destinatarios" value="${form.destinatarios}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="busquedaSimpleAvanzada" value="${form.busquedaSimpleAvanzada}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="nrComentarios" value="${form.nrComentarios}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idioma" value="${form.idioma}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="descripcion" value="${form.descripcion}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="ambito" value="${form.ambito}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idiomaBuscador" value="${form.idiomaBuscador}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="existenEtiquetas" value="${form.existenEtiquetas}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="usuarioLogado" value="${form.usuarioLogado}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="fechaPublicacion" value="${form.fechaPublicacion}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="imagen" value="${form.imagen}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="titulo" value="${form.titulo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="numVecesPrevisualizado" value="${form.numVecesPrevisualizado}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="localizadorODE" value="${form.localizadorODE}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="etiquetas" value="${form.etiquetas}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tipoBusquedaArbol" value="${form.tipoBusquedaArbol}"/>
+    </c:catch>
+</div>

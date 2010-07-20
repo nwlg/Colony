@@ -1,0 +1,23 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="cuotaUsuario" value="${form.cuotaUsuario}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="porcentajeMemoriaCubierta" value="${form.porcentajeMemoriaCubierta}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idUsuario" value="${form.idUsuario}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="espacioLibre" value="${form.espacioLibre}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tamainoOdes" value="${form.tamainoOdes}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="totalSuma" value="${form.totalSuma}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="listaODES" value="${form.listaODES}"/>
+    </c:catch>
+</div>

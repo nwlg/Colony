@@ -1,0 +1,31 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="volver" class="action">
+    <h3><bean:message key="crear.faq.formulario.crear.volver"/></h3>
+    <div class="trigger">
+        <html:form styleId="crearFAQFormularioCrearVolverForm" action="/CrearFAQ/FormularioCrearVolver" method="post" enctype="multipart/form-data" onsubmit="return validateFormularioCrearVolverForm(this);">
+            <table>
+                <tbody>
+                    <tr class="categoria">
+                        <td class="label"><bean:message key="crear.faq.formulario.crear.volver.param.categoria"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.categoria}"/>
+                           <input type="text" name="categoria" value="${value}" onmouseover="hints.show('crear.faq.formulario.crear.volver.param.categoria.title')" onmouseout="hints.hide()"  id="volverCategoria"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('volver')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="crear.faq.formulario.crear.volver"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

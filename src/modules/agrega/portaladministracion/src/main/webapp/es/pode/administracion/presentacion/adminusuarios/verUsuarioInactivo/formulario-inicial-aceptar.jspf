@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="ver.usuario.inactivo.formulario.inicial.aceptar"/></h3>
+    <div class="trigger">
+        <form id="verUsuarioInactivoFormularioInicialAceptarForm" action='<html:rewrite action="/VerUsuarioInactivo/FormularioInicialAceptar"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+               <html:submit onmouseover="hints.show('Aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="ver.usuario.inactivo.formulario.inicial.aceptar"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

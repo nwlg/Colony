@@ -1,0 +1,33 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'objetos.publicados.cu.mostrar.odespublicados.propuestos.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="objetos.publicados.cu.mostrar.odespublicados.propuestos.param.idioma.buscador.title"/></formatting:escape>',
+                'objetos.publicados.cu.mostrar.odespublicados.ver.historial.param.id.ode.title':'<formatting:escape language="javascript"><bean:message key="objetos.publicados.cu.mostrar.odespublicados.ver.historial.param.id.ode.title"/></formatting:escape>',
+                'objetos.publicados.cu.mostrar.odespublicados.ver.historial.param.titulo.title':'<formatting:escape language="javascript"><bean:message key="objetos.publicados.cu.mostrar.odespublicados.ver.historial.param.titulo.title"/></formatting:escape>',
+                'Personales':'<formatting:escape language="javascript"><bean:message key="objetos.publicados.cu.mostrar.odespublicados.personales.title"/></formatting:escape>',
+                'Personales_no':'<formatting:escape language="javascript"><bean:message key="objetos.publicados.cu.mostrar.odespublicados.personales.title.notallowed"/></formatting:escape>',
+                'Personales_reset':'<formatting:escape language="javascript"><bean:message key="objetos.publicados.cu.mostrar.odespublicados.personales.title.reset"/></formatting:escape>',
+                'Personales_noreset':'<formatting:escape language="javascript"><bean:message key="objetos.publicados.cu.mostrar.odespublicados.personales.title.reset.not.allowed"/></formatting:escape>',
+                'Propuestos':'<formatting:escape language="javascript"><bean:message key="objetos.publicados.cu.mostrar.odespublicados.propuestos.title"/></formatting:escape>',
+                'Propuestos_no':'<formatting:escape language="javascript"><bean:message key="objetos.publicados.cu.mostrar.odespublicados.propuestos.title.notallowed"/></formatting:escape>',
+                'Propuestos_reset':'<formatting:escape language="javascript"><bean:message key="objetos.publicados.cu.mostrar.odespublicados.propuestos.title.reset"/></formatting:escape>',
+                'Propuestos_noreset':'<formatting:escape language="javascript"><bean:message key="objetos.publicados.cu.mostrar.odespublicados.propuestos.title.reset.not.allowed"/></formatting:escape>',
+                'VerHistorial':'<formatting:escape language="javascript"><bean:message key="objetos.publicados.cu.mostrar.odespublicados.ver.historial.title"/></formatting:escape>',
+                'VerHistorial_no':'<formatting:escape language="javascript"><bean:message key="objetos.publicados.cu.mostrar.odespublicados.ver.historial.title.notallowed"/></formatting:escape>',
+                'VerHistorial_reset':'<formatting:escape language="javascript"><bean:message key="objetos.publicados.cu.mostrar.odespublicados.ver.historial.title.reset"/></formatting:escape>',
+                'VerHistorial_noreset':'<formatting:escape language="javascript"><bean:message key="objetos.publicados.cu.mostrar.odespublicados.ver.historial.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+</script>
+    </tiles:put>

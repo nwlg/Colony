@@ -1,0 +1,40 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="datosBorrar" class="action">
+    <h3><bean:message key="visualizar.adl.lmsmain.datos.borrar"/></h3>
+    <div class="trigger">
+        <html:form styleId="visualizarAdlLmsmainDatosBorrarForm" action="/VisualizarAdl/LmsmainDatosBorrar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="usuario">
+                        <td class="label"><bean:message key="visualizar.adl.lmsmain.datos.borrar.param.usuario"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.usuario}"/>
+                           <input type="text" name="usuario" value="${value}" onmouseover="hints.show('visualizar.adl.lmsmain.datos.borrar.param.usuario.title')" onmouseout="hints.hide()"  id="datosBorrarUsuario"/>
+                        </td>
+                    </tr>
+                    <tr class="identificador">
+                        <td class="label"><bean:message key="visualizar.adl.lmsmain.datos.borrar.param.identificador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.identificador}"/>
+                           <input type="text" name="identificador" value="${value}" onmouseover="hints.show('visualizar.adl.lmsmain.datos.borrar.param.identificador.title')" onmouseout="hints.hide()"  id="datosBorrarIdentificador"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('datosBorrar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="visualizar.adl.lmsmain.datos.borrar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

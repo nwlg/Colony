@@ -1,0 +1,27 @@
+#analizaTipoBusqueda.action {}
+#analizaTipoBusqueda.action #form_submit {}
+
+#analizaTipoBusqueda.action .tipoLayoutBuscador {}
+#analizaTipoBusqueda.action .tipoLayoutBuscador .label {}
+#analizaTipoBusqueda.action .tipoLayoutBuscador .field {}
+#analizaTipoBusqueda.action .buscadorContenido {}
+#analizaTipoBusqueda.action .buscadorContenido .label {}
+#analizaTipoBusqueda.action .buscadorContenido .field {}
+#analizaTipoBusqueda.action .tipoBusqueda {}
+#analizaTipoBusqueda.action .tipoBusqueda .label {}
+#analizaTipoBusqueda.action .tipoBusqueda .field {}
+#analizaTipoBusqueda.action .numeroResultados {}
+#analizaTipoBusqueda.action .numeroResultados .label {}
+#analizaTipoBusqueda.action .numeroResultados .field {}
+#analizaTipoBusqueda.action .idiomaBuscador {}
+#analizaTipoBusqueda.action .idiomaBuscador .label {}
+#analizaTipoBusqueda.action .idiomaBuscador .field {}
+#analizaTipoBusqueda.action .resultadosDesde {}
+#analizaTipoBusqueda.action .resultadosDesde .label {}
+#analizaTipoBusqueda.action .resultadosDesde .field {}
+
+#paginarSQI.action {}
+#paginarSQI.action #form_submit {}
+
+
+

@@ -1,0 +1,40 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="volcarAreaCurricular" class="action">
+    <h3><bean:message key="area.curricular.cu.area.curricular.volcar.area.curricular"/></h3>
+    <div class="trigger">
+        <html:form styleId="areaCurricularCUAreaCurricularVolcarAreaCurricularForm" action="/AreaCurricularCU/AreaCurricularVolcarAreaCurricular" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="areaCurricular">
+                        <td class="label"><bean:message key="area.curricular.cu.area.curricular.volcar.area.curricular.param.area.curricular"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.areaCurricular}"/>
+                           <input type="text" name="areaCurricular" value="${value}" onmouseover="hints.show('area.curricular.cu.area.curricular.volcar.area.curricular.param.area.curricular.title')" onmouseout="hints.hide()"  id="volcarAreaCurricularAreaCurricular"/>
+                        </td>
+                    </tr>
+                    <tr class="tipoLayoutBuscador">
+                        <td class="label"><bean:message key="area.curricular.cu.area.curricular.volcar.area.curricular.param.tipo.layout.buscador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipoLayoutBuscador}"/>
+                           <input type="text" name="tipoLayoutBuscador" value="${value}" onmouseover="hints.show('area.curricular.cu.area.curricular.volcar.area.curricular.param.tipo.layout.buscador.title')" onmouseout="hints.hide()"  id="volcarAreaCurricularTipoLayoutBuscador"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('volcarAreaCurricular')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="area.curricular.cu.area.curricular.volcar.area.curricular"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

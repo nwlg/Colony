@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="publicados" class="action">
+    <h3><bean:message key="objetos.personales.cu.mostrar.odespersonales.publicados"/></h3>
+    <div class="trigger">
+			<authz:authorize  ifAnyGranted="ROLE_CATALOGADOR,ROLE_ADMINISTRADOR,ROLE_DOCENTE">
+            <p>
+                <html:link action="/ObjetosPersonalesCU/MostrarODESPersonalesPublicados" onmouseover="hints.show('Publicados')" onmouseout="hints.hide()">
+                    <bean:message key="objetos.personales.cu.mostrar.odespersonales.publicados"/>
+                </html:link>
+            </p>
+			</authz:authorize>	
+    </div>
+
+</div>
+ <br class="clr"/>

@@ -1,0 +1,141 @@
+#modificarGeneral.action {}
+#modificarGeneral.action #form_submit {}
+
+#modificarGeneral.action .identificador {}
+#modificarGeneral.action .identificador .label {}
+#modificarGeneral.action .identificador .field {}
+#modificarGeneral.action .returnURL {}
+#modificarGeneral.action .returnURL .label {}
+#modificarGeneral.action .returnURL .field {}
+#modificarGeneral.action .datos {}
+#modificarGeneral.action .datos .label {}
+#modificarGeneral.action .datos .field {}
+
+#modificarCicloDeVida.action {}
+#modificarCicloDeVida.action #form_submit {}
+
+#modificarCicloDeVida.action .identificador {}
+#modificarCicloDeVida.action .identificador .label {}
+#modificarCicloDeVida.action .identificador .field {}
+#modificarCicloDeVida.action .returnURL {}
+#modificarCicloDeVida.action .returnURL .label {}
+#modificarCicloDeVida.action .returnURL .field {}
+#modificarCicloDeVida.action .datos {}
+#modificarCicloDeVida.action .datos .label {}
+#modificarCicloDeVida.action .datos .field {}
+
+#modificarMetaMetadatos.action {}
+#modificarMetaMetadatos.action #form_submit {}
+
+#modificarMetaMetadatos.action .identificador {}
+#modificarMetaMetadatos.action .identificador .label {}
+#modificarMetaMetadatos.action .identificador .field {}
+#modificarMetaMetadatos.action .returnURL {}
+#modificarMetaMetadatos.action .returnURL .label {}
+#modificarMetaMetadatos.action .returnURL .field {}
+#modificarMetaMetadatos.action .datos {}
+#modificarMetaMetadatos.action .datos .label {}
+#modificarMetaMetadatos.action .datos .field {}
+
+#modificarTecnica.action {}
+#modificarTecnica.action #form_submit {}
+
+#modificarTecnica.action .identificador {}
+#modificarTecnica.action .identificador .label {}
+#modificarTecnica.action .identificador .field {}
+#modificarTecnica.action .returnURL {}
+#modificarTecnica.action .returnURL .label {}
+#modificarTecnica.action .returnURL .field {}
+#modificarTecnica.action .datos {}
+#modificarTecnica.action .datos .label {}
+#modificarTecnica.action .datos .field {}
+
+#modificarUsoEducativo.action {}
+#modificarUsoEducativo.action #form_submit {}
+
+#modificarUsoEducativo.action .identificador {}
+#modificarUsoEducativo.action .identificador .label {}
+#modificarUsoEducativo.action .identificador .field {}
+#modificarUsoEducativo.action .returnURL {}
+#modificarUsoEducativo.action .returnURL .label {}
+#modificarUsoEducativo.action .returnURL .field {}
+#modificarUsoEducativo.action .datos {}
+#modificarUsoEducativo.action .datos .label {}
+#modificarUsoEducativo.action .datos .field {}
+
+#modificarDerechos.action {}
+#modificarDerechos.action #form_submit {}
+
+#modificarDerechos.action .identificador {}
+#modificarDerechos.action .identificador .label {}
+#modificarDerechos.action .identificador .field {}
+#modificarDerechos.action .returnURL {}
+#modificarDerechos.action .returnURL .label {}
+#modificarDerechos.action .returnURL .field {}
+#modificarDerechos.action .datos {}
+#modificarDerechos.action .datos .label {}
+#modificarDerechos.action .datos .field {}
+
+#modificarRelacion.action {}
+#modificarRelacion.action #form_submit {}
+
+#modificarRelacion.action .identificador {}
+#modificarRelacion.action .identificador .label {}
+#modificarRelacion.action .identificador .field {}
+#modificarRelacion.action .returnURL {}
+#modificarRelacion.action .returnURL .label {}
+#modificarRelacion.action .returnURL .field {}
+#modificarRelacion.action .datos {}
+#modificarRelacion.action .datos .label {}
+#modificarRelacion.action .datos .field {}
+
+#modificarAnotacion.action {}
+#modificarAnotacion.action #form_submit {}
+
+#modificarAnotacion.action .identificador {}
+#modificarAnotacion.action .identificador .label {}
+#modificarAnotacion.action .identificador .field {}
+#modificarAnotacion.action .returnURL {}
+#modificarAnotacion.action .returnURL .label {}
+#modificarAnotacion.action .returnURL .field {}
+#modificarAnotacion.action .datos {}
+#modificarAnotacion.action .datos .label {}
+#modificarAnotacion.action .datos .field {}
+
+#modificarClasificacion.action {}
+#modificarClasificacion.action #form_submit {}
+
+#modificarClasificacion.action .identificador {}
+#modificarClasificacion.action .identificador .label {}
+#modificarClasificacion.action .identificador .field {}
+#modificarClasificacion.action .returnURL {}
+#modificarClasificacion.action .returnURL .label {}
+#modificarClasificacion.action .returnURL .field {}
+#modificarClasificacion.action .datos {}
+#modificarClasificacion.action .datos .label {}
+#modificarClasificacion.action .datos .field {}
+
+#submit.action {}
+#submit.action #form_submit {}
+
+#submit.action .identificador {}
+#submit.action .identificador .label {}
+#submit.action .identificador .field {}
+#submit.action .returnURL {}
+#submit.action .returnURL .label {}
+#submit.action .returnURL .field {}
+#submit.action .datos {}
+#submit.action .datos .label {}
+#submit.action .datos .field {}
+#submit.action .accion {}
+#submit.action .accion .label {}
+#submit.action .accion .field {}
+#submit.action .mensajesError {}
+#submit.action .mensajesError .label {}
+#submit.action .mensajesError .field {}
+
+#volver.action {}
+#volver.action #form_submit {}
+
+
+

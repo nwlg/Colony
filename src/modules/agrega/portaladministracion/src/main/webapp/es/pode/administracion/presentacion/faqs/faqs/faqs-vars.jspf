@@ -1,0 +1,14 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="idiomaSeleccionado" value="${form.idiomaSeleccionado}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idiomas" value="${form.idiomas}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idModificado" value="${form.idModificado}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="faqs" value="${form.faqs}"/>
+    </c:catch>
+</div>

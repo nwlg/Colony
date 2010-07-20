@@ -1,0 +1,54 @@
+#cancelar.action {}
+#cancelar.action #form_submit {}
+
+
+#continuar.action {}
+#continuar.action #form_submit {}
+
+#continuar.action .trabajo {}
+#continuar.action .trabajo .label {}
+#continuar.action .trabajo .field {}
+#continuar.action .grupoTrabajo {}
+#continuar.action .grupoTrabajo .label {}
+#continuar.action .grupoTrabajo .field {}
+#continuar.action .trigger {}
+#continuar.action .trigger .label {}
+#continuar.action .trigger .field {}
+#continuar.action .grupoTrigger {}
+#continuar.action .grupoTrigger .label {}
+#continuar.action .grupoTrigger .field {}
+#continuar.action .periodicidad {}
+#continuar.action .periodicidad .label {}
+#continuar.action .periodicidad .field {}
+#continuar.action .anio {}
+#continuar.action .anio .label {}
+#continuar.action .anio .field {}
+#continuar.action .mes {}
+#continuar.action .mes .label {}
+#continuar.action .mes .field {}
+#continuar.action .dia {}
+#continuar.action .dia .label {}
+#continuar.action .dia .field {}
+#continuar.action .hora {}
+#continuar.action .hora .label {}
+#continuar.action .hora .field {}
+#continuar.action .minutos {}
+#continuar.action .minutos .label {}
+#continuar.action .minutos .field {}
+#continuar.action .tipoTarea {}
+#continuar.action .tipoTarea .label {}
+#continuar.action .tipoTarea .field {}
+#continuar.action .repositorio {}
+#continuar.action .repositorio .label {}
+#continuar.action .repositorio .field {}
+#continuar.action .msgReindexado {}
+#continuar.action .msgReindexado .label {}
+#continuar.action .msgReindexado .field {}
+#continuar.action .msgNoReindexado {}
+#continuar.action .msgNoReindexado .label {}
+#continuar.action .msgNoReindexado .field {}
+#continuar.action .msgDescReindexado {}
+#continuar.action .msgDescReindexado .label {}
+#continuar.action .msgDescReindexado .field {}
+
+

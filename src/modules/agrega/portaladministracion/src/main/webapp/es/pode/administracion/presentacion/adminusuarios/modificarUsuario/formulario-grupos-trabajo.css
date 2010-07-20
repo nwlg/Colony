@@ -1,0 +1,19 @@
+#cancelar.action {}
+#cancelar.action #form_submit {}
+
+
+#gruposTrabajo.table {}
+#gruposTrabajo.table th {}
+#gruposTrabajo.table td div {}
+
+#gruposTrabajo.table th.identificador {}
+#gruposTrabajo.table td div.identificador {}
+
+#gruposTrabajo.table th.nombre {}
+#gruposTrabajo.table td div.nombre {}
+
+#gruposTrabajo.table th.descripcion {}
+#gruposTrabajo.table td div.descripcion {}
+
+
+

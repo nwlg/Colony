@@ -1,0 +1,18 @@
+#aceptar.action {}
+#aceptar.action #form_submit {}
+
+#aceptar.action .tipoLicenciaSeleccionada {}
+#aceptar.action .tipoLicenciaSeleccionada .label {}
+#aceptar.action .tipoLicenciaSeleccionada .field {}
+#aceptar.action .comunidadesSeleccionadas {}
+#aceptar.action .comunidadesSeleccionadas .label {}
+#aceptar.action .comunidadesSeleccionadas .field {}
+#aceptar.action .universal {}
+#aceptar.action .universal .label {}
+#aceptar.action .universal .field {}
+
+#cancelar.action {}
+#cancelar.action #form_submit {}
+
+
+

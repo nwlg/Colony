@@ -1,0 +1,2602 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+    "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+    <!-- display-name merge point -->
+
+    <!-- description merge point -->
+
+    <data-sources>
+        <!-- data-sources merge point -->
+    </data-sources>
+
+    <form-beans>
+        <!-- form-beans merge-point -->
+        <form-bean
+            name="modificacionesPendientesListadoBuscarForm"
+            type="es.pode.modificador.presentacion.pendientes.ListadoBuscarFormImpl" />
+        <form-bean
+            name="modificacionesPendientesConfirmacionSubmitConfirmacionForm"
+            type="es.pode.modificador.presentacion.pendientes.ConfirmacionSubmitConfirmacionFormImpl" />
+        <form-bean
+            name="modificacionesPendientesListadoPlanificarForm"
+            type="es.pode.modificador.presentacion.pendientes.ListadoPlanificarFormImpl" />
+        <form-bean
+            name="modificacionesPendientesListadoEjecutarForm"
+            type="es.pode.modificador.presentacion.pendientes.ListadoEjecutarFormImpl" />
+        <form-bean
+            name="modificacionesPendientesListadoSubmitForm"
+            type="es.pode.modificador.presentacion.pendientes.ListadoSubmitFormImpl" />
+        <form-bean
+            name="modificacionesPendientesModificacionesPendientesForm"
+            type="es.pode.modificador.presentacion.pendientes.ModificacionesPendientesFormImpl" />
+        <form-bean
+            name="modificacionesPendientesConfirmacionBuscarForm"
+            type="es.pode.modificador.presentacion.pendientes.ConfirmacionBuscarFormImpl" />
+        <form-bean
+            name="modificacionesPendientesListadoModificarForm"
+            type="es.pode.modificador.presentacion.pendientes.ListadoModificarFormImpl" />
+        <form-bean
+            name="modificacionesPendientesListadoExportarForm"
+            type="es.pode.modificador.presentacion.pendientes.ListadoExportarFormImpl" />
+        <form-bean
+            name="modificacionesEjecutandoseListadoBusquedaForm"
+            type="es.pode.modificador.presentacion.ejecutandose.ListadoBusquedaFormImpl" />
+        <form-bean
+            name="modificacionesEjecutandoseModificacionesEjecutandoseForm"
+            type="es.pode.modificador.presentacion.ejecutandose.ModificacionesEjecutandoseFormImpl" />
+        <form-bean
+            name="modificacionesEjecutadasModificacionesEjecutadasForm"
+            type="es.pode.modificador.presentacion.ejecutadas.ModificacionesEjecutadasFormImpl" />
+        <form-bean
+            name="modificacionesEjecutadasConfirmacionSubmitConfirmacionForm"
+            type="es.pode.modificador.presentacion.ejecutadas.ConfirmacionSubmitConfirmacionFormImpl" />
+        <form-bean
+            name="modificacionesEjecutadasListadoInformeForm"
+            type="es.pode.modificador.presentacion.ejecutadas.ListadoInformeFormImpl" />
+        <form-bean
+            name="modificacionesEjecutadasConfirmacionBuscarForm"
+            type="es.pode.modificador.presentacion.ejecutadas.ConfirmacionBuscarFormImpl" />
+        <form-bean
+            name="modificacionesEjecutadasListadoBusquedaForm"
+            type="es.pode.modificador.presentacion.ejecutadas.ListadoBusquedaFormImpl" />
+        <form-bean
+            name="modificacionesEjecutadasListadoEliminarForm"
+            type="es.pode.modificador.presentacion.ejecutadas.ListadoEliminarFormImpl" />
+        <form-bean
+            name="informeTareaInformeTareaTrazaForm"
+            type="es.pode.modificador.presentacion.informes.tarea.InformeTareaTrazaFormImpl" />
+        <form-bean
+            name="informeTareaInformeTareaSelectOriginForm"
+            type="es.pode.modificador.presentacion.informes.tarea.InformeTareaSelectOriginFormImpl" />
+        <form-bean
+            name="informeTareaInformeTareaBuscarForm"
+            type="es.pode.modificador.presentacion.informes.tarea.InformeTareaBuscarFormImpl" />
+        <form-bean
+            name="informeTareaConfirmacionBuscarForm"
+            type="es.pode.modificador.presentacion.informes.tarea.ConfirmacionBuscarFormImpl" />
+        <form-bean
+            name="informeTareaInformeTareaForm"
+            type="es.pode.modificador.presentacion.informes.tarea.InformeTareaFormImpl" />
+        <form-bean
+            name="informeTareaInformeTareaRestaurarForm"
+            type="es.pode.modificador.presentacion.informes.tarea.InformeTareaRestaurarFormImpl" />
+        <form-bean
+            name="informeTareaConfirmacionSubmitConfirmacionForm"
+            type="es.pode.modificador.presentacion.informes.tarea.ConfirmacionSubmitConfirmacionFormImpl" />
+        <form-bean
+            name="informeODEInformeODEForm"
+            type="es.pode.modificador.presentacion.informes.ode.InformeODEFormImpl" />
+        <form-bean
+            name="informeODEInformeODEBuscarForm"
+            type="es.pode.modificador.presentacion.informes.ode.InformeODEBuscarFormImpl" />
+        <form-bean
+            name="planificarPlanificarModificacionPlanificarForm"
+            type="es.pode.modificador.presentacion.planificar.PlanificarModificacionPlanificarFormImpl" />
+        <form-bean
+            name="planificarPlanificarForm"
+            type="es.pode.modificador.presentacion.planificar.PlanificarFormImpl" />
+        <form-bean
+            name="planificarPlanificarModificacionBuscarForm"
+            type="es.pode.modificador.presentacion.planificar.PlanificarModificacionBuscarFormImpl" />
+        <form-bean
+            name="importarModificacionImportarModificacionForm"
+            type="es.pode.modificador.presentacion.importar.ImportarModificacionFormImpl" />
+        <form-bean
+            name="importarModificacionImportarModificacionBuscarForm"
+            type="es.pode.modificador.presentacion.importar.ImportarModificacionBuscarFormImpl" />
+        <form-bean
+            name="importarModificacionImportarModificacionImportarForm"
+            type="es.pode.modificador.presentacion.importar.ImportarModificacionImportarFormImpl" />
+        <form-bean
+            name="configurarCambiosConfigurarCambiosBuscarForm"
+            type="es.pode.modificador.presentacion.configurar.cambios.ConfigurarCambiosBuscarFormImpl" />
+        <form-bean
+            name="configurarCambiosConfigurarCambiosForm"
+            type="es.pode.modificador.presentacion.configurar.cambios.ConfigurarCambiosFormImpl" />
+        <form-bean
+            name="configurarCambiosConfigurarCambiosSelectActionForm"
+            type="es.pode.modificador.presentacion.configurar.cambios.ConfigurarCambiosSelectActionFormImpl" />
+        <form-bean
+            name="tipoAnadirTipoAnadirSelectActionForm"
+            type="es.pode.modificador.presentacion.configurar.cambios.add.TipoAnadirSelectActionFormImpl" />
+        <form-bean
+            name="tipoAnadirTipoAnadirBuscarForm"
+            type="es.pode.modificador.presentacion.configurar.cambios.add.TipoAnadirBuscarFormImpl" />
+        <form-bean
+            name="tipoAnadirTipoAnadirForm"
+            type="es.pode.modificador.presentacion.configurar.cambios.add.TipoAnadirFormImpl" />
+        <form-bean
+            name="addTerminoAddTerminoForm"
+            type="es.pode.modificador.presentacion.configurar.cambios.add.otro.AddTerminoFormImpl" />
+        <form-bean
+            name="addTerminoAddTerminoActionForm"
+            type="es.pode.modificador.presentacion.configurar.cambios.add.otro.AddTerminoActionFormImpl" />
+        <form-bean
+            name="addTerminoAddTerminoBuscarForm"
+            type="es.pode.modificador.presentacion.configurar.cambios.add.otro.AddTerminoBuscarFormImpl" />
+        <form-bean
+            name="modificarTerminoModificarTerminoBuscarForm"
+            type="es.pode.modificador.presentacion.configurar.cambios.modificar.ModificarTerminoBuscarFormImpl" />
+        <form-bean
+            name="modificarTerminoModificarTerminoSelectActionForm"
+            type="es.pode.modificador.presentacion.configurar.cambios.modificar.ModificarTerminoSelectActionFormImpl" />
+        <form-bean
+            name="modificarTerminoModificarTerminoForm"
+            type="es.pode.modificador.presentacion.configurar.cambios.modificar.ModificarTerminoFormImpl" />
+        <form-bean
+            name="eliminarTerminoEliminarTerminoSelectActionForm"
+            type="es.pode.modificador.presentacion.configurar.cambios.eliminar.EliminarTerminoSelectActionFormImpl" />
+        <form-bean
+            name="eliminarTerminoEliminarTerminoForm"
+            type="es.pode.modificador.presentacion.configurar.cambios.eliminar.EliminarTerminoFormImpl" />
+        <form-bean
+            name="eliminarTerminoEliminarTerminoBuscarForm"
+            type="es.pode.modificador.presentacion.configurar.cambios.eliminar.EliminarTerminoBuscarFormImpl" />
+        <form-bean
+            name="comprobarTerminoComprobarTerminoForm"
+            type="es.pode.modificador.presentacion.configurar.cambios.comprobar.ComprobarTerminoFormImpl" />
+        <form-bean
+            name="comprobarTerminoComprobarTerminoBuscarForm"
+            type="es.pode.modificador.presentacion.configurar.cambios.comprobar.ComprobarTerminoBuscarFormImpl" />
+        <form-bean
+            name="comprobarTerminoComprobarTerminoSelectActionForm"
+            type="es.pode.modificador.presentacion.configurar.cambios.comprobar.ComprobarTerminoSelectActionFormImpl" />
+        <form-bean
+            name="navegarLomNavegarLOMBuscarForm"
+            type="es.pode.modificador.presentacion.configurar.cambios.navegarLom.NavegarLOMBuscarFormImpl" />
+        <form-bean
+            name="navegarLomNavegarLOMSeleccionarForm"
+            type="es.pode.modificador.presentacion.configurar.cambios.navegarLom.NavegarLOMSeleccionarFormImpl" />
+        <form-bean
+            name="navegarLomNavegarLomForm"
+            type="es.pode.modificador.presentacion.configurar.cambios.navegarLom.NavegarLomFormImpl" />
+        <form-bean
+            name="navegarLomNavegarLOMNavegarForm"
+            type="es.pode.modificador.presentacion.configurar.cambios.navegarLom.NavegarLOMNavegarFormImpl" />
+        <form-bean
+            name="navegarETBSeleccionarRutaBuscarForm"
+            type="es.pode.modificador.presentacion.configurar.cambios.navegarETB.SeleccionarRutaBuscarFormImpl" />
+        <form-bean
+            name="navegarETBNavegarETBForm"
+            type="es.pode.modificador.presentacion.configurar.cambios.navegarETB.NavegarETBFormImpl" />
+        <form-bean
+            name="navegarETBNavegarETBBuscarForm"
+            type="es.pode.modificador.presentacion.configurar.cambios.navegarETB.NavegarETBBuscarFormImpl" />
+        <form-bean
+            name="navegarETBNavegarETBSeleccionarForm"
+            type="es.pode.modificador.presentacion.configurar.cambios.navegarETB.NavegarETBSeleccionarFormImpl" />
+        <form-bean
+            name="navegarETBNavegarETBNavegarForm"
+            type="es.pode.modificador.presentacion.configurar.cambios.navegarETB.NavegarETBNavegarFormImpl" />
+        <form-bean
+            name="navegarETBSeleccionarRutaSubmitForm"
+            type="es.pode.modificador.presentacion.configurar.cambios.navegarETB.SeleccionarRutaSubmitFormImpl" />
+        <form-bean
+            name="navegarArbolCurricularNavegarArbolCurricularSelectActionForm"
+            type="es.pode.modificador.presentacion.configurar.cambios.navegarArbolCurricular.NavegarArbolCurricularSelectActionFormImpl" />
+        <form-bean
+            name="navegarArbolCurricularNavegarArbolCurricularBuscarForm"
+            type="es.pode.modificador.presentacion.configurar.cambios.navegarArbolCurricular.NavegarArbolCurricularBuscarFormImpl" />
+        <form-bean
+            name="navegarArbolCurricularNavegarArbolCurricularForm"
+            type="es.pode.modificador.presentacion.configurar.cambios.navegarArbolCurricular.NavegarArbolCurricularFormImpl" />
+        <form-bean
+            name="navegarArbolCurricularNavegarArbolCurricularNavegarForm"
+            type="es.pode.modificador.presentacion.configurar.cambios.navegarArbolCurricular.NavegarArbolCurricularNavegarFormImpl" />
+        <form-bean
+            name="configurarObjetosConfigurarObjetosBuscarForm"
+            type="es.pode.modificador.presentacion.configurar.objetos.ConfigurarObjetosBuscarFormImpl" />
+        <form-bean
+            name="configurarObjetosConfigurarObjetosForm"
+            type="es.pode.modificador.presentacion.configurar.objetos.ConfigurarObjetosFormImpl" />
+        <form-bean
+            name="configurarObjetosConfigurarObjetosSubmitForm"
+            type="es.pode.modificador.presentacion.configurar.objetos.ConfigurarObjetosSubmitFormImpl" />
+        <form-bean
+            name="indicarRutaIndicarRutaSelectActionForm"
+            type="es.pode.modificador.presentacion.configurar.objetos.ruta.IndicarRutaSelectActionFormImpl" />
+        <form-bean
+            name="indicarRutaIndicarRutaBuscarForm"
+            type="es.pode.modificador.presentacion.configurar.objetos.ruta.IndicarRutaBuscarFormImpl" />
+        <form-bean
+            name="indicarRutaIndicarRutaForm"
+            type="es.pode.modificador.presentacion.configurar.objetos.ruta.IndicarRutaFormImpl" />
+        <form-bean
+            name="buscarObjetosBuscarObjetosForm"
+            type="es.pode.modificador.presentacion.configurar.objetos.buscar.BuscarObjetosFormImpl" />
+        <form-bean
+            name="buscarObjetosBuscarObjetoSelectActionForm"
+            type="es.pode.modificador.presentacion.configurar.objetos.buscar.BuscarObjetoSelectActionFormImpl" />
+        <form-bean
+            name="buscarObjetosBuscarObjetoBuscarForm"
+            type="es.pode.modificador.presentacion.configurar.objetos.buscar.BuscarObjetoBuscarFormImpl" />
+        <form-bean
+            name="resultadosBuscarObjetoResultadosBusquedaSubmitForm"
+            type="es.pode.modificador.presentacion.configurar.objetos.resultados.ResultadosBusquedaSubmitFormImpl" />
+        <form-bean
+            name="resultadosBuscarObjetoResultadosBusquedaEliminarForm"
+            type="es.pode.modificador.presentacion.configurar.objetos.resultados.ResultadosBusquedaEliminarFormImpl" />
+        <form-bean
+            name="resultadosBuscarObjetoResultadosBusquedaEliminarTodosForm"
+            type="es.pode.modificador.presentacion.configurar.objetos.resultados.ResultadosBusquedaEliminarTodosFormImpl" />
+        <form-bean
+            name="resultadosBuscarObjetoResultadosBusquedaBuscarForm"
+            type="es.pode.modificador.presentacion.configurar.objetos.resultados.ResultadosBusquedaBuscarFormImpl" />
+        <form-bean
+            name="resultadosBuscarObjetoResultadosBuscarObjetoForm"
+            type="es.pode.modificador.presentacion.configurar.objetos.resultados.ResultadosBuscarObjetoFormImpl" />
+        <form-bean
+            name="configurarNombreCrearModificacionBuscarForm"
+            type="es.pode.modificador.presentacion.configurar.nombre.CrearModificacionBuscarFormImpl" />
+        <form-bean
+            name="configurarNombreCrearModificacionContinuarForm"
+            type="es.pode.modificador.presentacion.configurar.nombre.CrearModificacionContinuarFormImpl" />
+        <form-bean
+            name="configurarNombreConfigurarNombreForm"
+            type="es.pode.modificador.presentacion.configurar.nombre.ConfigurarNombreFormImpl" />
+        <form-bean
+            name="configurarModificacionConfigurarModificacionSelectActionForm"
+            type="es.pode.modificador.presentacion.configurar.modificacion.ConfigurarModificacionSelectActionFormImpl" />
+        <form-bean
+            name="configurarModificacionConfigurarModificacionGuardarForm"
+            type="es.pode.modificador.presentacion.configurar.modificacion.ConfigurarModificacionGuardarFormImpl" />
+        <form-bean
+            name="configurarModificacionConfirmacionCambiosSubmitConfirmacionForm"
+            type="es.pode.modificador.presentacion.configurar.modificacion.ConfirmacionCambiosSubmitConfirmacionFormImpl" />
+        <form-bean
+            name="configurarModificacionConfigurarModificacionSubmitObjetosForm"
+            type="es.pode.modificador.presentacion.configurar.modificacion.ConfigurarModificacionSubmitObjetosFormImpl" />
+        <form-bean
+            name="configurarModificacionConfirmacionCambiosBuscarForm"
+            type="es.pode.modificador.presentacion.configurar.modificacion.ConfirmacionCambiosBuscarFormImpl" />
+        <form-bean
+            name="configurarModificacionConfigurarModificacionModificarForm"
+            type="es.pode.modificador.presentacion.configurar.modificacion.ConfigurarModificacionModificarFormImpl" />
+        <form-bean
+            name="configurarModificacionConfirmacionObjetosBuscarForm"
+            type="es.pode.modificador.presentacion.configurar.modificacion.ConfirmacionObjetosBuscarFormImpl" />
+        <form-bean
+            name="configurarModificacionConfigurarModificacionBuscarForm"
+            type="es.pode.modificador.presentacion.configurar.modificacion.ConfigurarModificacionBuscarFormImpl" />
+        <form-bean
+            name="configurarModificacionConfigurarModificacionForm"
+            type="es.pode.modificador.presentacion.configurar.modificacion.ConfigurarModificacionFormImpl" />
+        <form-bean
+            name="configurarModificacionConfirmacionObjetosSubmitConfirmacionObjetosForm"
+            type="es.pode.modificador.presentacion.configurar.modificacion.ConfirmacionObjetosSubmitConfirmacionObjetosFormImpl" />
+        <form-bean
+            name="simularModificacionSimularModificacionSubmitConfirmacionForm"
+            type="es.pode.modificador.presentacion.simular.SimularModificacionSubmitConfirmacionFormImpl" />
+        <form-bean
+            name="simularModificacionSimularModificacionBuscarForm"
+            type="es.pode.modificador.presentacion.simular.SimularModificacionBuscarFormImpl" />
+        <form-bean
+            name="simularModificacionSimularModificacionForm"
+            type="es.pode.modificador.presentacion.simular.SimularModificacionFormImpl" />
+    </form-beans>
+
+    <global-exceptions>
+        <!-- global-exceptions merge point -->
+        <exception
+            handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+            type="java.lang.Throwable"
+            key="error.exception.message"
+            path="/error-page.jsp?code=exception&amp;exception=true"
+            scope="request" />
+    </global-exceptions>
+
+    <global-forwards>
+        
+        <forward
+            name="modificaciones.pendientes"
+            path="/ModificacionesPendientes/ModificacionesPendientes.do"
+            redirect="false" />
+        <forward
+            name="modificaciones.ejecutandose"
+            path="/ModificacionesEjecutandose/ModificacionesEjecutandose.do"
+            redirect="false" />
+        <forward
+            name="modificaciones.ejecutadas"
+            path="/ModificacionesEjecutadas/ModificacionesEjecutadas.do"
+            redirect="false" />
+        <forward
+            name="informe.tarea"
+            path="/InformeTarea/InformeTarea.do"
+            redirect="false" />
+        <forward
+            name="informe.ode"
+            path="/InformeODE/InformeODE.do"
+            redirect="false" />
+        <forward
+            name="planificar"
+            path="/Planificar/Planificar.do"
+            redirect="false" />
+        <forward
+            name="importar.modificacion"
+            path="/ImportarModificacion/ImportarModificacion.do"
+            redirect="false" />
+        <forward
+            name="configurar.cambios"
+            path="/ConfigurarCambios/ConfigurarCambios.do"
+            redirect="false" />
+        <forward
+            name="tipo.anadir"
+            path="/TipoAnadir/TipoAnadir.do"
+            redirect="false" />
+        <forward
+            name="add.termino"
+            path="/AddTermino/AddTermino.do"
+            redirect="false" />
+        <forward
+            name="modificar.termino"
+            path="/ModificarTermino/ModificarTermino.do"
+            redirect="false" />
+        <forward
+            name="eliminar.termino"
+            path="/EliminarTermino/EliminarTermino.do"
+            redirect="false" />
+        <forward
+            name="comprobar.termino"
+            path="/ComprobarTermino/ComprobarTermino.do"
+            redirect="false" />
+        <forward
+            name="navegar.lom"
+            path="/NavegarLom/NavegarLom.do"
+            redirect="false" />
+        <forward
+            name="navegar.etb"
+            path="/NavegarETB/NavegarETB.do"
+            redirect="false" />
+        <forward
+            name="cerrar"
+            path="/Cerrar/Cerrar.do"
+            redirect="false" />
+        <forward
+            name="navegar.arbol.curricular"
+            path="/NavegarArbolCurricular/NavegarArbolCurricular.do"
+            redirect="false" />
+        <forward
+            name="configurar.objetos"
+            path="/ConfigurarObjetos/ConfigurarObjetos.do"
+            redirect="false" />
+        <forward
+            name="indicar.ruta"
+            path="/IndicarRuta/IndicarRuta.do"
+            redirect="false" />
+        <forward
+            name="buscar.objetos"
+            path="/BuscarObjetos/BuscarObjetos.do"
+            redirect="false" />
+        <forward
+            name="resultados.buscar.objeto"
+            path="/ResultadosBuscarObjeto/ResultadosBuscarObjeto.do"
+            redirect="false" />
+        <forward
+            name="configurar.nombre"
+            path="/ConfigurarNombre/ConfigurarNombre.do"
+            redirect="false" />
+        <forward
+            name="configurar.modificacion"
+            path="/ConfigurarModificacion/ConfigurarModificacion.do"
+            redirect="false" />
+        <forward
+            name="simular.modificacion"
+            path="/SimularModificacion/SimularModificacion.do"
+            redirect="false" />
+        <forward
+            name="sesion.caducada"
+            path="/SesionCaducada/SesionCaducada.do"
+            redirect="false" />
+    </global-forwards>
+
+    <action-mappings>
+        <!-- action-mappings merge-point -->
+        <action
+            path="/ModificacionesPendientes/ListadoBuscar"
+            type="es.pode.modificador.presentacion.pendientes.ListadoBuscar"
+            name="modificacionesPendientesListadoBuscarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/pendientes/listado.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="modificaciones.pendientes.listado.buscar.exception"
+                path="/es/pode/modificador/presentacion/pendientes/listado.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/ModificacionesPendientes/ConfirmacionSubmitConfirmacion"
+            type="es.pode.modificador.presentacion.pendientes.ConfirmacionSubmitConfirmacion"
+            name="modificacionesPendientesConfirmacionSubmitConfirmacionForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/pendientes/confirmacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="modificaciones.pendientes.confirmacion.submit.confirmacion.exception"
+                path="/es/pode/modificador/presentacion/pendientes/confirmacion.jsp"
+                scope="request" />
+            <forward
+                name="listado"
+                path="/es/pode/modificador/presentacion/pendientes/listado.jsp"
+                redirect="true" />
+        </action>
+        <action
+            path="/ModificacionesPendientes/ListadoPlanificar"
+            type="es.pode.modificador.presentacion.pendientes.ListadoPlanificar"
+            name="modificacionesPendientesListadoPlanificarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/pendientes/listado.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="modificaciones.pendientes.listado.planificar.exception"
+                path="/es/pode/modificador/presentacion/pendientes/listado.jsp"
+                scope="request" />
+            <forward
+                name="planificar"
+                path="/Planificar/Planificar.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/ModificacionesPendientes/ListadoEjecutar"
+            type="es.pode.modificador.presentacion.pendientes.ListadoEjecutar"
+            name="modificacionesPendientesListadoEjecutarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/pendientes/listado.jsp"
+            unknown="false"
+            validate="true">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="modificaciones.pendientes.listado.ejecutar.exception"
+                path="/es/pode/modificador/presentacion/pendientes/listado.jsp"
+                scope="request" />
+            <forward
+                name="modificaciones.ejecutadas"
+                path="/ModificacionesEjecutadas/ModificacionesEjecutadas.do"
+                redirect="true" />
+            <forward
+                name="modificaciones.ejecutandose"
+                path="/ModificacionesEjecutandose/ModificacionesEjecutandose.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/ModificacionesPendientes/ListadoSubmit"
+            type="es.pode.modificador.presentacion.pendientes.ListadoSubmit"
+            name="modificacionesPendientesListadoSubmitForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/pendientes/listado.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="modificaciones.pendientes.listado.submit.exception"
+                path="/es/pode/modificador/presentacion/pendientes/listado.jsp"
+                scope="request" />
+            <forward
+                name="configurar.nombre"
+                path="/ConfigurarNombre/ConfigurarNombre.do"
+                redirect="true" />
+            <forward
+                name="confirmacion"
+                path="/es/pode/modificador/presentacion/pendientes/confirmacion.jsp"
+                redirect="true" />
+            <forward
+                name="importar.modificacion"
+                path="/ImportarModificacion/ImportarModificacion.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/ModificacionesPendientes/ModificacionesPendientes"
+            type="es.pode.modificador.presentacion.pendientes.ModificacionesPendientes"
+            name="modificacionesPendientesModificacionesPendientesForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="listado"
+                path="/es/pode/modificador/presentacion/pendientes/listado.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/ModificacionesPendientes/ConfirmacionBuscar"
+            type="es.pode.modificador.presentacion.pendientes.ConfirmacionBuscar"
+            name="modificacionesPendientesConfirmacionBuscarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/pendientes/confirmacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="modificaciones.pendientes.confirmacion.buscar.exception"
+                path="/es/pode/modificador/presentacion/pendientes/confirmacion.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/ModificacionesPendientes/ListadoEjecutandose"
+            type="es.pode.modificador.presentacion.pendientes.ListadoEjecutandose"
+            scope="request"
+            input="/es/pode/modificador/presentacion/pendientes/listado.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="modificaciones.pendientes.listado.ejecutandose.exception"
+                path="/es/pode/modificador/presentacion/pendientes/listado.jsp"
+                scope="request" />
+            <forward
+                name="ejecutandose"
+                path="/ModificacionesEjecutandose/ModificacionesEjecutandose.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/ModificacionesPendientes/ListadoModificar"
+            type="es.pode.modificador.presentacion.pendientes.ListadoModificar"
+            name="modificacionesPendientesListadoModificarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/pendientes/listado.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="modificaciones.pendientes.listado.modificar.exception"
+                path="/es/pode/modificador/presentacion/pendientes/listado.jsp"
+                scope="request" />
+            <forward
+                name="configurar.nombre"
+                path="/ConfigurarNombre/ConfigurarNombre.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/ModificacionesPendientes/ListadoExportar"
+            type="es.pode.modificador.presentacion.pendientes.ListadoExportar"
+            name="modificacionesPendientesListadoExportarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/pendientes/listado.jsp"
+            unknown="false"
+            validate="true">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="modificaciones.pendientes.listado.exportar.exception"
+                path="/es/pode/modificador/presentacion/pendientes/listado.jsp"
+                scope="request" />
+            <forward
+                name="listado"
+                path="/es/pode/modificador/presentacion/pendientes/listado.jsp"
+                redirect="true" />
+        </action>
+        <action
+            path="/ModificacionesPendientes/ListadoEjecutadas"
+            type="es.pode.modificador.presentacion.pendientes.ListadoEjecutadas"
+            scope="request"
+            input="/es/pode/modificador/presentacion/pendientes/listado.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="modificaciones.pendientes.listado.ejecutadas.exception"
+                path="/es/pode/modificador/presentacion/pendientes/listado.jsp"
+                scope="request" />
+            <forward
+                name="ejecutadas"
+                path="/ModificacionesEjecutadas/ModificacionesEjecutadas.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/es/pode/modificador/presentacion/pendientes/ModificacionesPendientesHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/pendientes/Modificaciones-Pendientes_help.jsp"/>
+        <action
+            path="/ListadoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/pendientes/listado_help.jsp"/>
+        <action
+            path="/ConfirmacionHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/pendientes/confirmacion_help.jsp"/>
+        <action
+            path="/ModificacionesEjecutandose/ListadoBusqueda"
+            type="es.pode.modificador.presentacion.ejecutandose.ListadoBusqueda"
+            name="modificacionesEjecutandoseListadoBusquedaForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/ejecutandose/listado.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="modificaciones.ejecutandose.listado.busqueda.exception"
+                path="/es/pode/modificador/presentacion/ejecutandose/listado.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/ModificacionesEjecutandose/ListadoPendientes"
+            type="es.pode.modificador.presentacion.ejecutandose.ListadoPendientes"
+            scope="request"
+            input="/es/pode/modificador/presentacion/ejecutandose/listado.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="modificaciones.ejecutandose.listado.pendientes.exception"
+                path="/es/pode/modificador/presentacion/ejecutandose/listado.jsp"
+                scope="request" />
+            <forward
+                name="pendientes"
+                path="/ModificacionesPendientes/ModificacionesPendientes.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/ModificacionesEjecutandose/ListadoEjecutadas"
+            type="es.pode.modificador.presentacion.ejecutandose.ListadoEjecutadas"
+            scope="request"
+            input="/es/pode/modificador/presentacion/ejecutandose/listado.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="modificaciones.ejecutandose.listado.ejecutadas.exception"
+                path="/es/pode/modificador/presentacion/ejecutandose/listado.jsp"
+                scope="request" />
+            <forward
+                name="ejecutadas"
+                path="/ModificacionesEjecutadas/ModificacionesEjecutadas.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/ModificacionesEjecutandose/ModificacionesEjecutandose"
+            type="es.pode.modificador.presentacion.ejecutandose.ModificacionesEjecutandose"
+            name="modificacionesEjecutandoseModificacionesEjecutandoseForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="listado"
+                path="/es/pode/modificador/presentacion/ejecutandose/listado.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/modificador/presentacion/ejecutandose/ModificacionesEjecutandoseHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/ejecutandose/Modificaciones-Ejecutandose_help.jsp"/>
+        <action
+            path="/ListadoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/ejecutandose/listado_help.jsp"/>
+        <action
+            path="/ModificacionesEjecutadas/ModificacionesEjecutadas"
+            type="es.pode.modificador.presentacion.ejecutadas.ModificacionesEjecutadas"
+            name="modificacionesEjecutadasModificacionesEjecutadasForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="listado"
+                path="/es/pode/modificador/presentacion/ejecutadas/listado.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/ModificacionesEjecutadas/ConfirmacionSubmitConfirmacion"
+            type="es.pode.modificador.presentacion.ejecutadas.ConfirmacionSubmitConfirmacion"
+            name="modificacionesEjecutadasConfirmacionSubmitConfirmacionForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/ejecutadas/confirmacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="modificaciones.ejecutadas.confirmacion.submit.confirmacion.exception"
+                path="/es/pode/modificador/presentacion/ejecutadas/confirmacion.jsp"
+                scope="request" />
+            <forward
+                name="listado"
+                path="/es/pode/modificador/presentacion/ejecutadas/listado.jsp"
+                redirect="true" />
+        </action>
+        <action
+            path="/ModificacionesEjecutadas/ListadoInforme"
+            type="es.pode.modificador.presentacion.ejecutadas.ListadoInforme"
+            name="modificacionesEjecutadasListadoInformeForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/ejecutadas/listado.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="modificaciones.ejecutadas.listado.informe.exception"
+                path="/es/pode/modificador/presentacion/ejecutadas/listado.jsp"
+                scope="request" />
+            <forward
+                name="informe.tarea"
+                path="/InformeTarea/InformeTarea.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/ModificacionesEjecutadas/ListadoEjecutandose"
+            type="es.pode.modificador.presentacion.ejecutadas.ListadoEjecutandose"
+            scope="request"
+            input="/es/pode/modificador/presentacion/ejecutadas/listado.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="modificaciones.ejecutadas.listado.ejecutandose.exception"
+                path="/es/pode/modificador/presentacion/ejecutadas/listado.jsp"
+                scope="request" />
+            <forward
+                name="ejecutandose"
+                path="/ModificacionesEjecutandose/ModificacionesEjecutandose.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/ModificacionesEjecutadas/ListadoPendientes"
+            type="es.pode.modificador.presentacion.ejecutadas.ListadoPendientes"
+            scope="request"
+            input="/es/pode/modificador/presentacion/ejecutadas/listado.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="modificaciones.ejecutadas.listado.pendientes.exception"
+                path="/es/pode/modificador/presentacion/ejecutadas/listado.jsp"
+                scope="request" />
+            <forward
+                name="pendientes"
+                path="/ModificacionesPendientes/ModificacionesPendientes.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/ModificacionesEjecutadas/ConfirmacionBuscar"
+            type="es.pode.modificador.presentacion.ejecutadas.ConfirmacionBuscar"
+            name="modificacionesEjecutadasConfirmacionBuscarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/ejecutadas/confirmacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="modificaciones.ejecutadas.confirmacion.buscar.exception"
+                path="/es/pode/modificador/presentacion/ejecutadas/confirmacion.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/ModificacionesEjecutadas/ListadoBusqueda"
+            type="es.pode.modificador.presentacion.ejecutadas.ListadoBusqueda"
+            name="modificacionesEjecutadasListadoBusquedaForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/ejecutadas/listado.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="modificaciones.ejecutadas.listado.busqueda.exception"
+                path="/es/pode/modificador/presentacion/ejecutadas/listado.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/ModificacionesEjecutadas/ListadoEliminar"
+            type="es.pode.modificador.presentacion.ejecutadas.ListadoEliminar"
+            name="modificacionesEjecutadasListadoEliminarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/ejecutadas/listado.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="modificaciones.ejecutadas.listado.eliminar.exception"
+                path="/es/pode/modificador/presentacion/ejecutadas/listado.jsp"
+                scope="request" />
+            <forward
+                name="confirmacion"
+                path="/es/pode/modificador/presentacion/ejecutadas/confirmacion.jsp"
+                redirect="true" />
+        </action>
+        <action
+            path="/es/pode/modificador/presentacion/ejecutadas/ModificacionesEjecutadasHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/ejecutadas/Modificaciones-Ejecutadas_help.jsp"/>
+        <action
+            path="/ListadoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/ejecutadas/listado_help.jsp"/>
+        <action
+            path="/ConfirmacionHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/ejecutadas/confirmacion_help.jsp"/>
+        <action
+            path="/InformeTarea/InformeTareaTraza"
+            type="es.pode.modificador.presentacion.informes.tarea.InformeTareaTraza"
+            name="informeTareaInformeTareaTrazaForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/informes/tarea/informe-tarea.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="informe.tarea.informe.tarea.traza.exception"
+                path="/es/pode/modificador/presentacion/informes/tarea/informe-tarea.jsp"
+                scope="request" />
+            <forward
+                name="informe.ode"
+                path="/InformeODE/InformeODE.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/InformeTarea/InformeTareaSelectOrigin"
+            type="es.pode.modificador.presentacion.informes.tarea.InformeTareaSelectOrigin"
+            name="informeTareaInformeTareaSelectOriginForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/informes/tarea/informe-tarea.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="informe.tarea.informe.tarea.select.origin.exception"
+                path="/es/pode/modificador/presentacion/informes/tarea/informe-tarea.jsp"
+                scope="request" />
+            <forward
+                name="modificaciones.ejecutadas"
+                path="/ModificacionesEjecutadas/ModificacionesEjecutadas.do"
+                redirect="true" />
+            <forward
+                name="modificaciones.pendientes"
+                path="/ModificacionesPendientes/ModificacionesPendientes.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/InformeTarea/InformeTareaBuscar"
+            type="es.pode.modificador.presentacion.informes.tarea.InformeTareaBuscar"
+            name="informeTareaInformeTareaBuscarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/informes/tarea/informe-tarea.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="informe.tarea.informe.tarea.buscar.exception"
+                path="/es/pode/modificador/presentacion/informes/tarea/informe-tarea.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/InformeTarea/ConfirmacionBuscar"
+            type="es.pode.modificador.presentacion.informes.tarea.ConfirmacionBuscar"
+            name="informeTareaConfirmacionBuscarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/informes/tarea/confirmacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="informe.tarea.confirmacion.buscar.exception"
+                path="/es/pode/modificador/presentacion/informes/tarea/confirmacion.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/InformeTarea/InformeTarea"
+            type="es.pode.modificador.presentacion.informes.tarea.InformeTarea"
+            name="informeTareaInformeTareaForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="informe.tarea"
+                path="/es/pode/modificador/presentacion/informes/tarea/informe-tarea.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/InformeTarea/InformeTareaRestaurar"
+            type="es.pode.modificador.presentacion.informes.tarea.InformeTareaRestaurar"
+            name="informeTareaInformeTareaRestaurarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/informes/tarea/informe-tarea.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="informe.tarea.informe.tarea.restaurar.exception"
+                path="/es/pode/modificador/presentacion/informes/tarea/informe-tarea.jsp"
+                scope="request" />
+            <forward
+                name="restaurar"
+                path="/es/pode/modificador/presentacion/informes/tarea/confirmacion.jsp"
+                redirect="true" />
+        </action>
+        <action
+            path="/InformeTarea/ConfirmacionSubmitConfirmacion"
+            type="es.pode.modificador.presentacion.informes.tarea.ConfirmacionSubmitConfirmacion"
+            name="informeTareaConfirmacionSubmitConfirmacionForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/informes/tarea/confirmacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="informe.tarea.confirmacion.submit.confirmacion.exception"
+                path="/es/pode/modificador/presentacion/informes/tarea/confirmacion.jsp"
+                scope="request" />
+            <forward
+                name="informe.tarea"
+                path="/es/pode/modificador/presentacion/informes/tarea/informe-tarea.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/modificador/presentacion/informes/tarea/InformeTareaHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/informes/tarea/Informe-Tarea_help.jsp"/>
+        <action
+            path="/InformeTareaHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/informes/tarea/informe-tarea_help.jsp"/>
+        <action
+            path="/ConfirmacionHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/informes/tarea/confirmacion_help.jsp"/>
+        <action
+            path="/InformeODE/InformeODE"
+            type="es.pode.modificador.presentacion.informes.ode.InformeODE"
+            name="informeODEInformeODEForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="informe.ode"
+                path="/es/pode/modificador/presentacion/informes/ode/informe-ode.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/InformeODE/InformeODEVolver"
+            type="es.pode.modificador.presentacion.informes.ode.InformeODEVolver"
+            scope="request"
+            input="/es/pode/modificador/presentacion/informes/ode/informe-ode.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="informe.ode.informe.ode.volver.exception"
+                path="/es/pode/modificador/presentacion/informes/ode/informe-ode.jsp"
+                scope="request" />
+            <forward
+                name="volver"
+                path="/InformeTarea/InformeTarea.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/InformeODE/InformeODEBuscar"
+            type="es.pode.modificador.presentacion.informes.ode.InformeODEBuscar"
+            name="informeODEInformeODEBuscarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/informes/ode/informe-ode.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="informe.ode.informe.ode.buscar.exception"
+                path="/es/pode/modificador/presentacion/informes/ode/informe-ode.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/es/pode/modificador/presentacion/informes/ode/InformeODEHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/informes/ode/Informe-ODE_help.jsp"/>
+        <action
+            path="/InformeODEHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/informes/ode/informe-ode_help.jsp"/>
+        <action
+            path="/Planificar/PlanificarModificacionPlanificar"
+            type="es.pode.modificador.presentacion.planificar.PlanificarModificacionPlanificar"
+            name="planificarPlanificarModificacionPlanificarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/planificar/planificar-modificacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="planificar.planificar.modificacion.planificar.exception"
+                path="/es/pode/modificador/presentacion/planificar/planificar-modificacion.jsp"
+                scope="request" />
+            <forward
+                name="modificaciones.pendientes"
+                path="/ModificacionesPendientes/ModificacionesPendientes.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/Planificar/Planificar"
+            type="es.pode.modificador.presentacion.planificar.Planificar"
+            name="planificarPlanificarForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="planificar.modificacion"
+                path="/es/pode/modificador/presentacion/planificar/planificar-modificacion.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/Planificar/PlanificarModificacionBuscar"
+            type="es.pode.modificador.presentacion.planificar.PlanificarModificacionBuscar"
+            name="planificarPlanificarModificacionBuscarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/planificar/planificar-modificacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="planificar.planificar.modificacion.buscar.exception"
+                path="/es/pode/modificador/presentacion/planificar/planificar-modificacion.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/es/pode/modificador/presentacion/planificar/PlanificarHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/planificar/Planificar_help.jsp"/>
+        <action
+            path="/PlanificarModificacionHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/planificar/planificar-modificacion_help.jsp"/>
+        <action
+            path="/ImportarModificacion/ImportarModificacion"
+            type="es.pode.modificador.presentacion.importar.ImportarModificacion"
+            name="importarModificacionImportarModificacionForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="importar.modificacion"
+                path="/es/pode/modificador/presentacion/importar/importar-modificacion.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/ImportarModificacion/ImportarModificacionBuscar"
+            type="es.pode.modificador.presentacion.importar.ImportarModificacionBuscar"
+            name="importarModificacionImportarModificacionBuscarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/importar/importar-modificacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="importar.modificacion.importar.modificacion.buscar.exception"
+                path="/es/pode/modificador/presentacion/importar/importar-modificacion.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/ImportarModificacion/ImportarModificacionImportar"
+            type="es.pode.modificador.presentacion.importar.ImportarModificacionImportar"
+            name="importarModificacionImportarModificacionImportarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/importar/importar-modificacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="importar.modificacion.importar.modificacion.importar.exception"
+                path="/es/pode/modificador/presentacion/importar/importar-modificacion.jsp"
+                scope="request" />
+            <forward
+                name="modificaciones.pendientes"
+                path="/ModificacionesPendientes/ModificacionesPendientes.do"
+                redirect="true" />
+            <forward
+                name="configurar.nombre"
+                path="/ConfigurarNombre/ConfigurarNombre.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/es/pode/modificador/presentacion/importar/ImportarModificacionHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/importar/Importar-Modificacion_help.jsp"/>
+        <action
+            path="/ImportarModificacionHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/importar/importar-modificacion_help.jsp"/>
+        <action
+            path="/ConfigurarCambios/ConfigurarCambiosBuscar"
+            type="es.pode.modificador.presentacion.configurar.cambios.ConfigurarCambiosBuscar"
+            name="configurarCambiosConfigurarCambiosBuscarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/cambios/configurar-cambios.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="configurar.cambios.configurar.cambios.buscar.exception"
+                path="/es/pode/modificador/presentacion/configurar/cambios/configurar-cambios.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/ConfigurarCambios/ConfigurarCambios"
+            type="es.pode.modificador.presentacion.configurar.cambios.ConfigurarCambios"
+            name="configurarCambiosConfigurarCambiosForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="tipos"
+                path="/es/pode/modificador/presentacion/configurar/cambios/configurar-cambios.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/ConfigurarCambios/ConfigurarCambiosSelectAction"
+            type="es.pode.modificador.presentacion.configurar.cambios.ConfigurarCambiosSelectAction"
+            name="configurarCambiosConfigurarCambiosSelectActionForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/cambios/configurar-cambios.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="configurar.cambios.configurar.cambios.select.action.exception"
+                path="/es/pode/modificador/presentacion/configurar/cambios/configurar-cambios.jsp"
+                scope="request" />
+            <forward
+                name="cerrar"
+                path="/Cerrar/Cerrar.do"
+                redirect="true" />
+            <forward
+                name="tipo.anadir"
+                path="/TipoAnadir/TipoAnadir.do"
+                redirect="true" />
+            <forward
+                name="navegar.lom"
+                path="/NavegarLom/NavegarLom.do"
+                redirect="true" />
+            <forward
+                name="configurar.modificacion"
+                path="/ConfigurarModificacion/ConfigurarModificacion.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/es/pode/modificador/presentacion/configurar/cambios/ConfigurarCambiosHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/cambios/Configurar-Cambios_help.jsp"/>
+        <action
+            path="/ConfigurarCambiosHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/cambios/configurar-cambios_help.jsp"/>
+        <action
+            path="/TipoAnadir/TipoAnadirSelectAction"
+            type="es.pode.modificador.presentacion.configurar.cambios.add.TipoAnadirSelectAction"
+            name="tipoAnadirTipoAnadirSelectActionForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/cambios/add/tipo-anadir.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="tipo.anadir.tipo.anadir.select.action.exception"
+                path="/es/pode/modificador/presentacion/configurar/cambios/add/tipo-anadir.jsp"
+                scope="request" />
+            <forward
+                name="configurar.cambios"
+                path="/ConfigurarCambios/ConfigurarCambios.do"
+                redirect="true" />
+            <forward
+                name="navegar.lom"
+                path="/NavegarLom/NavegarLom.do"
+                redirect="true" />
+            <forward
+                name="navegar.etb"
+                path="/NavegarETB/NavegarETB.do"
+                redirect="true" />
+            <forward
+                name="navegar.arbol.curricular"
+                path="/NavegarArbolCurricular/NavegarArbolCurricular.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/TipoAnadir/TipoAnadirBuscar"
+            type="es.pode.modificador.presentacion.configurar.cambios.add.TipoAnadirBuscar"
+            name="tipoAnadirTipoAnadirBuscarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/cambios/add/tipo-anadir.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="tipo.anadir.tipo.anadir.buscar.exception"
+                path="/es/pode/modificador/presentacion/configurar/cambios/add/tipo-anadir.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/TipoAnadir/TipoAnadir"
+            type="es.pode.modificador.presentacion.configurar.cambios.add.TipoAnadir"
+            name="tipoAnadirTipoAnadirForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="datos"
+                path="/es/pode/modificador/presentacion/configurar/cambios/add/tipo-anadir.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/modificador/presentacion/configurar/cambios/add/TipoAnadirHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/cambios/add/Tipo-Anadir_help.jsp"/>
+        <action
+            path="/TipoAnadirHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/cambios/add/tipo-anadir_help.jsp"/>
+        <action
+            path="/AddTermino/AddTermino"
+            type="es.pode.modificador.presentacion.configurar.cambios.add.otro.AddTermino"
+            name="addTerminoAddTerminoForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="valor"
+                path="/es/pode/modificador/presentacion/configurar/cambios/add/otro/add-termino.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/AddTermino/AddTerminoAction"
+            type="es.pode.modificador.presentacion.configurar.cambios.add.otro.AddTerminoAction"
+            name="addTerminoAddTerminoActionForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/cambios/add/otro/add-termino.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="add.termino.add.termino.action.exception"
+                path="/es/pode/modificador/presentacion/configurar/cambios/add/otro/add-termino.jsp"
+                scope="request" />
+            <forward
+                name="navegar.lom"
+                path="/NavegarLom/NavegarLom.do"
+                redirect="true" />
+            <forward
+                name="modificaciones.pendientes"
+                path="/ModificacionesPendientes/ModificacionesPendientes.do"
+                redirect="true" />
+            <forward
+                name="cerrar"
+                path="/Cerrar/Cerrar.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/AddTermino/AddTerminoBuscar"
+            type="es.pode.modificador.presentacion.configurar.cambios.add.otro.AddTerminoBuscar"
+            name="addTerminoAddTerminoBuscarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/cambios/add/otro/add-termino.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="add.termino.add.termino.buscar.exception"
+                path="/es/pode/modificador/presentacion/configurar/cambios/add/otro/add-termino.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/es/pode/modificador/presentacion/configurar/cambios/add/otro/AddTerminoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/cambios/add/otro/Add-Termino_help.jsp"/>
+        <action
+            path="/AddTerminoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/cambios/add/otro/add-termino_help.jsp"/>
+        <action
+            path="/ModificarTermino/ModificarTerminoBuscar"
+            type="es.pode.modificador.presentacion.configurar.cambios.modificar.ModificarTerminoBuscar"
+            name="modificarTerminoModificarTerminoBuscarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/cambios/modificar/modificar-termino.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="modificar.termino.modificar.termino.buscar.exception"
+                path="/es/pode/modificador/presentacion/configurar/cambios/modificar/modificar-termino.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/ModificarTermino/ModificarTerminoSelectAction"
+            type="es.pode.modificador.presentacion.configurar.cambios.modificar.ModificarTerminoSelectAction"
+            name="modificarTerminoModificarTerminoSelectActionForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/cambios/modificar/modificar-termino.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="modificar.termino.modificar.termino.select.action.exception"
+                path="/es/pode/modificador/presentacion/configurar/cambios/modificar/modificar-termino.jsp"
+                scope="request" />
+            <forward
+                name="configurar.modificacion"
+                path="/ConfigurarModificacion/ConfigurarModificacion.do"
+                redirect="true" />
+            <forward
+                name="cerrar"
+                path="/Cerrar/Cerrar.do"
+                redirect="true" />
+            <forward
+                name="navegar.lom"
+                path="/NavegarLom/NavegarLom.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/ModificarTermino/ModificarTermino"
+            type="es.pode.modificador.presentacion.configurar.cambios.modificar.ModificarTermino"
+            name="modificarTerminoModificarTerminoForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="modificar.termino"
+                path="/es/pode/modificador/presentacion/configurar/cambios/modificar/modificar-termino.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/modificador/presentacion/configurar/cambios/modificar/ModificarTerminoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/cambios/modificar/Modificar-Termino_help.jsp"/>
+        <action
+            path="/ModificarTerminoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/cambios/modificar/modificar-termino_help.jsp"/>
+        <action
+            path="/EliminarTermino/EliminarTerminoSelectAction"
+            type="es.pode.modificador.presentacion.configurar.cambios.eliminar.EliminarTerminoSelectAction"
+            name="eliminarTerminoEliminarTerminoSelectActionForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/cambios/eliminar/eliminar-termino.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="eliminar.termino.eliminar.termino.select.action.exception"
+                path="/es/pode/modificador/presentacion/configurar/cambios/eliminar/eliminar-termino.jsp"
+                scope="request" />
+            <forward
+                name="cerrar"
+                path="/Cerrar/Cerrar.do"
+                redirect="true" />
+            <forward
+                name="configurar.modificacion"
+                path="/ConfigurarModificacion/ConfigurarModificacion.do"
+                redirect="true" />
+            <forward
+                name="navegar.lom"
+                path="/NavegarLom/NavegarLom.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/EliminarTermino/EliminarTermino"
+            type="es.pode.modificador.presentacion.configurar.cambios.eliminar.EliminarTermino"
+            name="eliminarTerminoEliminarTerminoForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="eliminar.termino"
+                path="/es/pode/modificador/presentacion/configurar/cambios/eliminar/eliminar-termino.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/EliminarTermino/EliminarTerminoBuscar"
+            type="es.pode.modificador.presentacion.configurar.cambios.eliminar.EliminarTerminoBuscar"
+            name="eliminarTerminoEliminarTerminoBuscarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/cambios/eliminar/eliminar-termino.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="eliminar.termino.eliminar.termino.buscar.exception"
+                path="/es/pode/modificador/presentacion/configurar/cambios/eliminar/eliminar-termino.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/es/pode/modificador/presentacion/configurar/cambios/eliminar/EliminarTerminoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/cambios/eliminar/Eliminar-Termino_help.jsp"/>
+        <action
+            path="/EliminarTerminoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/cambios/eliminar/eliminar-termino_help.jsp"/>
+        <action
+            path="/ComprobarTermino/ComprobarTermino"
+            type="es.pode.modificador.presentacion.configurar.cambios.comprobar.ComprobarTermino"
+            name="comprobarTerminoComprobarTerminoForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="comprobar.termino"
+                path="/es/pode/modificador/presentacion/configurar/cambios/comprobar/comprobar-termino.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/ComprobarTermino/ComprobarTerminoBuscar"
+            type="es.pode.modificador.presentacion.configurar.cambios.comprobar.ComprobarTerminoBuscar"
+            name="comprobarTerminoComprobarTerminoBuscarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/cambios/comprobar/comprobar-termino.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="comprobar.termino.comprobar.termino.buscar.exception"
+                path="/es/pode/modificador/presentacion/configurar/cambios/comprobar/comprobar-termino.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/ComprobarTermino/ComprobarTerminoSelectAction"
+            type="es.pode.modificador.presentacion.configurar.cambios.comprobar.ComprobarTerminoSelectAction"
+            name="comprobarTerminoComprobarTerminoSelectActionForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/cambios/comprobar/comprobar-termino.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="comprobar.termino.comprobar.termino.select.action.exception"
+                path="/es/pode/modificador/presentacion/configurar/cambios/comprobar/comprobar-termino.jsp"
+                scope="request" />
+            <forward
+                name="configurar.modificacion"
+                path="/ConfigurarModificacion/ConfigurarModificacion.do"
+                redirect="true" />
+            <forward
+                name="cerrar"
+                path="/Cerrar/Cerrar.do"
+                redirect="true" />
+            <forward
+                name="navegar.lom"
+                path="/NavegarLom/NavegarLom.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/es/pode/modificador/presentacion/configurar/cambios/comprobar/ComprobarTerminoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/cambios/comprobar/Comprobar-Termino_help.jsp"/>
+        <action
+            path="/ComprobarTerminoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/cambios/comprobar/comprobar-termino_help.jsp"/>
+        <action
+            path="/NavegarLom/NavegarLOMBuscar"
+            type="es.pode.modificador.presentacion.configurar.cambios.navegarLom.NavegarLOMBuscar"
+            name="navegarLomNavegarLOMBuscarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/cambios/navegarLom/navegar-lom.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="navegar.lom.navegar.lom.buscar.exception"
+                path="/es/pode/modificador/presentacion/configurar/cambios/navegarLom/navegar-lom.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/NavegarLom/NavegarLOMSeleccionar"
+            type="es.pode.modificador.presentacion.configurar.cambios.navegarLom.NavegarLOMSeleccionar"
+            name="navegarLomNavegarLOMSeleccionarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/cambios/navegarLom/navegar-lom.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="navegar.lom.navegar.lom.seleccionar.exception"
+                path="/es/pode/modificador/presentacion/configurar/cambios/navegarLom/navegar-lom.jsp"
+                scope="request" />
+            <forward
+                name="comprobar.termino"
+                path="/ComprobarTermino/ComprobarTermino.do"
+                redirect="true" />
+            <forward
+                name="eliminar.termino"
+                path="/EliminarTermino/EliminarTermino.do"
+                redirect="true" />
+            <forward
+                name="modificar.termino"
+                path="/ModificarTermino/ModificarTermino.do"
+                redirect="true" />
+            <forward
+                name="add.termino"
+                path="/AddTermino/AddTermino.do"
+                redirect="true" />
+            <forward
+                name="configurar.cambios"
+                path="/ConfigurarCambios/ConfigurarCambios.do"
+                redirect="true" />
+            <forward
+                name="tipo.anadir"
+                path="/TipoAnadir/TipoAnadir.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/NavegarLom/NavegarLom"
+            type="es.pode.modificador.presentacion.configurar.cambios.navegarLom.NavegarLom"
+            name="navegarLomNavegarLomForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="navegar.lom"
+                path="/es/pode/modificador/presentacion/configurar/cambios/navegarLom/navegar-lom.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/NavegarLom/NavegarLOMNavegar"
+            type="es.pode.modificador.presentacion.configurar.cambios.navegarLom.NavegarLOMNavegar"
+            name="navegarLomNavegarLOMNavegarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/cambios/navegarLom/navegar-lom.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="navegar.lom.navegar.lom.navegar.exception"
+                path="/es/pode/modificador/presentacion/configurar/cambios/navegarLom/navegar-lom.jsp"
+                scope="request" />
+            <forward
+                name="navegar.lom"
+                path="/es/pode/modificador/presentacion/configurar/cambios/navegarLom/navegar-lom.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/modificador/presentacion/configurar/cambios/navegarLom/NavegarLomHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/cambios/navegarLom/Navegar-Lom_help.jsp"/>
+        <action
+            path="/NavegarLOMHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/cambios/navegarLom/navegar-lom_help.jsp"/>
+        <action
+            path="/NavegarETB/SeleccionarRutaBuscar"
+            type="es.pode.modificador.presentacion.configurar.cambios.navegarETB.SeleccionarRutaBuscar"
+            name="navegarETBSeleccionarRutaBuscarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/cambios/navegarETB/seleccionar-ruta.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="navegar.etb.seleccionar.ruta.buscar.exception"
+                path="/es/pode/modificador/presentacion/configurar/cambios/navegarETB/seleccionar-ruta.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/NavegarETB/NavegarETB"
+            type="es.pode.modificador.presentacion.configurar.cambios.navegarETB.NavegarETB"
+            name="navegarETBNavegarETBForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="datos"
+                path="/es/pode/modificador/presentacion/configurar/cambios/navegarETB/navegar-etb.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/NavegarETB/NavegarETBBuscar"
+            type="es.pode.modificador.presentacion.configurar.cambios.navegarETB.NavegarETBBuscar"
+            name="navegarETBNavegarETBBuscarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/cambios/navegarETB/navegar-etb.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="navegar.etb.navegar.etb.buscar.exception"
+                path="/es/pode/modificador/presentacion/configurar/cambios/navegarETB/navegar-etb.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/NavegarETB/NavegarETBSeleccionar"
+            type="es.pode.modificador.presentacion.configurar.cambios.navegarETB.NavegarETBSeleccionar"
+            name="navegarETBNavegarETBSeleccionarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/cambios/navegarETB/navegar-etb.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="navegar.etb.navegar.etb.seleccionar.exception"
+                path="/es/pode/modificador/presentacion/configurar/cambios/navegarETB/navegar-etb.jsp"
+                scope="request" />
+            <forward
+                name="seleccionar.ruta"
+                path="/es/pode/modificador/presentacion/configurar/cambios/navegarETB/seleccionar-ruta.jsp"
+                redirect="true" />
+            <forward
+                name="tipo.anadir"
+                path="/TipoAnadir/TipoAnadir.do"
+                redirect="true" />
+            <forward
+                name="cerrar"
+                path="/Cerrar/Cerrar.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/NavegarETB/NavegarETBNavegar"
+            type="es.pode.modificador.presentacion.configurar.cambios.navegarETB.NavegarETBNavegar"
+            name="navegarETBNavegarETBNavegarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/cambios/navegarETB/navegar-etb.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="navegar.etb.navegar.etb.navegar.exception"
+                path="/es/pode/modificador/presentacion/configurar/cambios/navegarETB/navegar-etb.jsp"
+                scope="request" />
+            <forward
+                name="datos"
+                path="/es/pode/modificador/presentacion/configurar/cambios/navegarETB/navegar-etb.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/NavegarETB/SeleccionarRutaSubmit"
+            type="es.pode.modificador.presentacion.configurar.cambios.navegarETB.SeleccionarRutaSubmit"
+            name="navegarETBSeleccionarRutaSubmitForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/cambios/navegarETB/seleccionar-ruta.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="navegar.etb.seleccionar.ruta.submit.exception"
+                path="/es/pode/modificador/presentacion/configurar/cambios/navegarETB/seleccionar-ruta.jsp"
+                scope="request" />
+            <forward
+                name="cerrar"
+                path="/Cerrar/Cerrar.do"
+                redirect="true" />
+            <forward
+                name="datos"
+                path="/es/pode/modificador/presentacion/configurar/cambios/navegarETB/navegar-etb.jsp"
+                redirect="true" />
+        </action>
+        <action
+            path="/es/pode/modificador/presentacion/configurar/cambios/navegarETB/NavegarETBHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/cambios/navegarETB/Navegar-ETB_help.jsp"/>
+        <action
+            path="/NavegarETBHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/cambios/navegarETB/navegar-etb_help.jsp"/>
+        <action
+            path="/SeleccionarRutaHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/cambios/navegarETB/seleccionar-ruta_help.jsp"/>
+        <action
+            path="/Cerrar/Cerrar"
+            type="es.pode.modificador.presentacion.configurar.cambios.cerrar.Cerrar"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="configurar.modificacion"
+                path="/ConfigurarModificacion/ConfigurarModificacion.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/modificador/presentacion/configurar/cambios/cerrar/CerrarHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/cambios/cerrar/Cerrar_help.jsp"/>
+        <action
+            path="/NavegarArbolCurricular/NavegarArbolCurricularSelectAction"
+            type="es.pode.modificador.presentacion.configurar.cambios.navegarArbolCurricular.NavegarArbolCurricularSelectAction"
+            name="navegarArbolCurricularNavegarArbolCurricularSelectActionForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/cambios/navegarArbolCurricular/navegar-arbol-curricular.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="navegar.arbol.curricular.navegar.arbol.curricular.select.action.exception"
+                path="/es/pode/modificador/presentacion/configurar/cambios/navegarArbolCurricular/navegar-arbol-curricular.jsp"
+                scope="request" />
+            <forward
+                name="tipo.anadir"
+                path="/TipoAnadir/TipoAnadir.do"
+                redirect="true" />
+            <forward
+                name="cerrar"
+                path="/Cerrar/Cerrar.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/NavegarArbolCurricular/NavegarArbolCurricularBuscar"
+            type="es.pode.modificador.presentacion.configurar.cambios.navegarArbolCurricular.NavegarArbolCurricularBuscar"
+            name="navegarArbolCurricularNavegarArbolCurricularBuscarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/cambios/navegarArbolCurricular/navegar-arbol-curricular.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="navegar.arbol.curricular.navegar.arbol.curricular.buscar.exception"
+                path="/es/pode/modificador/presentacion/configurar/cambios/navegarArbolCurricular/navegar-arbol-curricular.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/NavegarArbolCurricular/NavegarArbolCurricular"
+            type="es.pode.modificador.presentacion.configurar.cambios.navegarArbolCurricular.NavegarArbolCurricular"
+            name="navegarArbolCurricularNavegarArbolCurricularForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="datos"
+                path="/es/pode/modificador/presentacion/configurar/cambios/navegarArbolCurricular/navegar-arbol-curricular.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/NavegarArbolCurricular/NavegarArbolCurricularNavegar"
+            type="es.pode.modificador.presentacion.configurar.cambios.navegarArbolCurricular.NavegarArbolCurricularNavegar"
+            name="navegarArbolCurricularNavegarArbolCurricularNavegarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/cambios/navegarArbolCurricular/navegar-arbol-curricular.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="navegar.arbol.curricular.navegar.arbol.curricular.navegar.exception"
+                path="/es/pode/modificador/presentacion/configurar/cambios/navegarArbolCurricular/navegar-arbol-curricular.jsp"
+                scope="request" />
+            <forward
+                name="datos"
+                path="/es/pode/modificador/presentacion/configurar/cambios/navegarArbolCurricular/navegar-arbol-curricular.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/modificador/presentacion/configurar/cambios/navegarArbolCurricular/NavegarArbolCurricularHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/cambios/navegarArbolCurricular/Navegar-Arbol-Curricular_help.jsp"/>
+        <action
+            path="/NavegarArbolCurricularHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/cambios/navegarArbolCurricular/navegar-arbol-curricular_help.jsp"/>
+        <action
+            path="/ConfigurarObjetos/ConfigurarObjetosBuscar"
+            type="es.pode.modificador.presentacion.configurar.objetos.ConfigurarObjetosBuscar"
+            name="configurarObjetosConfigurarObjetosBuscarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/objetos/configurar-objetos.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="configurar.objetos.configurar.objetos.buscar.exception"
+                path="/es/pode/modificador/presentacion/configurar/objetos/configurar-objetos.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/ConfigurarObjetos/ConfigurarObjetos"
+            type="es.pode.modificador.presentacion.configurar.objetos.ConfigurarObjetos"
+            name="configurarObjetosConfigurarObjetosForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="buscar"
+                path="/es/pode/modificador/presentacion/configurar/objetos/configurar-objetos.jsp"
+                redirect="false" />
+            <forward
+                name="indicar.ruta"
+                path="/IndicarRuta/IndicarRuta.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ConfigurarObjetos/ConfigurarObjetosSubmit"
+            type="es.pode.modificador.presentacion.configurar.objetos.ConfigurarObjetosSubmit"
+            name="configurarObjetosConfigurarObjetosSubmitForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/objetos/configurar-objetos.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="configurar.objetos.configurar.objetos.submit.exception"
+                path="/es/pode/modificador/presentacion/configurar/objetos/configurar-objetos.jsp"
+                scope="request" />
+            <forward
+                name="configurar.modificacion"
+                path="/ConfigurarModificacion/ConfigurarModificacion.do"
+                redirect="true" />
+            <forward
+                name="buscar.objetos"
+                path="/BuscarObjetos/BuscarObjetos.do"
+                redirect="true" />
+            <forward
+                name="indicar.ruta"
+                path="/IndicarRuta/IndicarRuta.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/es/pode/modificador/presentacion/configurar/objetos/ConfigurarObjetosHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/objetos/Configurar-Objetos_help.jsp"/>
+        <action
+            path="/ConfigurarObjetosHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/objetos/configurar-objetos_help.jsp"/>
+        <action
+            path="/IndicarRuta/IndicarRutaSelectAction"
+            type="es.pode.modificador.presentacion.configurar.objetos.ruta.IndicarRutaSelectAction"
+            name="indicarRutaIndicarRutaSelectActionForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/objetos/ruta/indicar-ruta.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="indicar.ruta.indicar.ruta.select.action.exception"
+                path="/es/pode/modificador/presentacion/configurar/objetos/ruta/indicar-ruta.jsp"
+                scope="request" />
+            <forward
+                name="configurar.modificacion"
+                path="/ConfigurarModificacion/ConfigurarModificacion.do"
+                redirect="true" />
+            <forward
+                name="configurar.objetos"
+                path="/ConfigurarObjetos/ConfigurarObjetos.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/IndicarRuta/IndicarRutaBuscar"
+            type="es.pode.modificador.presentacion.configurar.objetos.ruta.IndicarRutaBuscar"
+            name="indicarRutaIndicarRutaBuscarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/objetos/ruta/indicar-ruta.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="indicar.ruta.indicar.ruta.buscar.exception"
+                path="/es/pode/modificador/presentacion/configurar/objetos/ruta/indicar-ruta.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/IndicarRuta/IndicarRuta"
+            type="es.pode.modificador.presentacion.configurar.objetos.ruta.IndicarRuta"
+            name="indicarRutaIndicarRutaForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="buscar"
+                path="/es/pode/modificador/presentacion/configurar/objetos/ruta/indicar-ruta.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/modificador/presentacion/configurar/objetos/ruta/IndicarRutaHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/objetos/ruta/Indicar-Ruta_help.jsp"/>
+        <action
+            path="/IndicarRutaHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/objetos/ruta/indicar-ruta_help.jsp"/>
+        <action
+            path="/BuscarObjetos/BuscarObjetos"
+            type="es.pode.modificador.presentacion.configurar.objetos.buscar.BuscarObjetos"
+            name="buscarObjetosBuscarObjetosForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="buscar.objeto"
+                path="/es/pode/modificador/presentacion/configurar/objetos/buscar/buscar-objeto.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/BuscarObjetos/BuscarObjetoSelectAction"
+            type="es.pode.modificador.presentacion.configurar.objetos.buscar.BuscarObjetoSelectAction"
+            name="buscarObjetosBuscarObjetoSelectActionForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/objetos/buscar/buscar-objeto.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="buscar.objetos.buscar.objeto.select.action.exception"
+                path="/es/pode/modificador/presentacion/configurar/objetos/buscar/buscar-objeto.jsp"
+                scope="request" />
+            <forward
+                name="resultados.buscar.objeto"
+                path="/ResultadosBuscarObjeto/ResultadosBuscarObjeto.do"
+                redirect="true" />
+            <forward
+                name="configurar.objetos"
+                path="/ConfigurarObjetos/ConfigurarObjetos.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/BuscarObjetos/BuscarObjetoBuscar"
+            type="es.pode.modificador.presentacion.configurar.objetos.buscar.BuscarObjetoBuscar"
+            name="buscarObjetosBuscarObjetoBuscarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/objetos/buscar/buscar-objeto.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="buscar.objetos.buscar.objeto.buscar.exception"
+                path="/es/pode/modificador/presentacion/configurar/objetos/buscar/buscar-objeto.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/es/pode/modificador/presentacion/configurar/objetos/buscar/BuscarObjetosHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/objetos/buscar/Buscar-Objetos_help.jsp"/>
+        <action
+            path="/BuscarObjetoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/objetos/buscar/buscar-objeto_help.jsp"/>
+        <action
+            path="/ResultadosBuscarObjeto/ResultadosBusquedaAnadir"
+            type="es.pode.modificador.presentacion.configurar.objetos.resultados.ResultadosBusquedaAnadir"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/objetos/resultados/resultados-busqueda.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="resultados.buscar.objeto.resultados.busqueda.anadir.exception"
+                path="/es/pode/modificador/presentacion/configurar/objetos/resultados/resultados-busqueda.jsp"
+                scope="request" />
+            <forward
+                name="configurar.modificacion"
+                path="/ConfigurarModificacion/ConfigurarModificacion.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ResultadosBuscarObjeto/ResultadosBusquedaSubmit"
+            type="es.pode.modificador.presentacion.configurar.objetos.resultados.ResultadosBusquedaSubmit"
+            name="resultadosBuscarObjetoResultadosBusquedaSubmitForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/objetos/resultados/resultados-busqueda.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="resultados.buscar.objeto.resultados.busqueda.submit.exception"
+                path="/es/pode/modificador/presentacion/configurar/objetos/resultados/resultados-busqueda.jsp"
+                scope="request" />
+            <forward
+                name="buscar.objetos"
+                path="/BuscarObjetos/BuscarObjetos.do"
+                redirect="true" />
+            <forward
+                name="resultados.busqueda"
+                path="/es/pode/modificador/presentacion/configurar/objetos/resultados/resultados-busqueda.jsp"
+                redirect="true" />
+        </action>
+        <action
+            path="/ResultadosBuscarObjeto/ResultadosBusquedaEliminar"
+            type="es.pode.modificador.presentacion.configurar.objetos.resultados.ResultadosBusquedaEliminar"
+            name="resultadosBuscarObjetoResultadosBusquedaEliminarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/objetos/resultados/resultados-busqueda.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="resultados.buscar.objeto.resultados.busqueda.eliminar.exception"
+                path="/es/pode/modificador/presentacion/configurar/objetos/resultados/resultados-busqueda.jsp"
+                scope="request" />
+            <forward
+                name="resultados.busqueda"
+                path="/es/pode/modificador/presentacion/configurar/objetos/resultados/resultados-busqueda.jsp"
+                redirect="true" />
+        </action>
+        <action
+            path="/ResultadosBuscarObjeto/ResultadosBusquedaEliminarTodos"
+            type="es.pode.modificador.presentacion.configurar.objetos.resultados.ResultadosBusquedaEliminarTodos"
+            name="resultadosBuscarObjetoResultadosBusquedaEliminarTodosForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/objetos/resultados/resultados-busqueda.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="resultados.buscar.objeto.resultados.busqueda.eliminar.todos.exception"
+                path="/es/pode/modificador/presentacion/configurar/objetos/resultados/resultados-busqueda.jsp"
+                scope="request" />
+            <forward
+                name="resultados.busqueda"
+                path="/es/pode/modificador/presentacion/configurar/objetos/resultados/resultados-busqueda.jsp"
+                redirect="true" />
+        </action>
+        <action
+            path="/ResultadosBuscarObjeto/ResultadosBusquedaBuscar"
+            type="es.pode.modificador.presentacion.configurar.objetos.resultados.ResultadosBusquedaBuscar"
+            name="resultadosBuscarObjetoResultadosBusquedaBuscarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/objetos/resultados/resultados-busqueda.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="resultados.buscar.objeto.resultados.busqueda.buscar.exception"
+                path="/es/pode/modificador/presentacion/configurar/objetos/resultados/resultados-busqueda.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/ResultadosBuscarObjeto/ResultadosBuscarObjeto"
+            type="es.pode.modificador.presentacion.configurar.objetos.resultados.ResultadosBuscarObjeto"
+            name="resultadosBuscarObjetoResultadosBuscarObjetoForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="resultados.busqueda"
+                path="/es/pode/modificador/presentacion/configurar/objetos/resultados/resultados-busqueda.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/modificador/presentacion/configurar/objetos/resultados/ResultadosBuscarObjetoHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/objetos/resultados/Resultados-Buscar-Objeto_help.jsp"/>
+        <action
+            path="/ResultadosBusquedaHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/objetos/resultados/resultados-busqueda_help.jsp"/>
+        <action
+            path="/ConfigurarNombre/CrearModificacionBuscar"
+            type="es.pode.modificador.presentacion.configurar.nombre.CrearModificacionBuscar"
+            name="configurarNombreCrearModificacionBuscarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/nombre/crear-modificacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="configurar.nombre.crear.modificacion.buscar.exception"
+                path="/es/pode/modificador/presentacion/configurar/nombre/crear-modificacion.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/ConfigurarNombre/CrearModificacionContinuar"
+            type="es.pode.modificador.presentacion.configurar.nombre.CrearModificacionContinuar"
+            name="configurarNombreCrearModificacionContinuarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/nombre/crear-modificacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="configurar.nombre.crear.modificacion.continuar.exception"
+                path="/es/pode/modificador/presentacion/configurar/nombre/crear-modificacion.jsp"
+                scope="request" />
+            <forward
+                name="configurar.modificacion"
+                path="/ConfigurarModificacion/ConfigurarModificacion.do"
+                redirect="true" />
+            <forward
+                name="modificaciones.pendientes"
+                path="/ModificacionesPendientes/ModificacionesPendientes.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/ConfigurarNombre/ConfigurarNombre"
+            type="es.pode.modificador.presentacion.configurar.nombre.ConfigurarNombre"
+            name="configurarNombreConfigurarNombreForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="crear.modificacion"
+                path="/es/pode/modificador/presentacion/configurar/nombre/crear-modificacion.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/modificador/presentacion/configurar/nombre/ConfigurarNombreHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/nombre/Configurar-Nombre_help.jsp"/>
+        <action
+            path="/CrearModificacionHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/nombre/crear-modificacion_help.jsp"/>
+        <action
+            path="/ConfigurarModificacion/ConfigurarModificacionSelectAction"
+            type="es.pode.modificador.presentacion.configurar.modificacion.ConfigurarModificacionSelectAction"
+            name="configurarModificacionConfigurarModificacionSelectActionForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/modificacion/configurar-modificacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="configurar.modificacion.configurar.modificacion.select.action.exception"
+                path="/es/pode/modificador/presentacion/configurar/modificacion/configurar-modificacion.jsp"
+                scope="request" />
+            <forward
+                name="confirmacion.cambios"
+                path="/es/pode/modificador/presentacion/configurar/modificacion/confirmacion-cambios.jsp"
+                redirect="true" />
+            <forward
+                name="configurar.cambios"
+                path="/ConfigurarCambios/ConfigurarCambios.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/ConfigurarModificacion/ConfigurarModificacionGuardar"
+            type="es.pode.modificador.presentacion.configurar.modificacion.ConfigurarModificacionGuardar"
+            name="configurarModificacionConfigurarModificacionGuardarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/modificacion/configurar-modificacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="configurar.modificacion.configurar.modificacion.guardar.exception"
+                path="/es/pode/modificador/presentacion/configurar/modificacion/configurar-modificacion.jsp"
+                scope="request" />
+            <forward
+                name="modificaciones.pendientes"
+                path="/ModificacionesPendientes/ModificacionesPendientes.do"
+                redirect="false" />
+            <forward
+                name="simular.modificacion"
+                path="/SimularModificacion/SimularModificacion.do"
+                redirect="false" />
+            <forward
+                name="configurar.nombre"
+                path="/ConfigurarNombre/ConfigurarNombre.do"
+                redirect="false" />
+        </action>
+        <action
+            path="/ConfigurarModificacion/ConfirmacionCambiosSubmitConfirmacion"
+            type="es.pode.modificador.presentacion.configurar.modificacion.ConfirmacionCambiosSubmitConfirmacion"
+            name="configurarModificacionConfirmacionCambiosSubmitConfirmacionForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/modificacion/confirmacion-cambios.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="configurar.modificacion.confirmacion.cambios.submit.confirmacion.exception"
+                path="/es/pode/modificador/presentacion/configurar/modificacion/confirmacion-cambios.jsp"
+                scope="request" />
+            <forward
+                name="configurar.modificacion"
+                path="/es/pode/modificador/presentacion/configurar/modificacion/configurar-modificacion.jsp"
+                redirect="true" />
+        </action>
+        <action
+            path="/ConfigurarModificacion/ConfigurarModificacionSubmitObjetos"
+            type="es.pode.modificador.presentacion.configurar.modificacion.ConfigurarModificacionSubmitObjetos"
+            name="configurarModificacionConfigurarModificacionSubmitObjetosForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/modificacion/configurar-modificacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="configurar.modificacion.configurar.modificacion.submit.objetos.exception"
+                path="/es/pode/modificador/presentacion/configurar/modificacion/configurar-modificacion.jsp"
+                scope="request" />
+            <forward
+                name="confirmacion.objetos"
+                path="/es/pode/modificador/presentacion/configurar/modificacion/confirmacion-objetos.jsp"
+                redirect="true" />
+            <forward
+                name="configurar.objetos"
+                path="/ConfigurarObjetos/ConfigurarObjetos.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/ConfigurarModificacion/ConfirmacionCambiosBuscar"
+            type="es.pode.modificador.presentacion.configurar.modificacion.ConfirmacionCambiosBuscar"
+            name="configurarModificacionConfirmacionCambiosBuscarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/modificacion/confirmacion-cambios.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="configurar.modificacion.confirmacion.cambios.buscar.exception"
+                path="/es/pode/modificador/presentacion/configurar/modificacion/confirmacion-cambios.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/ConfigurarModificacion/ConfigurarModificacionModificar"
+            type="es.pode.modificador.presentacion.configurar.modificacion.ConfigurarModificacionModificar"
+            name="configurarModificacionConfigurarModificacionModificarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/modificacion/configurar-modificacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="configurar.modificacion.configurar.modificacion.modificar.exception"
+                path="/es/pode/modificador/presentacion/configurar/modificacion/configurar-modificacion.jsp"
+                scope="request" />
+            <forward
+                name="configurar.cambios"
+                path="/ConfigurarCambios/ConfigurarCambios.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/ConfigurarModificacion/ConfirmacionObjetosBuscar"
+            type="es.pode.modificador.presentacion.configurar.modificacion.ConfirmacionObjetosBuscar"
+            name="configurarModificacionConfirmacionObjetosBuscarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/modificacion/confirmacion-objetos.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="configurar.modificacion.confirmacion.objetos.buscar.exception"
+                path="/es/pode/modificador/presentacion/configurar/modificacion/confirmacion-objetos.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/ConfigurarModificacion/ConfigurarModificacionBuscar"
+            type="es.pode.modificador.presentacion.configurar.modificacion.ConfigurarModificacionBuscar"
+            name="configurarModificacionConfigurarModificacionBuscarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/modificacion/configurar-modificacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="configurar.modificacion.configurar.modificacion.buscar.exception"
+                path="/es/pode/modificador/presentacion/configurar/modificacion/configurar-modificacion.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/ConfigurarModificacion/ConfigurarModificacion"
+            type="es.pode.modificador.presentacion.configurar.modificacion.ConfigurarModificacion"
+            name="configurarModificacionConfigurarModificacionForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="configurar.modificacion"
+                path="/es/pode/modificador/presentacion/configurar/modificacion/configurar-modificacion.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/ConfigurarModificacion/ConfirmacionObjetosSubmitConfirmacionObjetos"
+            type="es.pode.modificador.presentacion.configurar.modificacion.ConfirmacionObjetosSubmitConfirmacionObjetos"
+            name="configurarModificacionConfirmacionObjetosSubmitConfirmacionObjetosForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/configurar/modificacion/confirmacion-objetos.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="configurar.modificacion.confirmacion.objetos.submit.confirmacion.objetos.exception"
+                path="/es/pode/modificador/presentacion/configurar/modificacion/confirmacion-objetos.jsp"
+                scope="request" />
+            <forward
+                name="configurar.modificacion"
+                path="/es/pode/modificador/presentacion/configurar/modificacion/configurar-modificacion.jsp"
+                redirect="true" />
+        </action>
+        <action
+            path="/es/pode/modificador/presentacion/configurar/modificacion/ConfigurarModificacionHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/modificacion/Configurar-Modificacion_help.jsp"/>
+        <action
+            path="/ConfigurarModificacionHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/modificacion/configurar-modificacion_help.jsp"/>
+        <action
+            path="/ConfirmacionObjetosHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/modificacion/confirmacion-objetos_help.jsp"/>
+        <action
+            path="/ConfirmacionCambiosHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/configurar/modificacion/confirmacion-cambios_help.jsp"/>
+        <action
+            path="/SimularModificacion/SimularModificacionSubmitConfirmacion"
+            type="es.pode.modificador.presentacion.simular.SimularModificacionSubmitConfirmacion"
+            name="simularModificacionSimularModificacionSubmitConfirmacionForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/simular/simular-modificacion.jsp"
+            unknown="false"
+            validate="true">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="simular.modificacion.simular.modificacion.submit.confirmacion.exception"
+                path="/es/pode/modificador/presentacion/simular/simular-modificacion.jsp"
+                scope="request" />
+            <forward
+                name="informe.tarea"
+                path="/InformeTarea/InformeTarea.do"
+                redirect="true" />
+            <forward
+                name="modificaciones.pendientes"
+                path="/ModificacionesPendientes/ModificacionesPendientes.do"
+                redirect="true" />
+        </action>
+        <action
+            path="/SimularModificacion/SimularModificacionBuscar"
+            type="es.pode.modificador.presentacion.simular.SimularModificacionBuscar"
+            name="simularModificacionSimularModificacionBuscarForm"
+            scope="request"
+            input="/es/pode/modificador/presentacion/simular/simular-modificacion.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="simular.modificacion.simular.modificacion.buscar.exception"
+                path="/es/pode/modificador/presentacion/simular/simular-modificacion.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/SimularModificacion/SimularModificacion"
+            type="es.pode.modificador.presentacion.simular.SimularModificacion"
+            name="simularModificacionSimularModificacionForm"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="simular.modificacion"
+                path="/es/pode/modificador/presentacion/simular/simular-modificacion.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/modificador/presentacion/simular/SimularModificacionHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/simular/Simular-Modificacion_help.jsp"/>
+        <action
+            path="/SimularModificacionHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/simular/simular-modificacion_help.jsp"/>
+        <action
+            path="/SesionCaducada/ErrorAceptar"
+            type="es.pode.modificador.presentacion.session.ErrorAceptar"
+            scope="request"
+            input="/es/pode/modificador/presentacion/session/error.jsp"
+            unknown="false"
+            validate="false">
+            <exception
+                handler="org.andromda.presentation.bpm4struts.PatternMatchingExceptionHandler"
+                type="java.lang.Exception"
+                key="sesion.caducada.error.aceptar.exception"
+                path="/es/pode/modificador/presentacion/session/error.jsp"
+                scope="request" />
+        </action>
+        <action
+            path="/SesionCaducada/SesionCaducada"
+            type="es.pode.modificador.presentacion.session.SesionCaducada"
+            scope="request"
+            unknown="false"
+            validate="false">
+            <forward
+                name="error"
+                path="/es/pode/modificador/presentacion/session/error.jsp"
+                redirect="false" />
+        </action>
+        <action
+            path="/es/pode/modificador/presentacion/session/SesionCaducadaHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/session/Sesion-Caducada_help.jsp"/>
+        <action
+            path="/ErrorHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/es/pode/modificador/presentacion/session/error_help.jsp"/>
+        <action
+            path="/applicationHelp"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/application-help.jsp"/>
+        <action
+            path="/calendar"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/calendar-js.jsp"/>
+        <action
+            path="/formValidation"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/form-validation.jsp"/>
+        <action
+            path="/login"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/login/login-form.jsp"/>
+        <action
+            path="/logincaptcha"
+            type="org.apache.struts.actions.ForwardAction"
+            scope="request"
+            parameter="/login/login-form.jsp"/>  
+        <action
+            path="/captcha-image"
+            type="es.indra.ibuilder.security.captcha.ImageCaptchaAction"
+            scope="request"/>  
+    </action-mappings>
+
+    <!-- RequestProcessor sobreescrito para comprobar sesiones caducadas -->
+    	<controller>
+			<set-property  property="processorClass" value="es.pode.modificador.presentacion.PEProcessor"/>
+		</controller>
+
+    <!-- message-resources merge-point -->
+    <message-resources parameter="application-resources" null="false"/>
+
+    <!-- plug-in merge-point -->
+    
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property property="pathnames" value="/WEB-INF/validation.xml,/WEB-INF/validator-rules.xml"/>
+        <set-property property="stopOnFirstError" value="false"/>
+    </plug-in>
+
+    <plug-in className="org.apache.struts.tiles.TilesPlugin">
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml"/>
+        <set-property property="definitions-parser-validate" value="true"/>
+        <set-property property="moduleAware" value="true"/>
+    </plug-in>
+
+<!--
+  UNCOMMENT TO EXPOSE THE STRUTS-MENU TAGLIB
+
+    <plug-in className="net.sf.navigator.menu.MenuPlugIn">
+        <set-property property="menuConfig" value="/WEB-INF/menu-config.xml"/>
+    </plug-in>
+-->
+</struts-config>

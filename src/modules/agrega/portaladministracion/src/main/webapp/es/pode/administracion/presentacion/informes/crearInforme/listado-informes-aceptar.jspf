@@ -1,0 +1,31 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="crear.informe.listado.informes.aceptar"/></h3>
+    <div class="trigger">
+        <html:form styleId="crearInformeListadoInformesAceptarForm" action="/CrearInforme/ListadoInformesAceptar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="informe">
+                        <td class="label"><bean:message key="crear.informe.listado.informes.aceptar.param.informe"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.informe}"/>
+                           <input type="checkbox" name="informe" value="on" <c:if test="${value}">checked="checked" </c:if>onmouseover="hints.show('crear.informe.listado.informes.aceptar.param.informe.title')" onmouseout="hints.hide()"  id="aceptarInforme"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="crear.informe.listado.informes.aceptar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

@@ -1,0 +1,4 @@
+<access>
+	${load:template.6.4.1.xml}
+	${load:description.xml}
+</access>

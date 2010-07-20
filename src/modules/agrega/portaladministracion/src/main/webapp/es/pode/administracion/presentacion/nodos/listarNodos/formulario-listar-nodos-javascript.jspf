@@ -1,0 +1,41 @@
+
+    <tiles:put name="javascript" type="string">
+        <script type="text/javascript" language="Javascript1.1" src="<html:rewrite action="/formValidation"/>"></script>
+        <html:javascript formName="listarNodosFormularioListarNodosModificarNodoForm" method="validateFormularioListarNodosModificarNodoForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+        <html:javascript formName="listarNodosFormularioListarNodosVerNodoForm" method="validateFormularioListarNodosVerNodoForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'listar.nodos.formulario.listar.nodos.modificar.nodo.param.id.title':'<formatting:escape language="javascript"><bean:message key="listar.nodos.formulario.listar.nodos.modificar.nodo.param.id.title"/></formatting:escape>',
+                'listar.nodos.formulario.listar.nodos.eliminar.param.id.title':'<formatting:escape language="javascript"><bean:message key="listar.nodos.formulario.listar.nodos.eliminar.param.id.title"/></formatting:escape>',
+                'listar.nodos.formulario.listar.nodos.ver.nodo.param.id.title':'<formatting:escape language="javascript"><bean:message key="listar.nodos.formulario.listar.nodos.ver.nodo.param.id.title"/></formatting:escape>',
+                'CrearNodo':'<formatting:escape language="javascript"><bean:message key="listar.nodos.formulario.listar.nodos.crear.nodo.title"/></formatting:escape>',
+                'CrearNodo_no':'<formatting:escape language="javascript"><bean:message key="listar.nodos.formulario.listar.nodos.crear.nodo.title.notallowed"/></formatting:escape>',
+                'CrearNodo_reset':'<formatting:escape language="javascript"><bean:message key="listar.nodos.formulario.listar.nodos.crear.nodo.title.reset"/></formatting:escape>',
+                'CrearNodo_noreset':'<formatting:escape language="javascript"><bean:message key="listar.nodos.formulario.listar.nodos.crear.nodo.title.reset.not.allowed"/></formatting:escape>',
+                'ModificarNodo':'<formatting:escape language="javascript"><bean:message key="listar.nodos.formulario.listar.nodos.modificar.nodo.title"/></formatting:escape>',
+                'ModificarNodo_no':'<formatting:escape language="javascript"><bean:message key="listar.nodos.formulario.listar.nodos.modificar.nodo.title.notallowed"/></formatting:escape>',
+                'ModificarNodo_reset':'<formatting:escape language="javascript"><bean:message key="listar.nodos.formulario.listar.nodos.modificar.nodo.title.reset"/></formatting:escape>',
+                'ModificarNodo_noreset':'<formatting:escape language="javascript"><bean:message key="listar.nodos.formulario.listar.nodos.modificar.nodo.title.reset.not.allowed"/></formatting:escape>',
+                'Eliminar':'<formatting:escape language="javascript"><bean:message key="listar.nodos.formulario.listar.nodos.eliminar.title"/></formatting:escape>',
+                'Eliminar_no':'<formatting:escape language="javascript"><bean:message key="listar.nodos.formulario.listar.nodos.eliminar.title.notallowed"/></formatting:escape>',
+                'Eliminar_reset':'<formatting:escape language="javascript"><bean:message key="listar.nodos.formulario.listar.nodos.eliminar.title.reset"/></formatting:escape>',
+                'Eliminar_noreset':'<formatting:escape language="javascript"><bean:message key="listar.nodos.formulario.listar.nodos.eliminar.title.reset.not.allowed"/></formatting:escape>',
+                'verNodo':'<formatting:escape language="javascript"><bean:message key="listar.nodos.formulario.listar.nodos.ver.nodo.title"/></formatting:escape>',
+                'verNodo_no':'<formatting:escape language="javascript"><bean:message key="listar.nodos.formulario.listar.nodos.ver.nodo.title.notallowed"/></formatting:escape>',
+                'verNodo_reset':'<formatting:escape language="javascript"><bean:message key="listar.nodos.formulario.listar.nodos.ver.nodo.title.reset"/></formatting:escape>',
+                'verNodo_noreset':'<formatting:escape language="javascript"><bean:message key="listar.nodos.formulario.listar.nodos.ver.nodo.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+</script>
+    </tiles:put>

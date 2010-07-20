@@ -1,0 +1,48 @@
+#verHistorial.action {}
+#verHistorial.action #form_submit {}
+
+#verHistorial.action .titulo {}
+#verHistorial.action .titulo .label {}
+#verHistorial.action .titulo .field {}
+#verHistorial.action .idODE {}
+#verHistorial.action .idODE .label {}
+#verHistorial.action .idODE .field {}
+
+#proponerPublicacionODE.action {}
+#proponerPublicacionODE.action #form_submit {}
+
+#proponerPublicacionODE.action .idUsuario {}
+#proponerPublicacionODE.action .idUsuario .label {}
+#proponerPublicacionODE.action .idUsuario .field {}
+#proponerPublicacionODE.action .idODE {}
+#proponerPublicacionODE.action .idODE .label {}
+#proponerPublicacionODE.action .idODE .field {}
+#proponerPublicacionODE.action .titulo {}
+#proponerPublicacionODE.action .titulo .label {}
+#proponerPublicacionODE.action .titulo .field {}
+
+#rechazar.action {}
+#rechazar.action #form_submit {}
+
+#rechazar.action .idODE {}
+#rechazar.action .idODE .label {}
+#rechazar.action .idODE .field {}
+#rechazar.action .titulo {}
+#rechazar.action .titulo .label {}
+#rechazar.action .titulo .field {}
+#rechazar.action .idUsuario {}
+#rechazar.action .idUsuario .label {}
+#rechazar.action .idUsuario .field {}
+
+#listaODES.table {}
+#listaODES.table th {}
+#listaODES.table td div {}
+
+#listaODES.table th.idODE {}
+#listaODES.table td div.idODE {}
+
+#listaODES.table th.titulo {}
+#listaODES.table td div.titulo {}
+
+
+

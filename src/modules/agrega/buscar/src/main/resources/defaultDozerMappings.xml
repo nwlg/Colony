@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN" "http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+	<mapping wildcard="true" map-id="DEF_MAPPING_NODO_NODOVO">
+		<class-a>es.pode.buscar.negocio.administrar.dominio.NodoImpl</class-a>
+		<class-b>es.pode.buscar.negocio.administrar.servicio.NodoVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_NODOVO_NODO">
+		<class-a>es.pode.buscar.negocio.administrar.servicio.NodoVO</class-a>
+		<class-b>es.pode.buscar.negocio.administrar.dominio.NodoImpl</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_CCAA_CCAAVO">
+		<class-a>es.pode.buscar.negocio.administrar.dominio.CcaaImpl</class-a>
+		<class-b>es.pode.buscar.negocio.administrar.servicio.CcaaVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_CCAAVO_CCAA">
+		<class-a>es.pode.buscar.negocio.administrar.servicio.CcaaVO</class-a>
+		<class-b>es.pode.buscar.negocio.administrar.dominio.CcaaImpl</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_SERVICIO_SERVICIOVO">
+		<class-a>es.pode.buscar.negocio.administrar.dominio.ServicioImpl</class-a>
+		<class-b>es.pode.buscar.negocio.administrar.servicio.ServicioVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_SERVICIOVO_SERVICIO">
+		<class-a>es.pode.buscar.negocio.administrar.servicio.ServicioVO</class-a>
+		<class-b>es.pode.buscar.negocio.administrar.dominio.ServicioImpl</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_NODOSQI_NODOSQIVO">
+		<class-a>es.pode.buscar.negocio.nodosSQI.dominio.NodoSQIImpl</class-a>
+		<class-b>es.pode.buscar.negocio.nodosSQI.servicio.NodoSQIVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_NODOSQIVO_NODOSQI">
+		<class-a>es.pode.buscar.negocio.nodosSQI.servicio.NodoSQIVO</class-a>
+		<class-b>es.pode.buscar.negocio.nodosSQI.dominio.NodoSQIImpl</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_NODOSQI_NODODESCRIPCIONSQIVO">
+		<class-a>es.pode.buscar.negocio.nodosSQI.dominio.NodoSQIImpl</class-a>
+		<class-b>es.pode.buscar.negocio.nodosSQI.servicio.NodoDescripcionSQIVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_NODODESCRIPCIONSQIVO_NODOSQI">
+		<class-a>es.pode.buscar.negocio.nodosSQI.servicio.NodoDescripcionSQIVO</class-a>
+		<class-b>es.pode.buscar.negocio.nodosSQI.dominio.NodoSQIImpl</class-b>
+	</mapping>	
+</mappings>

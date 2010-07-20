@@ -1,0 +1,8 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="listaId" value="${form.listaId}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="usuarios" value="${form.usuarios}"/>
+    </c:catch>
+</div>

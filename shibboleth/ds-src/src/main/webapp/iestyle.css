@@ -1,0 +1,120 @@
+.la
+{
+  background-color: #eaf3f8;
+  position: relative;
+}
+
+.la > .tl, .la > .tr, .la > .bl, .la > .br
+{
+  width: 13px;
+  height: 13px;
+  position: absolute;
+}
+
+.la > .tl
+{
+  background: url(images/rounded/la-tl.png) top left no-repeat;
+  top: 0px;
+  left: 0px;
+}
+
+.la > .tr
+{
+  background: url(images/rounded/la-tr.png) top right no-repeat;
+  top: 0px;
+  right: 0px;
+}
+
+.la > .bl
+{
+  background: url(images/rounded/la-bl.png) bottom left no-repeat;
+  bottom: 0px;
+  left: 0px;
+}
+
+.la > .br
+{
+  background: url(images/rounded/la-br.png) bottom right no-repeat;
+  bottom: 0px;
+  right: 0px;
+}
+#no-wayf
+{
+  background-color: #eaf3f8;
+  position: relative;
+}
+
+#no-wayf > .tl, #no-wayf > .tr, #no-wayf > .bl, #no-wayf > .br
+{
+  width: 13px;
+  height: 13px;
+  position: absolute;
+}
+
+#no-wayf > .tl
+{
+  background: url(images/rounded/la-tl.png) top left no-repeat;
+  top: 0px;
+  left: 0px;
+}
+
+#no-wayf > .tr
+{
+  background: url(images/rounded/la-tr.png) top right no-repeat;
+  top: 0px;
+  right: 0px;
+}
+
+#no-wayf > .bl
+{
+  background: url(images/rounded/la-bl.png) bottom left no-repeat;
+  bottom: 0px;
+  left: 0px;
+}
+
+#no-wayf > .br
+{
+  background: url(images/rounded/la-br.png) bottom right no-repeat;
+  bottom: 0px;
+  right: 0px;
+}
+.logo
+{
+  background-color: #eaf3f8;
+  position: relative;
+}
+
+.logo > .tl, .logo > .tr, .logo > .bl, .logo > .br
+{
+  width: 10px;
+  height: 10px;
+  position: absolute;
+}
+
+.logo > .tl
+{
+  background: url(images/rounded/logo-tl.png) top left no-repeat;
+  top: 0px;
+  left: 0px;
+}
+
+.logo > .tr
+{
+  background: url(images/rounded/logo-tr.png) top right no-repeat;
+  top: 0px;
+  right: 0px;
+}
+
+.logo > .bl
+{
+  background: url(images/rounded/logo-bl.png) bottom left no-repeat;
+  bottom: 0px;
+  left: 0px;
+}
+
+.logo > .br
+{
+  background: url(images/rounded/logo-br.png) bottom right no-repeat;
+  bottom: 0px;
+  right: 0px;
+}

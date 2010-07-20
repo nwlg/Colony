@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//Spring//DTD Bean//EN" 
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<!-- Application Context -->
+<beans>    
+	<!-- Importo el contexto de parseadorXML.jar -->
+    <import resource="parseadorXML-applicationContext.xml"/>
+    <!--          External Beans               -->
+   <bean id="ZipDao" class="es.pode.empaquetador.negocio.externos.ZipDao">
+   </bean>
+ 
+   <bean id="FicheroDao" class="es.pode.empaquetador.negocio.externos.FicheroDao">
+   <property name="beanMapperAux">
+		<ref bean="beanMapper" />
+	</property>
+   </bean>
+ 
+   <bean id="ScormDao" class="es.pode.empaquetador.negocio.externos.ScormDao">
+   	<!-- Inyecto el mapper definido dentro de parseadorXML.jar -->
+   	   <property name="beanMapper">
+	       <ref bean="beanMapperODEs"/>
+	   </property>
+     </bean>
+</beans>
+

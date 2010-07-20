@@ -1,0 +1,23 @@
+#datosRelacion.action {}
+#datosRelacion.action #form_submit {}
+
+#datosRelacion.action .id {}
+#datosRelacion.action .id .label {}
+#datosRelacion.action .id .field {}
+#datosRelacion.action .nomTesauro {}
+#datosRelacion.action .nomTesauro .label {}
+#datosRelacion.action .nomTesauro .field {}
+#datosRelacion.action .idioma {}
+#datosRelacion.action .idioma .label {}
+#datosRelacion.action .idioma .field {}
+#datosRelacion.action .taxonesvo {}
+#datosRelacion.action .taxonesvo .label {}
+#datosRelacion.action .taxonesvo .field {}
+#datosRelacion.action .rutaPadrevo {}
+#datosRelacion.action .rutaPadrevo .label {}
+#datosRelacion.action .rutaPadrevo .field {}
+#datosRelacion.action .jerarquias {}
+#datosRelacion.action .jerarquias .label {}
+#datosRelacion.action .jerarquias .field {}
+
+

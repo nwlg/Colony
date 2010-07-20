@@ -1,0 +1,21 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'listar.agrega.tags.listado.mostrar.odes.agrega.param.tag.title':'<formatting:escape language="javascript"><bean:message key="listar.agrega.tags.listado.mostrar.odes.agrega.param.tag.title"/></formatting:escape>',
+                'MostrarOdesAgrega':'<formatting:escape language="javascript"><bean:message key="listar.agrega.tags.listado.mostrar.odes.agrega.title"/></formatting:escape>',
+                'MostrarOdesAgrega_no':'<formatting:escape language="javascript"><bean:message key="listar.agrega.tags.listado.mostrar.odes.agrega.title.notallowed"/></formatting:escape>',
+                'MostrarOdesAgrega_reset':'<formatting:escape language="javascript"><bean:message key="listar.agrega.tags.listado.mostrar.odes.agrega.title.reset"/></formatting:escape>',
+                'MostrarOdesAgrega_noreset':'<formatting:escape language="javascript"><bean:message key="listar.agrega.tags.listado.mostrar.odes.agrega.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

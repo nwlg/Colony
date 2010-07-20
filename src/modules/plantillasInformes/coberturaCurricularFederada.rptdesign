@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.15" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 2.2.1.r22a_v20071101 Build &lt;2.2.1.v20071101-1439></property>
+    <property name="units">in</property>
+    <property name="includeResource">birt-application-resources_es</property>
+    <property name="comments">Copyright (c) 2007 &lt;&lt;Your Company Name here>></property>
+    <html-property name="description">Creates a blank report with no predefined content.</html-property>
+    <text-property name="displayName">Blank Report</text-property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.datatools.enablement.oda.ws" name="Data Source" id="6">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>wsdlURI</name>
+                    <value>http://localhost:8080/auditoria/services/SrvAuditoriaFederadaServicio?wsdl</value>
+                </ex-property>
+                <ex-property>
+                    <name>driverClassPath</name>
+                </ex-property>
+            </list-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.datatools.enablement.oda.ws.dataSet" name="Data Set" id="7">
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">nodo</property>
+                        <property name="dataType">any</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">coberturaCurricular</property>
+                        <property name="dataType">any</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">totalOdes</property>
+                        <property name="dataType">any</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">fechaDesde</property>
+                    <property name="nativeName">fechaDesde</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                    <property name="position">1</property>
+                    <expression name="defaultValue">'2007-01-01T09:30:47-00:00'</expression>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                </structure>
+                <structure>
+                    <property name="name">fechaHasta</property>
+                    <property name="nativeName">fechaHasta</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                    <property name="position">2</property>
+                    <expression name="defaultValue">'2008-10-01T09:30:47-00:00'</expression>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                </structure>
+                <structure>
+                    <property name="name">tipoInforme</property>
+                    <property name="nativeName">tipoInforme</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                    <property name="position">3</property>
+                    <expression name="defaultValue">'coberturaCurricular'</expression>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                </structure>
+                <structure>
+                    <property name="name">rango</property>
+                    <property name="nativeName">rango</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                    <property name="position">4</property>
+                    <expression name="defaultValue">'10'</expression>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                </structure>
+                <structure>
+                    <property name="name">idioma</property>
+                    <property name="nativeName">idioma</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                    <property name="position">5</property>
+                    <expression name="defaultValue">'es'</expression>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                </structure>
+                <structure>
+                    <property name="name">idUsuario</property>
+                    <property name="nativeName">idUsuario</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">1</property>
+                    <property name="position">6</property>
+                    <expression name="defaultValue">'administrador'</expression>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                </structure>
+            </list-property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">nodo</property>
+                    <property name="nativeName">nodo</property>
+                    <property name="dataType">any</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">coberturaCurricular</property>
+                    <property name="nativeName">coberturaCurricular</property>
+                    <property name="dataType">any</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">totalOdes</property>
+                    <property name="nativeName">totalOdes</property>
+                    <property name="dataType">any</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <property name="queryText">&lt;?xml version="1.0"?>
+&lt;SOAP-ENV:Envelope
+xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	&lt;SOAP-ENV:Body>
+		&lt;m:informeCoberturaFederado xmlns:m="http://servicios.negocio.auditoria.pode.es">
+			&lt;m:parametros>
+				&lt;m:fechaDesde>&amp;?fechaDesde?&amp;&lt;/m:fechaDesde>
+				&lt;m:fechaHasta>&amp;?fechaHasta?&amp;&lt;/m:fechaHasta>
+				&lt;m:tipoInforme xsi:type="xsd:string">&amp;?tipoInforme?&amp;&lt;/m:tipoInforme>
+				&lt;m:rango xsi:type="xsd:string">&amp;?rango?&amp;&lt;/m:rango>
+				&lt;m:idioma xsi:type="xsd:string">&amp;?idioma?&amp;&lt;/m:idioma>
+				&lt;m:idUsuario xsi:type="xsd:string">&amp;?idUsuario?&amp;&lt;/m:idUsuario>
+			&lt;/m:parametros>
+		&lt;/m:informeCoberturaFederado>
+	&lt;/SOAP-ENV:Body>
+&lt;/SOAP-ENV:Envelope></property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>1.0</Version>
+  <design:DataSetParameters>
+    <design:parameterDefinitions>
+      <design:inOutMode>In</design:inOutMode>
+      <design:attributes>
+        <design:name>fechaDesde</design:name>
+        <design:position>1</design:position>
+        <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+        <design:nullability>Unknown</design:nullability>
+      </design:attributes>
+      <design:inputAttributes>
+        <design:elementAttributes>
+          <design:defaultScalarValue>2007-01-01T09:30:47-00:00</design:defaultScalarValue>
+          <design:optional>false</design:optional>
+        </design:elementAttributes>
+      </design:inputAttributes>
+    </design:parameterDefinitions>
+    <design:parameterDefinitions>
+      <design:inOutMode>In</design:inOutMode>
+      <design:attributes>
+        <design:name>fechaHasta</design:name>
+        <design:position>2</design:position>
+        <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+        <design:nullability>Unknown</design:nullability>
+      </design:attributes>
+      <design:inputAttributes>
+        <design:elementAttributes>
+          <design:defaultScalarValue>2008-10-01T09:30:47-00:00</design:defaultScalarValue>
+          <design:optional>false</design:optional>
+        </design:elementAttributes>
+      </design:inputAttributes>
+    </design:parameterDefinitions>
+    <design:parameterDefinitions>
+      <design:inOutMode>In</design:inOutMode>
+      <design:attributes>
+        <design:name>tipoInforme</design:name>
+        <design:position>3</design:position>
+        <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+        <design:nullability>Unknown</design:nullability>
+      </design:attributes>
+      <design:inputAttributes>
+        <design:elementAttributes>
+          <design:defaultScalarValue>coberturaCurricular</design:defaultScalarValue>
+          <design:optional>false</design:optional>
+        </design:elementAttributes>
+      </design:inputAttributes>
+    </design:parameterDefinitions>
+    <design:parameterDefinitions>
+      <design:inOutMode>In</design:inOutMode>
+      <design:attributes>
+        <design:name>rango</design:name>
+        <design:position>4</design:position>
+        <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+        <design:nullability>Unknown</design:nullability>
+      </design:attributes>
+      <design:inputAttributes>
+        <design:elementAttributes>
+          <design:defaultScalarValue>10</design:defaultScalarValue>
+          <design:optional>false</design:optional>
+        </design:elementAttributes>
+      </design:inputAttributes>
+    </design:parameterDefinitions>
+    <design:parameterDefinitions>
+      <design:inOutMode>In</design:inOutMode>
+      <design:attributes>
+        <design:name>idioma</design:name>
+        <design:position>5</design:position>
+        <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+        <design:nullability>Unknown</design:nullability>
+      </design:attributes>
+      <design:inputAttributes>
+        <design:elementAttributes>
+          <design:defaultScalarValue>es</design:defaultScalarValue>
+          <design:optional>false</design:optional>
+        </design:elementAttributes>
+      </design:inputAttributes>
+    </design:parameterDefinitions>
+    <design:parameterDefinitions>
+      <design:inOutMode>In</design:inOutMode>
+      <design:attributes>
+        <design:name>idUsuario</design:name>
+        <design:position>6</design:position>
+        <design:nativeDataTypeCode>1</design:nativeDataTypeCode>
+        <design:nullability>Unknown</design:nullability>
+      </design:attributes>
+      <design:inputAttributes>
+        <design:elementAttributes>
+          <design:defaultScalarValue>administrador</design:defaultScalarValue>
+          <design:optional>false</design:optional>
+        </design:elementAttributes>
+      </design:inputAttributes>
+    </design:parameterDefinitions>
+  </design:DataSetParameters>
+</model:DesignValues>]]></xml-property>
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>xmlQueryText</name>
+                    <value>table0#-TNAME-#table0#:#[/soapenv:Envelope/soapenv:Body/informeCoberturaFederadoResponse/informeCoberturaFederadoReturn/informeCoberturaFederadoReturn/coberturaCurricular/coberturaCurricular]#:#{nodo;STRING;../../nodo},{coberturaCurricular;STRING;/coberturaCurricular},{totalOdes;STRING;/totalOdes}</value>
+                </ex-property>
+                <ex-property>
+                    <name>operationTrace</name>
+                    <value>SrvAuditoriaFederadaServicioService$-$SrvAuditoriaFederadaServicio$-$informeCoberturaFederado</value>
+                </ex-property>
+            </list-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="crosstab" id="4">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="leftMargin">0mm</property>
+            <property name="rightMargin">1mm</property>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="261">
+            <property name="marginTop">0pt</property>
+            <property name="width">100%</property>
+            <column id="262">
+                <property name="width">35%</property>
+            </column>
+            <column id="263">
+                <property name="width">30%</property>
+            </column>
+            <column id="264">
+                <property name="width">35%</property>
+            </column>
+            <row id="265">
+                <property name="verticalAlign">bottom</property>
+                <cell id="266">
+                    <image id="181">
+                        <property name="source">file</property>
+                        <expression name="uri">"img/logo_ndrb.gif"</expression>
+                    </image>
+                </cell>
+                <cell id="267">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <label id="301">
+                        <property name="fontFamily">sans-serif</property>
+                        <property name="fontSize">11pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="color">#666666</property>
+                        <property name="marginTop">0pt</property>
+                        <property name="paddingTop">1pt</property>
+                        <property name="textAlign">right</property>
+                        <text-property name="text">national digital resource bank</text-property>
+                    </label>
+                </cell>
+            </row>
+        </grid>
+        <text id="182">
+            <property name="contentType">html</property>
+            <text-property name="content"><![CDATA[<BR><BR>]]></text-property>
+        </text>
+        <text id="126">
+            <property name="fontFamily">"Arial"</property>
+            <property name="fontSize">16px</property>
+            <property name="fontWeight">bold</property>
+            <property name="color">#333333</property>
+            <property name="paddingTop">1pt</property>
+            <property name="paddingLeft">10pt</property>
+            <property name="paddingRight">10pt</property>
+            <property name="textAlign">left</property>
+            <property name="contentType">html</property>
+            <text-property name="content" key="informeCoberturaCurricularFederado"><![CDATA[]]></text-property>
+        </text>
+        <text id="127">
+            <property name="contentType">html</property>
+            <text-property name="content"><![CDATA[<BR><BR>]]></text-property>
+        </text>
+        <table id="32">
+            <property name="marginTop">0pt</property>
+            <property name="marginLeft">20pt</property>
+            <property name="width">100%</property>
+            <property name="dataSet">Data Set</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">coberturaCurricular</property>
+                    <expression name="expression">dataSetRow["coberturaCurricular"]</expression>
+                    <property name="dataType">any</property>
+                </structure>
+                <structure>
+                    <property name="name">totalOdes</property>
+                    <expression name="expression">dataSetRow["totalOdes"]</expression>
+                    <property name="dataType">any</property>
+                </structure>
+                <structure>
+                    <property name="name">nodo</property>
+                    <expression name="expression">dataSetRow["nodo"]</expression>
+                    <property name="dataType">any</property>
+                </structure>
+                <structure>
+                    <property name="name">porcen</property>
+                    <expression name="expression">Finance.percent(Total.sum(row["totalOdes"]),row["totalOdes"],0)</expression>
+                    <property name="dataType">float</property>
+                </structure>
+            </list-property>
+            <column id="45">
+                <property name="width">70%</property>
+            </column>
+            <column id="46">
+                <property name="width">15%</property>
+            </column>
+            <column id="276">
+                <property name="width">15%</property>
+            </column>
+            <header>
+                <row id="33">
+                    <property name="backgroundColor">#D2E9FF</property>
+                    <cell id="34">
+                        <label id="47">
+                            <property name="fontFamily">"Verdana"</property>
+                            <property name="fontSize">10px</property>
+                            <text-property name="text">coberturaCurricular</text-property>
+                        </label>
+                    </cell>
+                    <cell id="35">
+                        <label id="50">
+                            <property name="fontFamily">"Verdana"</property>
+                            <property name="fontSize">10px</property>
+                            <text-property name="text">totalOdes</text-property>
+                        </label>
+                    </cell>
+                    <cell id="270">
+                        <property name="paddingTop">1pt</property>
+                        <label id="278">
+                            <property name="fontFamily">"Verdana"</property>
+                            <property name="fontSize">10px</property>
+                            <text-property name="text" key="porcentaje"></text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <group id="53">
+                <property name="groupName">NewTableGroup1</property>
+                <property name="interval">none</property>
+                <property name="sortDirection">asc</property>
+                <expression name="keyExpr">row["nodo"]</expression>
+                <structure name="toc">
+                    <expression name="expressionValue">row["nodo"]</expression>
+                </structure>
+                <property name="repeatHeader">true</property>
+                <property name="hideDetail">false</property>
+                <property name="pageBreakAfter">auto</property>
+                <property name="pageBreakBefore">auto</property>
+                <property name="pageBreakInside">auto</property>
+                <header>
+                    <row id="54">
+                        <cell id="55">
+                            <text id="283">
+                                <property name="contentType">html</property>
+                                <text-property name="content"><![CDATA[<BR><BR>]]></text-property>
+                            </text>
+                            <data id="60">
+                                <property name="fontFamily">"Verdana"</property>
+                                <property name="fontSize">larger</property>
+                                <property name="fontWeight">bold</property>
+                                <property name="textAlign">center</property>
+                                <property name="resultSetColumn">nodo</property>
+                            </data>
+                            <text id="284">
+                                <property name="contentType">html</property>
+                                <text-property name="content"><![CDATA[<BR>]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="56"/>
+                        <cell id="271"/>
+                    </row>
+                </header>
+                <footer>
+                    <row id="57">
+                        <cell id="58"/>
+                        <cell id="59"/>
+                        <cell id="274"/>
+                    </row>
+                </footer>
+            </group>
+            <detail>
+                <row id="36">
+                    <list-property name="highlightRules">
+                        <structure>
+                            <property name="operator">eq</property>
+                            <property name="backgroundColor">#D8D8D8</property>
+                            <expression name="testExpr">row[0]%2</expression>
+                            <expression name="value1">0</expression>
+                        </structure>
+                    </list-property>
+                    <cell id="37">
+                        <data id="48">
+                            <property name="resultSetColumn">coberturaCurricular</property>
+                        </data>
+                    </cell>
+                    <cell id="38">
+                        <data id="51">
+                            <property name="resultSetColumn">totalOdes</property>
+                        </data>
+                    </cell>
+                    <cell id="272">
+                        <data id="282">
+                            <property name="resultSetColumn">porcen</property>
+                        </data>
+                    </cell>
+                </row>
+                <row id="39">
+                    <cell id="40"/>
+                    <cell id="41"/>
+                    <cell id="273"/>
+                </row>
+            </detail>
+            <footer>
+                <row id="42">
+                    <cell id="43"/>
+                    <cell id="44"/>
+                    <cell id="275"/>
+                </row>
+            </footer>
+        </table>
+        <text id="269">
+            <property name="contentType">html</property>
+            <text-property name="content"><![CDATA[<BR><BR><BR>]]></text-property>
+        </text>
+        <grid id="289">
+            <property name="style">NewStyle</property>
+            <property name="marginTop">auto</property>
+            <property name="marginLeft">10pt</property>
+            <property name="marginBottom">auto</property>
+            <property name="marginRight">10pt</property>
+            <property name="paddingBottom">1pt</property>
+            <property name="pageBreakAfter">auto</property>
+            <property name="pageBreakBefore">auto</property>
+            <property name="height">0.6145833333in</property>
+            <property name="width">8.2072072072in</property>
+            <column id="290">
+                <property name="width">0.9in</property>
+            </column>
+            <column id="291">
+                <property name="width">0.95in</property>
+                <property name="verticalAlign">middle</property>
+            </column>
+            <column id="292">
+                <property name="width">0.9in</property>
+                <property name="verticalAlign">middle</property>
+            </column>
+            <column id="293">
+                <property name="width">0.7in</property>
+                <property name="marginTop">auto</property>
+                <property name="marginLeft">0pt</property>
+                <property name="marginBottom">auto</property>
+            </column>
+            <column id="248">
+                <property name="width">0.9375in</property>
+            </column>
+            <column id="249">
+                <property name="width">3.4324324324in</property>
+            </column>
+            <row id="294">
+                <property name="verticalAlign">middle</property>
+                <cell id="295">
+                    <image id="241">
+                        <property name="borderRightStyle">none</property>
+                        <property name="marginLeft">0pt</property>
+                        <property name="marginBottom">1pt</property>
+                        <property name="source">file</property>
+                        <expression name="uri">"img/logo_nwlg.gif"</expression>
+                    </image>
+                </cell>
+                <cell id="296">
+                    <image id="297">
+                        <property name="source">file</property>
+                        <expression name="uri">"img/logo_nen.gif"</expression>
+                    </image>
+                </cell>
+                <cell id="253">
+                    <image id="257">
+                        <property name="source">file</property>
+                        <expression name="uri">"img/footer_text.png"</expression>
+                    </image>
+                </cell>
+                <cell id="254">
+                    <property name="colSpan">3</property>
+                    <property name="rowSpan">1</property>
+                    <property name="borderBottomStyle">none</property>
+                    <property name="marginLeft">0pt</property>
+                    <property name="marginBottom">auto</property>
+                    <property name="paddingBottom">1pt</property>
+                    <property name="textAlign">right</property>
+                    <property name="verticalAlign">middle</property>
+                    <property name="widows">2</property>
+                    <property name="pageBreakBefore">auto</property>
+                    <image id="299">
+                        <property name="style">NewStyle1</property>
+                        <property name="size">size-to-image</property>
+                        <property name="scale">0.1</property>
+                        <property name="source">file</property>
+                        <expression name="uri">"img/powered_by_agrega.jpg"</expression>
+                    </image>
+                </cell>
+            </row>
+        </grid>
+    </body>
+</report>

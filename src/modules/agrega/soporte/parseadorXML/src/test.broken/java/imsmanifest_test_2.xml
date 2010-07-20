@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This is a Reload version 2.5.1 SCORM 2004 Content Package document-->
+<!--Spawned from the Reload Content Package Generator - http://www.reload.ac.uk-->
+<manifest xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" xmlns:imsmd="http://ltsc.ieee.org/xsd/LOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3" xmlns:imsss="http://www.imsglobal.org/xsd/imsss" xmlns:adlseq="http://www.adlnet.org/xsd/adlseq_v1p3" xmlns:adlnav="http://www.adlnet.org/xsd/adlnav_v1p3" identifier="MANIFEST-10757B73-AD36-A816-C216-22C773576126" xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd http://ltsc.ieee.org/xsd/LOM lom.xsd http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd http://www.adlnet.org/xsd/adlseq_v1p3 adlseq_v1p3.xsd http://www.adlnet.org/xsd/adlnav_v1p3 adlnav_v1p3.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>CAM 1.3</schemaversion>
+  </metadata>
+  <organizations default="ORG-95440ECB-B93E-AB27-1ABB-07349C0814CC">
+    <organization identifier="ORG-95440ECB-B93E-AB27-1ABB-07349C0814CC" structure="hierarchical">
+      <title>Plan de lección</title>
+      <item identifier="ITEM-ED76ED70-3AC1-5621-8388-F9208264793A" identifierref="RES-C12035E2-F259-3DA5-E33B-EE9F96617B40" isvisible="true">
+        <title>Sugerencias Metodológicas</title>
+      </item>
+      <item identifier="ITEM-9445A565-E3CF-FA01-C03C-A64D876D361D" identifierref="RES-9A51462C-6319-BDCF-8EA2-DE137AF21147" isvisible="true">
+        <title>Recurso multimedia</title>
+      </item>
+      <item identifier="ITEM-6372BF77-6713-A596-BF20-D1745498C21E" isvisible="true">
+        <title>Actividades</title>
+        <item identifier="ITEM-DD3AB62D-31EE-CBFC-67AF-979C13F83AB7" identifierref="RES-31DD70DD-978E-B7D2-FC57-44603A894783" isvisible="true">
+          <title>Actividad 1</title>
+        </item>
+        <item identifier="ITEM-2F70CBE5-68A6-F7C3-EFFA-E1DEF4D585DA" identifierref="RES-A3E714DF-598A-EDA8-3EF5-4B283D989C71" isvisible="true">
+          <title>Actividad 2</title>
+        </item>
+        <item identifier="ITEM-D1A19264-84C5-4CB4-57FD-9D4E9EBF9A9C" identifierref="RES-6F444B52-E033-5C2F-989F-6AF6534AFBC0" isvisible="true">
+          <title>Actividad 3</title>
+        </item>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES-C12035E2-F259-3DA5-E33B-EE9F96617B40" adlcp:scormType="asset" href="content/sugmet.html" type="webcontent">
+      <file href="content/sugmet.html" />
+      <file href="content/css/estilos.css" />
+      <file href="content/imgs/barra.gif" />
+      <file href="content/imgs/logoSnRed.gif" />
+      <file href="content/imgs/pie.gif" />
+      <file href="content/imgs/pxnada.gif" />
+      <file href="content/imgs/web.gif" />
+    </resource>
+    <resource identifier="RES-9A51462C-6319-BDCF-8EA2-DE137AF21147" adlcp:scormType="sco" href="content/200606191845/200606191845_PRE_0_1081415472.html" type="webcontent">
+      <file href="content/200606191845/200606191845_PRE_0_1081415472.html" />
+      <file href="content/200606191845/200606191845_PRE_0_1081415472.SWF.swf" />
+      <file href="content/200606191845/200606191845_PRE_0_1081415472.XML.xml" />
+      <file href="content/200606191845/carcasa.swf" />
+      <file href="content/200606191845/carcasa_primaria05.swf" />
+      <file href="content/200606191845/carSnrAniPri_1c_2k6.swf" />
+      <file href="content/200606191845/carSnrAniPri_2c_2k6.swf" />
+      <file href="content/200606191845/libreria.swf" />
+      <file href="content/200606191845/libSnrAniPri_1c_2k6.swf" />
+      <file href="content/200606191845/libSnrAniPri_2c_2k6.swf" />
+    </resource>
+    <resource identifier="RES-31DD70DD-978E-B7D2-FC57-44603A894783" adlcp:scormType="sco" type="webcontent" href="content/200606191836/200606191836_AC_0_-734834482.html">
+      <file href="content/200606191836/200606191836_AC_0_-734834482.html" />
+      <file href="content/200606191836/200606191836_AC_0_-734834482.SWF.swf" />
+      <file href="content/200606191836/200606191836_AC_0_-734834482.XML.xml" />
+      <file href="content/200606191836/200606191836_AC_0_-734834482_initActivity.xml" />
+      <file href="content/200606191836/carcasaNonEdit.swf" />
+      <file href="content/200606191836/carcasaNonEditPrimaria.swf" />
+      <file href="content/200606191836/carcasaNonEditSecundaria.swf" />
+      <file href="content/200606191836/carSnrActPri_1c_2k6.swf" />
+      <file href="content/200606191836/carSnrActPri_2c_2k6.swf" />
+      <file href="content/200606191836/CompLib.swf" />
+      <file href="content/200606191836/comp_libs_santi.swf" />
+      <file href="content/200606191836/comp_libs_santi2.swf" />
+      <file href="content/200606191836/comp_lib_s.swf" />
+      <file href="content/200606191836/libreria_snr.swf" />
+      <file href="content/200606191836/libreria_snr2.swf" />
+      <file href="content/200606191836/libreria_snr_sec.swf" />
+      <file href="content/200606191836/libSnrActPri_1c_2k6.swf" />
+      <file href="content/200606191836/libSnrActPri_2c_2k6.swf" />
+      <file href="content/200606191836/textoCompLP.swf" />
+    </resource>
+    <resource identifier="RES-A3E714DF-598A-EDA8-3EF5-4B283D989C71" adlcp:scormType="sco" type="webcontent" href="content/200606191838/200606191838_AC_0_-358251888.html">
+      <file href="content/200606191838/200606191838_AC_0_-358251888.html" />
+      <file href="content/200606191838/200606191838_AC_0_-358251888.SWF.swf" />
+      <file href="content/200606191838/200606191838_AC_0_-358251888.XML.xml" />
+      <file href="content/200606191838/200606191838_AC_0_-358251888_initActivity.xml" />
+      <file href="content/200606191838/carcasaNonEdit.swf" />
+      <file href="content/200606191838/carcasaNonEditPrimaria.swf" />
+      <file href="content/200606191838/carcasaNonEditSecundaria.swf" />
+      <file href="content/200606191838/carSnrActPri_1c_2k6.swf" />
+      <file href="content/200606191838/carSnrActPri_2c_2k6.swf" />
+      <file href="content/200606191838/CompLib.swf" />
+      <file href="content/200606191838/comp_libs_santi.swf" />
+      <file href="content/200606191838/comp_libs_santi2.swf" />
+      <file href="content/200606191838/comp_lib_s.swf" />
+      <file href="content/200606191838/libreria_snr.swf" />
+      <file href="content/200606191838/libreria_snr2.swf" />
+      <file href="content/200606191838/libreria_snr_sec.swf" />
+      <file href="content/200606191838/libSnrActPri_1c_2k6.swf" />
+      <file href="content/200606191838/libSnrActPri_2c_2k6.swf" />
+      <file href="content/200606191838/textoCompLP.swf" />
+    </resource>
+    <resource identifier="RES-6F444B52-E033-5C2F-989F-6AF6534AFBC0" adlcp:scormType="sco" href="content/200606191841/200606191841_AC_0_-417375823.html" type="webcontent">
+      <file href="content/200606191841/200606191841_AC_0_-417375823.html" />
+      <file href="content/200606191841/200606191841_AC_0_-417375823.SWF.swf" />
+      <file href="content/200606191841/200606191841_AC_0_-417375823.XML.xml" />
+      <file href="content/200606191841/200606191841_AC_0_-417375823_initActivity.xml" />
+      <file href="content/200606191841/carcasaNonEdit.swf" />
+      <file href="content/200606191841/carcasaNonEditPrimaria.swf" />
+      <file href="content/200606191841/carcasaNonEditSecundaria.swf" />
+      <file href="content/200606191841/carSnrActPri_1c_2k6.swf" />
+      <file href="content/200606191841/carSnrActPri_2c_2k6.swf" />
+      <file href="content/200606191841/CompLib.swf" />
+      <file href="content/200606191841/comp_libs_santi.swf" />
+      <file href="content/200606191841/comp_libs_santi2.swf" />
+      <file href="content/200606191841/comp_lib_s.swf" />
+      <file href="content/200606191841/libreria_snr.swf" />
+      <file href="content/200606191841/libreria_snr2.swf" />
+      <file href="content/200606191841/libreria_snr_sec.swf" />
+      <file href="content/200606191841/libSnrActPri_1c_2k6.swf" />
+      <file href="content/200606191841/libSnrActPri_2c_2k6.swf" />
+      <file href="content/200606191841/textoCompLP.swf" />
+    </resource>
+  </resources>
+</manifest>
+

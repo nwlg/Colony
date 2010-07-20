@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN" "http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+
+<mappings>
+	<mapping map-null="false">
+		<class-a>es.pode.parseadorXML.castor.Sequencing</class-a>
+		<class-b>es.pode.parseadorXML.castor.Sequencing</class-b>
+	</mapping>
+	<mapping map-null="false">
+		<class-a>es.pode.parseadorXML.castor.ControlModeType</class-a>
+		<class-b>es.pode.parseadorXML.castor.ControlModeType</class-b>
+		<field>
+			<a set-method="setChoiceMapped">choice</a>
+			<b set-method="setChoiceMapped">choice</b>
+		</field>
+		<field>
+			<a set-method="setChoiceExitMapped">choiceExit</a>
+			<b set-method="setChoiceExitMapped">choiceExit</b>
+		</field>
+		<field>
+			<a set-method="setFlowMapped">flow</a>
+			<b set-method="setFlowMapped">flow</b>
+		</field>
+		<field>
+			<a set-method="setForwardOnlyMapped">forwardOnly</a>
+			<b set-method="setForwardOnlyMapped">forwardOnly</b>
+		</field>
+		<field>
+			<a set-method="setUseCurrentAttemptObjectiveInfoMapped">useCurrentAttemptObjectiveInfo</a>
+			<b set-method="setUseCurrentAttemptObjectiveInfoMapped">useCurrentAttemptObjectiveInfo</b>
+		</field>
+		<field>
+			<a set-method="setUseCurrentAttemptProgressInfoMapped">useCurrentAttemptProgressInfo</a>
+			<b set-method="setUseCurrentAttemptProgressInfoMapped">useCurrentAttemptProgressInfo</b>
+		</field>
+	</mapping>
+	<mapping map-null="false">
+		<class-a>es.pode.parseadorXML.castor.DeliveryControlsType</class-a>
+		<class-b>es.pode.parseadorXML.castor.DeliveryControlsType</class-b>
+		<field>
+			<a set-method="setCompletionSetByContentMapped">completionSetByContent</a>
+			<b set-method="setCompletionSetByContentMapped">completionSetByContent</b>
+		</field>
+		<field>
+			<a set-method="setObjectiveSetByContentMapped">objectiveSetByContent</a>
+			<b set-method="setObjectiveSetByContentMapped">objectiveSetByContent</b>
+		</field>
+		<field>
+			<a set-method="setTrackedMapped">tracked</a>
+			<b set-method="setTrackedMapped">tracked</b>
+		</field>
+	</mapping>
+	<mapping map-null="false">
+		<class-a>es.pode.parseadorXML.castor.LimitConditionsType</class-a>
+		<class-b>es.pode.parseadorXML.castor.LimitConditionsType</class-b>
+		<field>
+			<a set-method="setAttemptLimitMapped">attemptLimit</a>
+			<b set-method="setAttemptLimitMapped">attemptLimit</b>
+		</field>
+	</mapping>
+	<mapping map-null="false">
+		<class-a>es.pode.parseadorXML.castor.ObjectiveMappingType</class-a>
+		<class-b>es.pode.parseadorXML.castor.ObjectiveMappingType</class-b>
+		<field>
+			<a set-method="setReadNormalizedMeasureMapped">readNormalizedMeasure</a>
+			<b set-method="setReadNormalizedMeasureMapped">readNormalizedMeasure</b>
+		</field>
+		<field>
+			<a set-method="setReadSatisfiedStatusMapped">readSatisfiedStatus</a>
+			<b set-method="setReadSatisfiedStatusMapped">readSatisfiedStatus</b>
+		</field>
+		<field>
+			<a set-method="setWriteNormalizedMeasureMapped">writeNormalizedMeasure</a>
+			<b set-method="setWriteNormalizedMeasureMapped">writeNormalizedMeasure</b>
+		</field>
+		<field>
+			<a set-method="setWriteSatisfiedStatusMapped">writeSatisfiedStatus</a>
+			<b set-method="setWriteSatisfiedStatusMapped">writeSatisfiedStatus</b>
+		</field>
+	</mapping>
+	<mapping map-null="false">
+		<class-a>es.pode.parseadorXML.castor.ObjectiveType</class-a>
+		<class-b>es.pode.parseadorXML.castor.ObjectiveType</class-b>
+		<field>
+			<a set-method="setSatisfiedByMeasureMapped">satisfiedByMeasure</a>
+			<b set-method="setSatisfiedByMeasureMapped">satisfiedByMeasure</b>
+		</field>
+	</mapping>
+	<mapping map-null="false">
+		<class-a>es.pode.parseadorXML.castor.RandomizationType</class-a>
+		<class-b>es.pode.parseadorXML.castor.RandomizationType</class-b>
+		<field>
+			<a set-method="setReorderChildrenMapped">reorderChildren</a>
+			<b set-method="setReorderChildrenMapped">reorderChildren</b>
+		</field>
+		<field>
+			<a set-method="setSelectCountMapped">selectCount</a>
+			<b set-method="setSelectCountMapped">selectCount</b>
+		</field>
+	</mapping>
+	<mapping map-null="false">
+		<class-a>es.pode.parseadorXML.castor.RollupRulesType</class-a>
+		<class-b>es.pode.parseadorXML.castor.RollupRulesType</class-b>
+		<field>
+			<a set-method="setRollupObjectiveSatisfiedMapped">rollupObjectiveSatisfied</a>
+			<b set-method="setRollupObjectiveSatisfiedMapped">rollupObjectiveSatisfied</b>
+		</field>
+		<field>
+			<a set-method="setRollupProgressCompletionMapped">rollupProgressCompletion</a>
+			<b set-method="setRollupProgressCompletionMapped">rollupProgressCompletion</b>
+		</field>
+	</mapping>
+	<mapping map-null="false">
+		<class-a>es.pode.parseadorXML.castor.RollupRuleType</class-a>
+		<class-b>es.pode.parseadorXML.castor.RollupRuleType</class-b>
+		<field>
+			<a set-method="setMinimumCountMapped">minimumCount</a>
+			<b set-method="setMinimumCountMapped">minimumCount</b>
+		</field>
+	</mapping>
+	<mapping>
+		<class-a bean-factory="es.pode.parseadorXML.dozer.ExitConditionRuleActionTypeFactory">
+			es.pode.parseadorXML.castor.types.ExitConditionRuleActionType
+		</class-a>
+		<class-b bean-factory="es.pode.parseadorXML.dozer.ExitConditionRuleActionTypeFactory">
+			es.pode.parseadorXML.castor.types.ExitConditionRuleActionType
+		</class-b>
+		<field-exclude>
+			<a>type</a>
+			<b>type</b>
+		</field-exclude>
+	</mapping>
+	<mapping>
+		<class-a bean-factory="es.pode.parseadorXML.dozer.RuleActionFactory">
+			es.pode.parseadorXML.castor.types.RollupActionType
+		</class-a>
+		<class-b
+			bean-factory="es.pode.parseadorXML.dozer.RuleActionFactory">
+			es.pode.parseadorXML.castor.types.RollupActionType
+		</class-b>
+		<field-exclude>
+			<a>type</a>
+			<b>type</b>
+		</field-exclude>
+	</mapping>
+	<mapping>
+		<class-a bean-factory="es.pode.parseadorXML.dozer.RollupRuleConditionTypeFactory">
+			es.pode.parseadorXML.castor.types.RollupRuleConditionType
+		</class-a>
+		<class-b bean-factory="es.pode.parseadorXML.dozer.RollupRuleConditionTypeFactory">
+			es.pode.parseadorXML.castor.types.RollupRuleConditionType
+		</class-b>
+		<field-exclude>
+			<a>type</a>
+			<b>type</b>
+		</field-exclude>
+	</mapping>
+	<mapping>
+		<class-a bean-factory="es.pode.parseadorXML.dozer.ConditionCombinationFactory">
+			es.pode.parseadorXML.castor.types.ConditionCombinationType
+		</class-a>
+		<class-b
+			bean-factory="es.pode.parseadorXML.dozer.ConditionCombinationFactory">
+			es.pode.parseadorXML.castor.types.ConditionCombinationType
+		</class-b>
+		<field-exclude>
+			<a>type</a>
+			<b>type</b>
+		</field-exclude>
+	</mapping>
+	<mapping>
+		<class-a bean-factory="es.pode.parseadorXML.dozer.ChildActivityTypeFactory">
+			es.pode.parseadorXML.castor.types.ChildActivityType
+		</class-a>
+		<class-b
+			bean-factory="es.pode.parseadorXML.dozer.ChildActivityTypeFactory">
+			es.pode.parseadorXML.castor.types.ChildActivityType
+		</class-b>
+		<field-exclude>
+			<a>type</a>
+			<b>type</b>
+		</field-exclude>
+	</mapping>
+	<mapping>
+		<class-a bean-factory="es.pode.parseadorXML.dozer.RandomTimingTypeFactory">
+			es.pode.parseadorXML.castor.types.RandomTimingType
+		</class-a>
+		<class-b
+			bean-factory="es.pode.parseadorXML.dozer.RandomTimingTypeFactory">
+			es.pode.parseadorXML.castor.types.RandomTimingType
+		</class-b>
+		<field-exclude>
+			<a>type</a>
+			<b>type</b>
+		</field-exclude>
+	</mapping>
+	<mapping>
+		<class-a bean-factory="es.pode.parseadorXML.dozer.SequencingRuleConditionFactory">
+			es.pode.parseadorXML.castor.types.SequencingRuleConditionType
+		</class-a>
+		<class-b
+			bean-factory="es.pode.parseadorXML.dozer.SequencingRuleConditionFactory">
+			es.pode.parseadorXML.castor.types.SequencingRuleConditionType
+		</class-b>
+		<field-exclude>
+			<a>type</a>
+			<b>type</b>
+		</field-exclude>
+	</mapping>
+	<mapping>
+		<class-a bean-factory="es.pode.parseadorXML.dozer.PostConditionRuleFactory">
+			es.pode.parseadorXML.castor.types.PostConditionRuleActionType
+		</class-a>
+		<class-b
+			bean-factory="es.pode.parseadorXML.dozer.PostConditionRuleFactory">
+			es.pode.parseadorXML.castor.types.PostConditionRuleActionType
+		</class-b>
+		<field-exclude>
+			<a>type</a>
+			<b>type</b>
+		</field-exclude>
+	</mapping>
+	<mapping>
+		<class-a bean-factory="es.pode.parseadorXML.dozer.PreConditionRuleFactory">
+			es.pode.parseadorXML.castor.types.PreConditionRuleActionType
+		</class-a>
+		<class-b
+			bean-factory="es.pode.parseadorXML.dozer.PreConditionRuleFactory">
+			es.pode.parseadorXML.castor.types.PreConditionRuleActionType
+		</class-b>
+		<field-exclude>
+			<a>type</a>
+			<b>type</b>
+		</field-exclude>
+	</mapping>
+	<mapping>
+		<class-a bean-factory="es.pode.parseadorXML.dozer.ConditionOperatorFactory">
+			es.pode.parseadorXML.castor.types.ConditionOperatorType
+		</class-a>
+		<class-b bean-factory="es.pode.parseadorXML.dozer.ConditionOperatorFactory">
+			es.pode.parseadorXML.castor.types.ConditionOperatorType
+		</class-b>
+		<field-exclude>
+			<a>type</a>
+			<b>type</b>
+		</field-exclude>
+	</mapping>
+</mappings>

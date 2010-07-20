@@ -1,0 +1,8 @@
+<rights>
+	${load:template.6.1.xml}
+	<!-- Opcional -->
+	${load:template.6.2.xml}
+	<!-- Opcional -->
+	${load:description.xml}
+	${load:template.6.4.xml}
+</rights>

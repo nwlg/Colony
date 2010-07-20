@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+    "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+    "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+	   
+    <!-- +++++++++++++++++++++++++++++++ -->
+    <!-- Layouts definitivos para portal -->
+    <!-- +++++++++++++++++++++++++++++++ -->
+    <definition name="layout-principal" page="/layout/layout-principal.jsp">
+ 	   <!-- El pie solo tiene enlaces a paginas externas a PODE. -->
+ 	   <!-- Lo dejo como HTML estatico --> 	   
+    	<put name="title" type="string" value=""/>
+    	<put name="pie" value="/layout/pie.jsp"/>
+    	
+    	<!-- Para evitar duplicar codigo, usar logic tags en el JSP -->
+    	<!-- que pinten las opciones correspondientes a usuario autenticado -->
+    	<!-- o usuario generico -->
+<!--
+    	<put name="metanavegacion" type="definition" value="menu.cabecera.autenticado"/>
+-->
+	<!-- Header menu bar RHS (optional statistics display) -->
+	<put name="menu.cabacera.top.rhs" type="string" value=""/>
+
+	<!-- Any RHS floated menus -->
+	<put name="menu-rhs" type="string" value=""/>
+	
+    	<put name="buscador" type="string" value=""/>
+    	
+    	<put name="menu-principal" type="string" value=""/>
+    	<put name="body" type="string" value=""/>
+		<put name="motorBusqueda" type="string" value=""/>   	 
+    </definition>
+    
+    <!-- +++++++++++++++++++++++++++++++ -->
+    <!-- Layouts definitivos para portal -->
+    <!-- +++++++++++++++++++++++++++++++ -->
+    <definition name="layout-buscador" page="/layout/layout-buscador.jsp">
+ 	   <!-- El pie solo tiene enlaces a paginas externas a PODE. -->
+ 	   <!-- Lo dejo como HTML estatico --> 	   	
+    	<put name="title" type="string" value=""/>
+    	<put name="pie" value="/layout/pie.jsp"/>
+    	
+    	
+    	<!-- Para evitar duplicar codigo, usar logic tags en el JSP -->
+    	<!-- que pinten las opciones correspondientes a usuario autenticado -->
+    	<!-- o usuario generico -->
+<!--
+    	<put name="metanavegacion" type="definition" value="menu.cabecera.metanavegacion"/>
+-->
+	<!-- Allow us to put items on the RHS of the search menu -->
+	<put name="menu-rhs" type="string" value=""/>
+	
+	<put name="buscador" type="string" value=""/>
+    	<put name="menu-principal" type="definition" value="menu.cabecera.autenticado"/>
+    	
+    	<put name="menu-principal" type="string" value=""/>
+    	<put name="body" type="string" value=""/>
+    	<!-- El tile de mensajes de error se conserva por motivos de -->
+    	<!-- desarrollo. Desabilitar antes de subir a StarTeam -->
+    </definition>
+    
+    <definition name="layout-gestor-flujo"
+    	page="/layout/layout-gestor-flujo.jsp">
+    	<!-- El pie solo tiene enlaces a paginas externas a PODE. -->
+    	<!-- Lo dejo como HTML estatico -->
+    	<put name="title" type="string" value="" />
+    	<put name="metanavegacion" type="definition" value="menu.cabecera.metanavegacion"/>
+    	<put name="buscador" type="definition" value="buscador"/>
+    	
+    	<put name="menu-principal" type="definition" value="menu.cabecera.autenticado"/>
+    	
+    	<put name="body" type="string" value="" />
+    	<put name="pie" value="/layout/pie.jsp" />
+    	<put name="messages" type="definition" value="messages.tile" />
+    </definition>
+    
+    
+     <definition name="layout-comentarios"
+    	page="/layout/layout-comentarios.jsp">    	
+    	<!-- Lo dejo como HTML estatico -->
+    	<put name="title" type="string" value="" />        	
+    	<put name="body" type="string" value="" />    	
+    	<put name="messages" type="definition" value="messages.tile" />
+    	<put name="pie" value="/layout/pie.jsp" />
+    </definition>
+    
+    <definition name="layout-gestor-flujo-con-style"
+    	page="/layout/layout-gestor-flujo-con-style.jsp">
+    	<!-- El pie solo tiene enlaces a paginas externas a PODE. -->
+    	<!-- Lo dejo como HTML estatico -->
+    	<put name="title" type="string" value="" />
+    	<put name="metanavegacion" type="definition" value="menu.cabecera.metanavegacion"/>
+    	<put name="buscador" type="definition" value="buscador"/>
+    	
+    	<put name="menu-principal" type="definition" value="menu.cabecera.autenticado"/>
+    	
+    	<put name="body" type="string" value="" />
+    	<put name="pie" value="/layout/pie.jsp" />
+    	<put name="messages" type="definition" value="messages.tile" />
+    </definition>
+    
+    <!-- Menus, cabeceras y pie correspondiente para usuario administrador -->
+    <definition name="layout-administrador" extends="layout-principal">
+    	<put name="menu-lateral" type="definition" value="menu.lateral.administrador"/>
+    	<!-- Usar rol del usuario para dibujar el link de ADMIN o no -->
+    	 <put name="menu-principal" type="definition" value="menu.cabecera.autenticado"/>
+    	 <put name="buscador" type="definition" value="buscador"/>    	 
+    </definition>
+    
+    <!-- Menus, cabeceras y pie correspondiente para usuario administrador -->
+    <definition name="layout-administrador-portada" extends="layout-principal">
+    	<put name="menu-lateral" type="definition" value="menu.lateral.administrador"/>
+    	<!-- Usar rol del usuario para dibujar el link de ADMIN o no -->
+    	 <put name="menu-principal" type="definition" value="menu.cabecera.autenticado"/>
+    	 <put name="buscador" type="definition" value="buscador"/>  
+    	 <put name="motorBusqueda" type="definition" value="menu.agregar.motor.busqueda"/>   	    	 
+    </definition>
+    
+    <!-- Menus, cabeceras y pie correspondiente para usuario autenticado -->
+    <definition name="layout-usuario" extends="layout-principal">    	
+    	<put name="menu-lateral" type="definition" value="menu.lateral.generico"/>
+    	<!-- Usar rol del usuario para dibujar el link de ADMIN o no -->
+    <put name="menu-principal" type="definition" value="menu.cabecera.autenticado"/>
+    <put name="buscador" type="definition" value="buscador"/>
+    </definition>
+    
+    <!-- Menus, cabeceras y pie correspondiente para usuario autenticado -->
+    <definition name="layout-portada" extends="layout-principal">    	
+    	<put name="menu-lateral" type="definition" value="menu.lateral.generico"/>
+    	<!-- Usar rol del usuario para dibujar el link de ADMIN o no -->
+    <put name="menu-principal" type="definition" value="menu.cabecera.autenticado"/>
+    <put name="buscador" type="definition" value="buscador"/>
+    <put name="motorBusqueda" type="definition" value="menu.agregar.motor.busqueda"/>   	 
+        
+    </definition>
+    
+    <!-- Menus, cabeceras y pie correspondiente para usuario no autenticado -->
+    <definition name="layout-generico" extends="layout-principal">
+    	<put name="menu-lateral" type="definition" value="menu.lateral.generico"/>
+    	<put name="menu-principal" type="definition" value="menu.cabecera.autenticado"/>
+    	<put name="buscador" type="definition" value="buscador"/>
+    </definition>
+	
+	<definition name="layout-sinlateral" extends="layout-buscador">
+ 	   <put name="menu-principal" type="definition" value="menu.cabecera.autenticado"/>
+    	<put name="buscador" type="definition" value="buscador"/>
+    </definition>
+    
+    <definition name="layout-sinlateralYsinbuscadorSuperior" extends="layout-buscador">
+    	<put name="menu-principal" type="definition" value="menu.cabecera.autenticado"/>
+    	<put name="buscador" type="definition" value="cabecera-sin-buscador"/>
+    </definition>
+
+	<definition name="layout-empaquetador" page="/layout/layout-buscador-empaquetador.jsp">
+		<put name="title" type="string" value=""/>
+		<put name="pie" value="/layout/pie.jsp"/>
+		<put name="body" type="string" value=""/>
+	</definition>
+
+    <definition name="layout-empaquetador" page="/layout/layout-principal3.jsp">
+ 	   <!-- El pie solo tiene enlaces a paginas externas a PODE. -->
+ 	   <!-- Lo dejo como HTML estatico -->
+    	<put name="title" type="string" value=""/>
+    	<put name="pie" value="/layout/pie.jsp"/>
+    	<put name="cabecera" value="/layout/cabecera-direction.jsp"/>
+    	<put name="barraMenu" value=""/>
+    	
+    	<!-- Para evitar duplicar codigo, usar logic tags en el JSP -->
+    	<!-- que pinten las opciones correspondientes a usuario autenticado -->
+    	<!-- o usuario generico -->
+    	<put name="metanavegacion" type="definition" value="menu.cabecera.metanavegacion"/>
+    	
+    	<put name="menu-principal" type="string" value=""/>
+    	<put name="body" type="string" value=""/>
+    </definition>
+       
+	<definition name="layout-empaquetador-basico" extends="layout-empaquetador">
+		<put name="cabecera" value="/layout/cabecera-direction.jsp"/>
+		<put name="barraMenu" type="definition" value="menu.cabecera.EmpBasico"/>
+		<put name="urlArchivos" type="string" value=""/>
+		<put name="urlRecursos" type="string" value=""/>
+		<put name="urlOrganizaciones" type="string" value=""/>
+		<put name="urlSubmanifiestos" type="string" value=""/>
+		<put name="urlEstructura" type="string" value=""/>
+		<put name="urlGuardar" type="string" value=""/>
+		<put name="selected" type="string" value=""/>
+		<put name="parametrosCatalogar" type="string" value=""/>
+	</definition>
+	
+	<definition name="layout-empaquetador-avanzado" extends="layout-empaquetador">
+		<put name="cabecera" value="/layout/cabecera-direction-avanzado.jsp"/>
+		<put name="barraMenu" type="definition" value="menu.cabecera.EmpAvanzado"/>
+		<put name="urlArchivos" type="string" value=""/>
+		<put name="urlRecursos" type="string" value=""/>
+		<put name="urlOrganizaciones" type="string" value=""/>
+		<put name="urlSubmanifiestos" type="string" value=""/>
+		<put name="urlEstructura" type="string" value=""/>
+		<put name="urlGuardar" type="string" value=""/>
+		<put name="selected" type="string" value=""/>
+		<put name="parametrosCatalogar" type="string" value=""/>
+	</definition>
+    
+    <definition name="layout-offline" page="/layout/layout-offline.jsp">
+    	<put name="title" type="string" value=""/>
+    	<put name="body" type="string" value=""/>
+    	<put name="pie" value="/layout/pie-offline.jsp"/>
+    </definition>
+    
+    <definition name="menu.cabecera.EmpAvanzado" page="/layout/menu-cabecera-emp-avanzado.jsp"/>   
+    
+    <definition name="menu.cabecera.EmpBasico" page="/layout/menu-cabecera-emp-basico.jsp"/>
+    
+    <definition name="menu.lateral.administrador" page="/layout/menu-lateral-administrador.jsp" controllerClass="es.pode.soporte.menu.MenuLateralControllerImpl"/>   
+    
+    <definition name="menu.lateral.generico" page="/layout/menu-lateral-generico.jsp" controllerClass="es.pode.soporte.menu.MenuLateralControllerImpl"/>   
+    
+    <definition name="menu.cabecera.autenticado" page="/layout/menu-cabecera-autenticado.jsp" controllerClass="es.pode.soporte.menu.MenuCabeceraControllerImpl"/>
+    
+    <definition name="menu.cabecera.metanavegacion" page="/layout/metanavegacion.jsp" controllerClass="es.pode.soporte.menu.MenuMetanavegacionControllerImpl"/>
+
+    <definition name="menu.cabecera.vacio" page="/layout/menu-cabecera-vacio.html"/>
+    
+    <definition name="buscador" page="/layout/buscador.jsp" controllerClass="es.pode.soporte.buscar.BuscarController"/>
+    
+    <definition name="cabecera-sin-buscador" page="/layout/cabecera-sin-buscador.jsp"/>
+       
+	<!-- Definiciones generadas por I-Builder -->
+    <definition name="main.layout" page="/layout/main-layout.jsp">
+        <put name="title" type="string" value=""/>
+        <put name="style" type="string" value=""/>
+        <put name="javascript" type="string" value=""/>
+        <put name="body" type="string" value=""/>
+        <put name="menu" type="definition" value="menu.tile"/>
+        <put name="breadcrumbs" type="definition" value="breadcrumbs.tile"/>
+    </definition>
+
+    <definition name="login.layout" extends="main.layout"/>
+
+    <definition name="menu.tile" page="/layout/menu.jsp"/>
+
+    <definition name="breadcrumbs.tile" page="/layout/breadcrumbs.jsp"/>
+
+    <definition name="help.layout" page="/layout/help-layout.jsp"/>
+    
+    <definition name="menu.agregar.motor.busqueda" page="/layout/menu-agregar-motor-busqueda.jsp"/>
+
+    <!-- Tile defining the tag cloud --> 
+    <definition name="agrega.tagcloud" page="/layout/tagcloud.jsp" controllerClass="es.pode.soporte.menu.MenuCloudControllerImpl"/>
+
+    <!-- Tile defining the simple search box -->
+    <definition name="agrega.search" page="/layout/searchbox.jsp"/>
+    
+    <!-- Tile defining the menu bar directly beneath the logo -->
+    <definition name="menu.cabecera.top" page="/layout/cabecera.jsp"/>
+
+</tiles-definitions>

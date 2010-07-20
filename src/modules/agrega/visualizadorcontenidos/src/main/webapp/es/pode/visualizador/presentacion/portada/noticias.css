@@ -1,0 +1,50 @@
+#accesibilidad.action {}
+#accesibilidad.action #form_submit {}
+
+
+#mapa.action {}
+#mapa.action #form_submit {}
+
+
+#contacto.action {}
+#contacto.action #form_submit {}
+
+
+#acercaDeAgrega.action {}
+#acercaDeAgrega.action #form_submit {}
+
+
+#informacionLegal.action {}
+#informacionLegal.action #form_submit {}
+
+
+#politicaPrivacidad.action {}
+#politicaPrivacidad.action #form_submit {}
+
+
+#acceso.action {}
+#acceso.action #form_submit {}
+
+
+#descargas.action {}
+#descargas.action #form_submit {}
+
+
+#noticias.table {}
+#noticias.table th {}
+#noticias.table td div {}
+
+#noticias.table th.titulo {}
+#noticias.table td div.titulo {}
+
+#noticias.table th.fechaPublicacion.time {}
+#noticias.table td div.fechaPublicacion.time {}
+
+#noticias.table th.resumen {}
+#noticias.table td div.resumen {}
+
+#noticias.table th.categoria.nombre {}
+#noticias.table td div.categoria.nombre {}
+
+
+

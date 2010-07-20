@@ -1,0 +1,13 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="accesibilidad" class="action">
+    <h3><bean:message key="portada.noticias.accesibilidad"/></h3>
+    <div class="trigger">
+        <form id="portadaNoticiasAccesibilidadForm" action='<html:rewrite action="/Portada/NoticiasAccesibilidad"/>' method="post">
+               <html:submit onmouseover="hints.show('Accesibilidad')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="portada.noticias.accesibilidad"/>
+               </html:submit>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

@@ -1,0 +1,192 @@
+/*
+ * Colours: 
+ *
+ *    Rules: #cccccc
+ *    Background: #eaf3f8
+ *    Text: #666666
+ *
+ */
+div.la, #no-wayf {
+   background-color: #eaf3f8;
+/*   -moz-border-radius: 12px;
+   -webkit-border-radius: 12px;
+   -khtml-border-radius: 12px;
+   border-radius: 12px;*/
+}
+
+div.row, #no-wayf {
+   margin-bottom: 10px;
+}
+
+.container {
+   margin-left: 12px !important;
+}
+
+body, a, a:link, a:visited, a:hover {
+   color: #666666 !important; /* important just for IE */
+   text-decoration: none;
+}
+body {
+   font-family: Helvetica, Arial, sans-serif !important; 
+}
+
+body {
+   margin-bottom: 60px;
+}
+
+div.la {
+   min-height: 116px;
+}
+#no-wayf p {
+   margin: 10px 20px;
+   font-family: Verdana,Arial,sans-serif;
+}
+
+#no-wayf a {
+   font-family: Verdana,Arial,sans-serif;
+   font-weight: bold;
+   color: #666666
+}
+
+div.la h5, #heading, #header {
+   position: relative;
+   border-bottom: solid 1px #cccccc;
+} 
+
+div.la h5 {
+   color: #666666;
+   margin-top: 15px;
+   margin-bottom: 12px;
+   padding-bottom: 8px;
+   line-height: 110%;
+}
+div.la p, #footer p {
+   line-height: 110%;
+   font-size: 90%;
+   font-family: Verdana,Arial,sans-serif;
+}
+
+
+#heading {
+   margin-bottom: 15px;
+} 
+
+div.logo {
+/*   -moz-border-radius: 10px;
+   -webkit-border-radius: 10px;
+   -khtml-border-radius: 10px;
+   border-radius: 10px;*/
+   background-color: #FFFFFF;
+   width: 95px;
+   height: 95px;
+   margin: 11px;
+   text-align: center;
+   line-height: 95px;
+}
+
+div.logo img {
+   vertical-align: middle;
+   margin: 0 auto;
+   max-width: 90px;
+   max-height: 90px;
+}
+
+
+#heading h1 {
+   color: #666666;
+   font-size: 150%;
+   font-weight: bold;
+   margin-top: 30px;
+}
+
+#header {
+   padding-top: 24px;
+   padding-bottom: 8px;
+   height: 81px;
+}
+
+#ndrb-logo {
+   margin-left: 9px;
+}
+
+#header-text {
+   color: #666666;
+   font-size: 16px;
+   font-weight:bold;
+
+   position: absolute; 
+   float: right; 
+   width: auto; 
+   right: 0px; 
+   bottom: 7px;
+
+}
+
+#footer {
+   height: 60px;
+}
+
+#footer p {
+   font-size: smaller;
+}
+#footer ul {
+   list-style-type: none;
+   padding: 0px;
+   margin: 0px;
+}
+
+#footer ul li {
+   float: left;
+   padding-right: 4px;
+   margin-right: 4px;
+   line-height: 100%;
+   font-size: 95%;
+}
+
+#footer_logos  ul li  a#footertext img {
+width:148px;
+height:31px;
+margin-left:10px;
+margin-top:8px;
+display:inline;   /* Because IE6 is broken */
+}
+
+#footer_logos ul li  a#nen img {
+width:73px;
+padding-right:0;
+height:48px;
+margin-left:10px;
+display:inline;  /* Because IE6 is broken */
+}
+ 
+ul li  a#nwlg img {margin-left:1px;}
+ 
+#footer_logos ul li  a#nwlg img {
+width:83px;
+margin-left:-1px;
+padding-right:0;
+height:47px;
+}
+
+#footer_poweredby {
+   float: right;
+   margin-left: 18px;
+   margin-top: 8px;
+}
+
+#footer_linkbar {
+   margin-top: 16px;
+   float: right;
+}
+
+#footer_linkbar a{
+   color:#585858;
+   text-decoration:none;
+   font-size:11.2px;
+   padding-left: 5px;
+}
+
+a.bar {
+padding-right:7px;
+background:transparent  url("images/barrita.gif") 100% 60% no-repeat;}
+ 

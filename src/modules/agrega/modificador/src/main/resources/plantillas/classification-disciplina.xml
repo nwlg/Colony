@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Plantilla para la creacion de un classification 	-->
+<!-- que permita añadir un arbol curricular 			-->
+<classification xmlns="http://ltsc.ieee.org/xsd/LOM">
+	<purpose>
+		<source>LOM-ESv1.0</source>
+		<value>discipline</value>
+	</purpose>
+</classification>

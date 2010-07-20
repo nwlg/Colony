@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="introducirComentarios" class="action">
+    <h3><bean:message key="detallar.odecu.mostrar.detalle.ode.introducir.comentarios"/></h3>
+    <div class="trigger">
+        <form id="detallarODECUMostrarDetalleODEIntroducirComentariosForm" action='<html:rewrite action="/DetallarODECU/MostrarDetalleODEIntroducirComentarios"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_EMPAQUETADOR,ROLE_PUBLICADOR,ROLE_DOCENTE,ROLE_CATALOGADOR,ROLE_ADMINISTRADOR,ROLE_DEMOUSER">
+               <html:submit onmouseover="hints.show('introducirComentarios')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="detallar.odecu.mostrar.detalle.ode.introducir.comentarios"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

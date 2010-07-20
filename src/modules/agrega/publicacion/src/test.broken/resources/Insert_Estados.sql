@@ -1,0 +1,9 @@
+INSERT INTO publicacion.estado 
+(id,nombre) VALUES
+(1,'CREACION'),
+(2,'PROPUESTO'),
+(3,'PUBLICADO'),
+(4,'RECHAZADO'),
+(5,'NO_DISPONIBLE'),
+(6,'ELIMINADO'),
+(7,'PROPUESTO_CATALOGACION');

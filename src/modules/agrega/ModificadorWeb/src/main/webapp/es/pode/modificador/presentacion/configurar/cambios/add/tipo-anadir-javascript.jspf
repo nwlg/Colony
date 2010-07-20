@@ -1,0 +1,30 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'tipo.anadir.tipo.anadir.select.action.param.alcance.title':'<formatting:escape language="javascript"><bean:message key="tipo.anadir.tipo.anadir.select.action.param.alcance.title"/></formatting:escape>',
+                'tipo.anadir.tipo.anadir.select.action.param.tipo.aniadir.title':'<formatting:escape language="javascript"><bean:message key="tipo.anadir.tipo.anadir.select.action.param.tipo.aniadir.title"/></formatting:escape>',
+                'tipo.anadir.tipo.anadir.select.action.param.action.title':'<formatting:escape language="javascript"><bean:message key="tipo.anadir.tipo.anadir.select.action.param.action.title"/></formatting:escape>',
+                'tipo.anadir.tipo.anadir.buscar.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="tipo.anadir.tipo.anadir.buscar.param.idioma.buscador.title"/></formatting:escape>',
+                'tipo.anadir.tipo.anadir.buscar.param.tipo.busqueda.title':'<formatting:escape language="javascript"><bean:message key="tipo.anadir.tipo.anadir.buscar.param.tipo.busqueda.title"/></formatting:escape>',
+                'selectAction':'<formatting:escape language="javascript"><bean:message key="tipo.anadir.tipo.anadir.select.action.title"/></formatting:escape>',
+                'selectAction_no':'<formatting:escape language="javascript"><bean:message key="tipo.anadir.tipo.anadir.select.action.title.notallowed"/></formatting:escape>',
+                'selectAction_reset':'<formatting:escape language="javascript"><bean:message key="tipo.anadir.tipo.anadir.select.action.title.reset"/></formatting:escape>',
+                'selectAction_noreset':'<formatting:escape language="javascript"><bean:message key="tipo.anadir.tipo.anadir.select.action.title.reset.not.allowed"/></formatting:escape>',
+                'Buscar':'<formatting:escape language="javascript"><bean:message key="tipo.anadir.tipo.anadir.buscar.title"/></formatting:escape>',
+                'Buscar_no':'<formatting:escape language="javascript"><bean:message key="tipo.anadir.tipo.anadir.buscar.title.notallowed"/></formatting:escape>',
+                'Buscar_reset':'<formatting:escape language="javascript"><bean:message key="tipo.anadir.tipo.anadir.buscar.title.reset"/></formatting:escape>',
+                'Buscar_noreset':'<formatting:escape language="javascript"><bean:message key="tipo.anadir.tipo.anadir.buscar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+</script>
+    </tiles:put>

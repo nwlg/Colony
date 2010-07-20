@@ -1,0 +1,51 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="pendientes" class="action">
+    <h3><bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.pendientes"/></h3>
+    <div class="trigger">
+        <html:form styleId="objetosDespublicadosCUMostrarODESDespublicadosPendientesForm" action="/ObjetosDespublicadosCU/MostrarODESDespublicadosPendientes" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="idiomaBuscador">
+                        <td class="label"><bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.pendientes.param.idioma.buscador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idiomaBuscador}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.idiomaBuscadorBackingList}">
+                                  <html:select name="form" property="idiomaBuscador" onmouseover="hints.show('objetos.despublicados.cu.mostrar.odesdespublicados.pendientes.param.idioma.buscador.title')" onmouseout="hints.hide()"  styleId="pendientesIdiomaBuscador">
+                                      <html:optionsCollection name="form" property="idiomaBuscadorBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="idiomaBuscador" onmouseover="hints.show('objetos.despublicados.cu.mostrar.odesdespublicados.pendientes.param.idioma.buscador.title')" onmouseout="hints.hide()"  styleId="pendientesIdiomaBuscador"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="tipoBuscador">
+                        <td class="label"><bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.pendientes.param.tipo.buscador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipoBuscador}"/>
+                           <input type="text" name="tipoBuscador" value="${value}" onmouseover="hints.show('objetos.despublicados.cu.mostrar.odesdespublicados.pendientes.param.tipo.buscador.title')" onmouseout="hints.hide()"  id="pendientesTipoBuscador"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR,ROLE_CATALOGADOR,ROLE_PUBLICADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Pendientes')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.pendientes"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

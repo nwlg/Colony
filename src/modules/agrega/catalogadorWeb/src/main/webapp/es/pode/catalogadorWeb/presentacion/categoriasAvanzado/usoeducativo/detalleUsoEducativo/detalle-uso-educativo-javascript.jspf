@@ -1,0 +1,50 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'detalle.uso.edu.detalle.uso.educativo.submit.param.accion.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.param.accion.title"/></formatting:escape>',
+                'detalle.uso.edu.detalle.uso.educativo.submit.param.titulo.uso.educativo.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.param.titulo.uso.educativo.title"/></formatting:escape>',
+                'detalle.uso.edu.detalle.uso.educativo.submit.param.tipo.interactividad.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.param.tipo.interactividad.title"/></formatting:escape>',
+                'detalle.uso.edu.detalle.uso.educativo.submit.param.tipo.recurso.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.param.tipo.recurso.title"/></formatting:escape>',
+                'detalle.uso.edu.detalle.uso.educativo.submit.param.combo.tipo.recurso.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.param.combo.tipo.recurso.title"/></formatting:escape>',
+                'detalle.uso.edu.detalle.uso.educativo.submit.param.nivel.interactividad.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.param.nivel.interactividad.title"/></formatting:escape>',
+                'detalle.uso.edu.detalle.uso.educativo.submit.param.densidad.semantica.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.param.densidad.semantica.title"/></formatting:escape>',
+                'detalle.uso.edu.detalle.uso.educativo.submit.param.rol.usuario.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.param.rol.usuario.title"/></formatting:escape>',
+                'detalle.uso.edu.detalle.uso.educativo.submit.param.combo.rol.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.param.combo.rol.title"/></formatting:escape>',
+                'detalle.uso.edu.detalle.uso.educativo.submit.param.contexto.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.param.contexto.title"/></formatting:escape>',
+                'detalle.uso.edu.detalle.uso.educativo.submit.param.combo.contexto.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.param.combo.contexto.title"/></formatting:escape>',
+                'detalle.uso.edu.detalle.uso.educativo.submit.param.edad.tipica.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.param.edad.tipica.title"/></formatting:escape>',
+                'detalle.uso.edu.detalle.uso.educativo.submit.param.combo.idioma.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.param.combo.idioma.title"/></formatting:escape>',
+                'detalle.uso.edu.detalle.uso.educativo.submit.param.dificultad.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.param.dificultad.title"/></formatting:escape>',
+                'detalle.uso.edu.detalle.uso.educativo.submit.param.tiempo.aprendizaje.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.param.tiempo.aprendizaje.title"/></formatting:escape>',
+                'detalle.uso.edu.detalle.uso.educativo.submit.param.anyo.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.param.anyo.title"/></formatting:escape>',
+                'detalle.uso.edu.detalle.uso.educativo.submit.param.mes.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.param.mes.title"/></formatting:escape>',
+                'detalle.uso.edu.detalle.uso.educativo.submit.param.dia.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.param.dia.title"/></formatting:escape>',
+                'detalle.uso.edu.detalle.uso.educativo.submit.param.hora.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.param.hora.title"/></formatting:escape>',
+                'detalle.uso.edu.detalle.uso.educativo.submit.param.minutos.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.param.minutos.title"/></formatting:escape>',
+                'detalle.uso.edu.detalle.uso.educativo.submit.param.segundos.p1.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.param.segundos.p1.title"/></formatting:escape>',
+                'detalle.uso.edu.detalle.uso.educativo.submit.param.segundos.p2.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.param.segundos.p2.title"/></formatting:escape>',
+                'detalle.uso.edu.detalle.uso.educativo.submit.param.tiempo.ap.descripcion.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.param.tiempo.ap.descripcion.title"/></formatting:escape>',
+                'detalle.uso.edu.detalle.uso.educativo.submit.param.descripciones.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.param.descripciones.title"/></formatting:escape>',
+                'detalle.uso.edu.detalle.uso.educativo.submit.param.idiomas.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.param.idiomas.title"/></formatting:escape>',
+                'detalle.uso.edu.detalle.uso.educativo.submit.param.proceso.cognitivo.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.param.proceso.cognitivo.title"/></formatting:escape>',
+                'detalle.uso.edu.detalle.uso.educativo.submit.param.combo.proceso.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.param.combo.proceso.title"/></formatting:escape>',
+                'detalle.uso.edu.detalle.uso.educativo.submit.param.boton.pulsado.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.param.boton.pulsado.title"/></formatting:escape>',
+                'detalle.uso.edu.detalle.uso.educativo.submit.param.descripcion.tipo.conocimiento.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.param.descripcion.tipo.conocimiento.title"/></formatting:escape>',
+                'detalle.uso.edu.detalle.uso.educativo.submit.param.descripcion.cat.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.param.descripcion.cat.title"/></formatting:escape>',
+                'submit':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.title"/></formatting:escape>',
+                'submit_no':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.title.notallowed"/></formatting:escape>',
+                'submit_reset':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.title.reset"/></formatting:escape>',
+                'submit_noreset':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.detalle.uso.educativo.submit.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

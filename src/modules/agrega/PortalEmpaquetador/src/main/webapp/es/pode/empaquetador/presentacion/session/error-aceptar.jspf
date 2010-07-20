@@ -1,0 +1,13 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="sesion.caducada.error.aceptar"/></h3>
+    <div class="trigger">
+        <form id="sesionCaducadaErrorAceptarForm" action='<html:rewrite action="/SesionCaducada/ErrorAceptar"/>' method="post">
+               <html:submit onmouseover="hints.show('Aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="sesion.caducada.error.aceptar"/>
+               </html:submit>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//Spring//DTD Bean//EN" 
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<!-- Application Context -->
+<beans>    
+<!-- Importo el contexto de parseadorXML.jar -->
+    <import resource="parseadorXML-applicationContext.xml"/>
+    <!--          External Beans               -->
+    <bean id="ScormDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.publicacion.negocio.servicios.ScormDao">
+            	<property name="beanMapper">
+             		<ref bean="beanMapperODEs"/>
+         		</property>
+         	</bean>
+        </property>       
+    </bean>  
+    <bean id="ZipDao" class="es.pode.publicacion.negocio.servicios.ZipDao">
+   </bean> 
+</beans>
+
+
+  

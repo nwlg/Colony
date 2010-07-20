@@ -1,0 +1,55 @@
+<div id="descargas" class="table">
+    <display:table name="${form.descargas}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="no-activas-descargas.pdf" />
+
+        <display:column media="xml csv excel pdf"
+            titleKey="no.activas.no.activas.param.descargas.identificador"
+            autolink="true" paramId="identificador"
+            property="identificador">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="identificador" paramId="identificador"
+            sortProperty="identificador" sortable="true"
+            titleKey="no.activas.no.activas.param.descargas.identificador"
+            >
+            <div class="identificador">
+		
+ <c:set var="value" value="${row.identificador}"/>
+ <input type="text" name="identificador" value="${value}" onmouseover="hints.show('no.activas.no.activas.activar.param.identificador.title')" onmouseout="hints.hide()"  id="descargasIdentificador${row_rowNum}"/>
+            </div>
+       </display:column>
+   
+
+        <display:column media="xml csv excel pdf"
+            titleKey="no.activas.no.activas.param.descargas.titulo"
+            autolink="true" paramId="titulo"
+            property="titulo">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="titulo" paramId="titulo"
+            sortProperty="titulo" sortable="true"
+            titleKey="no.activas.no.activas.param.descargas.titulo"
+            property="titulo" />
+   
+
+        <display:column media="xml csv excel pdf"
+            titleKey="no.activas.no.activas.param.descargas.fecha"
+            autolink="true" paramId="fecha"
+            property="fecha">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="fecha" paramId="fecha"
+            sortProperty="fecha" sortable="true"
+            titleKey="no.activas.no.activas.param.descargas.fecha"
+            property="fecha" />
+   
+    </display:table>
+</div>
+

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<lom xmlns:imsmd="http://ltsc.ieee.org/xsd/LOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM D:\castorlomes\LOM-ES_XSD\lomCustom.xsd">
+      <general>
+        <identifier>
+          <catalog>Catálogo unificado mec-red.es-ccaa de identificación de ODE</catalog>
+          <entry>es_20070518_2_0040101</entry>
+        </identifier>
+        <title>
+          <string>Historia de la Publicidad</string>
+        </title>
+        <language>es</language>
+        <description>
+          <string>Desarrollo, en formato texto, de la historia de la publicidad, sus principales hitos y su transformación, desde sus precedentes hasta nuestros días.</string>
+        </description>
+        <keyword>
+          <string>Publicidad, Medios de Comunicación</string>
+        </keyword>
+        <coverage>
+          <string>Universal</string>
+        </coverage>
+        <structure>
+          <source>LOM-ES V1.0</source>
+          <value>hierarchical</value>
+        </structure>
+        <aggregationLevel>
+          <source>LOM-ES V1.0</source>
+          <value>2</value>
+        </aggregationLevel>
+      </general>
+      <lifeCycle>
+        <version>
+          <string>V1.0</string>
+        </version>
+        <status>
+          <source>LOM-ES V1.0</source>
+          <value>final</value>
+        </status>
+        <contribute>
+          <role>
+            <source>LOM-ES V1.0</source>
+            <value>author</value>
+          </role>
+          <entity>BEGIN:VCARD VERSION:3.0 FN:Juan Carlos Alfeo Álvarez, María Isabel Reyes Moreno, Antonio Cuadrado Esclapez Miguel Ángel Sáez, Servipinto S.L..  EMAIL;TYPE=INTERNET:ORG:END:VCARD</entity>
+          <date>
+            <dateTime>2004-10-31</dateTime>
+            <description>
+              <string>Fecha de creación del objeto didáctico</string>
+            </description>
+          </date>
+        </contribute>
+        <contribute>
+          <role>
+            <source>LOM-ES V1.0</source>
+            <value>editor</value>
+          </role>
+          <entity>BEGIN:VCARD VERSION:3.0 FN: Centro Nacional de Información y Comunicación Educativa EMAIL;TYPE=INTERNET: webmaster@cnice.mec.es ORG:Ministerio de Educación y Ciencia de España END:VCARD</entity>
+          <date>
+            <dateTime>2004-10-31</dateTime>
+            <description>
+              <string>Fecha de publicación del objeto didáctico</string>
+            </description>
+          </date>
+        </contribute>
+      </lifeCycle>
+      <metaMetadata>
+        <identifier>
+          <catalog>Catálogo unificado mec-red.es-ccaa-meta de identificación de instancias de metadatos de ODE</catalog>
+          <entry>es_20070518_2_0040101-meta</entry>
+        </identifier>
+        <contribute>
+          <role>
+            <source>LOM-ES V1.0</source>
+            <value>creator</value>
+          </role>
+          <entity>BEGIN:VCARD VERSION:3.0 FN: EMAIL;TYPE=INTERNET:ORG: Santillana Educación S.L. e Indra Sistemas S.A. END:VCARD</entity>
+          <date>
+            <dateTime>2007-05-18</dateTime>
+            <description>
+              <string>Fecha de catalogación del objeto didáctico</string>
+            </description>
+          </date>
+        </contribute>
+        <metadataSchema>LOM-ES V1.0</metadataSchema>
+        <language>es</language>
+      </metaMetadata>
+      <technical>
+        <format>image/gif</format>
+        <format>text/css</format>
+        <format>text/html</format>
+        <size>674816</size>
+        <requirement>
+          <orComposite>
+            <type>
+              <source>LOM-ES V1.0</source>
+              <value>browser</value>
+            </type>
+            <name>
+              <source>LOM-ES V1.0</source>
+              <value>any</value>
+            </name>
+          </orComposite>
+        </requirement>
+      </technical>
+      <educational>
+        <interactivityType>
+          <source>LOM-ES V1.0</source>
+          <value>expositive</value>
+        </interactivityType>
+        <learningResourceType>
+          <source>LOM-ES V1.0</source>
+          <value>hypertext</value>
+        </learningResourceType>
+        <learningResourceType>
+          <source>LOM-ES V1.0</source>
+          <value>master class</value>
+        </learningResourceType>
+        <learningResourceType>
+          <source>LOM-ES V1.0</source>
+          <value>guided reading</value>
+        </learningResourceType>
+        <learningResourceType>
+          <source>LOM-ES V1.0</source>
+          <value>narrative text</value>
+        </learningResourceType>
+        <interactivityLevel>
+          <source>LOM-ES V1.0</source>
+          <value>low</value>
+        </interactivityLevel>
+        <semanticDensity>
+          <source>LOM-ES V1.0</source>
+          <value>medium</value>
+        </semanticDensity>
+        <intendedEndUserRole>
+          <source>LOM-ES V1.0</source>
+          <value>general public</value>
+        </intendedEndUserRole>
+        <intendedEndUserRole>
+          <source>LOM-ES V1.0</source>
+          <value>group</value>
+        </intendedEndUserRole>
+        <context>
+          <source>LOM-ES V1.0</source>
+          <value>mixed</value>
+        </context>
+        <context>
+          <source>LOM-ES V1.0</source>
+          <value>mixed</value>
+        </context>
+        <context>
+          <source>LOM-ES V1.0</source>
+          <value>distance</value>
+        </context>
+        <typicalAgeRange>
+          <string>Para alumnos entre 12-16 años</string>
+        </typicalAgeRange>
+        <difficulty>
+          <source>LOM-ES V1.0</source>
+          <value>easy</value>
+        </difficulty>
+        <description>
+          <string> Tener una visión general de la evolución de la Publicidad.</string>
+        </description>
+        <language>es</language>
+        <cognitiveProcess>
+          <source>LOM-ES V1.0</source>
+          <value>analyse</value>
+        </cognitiveProcess>
+        <cognitiveProcess>
+          <source>LOM-ES V1.0</source>
+          <value>understand</value>
+        </cognitiveProcess>
+      </educational>
+      <rights>
+        <cost>
+          <source>LOM-ES V1.0</source>
+          <value>no</value>
+        </cost>
+        <copyrightAndOtherRestrictions>
+          <source>LOM-ES V1.0</source>
+          <value>creative commons: attribution - non commercial - share alike</value>
+        </copyrightAndOtherRestrictions>
+        <description>
+          <string>La utilización de estos contenidos es universal, gratuita y abierta, siempre y cuando se trate de un uso educativo no comercial. Las acciones, productos y utilidades derivadas de su utilización no podrán, en consecuencia, generar ningún tipo de lucro. Asimismo, es obligada la referencia a la fuente.</string>
+        </description>
+        <access>
+          <accessType>
+            <source>LOM-ES V1.0</source>
+            <value>universal</value>
+          </accessType>
+          <description>
+            <string>No existen restricciones</string>
+          </description>
+        </access>
+      </rights>
+      <relation>
+        <kind>
+          <source>LOM-ES V1.0</source>
+          <value>ispartof</value>
+        </kind>
+        <resource>
+          <identifier>
+            <catalog>Catálogo unificado mec-red.es-ccaa de identificación de ODE</catalog>
+            <entry>es_20070518_3_0040100</entry>
+          </identifier>
+          <description>
+            <string>Secuencia didáctica sobre el origen y el desarrollo del medio publicitario.</string>
+          </description>
+        </resource>
+      </relation>
+      <classification>
+        <purpose>
+          <source>LOM-ES V1.0</source>
+          <value>discipline</value>
+        </purpose>
+      </classification>
+      <classification>
+        <purpose>
+          <source>LOM-ES V1.0</source>
+          <value>educational level</value>
+        </purpose>
+      </classification>
+    </lom>

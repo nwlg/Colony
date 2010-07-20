@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<!--
+
+  ndrb Grand Unified Taxonomy Specifier
+
+  ==============================================================
+
+  Copyright 2009 Sirius Corporation plc and Duncan Gibb
+ 
+  This is Free Software, licenced under the GNU General Public
+  License ("GPL").  Version 3 of the GPL shall apply unless a
+  later version has been published by the Free Software
+  Software Foundation ("FSF") at the time you receive this
+  software, in which case that later version shall apply instead.
+  At your your option, you may apply any version of the GPL
+  published by the FSF later than that prescribed above.
+ 
+  This software is supplied "as is" and "with all faults".
+  There is ABSOLUTELY NO WARRANTY.  Please refer to the relevant
+  section of the licence for more details.
+ 
+  If you do not have a copy of the licence, please refer to
+  <http://www.gnu.org/licenses/>.
+  
+  ==============================================================
+  
+  This file contains an XML-style description of the
+  relationship between arbitrary public taxonomies and the ndrb
+  unified curriculum tree.
+  
+  It is derrived from "taxon path single file proposal_V02.doc"
+  supplied by Fiona Iglesias, Northwest Learning Grid.
+
+-->
+<guts name="ndrb unified curriculum tree" version="0.6">
+  <node name="Early years foundation stage" id="KSFS">
+    <taxon src="http://bank.vocman.com/bank-webapp/download/vocab/1001-eyfs.xml" />
+  </node>
+  <node name="Key stage 1" id="KS1">
+    <node name="Cross curricular skills" id="KS1.Xtags">
+      <taxon src="http://bank.vocman.com/bank-webapp/download/vocab/1000-QCA%20Metadata%20Standard:%20XTags.xml" prefix="KS1" />
+    </node>
+      <taxon src="http://bank.vocman.com/bank-webapp/download/vocab/1000-QCA%20Metadata%20Standard:%20Specifiers.xml" prefix="KS1" />
+  </node>
+  <node name="Key stage 2" id="KS2">
+    <node name="Cross curricular skills" id="KS2.Xtags">
+      <taxon src="http://bank.vocman.com/bank-webapp/download/vocab/1000-QCA%20Metadata%20Standard:%20XTags.xml" prefix="KS2" />
+    </node>
+    <taxon src="http://bank.vocman.com/bank-webapp/download/vocab/1000-QCA%20Metadata%20Standard:%20Specifiers.xml" prefix="KS2" />
+  </node>
+  <node name="Key stage 3" id="KS3">
+    <node name="Cross curricular skills" id="KS3.Xtags">
+      <taxon src="http://bank.vocman.com/bank-webapp/download/vocab/1000-QCA%20Metadata%20Standard:%20XTags.xml" prefix="KS3" />
+    </node>
+    <taxon src="http://bank.vocman.com/bank-webapp/download/vocab/1000-QCA%20Metadata%20Standard:%20Specifiers.xml" prefix="KS3" />
+  </node>
+  <node name="Key stage 4" id="KS4">
+    <node name="Cross curricular skills" id="KS4.Xtags">
+      <taxon src="http://bank.vocman.com/bank-webapp/download/vocab/1000-QCA%20Metadata%20Standard:%20XTags.xml" prefix="KS4" />
+    </node>
+    <taxon src="http://bank.vocman.com/bank-webapp/download/vocab/1000-QCA%20Metadata%20Standard:%20Specifiers.xml" prefix="KS4" />
+  </node>
+  <node name="Key stage 5" id="KS5">
+    <node name="Cross curricular skills" id="KS5.Xtags">
+      <taxon src="http://bank.vocman.com/bank-webapp/download/vocab/1000-QCA%20Metadata%20Standard:%20XTags.xml" prefix="KS5" />
+    </node>
+    <taxon src="http://bank.vocman.com/bank-webapp/download/vocab/1000-QCA%20Metadata%20Standard:%20Specifiers.xml" prefix="KS5" />
+  </node>
+  <node name="Special educational needs" id="SEN">
+    <taxon src="http://bank.vocman.com/bank-webapp/download/vocab/0003-SEN%20Navigation.xml" />
+  </node>
+  <node name="14-19" id="UK_14-19" >
+    <node name="Diploma" id="Diploma">
+      <node name="Foundation" id="FoundDip">
+	<taxon src="ndrb_14-19_vdex.xml" prefix="FoundDip" />
+      </node>
+      <node name="Higher" id="HighDip">
+	<taxon src="ndrb_14-19_vdex.xml" prefix="HighDip" />
+      </node>
+      <node name="Advanced" id="AdvDip">
+	<taxon src="ndrb_14-19_vdex.xml" prefix="AdvDip" />
+      </node>
+    </node>
+  </node>
+  <node name="NLN curriculum" id="NLN">
+    <taxon src="http://bank.vocman.com/bank-webapp/download/vocab/0002-NLN.xml" />
+  </node>
+  <node name="Adult and community learning" id="AClearn">
+    <taxon src="http://bank.vocman.com/bank-webapp/download/vocab/0002-ACL.xml" />
+  </node>
+</guts>

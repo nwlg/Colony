@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<document>
+
+    <properties>
+        <author email="harias@indra.es">Hector Arias</author>
+        <title>Poner aqui el nombre del proyecto</title>
+    </properties>
+    <body>
+	<section name="Introducción">
+		<p>Este documento pretende ser un marco de referencia en el que se de cobertura a los aspectos 
+		tecnológicos más significativos de la plataforma I-Builder, así como la base en la que los analistas y 
+		desarrolladores puedan apoyarse para la materialización de sus proyectos.
+		</p>
+		<p>Para facilitar la comprensión de este documento, en vez de presentar 
+		un conjunto de ejemplos más o menos inconexos, se ha optado por dotar de un contexto común a 
+		los diversos ejemplos de aplicación que se incluyen en cada una de las guías. A tal efecto, se 
+		dedica este apartado de la introducción a realizar una presentación de este contexto en términos 
+		de funcionalidad y arquitectura. 
+		</p>
+		<p>El ejemplo que vamos a utilizar pretende ser un micro análisis funcional genérico, basado en 
+		UML, que en un nivel alto de abstracción permita modelar una serie de ejemplos base esta guía. 
+		Los ejemplos propuestos a lo largo de este documento pretenden ser una referencia, para que 
+		diseñadores y constructores tengan un punto de partida y referencia respecto a las labores que 
+		deben desarrollar, para que la definición y construcción sobre la plataforma se ajuste al marco 
+		tecnológico planteado por la compañía para este tipo de proyectos.
+		</p>
+		<p>La elección para el ejemplo/contexto a desarrollar es un proceso de Contratación de una aseguradora. 
+		El objetivo no es hacer un análisis funcional y definición de arquitectura completos del mencionado 
+		subsistema, sino apoyarse en él como base para poder cubrir el mayor abanico posible en cuanto a los 
+		mecanismos propuestos en el marco tecnológico de la nueva arquitectura. Este planteamiento permite 
+		además establecer las bases mínimas que debe proporcionar una especificación funcional y su 
+		especificación de arquitectura asociada para poder resolver los requisitos de un proyecto de 
+		desarrollo de software con los mecanismos que proporciona la plataforma I-Builder. 
+		</p>
+	</section>
+	
+    </body>
+</document>

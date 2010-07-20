@@ -1,0 +1,6 @@
+<annotation>
+	${load:entity.xml}
+	${load:date.xml}
+	<!-- Opcional -->
+	${load:description.xml}
+</annotation>

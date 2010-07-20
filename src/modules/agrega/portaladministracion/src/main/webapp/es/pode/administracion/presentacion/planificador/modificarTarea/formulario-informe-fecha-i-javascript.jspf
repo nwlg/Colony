@@ -1,0 +1,47 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.trabajo.title':'<formatting:escape language="javascript"><bean:message key="obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.trabajo.title"/></formatting:escape>',
+                'obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.grupo.trabajo.title':'<formatting:escape language="javascript"><bean:message key="obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.grupo.trabajo.title"/></formatting:escape>',
+                'obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.trigger.title':'<formatting:escape language="javascript"><bean:message key="obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.trigger.title"/></formatting:escape>',
+                'obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.grupo.trigger.title':'<formatting:escape language="javascript"><bean:message key="obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.grupo.trigger.title"/></formatting:escape>',
+                'obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.periodicidad.title':'<formatting:escape language="javascript"><bean:message key="obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.periodicidad.title"/></formatting:escape>',
+                'obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.tipo.tarea.title':'<formatting:escape language="javascript"><bean:message key="obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.tipo.tarea.title"/></formatting:escape>',
+                'obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.informe.title':'<formatting:escape language="javascript"><bean:message key="obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.informe.title"/></formatting:escape>',
+                'obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.formato.title':'<formatting:escape language="javascript"><bean:message key="obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.formato.title"/></formatting:escape>',
+                'obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.anio.title':'<formatting:escape language="javascript"><bean:message key="obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.anio.title"/></formatting:escape>',
+                'obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.mes.title':'<formatting:escape language="javascript"><bean:message key="obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.mes.title"/></formatting:escape>',
+                'obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.dia.title':'<formatting:escape language="javascript"><bean:message key="obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.dia.title"/></formatting:escape>',
+                'obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.hora.title':'<formatting:escape language="javascript"><bean:message key="obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.hora.title"/></formatting:escape>',
+                'obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.minutos.title':'<formatting:escape language="javascript"><bean:message key="obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.minutos.title"/></formatting:escape>',
+                'obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.anio.desde.title':'<formatting:escape language="javascript"><bean:message key="obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.anio.desde.title"/></formatting:escape>',
+                'obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.mes.desde.title':'<formatting:escape language="javascript"><bean:message key="obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.mes.desde.title"/></formatting:escape>',
+                'obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.dia.desde.title':'<formatting:escape language="javascript"><bean:message key="obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.dia.desde.title"/></formatting:escape>',
+                'obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.anio.hasta.title':'<formatting:escape language="javascript"><bean:message key="obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.anio.hasta.title"/></formatting:escape>',
+                'obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.mes.hasta.title':'<formatting:escape language="javascript"><bean:message key="obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.mes.hasta.title"/></formatting:escape>',
+                'obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.dia.hasta.title':'<formatting:escape language="javascript"><bean:message key="obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.dia.hasta.title"/></formatting:escape>',
+                'obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.msg.desc.trabajo.title':'<formatting:escape language="javascript"><bean:message key="obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.msg.desc.trabajo.title"/></formatting:escape>',
+                'obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.msg.informe.title':'<formatting:escape language="javascript"><bean:message key="obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.msg.informe.title"/></formatting:escape>',
+                'obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.msg.no.informe.title':'<formatting:escape language="javascript"><bean:message key="obtener.tcarga.odes.formulario.informe.fecha.i.continuar.param.msg.no.informe.title"/></formatting:escape>',
+                'Continuar':'<formatting:escape language="javascript"><bean:message key="obtener.tcarga.odes.formulario.informe.fecha.i.continuar.title"/></formatting:escape>',
+                'Continuar_no':'<formatting:escape language="javascript"><bean:message key="obtener.tcarga.odes.formulario.informe.fecha.i.continuar.title.notallowed"/></formatting:escape>',
+                'Continuar_reset':'<formatting:escape language="javascript"><bean:message key="obtener.tcarga.odes.formulario.informe.fecha.i.continuar.title.reset"/></formatting:escape>',
+                'Continuar_noreset':'<formatting:escape language="javascript"><bean:message key="obtener.tcarga.odes.formulario.informe.fecha.i.continuar.title.reset.not.allowed"/></formatting:escape>',
+                'Cancelar':'<formatting:escape language="javascript"><bean:message key="obtener.tcarga.odes.formulario.informe.fecha.i.cancelar.title"/></formatting:escape>',
+                'Cancelar_no':'<formatting:escape language="javascript"><bean:message key="obtener.tcarga.odes.formulario.informe.fecha.i.cancelar.title.notallowed"/></formatting:escape>',
+                'Cancelar_reset':'<formatting:escape language="javascript"><bean:message key="obtener.tcarga.odes.formulario.informe.fecha.i.cancelar.title.reset"/></formatting:escape>',
+                'Cancelar_noreset':'<formatting:escape language="javascript"><bean:message key="obtener.tcarga.odes.formulario.informe.fecha.i.cancelar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+</script>
+    </tiles:put>

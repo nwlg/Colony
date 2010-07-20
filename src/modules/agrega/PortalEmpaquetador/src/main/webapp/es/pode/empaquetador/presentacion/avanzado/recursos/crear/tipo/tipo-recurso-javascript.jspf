@@ -1,0 +1,42 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'crear.recurso.avanzado.tipo.recurso.continuar.param.tipo.title':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.tipo.recurso.continuar.param.tipo.title"/></formatting:escape>',
+                'crear.recurso.avanzado.tipo.recurso.continuar.param.action.title':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.tipo.recurso.continuar.param.action.title"/></formatting:escape>',
+                'Continuar':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.tipo.recurso.continuar.title"/></formatting:escape>',
+                'Continuar_no':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.tipo.recurso.continuar.title.notallowed"/></formatting:escape>',
+                'Continuar_reset':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.tipo.recurso.continuar.title.reset"/></formatting:escape>',
+                'Continuar_noreset':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.tipo.recurso.continuar.title.reset.not.allowed"/></formatting:escape>',
+                'Archivos':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.tipo.recurso.archivos.title"/></formatting:escape>',
+                'Archivos_no':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.tipo.recurso.archivos.title.notallowed"/></formatting:escape>',
+                'Archivos_reset':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.tipo.recurso.archivos.title.reset"/></formatting:escape>',
+                'Archivos_noreset':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.tipo.recurso.archivos.title.reset.not.allowed"/></formatting:escape>',
+                'Organizaciones':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.tipo.recurso.organizaciones.title"/></formatting:escape>',
+                'Organizaciones_no':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.tipo.recurso.organizaciones.title.notallowed"/></formatting:escape>',
+                'Organizaciones_reset':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.tipo.recurso.organizaciones.title.reset"/></formatting:escape>',
+                'Organizaciones_noreset':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.tipo.recurso.organizaciones.title.reset.not.allowed"/></formatting:escape>',
+                'Submanifiestos':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.tipo.recurso.submanifiestos.title"/></formatting:escape>',
+                'Submanifiestos_no':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.tipo.recurso.submanifiestos.title.notallowed"/></formatting:escape>',
+                'Submanifiestos_reset':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.tipo.recurso.submanifiestos.title.reset"/></formatting:escape>',
+                'Submanifiestos_noreset':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.tipo.recurso.submanifiestos.title.reset.not.allowed"/></formatting:escape>',
+                'Recursos':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.tipo.recurso.recursos.title"/></formatting:escape>',
+                'Recursos_no':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.tipo.recurso.recursos.title.notallowed"/></formatting:escape>',
+                'Recursos_reset':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.tipo.recurso.recursos.title.reset"/></formatting:escape>',
+                'Recursos_noreset':'<formatting:escape language="javascript"><bean:message key="crear.recurso.avanzado.tipo.recurso.recursos.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+
+</script>
+    </tiles:put>

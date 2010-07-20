@@ -1,0 +1,23 @@
+<div id="seleccionados" class="table">
+    <display:table name="${form.seleccionados}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="resultados-busqueda-seleccionados.pdf" />
+
+        <display:column media="xml csv excel pdf"
+            titleKey="resultados.buscar.objeto.resultados.busqueda.param.seleccionados.titulo"
+            autolink="true" paramId="titulo"
+            property="titulo">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="titulo" paramId="titulo"
+            sortProperty="titulo" sortable="true"
+            titleKey="resultados.buscar.objeto.resultados.busqueda.param.seleccionados.titulo"
+            property="titulo" />
+   
+    </display:table>
+</div>
+

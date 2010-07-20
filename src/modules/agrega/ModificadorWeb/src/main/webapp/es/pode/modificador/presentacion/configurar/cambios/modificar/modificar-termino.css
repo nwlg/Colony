@@ -1,0 +1,36 @@
+#selectAction.action {}
+#selectAction.action #form_submit {}
+
+#selectAction.action .alcanceTermino {}
+#selectAction.action .alcanceTermino .label {}
+#selectAction.action .alcanceTermino .field {}
+#selectAction.action .alcanceMetadatos {}
+#selectAction.action .alcanceMetadatos .label {}
+#selectAction.action .alcanceMetadatos .field {}
+#selectAction.action .action {}
+#selectAction.action .action .label {}
+#selectAction.action .action .field {}
+#selectAction.action .exprReg {}
+#selectAction.action .exprReg .label {}
+#selectAction.action .exprReg .field {}
+#selectAction.action .valorViejo {}
+#selectAction.action .valorViejo .label {}
+#selectAction.action .valorViejo .field {}
+#selectAction.action .valorNuevo {}
+#selectAction.action .valorNuevo .label {}
+#selectAction.action .valorNuevo .field {}
+#selectAction.action .idioma {}
+#selectAction.action .idioma .label {}
+#selectAction.action .idioma .field {}
+
+#buscar.action {}
+#buscar.action #form_submit {}
+
+#buscar.action .idiomaBuscador {}
+#buscar.action .idiomaBuscador .label {}
+#buscar.action .idiomaBuscador .field {}
+#buscar.action .tipoBusqueda {}
+#buscar.action .tipoBusqueda .label {}
+#buscar.action .tipoBusqueda .field {}
+
+

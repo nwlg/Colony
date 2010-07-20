@@ -1,0 +1,71 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'tesauros.cu.tesauros.consulta.nodo.param.nom.tesauros.title':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.consulta.nodo.param.nom.tesauros.title"/></formatting:escape>',
+                'tesauros.cu.tesauros.consulta.nodo.param.idioma.title':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.consulta.nodo.param.idioma.title"/></formatting:escape>',
+                'tesauros.cu.tesauros.consulta.nodo.param.taxones.vo.title':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.consulta.nodo.param.taxones.vo.title"/></formatting:escape>',
+                'tesauros.cu.tesauros.consulta.nodo.param.ruta.padre.vo.title':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.consulta.nodo.param.ruta.padre.vo.title"/></formatting:escape>',
+                'tesauros.cu.tesauros.consulta.nodo.param.id.tesauro.title':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.consulta.nodo.param.id.tesauro.title"/></formatting:escape>',
+                'tesauros.cu.tesauros.consulta.nodo.param.es.ruta.title':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.consulta.nodo.param.es.ruta.title"/></formatting:escape>',
+                'tesauros.cu.tesauros.consulta.nodo.param.titulo.tesauro.title':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.consulta.nodo.param.titulo.tesauro.title"/></formatting:escape>',
+                'tesauros.cu.tesauros.consulta.padre.param.nom.tesauros.title':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.consulta.padre.param.nom.tesauros.title"/></formatting:escape>',
+                'tesauros.cu.tesauros.consulta.padre.param.idioma.title':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.consulta.padre.param.idioma.title"/></formatting:escape>',
+                'tesauros.cu.tesauros.consulta.padre.param.taxones.vo.title':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.consulta.padre.param.taxones.vo.title"/></formatting:escape>',
+                'tesauros.cu.tesauros.consulta.padre.param.ruta.padre.vo.title':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.consulta.padre.param.ruta.padre.vo.title"/></formatting:escape>',
+                'tesauros.cu.tesauros.consulta.padre.param.id.tesauro.title':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.consulta.padre.param.id.tesauro.title"/></formatting:escape>',
+                'tesauros.cu.tesauros.consulta.padre.param.es.ruta.title':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.consulta.padre.param.es.ruta.title"/></formatting:escape>',
+                'tesauros.cu.tesauros.consulta.padre.param.titulo.tesauro.title':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.consulta.padre.param.titulo.tesauro.title"/></formatting:escape>',
+                'tesauros.cu.tesauros.cancelar.param.tipo.layout.buscador.title':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.cancelar.param.tipo.layout.buscador.title"/></formatting:escape>',
+                'tesauros.cu.tesauros.cancelar.param.nom.tesauros.title':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.cancelar.param.nom.tesauros.title"/></formatting:escape>',
+                'tesauros.cu.tesauros.cancelar.param.id.tesauro.title':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.cancelar.param.id.tesauro.title"/></formatting:escape>',
+                'tesauros.cu.tesauros.asociar.tesauro.param.nom.tesauros.title':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.asociar.tesauro.param.nom.tesauros.title"/></formatting:escape>',
+                'tesauros.cu.tesauros.asociar.tesauro.param.idioma.title':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.asociar.tesauro.param.idioma.title"/></formatting:escape>',
+                'tesauros.cu.tesauros.asociar.tesauro.param.id.tesauro.title':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.asociar.tesauro.param.id.tesauro.title"/></formatting:escape>',
+                'tesauros.cu.tesauros.asociar.tesauro.param.taxones.vo.title':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.asociar.tesauro.param.taxones.vo.title"/></formatting:escape>',
+                'tesauros.cu.tesauros.asociar.tesauro.param.ruta.padre.vo.title':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.asociar.tesauro.param.ruta.padre.vo.title"/></formatting:escape>',
+                'tesauros.cu.tesauros.asociar.tesauro.param.tipo.layout.buscador.title':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.asociar.tesauro.param.tipo.layout.buscador.title"/></formatting:escape>',
+                'tesauros.cu.tesauros.buscar.terminos.param.nom.tesauros.title':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.buscar.terminos.param.nom.tesauros.title"/></formatting:escape>',
+                'tesauros.cu.tesauros.buscar.terminos.param.idioma.title':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.buscar.terminos.param.idioma.title"/></formatting:escape>',
+                'tesauros.cu.tesauros.buscar.terminos.param.taxones.vo.title':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.buscar.terminos.param.taxones.vo.title"/></formatting:escape>',
+                'tesauros.cu.tesauros.buscar.terminos.param.ruta.padre.vo.title':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.buscar.terminos.param.ruta.padre.vo.title"/></formatting:escape>',
+                'tesauros.cu.tesauros.buscar.terminos.param.id.tesauro.title':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.buscar.terminos.param.id.tesauro.title"/></formatting:escape>',
+                'tesauros.cu.tesauros.buscar.terminos.param.texto.busqueda.title':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.buscar.terminos.param.texto.busqueda.title"/></formatting:escape>',
+                'tesauros.cu.tesauros.buscar.terminos.param.es.ruta.title':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.buscar.terminos.param.es.ruta.title"/></formatting:escape>',
+                'tesauros.cu.tesauros.buscar.terminos.param.titulo.tesauro.title':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.buscar.terminos.param.titulo.tesauro.title"/></formatting:escape>',
+                'consultaNodo':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.consulta.nodo.title"/></formatting:escape>',
+                'consultaNodo_no':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.consulta.nodo.title.notallowed"/></formatting:escape>',
+                'consultaNodo_reset':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.consulta.nodo.title.reset"/></formatting:escape>',
+                'consultaNodo_noreset':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.consulta.nodo.title.reset.not.allowed"/></formatting:escape>',
+                'consultaPadre':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.consulta.padre.title"/></formatting:escape>',
+                'consultaPadre_no':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.consulta.padre.title.notallowed"/></formatting:escape>',
+                'consultaPadre_reset':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.consulta.padre.title.reset"/></formatting:escape>',
+                'consultaPadre_noreset':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.consulta.padre.title.reset.not.allowed"/></formatting:escape>',
+                'cancelar':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.cancelar.title"/></formatting:escape>',
+                'cancelar_no':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.cancelar.title.notallowed"/></formatting:escape>',
+                'cancelar_reset':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.cancelar.title.reset"/></formatting:escape>',
+                'cancelar_noreset':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.cancelar.title.reset.not.allowed"/></formatting:escape>',
+                'asociarTesauro':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.asociar.tesauro.title"/></formatting:escape>',
+                'asociarTesauro_no':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.asociar.tesauro.title.notallowed"/></formatting:escape>',
+                'asociarTesauro_reset':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.asociar.tesauro.title.reset"/></formatting:escape>',
+                'asociarTesauro_noreset':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.asociar.tesauro.title.reset.not.allowed"/></formatting:escape>',
+                'buscarTerminos':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.buscar.terminos.title"/></formatting:escape>',
+                'buscarTerminos_no':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.buscar.terminos.title.notallowed"/></formatting:escape>',
+                'buscarTerminos_reset':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.buscar.terminos.title.reset"/></formatting:escape>',
+                'buscarTerminos_noreset':'<formatting:escape language="javascript"><bean:message key="tesauros.cu.tesauros.buscar.terminos.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+
+</script>
+    </tiles:put>

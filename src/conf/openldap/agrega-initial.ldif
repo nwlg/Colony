@@ -1,0 +1,37 @@
+dn: dc=agrega,dc=siriusit,dc=co,dc=uk
+dc: agrega
+objectClass: dcObject
+objectClass: organization
+o: agrega
+
+dn: cn=Administrador,dc=agrega,dc=siriusit,dc=co,dc=uk
+objectClass: organizationalRole
+cn: Administrador
+
+dn: ou=users,dc=agrega,dc=siriusit,dc=co,dc=uk
+ou: users
+objectClass: top
+objectClass: organizationalUnit
+
+dn: dc=test,dc=agrega,dc=siriusit,dc=co,dc=uk
+dc: test
+objectClass: dcObject
+objectClass: organization
+o: test
+
+dn: ou=usuarios,dc=test,dc=agrega,dc=siriusit,dc=co,dc=uk
+ou: usuarios
+objectClass: top
+objectClass: organizationalUnit
+
+dn: cn=administrador,ou=usuarios,dc=test,dc=agrega,dc=siriusit,dc=co,dc=uk
+userPassword:: e1NIQX1OV29aSzNrVHNFeFVWMDBZd28xRzVqbFVLS3M9
+objectClass: top
+objectClass: person
+sn: Administrador admin
+cn: administrador
+
+dn: ou=rol,dc=test,dc=agrega,dc=siriusit,dc=co,dc=uk
+ou: rol
+objectClass: top
+objectClass: organizationalUnit

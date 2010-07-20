@@ -1,0 +1,46 @@
+<div id="taxonesvo" class="table">
+    <display:table name="${form.taxonesvo}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="tesauros-form-taxonesvo.pdf" />
+
+        <display:column media="xml csv excel pdf"
+            titleKey="tesauros.tesauros.form.param.taxonesvo.id"
+            autolink="true" paramId="id"
+            property="id">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="id" paramId="id"
+            sortProperty="id" sortable="true"
+            titleKey="tesauros.tesauros.form.param.taxonesvo.id"
+            >
+            <div class="id">
+		
+ <c:set var="value" value="${row.id}"/>
+ <input type="text" name="id" value="${value}" onmouseover="hints.show('tesauros.tesauros.form.consulta.nodo.param.id.title')" onmouseout="hints.hide()"  id="taxonesvoId${row_rowNum}"/>
+            </div>
+       </display:column>
+   
+
+        <display:column media="xml csv excel pdf"
+            titleKey="tesauros.tesauros.form.param.taxonesvo.valor.tax"
+            autolink="true" paramId="valorTax"
+            property="valorTax">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="valorTax" paramId="valorTax"
+            sortProperty="valorTax" sortable="true"
+            titleKey="tesauros.tesauros.form.param.taxonesvo.valor.tax"
+            property="valorTax" />
+   
+        <display:column media="html">
+            <c:set var="link">'<html:rewrite action="/Tesauros/TesaurosFormConsultaNodo"/>?id='+getDiv('taxonesvoId${row_rowNum}').value+'&nomTesauro='+getDiv('taxonesvoNomTesauro${row_rowNum}').value+'&idioma='+getDiv('taxonesvoIdioma${row_rowNum}').value+'&taxonesvo='+getDiv('taxonesvoTaxonesvo${row_rowNum}').value+'&rutaPadrevo='+getDiv('taxonesvoRutaPadrevo${row_rowNum}').value+'&textoBusqueda='+getDiv('taxonesvoTextoBusqueda${row_rowNum}').value+'&vocabName='+getDiv('taxonesvoVocabName${row_rowNum}').value</c:set>
+            <nobr><html:link href="javascript:document.location=${link};" styleClass="buttonLink"><bean:message key="tesauros.tesauros.form.consulta.nodo"/></html:link></nobr>
+        </display:column>
+    </display:table>
+</div>
+

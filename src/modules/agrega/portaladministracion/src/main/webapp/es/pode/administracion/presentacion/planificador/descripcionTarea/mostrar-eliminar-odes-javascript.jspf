@@ -1,0 +1,39 @@
+
+    <tiles:put name="javascript" type="string">
+        <script type="text/javascript" language="Javascript1.1" src="<html:rewrite action="/formValidation"/>"></script>
+        <html:javascript formName="descripcionTareaMostrarEliminarOdesVolverForm" method="validateMostrarEliminarOdesVolverForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'descripcion.tarea.mostrar.eliminar.odes.volver.param.grupo.trabajo.title':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.eliminar.odes.volver.param.grupo.trabajo.title"/></formatting:escape>',
+                'descripcion.tarea.mostrar.eliminar.odes.volver.param.trigger.title':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.eliminar.odes.volver.param.trigger.title"/></formatting:escape>',
+                'descripcion.tarea.mostrar.eliminar.odes.volver.param.grupo.trigger.title':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.eliminar.odes.volver.param.grupo.trigger.title"/></formatting:escape>',
+                'descripcion.tarea.mostrar.eliminar.odes.volver.param.periodicidad.title':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.eliminar.odes.volver.param.periodicidad.title"/></formatting:escape>',
+                'descripcion.tarea.mostrar.eliminar.odes.volver.param.tipo.tarea.title':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.eliminar.odes.volver.param.tipo.tarea.title"/></formatting:escape>',
+                'descripcion.tarea.mostrar.eliminar.odes.volver.param.dia.title':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.eliminar.odes.volver.param.dia.title"/></formatting:escape>',
+                'descripcion.tarea.mostrar.eliminar.odes.volver.param.mes.title':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.eliminar.odes.volver.param.mes.title"/></formatting:escape>',
+                'descripcion.tarea.mostrar.eliminar.odes.volver.param.anio.title':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.eliminar.odes.volver.param.anio.title"/></formatting:escape>',
+                'descripcion.tarea.mostrar.eliminar.odes.volver.param.dia.desde.title':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.eliminar.odes.volver.param.dia.desde.title"/></formatting:escape>',
+                'descripcion.tarea.mostrar.eliminar.odes.volver.param.mes.desde.title':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.eliminar.odes.volver.param.mes.desde.title"/></formatting:escape>',
+                'descripcion.tarea.mostrar.eliminar.odes.volver.param.anio.desde.title':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.eliminar.odes.volver.param.anio.desde.title"/></formatting:escape>',
+                'descripcion.tarea.mostrar.eliminar.odes.volver.param.dia.hasta.title':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.eliminar.odes.volver.param.dia.hasta.title"/></formatting:escape>',
+                'descripcion.tarea.mostrar.eliminar.odes.volver.param.mes.hasta.title':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.eliminar.odes.volver.param.mes.hasta.title"/></formatting:escape>',
+                'descripcion.tarea.mostrar.eliminar.odes.volver.param.anio.hasta.title':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.eliminar.odes.volver.param.anio.hasta.title"/></formatting:escape>',
+                'descripcion.tarea.mostrar.eliminar.odes.volver.param.msg.eliminado.title':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.eliminar.odes.volver.param.msg.eliminado.title"/></formatting:escape>',
+                'descripcion.tarea.mostrar.eliminar.odes.volver.param.msg.no.eliminado.title':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.eliminar.odes.volver.param.msg.no.eliminado.title"/></formatting:escape>',
+                'descripcion.tarea.mostrar.eliminar.odes.volver.param.msg.desc.trabajo.title':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.eliminar.odes.volver.param.msg.desc.trabajo.title"/></formatting:escape>',
+                'Volver':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.eliminar.odes.volver.title"/></formatting:escape>',
+                'Volver_no':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.eliminar.odes.volver.title.notallowed"/></formatting:escape>',
+                'Volver_reset':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.eliminar.odes.volver.title.reset"/></formatting:escape>',
+                'Volver_noreset':'<formatting:escape language="javascript"><bean:message key="descripcion.tarea.mostrar.eliminar.odes.volver.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

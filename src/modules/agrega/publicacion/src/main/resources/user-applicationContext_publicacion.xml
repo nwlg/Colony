@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+  <bean id="propiedadesConstantes" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+      <property name="locations">
+	  <list>
+		  	<value>classpath:agrega.properties</value>
+	  </list>
+	  </property>
+	  <property name="ignoreUnresolvablePlaceholders">
+	  		<value>true</value>
+	  </property>	  
+  </bean>	
+  
+    <!-- JMS Queue Template -->
+    <bean id="jmsTemplateSrvPublicacionService" class="org.springframework.jms.core.JmsTemplate">
+        <property name="connectionFactory">
+            <ref bean="internalJmsQueueConnectionFactorySrvGaleriaImgServicio"/>
+        </property>
+        <property name="defaultDestination">
+            <ref bean="destinationSrvGaleriaImgServicio"/>
+        </property>
+       <property name="receiveTimeout">
+            <value>30000</value>
+        </property>
+    </bean>
+    
+   	<bean id="GaleriaImgServer" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+  		<property name="serviceUrl" value="http://${galeriaimg.server.ip}${admin.ws.subdominio}/${galeriaimg.service.url}"/>
+  		<property name="serviceInterface" value="es.agrega.galeriaimg.rmi.GaleriaImgServer"/>
+	</bean>
+    
+	<bean class="es.indra.sawa.support.wiring.WiringPostProcessor">
+		<property name="propertyMappings">
+			<list>
+				<value>.*SrvPublicacionServiceImpl.*;jmsTemplate;jmsTemplateSrvPublicacionService</value>
+				<value>.*messageListenerSrvGaleriaImgServicio.*;imgServer;GaleriaImgServer</value>
+			</list>
+		</property>
+	</bean>  
+    
+  <!-- JMS Listener and ListenerContainer-->
+  
+<!--           <bean id="messageListenerSrvGaleriaImgServicio" class="es.pode.publicacion.negocio.servicios.SrvGaleriaImgServicioImpl" />	
+
+        <bean id="listenerContainerSrvGaleriaImgServicio"
+                class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+                <property name="connectionFactory" ref="internalJmsQueueConnectionFactorySrvGaleriaImgServicio" />
+                <property name="destination" ref="destinationSrvGaleriaImgServicio" />
+                <property name="messageListener" ref="messageListenerSrvGaleriaImgServicio" />
+        </bean>
+  -->
+</beans>

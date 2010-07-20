@@ -1,0 +1,220 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="volver" class="action">
+    <h3><bean:message key="detalle.anotacion.cu.anotacion.valida.volver"/></h3>
+    <div class="trigger">
+        <html:form styleId="detalleAnotacionCUAnotacionValidaVolverForm" action="/DetalleAnotacionCU/AnotacionValidaVolver" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="tituloAnotacion">
+                        <td class="label"><bean:message key="detalle.anotacion.cu.anotacion.valida.volver.param.titulo.anotacion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tituloAnotacion}"/>
+                           <input type="text" name="tituloAnotacion" value="${value}" onmouseover="hints.show('detalle.anotacion.cu.anotacion.valida.volver.param.titulo.anotacion.title')" onmouseout="hints.hide()"  id="volverTituloAnotacion"/>
+                        </td>
+                    </tr>
+                    <tr class="identificadorOde">
+                        <td class="label"><bean:message key="detalle.anotacion.cu.anotacion.valida.volver.param.identificador.ode"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.identificadorOde}"/>
+                           <input type="text" name="identificadorOde" value="${value}" onmouseover="hints.show('detalle.anotacion.cu.anotacion.valida.volver.param.identificador.ode.title')" onmouseout="hints.hide()"  id="volverIdentificadorOde"/>
+                        </td>
+                    </tr>
+                    <tr class="botonPulsado">
+                        <td class="label"><bean:message key="detalle.anotacion.cu.anotacion.valida.volver.param.boton.pulsado"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.botonPulsado}"/>
+                           <input type="text" name="botonPulsado" value="${value}" onmouseover="hints.show('detalle.anotacion.cu.anotacion.valida.volver.param.boton.pulsado.title')" onmouseout="hints.hide()"  id="volverBotonPulsado"/>
+                        </td>
+                    </tr>
+                    <tr class="nombre">
+                        <td class="label"><bean:message key="detalle.anotacion.cu.anotacion.valida.volver.param.nombre"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.nombre}"/>
+                           <input type="text" name="nombre" value="${value}" onmouseover="hints.show('detalle.anotacion.cu.anotacion.valida.volver.param.nombre.title')" onmouseout="hints.hide()"  id="volverNombre"/>
+                        </td>
+                    </tr>
+                    <tr class="organizacion">
+                        <td class="label"><bean:message key="detalle.anotacion.cu.anotacion.valida.volver.param.organizacion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.organizacion}"/>
+                           <input type="text" name="organizacion" value="${value}" onmouseover="hints.show('detalle.anotacion.cu.anotacion.valida.volver.param.organizacion.title')" onmouseout="hints.hide()"  id="volverOrganizacion"/>
+                        </td>
+                    </tr>
+                    <tr class="email">
+                        <td class="label"><bean:message key="detalle.anotacion.cu.anotacion.valida.volver.param.email"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.email}"/>
+                           <input type="text" name="email" value="${value}" onmouseover="hints.show('detalle.anotacion.cu.anotacion.valida.volver.param.email.title')" onmouseout="hints.hide()"  id="volverEmail"/>
+                        </td>
+                    </tr>
+                    <tr class="fechaCorta">
+                        <td class="label"><bean:message key="detalle.anotacion.cu.anotacion.valida.volver.param.fecha.corta"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.fechaCorta}"/>
+                           <input type="text" name="fechaCorta" value="${value}" onmouseover="hints.show('detalle.anotacion.cu.anotacion.valida.volver.param.fecha.corta.title')" onmouseout="hints.hide()"  id="volverFechaCorta"/>
+                        </td>
+                    </tr>
+                    <tr class="thora">
+                        <td class="label"><bean:message key="detalle.anotacion.cu.anotacion.valida.volver.param.thora"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.thora}"/>
+                           <input type="text" name="thora" value="${value}" onmouseover="hints.show('detalle.anotacion.cu.anotacion.valida.volver.param.thora.title')" onmouseout="hints.hide()"  id="volverThora"/>
+                        </td>
+                    </tr>
+                    <tr class="tminuto">
+                        <td class="label"><bean:message key="detalle.anotacion.cu.anotacion.valida.volver.param.tminuto"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tminuto}"/>
+                           <input type="text" name="tminuto" value="${value}" onmouseover="hints.show('detalle.anotacion.cu.anotacion.valida.volver.param.tminuto.title')" onmouseout="hints.hide()"  id="volverTminuto"/>
+                        </td>
+                    </tr>
+                    <tr class="tsegundoP1">
+                        <td class="label"><bean:message key="detalle.anotacion.cu.anotacion.valida.volver.param.tsegundo.p1"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tsegundoP1}"/>
+                           <input type="text" name="tsegundoP1" value="${value}" onmouseover="hints.show('detalle.anotacion.cu.anotacion.valida.volver.param.tsegundo.p1.title')" onmouseout="hints.hide()"  id="volverTsegundoP1"/>
+                        </td>
+                    </tr>
+                    <tr class="tsegundoP2">
+                        <td class="label"><bean:message key="detalle.anotacion.cu.anotacion.valida.volver.param.tsegundo.p2"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tsegundoP2}"/>
+                           <input type="text" name="tsegundoP2" value="${value}" onmouseover="hints.show('detalle.anotacion.cu.anotacion.valida.volver.param.tsegundo.p2.title')" onmouseout="hints.hide()"  id="volverTsegundoP2"/>
+                        </td>
+                    </tr>
+                    <tr class="meridianoCero">
+                        <td class="label"><bean:message key="detalle.anotacion.cu.anotacion.valida.volver.param.meridiano.cero"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.meridianoCero}"/>
+                           <input type="text" name="meridianoCero" value="${value}" onmouseover="hints.show('detalle.anotacion.cu.anotacion.valida.volver.param.meridiano.cero.title')" onmouseout="hints.hide()"  id="volverMeridianoCero"/>
+                        </td>
+                    </tr>
+                    <tr class="comboZonaH">
+                        <td class="label"><bean:message key="detalle.anotacion.cu.anotacion.valida.volver.param.combo.zona.h"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.comboZonaH}"/>
+                           <input type="text" name="comboZonaH" value="${value}" onmouseover="hints.show('detalle.anotacion.cu.anotacion.valida.volver.param.combo.zona.h.title')" onmouseout="hints.hide()"  id="volverComboZonaH"/>
+                        </td>
+                    </tr>
+                    <tr class="znHora">
+                        <td class="label"><bean:message key="detalle.anotacion.cu.anotacion.valida.volver.param.zn.hora"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.znHora}"/>
+                           <input type="text" name="znHora" value="${value}" onmouseover="hints.show('detalle.anotacion.cu.anotacion.valida.volver.param.zn.hora.title')" onmouseout="hints.hide()"  id="volverZnHora"/>
+                        </td>
+                    </tr>
+                    <tr class="znMinutos">
+                        <td class="label"><bean:message key="detalle.anotacion.cu.anotacion.valida.volver.param.zn.minutos"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.znMinutos}"/>
+                           <input type="text" name="znMinutos" value="${value}" onmouseover="hints.show('detalle.anotacion.cu.anotacion.valida.volver.param.zn.minutos.title')" onmouseout="hints.hide()"  id="volverZnMinutos"/>
+                        </td>
+                    </tr>
+                    <tr class="descripcionFecha">
+                        <td class="label"><bean:message key="detalle.anotacion.cu.anotacion.valida.volver.param.descripcion.fecha"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.descripcionFecha}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.descripcionFechaBackingList}">
+                                  <html:select name="form" property="descripcionFechaAsArray" onmouseover="hints.show('detalle.anotacion.cu.anotacion.valida.volver.param.descripcion.fecha.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="volverDescripcionFecha">
+                                      <html:optionsCollection name="form" property="descripcionFechaBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="descripcionFechaAsArray" onmouseover="hints.show('detalle.anotacion.cu.anotacion.valida.volver.param.descripcion.fecha.title')" onmouseout="hints.hide()"  styleId="volverDescripcionFecha"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="comboIdioma">
+                        <td class="label"><bean:message key="detalle.anotacion.cu.anotacion.valida.volver.param.combo.idioma"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.comboIdioma}"/>
+                           <input type="text" name="comboIdioma" value="${value}" onmouseover="hints.show('detalle.anotacion.cu.anotacion.valida.volver.param.combo.idioma.title')" onmouseout="hints.hide()"  id="volverComboIdioma"/>
+                        </td>
+                    </tr>
+                    <tr class="descripcion">
+                        <td class="label"><bean:message key="detalle.anotacion.cu.anotacion.valida.volver.param.descripcion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.descripcion}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.descripcionBackingList}">
+                                  <html:select name="form" property="descripcionAsArray" onmouseover="hints.show('detalle.anotacion.cu.anotacion.valida.volver.param.descripcion.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="volverDescripcion">
+                                      <html:optionsCollection name="form" property="descripcionBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="descripcionAsArray" onmouseover="hints.show('detalle.anotacion.cu.anotacion.valida.volver.param.descripcion.title')" onmouseout="hints.hide()"  styleId="volverDescripcion"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="mensajesError">
+                        <td class="label"><bean:message key="detalle.anotacion.cu.anotacion.valida.volver.param.mensajes.error"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.mensajesError}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.mensajesErrorBackingList}">
+                                  <html:select name="form" property="mensajesErrorAsArray" onmouseover="hints.show('detalle.anotacion.cu.anotacion.valida.volver.param.mensajes.error.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="volverMensajesError">
+                                      <html:optionsCollection name="form" property="mensajesErrorBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="mensajesErrorAsArray" onmouseover="hints.show('detalle.anotacion.cu.anotacion.valida.volver.param.mensajes.error.title')" onmouseout="hints.hide()"  styleId="volverMensajesError"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('volver')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="detalle.anotacion.cu.anotacion.valida.volver"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

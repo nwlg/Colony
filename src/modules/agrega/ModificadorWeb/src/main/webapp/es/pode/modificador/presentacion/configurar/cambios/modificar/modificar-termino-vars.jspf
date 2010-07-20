@@ -1,0 +1,26 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="alcanceTermino" value="${form.alcanceTermino}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="formulario" value="${form.formulario}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="alcanceMetadatos" value="${form.alcanceMetadatos}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idioma" value="${form.idioma}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="valorNuevo" value="${form.valorNuevo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="valorViejo" value="${form.valorViejo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idiomaBuscador" value="${form.idiomaBuscador}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="exprReg" value="${form.exprReg}"/>
+    </c:catch>
+</div>

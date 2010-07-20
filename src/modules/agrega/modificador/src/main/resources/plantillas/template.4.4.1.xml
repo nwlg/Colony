@@ -1,0 +1,8 @@
+<orComposite>
+${load:template.4.4.1.1.xml}
+${load:template.4.4.1.2.xml}
+<!-- minimumVersion opcional -->
+${load:template.4.4.1.3.xml}
+<!-- maximumVersion opcional -->
+${load:template.4.4.1.4.xml}
+</orComposite>

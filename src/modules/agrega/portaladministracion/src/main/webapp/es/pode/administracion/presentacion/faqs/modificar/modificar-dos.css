@@ -1,0 +1,39 @@
+#validarFormu.action {}
+#validarFormu.action #form_submit {}
+
+#validarFormu.action .id {}
+#validarFormu.action .id .label {}
+#validarFormu.action .id .field {}
+#validarFormu.action .categoria {}
+#validarFormu.action .categoria .label {}
+#validarFormu.action .categoria .field {}
+#validarFormu.action .castellano {}
+#validarFormu.action .castellano .label {}
+#validarFormu.action .castellano .field {}
+#validarFormu.action .ingles {}
+#validarFormu.action .ingles .label {}
+#validarFormu.action .ingles .field {}
+#validarFormu.action .catalan {}
+#validarFormu.action .catalan .label {}
+#validarFormu.action .catalan .field {}
+#validarFormu.action .valenciano {}
+#validarFormu.action .valenciano .label {}
+#validarFormu.action .valenciano .field {}
+#validarFormu.action .gallego {}
+#validarFormu.action .gallego .label {}
+#validarFormu.action .gallego .field {}
+#validarFormu.action .euskera {}
+#validarFormu.action .euskera .label {}
+#validarFormu.action .euskera .field {}
+
+#volver.action {}
+#volver.action #form_submit {}
+
+#volver.action .id {}
+#volver.action .id .label {}
+#volver.action .id .field {}
+#volver.action .categoria {}
+#volver.action .categoria .label {}
+#volver.action .categoria .field {}
+
+

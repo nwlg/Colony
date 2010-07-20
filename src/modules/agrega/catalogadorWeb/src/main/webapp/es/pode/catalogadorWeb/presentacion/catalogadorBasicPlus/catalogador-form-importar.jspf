@@ -1,0 +1,13 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="importar" class="action">
+    <h3><bean:message key="catalogador.basic.plus.catalogador.form.importar"/></h3>
+    <div class="trigger">
+        <form id="catalogadorBasicPlusCatalogadorFormImportarForm" action='<html:rewrite action="/CatalogadorBasicPlus/CatalogadorFormImportar"/>' method="post">
+               <html:submit onmouseover="hints.show('Importar')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="catalogador.basic.plus.catalogador.form.importar"/>
+               </html:submit>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

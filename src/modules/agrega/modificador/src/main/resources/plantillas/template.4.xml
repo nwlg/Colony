@@ -1,0 +1,18 @@
+<technical>
+${load:template.4.1.xml}
+<!-- Mas formatos -->
+<!-- Opcional -->
+${load:template.4.2.xml}
+<!-- Opcional -->
+${load:template.4.3.xml}
+<!-- Mas localizaciones -->
+<!-- Opcional -->
+${load:template.4.4.xml} 
+<!-- Mas requisitos -->
+<!-- installationRemarks opcional -->
+${load:template.4.5.xml}
+<!-- otherPlatformRequirements opcional -->
+${load:template.4.6.xml}
+<!-- duration opcional -->
+${load:template.4.7.xml}
+</technical>

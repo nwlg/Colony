@@ -1,0 +1,32 @@
+#vista.action {}
+#vista.action #form_submit {}
+
+#vista.action .vistaArbol {}
+#vista.action .vistaArbol .label {}
+#vista.action .vistaArbol .field {}
+
+#secuencia.action {}
+#secuencia.action #form_submit {}
+
+
+#vaciarPortapapeles.action {}
+#vaciarPortapapeles.action #form_submit {}
+
+
+#portapapeles.table {}
+#portapapeles.table th {}
+#portapapeles.table td div {}
+
+#portapapeles.table th.title {}
+#portapapeles.table td div.title {}
+
+
+#grupos.table {}
+#grupos.table th {}
+#grupos.table td div {}
+
+#grupos.table th.title {}
+#grupos.table td div.title {}
+
+
+

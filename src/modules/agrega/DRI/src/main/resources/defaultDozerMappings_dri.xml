@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN" "http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+	<mapping wildcard="true" map-id="DEF_MAPPING_SESION_SESIONVO">
+		<class-a>es.pode.dri.negocio.dominio.SesionImpl</class-a>
+		<class-b>es.pode.dri.negocio.servicios.SesionVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_SESIONVO_SESION">
+		<class-a>es.pode.dri.negocio.servicios.SesionVO</class-a>
+		<class-b>es.pode.dri.negocio.dominio.SesionImpl</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_CONSULTA_CONSULTAVO">
+		<class-a>es.pode.dri.negocio.dominio.ConsultaImpl</class-a>
+		<class-b>es.pode.dri.negocio.servicios.ConsultaVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_CONSULTAVO_CONSULTA">
+		<class-a>es.pode.dri.negocio.servicios.ConsultaVO</class-a>
+		<class-b>es.pode.dri.negocio.dominio.ConsultaImpl</class-b>
+	</mapping>	
+</mappings>

@@ -1,0 +1,364 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="volver" class="action">
+    <h3><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver"/></h3>
+    <div class="trigger">
+        <html:form styleId="detalleUsoEduUsoEducativoNoValidoVolverForm" action="/DetalleUsoEdu/UsoEducativoNoValidoVolver" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="tituloUsoEducativo">
+                        <td class="label"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.titulo.uso.educativo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tituloUsoEducativo}"/>
+                           <input type="text" name="tituloUsoEducativo" value="${value}" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.titulo.uso.educativo.title')" onmouseout="hints.hide()"  id="volverTituloUsoEducativo"/>
+                        </td>
+                    </tr>
+                    <tr class="tipoInteractividad">
+                        <td class="label"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.tipo.interactividad"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipoInteractividad}"/>
+                           <input type="text" name="tipoInteractividad" value="${value}" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.tipo.interactividad.title')" onmouseout="hints.hide()"  id="volverTipoInteractividad"/>
+                        </td>
+                    </tr>
+                    <tr class="tipoRecurso">
+                        <td class="label"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.tipo.recurso"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipoRecurso}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.tipoRecursoBackingList}">
+                                  <html:select name="form" property="tipoRecursoAsArray" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.tipo.recurso.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="volverTipoRecurso">
+                                      <html:optionsCollection name="form" property="tipoRecursoBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="tipoRecursoAsArray" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.tipo.recurso.title')" onmouseout="hints.hide()"  styleId="volverTipoRecurso"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="comboTipoRecurso">
+                        <td class="label"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.combo.tipo.recurso"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.comboTipoRecurso}"/>
+                           <input type="text" name="comboTipoRecurso" value="${value}" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.combo.tipo.recurso.title')" onmouseout="hints.hide()"  id="volverComboTipoRecurso"/>
+                        </td>
+                    </tr>
+                    <tr class="nivelInteractividad">
+                        <td class="label"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.nivel.interactividad"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.nivelInteractividad}"/>
+                           <input type="text" name="nivelInteractividad" value="${value}" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.nivel.interactividad.title')" onmouseout="hints.hide()"  id="volverNivelInteractividad"/>
+                        </td>
+                    </tr>
+                    <tr class="densidadSemantica">
+                        <td class="label"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.densidad.semantica"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.densidadSemantica}"/>
+                           <input type="text" name="densidadSemantica" value="${value}" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.densidad.semantica.title')" onmouseout="hints.hide()"  id="volverDensidadSemantica"/>
+                        </td>
+                    </tr>
+                    <tr class="rolUsuario">
+                        <td class="label"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.rol.usuario"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.rolUsuario}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.rolUsuarioBackingList}">
+                                  <html:select name="form" property="rolUsuarioAsArray" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.rol.usuario.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="volverRolUsuario">
+                                      <html:optionsCollection name="form" property="rolUsuarioBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="rolUsuarioAsArray" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.rol.usuario.title')" onmouseout="hints.hide()"  styleId="volverRolUsuario"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="comboRol">
+                        <td class="label"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.combo.rol"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.comboRol}"/>
+                           <input type="text" name="comboRol" value="${value}" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.combo.rol.title')" onmouseout="hints.hide()"  id="volverComboRol"/>
+                        </td>
+                    </tr>
+                    <tr class="contexto">
+                        <td class="label"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.contexto"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.contexto}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.contextoBackingList}">
+                                  <html:select name="form" property="contextoAsArray" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.contexto.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="volverContexto">
+                                      <html:optionsCollection name="form" property="contextoBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="contextoAsArray" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.contexto.title')" onmouseout="hints.hide()"  styleId="volverContexto"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="comboContexto">
+                        <td class="label"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.combo.contexto"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.comboContexto}"/>
+                           <input type="text" name="comboContexto" value="${value}" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.combo.contexto.title')" onmouseout="hints.hide()"  id="volverComboContexto"/>
+                        </td>
+                    </tr>
+                    <tr class="edadTipica">
+                        <td class="label"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.edad.tipica"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.edadTipica}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.edadTipicaBackingList}">
+                                  <html:select name="form" property="edadTipicaAsArray" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.edad.tipica.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="volverEdadTipica">
+                                      <html:optionsCollection name="form" property="edadTipicaBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="edadTipicaAsArray" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.edad.tipica.title')" onmouseout="hints.hide()"  styleId="volverEdadTipica"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="comboIdioma">
+                        <td class="label"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.combo.idioma"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.comboIdioma}"/>
+                           <input type="text" name="comboIdioma" value="${value}" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.combo.idioma.title')" onmouseout="hints.hide()"  id="volverComboIdioma"/>
+                        </td>
+                    </tr>
+                    <tr class="dificultad">
+                        <td class="label"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.dificultad"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.dificultad}"/>
+                           <input type="text" name="dificultad" value="${value}" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.dificultad.title')" onmouseout="hints.hide()"  id="volverDificultad"/>
+                        </td>
+                    </tr>
+                    <tr class="tiempoAprendizaje">
+                        <td class="label"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.tiempo.aprendizaje"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tiempoAprendizaje}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.tiempoAprendizajeBackingList}">
+                                  <html:select name="form" property="tiempoAprendizajeAsArray" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.tiempo.aprendizaje.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="volverTiempoAprendizaje">
+                                      <html:optionsCollection name="form" property="tiempoAprendizajeBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="tiempoAprendizajeAsArray" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.tiempo.aprendizaje.title')" onmouseout="hints.hide()"  styleId="volverTiempoAprendizaje"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="anyo">
+                        <td class="label"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.anyo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.anyo}"/>
+                           <input type="text" name="anyo" value="${value}" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.anyo.title')" onmouseout="hints.hide()"  id="volverAnyo"/>
+                        </td>
+                    </tr>
+                    <tr class="mes">
+                        <td class="label"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.mes"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.mes}"/>
+                           <input type="text" name="mes" value="${value}" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.mes.title')" onmouseout="hints.hide()"  id="volverMes"/>
+                        </td>
+                    </tr>
+                    <tr class="dia">
+                        <td class="label"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.dia"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.dia}"/>
+                           <input type="text" name="dia" value="${value}" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.dia.title')" onmouseout="hints.hide()"  id="volverDia"/>
+                        </td>
+                    </tr>
+                    <tr class="hora">
+                        <td class="label"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.hora"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.hora}"/>
+                           <input type="text" name="hora" value="${value}" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.hora.title')" onmouseout="hints.hide()"  id="volverHora"/>
+                        </td>
+                    </tr>
+                    <tr class="minutos">
+                        <td class="label"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.minutos"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.minutos}"/>
+                           <input type="text" name="minutos" value="${value}" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.minutos.title')" onmouseout="hints.hide()"  id="volverMinutos"/>
+                        </td>
+                    </tr>
+                    <tr class="segundosP1">
+                        <td class="label"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.segundos.p1"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.segundosP1}"/>
+                           <input type="text" name="segundosP1" value="${value}" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.segundos.p1.title')" onmouseout="hints.hide()"  id="volverSegundosP1"/>
+                        </td>
+                    </tr>
+                    <tr class="segundosP2">
+                        <td class="label"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.segundos.p2"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.segundosP2}"/>
+                           <input type="text" name="segundosP2" value="${value}" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.segundos.p2.title')" onmouseout="hints.hide()"  id="volverSegundosP2"/>
+                        </td>
+                    </tr>
+                    <tr class="tiempoApDescripcion">
+                        <td class="label"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.tiempo.ap.descripcion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tiempoApDescripcion}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.tiempoApDescripcionBackingList}">
+                                  <html:select name="form" property="tiempoApDescripcionAsArray" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.tiempo.ap.descripcion.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="volverTiempoApDescripcion">
+                                      <html:optionsCollection name="form" property="tiempoApDescripcionBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="tiempoApDescripcionAsArray" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.tiempo.ap.descripcion.title')" onmouseout="hints.hide()"  styleId="volverTiempoApDescripcion"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="descripciones">
+                        <td class="label"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.descripciones"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.descripciones}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.descripcionesBackingList}">
+                                  <html:select name="form" property="descripcionesAsArray" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.descripciones.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="volverDescripciones">
+                                      <html:optionsCollection name="form" property="descripcionesBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="descripcionesAsArray" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.descripciones.title')" onmouseout="hints.hide()"  styleId="volverDescripciones"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="idiomas">
+                        <td class="label"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.idiomas"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idiomas}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.idiomasBackingList}">
+                                  <html:select name="form" property="idiomasAsArray" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.idiomas.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="volverIdiomas">
+                                      <html:optionsCollection name="form" property="idiomasBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="idiomasAsArray" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.idiomas.title')" onmouseout="hints.hide()"  styleId="volverIdiomas"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="procesoCognitivo">
+                        <td class="label"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.proceso.cognitivo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.procesoCognitivo}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.procesoCognitivoBackingList}">
+                                  <html:select name="form" property="procesoCognitivoAsArray" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.proceso.cognitivo.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="volverProcesoCognitivo">
+                                      <html:optionsCollection name="form" property="procesoCognitivoBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="procesoCognitivoAsArray" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.proceso.cognitivo.title')" onmouseout="hints.hide()"  styleId="volverProcesoCognitivo"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="comboProceso">
+                        <td class="label"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.combo.proceso"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.comboProceso}"/>
+                           <input type="text" name="comboProceso" value="${value}" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.combo.proceso.title')" onmouseout="hints.hide()"  id="volverComboProceso"/>
+                        </td>
+                    </tr>
+                    <tr class="botonPulsado">
+                        <td class="label"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.boton.pulsado"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.botonPulsado}"/>
+                           <input type="text" name="botonPulsado" value="${value}" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.boton.pulsado.title')" onmouseout="hints.hide()"  id="volverBotonPulsado"/>
+                        </td>
+                    </tr>
+                    <tr class="mensajesError">
+                        <td class="label"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.mensajes.error"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.mensajesError}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.mensajesErrorBackingList}">
+                                  <html:select name="form" property="mensajesErrorAsArray" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.mensajes.error.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="volverMensajesError">
+                                      <html:optionsCollection name="form" property="mensajesErrorBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="mensajesErrorAsArray" onmouseover="hints.show('detalle.uso.edu.uso.educativo.no.valido.volver.param.mensajes.error.title')" onmouseout="hints.hide()"  styleId="volverMensajesError"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('volver')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

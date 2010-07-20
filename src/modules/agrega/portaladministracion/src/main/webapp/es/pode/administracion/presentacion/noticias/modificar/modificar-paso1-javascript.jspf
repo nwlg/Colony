@@ -1,0 +1,30 @@
+
+    <tiles:put name="javascript" type="string">
+        <script type="text/javascript" language="Javascript1.1" src="<html:rewrite action="/formValidation"/>"></script>
+        <html:javascript formName="modificarNoticiaModificarPaso1AceptarForm" method="validateModificarPaso1AceptarForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'modificar.noticia.modificar.paso1.aceptar.param.id.noticia.title':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso1.aceptar.param.id.noticia.title"/></formatting:escape>',
+                'modificar.noticia.modificar.paso1.aceptar.param.imagen.title':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso1.aceptar.param.imagen.title"/></formatting:escape>',
+                'modificar.noticia.modificar.paso1.aceptar.param.alineamiento.title':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso1.aceptar.param.alineamiento.title"/></formatting:escape>',
+                'modificar.noticia.modificar.paso1.aceptar.param.estado.title':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso1.aceptar.param.estado.title"/></formatting:escape>',
+                'modificar.noticia.modificar.paso1.aceptar.param.categoria.title':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso1.aceptar.param.categoria.title"/></formatting:escape>',
+                'modificar.noticia.modificar.paso1.aceptar.param.nombre.imagen.title':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso1.aceptar.param.nombre.imagen.title"/></formatting:escape>',
+                'modificar.noticia.modificar.paso1.aceptar.param.activar.imagen.title':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso1.aceptar.param.activar.imagen.title"/></formatting:escape>',
+                'modificar.noticia.modificar.paso1.aceptar.param.nombre.imagen.vo.title':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso1.aceptar.param.nombre.imagen.vo.title"/></formatting:escape>',
+                'aceptar':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso1.aceptar.title"/></formatting:escape>',
+                'aceptar_no':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso1.aceptar.title.notallowed"/></formatting:escape>',
+                'aceptar_reset':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso1.aceptar.title.reset"/></formatting:escape>',
+                'aceptar_noreset':'<formatting:escape language="javascript"><bean:message key="modificar.noticia.modificar.paso1.aceptar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

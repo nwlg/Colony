@@ -1,0 +1,47 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="urlODE" value="${form.urlODE}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="conInaprop" value="${form.conInaprop}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="busquedaSimpleAvanzada" value="${form.busquedaSimpleAvanzada}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="comentarios" value="${form.comentarios}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tituloODE" value="${form.tituloODE}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tipoLayoutBuscador" value="${form.tipoLayoutBuscador}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="comentario" value="${form.comentario}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="usuarioAdministrador" value="${form.usuarioAdministrador}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="titulo" value="${form.titulo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="imagen" value="${form.imagen}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="mostrarVuelta" value="${form.mostrarVuelta}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="valoracion" value="${form.valoracion}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idODE" value="${form.idODE}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="listaVacia" value="${form.listaVacia}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idiomaODE" value="${form.idiomaODE}"/>
+    </c:catch>
+</div>

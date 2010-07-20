@@ -1,0 +1,62 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="botonPulsado" value="${form.botonPulsado}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="descripcionFecha" value="${form.descripcionFecha}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="descripcion" value="${form.descripcion}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tsegundoP1" value="${form.tsegundoP1}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tsegundoP2" value="${form.tsegundoP2}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="formato" value="${form.formato}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="organizacion" value="${form.organizacion}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="zhHora" value="${form.zhHora}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="nombre" value="${form.nombre}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tituloAnotacion" value="${form.tituloAnotacion}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="thora" value="${form.thora}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="email" value="${form.email}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="comboIdioma" value="${form.comboIdioma}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="meridianoCero" value="${form.meridianoCero}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="zhMinutos" value="${form.zhMinutos}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="offSet" value="${form.offSet}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="fechaCorta" value="${form.fechaCorta}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="mensajesError" value="${form.mensajesError}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="comboZonaH" value="${form.comboZonaH}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="tminuto" value="${form.tminuto}"/>
+    </c:catch>
+</div>

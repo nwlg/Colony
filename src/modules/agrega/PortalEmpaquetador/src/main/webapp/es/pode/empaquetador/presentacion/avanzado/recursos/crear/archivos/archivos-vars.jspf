@@ -1,0 +1,17 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="archivos" value="${form.archivos}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="pathArchivos" value="${form.pathArchivos}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="arbol" value="${form.arbol}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="archivosSeleccionados" value="${form.archivosSeleccionados}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="vistaArbol" value="${form.vistaArbol}"/>
+    </c:catch>
+</div>

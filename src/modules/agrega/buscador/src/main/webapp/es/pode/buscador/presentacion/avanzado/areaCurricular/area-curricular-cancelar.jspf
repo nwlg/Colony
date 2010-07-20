@@ -1,0 +1,31 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="cancelar" class="action">
+    <h3><bean:message key="area.curricular.cu.area.curricular.cancelar"/></h3>
+    <div class="trigger">
+        <html:form styleId="areaCurricularCUAreaCurricularCancelarForm" action="/AreaCurricularCU/AreaCurricularCancelar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="tipoLayoutBuscador">
+                        <td class="label"><bean:message key="area.curricular.cu.area.curricular.cancelar.param.tipo.layout.buscador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipoLayoutBuscador}"/>
+                           <input type="text" name="tipoLayoutBuscador" value="${value}" onmouseover="hints.show('area.curricular.cu.area.curricular.cancelar.param.tipo.layout.buscador.title')" onmouseout="hints.hide()"  id="cancelarTipoLayoutBuscador"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('cancelar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="area.curricular.cu.area.curricular.cancelar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

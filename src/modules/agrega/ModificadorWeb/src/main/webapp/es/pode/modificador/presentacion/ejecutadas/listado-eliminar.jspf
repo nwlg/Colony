@@ -1,0 +1,14 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="eliminar" class="action">
+    <h3><bean:message key="modificaciones.ejecutadas.listado.eliminar"/></h3>
+    <div class="trigger">
+        <html:form styleId="modificacionesEjecutadasListadoEliminarForm" action="/ModificacionesEjecutadas/ListadoEliminar" method="post" enctype="multipart/form-data">
+            <%@ include file="/es/pode/modificador/presentacion/ejecutadas/listado-modificaciones.jspf" %>
+               <html:submit onmouseover="hints.show('Eliminar')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="modificaciones.ejecutadas.listado.eliminar"/>
+               </html:submit>	
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

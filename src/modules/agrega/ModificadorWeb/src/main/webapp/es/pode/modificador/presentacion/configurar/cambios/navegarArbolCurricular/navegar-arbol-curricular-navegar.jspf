@@ -1,0 +1,31 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="navegar" class="action">
+    <h3><bean:message key="navegar.arbol.curricular.navegar.arbol.curricular.navegar"/></h3>
+    <div class="trigger">
+        <html:form styleId="navegarArbolCurricularNavegarArbolCurricularNavegarForm" action="/NavegarArbolCurricular/NavegarArbolCurricularNavegar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="idTermino">
+                        <td class="label"><bean:message key="navegar.arbol.curricular.navegar.arbol.curricular.navegar.param.id.termino"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idTermino}"/>
+                           <input type="text" name="idTermino" value="${value}" onmouseover="hints.show('navegar.arbol.curricular.navegar.arbol.curricular.navegar.param.id.termino.title')" onmouseout="hints.hide()"  id="navegarIdTermino"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('navegar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="navegar.arbol.curricular.navegar.arbol.curricular.navegar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

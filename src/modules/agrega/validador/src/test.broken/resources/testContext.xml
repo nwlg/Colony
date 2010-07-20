@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+
+
+    <!-- ========================= DATASOURCE DEFINITION ========================= -->
+
+    <!-- Local DataSource that works in any environment -->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName"><value>org.hsqldb.jdbcDriver</value></property>
+        <property name="username"><value>sa</value></property>
+        <property name="password"><value></value></property>
+        <property name="url"><value>jdbc:hsqldb:hsql://127.0.0.1:1701</value></property>
+    </bean>
+
+    <!-- ====================== End of DATASOURCE DEFINITION ====================== -->
+
+    <!-- ===================== TRANSACTION MANAGER DEFINITION ========================= -->
+
+    <!-- (local) Transaction Manager -->
+    <bean id="transactionManager" class="es.pode.soporte.transaction.TestNullTransactionManager">
+    </bean>
+
+    <!-- ===================== TRANSACTION MANAGER DEFINITION ========================= -->
+
+
+    <!-- ========================= GENERAL DEFINITIONS ========================= -->
+    <!-- Message source for this context, loaded from localized "messages_xx" files -->
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename"><value>messages</value></property>
+    </bean>
+
+	<bean id="beanMapper" class="net.sf.dozer.util.mapping.DozerBeanMapper" singleton="true">
+		<property name="mappingFiles">
+			<list>
+				<value>defaultDozerMappings_validador.xml</value>
+				<value>customDozerMappings_validador.xml</value>
+				<!-- dozer mappings merge-point -->
+			</list>
+		</property>
+	</bean>
+    <!-- applicationContext merge-point -->
+
+    <!-- ========================= Start of SERVICE DEFINITIONS ========================= -->
+
+    <!-- Service Transactional Interceptor -->
+    <bean id="serviceTransactionInterceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor">
+        <property name="transactionManager"><ref bean="transactionManager"/></property>
+        <property name="transactionAttributeSource">
+            <value>
+                es.pode.validador.negocio.servicio.SrvValidadorService.obtenerValidacionBin=PROPAGATION_REQUIRED
+                es.pode.validador.negocio.servicio.SrvValidadorService.obtenervalidacionLigera=PROPAGATION_REQUIRED
+                es.pode.validador.negocio.servicio.SrvValidadorService.validarCargaOde=PROPAGATION_REQUIRED
+                es.pode.validador.negocio.servicio.SrvValidadorService.validarMDBasicosObl=PROPAGATION_REQUIRED
+                es.pode.validador.negocio.servicio.SrvValidadorService.validarMec=PROPAGATION_REQUIRED
+                es.pode.validador.negocio.servicio.SrvValidadorService.estoyActivo=PROPAGATION_REQUIRED
+                es.pode.validador.negocio.servicio.SrvValidadorService.obtenerValidacionLomes=PROPAGATION_REQUIRED
+                es.pode.validador.negocio.servicio.SrvValidadorService.obtenerValidacion=PROPAGATION_REQUIRED
+                es.pode.validador.negocio.servicio.SrvValidadorVDEXService.obtenerValidacionTesauro=PROPAGATION_REQUIRED
+                es.pode.validador.negocio.servicio.SrvValidadorVDEXService.obtenerValidacionTaxonomia=PROPAGATION_REQUIRED
+                es.pode.validador.negocio.servicio.SrvValidadorVDEXService.obtenerValidacionVdex=PROPAGATION_REQUIRED
+            </value>
+        </property>
+    </bean>
+
+    <!-- SrvValidadorService Service Proxy with inner SrvValidadorService Service Implementation -->
+    <bean id="srvValidadorService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.validador.negocio.servicio.SrvValidadorServiceImpl">
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+	                <property name="scormDao"><ref bean="ScormDao"/></property>
+    		                <property name="lomesDao"><ref bean="LomesDao"/></property>
+    	            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.validador.negocio.servicio.SrvValidadorService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceTransactionInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvValidadorVDEXService Service Proxy with inner SrvValidadorVDEXService Service Implementation -->
+    <bean id="srvValidadorVDEXService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.validador.negocio.servicio.SrvValidadorVDEXServiceImpl">
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.validador.negocio.servicio.SrvValidadorVDEXService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceTransactionInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- ========================= End of SERVICE DEFINITIONS ========================= -->
+
+    <!-- ========================= CONSTANTS PROPERTIES BEAN ========================= -->    
+    <bean id="propiedadesConstantes" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	      <property name="locations">
+		  <list>
+			  <value>classpath:spring.properties</value>
+		  </list>
+		  </property>
+    </bean>
+    <!-- ========================= END CONSTANTS PROPERTIES BEAN ========================= -->    
+</beans>

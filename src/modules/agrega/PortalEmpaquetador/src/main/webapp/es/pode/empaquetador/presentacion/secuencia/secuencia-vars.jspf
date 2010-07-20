@@ -1,0 +1,14 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="forwardOnly" value="${form.forwardOnly}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="choice" value="${form.choice}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="choiceExit" value="${form.choiceExit}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="flow" value="${form.flow}"/>
+    </c:catch>
+</div>

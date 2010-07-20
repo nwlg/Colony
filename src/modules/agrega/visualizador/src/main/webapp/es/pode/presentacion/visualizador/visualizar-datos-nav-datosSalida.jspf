@@ -1,0 +1,33 @@
+<div id="datosSalida" class="table">
+    <display:table name="${form.datosSalida}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="visualizar-datos-nav-datos-salida.pdf" />
+
+        <display:column media="xml csv excel pdf"
+            titleKey="visualizar.visualizar.datos.nav.param.datos.salida.id.nodo"
+            autolink="true" paramId="idNodo"
+            property="idNodo">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="idNodo" paramId="idNodo"
+            sortProperty="idNodo" sortable="true"
+            titleKey="visualizar.visualizar.datos.nav.param.datos.salida.id.nodo"
+            >
+            <div class="idNodo">
+		
+ <c:set var="value" value="${row.idNodo}"/>
+ <input type="text" name="idNodo" value="${value}" onmouseover="hints.show('visualizar.visualizar.datos.nav.secuencia.nodo.param.id.nodo.title')" onmouseout="hints.hide()"  id="datosSalidaIdNodo${row_rowNum}"/>
+            </div>
+       </display:column>
+   
+        <display:column media="html">
+            <c:set var="link">'<html:rewrite action="/Visualizar/VisualizarDatosNavSecuenciaNodo"/>?idNodo='+getDiv('datosSalidaIdNodo${row_rowNum}').value</c:set>
+            <nobr><html:link href="javascript:document.location=${link};" styleClass="buttonLink"><bean:message key="visualizar.visualizar.datos.nav.secuencia.nodo"/></html:link></nobr>
+        </display:column>
+    </display:table>
+</div>
+

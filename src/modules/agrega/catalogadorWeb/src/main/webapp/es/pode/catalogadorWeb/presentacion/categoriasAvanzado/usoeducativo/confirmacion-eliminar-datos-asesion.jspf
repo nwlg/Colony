@@ -1,0 +1,49 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="datosASesion" class="action">
+    <h3><bean:message key="uso.educativo.confirmacion.eliminar.datos.asesion"/></h3>
+    <div class="trigger">
+        <html:form styleId="usoEducativoConfirmacionEliminarDatosASesionForm" action="/UsoEducativo/ConfirmacionEliminarDatosASesion" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="listadoUsosEdu">
+                        <td class="label"><bean:message key="uso.educativo.confirmacion.eliminar.datos.asesion.param.listado.usos.edu"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.listadoUsosEdu}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.listadoUsosEduBackingList}">
+                                  <html:select name="form" property="listadoUsosEduAsArray" onmouseover="hints.show('uso.educativo.confirmacion.eliminar.datos.asesion.param.listado.usos.edu.title')" onmouseout="hints.hide()"  multiple="multiple" styleId="datosASesionListadoUsosEdu">
+                                      <html:optionsCollection name="form" property="listadoUsosEduBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="listadoUsosEduAsArray" onmouseover="hints.show('uso.educativo.confirmacion.eliminar.datos.asesion.param.listado.usos.edu.title')" onmouseout="hints.hide()"  styleId="datosASesionListadoUsosEdu"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="tituloUsoEdu">
+                        <td class="label"><bean:message key="uso.educativo.confirmacion.eliminar.datos.asesion.param.titulo.uso.edu"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tituloUsoEdu}"/>
+                           <input type="text" name="tituloUsoEdu" value="${value}" onmouseover="hints.show('uso.educativo.confirmacion.eliminar.datos.asesion.param.titulo.uso.edu.title')" onmouseout="hints.hide()"  id="datosASesionTituloUsoEdu"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('datosASesion')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="uso.educativo.confirmacion.eliminar.datos.asesion"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

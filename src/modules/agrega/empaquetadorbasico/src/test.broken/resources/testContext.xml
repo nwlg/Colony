@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+
+
+    <!-- ========================= DATASOURCE DEFINITION ========================= -->
+
+    <!-- Local DataSource that works in any environment -->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName"><value>com.mysql.jdbc.Driver</value></property>
+        <property name="username"><value>root</value></property>
+        <property name="password"><value>admin</value></property>
+        <property name="url"><value>jdbc:mysql://localhost:3306/localizador</value></property>
+    </bean>
+
+    <!-- ====================== End of DATASOURCE DEFINITION ====================== -->
+
+    <!-- ===================== TRANSACTION MANAGER DEFINITION ========================= -->
+
+    <!-- (local) Transaction Manager -->
+    <bean id="transactionManager" class="es.pode.soporte.transaction.TestNullTransactionManager">
+    </bean>
+
+    <!-- ===================== TRANSACTION MANAGER DEFINITION ========================= -->
+
+
+    <!-- ========================= GENERAL DEFINITIONS ========================= -->
+    <!-- Message source for this context, loaded from localized "messages_xx" files -->
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename"><value>messages</value></property>
+    </bean>
+
+	<bean id="beanMapper" class="net.sf.dozer.util.mapping.DozerBeanMapper" singleton="true">
+		<property name="mappingFiles">
+			<list>
+				<value>defaultDozerMappings_empaquetadorbasico.xml</value>
+				<value>customDozerMappings_empaquetadorbasico.xml</value>
+				<!-- dozer mappings merge-point -->
+			</list>
+		</property>
+	</bean>
+    <!-- applicationContext merge-point -->
+
+    <!-- ========================= Start of SERVICE DEFINITIONS ========================= -->
+
+    <!-- Service Transactional Interceptor -->
+    <bean id="serviceTransactionInterceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor">
+        <property name="transactionManager"><ref bean="transactionManager"/></property>
+        <property name="transactionAttributeSource">
+            <value>
+                es.pode.empaquetador.negocio.servicio.SrvGestorArchivosService.crearCarpeta=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorArchivosService.crearArchivo=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorArchivosService.renombrar=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorArchivosService.descomprimirArchivo=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorArchivosService.eliminar=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorArchivosService.listar=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorArchivosService.copiar=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorArchivosService.cortar=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorArchivosService.generarBackup=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorArchivosService.eliminarBackup=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorArchivosService.restaurarBackup=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorArchivosService.recuperarArbol=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorArchivosService.consultaCuota=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.cargarManifest=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.descargarManifest=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.crearGrupo=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.modificarGrupo=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.eliminarGrupo=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.vincularGrupo=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.desvincularGrupo=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.guardarManifiesto=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.crearOrganizacion=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.eliminarOrganizacion=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.modificarOrganizacion=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.fijarOrganizacionPorDefecto=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.agregarManifiestoZIP=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.agregarManifiestoRepositorio=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.desagregarSubmanifiestoLocal=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.eliminarSubmanifiesto=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.desagregarSubmanifiestoRepositorio=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.iniciarNuevoODE=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.editarODE=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.terminarEdicion=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.crearRecurso=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.eliminarRecursos=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.modificarRecurso=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.asociarLom=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.prepararCatalogacion=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.subirItem=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.bajarItem=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.subirOrganization=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.bajarOrganization=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.copiarElementos=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.moverElementos=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.asociarSecuencia=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.crearReferenciaEnCache=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.importarRecursos=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.exportarRecursos=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.validar=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.previsualizarOde=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.obtenerObjetosPersonales=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.eliminarODE=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.generarMetadatoInicial=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.asociarDatosItem=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.obtenerObjetosCompartidos=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvGestorManifestService.agregarManifiestoZipUrl=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvEmpaquetadorBasicoService.editarOde=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvEmpaquetadorBasicoService.agregarLocal=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvEmpaquetadorBasicoService.referenciadoPor=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvEmpaquetadorBasicoService.eliminarFicheros=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvEmpaquetadorBasicoService.desagregarItem=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvEmpaquetadorBasicoService.crearObjetoEmbebido=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvEmpaquetadorBasicoService.agregarRepositorio=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvEmpaquetadorBasicoService.asociarContenidos=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvEmpaquetadorBasicoService.eliminarGrupo=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvEmpaquetadorBasicoService.cortar=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvEmpaquetadorBasicoService.renombrar=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvEmpaquetadorBasicoService.desagregarItemLocal=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvEmpaquetadorBasicoService.analizaArchivo=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvEmpaquetadorBasicoService.editarObjetoEmbebido=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvEmpaquetadorBasicoService.agregarLocalFichero=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvFachadaAgregarService.agregar=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvFachadaAgregarService.agregarFederado=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvFachadaAgregarService.prepararMetadatos=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvFachadaAgregarService.descargarMetadato=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvFachadaAgregarService.generarManifest=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvFachadaAgregarService.generarManifestRCP=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvFachadaAgregarService.analizarArchivo=PROPAGATION_REQUIRED
+                es.pode.empaquetador.negocio.servicio.SrvFachadaAgregarService.generarManifestLom=PROPAGATION_REQUIRED
+            </value>
+        </property>
+    </bean>
+
+    <!-- SrvGestorArchivosService Service Proxy with inner SrvGestorArchivosService Service Implementation -->
+    <bean id="srvGestorArchivosService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.empaquetador.negocio.servicio.SrvGestorArchivosServiceImpl">
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+	                <property name="zipDao"><ref bean="ZipDao"/></property>
+    		            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.empaquetador.negocio.servicio.SrvGestorArchivosService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceTransactionInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvGestorManifestService Service Proxy with inner SrvGestorManifestService Service Implementation -->
+    <bean id="srvGestorManifestService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.empaquetador.negocio.servicio.SrvGestorManifestServiceImpl">
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+	                <property name="srvGestorArchivosService"><ref bean="srvGestorArchivosService"/></property>
+    			                <property name="scormDao"><ref bean="ScormDao"/></property>
+    			                <property name="zipDao"><ref bean="ZipDao"/></property>
+    						            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.empaquetador.negocio.servicio.SrvGestorManifestService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceTransactionInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvEmpaquetadorBasicoService Service Proxy with inner SrvEmpaquetadorBasicoService Service Implementation -->
+    <bean id="srvEmpaquetadorBasicoService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.empaquetador.negocio.servicio.SrvEmpaquetadorBasicoServiceImpl">
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+	                <property name="srvGestorManifestService"><ref bean="srvGestorManifestService"/></property>
+    		                <property name="srvGestorArchivosService"><ref bean="srvGestorArchivosService"/></property>
+    		                <property name="zipDao"><ref bean="ZipDao"/></property>
+    				                <property name="scormDao"><ref bean="ScormDao"/></property>
+    		            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.empaquetador.negocio.servicio.SrvEmpaquetadorBasicoService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceTransactionInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvFachadaAgregarService Service Proxy with inner SrvFachadaAgregarService Service Implementation -->
+    <bean id="srvFachadaAgregarService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.empaquetador.negocio.servicio.SrvFachadaAgregarServiceImpl">
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+	                <property name="srvGestorManifestService"><ref bean="srvGestorManifestService"/></property>
+    		                <property name="srvEmpaquetadorBasicoService"><ref bean="srvEmpaquetadorBasicoService"/></property>
+    		                <property name="scormDao"><ref bean="ScormDao"/></property>
+    				            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.empaquetador.negocio.servicio.SrvFachadaAgregarService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>serviceTransactionInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- ========================= End of SERVICE DEFINITIONS ========================= -->
+
+    <!-- ========================= CONSTANTS PROPERTIES BEAN ========================= -->    
+    <bean id="propiedadesConstantes" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	      <property name="locations">
+		  <list>
+			  <value>classpath:spring.properties</value>
+		  </list>
+		  </property>
+    </bean>
+    <!-- ========================= END CONSTANTS PROPERTIES BEAN ========================= -->    
+</beans>

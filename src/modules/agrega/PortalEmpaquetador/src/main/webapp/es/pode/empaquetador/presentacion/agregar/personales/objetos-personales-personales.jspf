@@ -1,0 +1,23 @@
+<div id="personales" class="table">
+    <display:table name="${form.personales}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="objetos-personales-personales.pdf" />
+
+        <display:column media="xml csv excel pdf"
+            titleKey="agregar.personales.objetos.personales.param.personales.identificador"
+            autolink="true" paramId="identificador"
+            property="identificador">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="identificador" paramId="identificador"
+            sortProperty="identificador" sortable="true"
+            titleKey="agregar.personales.objetos.personales.param.personales.identificador"
+            property="identificador" />
+   
+    </display:table>
+</div>
+

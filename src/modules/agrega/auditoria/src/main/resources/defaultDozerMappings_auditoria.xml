@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN" "http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+	<mapping wildcard="true" map-id="DEF_MAPPING_BUSQUEDA_BUSQUEDAVO">
+		<class-a>es.pode.auditoria.negocio.dominio.BusquedaImpl</class-a>
+		<class-b>es.pode.auditoria.negocio.servicios.BusquedaVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_BUSQUEDAVO_BUSQUEDA">
+		<class-a>es.pode.auditoria.negocio.servicios.BusquedaVO</class-a>
+		<class-b>es.pode.auditoria.negocio.dominio.BusquedaImpl</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_OPERACION_OPERACIONVO">
+		<class-a>es.pode.auditoria.negocio.dominio.OperacionImpl</class-a>
+		<class-b>es.pode.auditoria.negocio.servicios.OperacionVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_OPERACIONVO_OPERACION">
+		<class-a>es.pode.auditoria.negocio.servicios.OperacionVO</class-a>
+		<class-b>es.pode.auditoria.negocio.dominio.OperacionImpl</class-b>
+	</mapping>	
+</mappings>

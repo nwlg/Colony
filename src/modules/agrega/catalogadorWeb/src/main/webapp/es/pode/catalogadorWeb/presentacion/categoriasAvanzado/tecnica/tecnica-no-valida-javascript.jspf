@@ -1,0 +1,42 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'tecnica.tecnica.no.valida.volver.param.identificador.ode.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.no.valida.volver.param.identificador.ode.title"/></formatting:escape>',
+                'tecnica.tecnica.no.valida.volver.param.formatos.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.no.valida.volver.param.formatos.title"/></formatting:escape>',
+                'tecnica.tecnica.no.valida.volver.param.combo.formato.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.no.valida.volver.param.combo.formato.title"/></formatting:escape>',
+                'tecnica.tecnica.no.valida.volver.param.tamanio.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.no.valida.volver.param.tamanio.title"/></formatting:escape>',
+                'tecnica.tecnica.no.valida.volver.param.localizacion.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.no.valida.volver.param.localizacion.title"/></formatting:escape>',
+                'tecnica.tecnica.no.valida.volver.param.requerimiento.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.no.valida.volver.param.requerimiento.title"/></formatting:escape>',
+                'tecnica.tecnica.no.valida.volver.param.agregador.or.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.no.valida.volver.param.agregador.or.title"/></formatting:escape>',
+                'tecnica.tecnica.no.valida.volver.param.combo.tipo.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.no.valida.volver.param.combo.tipo.title"/></formatting:escape>',
+                'tecnica.tecnica.no.valida.volver.param.combo.nombre.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.no.valida.volver.param.combo.nombre.title"/></formatting:escape>',
+                'tecnica.tecnica.no.valida.volver.param.descripcion.instalacion.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.no.valida.volver.param.descripcion.instalacion.title"/></formatting:escape>',
+                'tecnica.tecnica.no.valida.volver.param.combo.idioma.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.no.valida.volver.param.combo.idioma.title"/></formatting:escape>',
+                'tecnica.tecnica.no.valida.volver.param.descripcion.requerimientos.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.no.valida.volver.param.descripcion.requerimientos.title"/></formatting:escape>',
+                'tecnica.tecnica.no.valida.volver.param.descripcion.duracion.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.no.valida.volver.param.descripcion.duracion.title"/></formatting:escape>',
+                'tecnica.tecnica.no.valida.volver.param.duracion.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.no.valida.volver.param.duracion.title"/></formatting:escape>',
+                'tecnica.tecnica.no.valida.volver.param.anyo.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.no.valida.volver.param.anyo.title"/></formatting:escape>',
+                'tecnica.tecnica.no.valida.volver.param.mes.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.no.valida.volver.param.mes.title"/></formatting:escape>',
+                'tecnica.tecnica.no.valida.volver.param.dia.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.no.valida.volver.param.dia.title"/></formatting:escape>',
+                'tecnica.tecnica.no.valida.volver.param.hora.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.no.valida.volver.param.hora.title"/></formatting:escape>',
+                'tecnica.tecnica.no.valida.volver.param.minutos.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.no.valida.volver.param.minutos.title"/></formatting:escape>',
+                'tecnica.tecnica.no.valida.volver.param.segundos.p1.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.no.valida.volver.param.segundos.p1.title"/></formatting:escape>',
+                'tecnica.tecnica.no.valida.volver.param.segundos.p2.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.no.valida.volver.param.segundos.p2.title"/></formatting:escape>',
+                'tecnica.tecnica.no.valida.volver.param.mensajes.error.title':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.no.valida.volver.param.mensajes.error.title"/></formatting:escape>',
+                'volver':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.no.valida.volver.title"/></formatting:escape>',
+                'volver_no':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.no.valida.volver.title.notallowed"/></formatting:escape>',
+                'volver_reset':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.no.valida.volver.title.reset"/></formatting:escape>',
+                'volver_noreset':'<formatting:escape language="javascript"><bean:message key="tecnica.tecnica.no.valida.volver.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

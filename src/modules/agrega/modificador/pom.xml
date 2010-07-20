@@ -1,0 +1,128 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>agrega</groupId>
+  <artifactId>modificador</artifactId>
+  <version>1.1</version>
+  <packaging>war</packaging>
+
+  <name>Herramienta De Modificacion</name>
+  <properties>
+	  <hibernate.schema.output.dir>${project.build.directory}/sql</hibernate.schema.output.dir>
+	  <hibernate.db.dialect>org.hibernate.dialect.PostgreSQLDialect</hibernate.db.dialect>
+  </properties>
+  
+  <parent>
+    <groupId>agrega</groupId>
+    <artifactId>agrega-war</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
+  <dependencies>
+    <dependency>
+      <groupId>agrega</groupId>
+      <artifactId>parseadorXML</artifactId>
+      <version>1.2</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.jms</groupId>
+      <artifactId>jms</artifactId>
+      <version>1.1</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+    	<groupId>org.hibernate</groupId>
+    	<artifactId>hibernate</artifactId>
+    	<version>3.2.0.ga</version>
+    	<type>jar</type>
+    	<scope>compile</scope>
+    </dependency>
+    <dependency>
+    	<groupId>javax.servlet</groupId>
+    	<artifactId>servlet-api</artifactId>
+    	<version>2.4</version>
+    	<type>jar</type>
+    	<scope>provided</scope>
+    </dependency>
+    <dependency>
+    	<groupId>sawa</groupId>
+    	<artifactId>sawa-core</artifactId>
+    	<version>2.0</version>
+    	<type>jar</type>
+    	<scope>runtime</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+  <plugins>
+    <plugin>
+      <artifactId>maven-antrun-plugin</artifactId>
+        <dependencies>
+          <dependency>
+          <groupId>ant</groupId>
+          <artifactId>ant-nodeps</artifactId>
+          <version>1.6.5</version>
+          <scope>runtime</scope>
+          </dependency>
+        </dependencies>
+        <executions>
+          <execution>
+            <id>generate-sql</id>
+            <phase>compile</phase>
+            <configuration>
+              <tasks>
+                <!-- Generate Hibernate bindings - task taken from original AndroMDA ant file -->
+                <path id="schema.classpath">
+                  <path refid="maven.compile.classpath"/>
+                </path>
+
+                <mkdir dir="${hibernate.schema.output.dir}"/>
+
+                <fileset id="hibernate.mapping.files" dir="${basedir}/src/main/resources">
+                  <include name="**/*.hbm.xml"/>
+                </fileset>
+
+                <pathconvert refid="hibernate.mapping.files" property="hibernate.mappings" pathsep=" "/>
+
+                <java classname="org.hibernate.tool.hbm2ddl.SchemaExport" fork="true">
+                  <arg value="--output=${hibernate.schema.output.dir}/schema-create.sql"/>
+                  <arg value="--text"/>
+                  <arg value="--quiet"/>
+                  <arg value="--delimiter=;"/>
+                  <arg line="${hibernate.mappings}"/>
+                  <jvmarg value="-Dhibernate.dialect=${hibernate.db.dialect}"/>
+                  <classpath refid="schema.classpath" />
+                </java>
+
+                <replaceregexp file="${hibernate.schema.output.dir}/schema-create.sql"
+                       match="^(alter table .* drop constraint|drop table)"
+                       replace="-- SKIP \1"
+                       flags="i"
+                       byline="true"/>
+
+                <java classname="org.hibernate.tool.hbm2ddl.SchemaExport" fork="true">
+                  <arg value="--output=${hibernate.schema.output.dir}/schema-drop.sql"/>
+                  <arg value="--text"/>
+                  <arg value="--quiet"/>
+                  <arg value="--drop"/>
+                  <arg value="--delimiter=;"/>
+                  <arg line="${hibernate.mappings}"/>
+                  <jvmarg value="-Dhibernate.dialect=${hibernate.db.dialect}"/>
+                  <classpath refid="schema.classpath" />
+                </java>
+              </tasks>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+        </executions>
+    </plugin>
+  </plugins>
+  </build>
+
+</project>

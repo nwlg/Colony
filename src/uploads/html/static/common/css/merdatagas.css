@@ -1,0 +1,15 @@
+#lateral .tags{margin:0 0 10px 0;}
+#lateral .tags ul {}
+#lateral .tags li {display:inline; font:1em Verdana, Arial, Helvetica, sans-serif; color:#666;}
+#lateral .tags li a{color:#666; text-decoration:none;}
+#lateral .tags li a:hover{text-decoration:underline;}
+#lateral .tags li a.t1{font-size:1.1em;}
+#lateral .tags li a.t2{font-size:1.3em;}
+#lateral .tags li a.t3{font-size:1.5em;}
+#lateral .tags li a.t4{font-size:1.7em;}
+#lateral .tags li a.t5{font-size:1.9em;}
+#lateral .tags li a.t6{font-size:2.2em;}
+#lateral .tags li a.t7{font-size:2.5em;}
+#lateral .tags dl{margin:0 0 10px 0;}
+#lateral .tags dt{color:#666; text-transform:uppercase; }
+#lateral .tags dd{color:#333;}

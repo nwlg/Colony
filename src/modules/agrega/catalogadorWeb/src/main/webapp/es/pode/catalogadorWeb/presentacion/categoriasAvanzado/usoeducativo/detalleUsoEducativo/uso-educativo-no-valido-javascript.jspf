@@ -1,0 +1,48 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'detalle.uso.edu.uso.educativo.no.valido.volver.param.titulo.uso.educativo.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.titulo.uso.educativo.title"/></formatting:escape>',
+                'detalle.uso.edu.uso.educativo.no.valido.volver.param.tipo.interactividad.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.tipo.interactividad.title"/></formatting:escape>',
+                'detalle.uso.edu.uso.educativo.no.valido.volver.param.tipo.recurso.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.tipo.recurso.title"/></formatting:escape>',
+                'detalle.uso.edu.uso.educativo.no.valido.volver.param.combo.tipo.recurso.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.combo.tipo.recurso.title"/></formatting:escape>',
+                'detalle.uso.edu.uso.educativo.no.valido.volver.param.nivel.interactividad.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.nivel.interactividad.title"/></formatting:escape>',
+                'detalle.uso.edu.uso.educativo.no.valido.volver.param.densidad.semantica.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.densidad.semantica.title"/></formatting:escape>',
+                'detalle.uso.edu.uso.educativo.no.valido.volver.param.rol.usuario.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.rol.usuario.title"/></formatting:escape>',
+                'detalle.uso.edu.uso.educativo.no.valido.volver.param.combo.rol.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.combo.rol.title"/></formatting:escape>',
+                'detalle.uso.edu.uso.educativo.no.valido.volver.param.contexto.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.contexto.title"/></formatting:escape>',
+                'detalle.uso.edu.uso.educativo.no.valido.volver.param.combo.contexto.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.combo.contexto.title"/></formatting:escape>',
+                'detalle.uso.edu.uso.educativo.no.valido.volver.param.edad.tipica.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.edad.tipica.title"/></formatting:escape>',
+                'detalle.uso.edu.uso.educativo.no.valido.volver.param.combo.idioma.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.combo.idioma.title"/></formatting:escape>',
+                'detalle.uso.edu.uso.educativo.no.valido.volver.param.dificultad.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.dificultad.title"/></formatting:escape>',
+                'detalle.uso.edu.uso.educativo.no.valido.volver.param.tiempo.aprendizaje.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.tiempo.aprendizaje.title"/></formatting:escape>',
+                'detalle.uso.edu.uso.educativo.no.valido.volver.param.anyo.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.anyo.title"/></formatting:escape>',
+                'detalle.uso.edu.uso.educativo.no.valido.volver.param.mes.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.mes.title"/></formatting:escape>',
+                'detalle.uso.edu.uso.educativo.no.valido.volver.param.dia.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.dia.title"/></formatting:escape>',
+                'detalle.uso.edu.uso.educativo.no.valido.volver.param.hora.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.hora.title"/></formatting:escape>',
+                'detalle.uso.edu.uso.educativo.no.valido.volver.param.minutos.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.minutos.title"/></formatting:escape>',
+                'detalle.uso.edu.uso.educativo.no.valido.volver.param.segundos.p1.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.segundos.p1.title"/></formatting:escape>',
+                'detalle.uso.edu.uso.educativo.no.valido.volver.param.segundos.p2.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.segundos.p2.title"/></formatting:escape>',
+                'detalle.uso.edu.uso.educativo.no.valido.volver.param.tiempo.ap.descripcion.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.tiempo.ap.descripcion.title"/></formatting:escape>',
+                'detalle.uso.edu.uso.educativo.no.valido.volver.param.descripciones.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.descripciones.title"/></formatting:escape>',
+                'detalle.uso.edu.uso.educativo.no.valido.volver.param.idiomas.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.idiomas.title"/></formatting:escape>',
+                'detalle.uso.edu.uso.educativo.no.valido.volver.param.proceso.cognitivo.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.proceso.cognitivo.title"/></formatting:escape>',
+                'detalle.uso.edu.uso.educativo.no.valido.volver.param.combo.proceso.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.combo.proceso.title"/></formatting:escape>',
+                'detalle.uso.edu.uso.educativo.no.valido.volver.param.boton.pulsado.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.boton.pulsado.title"/></formatting:escape>',
+                'detalle.uso.edu.uso.educativo.no.valido.volver.param.mensajes.error.title':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.param.mensajes.error.title"/></formatting:escape>',
+                'volver':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.title"/></formatting:escape>',
+                'volver_no':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.title.notallowed"/></formatting:escape>',
+                'volver_reset':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.title.reset"/></formatting:escape>',
+                'volver_noreset':'<formatting:escape language="javascript"><bean:message key="detalle.uso.edu.uso.educativo.no.valido.volver.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

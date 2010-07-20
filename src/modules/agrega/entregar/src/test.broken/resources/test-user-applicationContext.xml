@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+<import resource="parseadorXML-applicationContext.xml"/>
+  <bean id="propiedadesConstantes" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+      <property name="locations">
+	  <list>
+		  	<value>classpath:spring.properties</value>
+	  </list>
+	  </property>
+	  <property name="ignoreUnresolvablePlaceholders">
+	  		<value>true</value>
+	  </property>	  
+  </bean>
+  
+  <bean id="trueZipDao" class="es.pode.soporte.zip.TrueZipDaoImpl"></bean>
+  
+  <bean id="beanMapperAux" class="net.sf.dozer.util.mapping.DozerBeanMapper" singleton="true">
+		<property name="mappingFiles">
+			<list>
+				<value>customDozerMappings_entregar.xml</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="entregarDozerDao" class="es.pode.entregar.servicio.dominio.EntregarDozerDao">
+		<property name="beanMapperAux">
+			<ref local="beanMapperAux"/>
+		</property>
+		<property name="scorm">
+			<ref bean="scorm2004Dao"/>
+		</property>
+	</bean>
+	
+	<bean class="es.indra.sawa.support.wiring.WiringPostProcessor">
+		<property name="propertyMappings">
+			<list>
+				<value>.*SrvEntregarServiceImpl.*;trueZipDao;trueZipDao</value>
+				<value>.*SrvEntregarServiceImpl.*;scormDao;scorm2004Dao</value>	
+			</list>
+		</property>
+	</bean>
+
+
+</beans>

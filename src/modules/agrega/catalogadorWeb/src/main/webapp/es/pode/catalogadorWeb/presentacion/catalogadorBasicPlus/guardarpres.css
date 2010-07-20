@@ -1,0 +1,82 @@
+#guardarDatos.action {}
+#guardarDatos.action #form_submit {}
+
+#guardarDatos.action .arboles {}
+#guardarDatos.action .arboles .label {}
+#guardarDatos.action .arboles .field {}
+#guardarDatos.action .accion {}
+#guardarDatos.action .accion .label {}
+#guardarDatos.action .accion .field {}
+#guardarDatos.action .titulo {}
+#guardarDatos.action .titulo .label {}
+#guardarDatos.action .titulo .field {}
+#guardarDatos.action .tipoRecurso {}
+#guardarDatos.action .tipoRecurso .label {}
+#guardarDatos.action .tipoRecurso .field {}
+#guardarDatos.action .procesoCognitivo {}
+#guardarDatos.action .procesoCognitivo .label {}
+#guardarDatos.action .procesoCognitivo .field {}
+#guardarDatos.action .idiomaDestinatario {}
+#guardarDatos.action .idiomaDestinatario .label {}
+#guardarDatos.action .idiomaDestinatario .field {}
+#guardarDatos.action .idioma {}
+#guardarDatos.action .idioma .label {}
+#guardarDatos.action .idioma .field {}
+#guardarDatos.action .edad {}
+#guardarDatos.action .edad .label {}
+#guardarDatos.action .edad .field {}
+#guardarDatos.action .descripcion {}
+#guardarDatos.action .descripcion .label {}
+#guardarDatos.action .descripcion .field {}
+#guardarDatos.action .contexto {}
+#guardarDatos.action .contexto .label {}
+#guardarDatos.action .contexto .field {}
+#guardarDatos.action .usuario {}
+#guardarDatos.action .usuario .label {}
+#guardarDatos.action .usuario .field {}
+#guardarDatos.action .identificador {}
+#guardarDatos.action .identificador .label {}
+#guardarDatos.action .identificador .field {}
+
+#cancelar.action {}
+#cancelar.action #form_submit {}
+
+
+#aceptarGuardar.action {}
+#aceptarGuardar.action #form_submit {}
+
+#aceptarGuardar.action .arboles {}
+#aceptarGuardar.action .arboles .label {}
+#aceptarGuardar.action .arboles .field {}
+#aceptarGuardar.action .usuario {}
+#aceptarGuardar.action .usuario .label {}
+#aceptarGuardar.action .usuario .field {}
+#aceptarGuardar.action .identificador {}
+#aceptarGuardar.action .identificador .label {}
+#aceptarGuardar.action .identificador .field {}
+#aceptarGuardar.action .procesoCognitivo {}
+#aceptarGuardar.action .procesoCognitivo .label {}
+#aceptarGuardar.action .procesoCognitivo .field {}
+#aceptarGuardar.action .idiomaDestinatario {}
+#aceptarGuardar.action .idiomaDestinatario .label {}
+#aceptarGuardar.action .idiomaDestinatario .field {}
+#aceptarGuardar.action .edad {}
+#aceptarGuardar.action .edad .label {}
+#aceptarGuardar.action .edad .field {}
+#aceptarGuardar.action .contexto {}
+#aceptarGuardar.action .contexto .label {}
+#aceptarGuardar.action .contexto .field {}
+#aceptarGuardar.action .tipoRecurso {}
+#aceptarGuardar.action .tipoRecurso .label {}
+#aceptarGuardar.action .tipoRecurso .field {}
+#aceptarGuardar.action .descripcion {}
+#aceptarGuardar.action .descripcion .label {}
+#aceptarGuardar.action .descripcion .field {}
+#aceptarGuardar.action .idioma {}
+#aceptarGuardar.action .idioma .label {}
+#aceptarGuardar.action .idioma .field {}
+#aceptarGuardar.action .titulo {}
+#aceptarGuardar.action .titulo .label {}
+#aceptarGuardar.action .titulo .field {}
+
+

@@ -1,0 +1,15 @@
+--
+-- Encoding: UTF-8
+--
+
+BEGIN;
+
+INSERT INTO USUARIO VALUES (1,'Administrador','Apellido1','Apellido2','support@siriusit.co.uk','1234323E','administrador',NULL,'es','es','avanzado','2007-01-01 00:00:00',NULL,NULL,NULL,NULL,'avanzado',5242880,NULL);
+INSERT INTO GRUPO VALUES (1,'Administrador'), (2, 'Restricted demo user');
+INSERT INTO ROL VALUES (1,'ADMINISTRADOR'),(2,'PUBLICADOR'),(3,'CATALOGADOR'),(4,'DOCENTE'),(5,'DEMOUSER');
+INSERT INTO GRUPOS2ROLS VALUES (1,1),(1,2),(1,3),(1,4),(1,5),(2,5);
+INSERT INTO GRUPOS2USUARIOS VALUES (1,1);
+INSERT INTO GRUPO_TRABAJO VALUES (1,'Todos','Catalogador de todos los contenidos');
+INSERT INTO GRUPO_TRABAJO2USUARIO_GRUPO_TR (USUARIO_GRUPO_TRABAJO_FK,GRUPO_TRABAJO_FK) VALUES (1,1);
+
+COMMIT;

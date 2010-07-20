@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="crearTarea" class="action">
+    <h3><bean:message key="listar.tareas.pendientes.listar.crear.tarea"/></h3>
+    <div class="trigger">
+        <form id="listarTareasPendientesListarCrearTareaForm" action='<html:rewrite action="/ListarTareasPendientes/ListarCrearTarea"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR">
+               <html:submit onmouseover="hints.show('Crear tarea')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="listar.tareas.pendientes.listar.crear.tarea"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

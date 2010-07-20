@@ -1,0 +1,35 @@
+#submit.action {}
+#submit.action #form_submit {}
+
+#submit.action .accion {}
+#submit.action .accion .label {}
+#submit.action .accion .field {}
+#submit.action .tituloClasificacion {}
+#submit.action .tituloClasificacion .label {}
+#submit.action .tituloClasificacion .field {}
+#submit.action .razon {}
+#submit.action .razon .label {}
+#submit.action .razon .field {}
+#submit.action .rutaTaxonomica {}
+#submit.action .rutaTaxonomica .label {}
+#submit.action .rutaTaxonomica .field {}
+#submit.action .source {}
+#submit.action .source .label {}
+#submit.action .source .field {}
+#submit.action .comboIdioma {}
+#submit.action .comboIdioma .label {}
+#submit.action .comboIdioma .field {}
+#submit.action .descripciones {}
+#submit.action .descripciones .label {}
+#submit.action .descripciones .field {}
+#submit.action .palabrasClave {}
+#submit.action .palabrasClave .label {}
+#submit.action .palabrasClave .field {}
+#submit.action .botonPulsado {}
+#submit.action .botonPulsado .label {}
+#submit.action .botonPulsado .field {}
+#submit.action .vocabName {}
+#submit.action .vocabName .label {}
+#submit.action .vocabName .field {}
+
+

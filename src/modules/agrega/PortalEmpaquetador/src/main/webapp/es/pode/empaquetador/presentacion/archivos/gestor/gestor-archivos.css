@@ -1,0 +1,77 @@
+#vista.action {}
+#vista.action #form_submit {}
+
+#vista.action .vistaCarpeta {}
+#vista.action .vistaCarpeta .label {}
+#vista.action .vistaCarpeta .field {}
+
+#vaciarPortapapeles.action {}
+#vaciarPortapapeles.action #form_submit {}
+
+
+#archivos.action {}
+#archivos.action #form_submit {}
+
+
+#organizaciones.action {}
+#organizaciones.action #form_submit {}
+
+
+#recursos.action {}
+#recursos.action #form_submit {}
+
+
+#submanifiestos.action {}
+#submanifiestos.action #form_submit {}
+
+
+#catalogar.action {}
+#catalogar.action #form_submit {}
+
+#catalogar.action .identificador {}
+#catalogar.action .identificador .label {}
+#catalogar.action .identificador .field {}
+#catalogar.action .returnURL {}
+#catalogar.action .returnURL .label {}
+#catalogar.action .returnURL .field {}
+
+#previsualizar.action {}
+#previsualizar.action #form_submit {}
+
+
+#validar.action {}
+#validar.action #form_submit {}
+
+
+#guardar.action {}
+#guardar.action #form_submit {}
+
+#guardar.action .returnURL {}
+#guardar.action .returnURL .label {}
+#guardar.action .returnURL .field {}
+
+#salir.action {}
+#salir.action #form_submit {}
+
+
+#estructura.action {}
+#estructura.action #form_submit {}
+
+
+#listado.table {}
+#listado.table th {}
+#listado.table td div {}
+
+#listado.table th.nombre {}
+#listado.table td div.nombre {}
+
+
+#portapapeles.table {}
+#portapapeles.table th {}
+#portapapeles.table td div {}
+
+#portapapeles.table th.nombre {}
+#portapapeles.table td div.nombre {}
+
+
+

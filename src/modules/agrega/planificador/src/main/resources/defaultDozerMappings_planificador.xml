@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN" "http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+	<mapping wildcard="true" map-id="DEF_MAPPING_TAREAEJECUTADA_TAREAEJECUTADAVO">
+		<class-a>es.pode.planificador.negocio.dominio.TareaEjecutadaImpl</class-a>
+		<class-b>es.pode.planificador.negocio.servicios.TareaEjecutadaVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_TAREAEJECUTADAVO_TAREAEJECUTADA">
+		<class-a>es.pode.planificador.negocio.servicios.TareaEjecutadaVO</class-a>
+		<class-b>es.pode.planificador.negocio.dominio.TareaEjecutadaImpl</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_REGISTROTAREAEJECUTADA_REGISTROTAREAEJECUTADAVO">
+		<class-a>es.pode.planificador.negocio.dominio.RegistroTareaEjecutadaImpl</class-a>
+		<class-b>es.pode.planificador.negocio.servicios.RegistroTareaEjecutadaVO</class-b>
+	</mapping>	
+	<mapping wildcard="true" map-id="DEF_MAPPING_REGISTROTAREAEJECUTADAVO_REGISTROTAREAEJECUTADA">
+		<class-a>es.pode.planificador.negocio.servicios.RegistroTareaEjecutadaVO</class-a>
+		<class-b>es.pode.planificador.negocio.dominio.RegistroTareaEjecutadaImpl</class-b>
+	</mapping>	
+</mappings>

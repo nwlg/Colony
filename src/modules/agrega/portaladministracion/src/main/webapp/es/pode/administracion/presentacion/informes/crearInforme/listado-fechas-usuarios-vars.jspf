@@ -1,0 +1,26 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="anioHasta" value="${form.anioHasta}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="anioDesde" value="${form.anioDesde}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="informe" value="${form.informe}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="mesHasta" value="${form.mesHasta}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="diaHasta" value="${form.diaHasta}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="diaDesde" value="${form.diaDesde}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="mesDesde" value="${form.mesDesde}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="usuarios" value="${form.usuarios}"/>
+    </c:catch>
+</div>

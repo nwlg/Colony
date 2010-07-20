@@ -1,0 +1,24 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'ver.metadatos.derechos.form.vuelve.de.derechos.param.coste.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.derechos.form.vuelve.de.derechos.param.coste.title"/></formatting:escape>',
+                'ver.metadatos.derechos.form.vuelve.de.derechos.param.copy.restricciones.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.derechos.form.vuelve.de.derechos.param.copy.restricciones.title"/></formatting:escape>',
+                'ver.metadatos.derechos.form.vuelve.de.derechos.param.combo.idioma.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.derechos.form.vuelve.de.derechos.param.combo.idioma.title"/></formatting:escape>',
+                'ver.metadatos.derechos.form.vuelve.de.derechos.param.tipo.acceso.title':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.derechos.form.vuelve.de.derechos.param.tipo.acceso.title"/></formatting:escape>',
+                'vuelveDeDerechos':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.derechos.form.vuelve.de.derechos.title"/></formatting:escape>',
+                'vuelveDeDerechos_no':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.derechos.form.vuelve.de.derechos.title.notallowed"/></formatting:escape>',
+                'vuelveDeDerechos_reset':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.derechos.form.vuelve.de.derechos.title.reset"/></formatting:escape>',
+                'vuelveDeDerechos_noreset':'<formatting:escape language="javascript"><bean:message key="ver.metadatos.derechos.form.vuelve.de.derechos.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+</script>
+    </tiles:put>

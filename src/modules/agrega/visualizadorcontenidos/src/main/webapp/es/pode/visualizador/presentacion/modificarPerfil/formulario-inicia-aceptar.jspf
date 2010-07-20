@@ -1,0 +1,175 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="modificar.perfil.formulario.inicia.aceptar"/></h3>
+    <div class="trigger">
+        <html:form styleId="modificarPerfilFormularioIniciaAceptarForm" action="/ModificarPerfil/FormularioIniciaAceptar" method="post" enctype="multipart/form-data" onsubmit="return validateFormularioIniciaAceptarForm(this);">
+            <table>
+                <tbody>
+                    <tr class="id">
+                        <td class="label"><bean:message key="modificar.perfil.formulario.inicia.aceptar.param.id"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.id}"/>
+                           <input type="text" name="id" value="${value}" onmouseover="hints.show('modificar.perfil.formulario.inicia.aceptar.param.id.title')" onmouseout="hints.hide()"  id="aceptarId"/>
+                        </td>
+                    </tr>
+                    <tr class="tipoEmpaquetador">
+                        <td class="label"><bean:message key="modificar.perfil.formulario.inicia.aceptar.param.tipo.empaquetador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipoEmpaquetador}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.tipoEmpaquetadorBackingList}">
+                                  <html:select name="form" property="tipoEmpaquetador" onmouseover="hints.show('modificar.perfil.formulario.inicia.aceptar.param.tipo.empaquetador.title')" onmouseout="hints.hide()"  styleId="aceptarTipoEmpaquetador">
+                                      <html:optionsCollection name="form" property="tipoEmpaquetadorBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="tipoEmpaquetador" onmouseover="hints.show('modificar.perfil.formulario.inicia.aceptar.param.tipo.empaquetador.title')" onmouseout="hints.hide()"  styleId="aceptarTipoEmpaquetador"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="idiomaBusqueda">
+                        <td class="label"><bean:message key="modificar.perfil.formulario.inicia.aceptar.param.idioma.busqueda"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idiomaBusqueda}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.idiomaBusquedaBackingList}">
+                                  <html:select name="form" property="idiomaBusqueda" onmouseover="hints.show('modificar.perfil.formulario.inicia.aceptar.param.idioma.busqueda.title')" onmouseout="hints.hide()"  styleId="aceptarIdiomaBusqueda">
+                                      <html:optionsCollection name="form" property="idiomaBusquedaBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="idiomaBusqueda" onmouseover="hints.show('modificar.perfil.formulario.inicia.aceptar.param.idioma.busqueda.title')" onmouseout="hints.hide()"  styleId="aceptarIdiomaBusqueda"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="idioma">
+                        <td class="label"><bean:message key="modificar.perfil.formulario.inicia.aceptar.param.idioma"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idioma}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.idiomaBackingList}">
+                                  <html:select name="form" property="idioma" onmouseover="hints.show('modificar.perfil.formulario.inicia.aceptar.param.idioma.title')" onmouseout="hints.hide()"  styleId="aceptarIdioma">
+                                      <html:optionsCollection name="form" property="idiomaBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="idioma" onmouseover="hints.show('modificar.perfil.formulario.inicia.aceptar.param.idioma.title')" onmouseout="hints.hide()"  styleId="aceptarIdioma"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="repitaClave">
+                        <td class="label"><bean:message key="modificar.perfil.formulario.inicia.aceptar.param.repita.clave"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.repitaClave}"/>
+                           <input type="text" name="repitaClave" value="${value}" onmouseover="hints.show('modificar.perfil.formulario.inicia.aceptar.param.repita.clave.title')" onmouseout="hints.hide()"  id="aceptarRepitaClave"/>
+                        </td>
+                    </tr>
+                    <tr class="clave">
+                        <td class="label"><bean:message key="modificar.perfil.formulario.inicia.aceptar.param.clave"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.clave}"/>
+                           <input type="text" name="clave" value="${value}" onmouseover="hints.show('modificar.perfil.formulario.inicia.aceptar.param.clave.title')" onmouseout="hints.hide()"  id="aceptarClave"/>
+                        </td>
+                    </tr>
+                    <tr class="email">
+                        <td class="label"><bean:message key="modificar.perfil.formulario.inicia.aceptar.param.email"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.email}"/>
+                           <input type="text" name="email" value="${value}" onmouseover="hints.show('modificar.perfil.formulario.inicia.aceptar.param.email.title')" onmouseout="hints.hide()"  id="aceptarEmail"/>
+                        </td>
+                    </tr>
+                    <tr class="NIF">
+                        <td class="label"><bean:message key="modificar.perfil.formulario.inicia.aceptar.param.nif"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.NIF}"/>
+                           <input type="text" name="NIF" value="${value}" onmouseover="hints.show('modificar.perfil.formulario.inicia.aceptar.param.nif.title')" onmouseout="hints.hide()"  id="aceptarNIF"/>
+                        </td>
+                    </tr>
+                    <tr class="apellido2">
+                        <td class="label"><bean:message key="modificar.perfil.formulario.inicia.aceptar.param.apellido2"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.apellido2}"/>
+                           <input type="text" name="apellido2" value="${value}" onmouseover="hints.show('modificar.perfil.formulario.inicia.aceptar.param.apellido2.title')" onmouseout="hints.hide()"  id="aceptarApellido2"/>
+                        </td>
+                    </tr>
+                    <tr class="apellido1">
+                        <td class="label"><bean:message key="modificar.perfil.formulario.inicia.aceptar.param.apellido1"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.apellido1}"/>
+                           <input type="text" name="apellido1" value="${value}" onmouseover="hints.show('modificar.perfil.formulario.inicia.aceptar.param.apellido1.title')" onmouseout="hints.hide()"  id="aceptarApellido1"/>
+                        </td>
+                    </tr>
+                    <tr class="nombre">
+                        <td class="label"><bean:message key="modificar.perfil.formulario.inicia.aceptar.param.nombre"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.nombre}"/>
+                           <input type="text" name="nombre" value="${value}" onmouseover="hints.show('modificar.perfil.formulario.inicia.aceptar.param.nombre.title')" onmouseout="hints.hide()"  id="aceptarNombre"/>
+                        </td>
+                    </tr>
+                    <tr class="tipoCatalogador">
+                        <td class="label"><bean:message key="modificar.perfil.formulario.inicia.aceptar.param.tipo.catalogador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipoCatalogador}"/>
+                           <input type="text" name="tipoCatalogador" value="${value}" onmouseover="hints.show('modificar.perfil.formulario.inicia.aceptar.param.tipo.catalogador.title')" onmouseout="hints.hide()"  id="aceptarTipoCatalogador"/>
+                        </td>
+                    </tr>
+                    <tr class="cuota">
+                        <td class="label"><bean:message key="modificar.perfil.formulario.inicia.aceptar.param.cuota"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.cuota}"/>
+                           <input type="text" name="cuota" value="${value}" onmouseover="hints.show('modificar.perfil.formulario.inicia.aceptar.param.cuota.title')" onmouseout="hints.hide()"  id="aceptarCuota"/>
+                        </td>
+                    </tr>
+                    <tr class="openIdUrl">
+                        <td class="label"><bean:message key="modificar.perfil.formulario.inicia.aceptar.param.open.id.url"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.openIdUrl}"/>
+                           <input type="text" name="openIdUrl" value="${value}" onmouseover="hints.show('modificar.perfil.formulario.inicia.aceptar.param.open.id.url.title')" onmouseout="hints.hide()"  id="aceptarOpenIdUrl"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="modificar.perfil.formulario.inicia.aceptar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

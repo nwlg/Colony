@@ -1,0 +1,34 @@
+<div id="grupos" class="table">
+    <form id="grupos" name="" action="" method="post" enctype="multipart/form-data">
+    <display:table name="${form.grupos}" uid="row"
+        export="false" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:column media="html">
+            <input type="checkbox" name="idRowSelectionAsArray" value="${row.id}" title='<bean:message key="select.deselect.this.row"/>'/>
+        </display:column>
+
+
+        <display:column media="html"
+            headerClass="descripcion" paramId="descripcion"
+            sortProperty="descripcion" sortable="true"
+            titleKey="alta.usuario.pendiente.formulario.alta.usuario.pendiente.param.grupos.descripcion"
+            property="descripcion" />
+   
+
+
+        <display:column media="html"
+            headerClass="id" paramId="id"
+            sortProperty="id" sortable="true"
+            titleKey="alta.usuario.pendiente.formulario.alta.usuario.pendiente.param.grupos.id"
+            property="id" />
+   
+    </display:table>
+    <c:if test="${!empty form.grupos}">
+            <input type="submit" value="<bean:message key="alta.usuario.pendiente.formulario.alta.usuario.pendiente.aceptar"/>" onclick="this.form.name='altaUsuarioPendienteFormularioAltaUsuarioPendienteAceptarForm';this.form.action='<html:rewrite action="/AltaUsuarioPendiente/FormularioAltaUsuarioPendienteAceptar"/>';" onmouseover="hints.show('Aceptar')" onmouseout="hints.hide()"/>
+            <input type="button" value="<bean:message key="select.deselect.all"/>" onclick="var boxes=this.form.elements['idRowSelectionAsArray'];var setChecked=(boxes.length==0)?false:!boxes[0].checked;for(var i=0;i<boxes.length;i++)boxes[i].checked=setChecked;"/>
+    </c:if>
+    </form>
+</div>
+

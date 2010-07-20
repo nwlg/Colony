@@ -1,0 +1,4 @@
+<status>
+${load:source.xml}
+${load:value.xml}
+</status>

@@ -1,0 +1,25 @@
+<div id="informes" class="table">
+    <display:table name="${form.informes}" uid="row"
+        export="false" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+
+
+        <display:column media="html"
+            headerClass="nombre" paramId="nombre"
+            sortProperty="nombre" sortable="true"
+            titleKey="informes.formulario.listar.informes.param.informes.nombre"
+            property="nombre" />
+   
+
+
+        <display:column media="html"
+            headerClass="fecha" paramId="fecha"
+            sortProperty="fecha" sortable="true"
+            titleKey="informes.formulario.listar.informes.param.informes.fecha"
+            property="fecha" />
+   
+    </display:table>
+</div>
+

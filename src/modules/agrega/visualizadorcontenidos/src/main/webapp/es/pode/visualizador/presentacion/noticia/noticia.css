@@ -1,0 +1,19 @@
+#verMasNoticias.action {}
+#verMasNoticias.action #form_submit {}
+
+
+#accesibilidad.action {}
+#accesibilidad.action #form_submit {}
+
+
+#categoria.action {}
+#categoria.action #form_submit {}
+
+#categoria.action .categoria {}
+#categoria.action .categoria .label {}
+#categoria.action .categoria .field {}
+#categoria.action .idCategoria {}
+#categoria.action .idCategoria .label {}
+#categoria.action .idCategoria .field {}
+
+

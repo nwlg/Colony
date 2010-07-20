@@ -1,0 +1,34 @@
+
+    <tiles:put name="javascript" type="string">
+        <script type="text/javascript" language="Javascript1.1" src="<html:rewrite action="/formValidation"/>"></script>
+        <html:javascript formName="visualizarVisualizarDatosNavSecuenciaBotonForm" method="validateVisualizarDatosNavSecuenciaBotonForm" dynamicJavascript="true" staticJavascript="false" htmlComment="true" cdata="false"/>
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'visualizar.visualizar.datos.nav.secuencia.nodo.param.id.nodo.title':'<formatting:escape language="javascript"><bean:message key="visualizar.visualizar.datos.nav.secuencia.nodo.param.id.nodo.title"/></formatting:escape>',
+                'visualizar.visualizar.datos.nav.secuencia.boton.param.contador.title':'<formatting:escape language="javascript"><bean:message key="visualizar.visualizar.datos.nav.secuencia.boton.param.contador.title"/></formatting:escape>',
+                'secuenciaNodo':'<formatting:escape language="javascript"><bean:message key="visualizar.visualizar.datos.nav.secuencia.nodo.title"/></formatting:escape>',
+                'secuenciaNodo_no':'<formatting:escape language="javascript"><bean:message key="visualizar.visualizar.datos.nav.secuencia.nodo.title.notallowed"/></formatting:escape>',
+                'secuenciaNodo_reset':'<formatting:escape language="javascript"><bean:message key="visualizar.visualizar.datos.nav.secuencia.nodo.title.reset"/></formatting:escape>',
+                'secuenciaNodo_noreset':'<formatting:escape language="javascript"><bean:message key="visualizar.visualizar.datos.nav.secuencia.nodo.title.reset.not.allowed"/></formatting:escape>',
+                'secuenciaBoton':'<formatting:escape language="javascript"><bean:message key="visualizar.visualizar.datos.nav.secuencia.boton.title"/></formatting:escape>',
+                'secuenciaBoton_no':'<formatting:escape language="javascript"><bean:message key="visualizar.visualizar.datos.nav.secuencia.boton.title.notallowed"/></formatting:escape>',
+                'secuenciaBoton_reset':'<formatting:escape language="javascript"><bean:message key="visualizar.visualizar.datos.nav.secuencia.boton.title.reset"/></formatting:escape>',
+                'secuenciaBoton_noreset':'<formatting:escape language="javascript"><bean:message key="visualizar.visualizar.datos.nav.secuencia.boton.title.reset.not.allowed"/></formatting:escape>',
+                'Salir':'<formatting:escape language="javascript"><bean:message key="visualizar.visualizar.datos.nav.salir.title"/></formatting:escape>',
+                'Salir_no':'<formatting:escape language="javascript"><bean:message key="visualizar.visualizar.datos.nav.salir.title.notallowed"/></formatting:escape>',
+                'Salir_reset':'<formatting:escape language="javascript"><bean:message key="visualizar.visualizar.datos.nav.salir.title.reset"/></formatting:escape>',
+                'Salir_noreset':'<formatting:escape language="javascript"><bean:message key="visualizar.visualizar.datos.nav.salir.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+</script>
+    </tiles:put>

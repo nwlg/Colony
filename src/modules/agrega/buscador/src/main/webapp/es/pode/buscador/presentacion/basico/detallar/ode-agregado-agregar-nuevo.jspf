@@ -1,0 +1,240 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="agregarNuevo" class="action">
+    <h3><bean:message key="detallar.odecu.ode.agregado.agregar.nuevo"/></h3>
+    <div class="trigger">
+        <html:form styleId="detallarODECUOdeAgregadoAgregarNuevoForm" action="/DetallarODECU/OdeAgregadoAgregarNuevo" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="autor">
+                        <td class="label"><bean:message key="detallar.odecu.ode.agregado.agregar.nuevo.param.autor"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.autor}"/>
+                           <input type="text" name="autor" value="${value}" onmouseover="hints.show('detallar.odecu.ode.agregado.agregar.nuevo.param.autor.title')" onmouseout="hints.hide()"  id="agregarNuevoAutor"/>
+                        </td>
+                    </tr>
+                    <tr class="buscadorContenido">
+                        <td class="label"><bean:message key="detallar.odecu.ode.agregado.agregar.nuevo.param.buscador.contenido"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.buscadorContenido}"/>
+                           <input type="text" name="buscadorContenido" value="${value}" onmouseover="hints.show('detallar.odecu.ode.agregado.agregar.nuevo.param.buscador.contenido.title')" onmouseout="hints.hide()"  id="agregarNuevoBuscadorContenido"/>
+                        </td>
+                    </tr>
+                    <tr class="busquedaSimpleAvanzada">
+                        <td class="label"><bean:message key="detallar.odecu.ode.agregado.agregar.nuevo.param.busqueda.simple.avanzada"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.busquedaSimpleAvanzada}"/>
+                           <input type="text" name="busquedaSimpleAvanzada" value="${value}" onmouseover="hints.show('detallar.odecu.ode.agregado.agregar.nuevo.param.busqueda.simple.avanzada.title')" onmouseout="hints.hide()"  id="agregarNuevoBusquedaSimpleAvanzada"/>
+                        </td>
+                    </tr>
+                    <tr class="c_s_secuencia">
+                        <td class="label"><bean:message key="detallar.odecu.ode.agregado.agregar.nuevo.param.c.s.secuencia"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.c_s_secuencia}"/>
+                           <input type="text" name="c_s_secuencia" value="${value}" onmouseover="hints.show('detallar.odecu.ode.agregado.agregar.nuevo.param.c.s.secuencia.title')" onmouseout="hints.hide()"  id="agregarNuevoCSSecuencia"/>
+                        </td>
+                    </tr>
+                    <tr class="contexto">
+                        <td class="label"><bean:message key="detallar.odecu.ode.agregado.agregar.nuevo.param.contexto"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.contexto}"/>
+                           <input type="text" name="contexto" value="${value}" onmouseover="hints.show('detallar.odecu.ode.agregado.agregar.nuevo.param.contexto.title')" onmouseout="hints.hide()"  id="agregarNuevoContexto"/>
+                        </td>
+                    </tr>
+                    <tr class="descripcion">
+                        <td class="label"><bean:message key="detallar.odecu.ode.agregado.agregar.nuevo.param.descripcion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.descripcion}"/>
+                           <input type="text" name="descripcion" value="${value}" onmouseover="hints.show('detallar.odecu.ode.agregado.agregar.nuevo.param.descripcion.title')" onmouseout="hints.hide()"  id="agregarNuevoDescripcion"/>
+                        </td>
+                    </tr>
+                    <tr class="edad">
+                        <td class="label"><bean:message key="detallar.odecu.ode.agregado.agregar.nuevo.param.edad"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.edad}"/>
+                           <input type="text" name="edad" value="${value}" onmouseover="hints.show('detallar.odecu.ode.agregado.agregar.nuevo.param.edad.title')" onmouseout="hints.hide()"  id="agregarNuevoEdad"/>
+                        </td>
+                    </tr>
+                    <tr class="anyoPublicacion">
+                        <td class="label"><bean:message key="detallar.odecu.ode.agregado.agregar.nuevo.param.anyo.publicacion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.anyoPublicacion}"/>
+                           <input type="text" name="anyoPublicacion" value="${value}" onmouseover="hints.show('detallar.odecu.ode.agregado.agregar.nuevo.param.anyo.publicacion.title')" onmouseout="hints.hide()"  id="agregarNuevoAnyoPublicacion"/>
+                        </td>
+                    </tr>
+                    <tr class="formato">
+                        <td class="label"><bean:message key="detallar.odecu.ode.agregado.agregar.nuevo.param.formato"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.formato}"/>
+                           <input type="text" name="formato" value="${value}" onmouseover="hints.show('detallar.odecu.ode.agregado.agregar.nuevo.param.formato.title')" onmouseout="hints.hide()"  id="agregarNuevoFormato"/>
+                        </td>
+                    </tr>
+                    <tr class="idiomaBuscador">
+                        <td class="label"><bean:message key="detallar.odecu.ode.agregado.agregar.nuevo.param.idioma.buscador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idiomaBuscador}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.idiomaBuscadorBackingList}">
+                                  <html:select name="form" property="idiomaBuscador" onmouseover="hints.show('detallar.odecu.ode.agregado.agregar.nuevo.param.idioma.buscador.title')" onmouseout="hints.hide()"  styleId="agregarNuevoIdiomaBuscador">
+                                      <html:optionsCollection name="form" property="idiomaBuscadorBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="idiomaBuscador" onmouseover="hints.show('detallar.odecu.ode.agregado.agregar.nuevo.param.idioma.buscador.title')" onmouseout="hints.hide()"  styleId="agregarNuevoIdiomaBuscador"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="areaCurricular">
+                        <td class="label"><bean:message key="detallar.odecu.ode.agregado.agregar.nuevo.param.area.curricular"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.areaCurricular}"/>
+                           <input type="text" name="areaCurricular" value="${value}" onmouseover="hints.show('detallar.odecu.ode.agregado.agregar.nuevo.param.area.curricular.title')" onmouseout="hints.hide()"  id="agregarNuevoAreaCurricular"/>
+                        </td>
+                    </tr>
+                    <tr class="pagina">
+                        <td class="label"><bean:message key="detallar.odecu.ode.agregado.agregar.nuevo.param.pagina"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.pagina}"/>
+                           <input type="text" name="pagina" value="${value}" onmouseover="hints.show('detallar.odecu.ode.agregado.agregar.nuevo.param.pagina.title')" onmouseout="hints.hide()"  id="agregarNuevoPagina"/>
+                        </td>
+                    </tr>
+                    <tr class="procesoCognitivo">
+                        <td class="label"><bean:message key="detallar.odecu.ode.agregado.agregar.nuevo.param.proceso.cognitivo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.procesoCognitivo}"/>
+                           <input type="text" name="procesoCognitivo" value="${value}" onmouseover="hints.show('detallar.odecu.ode.agregado.agregar.nuevo.param.proceso.cognitivo.title')" onmouseout="hints.hide()"  id="agregarNuevoProcesoCognitivo"/>
+                        </td>
+                    </tr>
+                    <tr class="recurso">
+                        <td class="label"><bean:message key="detallar.odecu.ode.agregado.agregar.nuevo.param.recurso"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.recurso}"/>
+                           <input type="text" name="recurso" value="${value}" onmouseover="hints.show('detallar.odecu.ode.agregado.agregar.nuevo.param.recurso.title')" onmouseout="hints.hide()"  id="agregarNuevoRecurso"/>
+                        </td>
+                    </tr>
+                    <tr class="titulo">
+                        <td class="label"><bean:message key="detallar.odecu.ode.agregado.agregar.nuevo.param.titulo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.titulo}"/>
+                           <input type="text" name="titulo" value="${value}" onmouseover="hints.show('detallar.odecu.ode.agregado.agregar.nuevo.param.titulo.title')" onmouseout="hints.hide()"  id="agregarNuevoTitulo"/>
+                        </td>
+                    </tr>
+                    <tr class="valoracion">
+                        <td class="label"><bean:message key="detallar.odecu.ode.agregado.agregar.nuevo.param.valoracion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.valoracion}"/>
+                           <input type="text" name="valoracion" value="${value}" onmouseover="hints.show('detallar.odecu.ode.agregado.agregar.nuevo.param.valoracion.title')" onmouseout="hints.hide()"  id="agregarNuevoValoracion"/>
+                        </td>
+                    </tr>
+                    <tr class="mesPublicacion">
+                        <td class="label"><bean:message key="detallar.odecu.ode.agregado.agregar.nuevo.param.mes.publicacion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.mesPublicacion}"/>
+                           <input type="text" name="mesPublicacion" value="${value}" onmouseover="hints.show('detallar.odecu.ode.agregado.agregar.nuevo.param.mes.publicacion.title')" onmouseout="hints.hide()"  id="agregarNuevoMesPublicacion"/>
+                        </td>
+                    </tr>
+                    <tr class="diaPublicacion">
+                        <td class="label"><bean:message key="detallar.odecu.ode.agregado.agregar.nuevo.param.dia.publicacion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.diaPublicacion}"/>
+                           <input type="text" name="diaPublicacion" value="${value}" onmouseover="hints.show('detallar.odecu.ode.agregado.agregar.nuevo.param.dia.publicacion.title')" onmouseout="hints.hide()"  id="agregarNuevoDiaPublicacion"/>
+                        </td>
+                    </tr>
+                    <tr class="areaCurricularBusqueda">
+                        <td class="label"><bean:message key="detallar.odecu.ode.agregado.agregar.nuevo.param.area.curricular.busqueda"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.areaCurricularBusqueda}"/>
+                           <input type="text" name="areaCurricularBusqueda" value="${value}" onmouseover="hints.show('detallar.odecu.ode.agregado.agregar.nuevo.param.area.curricular.busqueda.title')" onmouseout="hints.hide()"  id="agregarNuevoAreaCurricularBusqueda"/>
+                        </td>
+                    </tr>
+                    <tr class="tipoVisualizacion">
+                        <td class="label"><bean:message key="detallar.odecu.ode.agregado.agregar.nuevo.param.tipo.visualizacion"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipoVisualizacion}"/>
+                           <input type="text" name="tipoVisualizacion" value="${value}" onmouseover="hints.show('detallar.odecu.ode.agregado.agregar.nuevo.param.tipo.visualizacion.title')" onmouseout="hints.hide()"  id="agregarNuevoTipoVisualizacion"/>
+                        </td>
+                    </tr>
+                    <tr class="tipoBusquedaArbol">
+                        <td class="label"><bean:message key="detallar.odecu.ode.agregado.agregar.nuevo.param.tipo.busqueda.arbol"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipoBusquedaArbol}"/>
+                           <input type="text" name="tipoBusquedaArbol" value="${value}" onmouseover="hints.show('detallar.odecu.ode.agregado.agregar.nuevo.param.tipo.busqueda.arbol.title')" onmouseout="hints.hide()"  id="agregarNuevoTipoBusquedaArbol"/>
+                        </td>
+                    </tr>
+                    <tr class="tipoBusqueda">
+                        <td class="label"><bean:message key="detallar.odecu.ode.agregado.agregar.nuevo.param.tipo.busqueda"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipoBusqueda}"/>
+                           <input type="text" name="tipoBusqueda" value="${value}" onmouseover="hints.show('detallar.odecu.ode.agregado.agregar.nuevo.param.tipo.busqueda.title')" onmouseout="hints.hide()"  id="agregarNuevoTipoBusqueda"/>
+                        </td>
+                    </tr>
+                    <tr class="tipoLayoutBuscador">
+                        <td class="label"><bean:message key="detallar.odecu.ode.agregado.agregar.nuevo.param.tipo.layout.buscador"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.tipoLayoutBuscador}"/>
+                           <input type="text" name="tipoLayoutBuscador" value="${value}" onmouseover="hints.show('detallar.odecu.ode.agregado.agregar.nuevo.param.tipo.layout.buscador.title')" onmouseout="hints.hide()"  id="agregarNuevoTipoLayoutBuscador"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_EMPAQUETADOR,ROLE_CATALOGADOR,ROLE_PUBLICADOR,ROLE_ADMINISTRADOR,ROLE_DOCENTE,ROLE_DEMOUSER,ROLE_PUBLICADOR,ROLE_CATALOGADOR,ROLE_EMPAQUETADOR,ROLE_DOCENTE,ROLE_ADMINISTRADOR,ROLE_DOCENTE,ROLE_CATALOGADOR,ROLE_ADMINISTRADOR,ROLE_PUBLICADOR,ROLE_EMPAQUETADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('agregarNuevo')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="detallar.odecu.ode.agregado.agregar.nuevo"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

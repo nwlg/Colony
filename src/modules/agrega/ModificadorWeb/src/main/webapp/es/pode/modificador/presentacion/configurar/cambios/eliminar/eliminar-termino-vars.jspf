@@ -1,0 +1,20 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="alcance" value="${form.alcance}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="valor" value="${form.valor}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idioma" value="${form.idioma}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="formularioModificar" value="${form.formularioModificar}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="expr" value="${form.expr}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="idiomaBuscador" value="${form.idiomaBuscador}"/>
+    </c:catch>
+</div>

@@ -1,0 +1,53 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'gestor.organizaciones.gestor.organizaciones.submit.param.identifier.title':'<formatting:escape language="javascript"><bean:message key="gestor.organizaciones.gestor.organizaciones.submit.param.identifier.title"/></formatting:escape>',
+                'gestor.organizaciones.gestor.organizaciones.metadatos.param.identifier.title':'<formatting:escape language="javascript"><bean:message key="gestor.organizaciones.gestor.organizaciones.metadatos.param.identifier.title"/></formatting:escape>',
+                'gestor.organizaciones.gestor.organizaciones.metadatos.param.return.url.title':'<formatting:escape language="javascript"><bean:message key="gestor.organizaciones.gestor.organizaciones.metadatos.param.return.url.title"/></formatting:escape>',
+                'gestor.organizaciones.gestor.organizaciones.subir.param.identifier.title':'<formatting:escape language="javascript"><bean:message key="gestor.organizaciones.gestor.organizaciones.subir.param.identifier.title"/></formatting:escape>',
+                'gestor.organizaciones.gestor.organizaciones.bajar.param.identifier.title':'<formatting:escape language="javascript"><bean:message key="gestor.organizaciones.gestor.organizaciones.bajar.param.identifier.title"/></formatting:escape>',
+                'gestor.organizaciones.gestor.organizaciones.modificar.param.identifier.title':'<formatting:escape language="javascript"><bean:message key="gestor.organizaciones.gestor.organizaciones.modificar.param.identifier.title"/></formatting:escape>',
+                'gestor.organizaciones.gestor.organizaciones.modificar.param.title.title':'<formatting:escape language="javascript"><bean:message key="gestor.organizaciones.gestor.organizaciones.modificar.param.title.title"/></formatting:escape>',
+                'gestor.organizaciones.gestor.organizaciones.editar.param.identifier.title':'<formatting:escape language="javascript"><bean:message key="gestor.organizaciones.gestor.organizaciones.editar.param.identifier.title"/></formatting:escape>',
+                'Submit':'<formatting:escape language="javascript"><bean:message key="gestor.organizaciones.gestor.organizaciones.submit.title"/></formatting:escape>',
+                'Submit_no':'<formatting:escape language="javascript"><bean:message key="gestor.organizaciones.gestor.organizaciones.submit.title.notallowed"/></formatting:escape>',
+                'Submit_reset':'<formatting:escape language="javascript"><bean:message key="gestor.organizaciones.gestor.organizaciones.submit.title.reset"/></formatting:escape>',
+                'Submit_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.organizaciones.gestor.organizaciones.submit.title.reset.not.allowed"/></formatting:escape>',
+                'Metadatos':'<formatting:escape language="javascript"><bean:message key="gestor.organizaciones.gestor.organizaciones.metadatos.title"/></formatting:escape>',
+                'Metadatos_no':'<formatting:escape language="javascript"><bean:message key="gestor.organizaciones.gestor.organizaciones.metadatos.title.notallowed"/></formatting:escape>',
+                'Metadatos_reset':'<formatting:escape language="javascript"><bean:message key="gestor.organizaciones.gestor.organizaciones.metadatos.title.reset"/></formatting:escape>',
+                'Metadatos_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.organizaciones.gestor.organizaciones.metadatos.title.reset.not.allowed"/></formatting:escape>',
+                'Subir':'<formatting:escape language="javascript"><bean:message key="gestor.organizaciones.gestor.organizaciones.subir.title"/></formatting:escape>',
+                'Subir_no':'<formatting:escape language="javascript"><bean:message key="gestor.organizaciones.gestor.organizaciones.subir.title.notallowed"/></formatting:escape>',
+                'Subir_reset':'<formatting:escape language="javascript"><bean:message key="gestor.organizaciones.gestor.organizaciones.subir.title.reset"/></formatting:escape>',
+                'Subir_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.organizaciones.gestor.organizaciones.subir.title.reset.not.allowed"/></formatting:escape>',
+                'Bajar':'<formatting:escape language="javascript"><bean:message key="gestor.organizaciones.gestor.organizaciones.bajar.title"/></formatting:escape>',
+                'Bajar_no':'<formatting:escape language="javascript"><bean:message key="gestor.organizaciones.gestor.organizaciones.bajar.title.notallowed"/></formatting:escape>',
+                'Bajar_reset':'<formatting:escape language="javascript"><bean:message key="gestor.organizaciones.gestor.organizaciones.bajar.title.reset"/></formatting:escape>',
+                'Bajar_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.organizaciones.gestor.organizaciones.bajar.title.reset.not.allowed"/></formatting:escape>',
+                'Modificar':'<formatting:escape language="javascript"><bean:message key="gestor.organizaciones.gestor.organizaciones.modificar.title"/></formatting:escape>',
+                'Modificar_no':'<formatting:escape language="javascript"><bean:message key="gestor.organizaciones.gestor.organizaciones.modificar.title.notallowed"/></formatting:escape>',
+                'Modificar_reset':'<formatting:escape language="javascript"><bean:message key="gestor.organizaciones.gestor.organizaciones.modificar.title.reset"/></formatting:escape>',
+                'Modificar_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.organizaciones.gestor.organizaciones.modificar.title.reset.not.allowed"/></formatting:escape>',
+                'Editar':'<formatting:escape language="javascript"><bean:message key="gestor.organizaciones.gestor.organizaciones.editar.title"/></formatting:escape>',
+                'Editar_no':'<formatting:escape language="javascript"><bean:message key="gestor.organizaciones.gestor.organizaciones.editar.title.notallowed"/></formatting:escape>',
+                'Editar_reset':'<formatting:escape language="javascript"><bean:message key="gestor.organizaciones.gestor.organizaciones.editar.title.reset"/></formatting:escape>',
+                'Editar_noreset':'<formatting:escape language="javascript"><bean:message key="gestor.organizaciones.gestor.organizaciones.editar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+
+
+
+</script>
+    </tiles:put>

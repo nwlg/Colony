@@ -1,0 +1,46 @@
+<div id="listaODES" class="table">
+    <form id="listaODES" name="" action="" method="post" enctype="multipart/form-data">
+    <display:table name="${form.listaODES}" uid="row"
+        export="true" 
+		requestURI="${requestURI}"
+		defaultsort="1" partialList="true" size="${resultSize}"
+		pagesize="${pageSize}" sort="external">
+        
+        <display:setProperty name="export.pdf.filename" value="mostrar-odesdespublicados-lista-odes.pdf" />
+        <display:column media="html">
+            <input type="checkbox" name="idODERowSelectionAsArray" value="${row.idODE}" title='<bean:message key="select.deselect.this.row"/>'/>
+        </display:column>
+
+        <display:column media="xml csv excel pdf"
+            titleKey="objetos.despublicados.cu.mostrar.odesdespublicados.param.lista.odes.id.ode"
+            autolink="true" paramId="idODE"
+            property="idODE">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="idODE" paramId="idODE"
+            sortProperty="idODE" sortable="true"
+            titleKey="objetos.despublicados.cu.mostrar.odesdespublicados.param.lista.odes.id.ode"
+            property="idODE" />
+   
+
+        <display:column media="xml csv excel pdf"
+            titleKey="objetos.despublicados.cu.mostrar.odesdespublicados.param.lista.odes.titulo"
+            autolink="true" paramId="titulo"
+            property="titulo">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="titulo" paramId="titulo"
+            sortProperty="titulo" sortable="true"
+            titleKey="objetos.despublicados.cu.mostrar.odesdespublicados.param.lista.odes.titulo"
+            property="titulo" />
+   
+    </display:table>
+    <c:if test="${!empty form.listaODES}">
+            <input type="submit" value="<bean:message key="objetos.despublicados.cu.mostrar.odesdespublicados.eliminar"/>" onclick="this.form.name='objetosDespublicadosCUMostrarODESDespublicadosEliminarForm';this.form.action='<html:rewrite action="/ObjetosDespublicadosCU/MostrarODESDespublicadosEliminar"/>';" onmouseover="hints.show('Eliminar')" onmouseout="hints.hide()"/>
+            <input type="button" value="<bean:message key="select.deselect.all"/>" onclick="var boxes=this.form.elements['idODERowSelectionAsArray'];var setChecked=(boxes.length==0)?false:!boxes[0].checked;for(var i=0;i<boxes.length;i++)boxes[i].checked=setChecked;"/>
+    </c:if>
+    </form>
+</div>
+

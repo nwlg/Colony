@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gallery>
+<album title="CCAA Agrega" description="" lgPath="img_swf/logo/lg/" tnPath="img_swf/logo/sm/">
+<img src="andalucia.jpg"/>
+<img src="aragon.jpg"/>
+<img src="asturias.jpg"/>
+<img src="baleares.jpg"/>
+<img src="canarias.jpg"/>
+<img src="cantabria.jpg"/>
+<img src="castilla_leon.jpg"/>
+<img src="catalunya.jpg"/>
+<img src="castilla_la_mancha.jpg"/>
+<img src="euskadi.jpg"/>
+<img src="extremadura.jpg"/>
+<img src="galicia.jpg"/>
+<img src="madrid.jpg"/>
+<img src="murcia.jpg"/>
+<img src="navarra.jpg"/>
+<img src="rioja.jpg"/>
+<img src="valencia.jpg"/>
+</album>
+</gallery>

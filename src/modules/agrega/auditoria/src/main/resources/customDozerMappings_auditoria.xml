@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN" "http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+	<mapping wildcard="true"
+		map-id="DEF_MAPPING_COBERTURAVO_INFORMECOBERTURACURRICULARVO">
+		<class-a>
+			es.pode.indexador.negocio.servicios.auditoria.CoberturaVO
+		</class-a>
+		<class-b>
+			es.pode.auditoria.negocio.servicios.InformeCoberturaCurricularVO
+		</class-b>
+		<field>
+			<a>id</a>
+			<b>coberturaCurricular</b>
+		</field>
+		<field>
+			<a>numDoc</a>
+			<b>totalOdes</b>
+		</field>
+	</mapping>
+	<mapping wildcard="true"
+		map-id="DEF_MAPPING_COBERTURAVO_INFORMENIVELAGREGACIONVO">
+		<class-a>
+			es.pode.indexador.negocio.servicios.auditoria.CoberturaVO
+		</class-a>
+		<class-b>
+			es.pode.auditoria.negocio.servicios.InformeNivelAgregacionVO
+		</class-b>
+		<field>
+			<a>id</a>
+			<b>id</b>
+		</field>
+		<field>
+			<a>numDoc</a>
+			<b>numDoc</b>
+		</field>
+	</mapping>
+	<mapping wildcard="true"
+		map-id="DEF_MAPPING_COBERTURAVO_INFORMELICENCIASODESVO">
+		<class-a>
+			es.pode.indexador.negocio.servicios.auditoria.CoberturaVO
+		</class-a>
+		<class-b>
+			es.pode.auditoria.negocio.servicios.InformeLicenciasOdesVO
+		</class-b>
+		<field>
+			<a>id</a>
+			<b>licencia</b>
+		</field>
+		<field>
+			<a>numDoc</a>
+			<b>numOdes</b>
+		</field>
+	</mapping>
+	<mapping wildcard="true"
+		map-id="DEF_MAPPING_PESOODEVO_INFORMEMASPESADOSVO">
+		<class-a>
+			es.pode.publicacion.negocio.servicios.PesoODEVO
+		</class-a>
+		<class-b>
+			es.pode.auditoria.negocio.servicios.InformeMasPesadosVO
+		</class-b>
+		<field>
+			<a>titulo</a>
+			<b>tituloOde</b>
+		</field>
+		<field>
+			<a>tamanio</a>
+			<b>tamanio</b>
+		</field>
+	</mapping>
+</mappings>

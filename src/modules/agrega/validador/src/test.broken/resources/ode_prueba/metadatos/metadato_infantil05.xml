@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This is a Reload CRT version 2.3.5 Metadata document-->
+<!--Spawned from the Reload Metadata Generator - http://www.reload.ac.uk-->
+<lom xmlns="http://ltsc.ieee.org/xsd/LOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM lom.xsd">
+	<general>
+		<identifier>
+			<catalog>Catálogo unificado mec-red.es-ccaa de identificación de ODE</catalog>
+			<entry>es_20070727_3_0150500</entry>
+		</identifier>
+		<title>
+			<string>Las estaciones, la ropa y la casa.</string>
+		</title>
+		<language>es</language>
+		<description>
+			<string>Conceptos básicos relacionados con la observación del tiempo, los vestidos y el lugar donde vivimos.</string>
+		</description>
+		<keyword>
+			<string>Estaciones del año, Ropa, Casa, Educación Infantil</string>
+		</keyword>
+		<coverage>
+			<string>Universal</string>
+		</coverage>
+		<structure>
+			<source>LOM-ESv1.0</source>
+			<value>hierarchical</value>
+		</structure>
+		<aggregationLevel>
+			<source>LOM-ESv1.0</source>
+			<value>2</value>
+		</aggregationLevel>
+	</general>
+	<lifeCycle>
+		<version>
+			<string>V1.0</string>
+		</version>
+		<status>
+			<source>LOM-ESv1.0</source>
+			<value>final</value>
+		</status>
+		<contribute>
+			<role>
+				<source>LOM-ESv1.0</source>
+				<value>author</value>
+			</role>
+			<entity>BEGIN:VCARD VERSION:3.0 FN: Mercedes Álvarez Sierra, Pilar Fernández Martínez, Manuela González Tello, Charo Monforte Gómez, Arantxa Martínez García, David Cantos Vila, Rosa Mª Fernández Fernández, Ana Isabel Álvarez Sánchez, Florencio Bermejo del Hoyo, Teresa Pacheco Román, Miriam Olga Cecilia Martínez, Isabel Abelleira Bardanca, Manuel Gesto Pan, José Leonardo Fariña García, Rosa Mª Barreiro Carujo, Rosario Belda Otero, Javier Rouco Ferreiro, María Casal Montero, Angels Pons Sans, Infinity Group, José Sánchez Rodriguez, Damián Lozano Rivas, Antonio Jerez Gómez, Auxi Quintana Navas-Chaveli , Ininatus, Gil Gijón Canal, David Bravo Montarelo, José Antonio Aivar Mateo, Alberto Melchor Herrera, Carmen Luisa Padrón Nápoles, José Luis López Fernández EMAIL;TYPE=INTERNET:ORG:END:VCARD</entity>
+			<date>
+				<dateTime>2005-12-31</dateTime>
+				<description>
+					<string>Fecha de creación de la secuencia didáctica</string>
+				</description>
+			</date>
+		</contribute>
+		<contribute>
+			<role>
+				<source>LOM-ESv1.0</source>
+				<value>editor</value>
+			</role>
+			<entity>BEGIN:VCARD VERSION:3.0 FN: Centro Nacional de Información y Comunicación Educativa EMAIL;TYPE=INTERNET: webmaster@cnice.mec.es ORG:Ministerio de Educación y Ciencia de España END:VCARD</entity>
+			<date>
+				<dateTime>2005-12-31</dateTime>
+				<description>
+					<string>Fecha de publicación de la secuencia didáctica</string>
+				</description>
+			</date>
+		</contribute>
+	</lifeCycle>
+	<metaMetadata>
+		<identifier>
+			<catalog>Catálogo unificado mec-red.es-ccaa-meta de identificación de instancias de metadatos de ODE</catalog>
+			<entry>es_20070727_3_0150500-meta</entry>
+		</identifier>
+		<contribute>
+			<role>
+				<source>LOM-ESv1.0</source>
+				<value>creator</value>
+			</role>
+			<entity>BEGIN:VCARD VERSION:3.0 FN: EMAIL;TYPE=INTERNET:ORG: Santillana Educación S.L. e Indra Sistemas S.A. END:VCARD</entity>
+			<date>
+				<dateTime>2007-07-09</dateTime>
+				<description>
+					<string>Fecha de catalogación de la secuencia didáctica</string>
+				</description>
+			</date>
+		</contribute>
+		<metadataSchema>LOM-ES V1.0</metadataSchema>
+		<language>es</language>
+	</metaMetadata>
+	<technical>
+		<format>application/x-shockwave-flash</format>
+		<format>text/html</format>
+		<format>application/pdf</format>
+		<size>3997696</size>
+		<requirement>
+			<orComposite>
+				<type>
+					<source>LOM-ESv1.0</source>
+					<value>browser</value>
+				</type>
+				<name>
+					<source>LOM-ESv1.0</source>
+					<value>any</value>
+				</name>
+				<minimumVersion>Flash Player 7</minimumVersion>
+			</orComposite>
+		</requirement>
+		<otherPlatformRequirements>
+			<string>Plugin de Flash Player</string>
+		</otherPlatformRequirements>
+	</technical>
+	<educational>
+		<interactivityType>
+			<source>LOM-ESv1.0</source>
+			<value>mixed</value>
+		</interactivityType>
+		<learningResourceType>
+			<source>LOM-ESv1.0</source>
+			<value>illustration</value>
+		</learningResourceType>
+		<learningResourceType>
+			<source>LOM-ESv1.0</source>
+			<value>voice-over</value>
+		</learningResourceType>
+		<learningResourceType>
+			<source>LOM-ESv1.0</source>
+			<value>master class</value>
+		</learningResourceType>
+		<learningResourceType>
+			<source>LOM-ESv1.0</source>
+			<value>sound effect</value>
+		</learningResourceType>
+		<learningResourceType>
+			<source>LOM-ESv1.0</source>
+			<value>closed exercise or problem</value>
+		</learningResourceType>
+		<learningResourceType>
+			<source>LOM-ESv1.0</source>
+			<value>animation</value>
+		</learningResourceType>
+		<interactivityLevel>
+			<source>LOM-ESv1.0</source>
+			<value>medium</value>
+		</interactivityLevel>
+		<semanticDensity>
+			<source>LOM-ESv1.0</source>
+			<value>medium</value>
+		</semanticDensity>
+		<intendedEndUserRole>
+			<source>LOM-ESv1.0</source>
+			<value>general public</value>
+		</intendedEndUserRole>
+		<intendedEndUserRole>
+			<source>LOM-ESv1.0</source>
+			<value>group</value>
+		</intendedEndUserRole>
+		<context>
+			<source>LOM-ESv1.0</source>
+			<value>mixed</value>
+		</context>
+		<context>
+			<source>LOM-ESv1.0</source>
+			<value>mixed</value>
+		</context>
+		<context>
+			<source>LOM-ESv1.0</source>
+			<value>distance</value>
+		</context>
+		<typicalAgeRange>
+			<string>Para alumnos entre 3-6 años</string>
+		</typicalAgeRange>
+		<difficulty>
+			<source>LOM-ESv1.0</source>
+			<value>medium</value>
+		</difficulty>
+		<description>
+			<string>Ser capaz de conocer algunos aspecto del otoño, de conocer diversos aspectos sobre el invierno, de conocer diversos aspectos de la primavera, de conocer diferentes aspectos del verano, de conocer las diferentes prendas de vestir adecuadas para cada estación, de conocer las principales partes de la casa (cocina, baño, salita, dormitorio) a través del juego con su representación gráfica y con el lenguaje escrito.</string>
+		</description>
+		<language>es</language>
+		<cognitiveProcess>
+			<source>LOM-ESv1.0</source>
+			<value>observe</value>
+		</cognitiveProcess>
+		<cognitiveProcess>
+			<source>LOM-ESv1.0</source>
+			<value>understand</value>
+		</cognitiveProcess>
+		<cognitiveProcess>
+			<source>LOM-ESv1.0</source>
+			<value>recognize</value>
+		</cognitiveProcess>
+		<cognitiveProcess>
+			<source>LOM-ESv1.0</source>
+			<value>create</value>
+		</cognitiveProcess>
+		<cognitiveProcess>
+			<source>LOM-ESv1.0</source>
+			<value>consider</value>
+		</cognitiveProcess>
+		<cognitiveProcess>
+			<source>LOM-ESv1.0</source>
+			<value>organize</value>
+		</cognitiveProcess>
+	</educational>
+	<rights>
+		<cost>
+			<source>LOM-ESv1.0</source>
+			<value>no</value>
+		</cost>
+		<copyrightAndOtherRestrictions>
+			<source>LOM-ESv1.0</source>
+			<value>creative commons: attribution - non commercial - share alike</value>
+		</copyrightAndOtherRestrictions>
+		<description>
+			<string>La utilización de estos contenidos es universal, gratuita y abierta, siempre y cuando se trate de un uso educativo no comercial. Las acciones, productos y utilidades derivadas de su utilización no podrán, en consecuencia, generar ningún tipo de lucro. Asimismo, es obligada la referencia a la fuente.</string>
+		</description>
+		<access>
+			<accessType>
+				<source>LOM-ESv1.0</source>
+				<value>universal</value>
+			</accessType>
+			<description>
+				<string>No existen restricciones</string>
+			</description>
+		</access>
+	</rights>
+	<relation>
+		<kind>
+			<source>LOM-ESv1.0</source>
+			<value>ispartof</value>
+		</kind>
+		<resource>
+			<identifier>
+				<catalog>Catálogo unificado mec-red.es-ccaa de identificación de ODE</catalog>
+				<entry>es_20070727_4_0150000</entry>
+			</identifier>
+			<description>
+				<string>El objetivo de este proyecto es la de incorporar las herramientas multimedia a la Educación Infantil. También pretendemos que sirva de referente para la reflexión, análisis y discusión para lograr una mejora en la labor de los que ya trabajan con ordenadores en la mencionada etapa educativa. Esperamos, por último, que pueda construir un marco conceptual y metodológico y, a la vez, lograr transmitir nuestra experiencia en este campo. Todas las herramientas multimedia que utilizamos tienen un gran número de posibilidades, lo que las confiere y las consagra como un recurso tecnológico muy interesante para introducirlo en nuestros procesos de enseñanza-aprendizaje. No obstante, no debemos perder de vista la idea de que se trata precisamente de eso, de un recurso más, de un instrumento que utilizamos para facilitar la adquisición de aprendizajes, para favorecer una mayor fluidez en el proceso de enseñanza–aprendizaje.</string>
+			</description>
+		</resource>
+	</relation>
+</lom>

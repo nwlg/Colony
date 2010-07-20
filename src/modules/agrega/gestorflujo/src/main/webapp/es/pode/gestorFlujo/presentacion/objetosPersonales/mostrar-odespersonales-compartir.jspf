@@ -1,0 +1,40 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="compartir" class="action">
+    <h3><bean:message key="objetos.personales.cu.mostrar.odespersonales.compartir"/></h3>
+    <div class="trigger">
+        <html:form styleId="objetosPersonalesCUMostrarODESPersonalesCompartirForm" action="/ObjetosPersonalesCU/MostrarODESPersonalesCompartir" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="idODE">
+                        <td class="label"><bean:message key="objetos.personales.cu.mostrar.odespersonales.compartir.param.id.ode"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idODE}"/>
+                           <input type="text" name="idODE" value="${value}" onmouseover="hints.show('objetos.personales.cu.mostrar.odespersonales.compartir.param.id.ode.title')" onmouseout="hints.hide()"  id="compartirIdODE"/>
+                        </td>
+                    </tr>
+                    <tr class="compartidoSN">
+                        <td class="label"><bean:message key="objetos.personales.cu.mostrar.odespersonales.compartir.param.compartido.sn"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.compartidoSN}"/>
+                           <input type="text" name="compartidoSN" value="${value}" onmouseover="hints.show('objetos.personales.cu.mostrar.odespersonales.compartir.param.compartido.sn.title')" onmouseout="hints.hide()"  id="compartirCompartidoSN"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Compartir')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="objetos.personales.cu.mostrar.odespersonales.compartir"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

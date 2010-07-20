@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="selectOrigin" class="action">
+    <h3><bean:message key="informe.tarea.informe.tarea.select.origin"/></h3>
+    <div class="trigger">
+        <form id="informeTareaInformeTareaSelectOriginForm" action='<html:rewrite action="/InformeTarea/InformeTareaSelectOrigin"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_ADMINISTRADOR,ROLE_ADMINISTRADOR">
+               <html:submit onmouseover="hints.show('selectOrigin')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="informe.tarea.informe.tarea.select.origin"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

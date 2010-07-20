@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="exportar" class="action">
+    <h3><bean:message key="objetos.personales.cu.mostrar.odespersonales.exportar"/></h3>
+    <div class="trigger">
+			<authz:authorize  ifAnyGranted="ROLE_CATALOGADOR,ROLE_ADMINISTRADOR,ROLE_DOCENTE">
+            <p>
+                <html:link action="/ObjetosPersonalesCU/MostrarODESPersonalesExportar?idODE=${form.idODE}&idiomaBuscador=${form.idiomaBuscador}&titulo=${form.titulo}" onmouseover="hints.show('Exportar')" onmouseout="hints.hide()">
+                    <bean:message key="objetos.personales.cu.mostrar.odespersonales.exportar"/>
+                </html:link>
+            </p>
+			</authz:authorize>	
+    </div>
+
+</div>
+ <br class="clr"/>

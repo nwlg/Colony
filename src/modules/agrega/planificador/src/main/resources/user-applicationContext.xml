@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+  <bean id="propiedadesConstantes" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+      <property name="locations">
+	  <list>
+		  	<value>classpath:spring.properties</value>
+	  </list>
+	  </property>
+	  <property name="ignoreUnresolvablePlaceholders">
+	  		<value>true</value>
+	  </property>	  
+  </bean>
+ 	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean" />
+ 	
+   <!-- <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+             <property name="beanNames"><value>*Service*</value></property>
+             <property name="interceptorNames">
+                    <list>
+                           <value>loggingInterceptor</value>
+                    </list>
+             </property>
+	</bean> -->
+</beans>

@@ -1,0 +1,4 @@
+* html #cuerpo {width:expression(document.body.clientWidth > 1004? "1004px": "auto" );}
+#cuerpo {width:100%;}	
+
+

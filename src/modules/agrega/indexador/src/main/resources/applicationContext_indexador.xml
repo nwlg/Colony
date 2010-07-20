@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <!-- ========================= GENERAL DEFINITIONS ========================= -->
+    <!-- Message source for this context, loaded from localized "messages_xx" files -->
+
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename"><value>messages</value></property>
+    </bean>
+
+	<bean id="beanMapper" class="net.sf.dozer.util.mapping.DozerBeanMapper" singleton="true">
+		<property name="mappingFiles">
+			<list>
+				<value>defaultDozerMappings_indexador.xml</value>
+				<value>customDozerMappings_indexador.xml</value>
+			</list>
+		</property>
+	</bean>
+
+    <!-- applicationContext merge-point -->
+
+    <!-- Hibernate SessionFactory -->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource"><ref bean="dataSource"/></property>
+        <property name="mappingResources">
+            <list>
+                <value>es/pode/indexador/negocio/dominio/Indice.hbm.xml</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
+                <prop key="hibernate.cache.use_query_cache">false</prop>
+                <prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+                <prop key="hibernate.cache.query_cache_factory">org.hibernate.cache.StandardQueryCacheFactory</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- The Hibernate interceptor -->
+    <bean id="hibernateInterceptor" class="org.springframework.orm.hibernate3.HibernateInterceptor">
+        <property name="sessionFactory"><ref bean="sessionFactory"/></property>
+    </bean>
+
+    <!-- Indice Entity Proxy with inner Indice Entity implementation -->
+    <bean id="indiceDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.indexador.negocio.dominio.IndiceDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.indexador.negocio.dominio.IndiceDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+    <!-- ========================= Start of SERVICE DEFINITIONS ========================= -->
+
+     <!-- Service Transactional Interceptor -->
+    <bean id="serviceTransactionInterceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor">
+        <property name="transactionManager"><ref bean="transactionManager"/></property>
+        <property name="transactionAttributeSource">
+            <value>
+                es.pode.indexador.negocio.servicios.busqueda.SrvBuscadorService.busquedaAvanzada=PROPAGATION_REQUIRED
+                es.pode.indexador.negocio.servicios.busqueda.SrvBuscadorService.busquedaSimple=PROPAGATION_REQUIRED
+                es.pode.indexador.negocio.servicios.busqueda.SrvBuscadorService.busquedaLOM_ES=PROPAGATION_REQUIRED
+                es.pode.indexador.negocio.servicios.busqueda.SrvBuscadorService.busquedaMEC=PROPAGATION_REQUIRED
+                es.pode.indexador.negocio.servicios.busqueda.SrvBuscadorService.solicitudDocsCount=PROPAGATION_REQUIRED
+                es.pode.indexador.negocio.servicios.busqueda.SrvBuscadorService.busquedaDocsNodoArbolCurricular=PROPAGATION_REQUIRED
+                es.pode.indexador.negocio.servicios.busqueda.SrvBuscadorService.busquedaDocsNodoFechaArbolCurricular=PROPAGATION_REQUIRED
+                es.pode.indexador.negocio.servicios.busqueda.SrvBuscadorService.busquedaDocsRangoFechaNivelAgregacion=PROPAGATION_REQUIRED
+                es.pode.indexador.negocio.servicios.busqueda.SrvBuscadorService.busquedaDocsLicenciaFecha=PROPAGATION_REQUIRED
+                es.pode.indexador.negocio.servicios.busqueda.SrvBuscadorService.obtenerPalabrasClave=PROPAGATION_REQUIRED
+                es.pode.indexador.negocio.servicios.busqueda.SrvBuscadorService.busquedaMECRepositorio=PROPAGATION_REQUIRED
+                es.pode.indexador.negocio.servicios.busqueda.SrvBuscadorService.busquedaHeadersRepositorio=PROPAGATION_REQUIRED
+                es.pode.indexador.negocio.servicios.busqueda.SrvBuscadorService.busquedaRepositorio=PROPAGATION_REQUIRED
+                es.pode.indexador.negocio.servicios.busqueda.SrvBuscadorService.fechaInicioRepositorio=PROPAGATION_REQUIRED
+                es.pode.indexador.negocio.servicios.busqueda.SrvBuscadorService.obtenerODERandom=PROPAGATION_REQUIRED
+                es.pode.indexador.negocio.servicios.busqueda.SrvBuscadorService.obtenerRepositorio=PROPAGATION_REQUIRED
+                es.pode.indexador.negocio.servicios.busqueda.SrvBuscadorService.obtenerCatalogoRepositorioParam=PROPAGATION_REQUIRED
+                es.pode.indexador.negocio.servicios.busqueda.SrvBuscadorService.obtenerTotalesRepositorio=PROPAGATION_REQUIRED
+                es.pode.indexador.negocio.servicios.busqueda.SrvBuscadorService.busquedaLOM_ESVSQL=PROPAGATION_REQUIRED
+                es.pode.indexador.negocio.servicios.indexado.SrvIndexadorService.indexarODE=PROPAGATION_REQUIRED
+                es.pode.indexador.negocio.servicios.indexado.SrvIndexadorService.reindexarODE=PROPAGATION_REQUIRED
+                es.pode.indexador.negocio.servicios.indexado.SrvIndexadorService.eliminarODE=PROPAGATION_REQUIRED
+                es.pode.indexador.negocio.servicios.indexado.SrvIndexadorService.regenerarIndice=PROPAGATION_REQUIRED
+                es.pode.indexador.negocio.servicios.indexado.SrvIndexadorService.regenerarIndices=PROPAGATION_REQUIRED
+                es.pode.indexador.negocio.servicios.auditoria.SrvAuditoriaIndexadorService.coberturaArbolCurricular=PROPAGATION_REQUIRED
+                es.pode.indexador.negocio.servicios.auditoria.SrvAuditoriaIndexadorService.coberturaNivelAgregacion=PROPAGATION_REQUIRED
+                es.pode.indexador.negocio.servicios.auditoria.SrvAuditoriaIndexadorService.coberturaLicencias=PROPAGATION_REQUIRED
+                es.pode.indexador.negocio.servicios.auditoria.SrvAuditoriaIndexadorService.obtenerURLImagenPequena=PROPAGATION_REQUIRED
+            </value>
+        </property>
+    </bean>
+
+    <!-- SrvBuscadorService Service Proxy with inner SrvBuscadorService Service Implementation -->
+    <bean id="srvBuscadorService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.indexador.negocio.servicios.busqueda.SrvBuscadorServiceImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                <property name="indiceDao"><ref bean="indiceDao"/></property>
+		                <property name="scormDao"><ref bean="ScormDao"/></property>
+    		                <property name="lomesDao"><ref bean="LomesDao"/></property>
+    	            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.indexador.negocio.servicios.busqueda.SrvBuscadorService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                 <value>serviceTransactionInterceptor</value>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvIndexadorService Service Proxy with inner SrvIndexadorService Service Implementation -->
+    <bean id="srvIndexadorService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.indexador.negocio.servicios.indexado.SrvIndexadorServiceImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                <property name="indiceDao"><ref bean="indiceDao"/></property>
+	                <property name="srvBuscadorService"><ref bean="srvBuscadorService"/></property>
+    		            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.indexador.negocio.servicios.indexado.SrvIndexadorService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                 <value>serviceTransactionInterceptor</value>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- SrvAuditoriaIndexadorService Service Proxy with inner SrvAuditoriaIndexadorService Service Implementation -->
+    <bean id="srvAuditoriaIndexadorService" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.indexador.negocio.servicios.auditoria.SrvAuditoriaIndexadorServiceImpl">
+
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+                <property name="indiceDao"><ref bean="indiceDao"/></property>
+	                <property name="srvBuscadorService"><ref bean="srvBuscadorService"/></property>
+    	            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.indexador.negocio.servicios.auditoria.SrvAuditoriaIndexadorService</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                 <value>serviceTransactionInterceptor</value>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- ========================= End of SERVICE DEFINITIONS ========================= -->
+
+</beans>

@@ -1,0 +1,95 @@
+#submit.action {}
+#submit.action #form_submit {}
+
+#submit.action .accion {}
+#submit.action .accion .label {}
+#submit.action .accion .field {}
+#submit.action .tituloUsoEducativo {}
+#submit.action .tituloUsoEducativo .label {}
+#submit.action .tituloUsoEducativo .field {}
+#submit.action .tipoInteractividad {}
+#submit.action .tipoInteractividad .label {}
+#submit.action .tipoInteractividad .field {}
+#submit.action .tipoRecurso {}
+#submit.action .tipoRecurso .label {}
+#submit.action .tipoRecurso .field {}
+#submit.action .comboTipoRecurso {}
+#submit.action .comboTipoRecurso .label {}
+#submit.action .comboTipoRecurso .field {}
+#submit.action .nivelInteractividad {}
+#submit.action .nivelInteractividad .label {}
+#submit.action .nivelInteractividad .field {}
+#submit.action .densidadSemantica {}
+#submit.action .densidadSemantica .label {}
+#submit.action .densidadSemantica .field {}
+#submit.action .rolUsuario {}
+#submit.action .rolUsuario .label {}
+#submit.action .rolUsuario .field {}
+#submit.action .comboRol {}
+#submit.action .comboRol .label {}
+#submit.action .comboRol .field {}
+#submit.action .contexto {}
+#submit.action .contexto .label {}
+#submit.action .contexto .field {}
+#submit.action .comboContexto {}
+#submit.action .comboContexto .label {}
+#submit.action .comboContexto .field {}
+#submit.action .edadTipica {}
+#submit.action .edadTipica .label {}
+#submit.action .edadTipica .field {}
+#submit.action .comboIdioma {}
+#submit.action .comboIdioma .label {}
+#submit.action .comboIdioma .field {}
+#submit.action .dificultad {}
+#submit.action .dificultad .label {}
+#submit.action .dificultad .field {}
+#submit.action .tiempoAprendizaje {}
+#submit.action .tiempoAprendizaje .label {}
+#submit.action .tiempoAprendizaje .field {}
+#submit.action .anyo {}
+#submit.action .anyo .label {}
+#submit.action .anyo .field {}
+#submit.action .mes {}
+#submit.action .mes .label {}
+#submit.action .mes .field {}
+#submit.action .dia {}
+#submit.action .dia .label {}
+#submit.action .dia .field {}
+#submit.action .hora {}
+#submit.action .hora .label {}
+#submit.action .hora .field {}
+#submit.action .minutos {}
+#submit.action .minutos .label {}
+#submit.action .minutos .field {}
+#submit.action .segundosP1 {}
+#submit.action .segundosP1 .label {}
+#submit.action .segundosP1 .field {}
+#submit.action .segundosP2 {}
+#submit.action .segundosP2 .label {}
+#submit.action .segundosP2 .field {}
+#submit.action .tiempoApDescripcion {}
+#submit.action .tiempoApDescripcion .label {}
+#submit.action .tiempoApDescripcion .field {}
+#submit.action .descripciones {}
+#submit.action .descripciones .label {}
+#submit.action .descripciones .field {}
+#submit.action .idiomas {}
+#submit.action .idiomas .label {}
+#submit.action .idiomas .field {}
+#submit.action .procesoCognitivo {}
+#submit.action .procesoCognitivo .label {}
+#submit.action .procesoCognitivo .field {}
+#submit.action .comboProceso {}
+#submit.action .comboProceso .label {}
+#submit.action .comboProceso .field {}
+#submit.action .botonPulsado {}
+#submit.action .botonPulsado .label {}
+#submit.action .botonPulsado .field {}
+#submit.action .descripcionTipoConocimiento {}
+#submit.action .descripcionTipoConocimiento .label {}
+#submit.action .descripcionTipoConocimiento .field {}
+#submit.action .descripcionCat {}
+#submit.action .descripcionCat .label {}
+#submit.action .descripcionCat .field {}
+
+

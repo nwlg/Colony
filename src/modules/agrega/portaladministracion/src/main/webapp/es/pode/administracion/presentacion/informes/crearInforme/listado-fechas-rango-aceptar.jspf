@@ -1,0 +1,112 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="crear.informe.listado.fechas.rango.aceptar"/></h3>
+    <div class="trigger">
+        <html:form styleId="crearInformeListadoFechasRangoAceptarForm" action="/CrearInforme/ListadoFechasRangoAceptar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="anioHasta">
+                        <td class="label"><bean:message key="crear.informe.listado.fechas.rango.aceptar.param.anio.hasta"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.anioHasta}"/>
+                           <input type="text" name="anioHasta" value="${value}" onmouseover="hints.show('crear.informe.listado.fechas.rango.aceptar.param.anio.hasta.title')" onmouseout="hints.hide()"  id="aceptarAnioHasta"/>
+                        </td>
+                    </tr>
+                    <tr class="mesHasta">
+                        <td class="label"><bean:message key="crear.informe.listado.fechas.rango.aceptar.param.mes.hasta"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.mesHasta}"/>
+                           <input type="text" name="mesHasta" value="${value}" onmouseover="hints.show('crear.informe.listado.fechas.rango.aceptar.param.mes.hasta.title')" onmouseout="hints.hide()"  id="aceptarMesHasta"/>
+                        </td>
+                    </tr>
+                    <tr class="diaHasta">
+                        <td class="label"><bean:message key="crear.informe.listado.fechas.rango.aceptar.param.dia.hasta"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.diaHasta}"/>
+                           <input type="text" name="diaHasta" value="${value}" onmouseover="hints.show('crear.informe.listado.fechas.rango.aceptar.param.dia.hasta.title')" onmouseout="hints.hide()"  id="aceptarDiaHasta"/>
+                        </td>
+                    </tr>
+                    <tr class="anioDesde">
+                        <td class="label"><bean:message key="crear.informe.listado.fechas.rango.aceptar.param.anio.desde"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.anioDesde}"/>
+                           <input type="text" name="anioDesde" value="${value}" onmouseover="hints.show('crear.informe.listado.fechas.rango.aceptar.param.anio.desde.title')" onmouseout="hints.hide()"  id="aceptarAnioDesde"/>
+                        </td>
+                    </tr>
+                    <tr class="mesDesde">
+                        <td class="label"><bean:message key="crear.informe.listado.fechas.rango.aceptar.param.mes.desde"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.mesDesde}"/>
+                           <input type="text" name="mesDesde" value="${value}" onmouseover="hints.show('crear.informe.listado.fechas.rango.aceptar.param.mes.desde.title')" onmouseout="hints.hide()"  id="aceptarMesDesde"/>
+                        </td>
+                    </tr>
+                    <tr class="diaDesde">
+                        <td class="label"><bean:message key="crear.informe.listado.fechas.rango.aceptar.param.dia.desde"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.diaDesde}"/>
+                           <input type="text" name="diaDesde" value="${value}" onmouseover="hints.show('crear.informe.listado.fechas.rango.aceptar.param.dia.desde.title')" onmouseout="hints.hide()"  id="aceptarDiaDesde"/>
+                        </td>
+                    </tr>
+                    <tr class="rango">
+                        <td class="label"><bean:message key="crear.informe.listado.fechas.rango.aceptar.param.rango"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.rango}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.rangoBackingList}">
+                                  <html:select name="form" property="rango" onmouseover="hints.show('crear.informe.listado.fechas.rango.aceptar.param.rango.title')" onmouseout="hints.hide()"  styleId="aceptarRango">
+                                      <html:optionsCollection name="form" property="rangoBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="rango" onmouseover="hints.show('crear.informe.listado.fechas.rango.aceptar.param.rango.title')" onmouseout="hints.hide()"  styleId="aceptarRango"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="informe">
+                        <td class="label"><bean:message key="crear.informe.listado.fechas.rango.aceptar.param.informe"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.informe}"/>
+                           <input type="text" name="informe" value="${value}" onmouseover="hints.show('crear.informe.listado.fechas.rango.aceptar.param.informe.title')" onmouseout="hints.hide()"  id="aceptarInforme"/>
+                        </td>
+                    </tr>
+                    <tr class="formato">
+                        <td class="label"><bean:message key="crear.informe.listado.fechas.rango.aceptar.param.formato"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.formato}"/>
+                           <input type="text" name="formato" value="${value}" onmouseover="hints.show('crear.informe.listado.fechas.rango.aceptar.param.formato.title')" onmouseout="hints.hide()"  id="aceptarFormato"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="crear.informe.listado.fechas.rango.aceptar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

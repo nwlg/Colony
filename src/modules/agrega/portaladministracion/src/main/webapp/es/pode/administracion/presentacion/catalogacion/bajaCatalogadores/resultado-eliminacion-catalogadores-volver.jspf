@@ -1,0 +1,13 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="volver" class="action">
+    <h3><bean:message key="baja.catalogadores.resultado.eliminacion.catalogadores.volver"/></h3>
+    <div class="trigger">
+        <form id="bajaCatalogadoresResultadoEliminacionCatalogadoresVolverForm" action='<html:rewrite action="/BajaCatalogadores/ResultadoEliminacionCatalogadoresVolver"/>' method="post">
+               <html:submit onmouseover="hints.show('Volver')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="baja.catalogadores.resultado.eliminacion.catalogadores.volver"/>
+               </html:submit>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

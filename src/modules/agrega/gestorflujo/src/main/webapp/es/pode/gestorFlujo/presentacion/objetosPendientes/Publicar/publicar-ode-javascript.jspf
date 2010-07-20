@@ -1,0 +1,36 @@
+
+    <tiles:put name="javascript" type="string">
+    	<script type="text/javascript" language="Javascript1.1" src="<html:rewrite page="/layout/hints.js"/>"></script>
+    	<script type="text/javascript" language="Javascript1.1">
+        //<!--
+            var HINTS_ITEMS = {
+                'publicar.cu.publicar.ode.cancelar.param.idioma.buscador.title':'<formatting:escape language="javascript"><bean:message key="publicar.cu.publicar.ode.cancelar.param.idioma.buscador.title"/></formatting:escape>',
+                'publicar.cu.publicar.ode.aceptar.param.titulo.title':'<formatting:escape language="javascript"><bean:message key="publicar.cu.publicar.ode.aceptar.param.titulo.title"/></formatting:escape>',
+                'publicar.cu.publicar.ode.aceptar.param.id.ode.title':'<formatting:escape language="javascript"><bean:message key="publicar.cu.publicar.ode.aceptar.param.id.ode.title"/></formatting:escape>',
+                'publicar.cu.publicar.ode.aceptar.param.tipo.licencia.seleccionada.title':'<formatting:escape language="javascript"><bean:message key="publicar.cu.publicar.ode.aceptar.param.tipo.licencia.seleccionada.title"/></formatting:escape>',
+                'publicar.cu.publicar.ode.aceptar.param.comunidades.seleccionadas.title':'<formatting:escape language="javascript"><bean:message key="publicar.cu.publicar.ode.aceptar.param.comunidades.seleccionadas.title"/></formatting:escape>',
+                'publicar.cu.publicar.ode.aceptar.param.comentarios.title':'<formatting:escape language="javascript"><bean:message key="publicar.cu.publicar.ode.aceptar.param.comentarios.title"/></formatting:escape>',
+                'Cancelar':'<formatting:escape language="javascript"><bean:message key="publicar.cu.publicar.ode.cancelar.title"/></formatting:escape>',
+                'Cancelar_no':'<formatting:escape language="javascript"><bean:message key="publicar.cu.publicar.ode.cancelar.title.notallowed"/></formatting:escape>',
+                'Cancelar_reset':'<formatting:escape language="javascript"><bean:message key="publicar.cu.publicar.ode.cancelar.title.reset"/></formatting:escape>',
+                'Cancelar_noreset':'<formatting:escape language="javascript"><bean:message key="publicar.cu.publicar.ode.cancelar.title.reset.not.allowed"/></formatting:escape>',
+                'modificarLicencia':'<formatting:escape language="javascript"><bean:message key="publicar.cu.publicar.ode.modificar.licencia.title"/></formatting:escape>',
+                'modificarLicencia_no':'<formatting:escape language="javascript"><bean:message key="publicar.cu.publicar.ode.modificar.licencia.title.notallowed"/></formatting:escape>',
+                'modificarLicencia_reset':'<formatting:escape language="javascript"><bean:message key="publicar.cu.publicar.ode.modificar.licencia.title.reset"/></formatting:escape>',
+                'modificarLicencia_noreset':'<formatting:escape language="javascript"><bean:message key="publicar.cu.publicar.ode.modificar.licencia.title.reset.not.allowed"/></formatting:escape>',
+                'Aceptar':'<formatting:escape language="javascript"><bean:message key="publicar.cu.publicar.ode.aceptar.title"/></formatting:escape>',
+                'Aceptar_no':'<formatting:escape language="javascript"><bean:message key="publicar.cu.publicar.ode.aceptar.title.notallowed"/></formatting:escape>',
+                'Aceptar_reset':'<formatting:escape language="javascript"><bean:message key="publicar.cu.publicar.ode.aceptar.title.reset"/></formatting:escape>',
+                'Aceptar_noreset':'<formatting:escape language="javascript"><bean:message key="publicar.cu.publicar.ode.aceptar.title.reset.not.allowed"/></formatting:escape>',
+                'calendar.popup':'<formatting:escape language="javascript"><bean:message key="calendar.popup"/></formatting:escape>'
+            };
+
+            var hints = new THints (HINTS_CFG, HINTS_ITEMS);
+        //-->
+    	</script>
+<script type="text/javascript" language="Javascript1.1">
+
+
+
+</script>
+    </tiles:put>

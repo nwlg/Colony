@@ -1,0 +1,55 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="aceptar" class="action">
+    <h3><bean:message key="desagregar.submanifiesto.seleccionar.destino.aceptar"/></h3>
+    <div class="trigger">
+        <html:form styleId="desagregarSubmanifiestoSeleccionarDestinoAceptarForm" action="/DesagregarSubmanifiesto/SeleccionarDestinoAceptar" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="destino">
+                        <td class="label"><bean:message key="desagregar.submanifiesto.seleccionar.destino.aceptar.param.destino"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.destino}"/>
+                           <table>
+                               <tr>
+                                   <td>
+                                       <html:radio name="form" property="destino" value="0" onmouseover="hints.show('desagregar.submanifiesto.seleccionar.destino.aceptar.param.destino.title')" onmouseout="hints.hide()"  styleId="aceptarDestino"/>
+                                       <bean:message key="desagregar.submanifiesto.seleccionar.destino.aceptar.param.destino.0"/>
+                                   </td>
+                               </tr>
+                               <tr>
+                                   <td>
+                                       <html:radio name="form" property="destino" value="1" onmouseover="hints.show('desagregar.submanifiesto.seleccionar.destino.aceptar.param.destino.title')" onmouseout="hints.hide()"  styleId="aceptarDestino"/>
+                                       <bean:message key="desagregar.submanifiesto.seleccionar.destino.aceptar.param.destino.1"/>
+                                   </td>
+                               </tr>
+                           </table>
+                        </td>
+                    </tr>
+                    <tr class="action">
+                        <td class="label"><bean:message key="desagregar.submanifiesto.seleccionar.destino.aceptar.param.action"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.action}"/>
+                           <input type="text" name="action" value="${value}" onmouseover="hints.show('desagregar.submanifiesto.seleccionar.destino.aceptar.param.action.title')" onmouseout="hints.hide()"  id="aceptarAction"/>
+                        </td>
+                    </tr>
+
+			<authz:authorize  ifAnyGranted="ROLE_DOCENTE,ROLE_ADMINISTRADOR,ROLE_CATALOGADOR,ROLE_PUBLICADOR">
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Aceptar')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="desagregar.submanifiesto.seleccionar.destino.aceptar"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+			</authz:authorize>	
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

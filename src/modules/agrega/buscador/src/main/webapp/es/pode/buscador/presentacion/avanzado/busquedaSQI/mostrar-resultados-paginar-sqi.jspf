@@ -1,0 +1,13 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="paginarSQI" class="action">
+    <h3><bean:message key="busqueda.sqicu.mostrar.resultados.paginar.sqi"/></h3>
+    <div class="trigger">
+        <form id="busquedaSQICUMostrarResultadosPaginarSQIForm" action='<html:rewrite action="/BusquedaSQICU/MostrarResultadosPaginarSQI"/>' method="post">
+               <html:submit onmouseover="hints.show('paginarSQI')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="busqueda.sqicu.mostrar.resultados.paginar.sqi"/>
+               </html:submit>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

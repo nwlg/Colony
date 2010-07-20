@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project>
+<body>
+	<menu name="Guía I-Builder">
+		<item name="Introducción" 		    href="index.html"/>
+    	<item name="Ejemplo funcional" 		href="funcional.html"/>
+    	<item name="Aplicación y modelado" 	href="modelado.html"/>
+    	<item name="Servicios" 			    href="servicios.html"/>
+    	<item name="Maquetado" 			    href="maquetado.html"/>
+    	<item name="FAQ" 			        href="faq.html"/>
+  	</menu>
+	<menu name="Detalle Sub-Proyectos">
+		<item name="Common" href="../../common/target/docs/index.html"/>
+  		<item name="Core"   href="../../core/target/docs/index.html"/>
+   		<item name="Web"    href="../../web/target/docs/index.html"/>
+  	</menu>
+</body>
+</project>

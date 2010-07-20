@@ -1,0 +1,13 @@
+edu.internet2.middleware.shibboleth.idp
+edu.internet2.middleware.shibboleth.idp.authn
+edu.internet2.middleware.shibboleth.idp.authn.provider
+edu.internet2.middleware.shibboleth.idp.config.profile
+edu.internet2.middleware.shibboleth.idp.config.profile.authn
+edu.internet2.middleware.shibboleth.idp.config.profile.saml1
+edu.internet2.middleware.shibboleth.idp.config.profile.saml2
+edu.internet2.middleware.shibboleth.idp.profile
+edu.internet2.middleware.shibboleth.idp.profile.saml1
+edu.internet2.middleware.shibboleth.idp.profile.saml2
+edu.internet2.middleware.shibboleth.idp.session
+edu.internet2.middleware.shibboleth.idp.session.impl
+edu.internet2.middleware.shibboleth.idp.util

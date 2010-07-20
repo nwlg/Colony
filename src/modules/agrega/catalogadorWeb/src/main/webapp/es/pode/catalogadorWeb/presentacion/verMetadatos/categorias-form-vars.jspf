@@ -1,0 +1,11 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="identificador" value="${form.identificador}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="datos" value="${form.datos}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="returnURL" value="${form.returnURL}"/>
+    </c:catch>
+</div>

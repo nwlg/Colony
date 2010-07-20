@@ -1,0 +1,69 @@
+#validarFormulario.action {}
+#validarFormulario.action #form_submit {}
+
+#validarFormulario.action .idNoticia {}
+#validarFormulario.action .idNoticia .label {}
+#validarFormulario.action .idNoticia .field {}
+#validarFormulario.action .imagen {}
+#validarFormulario.action .imagen .label {}
+#validarFormulario.action .imagen .field {}
+#validarFormulario.action .alineamiento {}
+#validarFormulario.action .alineamiento .label {}
+#validarFormulario.action .alineamiento .field {}
+#validarFormulario.action .estado {}
+#validarFormulario.action .estado .label {}
+#validarFormulario.action .estado .field {}
+#validarFormulario.action .categoria {}
+#validarFormulario.action .categoria .label {}
+#validarFormulario.action .categoria .field {}
+#validarFormulario.action .nombreImagen {}
+#validarFormulario.action .nombreImagen .label {}
+#validarFormulario.action .nombreImagen .field {}
+#validarFormulario.action .castellano {}
+#validarFormulario.action .castellano .label {}
+#validarFormulario.action .castellano .field {}
+#validarFormulario.action .catalan {}
+#validarFormulario.action .catalan .label {}
+#validarFormulario.action .catalan .field {}
+#validarFormulario.action .euskera {}
+#validarFormulario.action .euskera .label {}
+#validarFormulario.action .euskera .field {}
+#validarFormulario.action .ingles {}
+#validarFormulario.action .ingles .label {}
+#validarFormulario.action .ingles .field {}
+#validarFormulario.action .valenciano {}
+#validarFormulario.action .valenciano .label {}
+#validarFormulario.action .valenciano .field {}
+#validarFormulario.action .gallego {}
+#validarFormulario.action .gallego .label {}
+#validarFormulario.action .gallego .field {}
+#validarFormulario.action .activarImagen {}
+#validarFormulario.action .activarImagen .label {}
+#validarFormulario.action .activarImagen .field {}
+#validarFormulario.action .nombreImagenVO {}
+#validarFormulario.action .nombreImagenVO .label {}
+#validarFormulario.action .nombreImagenVO .field {}
+
+#volver.action {}
+#volver.action #form_submit {}
+
+#volver.action .alineamiento {}
+#volver.action .alineamiento .label {}
+#volver.action .alineamiento .field {}
+#volver.action .categoria {}
+#volver.action .categoria .label {}
+#volver.action .categoria .field {}
+#volver.action .estado {}
+#volver.action .estado .label {}
+#volver.action .estado .field {}
+#volver.action .nombreImagen {}
+#volver.action .nombreImagen .label {}
+#volver.action .nombreImagen .field {}
+#volver.action .activarImagen {}
+#volver.action .activarImagen .label {}
+#volver.action .activarImagen .field {}
+#volver.action .nombreImagenVO {}
+#volver.action .nombreImagenVO .label {}
+#volver.action .nombreImagenVO .field {}
+
+

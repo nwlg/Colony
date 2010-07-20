@@ -1,0 +1,4 @@
+<semanticDensity>
+${load:source.xml}
+${load:value.xml}
+</semanticDensity>

@@ -1,0 +1,17 @@
+<div id="pageVariables">
+    <c:catch>
+        <c:set var="trabajo" value="${form.trabajo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="descripcion" value="${form.descripcion}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="fechaFin" value="${form.fechaFin}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="informeTrabajo" value="${form.informeTrabajo}"/>
+    </c:catch>
+    <c:catch>
+        <c:set var="fechaInicio" value="${form.fechaInicio}"/>
+    </c:catch>
+</div>

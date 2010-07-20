@@ -1,0 +1,15 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="secuencia" class="action">
+    <h3><bean:message key="gestor.basico.gestor.basico.secuencia"/></h3>
+    <div class="trigger">
+        <form id="gestorBasicoGestorBasicoSecuenciaForm" action='<html:rewrite action="/GestorBasico/GestorBasicoSecuencia"/>' method="post">
+			<authz:authorize  ifAnyGranted="ROLE_DOCENTE,ROLE_CATALOGADOR,ROLE_PUBLICADOR,ROLE_ADMINISTRADOR">
+               <html:submit onmouseover="hints.show('Secuencia')" onmouseout="hints.hide()" styleId="form_submit">
+                   <bean:message key="gestor.basico.gestor.basico.secuencia"/>
+               </html:submit>	
+			</authz:authorize>	
+        </form>
+    </div>
+
+</div>
+ <br class="clr"/>

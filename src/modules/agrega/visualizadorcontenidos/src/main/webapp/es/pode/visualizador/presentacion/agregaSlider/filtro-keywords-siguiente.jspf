@@ -1,0 +1,49 @@
+<%@ include file="/taglib-imports.jspf" %>
+<div id="siguiente" class="action">
+    <h3><bean:message key="agrega.slider.filtro.keywords.siguiente"/></h3>
+    <div class="trigger">
+        <html:form styleId="agregaSliderFiltroKeywordsSiguienteForm" action="/AgregaSlider/FiltroKeywordsSiguiente" method="post" enctype="multipart/form-data" onsubmit="">
+            <table>
+                <tbody>
+                    <tr class="idiomasCombo">
+                        <td class="label"><bean:message key="agrega.slider.filtro.keywords.siguiente.param.idiomas.combo"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.idiomasCombo}"/>
+                           <c:choose>
+                               <c:when test="${!empty form.idiomasComboBackingList}">
+                                  <html:select name="form" property="idiomasCombo" onmouseover="hints.show('agrega.slider.filtro.keywords.siguiente.param.idiomas.combo.title')" onmouseout="hints.hide()"  styleId="siguienteIdiomasCombo">
+                                      <html:optionsCollection name="form" property="idiomasComboBackingList" label="label" value="value"/>
+                                  </html:select>
+                               </c:when>
+                               <c:otherwise>
+                                   <html:select name="form" property="idiomasCombo" onmouseover="hints.show('agrega.slider.filtro.keywords.siguiente.param.idiomas.combo.title')" onmouseout="hints.hide()"  styleId="siguienteIdiomasCombo"/>
+                               </c:otherwise>
+                           </c:choose>
+                        </td>
+                    </tr>
+                    <tr class="keywords">
+                        <td class="label"><bean:message key="agrega.slider.filtro.keywords.siguiente.param.keywords"/></td>
+                        <td class="field">
+<!--RLA ${field.ajaxParamType} -->
+		
+                           <c:set var="value" value="${form.keywords}"/>
+                           <input type="text" name="keywords" value="${value}" onmouseover="hints.show('agrega.slider.filtro.keywords.siguiente.param.keywords.title')" onmouseout="hints.hide()"  id="siguienteKeywords"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                              <html:submit onmouseover="hints.show('Siguiente')" onmouseout="hints.hide()" styleId="form_submit">
+                                  <bean:message key="agrega.slider.filtro.keywords.siguiente"/>
+                              </html:submit>	
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </html:form>
+    </div>
+
+</div>
+ <br class="clr"/>

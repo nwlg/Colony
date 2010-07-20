@@ -1,0 +1,47 @@
+<div id="gruposTrabajo" class="table">
+    <form id="gruposTrabajo" name="" action="" method="post" enctype="multipart/form-data">
+    <display:table name="${form.gruposTrabajo}" uid="row"
+        export="false" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:column media="html">
+            <input type="checkbox" name="identificadorRowSelectionAsArray" value="${row.identificador}" title='<bean:message key="select.deselect.this.row"/>'/>
+        </display:column>
+
+
+        <display:column media="html"
+            headerClass="id" paramId="id"
+            sortProperty="id" sortable="true"
+            titleKey="listar.catalogadores.formulario.listado.catalogadores.param.grupos.trabajo.id"
+            >
+            <div class="id">
+		
+ <c:set var="value" value="${row.id}"/>
+ <input type="text" name="id" value="${value}" onmouseover="hints.show('listar.catalogadores.formulario.listado.catalogadores.modificar.catalogadores.param.id.title')" onmouseout="hints.hide()"  id="gruposTrabajoId${row_rowNum}"/>
+            </div>
+       </display:column>
+   
+
+
+        <display:column media="html"
+            headerClass="descripcion" paramId="descripcion"
+            sortProperty="descripcion" sortable="true"
+            titleKey="listar.catalogadores.formulario.listado.catalogadores.param.grupos.trabajo.descripcion"
+            >
+ <html:link action="/ListarCatalogadores/FormularioListadoCatalogadoresModificarCatalogadores?id=${row.id}" onmouseover="hints.show('ModificarCatalogadores')" onmouseout="hints.hide()">
+     ${row.descripcion}
+ </html:link>
+ <html:link action="/ListarCatalogadores/FormularioListadoCatalogadoresVerCatalogadores?id=${row.id}" onmouseover="hints.show('VerCatalogadores')" onmouseout="hints.hide()">
+     ${row.descripcion}
+ </html:link>
+            </display:column>
+   
+    </display:table>
+    <c:if test="${!empty form.gruposTrabajo}">
+            <input type="submit" value="<bean:message key="listar.catalogadores.formulario.listado.catalogadores.eliminar.catalogadores"/>" onclick="this.form.name='listarCatalogadoresFormularioListadoCatalogadoresEliminarCatalogadoresForm';this.form.action='<html:rewrite action="/ListarCatalogadores/FormularioListadoCatalogadoresEliminarCatalogadores"/>';" onmouseover="hints.show('EliminarCatalogadores')" onmouseout="hints.hide()"/>
+            <input type="button" value="<bean:message key="select.deselect.all"/>" onclick="var boxes=this.form.elements['identificadorRowSelectionAsArray'];var setChecked=(boxes.length==0)?false:!boxes[0].checked;for(var i=0;i<boxes.length;i++)boxes[i].checked=setChecked;"/>
+    </c:if>
+    </form>
+</div>
+

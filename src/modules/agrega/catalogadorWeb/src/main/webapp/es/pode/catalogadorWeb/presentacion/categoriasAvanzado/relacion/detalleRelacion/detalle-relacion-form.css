@@ -1,0 +1,32 @@
+#submitForm.action {}
+#submitForm.action #form_submit {}
+
+#submitForm.action .accion {}
+#submitForm.action .accion .label {}
+#submitForm.action .accion .field {}
+#submitForm.action .tituloRelacion {}
+#submitForm.action .tituloRelacion .label {}
+#submitForm.action .tituloRelacion .field {}
+#submitForm.action .identificadorOde {}
+#submitForm.action .identificadorOde .label {}
+#submitForm.action .identificadorOde .field {}
+#submitForm.action .botonPulsado {}
+#submitForm.action .botonPulsado .label {}
+#submitForm.action .botonPulsado .field {}
+#submitForm.action .comboIdioma {}
+#submitForm.action .comboIdioma .label {}
+#submitForm.action .comboIdioma .field {}
+#submitForm.action .descripcion {}
+#submitForm.action .descripcion .label {}
+#submitForm.action .descripcion .field {}
+#submitForm.action .tipo {}
+#submitForm.action .tipo .label {}
+#submitForm.action .tipo .field {}
+#submitForm.action .catalogo {}
+#submitForm.action .catalogo .label {}
+#submitForm.action .catalogo .field {}
+#submitForm.action .entrada {}
+#submitForm.action .entrada .label {}
+#submitForm.action .entrada .field {}
+
+

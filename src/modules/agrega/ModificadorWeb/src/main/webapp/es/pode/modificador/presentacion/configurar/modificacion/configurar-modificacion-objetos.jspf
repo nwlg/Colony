@@ -1,0 +1,32 @@
+<div id="objetos" class="table">
+    <form id="objetos" name="" action="" method="post" enctype="multipart/form-data">
+    <display:table name="${form.objetos}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="configurar-modificacion-objetos.pdf" />
+        <display:column media="html">
+            <input type="checkbox" name="pathRowSelectionAsArray" value="${row.path}" title='<bean:message key="select.deselect.this.row"/>'/>
+        </display:column>
+
+        <display:column media="xml csv excel pdf"
+            titleKey="configurar.modificacion.configurar.modificacion.param.objetos.path"
+            autolink="true" paramId="path"
+            property="path">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="path" paramId="path"
+            sortProperty="path" sortable="true"
+            titleKey="configurar.modificacion.configurar.modificacion.param.objetos.path"
+            property="path" />
+   
+    </display:table>
+    <c:if test="${!empty form.objetos}">
+            <input type="submit" value="<bean:message key="configurar.modificacion.configurar.modificacion.submit.objetos"/>" onclick="this.form.name='configurarModificacionConfigurarModificacionSubmitObjetosForm';this.form.action='<html:rewrite action="/ConfigurarModificacion/ConfigurarModificacionSubmitObjetos"/>';" onmouseover="hints.show('submitObjetos')" onmouseout="hints.hide()"/>
+            <input type="button" value="<bean:message key="select.deselect.all"/>" onclick="var boxes=this.form.elements['pathRowSelectionAsArray'];var setChecked=(boxes.length==0)?false:!boxes[0].checked;for(var i=0;i<boxes.length;i++)boxes[i].checked=setChecked;"/>
+    </c:if>
+    </form>
+</div>
+

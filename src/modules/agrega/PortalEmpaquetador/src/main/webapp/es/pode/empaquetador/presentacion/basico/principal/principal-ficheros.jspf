@@ -1,0 +1,23 @@
+<div id="ficheros" class="table">
+    <display:table name="${form.ficheros}" uid="row"
+        export="true" 
+		requestURI="${pageContext.request.requestURL}"
+		pagesize="15" sort="list">
+        
+        <display:setProperty name="export.pdf.filename" value="principal-ficheros.pdf" />
+
+        <display:column media="xml csv excel pdf"
+            titleKey="principal.principal.param.ficheros.href"
+            autolink="true" paramId="href"
+            property="href">
+        </display:column>
+
+        <display:column media="html"
+            headerClass="href" paramId="href"
+            sortProperty="href" sortable="true"
+            titleKey="principal.principal.param.ficheros.href"
+            property="href" />
+   
+    </display:table>
+</div>
+

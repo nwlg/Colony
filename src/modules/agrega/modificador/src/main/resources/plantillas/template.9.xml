@@ -1,0 +1,10 @@
+<classification>
+	${load:template.9.1.xml}
+	${load:template.9.2.xml}
+	<!-- Mas taxonPath -->
+	<!-- Opcional -->
+	${load:description.xml}
+	<!-- Opcional -->
+	${load:keyword.xml}
+	<!-- Mas keyword -->
+</classification>

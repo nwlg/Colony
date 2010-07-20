@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- ACEGI FILTER CHAIN -->
+	<bean id="filterChainProxy" class="org.acegisecurity.util.FilterChainProxy">
+		<property name="filterInvocationDefinitionSource">
+			<value>
+				CONVERT_URL_TO_LOWERCASE_BEFORE_COMPARISON
+				PATTERN_TYPE_APACHE_ANT
+                /services/**=httpSessionContextIntegrationFilterWS,anonymousProcessingFilter,basicProcessingFilter,exceptionTranslationFilter,filterInvocationInterceptor
+  				/**=httpSessionContextIntegrationFilter,captchaValidationProcessingFilter,logoutFilter,shibbolethProcessingFilter,anonymousProcessingFilter,exceptionTranslationFilter,filterInvocationInterceptor
+			</value>
+		</property>
+	</bean>
+
+	<bean id="shibbolethProcessingFilter" class="uk.co.siriusit.acegi.shibboleth.ShibbolethProcessingFilter">
+      	<property name="authenticationManager"><ref bean="authenticationManager"/></property>
+      	<property name="authenticationFailureUrl"><value>/login.do?action=error</value></property>
+      	<property name="defaultTargetUrl"><value>/</value></property>
+      	<property name="alwaysUseDefaultTargetUrl"><value>false</value></property>
+	</bean>
+	
+	<bean id="shibbolethAuthenticationProvider" class="uk.co.siriusit.acegi.shibboleth.ShibbolethAuthenticationProvider">
+	</bean>
+
+	<bean id="shibbolethPassThroughAuthenticationProvider" class="uk.co.siriusit.acegi.shibboleth.ShibbolethPassThroughAuthenticationProvider">
+	</bean>
+
+	<bean id="shibbolethProcessingFilterEntryPoint" class="uk.co.siriusit.acegi.shibboleth.ShibbolethProcessingFilterEntryPoint">
+		<property name="loginHost"><value>${http.server}</value></property>
+		<property name="loginPath"><value>/j_acegi_shibboleth_security_check</value></property>
+	</bean>
+
+	<!-- Filter that manages the authentication credentials storing between different requests -->
+	<bean id="httpSessionContextIntegrationFilter" class="org.acegisecurity.context.HttpSessionContextIntegrationFilter">
+		<property name="context"><value>org.acegisecurity.captcha.CaptchaSecurityContextImpl</value></property>
+	</bean>	
+
+    <!-- Filter that manages the authentication credentials storing between different requests -->
+    <bean id="httpSessionContextIntegrationFilterWS" class="org.acegisecurity.context.HttpSessionContextIntegrationFilter">
+        <property name="context"><value>org.acegisecurity.captcha.CaptchaSecurityContextImpl</value></property>
+        <property name="allowSessionCreation" value="true"/>
+    </bean>
+
+	<!-- FIXME needs changing for shibboleth -->
+   <bean id="logoutFilter" class="org.acegisecurity.ui.logout.LogoutFilter">
+      <constructor-arg><value>${http.server}/Shibboleth.sso/Logout</value></constructor-arg>	
+      <constructor-arg>
+         <list>
+              <bean class="org.acegisecurity.ui.logout.SecurityContextLogoutHandler"/>
+         </list>
+      </constructor-arg>
+   </bean>
+
+	<!-- ========================== CAPTCHA SUPPORT ==================================== -->
+
+	<!-- Validation filter -->
+	<bean id="captchaValidationProcessingFilter" class="org.acegisecurity.captcha.CaptchaValidationProcessingFilter">
+		<property name="captchaService">
+			<ref bean="captchaService" />
+		</property>
+		<property name="captchaValidationParameter">
+			<value>j_captcha_response</value>
+		</property>
+	</bean>
+   
+	<bean id="captchaService" class="uk.co.siriusit.acegi.captcha.JCaptchaServiceProxy" >
+		<property name="jCaptchaService" ref="jcaptchaService" />
+	</bean> 
+
+	<!-- jcaptchaService is injected into captchaImageCreateController as well as to captchaService beans -->
+	<bean id="jcaptchaService" class="com.octo.captcha.service.image.DefaultManageableImageCaptchaService" />  
+
+	<!-- Channel processor que decide si se cumplen las condiciones para aplicar un captcha. -->
+	<bean id="alwaysTestAfterMaxRequestsCaptchaChannelProcessor" class="org.acegisecurity.captcha.AlwaysTestAfterMaxRequestsCaptchaChannelProcessor">
+		<property name="thresold">
+			<value>3</value>
+		</property>
+		<property name="entryPoint">
+			<ref bean="captchaEntryPoint" />
+		</property>
+	</bean>
+
+	<bean id="captchaEntryPoint" class="org.acegisecurity.captcha.CaptchaEntryPoint">
+		<property name="captchaFormUrl">
+			<value>/logincaptcha.do?captcha=true</value>
+		</property>
+	</bean>
+	<!-- =========================== END CAPTCHA SUPPORT =================================== -->
+
+	<!-- =========================== BASIC AUTHENTICATION SUPPORT =================================== -->
+	<bean id="basicProcessingFilter" class="org.acegisecurity.ui.basicauth.BasicProcessingFilter">
+		<property name="authenticationManager"><ref bean="authenticationManager"/></property>
+		<property name="authenticationEntryPoint"><ref bean="basicAuthenticationEntryPoint"/></property>
+	</bean>
+
+	<bean id="basicAuthenticationEntryPoint" class="org.acegisecurity.ui.basicauth.BasicProcessingFilterEntryPoint">
+		<property name="realmName"><value>IBuilder Application</value></property>
+	</bean>
+	<!-- =========================== END BASIC AUTHENTICATION SUPPORT ================================ -->	
+
+
+	<!-- =========================== ANONYMOUS AUTHENTICATION SUPPORT =============================== -->			
+	<!-- FILTRO USUARIOS ANONIMOS -->	
+	<bean id="anonymousProcessingFilter" class="org.acegisecurity.providers.anonymous.AnonymousProcessingFilter">
+		<property name="key"><value>IbUiLdErAnOnUsErKeY</value></property>
+		<property name="userAttribute"><value>anonymousUser,ROLE_ANONYMOUS</value></property>
+	</bean>	
+
+	<bean id="anonymousAuthenticationProvider" class="org.acegisecurity.providers.anonymous.AnonymousAuthenticationProvider">
+		<property name="key"><value>AnOnUsErKeY6002</value></property>
+	</bean>		
+	<!-- =========================== END ANONYMOUS AUTHENTICATION SUPPORT ============================ -->				
+
+	<!-- ============================= AUTHENTICATION BACKEND SUPPORT ================================= -->	
+
+    <bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+        <property name="configLocation">
+            <value>classpath:/ehcache-failsafe.xml</value>
+        </property>
+    </bean>
+
+	<bean id="authenticationManager" class="org.acegisecurity.providers.ProviderManager">
+		<!-- Lista de "proveedores" que proporcionan autenticacion -->
+		<property name="providers">
+			<list>
+  				<ref bean="shibbolethAuthenticationProvider"/>				
+  				<ref bean="shibbolethPassThroughAuthenticationProvider"/>				
+
+  				<!-- Proveedor accesos anonimos -->
+	            <ref local="anonymousAuthenticationProvider"/>  	
+			</list>
+		</property>
+	</bean>
+	
+	<!-- =========================== END AUTHENTICATION BACKEND SUPPORT =============================== -->		
+
+
+	<!-- ==================================== AUTHORIZATION SUPPORT =============================== -->		
+
+	<!-- method invocation interceptor -->
+	<bean id="serviceSecurityInterceptor" class="org.acegisecurity.intercept.method.aopalliance.MethodSecurityInterceptor">
+		<property name="validateConfigAttributes"><value>true</value></property>
+		<property name="authenticationManager"><ref bean="authenticationManager"/></property>
+		<property name="accessDecisionManager"><ref bean="accessDecisionManager"/></property>
+		<property name="objectDefinitionSource">
+			<value>
+			</value>
+		</property>
+	</bean>
+	
+	<!-- web tier authorization is defined in the file applicationContext-acegiSecurity-frontend.xml -->
+
+   	<bean id="accessDecisionManager" class="org.acegisecurity.vote.AffirmativeBased">
+		<property name="allowIfAllAbstainDecisions"><value>false</value></property>
+		<property name="decisionVoters">
+			<list>
+				<ref bean="roleVoter"/>
+			</list>
+		</property>
+	</bean>	
+
+   <!-- An access decision voter that reads ROLE_* configuration settings -->
+   <bean id="roleVoter" class="org.acegisecurity.vote.RoleVoter"/>   	
+
+	<!-- ==================================== END AUTHORIZATION SUPPORT =============================== -->		
+
+
+   <bean id="exceptionTranslationFilter" class="org.acegisecurity.ui.ExceptionTranslationFilter">
+		<property name="authenticationEntryPoint"><ref local="shibbolethProcessingFilterEntryPoint"/></property>
+   </bean>
+
+
+	<!-- ============================= CHANNEL SECURITY SUPPORT ====================================== -->
+   
+
+	<bean id="channelDecisionManager" class="org.acegisecurity.securechannel.ChannelDecisionManagerImpl">
+		<property name="channelProcessors">
+			<list>
+	            <ref local="secureChannelProcessor"/>
+				<ref local="insecureChannelProcessor"/>
+				<ref local="alwaysTestAfterMaxRequestsCaptchaChannelProcessor"/>
+			</list>
+		</property>
+	</bean>   
+	
+	<bean id="secureChannelProcessor" class="org.acegisecurity.securechannel.SecureChannelProcessor">
+		<property name="entryPoint"><ref bean="retryWithHttps"/></property>
+	</bean>
+	<bean id="insecureChannelProcessor" class="org.acegisecurity.securechannel.InsecureChannelProcessor">
+		<property name="entryPoint"><ref bean="retryWithHttp"/></property>
+	</bean>
+
+	<bean id="retryWithHttp" class="org.acegisecurity.securechannel.RetryWithHttpEntryPoint">
+		<property name="portResolver"><ref bean="portResolverImpl"/></property>
+		<property name="portMapper"><ref bean="portMapperImpl"/></property>
+	</bean>
+
+	<bean id="retryWithHttps" class="org.acegisecurity.securechannel.RetryWithHttpsEntryPoint">
+		<property name="portResolver"><ref bean="portResolverImpl"/></property> 
+		<property name="portMapper"><ref bean="portMapperImpl"/></property>
+	</bean>
+	
+	<bean id="portResolverImpl" class="org.acegisecurity.util.PortResolverImpl">
+		<property name="portMapper"><ref bean="portMapperImpl"/></property>
+	</bean>
+
+	<bean id="portMapperImpl" class="org.acegisecurity.util.PortMapperImpl">  
+		<property name="portMappings">
+			<map>
+				<entry key="8080"><value>8443</value></entry>
+			</map>
+		</property>
+	</bean>
+	<!-- ============================= END CHANNEL SECURITY SUPPORT =================================== -->
+
+</beans>

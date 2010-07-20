@@ -1,0 +1,4 @@
+<role>
+${load:source.xml}
+${load:value.xml}
+</role>

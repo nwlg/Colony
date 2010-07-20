@@ -1,0 +1,96 @@
+<styles>
+	<style>
+		<id>strong</id>
+		<label xml:lang="en">Bold</label>
+		<label xml:lang="es">Negrita</label>
+		<label xml:lang="gl">GL_Negrita</label>
+		<label xml:lang="ca">CA_Negrita</label>
+		<label xml:lang="eu">EU_Negrita</label>
+		<label xml:lang="va">VA_Negrita</label>
+		<elt>strong</elt>
+	</style>
+	<style>
+		<id>em</id>
+		<label xml:lang="en">Italic</label>
+		<label xml:lang="es">Cursiva</label>
+		<elt>em</elt>
+	</style>
+	<style>
+		<id>sup</id>
+		<label xml:lang="en">Superscript</label>
+		<label xml:lang="es">Superíndice</label>
+		<elt>sup</elt>
+	</style>
+	<style>
+		<id>sub</id>
+		<label xml:lang="en">Subscript</label>
+		<label xml:lang="es">Subíndice</label>
+		<elt>sub</elt>
+	</style>
+	<style>
+		<id>h1</id>
+		<label xml:lang="en">Heading</label>
+		<label xml:lang="es">Título</label>
+		<elt>h1</elt>
+	</style>
+	<style>
+		<id>h2</id>
+		<label xml:lang="en">Subheading</label>
+		<label xml:lang="es">Subtítulo</label>
+		<elt>h2</elt>
+	</style>
+	<style>
+		<id>blockquote</id>
+		<label xml:lang="en">Long quotation</label>
+		<label xml:lang="es">Cita</label>
+		<elt>blockquote</elt>
+	</style>
+	<style>
+		<id>q</id>
+		<label xml:lang="en">Short quotation</label>
+		<label xml:lang="es">Entrecomillado</label>
+		<elt>q</elt>
+	</style>
+	<style>
+		<id>abbr</id>
+		<label xml:lang="en">Abbreviation</label>
+		<label xml:lang="es">Abreviación</label>
+		<elt>abbr</elt>
+	</style>
+	<style>
+		<id>cite</id>
+		<label xml:lang="en">Citation</label>
+		<label xml:lang="es">Citación</label>
+		<elt>cite</elt>
+	</style>
+	<style>
+		<id>code</id>
+		<label xml:lang="en">Computer code</label>
+		<label xml:lang="es">Código informático</label>
+		<elt>code</elt>
+	</style>
+	<style>
+		<id>dfn</id>
+		<label xml:lang="en">Definition</label>
+		<label xml:lang="es">Definición</label>
+		<elt>dfn</elt>
+	</style>
+	<style>
+		<id>kbd</id>
+		<label xml:lang="en">Keystrokes</label>
+		<label xml:lang="es">Golpes de tecla</label>
+		<elt>kbd</elt>
+	</style>
+	<style>
+		<id>samp</id>
+		<label xml:lang="en">Example</label>
+		<label xml:lang="es">Ejemplo</label>
+		<elt>samp</elt>
+	</style>
+	<style>
+		<id>var</id>
+		<label xml:lang="en">Code variable</label>
+		<label xml:lang="es">Variable de programación</label>
+		<elt>var</elt>
+	</style>
+</styles>

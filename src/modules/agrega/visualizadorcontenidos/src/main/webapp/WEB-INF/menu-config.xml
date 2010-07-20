@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<MenuConfig>
+
+    <Displayers>
+        <Displayer name="listMenu" type="net.sf.navigator.displayer.ListMenuDisplayer"/>
+    </Displayers>
+
+    <Menus>
+        <Menu name="portada.title" title="portada.title" tooltip="portada.online.help">
+            <Item name="noticia.title" title="noticia.title" tooltip="noticia.online.help">
+                            <Item name="accesibilidad.title" title="accesibilidad.title" tooltip="accesibilidad.online.help" action="/Accesibilidad/Accesibilidad">
+                </Item>
+                            <Item name="noticias.title" title="noticias.title" tooltip="noticias.online.help">
+                                    <Item name="accesibilidad.title" title="accesibilidad.title" tooltip="accesibilidad.online.help" action="/Accesibilidad/Accesibilidad">
+                    </Item>
+                </Item>
+            </Item>
+            <Item name="accesibilidad.title" title="accesibilidad.title" tooltip="accesibilidad.online.help" action="/Accesibilidad/Accesibilidad">
+            </Item>
+            <Item name="mapa.title" title="mapa.title" tooltip="mapa.online.help" action="/Mapa/Mapa">
+            </Item>
+            <Item name="noticias.title" title="noticias.title" tooltip="noticias.online.help">
+                            <Item name="noticia.title" title="noticia.title" tooltip="noticia.online.help">
+                                    <Item name="accesibilidad.title" title="accesibilidad.title" tooltip="accesibilidad.online.help" action="/Accesibilidad/Accesibilidad">
+                    </Item>
+                </Item>
+                            <Item name="accesibilidad.title" title="accesibilidad.title" tooltip="accesibilidad.online.help" action="/Accesibilidad/Accesibilidad">
+                </Item>
+            </Item>
+            <Item name="contacto.title" title="contacto.title" tooltip="contacto.online.help" action="/Contacto/Contacto">
+            </Item>
+            <Item name="acerca.de.agrega.title" title="acerca.de.agrega.title" tooltip="acerca.de.agrega.online.help" action="/AcercaDeAgrega/AcercaDeAgrega">
+            </Item>
+            <Item name="informacion.legal.title" title="informacion.legal.title" tooltip="informacion.legal.online.help" action="/InformacionLegal/InformacionLegal">
+            </Item>
+            <Item name="politica.privacidad.title" title="politica.privacidad.title" tooltip="politica.privacidad.online.help" action="/PoliticaPrivacidad/PoliticaPrivacidad">
+            </Item>
+            <Item name="acceso.title" title="acceso.title" tooltip="acceso.online.help" action="/Acceso/Acceso">
+            </Item>
+            <Item name="descargas.title" title="descargas.title" tooltip="descargas.online.help" action="/Descargas/Descargas">
+            </Item>
+        </Menu>
+    </Menus>
+
+</MenuConfig>

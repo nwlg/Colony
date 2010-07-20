@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+    "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+    "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+	   
+    <!-- +++++++++++++++++++++++++++++++ -->
+    <!-- Layouts para Catalogador Basico-->
+    <!-- +++++++++++++++++++++++++++++++ -->
+       <definition name="layout-principal" page="/layout/layout-principal.jsp">
+	 	   <!-- El pie solo tiene enlaces a paginas externas a PODE. -->
+	 	   <!-- Lo dejo como HTML estatico -->
+	    	<put name="title" type="string" value=""/>
+	    	<put name="pie" value="/layout/pie.jsp"/>
+	    	
+	    	<!-- Para evitar duplicar codigo, usar logic tags en el JSP -->
+	    	<!-- que pinten las opciones correspondientes a usuario autenticado -->
+	    	<!-- o usuario generico -->
+	    	<put name="metanavegacion" value="/layout/metanavegacion.jsp"/>
+	    	<put name="body" type="string" value=""/>
+	    	<!-- El tile de mensajes de error se conserva por motivos de -->
+	    	<!-- desarrollo. Desabilitar antes de subir a StarTeam -->
+	    </definition>
+
+       <definition name="layout-principalInicio" page="/layout/layout-principalInicio.jsp">
+	 	   <!-- El pie solo tiene enlaces a paginas externas a PODE. -->
+	 	   <!-- Lo dejo como HTML estatico -->
+	    	<put name="title" type="string" value=""/>
+	    	<put name="pie" value="/layout/pie.jsp"/>
+	    	
+	    	<!-- Para evitar duplicar codigo, usar logic tags en el JSP -->
+	    	<!-- que pinten las opciones correspondientes a usuario autenticado -->
+	    	<!-- o usuario generico -->
+	    	<put name="metanavegacionInicio" value="/layout/metanavegacionInicio.jsp"/>
+	    	<put name="body" type="string" value=""/>
+	    	<!-- El tile de mensajes de error se conserva por motivos de -->
+	    	<!-- desarrollo. Desabilitar antes de subir a StarTeam -->
+	    </definition>
+
+    <!-- +++++++++++++++++++++++++++++++ -->
+    <!-- Layouts para Catalogador BasicPlus-->
+    <!-- +++++++++++++++++++++++++++++++ -->
+
+       <definition name="layout-principalInicio2" page="/layout/layout-principalInicio.jsp">
+	 	   <!-- El pie solo tiene enlaces a paginas externas a PODE. -->
+	 	   <!-- Lo dejo como HTML estatico -->
+	    	<put name="title" type="string" value=""/>
+	    	<put name="pie" value="/layout/pie.jsp"/>
+	    	
+	    	<!-- Para evitar duplicar codigo, usar logic tags en el JSP -->
+	    	<!-- que pinten las opciones correspondientes a usuario autenticado -->
+	    	<!-- o usuario generico -->
+	    	<put name="metanavegacionInicio" value="/layout/metanavegacionInicio2.jsp"/>
+	    	<put name="body" type="string" value=""/>
+	    	<!-- El tile de mensajes de error se conserva por motivos de -->
+	    	<!-- desarrollo. Desabilitar antes de subir a StarTeam -->
+	    </definition>
+
+    
+     <!-- +++++++++++++++++++++++++++++++ -->
+    <!-- Layouts para Taxonomia-->
+    <!-- +++++++++++++++++++++++++++++++ -->
+       <definition name="layout-tax" page="/layout/layout-tax.jsp">
+ 	   <!-- El pie solo tiene enlaces a paginas externas a PODE. -->
+ 	   <!-- Lo dejo como HTML estatico -->
+    	<put name="title" type="string" value=""/>
+    	<put name="pie" value="/layout/pie.jsp"/>
+    	
+    	<!-- Para evitar duplicar codigo, usar logic tags en el JSP -->
+    	<!-- que pinten las opciones correspondientes a usuario autenticado -->
+    	<!-- o usuario generico -->
+    	<put name="metanavegacion" value="/layout/metanavegacion_taxonomia.jsp"/>
+    	<put name="body" type="string" value=""/>
+    	<!-- El tile de mensajes de error se conserva por motivos de -->
+    	<!-- desarrollo. Desabilitar antes de subir a StarTeam -->
+    	
+    </definition>
+    
+     <!-- +++++++++++++++++++++++++++++++ -->
+    <!-- Layouts para Catalogador Avanzado-->
+    <!-- +++++++++++++++++++++++++++++++ -->
+       <definition name="layout-avanzado" page="/layout/layout-avanzado.jsp">
+ 	   <!-- El pie solo tiene enlaces a paginas externas a PODE. -->
+ 	   <!-- Lo dejo como HTML estatico -->
+    	<put name="title" type="string" value=""/>
+    	<put name="pie" value="/layout/pie.jsp"/>
+    	
+    	<!-- Para evitar duplicar codigo, usar logic tags en el JSP -->
+    	<!-- que pinten las opciones correspondientes a usuario autenticado -->
+    	<!-- o usuario generico -->
+    	<put name="metanavegacion" value="/layout/metanavegacionAvanzado.jsp"/>
+    	<put name="body" type="string" value=""/>
+    	<!-- El tile de mensajes de error se conserva por motivos de -->
+    	<!-- desarrollo. Desabilitar antes de subir a StarTeam -->
+    	
+    </definition>
+    
+     <definition name="layout-avanzado-verMetadatos" page="/layout/layout-verMetadatos.jsp">
+ 	   <!-- El pie solo tiene enlaces a paginas externas a PODE. -->
+ 	   <!-- Lo dejo como HTML estatico -->
+    	<put name="title" type="string" value=""/>
+    	<put name="pie" value="/layout/pie.jsp"/>
+    	
+    	<!-- Para evitar duplicar codigo, usar logic tags en el JSP -->
+    	<!-- que pinten las opciones correspondientes a usuario autenticado -->
+    	<!-- o usuario generico -->
+    	<put name="metanavegacion" value="/layout/metanavegacion-vermetadatos.jsp"/>
+    	<put name="body" type="string" value=""/>
+    	<!-- El tile de mensajes de error se conserva por motivos de -->
+    	<!-- desarrollo. Desabilitar antes de subir a StarTeam -->
+    	
+    </definition>
+    <definition name="layout-avanzadoInicio" page="/layout/layout-avanzadoInicio.jsp">
+ 	   <!-- El pie solo tiene enlaces a paginas externas a PODE. -->
+ 	   <!-- Lo dejo como HTML estatico -->
+    	<put name="title" type="string" value=""/>
+    	<put name="pie" value="/layout/pie.jsp"/>
+    	
+    	<!-- Para evitar duplicar codigo, usar logic tags en el JSP -->
+    	<!-- que pinten las opciones correspondientes a usuario autenticado -->
+    	<!-- o usuario generico -->
+    	<put name="metanavegacion" value="/layout/metanavegacionAvanzadoInicio.jsp"/>
+    	<put name="body" type="string" value=""/>
+    	<!-- El tile de mensajes de error se conserva por motivos de -->
+    	<!-- desarrollo. Desabilitar antes de subir a StarTeam -->
+    </definition>
+ 
+    
+    <definition name="menu.lateral.administrador" page="/layout/menu-lateral-administrador.jsp"/>
+    
+    <definition name="menu.lateral.generico" page="/layout/menu-lateral-generico.jsp"/>   
+    
+    <definition name="menu.cabecera.autenticado" page="/layout/menu-cabecera-autenticado.jsp"/>
+    
+    <definition name="menu.cabecera.vacio" page="/layout/menu-cabecera-vacio.html"/>
+    
+    <definition name="buscador" page="/layout/buscador.jsp"/>
+        
+	<!-- Definiciones generadas por I-Builder -->
+    <definition name="main.layout" page="/layout/main-layout.jsp">
+        <put name="title" type="string" value=""/>
+        <put name="style" type="string" value=""/>
+        <put name="javascript" type="string" value=""/>
+        <put name="body" type="string" value=""/>
+        <put name="menu" type="definition" value="menu.tile"/>
+        <put name="messages" type="definition" value="messages.tile"/>
+        <put name="breadcrumbs" type="definition" value="breadcrumbs.tile"/>
+    </definition>
+
+    <definition name="login.layout" extends="main.layout">
+        <put name="messages" type="string" value=""/>
+    </definition>
+
+    <definition name="menu.tile" page="/layout/menu.jsp"/>
+
+    <definition name="messages.tile" page="/layout/messages.jsp"/>
+
+    <definition name="breadcrumbs.tile" page="/layout/breadcrumbs.jsp"/>
+
+    <definition name="help.layout" page="/layout/help-layout.jsp"/>
+
+</tiles-definitions>
