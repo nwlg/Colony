@@ -1,17 +1,25 @@
 // license-header java merge-point
 package es.pode.buscador.presentacion.basico.descargar;
 
+import org.apache.log4j.Logger;
+
+
+
 /**
  * 
  */
 public final class DescargarODECU extends org.apache.struts.action.Action
 {
+
+    private static final Logger logger = Logger.getLogger(DescargarODECU.class);
+
     public org.apache.struts.action.ActionForward execute(org.apache.struts.action.ActionMapping mapping, org.apache.struts.action.ActionForm form, javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws java.lang.Exception
     {
         final DescargarODECUFormImpl specificForm = (DescargarODECUFormImpl)form;
 
         final Object previousFormObject = request.getSession().getAttribute("form");
 
+        
         if (previousFormObject instanceof es.pode.buscador.presentacion.basico.detallar.MostrarDetalleODEDescargarFormImpl)
         {
             final es.pode.buscador.presentacion.basico.detallar.MostrarDetalleODEDescargarFormImpl previousForm = (es.pode.buscador.presentacion.basico.detallar.MostrarDetalleODEDescargarFormImpl)previousFormObject;
@@ -21,9 +29,14 @@ public final class DescargarODECU extends org.apache.struts.action.Action
             specificForm.setIdentificadorODE(previousForm.getIdentificadorODE());
             specificForm.setTipoLayoutBuscador(previousForm.getTipoLayoutBuscador());
         }
-        else
+//20/08/2010 Fernando Garcia: We need to know the format to grey out some options in the download jsp
+        else if (previousFormObject instanceof es.pode.buscador.presentacion.basico.detallar.DetallarODECUFormImpl)
         {
-            // do nothing
+            final es.pode.buscador.presentacion.basico.detallar.DetallarODECUFormImpl previousForm =
+                    (es.pode.buscador.presentacion.basico.detallar.DetallarODECUFormImpl) previousFormObject;
+            specificForm.setFormato(previousForm.getFormato());
+            logger.debug(" specificForm = " + specificForm.toString());
+            
         }
         org.apache.struts.action.ActionForward forward = null;
 
@@ -60,7 +73,6 @@ public final class DescargarODECU extends org.apache.struts.action.Action
             throw exception;
         }
         request.getSession().setAttribute("form", form);
-
 
         return forward;
     }

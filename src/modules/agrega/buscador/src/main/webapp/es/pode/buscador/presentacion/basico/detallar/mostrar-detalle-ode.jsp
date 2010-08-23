@@ -310,10 +310,10 @@ ${form.numVecesEnviado}</span>
 	<div class="db_bubble_content">
 
 <logic:equal name="form" property="busquedaSimpleAvanzada" value="BUSQUEDA_ARBOL">
-	<a href="<html:rewrite action="/DescargarODECU/DescargarODECU.do"/>?identificadorODE=${form.identificadorODE}&amp;idioma=${form.idioma}&amp;tipoLayoutBuscador=${form.tipoLayoutBuscador}&amp;mostrarVuelta=${form.mostrarVuelta}&amp;areaCurricularBusqueda=" id="b_descargar" >
+	<a href="<html:rewrite action="/DescargarODECU/DescargarODECU.do"/>?identificadorODE=${form.identificadorODE}&amp;idioma=${form.idioma}&amp;tipoLayoutBuscador=${form.tipoLayoutBuscador}&amp;mostrarVuelta=${form.mostrarVuelta}&amp;formats=${form.formato}&amp;areaCurricularBusqueda=" id="b_descargar" >
 </logic:equal>
 <logic:notEqual name="form" property="busquedaSimpleAvanzada" value="BUSQUEDA_ARBOL">
-	<a href="<html:rewrite action="/DescargarODECU/DescargarODECU.do"/>?identificadorODE=${form.identificadorODE}&amp;idioma=${form.idioma}&amp;tipoLayoutBuscador=${form.tipoLayoutBuscador}&amp;mostrarVuelta=${form.mostrarVuelta}" id="b_descargar" >
+	<a href="<html:rewrite action="/DescargarODECU/DescargarODECU.do"/>?identificadorODE=${form.identificadorODE}&amp;idioma=${form.idioma}&amp;tipoLayoutBuscador=${form.tipoLayoutBuscador}&amp;mostrarVuelta=${form.mostrarVuelta}&amp;formats=${form.formato}" id="b_descargar" >
 </logic:notEqual>
 
 	<bean:message key="listar.odecu.mostrar.resultados.detalles.descargar"/>

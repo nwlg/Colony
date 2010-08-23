@@ -93,7 +93,9 @@ public class DescargarControllerImpl extends DescargarController
 			}
 			form.setBusquedaSimpleAvanzada(sesion.getBusquedaSimpleAvanzada());
 			form.setTitulo(sesion.getTitulo());
-			form.setFormato(FORMATO_POR_DEFECTO);
+			//20/08/2010 Fernando Garcia: Format could be != null!
+                        if (form.getFormato()==null)
+                            form.setFormato(FORMATO_POR_DEFECTO);
 		}catch (Exception e){
 			logger.error("DescargarControllerImpl - cargarTiposFormato ERROR: Error al cargar los tipos del formato",e);
 		}

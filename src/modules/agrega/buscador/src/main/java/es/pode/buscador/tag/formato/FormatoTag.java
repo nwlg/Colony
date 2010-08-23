@@ -19,11 +19,15 @@ import org.apache.log4j.Logger;
 import es.pode.soporte.constantes.ConstantesAgrega;
 import es.pode.soporte.i18n.I18n;
 import es.pode.soporte.seguridad.ldap.LdapUserDetailsUtils;
+import java.util.HashMap;
 
 public class FormatoTag extends BodyTagSupport {
 	
 	private static Logger logger = Logger.getLogger(FormatoTag.class);
-	
+
+        private static String SPECIAL_MIME_CONTENT_TYPE = "listar.odecu.mostrar.resultados.consulta.vo.extra_mime_content_type";
+
+
 	private String literalApli = null;
 	private String literalText = null;
 	private String literalImag = null;
@@ -68,7 +72,64 @@ public class FormatoTag extends BodyTagSupport {
 	public void setFormato(String formato) {
 		this.formato = formato;
 	}
-	
+
+
+
+
+
+
+
+//I know that is not the best place to put in!!!
+//17/08/2010 Fernando Garcia:
+/* The idea is fill hashCustomMimeContentTypes where keys are the custom mime content types
+ * and the values are the custom html code to print
+ */
+        public HashMap<String, ItemStringBooleanVO> getCustomMimeContentTypes(String fichero, Locale locale,
+                String literalAplicacion, String literalTexto, String literalImagen, String literalAudio, String literalVideo
+                ) {
+logger.info("getCustomMimeContentTypes INI");
+            HashMap<String, ItemStringBooleanVO> hashCustomMimeContentTypes = new HashMap<String, ItemStringBooleanVO>(5);
+            String customMimeContentType = null;
+            String customMimeContentTypeText = null;
+            String customMimeContentTypeImage = null;
+
+            int index = 1;//It will start always like 1
+            customMimeContentType = this.getResource(SPECIAL_MIME_CONTENT_TYPE+index, fichero, locale);
+logger.debug("getCustomMimeContentTypes index="+index);
+            //!customMimeContentType.equals(SPECIAL_MIME_CONTENT_TYPE+index ... WHY?
+            //getResource if doesn't find the resource assigns key like value ... so
+            // this.getResource(SPECIAL_MIME_CONTENT_TYPE+index, fichero, locale) ==
+            // == SPECIAL_MIME_CONTENT_TYPE+index if it doesn't exists
+            while (!customMimeContentType.equals(SPECIAL_MIME_CONTENT_TYPE+index)){//if exists
+                customMimeContentTypeText =
+                        this.getResource(SPECIAL_MIME_CONTENT_TYPE+index+".text", fichero, locale)!=null?
+                            this.getResource(SPECIAL_MIME_CONTENT_TYPE+index+".text", fichero, locale)
+                            :
+                            getDefaultText( customMimeContentType,  literalAplicacion,  literalTexto,  literalImagen,  literalAudio,  literalVideo);
+                customMimeContentTypeImage =
+                        this.getResource(SPECIAL_MIME_CONTENT_TYPE+index+".image", fichero, locale)!=null?
+                            this.getResource(SPECIAL_MIME_CONTENT_TYPE+index+".image", fichero, locale)
+                            :
+                            getDefaultImage( customMimeContentType);
+
+                //And we store it into the hash
+                hashCustomMimeContentTypes.put(customMimeContentType.toLowerCase().trim(),
+                        new ItemStringBooleanVO(
+                    "<img src='http://"+LdapUserDetailsUtils.getHost()+LdapUserDetailsUtils.getSubdominio() +
+                    customMimeContentTypeImage + "' alt="+customMimeContentTypeText+" title="+customMimeContentTypeText+" />" + "&nbsp;"
+                        , false)
+                );
+
+                index++; //Try next one
+                customMimeContentType = this.getResource(SPECIAL_MIME_CONTENT_TYPE+index, fichero, locale);
+                logger.debug("getCustomMimeContentTypes index="+index);
+            }
+        logger.info("getCustomMimeContentTypes END");
+        return hashCustomMimeContentTypes;
+    }
+
+
+
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -94,10 +155,16 @@ public class FormatoTag extends BodyTagSupport {
 			String literalAudio=this.getResource(literalAud, fichero, locale);
 			String literalVideo=this.getResource(literalVid, fichero, locale);
 
+
+
 //			RECUPERAMOS LOS TIPOS DE FORMATO			
 			String[] tiposFormato = formato.split(",");			
 			//Se pinta los formatos
-			this.pintarFormato(tiposFormato,literalAplicacion,literalTexto,literalImagen,literalAudio,literalVideo,out);
+//17/08/2010 Fernando Garcia: We have to prepare to struture with custom mime content-types
+                        HashMap<String, ItemStringBooleanVO> hashCustomMimeContentTypes = getCustomMimeContentTypes
+                        (fichero, locale, literalAplicacion, literalTexto, literalImagen, literalAudio, literalVideo );
+
+			this.pintarFormato(tiposFormato, hashCustomMimeContentTypes, literalAplicacion,literalTexto,literalImagen,literalAudio,literalVideo,out);
 		
 		} catch (Exception e) {			
 			logger.error("Error al dibujar los formatos", e);			
@@ -105,35 +172,120 @@ public class FormatoTag extends BodyTagSupport {
 		return SKIP_BODY;	
 	}
 
+/**
+ * 17/08/2010 Fernando Garcia
+ * Default text for a kind of mime content type
+ * @param mimeContentType
+ * @param literalAplicacion
+ * @param literalTexto
+ * @param literalImagen
+ * @param literalAudio
+ * @param literalVideo
+ * @return defaul text
+ */
+        private String getDefaultText(String mimeContentType, String literalAplicacion, String literalTexto, String literalImagen, String literalAudio, String literalVideo) {
+
+            if (mimeContentType.toLowerCase().trim().startsWith("application/")){
+                return literalAplicacion;
+            }
+            if (mimeContentType.toLowerCase().trim().startsWith("text/")){
+                return literalAplicacion;
+            }
+            if (mimeContentType.toLowerCase().trim().startsWith("image/")){
+                return literalAplicacion;
+            }
+            if (mimeContentType.toLowerCase().trim().startsWith("audio/")){
+                return literalAplicacion;
+            }
+            if (mimeContentType.toLowerCase().trim().startsWith("video/")){
+                return literalAplicacion;
+            }
+
+            return "";//no recognized
+
+        }
+
+ /**
+  * 17/08/2010 Fernando Garcia
+  * Default image for a kind of mime content type
+  * @param mimeContentType
+  * @return default image path
+  */
+        private String getDefaultImage(String mimeContentType) {
+
+            if (mimeContentType.toLowerCase().trim().startsWith("application/")){
+                return "/static/img/icon_aplicacion.gif";
+            }
+            if (mimeContentType.toLowerCase().trim().startsWith("text/")){
+                return "/static/img/icon_texto.gif";
+            }
+            if (mimeContentType.toLowerCase().trim().startsWith("image/")){
+                return "/static/img/icon_imagen.gif";
+            }
+            if (mimeContentType.toLowerCase().trim().startsWith("audio/")){
+                return "/static/img/icon_audio.gif";
+            }
+            if (mimeContentType.toLowerCase().trim().startsWith("video/")){
+                return "/static/img/icon_video.gif";
+            }
+
+            return "";//no recognized
+
+        }
+
+
+
+
 	public int doEndTag() throws JspException {
 		return SKIP_BODY;
 	}	
-	
-	public void pintarFormato (String[] tiposFormato,String literalAplicacion, String literalTexto, String literalImagen, String literalAudio, String literalVideo, JspWriter out) throws IOException{
-    	
+
+/**
+ * 17/08/2010 Fernando Garcia: I have modified this method. Now behavior is first try to find out if is
+ * a custom mime content-type. If no, it will paint it like a general type (there are 5 general types)
+ *
+ */
+
+	public void pintarFormato (String[] tiposFormato, HashMap<String, ItemStringBooleanVO> hashCustomMimeContentTypes, String literalAplicacion, String literalTexto, String literalImagen, String literalAudio, String literalVideo, JspWriter out) throws IOException{
+
+logger.info("pintarFormato INI");
     	boolean[] existe= new boolean[5];
-		for (int i=0;i<tiposFormato.length;i++){
-			if ((tiposFormato[i].trim().equals("application/pdf") || tiposFormato[i].trim().equals("application/msword")) && !existe[1]){
-				out.println("<img src='http://"+LdapUserDetailsUtils.getHost()+LdapUserDetailsUtils.getSubdominio()+"/static/img/icon_texto.gif' alt="+literalTexto+" title="+literalTexto+" />" + "&nbsp;");
-				existe[1]=true;
-				}else if (tiposFormato[i].trim().startsWith("application/") && !existe[0]){
-					out.println("<img src='http://"+LdapUserDetailsUtils.getHost()+LdapUserDetailsUtils.getSubdominio()+"/static/img/icon_aplicacion.gif' alt="+literalAplicacion+" title="+literalAplicacion+" />" + "&nbsp;");
-					existe[0]=true;
-					}else if (tiposFormato[i].trim().startsWith("text/") && !existe[1]){
-						out.println("<img src='http://"+LdapUserDetailsUtils.getHost()+LdapUserDetailsUtils.getSubdominio()+"/static/img/icon_texto.gif' alt="+literalTexto+" title="+literalTexto+" />" + "&nbsp;");
-						existe[1]=true;
-						}else if (tiposFormato[i].trim().startsWith("image/") && !existe[2]){
-							out.println("<img src='http://"+LdapUserDetailsUtils.getHost()+LdapUserDetailsUtils.getSubdominio()+"/static/img/icon_imagen.gif' alt="+literalImagen+" title="+literalImagen+" />" + "&nbsp;");
-							existe[2]=true;
-							}else if (tiposFormato[i].trim().startsWith("audio/") && !existe[3]){
-								out.println("<img src='http://"+LdapUserDetailsUtils.getHost()+LdapUserDetailsUtils.getSubdominio()+"/static/img/icon_audio.gif' alt="+literalAudio+" title="+literalAudio+" />" + "&nbsp;");
-								existe[3]=true;
-								}else if (tiposFormato[i].trim().startsWith("video/") && !existe[4]){
-									out.println("<img src='http://"+LdapUserDetailsUtils.getHost()+LdapUserDetailsUtils.getSubdominio()+"/static/img/icon_video.gif' alt="+literalVideo+" title="+literalVideo+" />" + "&nbsp;");
-									existe[4]=true;
-								}
-		}
-    }
+
+        for (int i=0;i<tiposFormato.length;i++){
+            logger.debug("pintarFormato i="+i);
+            //for every tiposFormato
+            // first we have to see if is a custom mime content-type at hashCustomMimeContentTypes
+            if (hashCustomMimeContentTypes.containsKey(tiposFormato[i].toLowerCase().trim())
+                &&
+                !hashCustomMimeContentTypes.get(tiposFormato[i].toLowerCase().trim()).itemBoolean
+                    ) {
+                //we know this custom mime c.-t. and it's first time that we deal with it
+                hashCustomMimeContentTypes.get(tiposFormato[i].toLowerCase().trim()).itemBoolean = true;//we won't use it again
+                out.println(hashCustomMimeContentTypes.get(tiposFormato[i].toLowerCase().trim()).itemString);//print out
+
+            } else {
+                if (!hashCustomMimeContentTypes.containsKey(tiposFormato[i].toLowerCase().trim())) {//it's a general type?
+                    if (tiposFormato[i].trim().startsWith("application/") && !existe[0]){
+                        out.println("<img src='http://"+LdapUserDetailsUtils.getHost()+LdapUserDetailsUtils.getSubdominio()+"/static/img/icon_aplicacion.gif' alt="+literalAplicacion+" title="+literalAplicacion+" />" + "&nbsp;");
+                        existe[0]=true;
+                    }else if (tiposFormato[i].trim().startsWith("text/") && !existe[1]){
+                            out.println("<img src='http://"+LdapUserDetailsUtils.getHost()+LdapUserDetailsUtils.getSubdominio()+"/static/img/icon_texto.gif' alt="+literalTexto+" title="+literalTexto+" />" + "&nbsp;");
+                            existe[1]=true;
+                    }else if (tiposFormato[i].trim().startsWith("image/") && !existe[2]){
+                            out.println("<img src='http://"+LdapUserDetailsUtils.getHost()+LdapUserDetailsUtils.getSubdominio()+"/static/img/icon_imagen.gif' alt="+literalImagen+" title="+literalImagen+" />" + "&nbsp;");
+                            existe[2]=true;
+                    }else if (tiposFormato[i].trim().startsWith("audio/") && !existe[3]){
+                            out.println("<img src='http://"+LdapUserDetailsUtils.getHost()+LdapUserDetailsUtils.getSubdominio()+"/static/img/icon_audio.gif' alt="+literalAudio+" title="+literalAudio+" />" + "&nbsp;");
+                            existe[3]=true;
+                    }else if (tiposFormato[i].trim().startsWith("video/") && !existe[4]){
+                            out.println("<img src='http://"+LdapUserDetailsUtils.getHost()+LdapUserDetailsUtils.getSubdominio()+"/static/img/icon_video.gif' alt="+literalVideo+" title="+literalVideo+" />" + "&nbsp;");
+                            existe[4]=true;
+                    }
+                }
+            }
+	}//for
+logger.info("pintarFormato END");
+}
 	
 //	MÉTODOS PARA PINTAR LOS MENSAJES INTERNACIONALIZADOS
 	public static String getResource(String key, String baseName, Locale locale){
@@ -180,5 +332,8 @@ public class FormatoTag extends BodyTagSupport {
 			}
 			return locale;
 		}
-	
+
+
+
+
 }

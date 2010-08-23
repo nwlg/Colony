@@ -14,6 +14,7 @@ import org.apache.commons.logging.LogFactory;
 
 import de.schlichtherle.io.ArchiveDetector;
 import de.schlichtherle.io.File;
+import java.io.FilenameFilter;
 
 /**
  * @author fjespino y mcmegia
@@ -22,6 +23,8 @@ import de.schlichtherle.io.File;
 public  class TrueZipDaoImpl implements ZipDao {
 
 	private Log logger = LogFactory.getLog(this.getClass());
+
+        private static String ITEM_FILTER = "ITEM-";
 
 	private void umount() {
 		try {
@@ -154,6 +157,48 @@ public  class TrueZipDaoImpl implements ZipDao {
 							+ rutaArchivo);
 			comprimir(rutaArchivo, rutaOrigen);
 		}
+                /*
+                 * 12/08/2010   Fernando Garcia: We have to move all folders content that start with ITEM-*
+                 * at zip root. If there is files with same name ...
+                 */
+
+                //First: List all zip root folder looking for ITEM-*
+                File dir = new File(rutaArchivo); //root folder (zip root)
+
+                FilenameFilter filter = new FilenameFilter() {
+                    @Override
+                    public boolean accept(java.io.File dir, String name) {
+                        return name.startsWith(ITEM_FILTER);
+                    }
+                };
+
+                String[] children = dir.list(filter);
+                if (logger.isDebugEnabled())
+                    logger.debug("Zip root folder ["+rutaArchivo+"] contains ["+children.length+"] files with filter ["+ITEM_FILTER+"*]");
+                if (children == null) {
+                    //is empty!
+                    if (logger.isWarnEnabled())
+                        logger.warn("No "+ITEM_FILTER+" files where found in zip root folder ["+rutaArchivo+"]!!!");
+
+                } else {
+                    for (int i=0; i<children.length; i++) { // we have to copy all contents inside the folder ITEM-* to the zip's root
+                        String filename = children[i];
+                        File f = new File(dir + File.separator + filename + File.separator);
+
+                        String[] children_inside_dir = f.list();
+                        for (int j=0; j<children_inside_dir.length; j++){
+                        	File f_inside = new File(dir + File.separator + filename + File.separator + children_inside_dir[j]);
+                        	f_inside.archiveCopyTo(new File(dir + File.separator + filename + "_" + children_inside_dir[j]));
+                        }
+
+                        //f.archiveCopyAllTo(dir,ArchiveDetector.NULL,ArchiveDetector.NULL); //old Fernando's version
+                        //then delete source (remember, it's a move action)
+                        f.deleteAll();
+
+                    }
+                }
+
+
 		umount();
 	}
 

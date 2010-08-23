@@ -61,6 +61,9 @@ public class GeneradorHtml {
 	 * @throws SAXException 
 	 * 
 	 * @throws IOExeption si no puede leer fichero properties
+         *
+         * 11/08/2010 Fernando Garcia: the messages were hardcoded. I changed it and now it gets values from entregar.properties
+         *
 	 */
 	public GeneradorHtml() 
 	{
@@ -74,25 +77,25 @@ public class GeneradorHtml {
 				logger.debug("la carptea de templates no existe.... imposible crear los htmls" );
 			cfg.setDirectoryForTemplateLoading(templates);
 
-			root.put("noframesmensaje", "Esta página utiliza frames pero su navegador no los soporta");
-			root.put("enlaceCabecera", "Enlace con Cabecera");
-			root.put("enlaceMenu", "Enlace con Menu");
-			root.put("enlaceContenido", "Enlace con Contenido");
-			root.put("enlace", "Enlace con pagina");
-			root.put("redes", "red.es");
-			root.put("comunidad", "Comunidad de Madrid");
-			root.put("contenido", "Contenido");
-			root.put("contenidoPrincipal", "Contenido Principal");
-			root.put("salir", "Cerrar Ventana");
-			root.put("siguiente", "Ver Siguiente");
-			root.put("anterior", "Ver Anterior");
-			root.put("infSiguiente", "Informe Siguiente");
-			root.put("infAnterior", "Informe Anterior");
+			root.put("noframesmensaje", props.getProperty("message.noframesmensaje"));
+			root.put("enlaceCabecera", props.getProperty("message.enlaceCabecera"));
+			root.put("enlaceMenu", props.getProperty("message.enlaceMenu"));
+			root.put("enlaceContenido", props.getProperty("message.enlaceContenido"));
+			root.put("enlace", props.getProperty("message.enlace"));
+			root.put("redes", props.getProperty("message.redes"));
+			root.put("comunidad", props.getProperty("message.comunidad"));
+			root.put("contenido", props.getProperty("message.contenido"));
+			root.put("contenidoPrincipal", props.getProperty("message.contenidoPrincipal"));
+			root.put("salir", props.getProperty("message.salir"));
+			root.put("siguiente", props.getProperty("message.siguiente"));
+			root.put("anterior", props.getProperty("message.anterior"));
+			root.put("infSiguiente", props.getProperty("message.infSiguiente"));
+			root.put("infAnterior", props.getProperty("message.infAnterior"));
 
 			NodeModel.useDefaultXPathSupport();
 			cfg.setObjectWrapper(new DefaultObjectWrapper()); 
 		} catch (Exception e) {
-			logger.error("No se pudo cargar el fichero properties");
+			logger.error("I cannot load the properties file");
 		}
 		
 		

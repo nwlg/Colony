@@ -20,10 +20,12 @@ import org.apache.log4j.Logger;
 import es.pode.buscador.presentacion.basico.listar.ListarAreaCurricularColumDecorator;
 import es.pode.buscador.presentacion.basico.listar.ListarTipoRecursoColumDecorator;
 import es.pode.buscador.tag.formato.FormatoTag;
+import es.pode.buscador.tag.formato.ItemStringBooleanVO;
 import es.pode.buscador.tag.valoracion.ValoracionTag;
 import es.pode.soporte.constantes.ConstantesAgrega;
 import es.pode.soporte.i18n.I18n;
 import es.pode.soporte.seguridad.ldap.LdapUserDetailsUtils;
+import java.util.HashMap;
 import org.apache.commons.lang.StringUtils;
 
 public class TablaImagenes extends BodyTagSupport {
@@ -221,6 +223,9 @@ public class TablaImagenes extends BodyTagSupport {
                 String literalCProviders=this.getResource("listar.odecu.mostrar.resultados.consulta.vo.contentProvider", fichero, locale);
                 String literalTypLearningTime=this.getResource("listar.odecu.mostrar.resultados.consulta.vo.typicalLearningTime", fichero, locale);
 
+
+
+
 //    			Ampliar la imagen de la galeria
     			String urlImagenReturn = "";
     			String imagenSmall = this.getPropertyValue("imagen.ampliada.png");
@@ -319,9 +324,17 @@ public class TablaImagenes extends BodyTagSupport {
 
 			out.println("<div class=\"results_fields_left\">");
 			out.println("<span class=\"results_fieldheading\">" + literalFormato + ":</span>");
-            		FormatoTag tagFormato = new FormatoTag();
+
+                        //TODO: esto necesita arreglarse, es poco limpio y claro
+                        FormatoTag tagFormato = new FormatoTag();
 			out.println("<span class=\"results_fieldtext\">");
-			tagFormato.pintarFormato(tiposFormato,literalAplicacion,literalTexto,literalImagen,literalAudio,literalVideo,out);
+
+                        HashMap<String, ItemStringBooleanVO> hashCustomMimeContentTypes = tagFormato.getCustomMimeContentTypes
+                        (fichero, locale, literalAplicacion, literalTexto, literalImagen, literalAudio, literalVideo );
+
+//                        HashMap<String, ItemStringBooleanVO> hashCustomMimeContentTypes =
+//                                new HashMap<String, ItemStringBooleanVO>();
+			tagFormato.pintarFormato(tiposFormato,hashCustomMimeContentTypes,literalAplicacion,literalTexto,literalImagen,literalAudio,literalVideo,out);
 			out.println("</span>");
 			out.println("<br />");
 

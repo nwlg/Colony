@@ -74,8 +74,7 @@
 		<em ><bean:message key="enviar.email.amigo.normas.de.uso.titulo"/></em>
 		<br />
 
-		<span><bean:message key="enviar.email.amigo.normas.de.uso.cuerpo"/>
-			<br />
+		<span>
 			<bean:message key="enviar.email.amigo.normas.de.uso.cuerpo2"/>
 		</span>
 		<br />

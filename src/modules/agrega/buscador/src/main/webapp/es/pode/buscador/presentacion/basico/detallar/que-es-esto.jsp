@@ -41,8 +41,8 @@
 		<div class="globo_gris_02">
 			<div class="globo_gris_03">
 			<!--  INICIO CAJA DE FORMULARIO   -->
-				<div><h3 class="icono_rss" id="ico_yahoo"><bean:message key='listar.odecu.mostrar.resultados.detalles.yahoo'/></h3>
-				<p><bean:message key='listar.odecu.mostrar.resultados.detalles.explicacion.yahoo'/></p>
+				<div><h3 class="icono_rss" id="ico_stumbleupon"><bean:message key='listar.odecu.mostrar.resultados.detalles.stumbleupon'/></h3>
+				<p><bean:message key='listar.odecu.mostrar.resultados.detalles.explicacion.stumbleupon'/></p>
 				</div>
 			<!--  FIN CAJA DE FORMULARIO   -->
 				</div>
@@ -76,8 +76,8 @@
 		<div class="globo_gris_02">
 			<div class="globo_gris_03">
 			<!--  INICIO CAJA DE FORMULARIO   -->
-				<div><h3 class="icono_rss" id="ico_meneame"><bean:message key='listar.odecu.mostrar.resultados.detalles.meneame'/></h3>
-				<p><bean:message key='listar.odecu.mostrar.resultados.detalles.explicacion.meneame'/></p>
+				<div><h3 class="icono_rss" id="ico_twitter"><bean:message key='listar.odecu.mostrar.resultados.detalles.twitter'/></h3>
+				<p><bean:message key='listar.odecu.mostrar.resultados.detalles.explicacion.twitter'/></p>
 				</div>
 			<!--  FIN CAJA DE FORMULARIO   -->
 				</div>
@@ -104,6 +104,26 @@
 </div>
 <!--  FIN GLOBO GRIS   -->
 <!--  FIN GLOBO GRIS   -->
+
+
+<!--  INICIO GLOBO GRIS   -->
+<!--  INICIO GLOBO GRIS   -->
+<div class="globo_gris conmargen" >
+	<div class="globo_gris_01">
+		<div class="globo_gris_02">
+			<div class="globo_gris_03">
+			<!--  INICIO CAJA DE FORMULARIO   -->
+				<div><h3 class="icono_rss" id="ico_facebook"><bean:message key='listar.odecu.mostrar.resultados.detalles.facebook'/></h3>
+				<p><bean:message key='listar.odecu.mostrar.resultados.detalles.explicacion.facebook'/></p>
+				</div>
+			<!--  FIN CAJA DE FORMULARIO   -->
+				</div>
+		</div>
+	</div>
+</div>
+<!--  FIN GLOBO GRIS   -->
+<!--  FIN GLOBO GRIS   -->
+
 </div>
 
 <!-- Setup forms for the return button -->

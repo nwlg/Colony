@@ -448,8 +448,14 @@ public class SrvEntregarServiceImpl extends
 						}
 						excludeList = prop.getProperty("simplePkgExcludeList").split(",");
 						// Pack the resource content under "content"
+                                                /* 12/08/2010 Fernando Garcia: Fiona doen't want all contents under contend folder.
+                                                 *                             She wants contents under zip root folder, so I'll remove
+                                                 *                             ' File.separator + "content" '
+                                                 * Original line:
+                                                 *	pathZip + File.separator + "content",
+                                                 */
 						this.getZipDao().comprimir(
-								pathZip + File.separator + "content",
+								pathZip,
 								pathODE,
 								excludeList);
 

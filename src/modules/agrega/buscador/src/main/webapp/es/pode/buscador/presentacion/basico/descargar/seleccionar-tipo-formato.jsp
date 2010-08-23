@@ -1,6 +1,8 @@
 <%@ taglib uri="http://struts.apache.org/tags-tiles" prefix="tiles" %>
 <%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean" %>
 <%@ taglib uri="http://struts.apache.org/tags-logic" prefix="logic" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+
 
 <tiles:insert definition="layout-sinlateral">
 
@@ -35,8 +37,13 @@
 
 <!-- Download formats -->
 <div class="text ft_lateral download_text_normal" style="clear:left">
-	<html:radio property="formato" styleClass="boton_radio" styleId="Descarga01" name="form"  value="descargar.formatos.CONTENIDOS_VALUE" />
-	<label for="Descarga01" class="alineada"><bean:message key="descargar.formatos.CONTENIDOS"/></label>
+    <c:if test="${fn:contains(fn:toLowerCase(param.formats),'application/x-www-form-urlencoded')==true}">
+        <html:radio disabled="true" property="formato" styleClass="boton_radio" styleId="Descarga01" name="form"  value="descargar.formatos.CONTENIDOS_VALUE" />
+    </c:if>
+    <c:if test="${fn:contains(fn:toLowerCase(param.formats),'application/x-www-form-urlencoded')!=true}">
+        <html:radio property="formato" styleClass="boton_radio" styleId="Descarga01" name="form"  value="descargar.formatos.CONTENIDOS_VALUE" />
+    </c:if>
+        <label for="Descarga01" class="alineada"><bean:message key="descargar.formatos.CONTENIDOS"/></label>
 </div>
 
 <div class="text ft_lateral download_text_normal">
@@ -46,7 +53,7 @@
 
 <!-- Gap! -->
 <div class="text ft_lateral download_text_gap">
-	<html:radio property="formato" styleClass="boton_radio" styleId="Formato01" name="form"  value="descargar.formatos.SCORM_2004_Sin_Sub_Manifiesto_VALUE" />
+            <html:radio property="formato" styleClass="boton_radio" styleId="Formato01" name="form"  value="descargar.formatos.SCORM_2004_Sin_Sub_Manifiesto_VALUE" />
 	<label for="Formato01" class="alineada"><bean:message key="descargar.formatos.SCORM_2004_Sin_Sub_Manifiesto"/></label>
 </div>
 
