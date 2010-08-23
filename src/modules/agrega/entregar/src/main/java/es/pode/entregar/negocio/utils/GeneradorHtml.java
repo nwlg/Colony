@@ -172,49 +172,6 @@ public class GeneradorHtml {
 	}
 	
 
-	/**
-	 * genera la cabecera de la presentación... busca en el fichero manifest si
-	 * el titulo del ODE
-	 * 
-	 * @throws Exception
-	 */
-//	private void generarCabecera()
-//	throws Exception
-//	{
-//		FileOutputStream fo=null;
-//		Writer out=null;
-//		File index=null;
-//		Template temp;
-//		try {
-//			String titulo=obtenerTitulo();
-//			root.put("titulo", titulo);
-//
-//
-//			temp = cfg.getTemplate("cabecera.ftl");
-//			index= new File(dirDestino + "/contenido/cabecera.html");
-//			boolean creado= index.createNewFile();
-//			if(creado)
-//			{
-//				fo= new FileOutputStream(index);
-//				out = new OutputStreamWriter(fo);
-//				temp.process(root, out);
-//				out.flush();
-//			}
-//
-//		} catch (Exception e) {
-//			if (logger.isDebugEnabled()) {logger.debug("Error en GeneradorHTML:generarCabecera .. " + e.getMessage() );}
-//			throw  e;
-//		}finally{
-//			index=null;
-//			if(fo!=null)
-//			{
-//				try {
-//					fo.close();
-//					out.close();
-//				} catch (IOException e) {}
-//			}
-//		}
-//	}
 
 	/**
 	 * Método que devuelve el título de ode en caso que existiera..

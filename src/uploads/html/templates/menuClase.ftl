@@ -37,7 +37,7 @@ function cambiar(id)
 
 <head lang="es" dir="ltr">
 
-<title>${redes}</title>
+<title>${titulo}</title>
 <link rel="stylesheet" media="screen" href="static/css/red.css" type="text/css" />
 <script type="text/javascript" src="static/js/menu.js"></script>
 </head>

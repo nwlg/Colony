@@ -4,17 +4,17 @@
 request.getSession(true);
 
 String numObjStr = request.getParameter("numobj");
-if (numObjStr!=null) { //out.println("numObjStr="+numObjStr);
+if (numObjStr!=null) { 
 	int numObj = new Integer(numObjStr);
 	
 	int maxResPerPage = request.getSession().getServletContext().getInitParameter("max_res_pagina")==null?10:new Integer(request.getSession().getServletContext().getInitParameter("max_res_pagina"));
-//out.println("maxResPerPage="+maxResPerPage);
+
 	if (numObj>=maxResPerPage) { // 1 page at least
 
-		int numPages = numObj / maxResPerPage ; //out.println("numPages="+numPages);
+		int numPages = numObj / maxResPerPage ; 
 		java.util.Random rnd = new java.util.Random();
 		int rndPage = rnd.nextInt(numPages)+ 1; // don't want last page
-	//out.println("rndPage="+rndPage	);
+
 		//Look for page
 		es.pode.buscador.presentacion.avanzado.buscarAvanzado.BuscarAvanzadoControllerImpl baci =
 		new es.pode.buscador.presentacion.avanzado.buscarAvanzado.BuscarAvanzadoControllerImpl();
@@ -43,28 +43,11 @@ if (numObjStr!=null) { //out.println("numObjStr="+numObjStr);
 		es.pode.buscar.negocio.buscar.servicios.ValoresBusquedaVO[] vbvo = (es.pode.buscar.negocio.buscar.servicios.ValoresBusquedaVO[])bacufi.getResultadosVO().toArray(new es.pode.buscar.negocio.buscar.servicios.ValoresBusquedaVO[]{});
 
                 int max = new Integer(vbvo.length);
-                if (max>0) { //security system 1
-                    int count = 0;//security system 2 .. we don't want infinite loops
+                if (max>0) { 
+                    int count = 0; //It will not have to look for a item many times
                     int number1 = rnd.nextInt(max);
                     int number2 = rnd.nextInt(max); while (number1==number2 && count<10) { number2 = rnd.nextInt(max); count++; }
                     int number3 = rnd.nextInt(max); while ( ((number1==number3) || (number2==number3)) && count<20 ) { number3 = rnd.nextInt(max); count++; }
-	/*
-		out.println("Page number = " + rndPage + " , numObjects = "+vbvo.length);
-		out.println("<p>&nbsp;</p>");
-		out.println("Title:"+ vbvo[number1].getTitulo()+ " id:"+ vbvo[number1].getId() + " numeroODE:"+ vbvo[number1].getNumeroODE() + " urlImagen:"+vbvo[number1].getUrlImagen());
-
-		out.println("<p>&nbsp;</p>");
-		out.println("Title:"+ vbvo[number2].getTitulo()+ " id:"+ vbvo[number2].getId() + " numeroODE:"+ vbvo[number2].getNumeroODE() + " urlImagen:"+vbvo[number2].getUrlImagen());
-
-		out.println("<p>&nbsp;</p>");
-		out.println("Title:"+ vbvo[number3].getTitulo()+ " id:"+ vbvo[number3].getId() + " numeroODE:"+ vbvo[number3].getNumeroODE() + " urlImagen:"+vbvo[number3].getUrlImagen());
-	*/
-
-	/*
-		request.setAttribute("searchValue1",vbvo[number1]);
-	request.setAttribute("searchValue2",vbvo[number2]);
-	request.setAttribute("searchValue3",vbvo[number3]);
-	*/
 %>
 <!-- pics layer -->
 <div>

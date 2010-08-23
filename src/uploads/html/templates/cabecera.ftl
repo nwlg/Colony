@@ -8,58 +8,6 @@ function invarGlob()
 }
 
 
-function siguiente()
-{
-	var anterior = vActual.value;
-	if(parseInt(vActual.value) < parseInt(vMaximo.value))
-	{
-		vActual.value= parseInt(vActual.value)+1;
-		
-		parent.menu.document.getElementById(anterior).className = '';
-		parent.menu.document.getElementById(vActual.value).className = 'escogido';
-
-		var href= parent.menu.document.getElementById(vActual.value).href;
-		var largo=href.length;
-		var ultimo =href.charAt(largo-1);
-		
-		if(ultimo!='#')
-		{
-			parent.contenido_principal.location=href;
-		}else
-		{
-			parent.contenido_principal.location='blanco.html';
-		}
-
-	}
-	
-}
-
-function anterior()
-{
-	var anterior= vActual.value;
-	if(parseInt(vActual.value)>0)
-	{
-		vActual.value= parseInt(vActual.value)-1;
-		parent.menu.document.getElementById(anterior).className = '';
-		parent.menu.document.getElementById(vActual.value).className = 'escogido';
-
-		var href= parent.menu.document.getElementById(vActual.value).href;
-		var largo=href.length;
-		var ultimo =href.charAt(largo-1);
-		
-		if(ultimo!='#')
-		{
-			parent.contenido_principal.location=href;
-		}else
-		{
-			parent.contenido_principal.location='blanco.html';
-		}
-
-	}
-	
-
-}
-
 function cierra_ventana()
 {
 		top.window.opener=top;
@@ -80,7 +28,7 @@ function cierra_ventana()
 
 <head lang="es" dir="ltr">
 
-<title>${redes}</title>
+<title>${titulo}</title>
 
 <link rel="stylesheet" media="screen" href="static/css/red.css" type="text/css" />
 
@@ -105,26 +53,15 @@ function cierra_ventana()
 <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
 <!-- INICIO CABECERA  -->
 <div id="cabecera"  >
-<h1><span>${comunidad}</span></h1>
-
-<!-- INICIO METANAVEGACION   -->
-<!-- INICIO METANAVEGACION   -->
-<div id="metanavegacion" >
-<ol >
-		<li class="oculto"><a href="#contenido_central" title="${contenido}"><strong>Contenido</strong></a></li>
-</ol>
-</div>
-<!-- FIN METANAVEGACION   -->
-<!-- FIN METANAVEGACION   -->
-
-<span class="flechas"  id="sin_ol">
-<a  href="#" onclick="javascript:anterior()" target="" title="${anterior}" class="f_left">&nbsp;&nbsp;<span>${infAnterior}</span></a>
-<a  href="#" onclick="javascript:siguiente()" target=""  title="${siguiente}" class="f_right">&nbsp;&nbsp;<span>${infSiguiente}</span></a></span>
-
+<table width="100%">
+<tr>
+	<td width="90%"><b><p style="font-family:verdana,Helvetica,sans-serif;font-size:180%;">${titulo}</p></b></td>
+	<td width="10%"><img src="static/common/img/logo_ndrb.gif"/></td>
+</tr>
+</table>
 
 <br class="oculto" />
 
-<h2>${titulo}</h2>
 
 </div>
 

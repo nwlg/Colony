@@ -99,6 +99,15 @@ padding-bottom:10px;
 background:transparent url("../img/paquete.gif") 0 0 no-repeat;
 }
 
+
+.cabecera_button {
+        bottom:32px;
+        float:right;
+        position:absolute;
+        right:0;
+        width:auto;
+}
+
 #ficha_pestanias div  {
 float:left
 }
@@ -8137,10 +8146,12 @@ ul#res_com li a#digg {
 background:transparent url("../img/icono_02.gif") 0 0 no-repeat;}
 ul#res_com li a#technorati {
 background:transparent url("../img/icono_03.gif") 0 0 no-repeat;}
-ul#res_com li a#yahoo {
+ul#res_com li a#stumbleupon {
 background:transparent url("../img/icono_04.gif") 0 0 no-repeat;}
-ul#res_com li a#meneame {
+ul#res_com li a#twitter {
 background:transparent url("../img/icono_05.gif") 0 0 no-repeat;}
+ul#res_com li a#facebook {
+background:transparent url("../img/icono_06.gif") 0 0 no-repeat;}
 
 #cont_tel {
 padding-left:82px;
@@ -8670,11 +8681,12 @@ font-weight:normal;}
 
 
 #ico_delicious {background:transparent url("../img/icono_01.gif") 0 0 no-repeat;}
-#ico_yahoo {background:transparent url("../img/icono_04.gif") 0 5px no-repeat;}
+#ico_stumbleupon {background:transparent url("../img/icono_04.gif") 0 5px no-repeat;}
 #ico_digg {background:transparent url("../img/icono_02.gif") 0 1px no-repeat;}
-#ico_meneame {background:transparent url("../img/icono_05.gif") 0 1px no-repeat;}
-#ico_technorati {background:transparent url("../img/icono_03.gif") 0 1px no-repeat;}
+#ico_twitter {background:transparent url("../img/icono_05.gif") 0 1px no-repeat;}
 #popup .globo_gris_03 div {margin:4px 15px}
+#ico_technorati {background:transparent url("../img/icono_03.gif") 0 1px no-repeat;}
+#ico_facebook {background:transparent url("../img/icono_06.gif") 0 1px no-repeat;}
 p.parrafo_p {font-size:70%;padding-left:10px;padding-top:10px;}
 p.parrafo {padding-left:15px;padding-right:15px;padding-top:5px;}
 .resultados_bb {

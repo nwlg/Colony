@@ -21,9 +21,110 @@
 
 <head lang="es" dir="ltr">
 
-<title>${redes}</title>
+<title>${titulo}</title>
 <link rel="stylesheet" media="screen" href="static/css/red.css" type="text/css" />
 <script type="text/javascript" src="static/js/menu.js"></script>
+ <style type="text/css">
+
+
+    	body {
+		color:#585858;
+		font-family:Helvetica,Arial,Sans-serif;
+	}	
+
+	.fondo_menu_frame {
+		background:none repeat scroll 0 0 #F2F2F2;
+	}
+	#menu_frame {
+		font-family:verdana,Helvetica,sans-serif;
+		font-size:60%;
+	}	
+	#menu_frame ul, #menu_frame li {
+		list-style-type:none;
+		padding:0;
+		position:relative;
+	}	
+	a:visited {
+		color:#585858;
+		text-decoration:none;
+	}	
+	#menu_frame li {
+		padding-bottom:0 !important;
+		padding-top:0.5em !important;
+	}	
+	#menu_frame li li, 
+	#menu_frame li li li {
+		border:0 none;
+		line-height:100%;
+		margin:0;
+	}	
+	#menu_frame li.item span {
+		background-image:url("static/common/img/documento.gif") !important;
+	}	
+	#menu_frame span {
+		background-repeat:no-repeat;
+		color:#151515;
+		cursor:pointer;
+		display:inline;
+		line-height:30px;
+		padding-bottom:0.9em;
+		padding-right:0;
+		padding-top:0.9em;
+	}	
+	#menu_frame .nivel02_grupo_cerrado span {
+		background-image:url("static/common/img/mas_grupo.gif") !important;
+		background-position:33px 50%;
+		padding-left:82px !important;
+	}	
+	#menu_frame .nivel02_grupo_abierto span {
+		background-image:url("static/common/img/menos_grupo.gif") !important;
+		background-position:33px 50%;
+		padding-left:80px !important;
+	}		
+	#menu_frame 
+	.nivel01_organizacion_abierto ul li.item span, 
+	#menu_frame .nivel01_organizacion_cerrado ul li.item span, 
+	#menu_frame .nivel01_grupo_cerrado ul li.item span, 
+	#menu_frame .nivel01_grupo_abierto ul li.item span {
+		display:block !important;
+		line-height:110%;
+		padding-left:54px;
+	}
+
+
+	#menu_frame span {
+		background-repeat:no-repeat;
+		color:#151515;
+		cursor:pointer;
+		display:inline;
+		line-height:30px;
+		padding-bottom:0.9em;
+		padding-right:0;
+		padding-top:0.9em;
+	}
+	
+	* {
+	margin:0;
+	padding:0;
+	}
+	
+	#menu_frame li li, #menu_frame li li li {
+		line-height:100%;
+	}
+
+	#menu_frame ul, #menu_frame li {
+		list-style-type:none;
+	}	
+	
+	#menu_frame {
+		font-family:verdana,Helvetica,sans-serif;
+		font-size:60%;
+	}
+	
+
+ </style>
+</head>
+
 <body class="fondo_menu_frame"  onload=invarGlob();>
 <div id="menu_frame">
 <#-- listar los nodos hijos del manifest -->
@@ -100,11 +201,29 @@ function cambiar(id)
 				<#list doc["//*[@identifier='${f.@identifierref}']"] as n>
 					<#-- controlo que el nodo sea un recurso -->
 					<#if (n?node_type= 'element') && ( n?node_name = 'resource')>
-						<#-- construyo el href agregandole el parametro xmlbase si viniera -->
-						<#if xmlbase="">
-							<#assign href="${n.@href}">
+						<#-- I build href adding xmlbase parameter if it comes -->
+                                                <#assign res1 = n.@href?matches("^.*ITEM-[^/]+")>
+                                                <#assign res2 = n.@href?matches("[^/]*$")>
+												
+						<#if (res1?has_content) && (res2?has_content)> 
+							<#assign newhref="${res1[0]}_${res2[0]}">
 						<#else>
-							<#assign href="${xmlbase}/${n.@href}">
+							<#assign newhref="${n.@href}">
+						</#if>
+						<#if xmlbase="">
+							<#assign href="${newhref}">
+							<#--assign href="${n.@href}"-->
+						<#else>
+							<#--assign href="${xmlbase}${n.@href}"-->
+							<#assign href="${xmlbase}${newhref}">
+							<#assign newhref="${res1[0]}_${res2[0]}">
+						</#if>
+						<#if xmlbase="">
+							<#assign href="${newhref}">
+							<#--assign href="${n.@href}"-->
+						<#else>
+							<#--assign href="${xmlbase}${n.@href}"-->
+							<#assign href="${xmlbase}${newhref}">
 						</#if>
 						<#-- si es el primer recurso que encuentro.. redefino las variables primerSeleccion e inicioHref -->
 						<#if primerSeleccion='-1'>

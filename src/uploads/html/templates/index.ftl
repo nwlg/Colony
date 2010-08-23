@@ -4,12 +4,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 <head>
 
-<title>${redes}</title>
+<title>${titulo}</title>
 
 
 </head>
 
-<frameset rows="100%,*" cols="1024,*" border="0">
+<frameset rows="100%,*" cols="100%,*,*" border="0">
 <frame src="contenido/contenido_frame.html" title="Contenido" frameborder="0" scrolling="no" marginwidth="0" marginheight="0"  />
 <frame src="contenido/blanco.html" title="Falsa" frameborder="0" scrolling="no" marginwidth="0" marginheight="0"  />
 <frame src="contenido/blanco.html" title="Falsa"  frameborder="0" scrolling="no" marginwidth="0" marginheight="0"  />
