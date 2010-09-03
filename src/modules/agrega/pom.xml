@@ -47,6 +47,7 @@
     <module>visualizador</module>
     <module>visualizadorcontenidos</module>
     <module>soporteAuthOpenID</module>
+	<module>remotinggalleryserver</module>
   </modules>
 
   <properties>
