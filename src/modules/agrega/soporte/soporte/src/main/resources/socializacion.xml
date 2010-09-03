@@ -27,11 +27,11 @@
 -->	
 <social-definition>
 	<social i18nKey="social.compartir" target="_blank">
-	    <socialItem id="delicious" name="del.icio.us" url="http://del.icio.us/post?title=&amp;url="/>
+	    <socialItem id="facebook" name="Facebook" url="http://www.facebook.com/share.php?u="/>
+	    <socialItem id="twitter" name="Twitter" url="http://www.addtoany.com/add_to/twitter?template=Resource+%24%7Btitle%7D+%24%7Blink%7D&amp;linkurl=" title="linkname"/>
+            <socialItem id="delicious" name="del.icio.us" url="http://del.icio.us/post?title=&amp;url="/>
 	    <socialItem id="digg" name="Digg" url="http://www.digg.com/submit?url="/>
 	    <socialItem id="technorati" name="Technorati" url="http://www.technorati.com/search/"/>
             <socialItem id="stumbleupon" name="StumbleUpon" url="http://www.stumbleupon.com/submit?url="/>
-	    <socialItem id="twitter" name="Twitter" url="http://www.twitter.com/home?status="/>
-	    <socialItem id="facebook" name="Facebook" url="http://www.facebook.com/share.php?u="/>
 	 </social>
 </social-definition>

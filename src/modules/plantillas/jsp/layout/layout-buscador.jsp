@@ -13,6 +13,8 @@
 <%@ taglib uri="/WEB-INF/tags/idiomasBanderas.tld" prefix="banderas" %>
 <%@ taglib uri="/WEB-INF/tags/agregaProperties.tld" prefix="agrega" %>
 
+<%@ page import="es.pode.soporte.seguridad.ldap.LdapUserDetailsUtils" %>
+
 	<head lang="es" dir="ltr">
 	<title><tiles:insert attribute="title" flush="true"/></title>
 	<link rel="shortcut icon" href="<rewrite:rewrite url="static/img/favicon.ico"/>" />
@@ -87,6 +89,19 @@
 							<div class="cabecera_logo">
 							</div>
 							</a>
+							
+							<%
+									if(!LdapUserDetailsUtils.estaAutenticado()){
+							%>
+							<a href='<bean:message key="cabecera.joinnowbutton.url"/>'>
+							<div class="cabecera_button">
+									<img src="/static/img/joinnowbutton.png" />
+							</div>
+							</a>
+							<%
+									}
+							%>
+							
 							<div class="cabecera_text">
 							national digital resource bank
 							</div>

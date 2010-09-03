@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
 <%@ taglib uri="http://struts.apache.org/tags-tiles" prefix="tiles" %>
 <%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean" %>
 <%@ taglib uri="http://struts.apache.org/tags-logic" prefix="logic" %>
@@ -35,19 +36,24 @@
 <div class="results_detail_title">${form.titulo}</div>
 <form name="download" method="get" action="<html:rewrite action="/DescargarODECU/SeleccionarTipoFormatoAceptar"/>" >
 
-<!-- Download formats -->
+<!-- Download formats --> <!-- TODO: we have to improve this -->
 <div class="text ft_lateral download_text_normal" style="clear:left">
     <c:if test="${fn:contains(fn:toLowerCase(param.formats),'application/x-www-form-urlencoded')==true}">
-        <html:radio disabled="true" property="formato" styleClass="boton_radio" styleId="Descarga01" name="form"  value="descargar.formatos.CONTENIDOS_VALUE" />
+        <input id="Descarga01" class="boton_radio" type="radio" disabled="true" value="descargar.formatos.CONTENIDOS_VALUE" name="formato" />
     </c:if>
     <c:if test="${fn:contains(fn:toLowerCase(param.formats),'application/x-www-form-urlencoded')!=true}">
-        <html:radio property="formato" styleClass="boton_radio" styleId="Descarga01" name="form"  value="descargar.formatos.CONTENIDOS_VALUE" />
+        <input id="Descarga01" class="boton_radio" type="radio" checked="true" value="descargar.formatos.CONTENIDOS_VALUE" name="formato" />
     </c:if>
         <label for="Descarga01" class="alineada"><bean:message key="descargar.formatos.CONTENIDOS"/></label>
 </div>
 
 <div class="text ft_lateral download_text_normal">
-	<html:radio property="formato" styleClass="boton_radio" styleId="Descarga01" name="form"  value="descargar.formatos.HTML_VALUE" />
+    <c:if test="${fn:contains(fn:toLowerCase(param.formats),'application/x-www-form-urlencoded')==true}">
+         <input id="Descarga01" class="boton_radio" type="radio" checked="true" value="descargar.formatos.HTML_VALUE" name="formato" />
+    </c:if>
+    <c:if test="${fn:contains(fn:toLowerCase(param.formats),'application/x-www-form-urlencoded')!=true}">
+         <html:radio property="formato" styleClass="boton_radio" styleId="Descarga01" name="form"  value="descargar.formatos.HTML_VALUE" />
+    </c:if>
 	<label for="Descarga01" class="alineada"><bean:message key="descargar.formatos.HTML"/></label>
 </div>
 

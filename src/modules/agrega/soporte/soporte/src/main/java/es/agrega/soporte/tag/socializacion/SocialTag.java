@@ -49,7 +49,8 @@ public class SocialTag extends TagSupport {
 	public static final String KEY_QUE_ES_ESTO_LINK = SocialTag.getPropertyValue("que_es_esto");
 	public static final String KEY_XML_SOCIAL_TAG 	= SocialTag.getPropertyValue("tag_social");
 	public static final String KEY_XML_I18N_TAG 	= SocialTag.getPropertyValue("tag_i18nKey");
-	public static final String KEY_XML_TARGET_TAG 	= SocialTag.getPropertyValue("tag_target");	
+	public static final String KEY_XML_TARGET_TAG 	= SocialTag.getPropertyValue("tag_target");
+
 	
 	public final static String ENVIAR = "social.enviar";
 	
@@ -160,7 +161,7 @@ public class SocialTag extends TagSupport {
 	    	  for (int i=0; i< itemList.size(); i++)
 	    	  {
 	    		  SocialItem item = (SocialItem)itemList.get(i);		    		 
-	    		  out.println("<li><a href='"+item.getLink()+"' target='"+item.getTarget()+"' title='"+item.getName()+"' id='"+item.getId()+"'>&nbsp;<em>"+item.getName()+"</em></a></li>");	    		  
+	    		  out.println("<li><a href='"+item.getLink()+ ( item.getTitle()!=null?"&amp;"+item.getTitle()+"="+ this.getTitulo():"")+"' target='"+item.getTarget()+"' title='"+item.getName()+"' id='"+item.getId()+"'>&nbsp;<em>"+item.getName()+"</em></a></li>");
 	    	  }
 	    	  String titulo = ResourceBundle.getBundle(LinkTag.PROPERTIES_FILE_NAME, (Locale)((HttpServletRequest)pageContext.getRequest()).getSession().getAttribute(ConstantesAgrega.DEFAULT_LOCALE)).getString("listar.odecu.mostrar.resultados.detalles.queEsEsto");
 	    	  out.println("<li><a href='http://"+LdapUserDetailsUtils.getHost()+LdapUserDetailsUtils.getSubdominio()+"/buscador/DetallarODECU/MostrarDetalleODEQueEsEsto.do?identificadorODE="+this.getIdentificadorODE()+"&idioma="+this.getIdioma()+"&busquedaSimpleAvanzada="+this.getBusquedaSimpleAvanzada()+"&tipoLayoutBuscador="+this.getBuscadorEmpaquetador()+"&mostrarVuelta="+this.getMostrarVuelta()+"' target='' title='"+titulo+"' class='underl'><span>"+titulo+"</span></a></li>");

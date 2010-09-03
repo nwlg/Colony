@@ -9,6 +9,8 @@
 <%@ taglib uri="/WEB-INF/tags/rewriteTag.tld" prefix="rewrite" %>
 <%@ taglib uri="/WEB-INF/tags/agregaProperties.tld" prefix="agrega" %>
 
+<%@ page import="es.pode.soporte.seguridad.ldap.LdapUserDetailsUtils" %>
+
 <head lang="es" dir="ltr">
 
 <title>
@@ -43,6 +45,20 @@
 <div class="cabecera_logo">
 </div>
 </a>
+
+<%
+		if(!LdapUserDetailsUtils.estaAutenticado()){
+%>
+<a href='<bean:message key="cabecera.joinnowbutton.url"/>'>
+<div class="cabecera_button">
+		<img src="/static/img/joinnowbutton.png" />
+</div>
+</a>
+<%
+		}
+%>
+
+
 <div class="cabecera_text">
 national digital resource bank
 </div>

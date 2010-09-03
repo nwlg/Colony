@@ -21,7 +21,7 @@ public class SocialItem implements java.io.Serializable
 	public static final String KEY_XML_ID_TAG 	= SocialTag.getPropertyValue("tag_id");
 	public static final String KEY_XML_NAME_TAG	= SocialTag.getPropertyValue("tag_name");
 	public static final String KEY_XML_URL_TAG 	= SocialTag.getPropertyValue("tag_url");
-	
+        public static final String KEY_XML_TITLE_TAG 	= SocialTag.getPropertyValue("tag_title");
 	public static final String KEY_TARGET_SELF 	= SocialTag.getPropertyValue("target_self");
 	public static final String KEY_DELICIOUS 	= SocialTag.getPropertyValue("target_delicious");
 	
@@ -31,7 +31,17 @@ public class SocialItem implements java.io.Serializable
 	private String link = null;
 	private String target = null;
 	private String i18nKey = "";	
-	
+//25/08/2010 Fernando Garcia
+        private String title = null;
+
+        public String getTitle() {
+            return title;
+        }
+
+        public void setTitle(String title) {
+            this.title = title;
+        }
+//
 	public SocialItem(Element el, String sTarget, String sURL)
 	{
 		this.setTarget(sTarget);
@@ -111,6 +121,15 @@ public class SocialItem implements java.io.Serializable
 					   if (logger.isDebugEnabled())
 						   logger.debug("El Link es ["+this.getLink()+"]");
 				   }
+                                   //25/08/2010 Fernando Garcia
+				   else if (attr.getName().equals(SocialItem.KEY_XML_TITLE_TAG))
+				   {
+					 this.setTitle(attr.getValue());
+					   if (logger.isDebugEnabled())
+						   logger.debug("The title parameter name is ["+this.getTitle()+"]");
+				   }
+                                   //
+
 			   }
 		   }
 	}

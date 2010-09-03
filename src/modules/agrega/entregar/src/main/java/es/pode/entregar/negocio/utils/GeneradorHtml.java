@@ -39,6 +39,9 @@ import freemarker.template.Template;
  * Class GenearadorHtml
  * Clase que permite generar contenido html para ODEs
  */
+
+//26/08/2010 Fernando Garcia: I have had to add 'titulo' parameter to all iFrames because sometimes is esential
+//                            to have this dynamic parameter ready.
 public class GeneradorHtml {
 	
 	private static Logger logger= Logger.getLogger(GeneradorHtml.class);
@@ -123,12 +126,14 @@ public class GeneradorHtml {
 			modelo= NodeModel.parse(new File(pathOde +MANIFEST));
 			pathLomesExterno=chequearLomes();
 
-			generarBlanco();
-			generarContenidoFrame();
-			generarContenidoIndex();
-			generarMenu();
-			generarCabecera();
-			generarIndex();
+                        String titulo=obtenerTitulo();
+
+			generarBlanco(titulo);
+			generarContenidoFrame(titulo);
+			generarContenidoIndex(titulo);
+			generarMenu(titulo);
+			generarCabecera(titulo);
+			generarIndex(titulo);
 			
 		} catch (Exception e) {
 			if (logger.isDebugEnabled()) {logger.debug("Error en GeneradorHTML:generarFrames .. " + e.getMessage() );}
@@ -152,12 +157,14 @@ public class GeneradorHtml {
 		this.dirDestino= dirDestino;
 
 		try {
-			generarBlanco();
-			generarContenidoFrame();
-			generarContenidoIndex();
-			generarMenu(orgs);
+                        String titulo=obtenerTitulo();
+			
+                        generarBlanco(titulo);
+			generarContenidoFrame(titulo);
+			generarContenidoIndex(titulo);
+			generarMenu(orgs, titulo);
 			generarCabecera(orgs.getTitulo());
-			generarIndex();
+			generarIndex(titulo);
 		} catch (Exception e) {
 			if (logger.isDebugEnabled()) {logger.debug("Error en GeneradorHTML:generarFrames .. " + e.getMessage() );}
 			throw  e;
@@ -171,43 +178,43 @@ public class GeneradorHtml {
 	 * 
 	 * @throws Exception
 	 */
-	private void generarCabecera()
-	throws Exception
-	{
-		FileOutputStream fo=null;
-		Writer out=null;
-		File index=null;
-		Template temp;
-		try {
-			String titulo=obtenerTitulo();
-			root.put("titulo", titulo);
-			
-			
-			temp = cfg.getTemplate("cabecera.ftl");
-			index= new File(dirDestino + "/contenido/cabecera.html");
-			boolean creado= index.createNewFile();
-			if(creado)
-			{
-				fo= new FileOutputStream(index);
-				out = new OutputStreamWriter(fo);
-				temp.process(root, out);
-				out.flush();  
-			}
-			
-		} catch (Exception e) {
-			if (logger.isDebugEnabled()) {logger.debug("Error en GeneradorHTML:generarCabecera .. " + e.getMessage() );}
-			throw  e;
-		}finally{
-			index=null;
-			if(fo!=null)
-			{
-				try {
-					fo.close();
-					out.close();
-				} catch (IOException e) {}
-			}
-		}
-	}
+//	private void generarCabecera()
+//	throws Exception
+//	{
+//		FileOutputStream fo=null;
+//		Writer out=null;
+//		File index=null;
+//		Template temp;
+//		try {
+//			String titulo=obtenerTitulo();
+//			root.put("titulo", titulo);
+//
+//
+//			temp = cfg.getTemplate("cabecera.ftl");
+//			index= new File(dirDestino + "/contenido/cabecera.html");
+//			boolean creado= index.createNewFile();
+//			if(creado)
+//			{
+//				fo= new FileOutputStream(index);
+//				out = new OutputStreamWriter(fo);
+//				temp.process(root, out);
+//				out.flush();
+//			}
+//
+//		} catch (Exception e) {
+//			if (logger.isDebugEnabled()) {logger.debug("Error en GeneradorHTML:generarCabecera .. " + e.getMessage() );}
+//			throw  e;
+//		}finally{
+//			index=null;
+//			if(fo!=null)
+//			{
+//				try {
+//					fo.close();
+//					out.close();
+//				} catch (IOException e) {}
+//			}
+//		}
+//	}
 
 	/**
 	 * Método que devuelve el título de ode en caso que existiera..
@@ -324,7 +331,12 @@ public class GeneradorHtml {
 	private void generarCabecera(String titulo)
 	throws Exception
 	{
-		root.put("titulo", titulo);
+                if (titulo!=null) {
+                    root.put("titulo", titulo);
+                } else {
+                    root.put("titulo", "");
+                }
+
 		
 		FileOutputStream fo=null;
 		Writer out=null;
@@ -362,9 +374,15 @@ public class GeneradorHtml {
 	 * 
 	 * @throws Exception
 	 */
-	private void generarBlanco()
+	private void generarBlanco(String titulo)
 	throws Exception
 	{
+                if (titulo!=null) {
+                    root.put("titulo", titulo);
+                } else {
+                    root.put("titulo", "");
+                }
+
 		FileOutputStream fo=null;
 		Writer out=null;
 		File index=null;
@@ -400,9 +418,17 @@ public class GeneradorHtml {
 	 * 
 	 * @throws Exception
 	 */
-	private void generarContenidoFrame()
+	private void generarContenidoFrame(String titulo)
 	throws Exception
 	{
+
+		if (titulo!=null) {
+                    root.put("titulo", titulo);
+                } else {
+                    root.put("titulo", "");
+                }
+
+
 		FileOutputStream fo=null;
 		Writer out=null;
 		File index=null;
@@ -440,9 +466,16 @@ public class GeneradorHtml {
 	 * @throws Exception
 	 */
 	
-	private void generarContenidoIndex()
+	private void generarContenidoIndex(String titulo)
 	throws Exception
 	{
+
+                if (titulo!=null) {
+                    root.put("titulo", titulo);
+                } else {
+                    root.put("titulo", "");
+                }
+
 		FileOutputStream fo=null;
 		Writer out=null;
 		File index=null;
@@ -481,10 +514,18 @@ public class GeneradorHtml {
 	 * 
 	 * @throws Exception
 	 */
-	private void generarMenu()
+	private void generarMenu(String titulo)
 	throws Exception
 	{
-		FileOutputStream fo=null;
+
+                if (titulo!=null) {
+                    root.put("titulo", titulo);
+                } else {
+                    root.put("titulo", "");
+                }
+
+
+                FileOutputStream fo=null;
 		Writer out=null;
 		File index=null;
 		Template temp;
@@ -528,9 +569,16 @@ public class GeneradorHtml {
 	 * @param orgs ManifestVO necesario para generar contenido del menu
 	 * @throws Exception
 	 */
-	private void generarMenu(ManifestVO orgs)
+	private void generarMenu(ManifestVO orgs, String titulo)
 	throws Exception
 	{
+
+                if (titulo!=null) {
+                    root.put("titulo", titulo);
+                } else {
+                    root.put("titulo", "");
+                }
+
 
 		FileOutputStream fo=null;
 		Writer out=null;
@@ -817,7 +865,7 @@ public class GeneradorHtml {
 	 * 
 	 * @throws Exception
 	 */
-	private void generarIndex()
+	private void generarIndex(String titulo)
 	throws Exception
 	{
 		FileOutputStream fo=null;
