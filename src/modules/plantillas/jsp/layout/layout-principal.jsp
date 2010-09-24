@@ -52,6 +52,8 @@
 </div>
 </a>
 
+<%-- 08/09/2010 Fernando Garcia --%>
+<%-- 		new block only appears if user didn't log in --%>
 <%
 		if(!LdapUserDetailsUtils.estaAutenticado()){
 %>
@@ -63,7 +65,8 @@
 <%
 		}
 %>
-
+<%-- 08/09/2010 Fernando Garcia --%>
+<%-- 		End of new block --%>
 
 
 <div class="cabecera_text">

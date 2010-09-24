@@ -226,7 +226,7 @@
             
         </documentation>
         <namespace>http://es.pode.auditoria.negocio.servicios</namespace>
-        <parameter name="allowedMethods" value="crearGuardarInforme crearGuardarInformeFederado crearInforme crearInformeRepositorio crearInformesPortada informeCoberturaCurricular informeEstadoOdes informeEstadoOdesTransicciones informeLicenciasOdes informeMasDescargados informeMasEnviado informeMasMostrado informeMasPesados informeMasPrevisualizados informeMasValorado informeMasVisualizados informeNivelAgregacion informeOdeUsuario informeOdeUsuarioOperacion informeOperacionesRealizadas informeOperacionUsuario informeProcesosPlanificados informeTerminosBusqueda informeUsuarios obtenerInformes obtenNumeroOperaciones registrarBusqueda registrarOperacion registrarTrabajoFechaFinPlan registrarTrabajoHijoPlan registrarTrabajoInterrPlan registrarTrabajoPlan repositorio"/>
+        <parameter name="allowedMethods" value="crearGuardarInforme crearGuardarInformeFederado crearInforme crearInformeRepositorio crearInformesPortada informeCoberturaCurricular informeEstadoOdes informeEstadoOdesTransicciones informeLicenciasOdes informeMasDescargados informeMasEnviado informeMasMostrado informeMasPesados informeMasPrevisualizados informeMasValorado informeMasVisualizados informeNivelAgregacion informeOdeUsuario informeOdeUsuarioPLUS informeOdeUsuarioOperacion informeOperacionesRealizadas informeOperacionUsuario informeProcesosPlanificados informeTerminosBusqueda informeUsuarios reportSiteWideActivity obtenerInformes obtenNumeroOperaciones registrarBusqueda registrarOperacion registrarTrabajoFechaFinPlan registrarTrabajoHijoPlan registrarTrabajoInterrPlan registrarTrabajoPlan repositorio"/>
         <parameter name="className" value="es.pode.auditoria.negocio.servicios.SrvAuditoriaServicioWSDelegator" />
         <operation name="crearGuardarInforme">
             <parameter name="parametroCrearInformeVO"/>
@@ -280,6 +280,9 @@
         <operation name="informeOdeUsuario">
             <parameter name="parametroInformeVO"/>
         </operation>
+        <operation name="informeOdeUsuarioPLUS">
+            <parameter name="parametroInformeVO"/>
+        </operation>		
         <operation name="informeOdeUsuarioOperacion">
             <parameter name="parametrosInformeVO"/>
         </operation>
@@ -296,6 +299,9 @@
             <parameter name="parametrosInformeVO"/>
         </operation>
         <operation name="informeUsuarios">
+            <parameter name="parametroInformeVO"/>
+        </operation>
+        <operation name="reportSiteWideActivity">
             <parameter name="parametroInformeVO"/>
         </operation>
         <operation name="obtenerInformes">
@@ -517,6 +523,29 @@
             </documentation>
         </typeMapping>
         <typeMapping
+            type="java:es.pode.auditoria.negocio.servicios.InformeOdeUsuarioPLUSVO"
+            xmlns:ns40="http://es.pode.auditoria.negocio.servicios"
+            qname="ns40:InformeOdeUsuarioPLUSVO"
+            serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+            deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+            encodingStyle="">
+            <documentation>
+            TODO: document it
+            </documentation>
+        </typeMapping>
+        <typeMapping
+            type="java:es.pode.auditoria.negocio.servicios.InformeOdeUsuarioPLUSVO[]"
+            xmlns:ns41="http://es.pode.auditoria.negocio.servicios"
+            qname="ns41:ArrayOfInformeOdeUsuarioPLUSVO"
+            serializer="org.apache.axis.encoding.ser.ArraySerializerFactory"
+            deserializer="org.apache.axis.encoding.ser.ArrayDeserializerFactory"
+            encodingStyle="">
+            <documentation>
+            
+            </documentation>
+        </typeMapping>
+
+        <typeMapping
             type="java:es.pode.auditoria.negocio.servicios.InformeOperacionUsuarioVO"
             xmlns:ns18="http://es.pode.auditoria.negocio.servicios"
             qname="ns18:InformeOperacionUsuarioVO"
@@ -619,6 +648,21 @@
             </documentation>
         </typeMapping>
         <typeMapping
+            type="java:es.pode.auditoria.negocio.servicios.ReportSiteWideActivityVO"
+            xmlns:ns38="http://es.pode.auditoria.negocio.servicios"
+            qname="ns38:ReportSiteWideActivityVO"
+            serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+            deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+            encodingStyle="">
+            <documentation>
+                TODO:
+            </documentation>
+        </typeMapping>
+
+
+
+
+        <typeMapping
             type="java:es.pode.auditoria.negocio.servicios.InformeUsuariosVO[]"
             xmlns:ns27="http://es.pode.auditoria.negocio.servicios"
             qname="ns27:ArrayOfInformeUsuariosVO"
@@ -629,6 +673,22 @@
             
             </documentation>
         </typeMapping>
+        <typeMapping
+            type="java:es.pode.auditoria.negocio.servicios.ReportSiteWideActivityVO[]"
+            xmlns:ns39="http://es.pode.auditoria.negocio.servicios"
+            qname="ns39:ArrayOfReportSiteWideActivityVO"
+            serializer="org.apache.axis.encoding.ser.ArraySerializerFactory"
+            deserializer="org.apache.axis.encoding.ser.ArrayDeserializerFactory"
+            encodingStyle="">
+            <documentation>
+                TODO:
+            </documentation>
+        </typeMapping>
+
+
+
+
+
         <typeMapping
             type="java:es.pode.auditoria.negocio.servicios.NumeroOperacionesVO"
             xmlns:ns28="http://es.pode.auditoria.negocio.servicios"

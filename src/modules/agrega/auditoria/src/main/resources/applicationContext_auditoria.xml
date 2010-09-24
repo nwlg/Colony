@@ -27,6 +27,8 @@
             <list>
                 <value>es/pode/auditoria/negocio/dominio/Busqueda.hbm.xml</value>
                 <value>es/pode/auditoria/negocio/dominio/Operacion.hbm.xml</value>
+                <value>es/pode/auditoria/negocio/dominio/OdePublicado.hbm.xml</value>
+                <value>es/pode/auditoria/negocio/dominio/Valoracion.hbm.xml</value>
             </list>
         </property>
         <property name="hibernateProperties">
@@ -79,6 +81,26 @@
             </list>
         </property>
     </bean>
+
+    <!-- Valoracion Entity Proxy with inner Valoracion Entity implementation -->
+    <bean id="valoracionDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.auditoria.negocio.dominio.ValoracionDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>                
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.auditoria.negocio.dominio.ValoracionDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+
     <!-- ========================= Start of SERVICE DEFINITIONS ========================= -->
 
       <!-- Service Transactional Interceptor -->
@@ -96,10 +118,12 @@
                 es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeCoberturaCurricular=PROPAGATION_REQUIRED
                 es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeTerminosBusqueda=PROPAGATION_REQUIRED
                 es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeOdeUsuario=PROPAGATION_REQUIRED
+		es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeOdeUsuarioPLUS=PROPAGATION_REQUIRED
                 es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeEstadoOdes=PROPAGATION_REQUIRED
                 es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.registrarBusqueda=PROPAGATION_REQUIRED
                 es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeLicenciasOdes=PROPAGATION_REQUIRED
                 es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeUsuarios=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.reportSiteWideActivity=PROPAGATION_REQUIRED
                 es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeProcesosPlanificados=PROPAGATION_REQUIRED
                 es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeMasValorado=PROPAGATION_REQUIRED
                 es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeMasMostrado=PROPAGATION_REQUIRED
@@ -141,6 +165,7 @@
                 <property name="beanMapper"><ref bean="beanMapper"/></property>                
                 <property name="busquedaDao"><ref bean="busquedaDao"/></property>
                 <property name="operacionDao"><ref bean="operacionDao"/></property>
+		<property name="valoracionDao"><ref bean="valoracionDao"/></property>
 									            </bean>
         </property>
         <property name="proxyInterfaces">

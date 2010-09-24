@@ -5,6 +5,7 @@
 //
 package es.pode.auditoria.negocio.servicios;
 
+import es.pode.auditoria.negocio.dominio.ValoracionDao;
 import net.sf.dozer.util.mapping.MapperIF;
 
 import org.apache.log4j.Logger;
@@ -254,6 +255,26 @@ public abstract class SrvAuditoriaServicioBase
     {
         return this.busquedaDao;
     }
+
+
+    // 23/09/2010   Fernando Garcia
+    //We're going to manipulate valoracion daos
+    private es.pode.auditoria.negocio.dominio.ValoracionDao valoracionDao;
+
+    public ValoracionDao getValoracionDao() {
+        return valoracionDao;
+    }
+
+    public void setValoracionDao(ValoracionDao valoracionDao) {
+        this.valoracionDao = valoracionDao;
+    }
+    // 23/09/2010   Fernando Garcia
+    //  End
+    
+
+
+
+
 
     private es.pode.auditoria.negocio.dominio.OperacionDao operacionDao;
 
@@ -549,6 +570,43 @@ public abstract class SrvAuditoriaServicioBase
     protected abstract es.pode.auditoria.negocio.servicios.InformeOdeUsuarioVO[] handleInformeOdeUsuario(es.pode.auditoria.negocio.servicios.ParametrosInformeVO parametroInformeVO)
         throws java.lang.Exception;
 
+
+
+    /**
+     * TODO: document it
+     * @param parametroInformeVO
+     * @return
+     */
+    public es.pode.auditoria.negocio.servicios.InformeOdeUsuarioPLUSVO[] informeOdeUsuarioPLUS(es.pode.auditoria.negocio.servicios.ParametrosInformeVO parametroInformeVO)
+    {
+        if (parametroInformeVO == null)
+        {
+            throw new IllegalArgumentException(
+                "es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeOdeUsuarioPLUS(es.pode.auditoria.negocio.servicios.ParametrosInformeVO parametroInformeVO) - 'parametroInformeVO' can not be null");
+        }
+        try
+        {
+            return this.handleInformeOdeUsuarioPLUS(parametroInformeVO);
+        }
+        catch (Throwable th)
+        {
+            throw new es.pode.auditoria.negocio.servicios.SrvAuditoriaServicioException(
+                "Error performing 'es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeOdeUsuarioPLUS(es.pode.auditoria.negocio.servicios.ParametrosInformeVO parametroInformeVO)' --> " + th,
+                th);
+        }
+    }
+
+     /**
+      * Performs the core logic for {@link #informeOdeUsuarioPLUS(es.pode.auditoria.negocio.servicios.ParametrosInformeVO)}
+      */
+    protected abstract es.pode.auditoria.negocio.servicios.InformeOdeUsuarioPLUSVO[] handleInformeOdeUsuarioPLUS(es.pode.auditoria.negocio.servicios.ParametrosInformeVO parametroInformeVO)
+        throws java.lang.Exception;
+
+
+
+
+
+
     /**
      * @see es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio#informeEstadoOdes(es.pode.auditoria.negocio.servicios.ParametrosInformeVO)
      */
@@ -660,6 +718,46 @@ public abstract class SrvAuditoriaServicioBase
       */
     protected abstract es.pode.auditoria.negocio.servicios.InformeUsuariosVO[] handleInformeUsuarios(es.pode.auditoria.negocio.servicios.ParametrosInformeVO parametroInformeVO)
         throws java.lang.Exception;
+
+
+
+
+
+
+    public es.pode.auditoria.negocio.servicios.ReportSiteWideActivityVO[] reportSiteWideActivity(es.pode.auditoria.negocio.servicios.ParametrosInformeVO parametroInformeVO)
+    {
+        if (parametroInformeVO == null)
+        {
+            throw new IllegalArgumentException(
+                "es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.reportSiteWideActivity(es.pode.auditoria.negocio.servicios.ParametrosInformeVO parametroInformeVO) - 'parametroInformeVO' can not be null");
+        }
+        try
+        {
+            return this.handleReportSiteWideActivity(parametroInformeVO);
+        }
+        catch (Throwable th)
+        {
+            throw new es.pode.auditoria.negocio.servicios.SrvAuditoriaServicioException(
+                "Error performing 'es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.reportSiteWideActivity(es.pode.auditoria.negocio.servicios.ParametrosInformeVO parametroInformeVO)' --> " + th,
+                th);
+        }
+    }
+
+     /**
+      * Performs the core logic for {@link #informeUsuarios(es.pode.auditoria.negocio.servicios.ParametrosInformeVO)}
+      */
+    protected abstract es.pode.auditoria.negocio.servicios.ReportSiteWideActivityVO[] handleReportSiteWideActivity(es.pode.auditoria.negocio.servicios.ParametrosInformeVO parametroInformeVO)
+        throws java.lang.Exception;
+
+
+
+
+
+
+
+
+
+
 
     /**
      * @see es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio#informeProcesosPlanificados(es.pode.auditoria.negocio.servicios.ParametrosInformeVO)

@@ -474,4 +474,8 @@ public interface OperacionDao
      */
     public Object obtenerNumeroOperacion(int transform, String queryString, java.lang.String idOde, java.lang.String operacion);
 
+
+
+    public Object findOdesTitleBetweenDatesByUserByOperation(int transform, java.lang.String userId, java.lang.String operacion, java.util.Calendar fechaDesde, java.util.Calendar fechaHasta);
+
 }

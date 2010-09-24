@@ -97,6 +97,23 @@ public interface SrvAuditoriaServicio
    */
     public es.pode.auditoria.negocio.servicios.InformeOdeUsuarioVO[] informeOdeUsuario(es.pode.auditoria.negocio.servicios.ParametrosInformeVO parametroInformeVO);
 
+
+
+
+    /**
+     * TODO: document it
+     * @param parametroInformeVO
+     * @return
+     */
+
+    public es.pode.auditoria.negocio.servicios.InformeOdeUsuarioPLUSVO[] informeOdeUsuarioPLUS(es.pode.auditoria.negocio.servicios.ParametrosInformeVO parametroInformeVO);
+
+
+
+
+
+
+
   /**
    * <p>
    * Método que devuelve un array de objetos InformeEstadoVO con el
@@ -133,6 +150,14 @@ public interface SrvAuditoriaServicio
       * @return es.pode.auditoria.negocio.servicios.InformeUsuariosVO[]
    */
     public es.pode.auditoria.negocio.servicios.InformeUsuariosVO[] informeUsuarios(es.pode.auditoria.negocio.servicios.ParametrosInformeVO parametroInformeVO);
+
+
+
+    //////////
+    public es.pode.auditoria.negocio.servicios.ReportSiteWideActivityVO[] reportSiteWideActivity(es.pode.auditoria.negocio.servicios.ParametrosInformeVO parametroInformeVO);
+
+
+
 
   /**
    * <p>

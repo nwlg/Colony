@@ -526,7 +526,12 @@ public class BuscarAvanzadoControllerImpl extends BuscarAvanzadoController{
 				}
 			}else form.setUsuarioAdministrador(new Boolean (false));			
 			
-    		String idiomaNavegacion = ((Locale)request.getSession().getAttribute(ConstantesAgrega.DEFAULT_LOCALE)).getLanguage();
+    		String idiomaNavegacion = null;
+                try {
+                    idiomaNavegacion = ((Locale)request.getSession().getAttribute(ConstantesAgrega.DEFAULT_LOCALE)).getLanguage();
+                } catch (Exception e) {
+                    idiomaNavegacion = "en"; //TODO: we have to fix this, ...
+                }
 //        	Elimino los espacios en blanco del formulario de los campos de wild-card
     		if(prepararFormulario(form)){
     			form.setIdiomaBuscador((form.getIdioma()==null)?devolverIdiomaBuscador(form.getIdiomaBuscador()):form.getIdioma());

@@ -77,11 +77,11 @@
                  </xsd:complexType>
             </xsd:element>
             <xsd:element name="crearInformeResponse">       
-                <xsd:complexType>
-                    <xsd:sequence>
+                <xsd:complexType/>
+<!--                    <xsd:sequence>
                         <xsd:element name="crearInformeReturn" type="apachesoap:DataHandler"/>
                     </xsd:sequence>
-                </xsd:complexType>               
+                </xsd:complexType>  -->              
             </xsd:element>
             <xsd:element name="crearInformeRepositorio">      
                 <xsd:annotation>     
@@ -447,6 +447,36 @@
                     </xsd:sequence>
                 </xsd:complexType>               
             </xsd:element>
+			
+			
+            <xsd:element name="informeOdeUsuarioPLUS">      
+                <xsd:annotation>     
+                    <xsd:documentation> 
+                        TODO: document it
+                    </xsd:documentation>
+                </xsd:annotation> 
+                <xsd:complexType>  
+                    <xsd:sequence>
+                        <xsd:element name="parametroInformeVO" type="impl:ParametrosInformeVO" nillable="false">
+                            <xsd:annotation>     
+                                <xsd:documentation> 
+                                    
+                                </xsd:documentation>
+                            </xsd:annotation>
+                        </xsd:element>
+                     </xsd:sequence>
+                 </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="informeOdeUsuarioPLUSResponse">       
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="informeOdeUsuarioPLUSReturn" type="impl:ArrayOfInformeOdeUsuarioPLUSVO"/>
+                    </xsd:sequence>
+                </xsd:complexType>               
+            </xsd:element>
+			
+			
+			
             <xsd:element name="informeOdeUsuarioOperacion">      
                 <xsd:annotation>     
                     <xsd:documentation> 
@@ -602,6 +632,38 @@
                     </xsd:sequence>
                 </xsd:complexType>               
             </xsd:element>
+			
+			
+            <xsd:element name="reportSiteWideActivity">      
+                <xsd:annotation>     
+                    <xsd:documentation> 
+                        TODO:
+                    </xsd:documentation>
+                </xsd:annotation> 
+                <xsd:complexType>  
+                    <xsd:sequence>
+                        <xsd:element name="parametroInformeVO" type="impl:ParametrosInformeVO" nillable="false">
+                            <xsd:annotation>     
+                                <xsd:documentation> 
+                                    
+                                </xsd:documentation>
+                            </xsd:annotation>
+                        </xsd:element>
+                     </xsd:sequence>
+                 </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="reportSiteWideActivityResponse">       
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="reportSiteWideActivityReturn" type="impl:ArrayOfReportSiteWideActivityVO"/>
+                    </xsd:sequence>
+                </xsd:complexType>               
+            </xsd:element>			
+			
+			
+			
+			
+			
             <xsd:element name="obtenerInformes">      
                 <xsd:annotation>     
                     <xsd:documentation> 
@@ -1161,6 +1223,55 @@
                     <xsd:element name="item" minOccurs="0" maxOccurs="unbounded" form="qualified" type="impl:InformeOdeUsuarioVO" /> 
                 </xsd:sequence>
             </xsd:complexType>
+			
+			
+			
+	
+			
+			
+			
+            <xsd:complexType name="InformeOdeUsuarioPLUSVO">
+                <xsd:annotation>     
+                    <xsd:documentation> 
+                        TODO: document it
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:sequence>
+                    <xsd:element name="group" nillable="false" type="xsd:string">
+                        <xsd:annotation>     
+                            <xsd:documentation> 
+                                
+                            </xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element name="item" nillable="false" type="xsd:string">
+                        <xsd:annotation>     
+                            <xsd:documentation> 
+                                
+                            </xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element name="count" nillable="false" type="xsd:string">
+                        <xsd:annotation>     
+                            <xsd:documentation> 
+                                
+                            </xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="ArrayOfInformeOdeUsuarioPLUSVO">
+                <xsd:sequence>
+                    <xsd:element name="item" minOccurs="0" maxOccurs="unbounded" form="qualified" type="impl:InformeOdeUsuarioPLUSVO" /> 
+                </xsd:sequence>
+            </xsd:complexType>
+			
+			
+			
+			
+			
+			
+			
             <xsd:complexType name="InformeOperacionUsuarioVO">
                 <xsd:annotation>     
                     <xsd:documentation> 
@@ -1374,6 +1485,81 @@
                     <xsd:element name="item" minOccurs="0" maxOccurs="unbounded" form="qualified" type="impl:InformeUsuariosVO" /> 
                 </xsd:sequence>
             </xsd:complexType>
+			
+			
+            <xsd:complexType name="ReportSiteWideActivityVO">
+                <xsd:annotation>     
+                    <xsd:documentation> 
+                        TODO:
+                    </xsd:documentation>
+                </xsd:annotation>
+                <xsd:sequence>
+                    <xsd:element name="numberOfResourcesTotal" nillable="false" type="xsd:string">
+                        <xsd:annotation>     
+                            <xsd:documentation> 
+                                
+                            </xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element name="numberOfResourcesPublished" nillable="false" type="xsd:string">
+                        <xsd:annotation>     
+                            <xsd:documentation> 
+                                
+                            </xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element name="numberOfResourcesSearched" nillable="false" type="xsd:string">
+                        <xsd:annotation>     
+                            <xsd:documentation> 
+                                
+                            </xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element name="numberOfResourcesPreviewed" nillable="false" type="xsd:string">
+                        <xsd:annotation>     
+                            <xsd:documentation> 
+                                
+                            </xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element name="numberOfResourcesDownloaded" nillable="false" type="xsd:string">
+                        <xsd:annotation>     
+                            <xsd:documentation> 
+                                
+                            </xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element name="numberOfResourcesSent" nillable="false" type="xsd:string">
+                        <xsd:annotation>     
+                            <xsd:documentation> 
+                                
+                            </xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element name="numberOfResourcesRated" nillable="false" type="xsd:string">
+                        <xsd:annotation>     
+                            <xsd:documentation> 
+                                
+                            </xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                    <xsd:element name="numberOfComments" nillable="false" type="xsd:string">
+                        <xsd:annotation>     
+                            <xsd:documentation> 
+                                
+                            </xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="ArrayOfReportSiteWideActivityVO">
+                <xsd:sequence>
+                    <xsd:element name="item" minOccurs="0" maxOccurs="unbounded" form="qualified" type="impl:ReportSiteWideActivityVO" /> 
+                </xsd:sequence>
+            </xsd:complexType>			
+			
+			
+			
             <xsd:complexType name="NumeroOperacionesVO">
                 <xsd:annotation>     
                     <xsd:documentation> 
@@ -1968,6 +2154,15 @@
     <wsdl:message name="informeOdeUsuario18Response">
         <wsdl:part element="impl:informeOdeUsuarioResponse" name="parameters"/>
     </wsdl:message>
+	
+    <wsdl:message name="informeOdeUsuarioPLUS35Request">
+        <wsdl:part element="impl:informeOdeUsuarioPLUS" name="parameters"/>
+    </wsdl:message>
+    <wsdl:message name="informeOdeUsuarioPLUS35Response">
+        <wsdl:part element="impl:informeOdeUsuarioPLUSResponse" name="parameters"/>
+    </wsdl:message>
+	
+	
     <wsdl:message name="informeOdeUsuarioOperacion19Request">
         <wsdl:part element="impl:informeOdeUsuarioOperacion" name="parameters"/>
     </wsdl:message>
@@ -2004,6 +2199,15 @@
     <wsdl:message name="informeUsuarios24Response">
         <wsdl:part element="impl:informeUsuariosResponse" name="parameters"/>
     </wsdl:message>
+	
+    <wsdl:message name="reportSiteWideActivity34Request">
+        <wsdl:part element="impl:reportSiteWideActivity" name="parameters"/>
+    </wsdl:message>
+    <wsdl:message name="reportSiteWideActivity34Response">
+        <wsdl:part element="impl:reportSiteWideActivityResponse" name="parameters"/>
+    </wsdl:message>
+	
+	
     <wsdl:message name="obtenerInformes25Request">
         <wsdl:part element="impl:obtenerInformes" name="parameters"/>
     </wsdl:message>
@@ -2259,6 +2463,23 @@
             <wsdl:output message="impl:informeOdeUsuario18Response" 
                          name="informeOdeUsuario18Response"/>
         </wsdl:operation>
+
+
+		
+        <wsdl:operation name="informeOdeUsuarioPLUS">
+                
+            <wsdl:documentation> 
+                TODO:document it
+            </wsdl:documentation>
+            <wsdl:input message="impl:informeOdeUsuarioPLUS35Request" 
+                        name="informeOdeUsuarioPLUS35Request"/>
+            <wsdl:output message="impl:informeOdeUsuarioPLUS35Response" 
+                         name="informeOdeUsuarioPLUS35Response"/>
+        </wsdl:operation>
+		
+
+
+		
         <wsdl:operation name="informeOdeUsuarioOperacion">
                 
             <wsdl:documentation> 
@@ -2324,6 +2545,21 @@
             <wsdl:output message="impl:informeUsuarios24Response" 
                          name="informeUsuarios24Response"/>
         </wsdl:operation>
+		
+        <wsdl:operation name="reportSiteWideActivity">
+                
+            <wsdl:documentation> 
+				TODO:
+            </wsdl:documentation>
+            <wsdl:input message="impl:reportSiteWideActivity34Request" 
+                        name="reportSiteWideActivity34Request"/>
+            <wsdl:output message="impl:reportSiteWideActivity34Response" 
+                         name="reportSiteWideActivity34Response"/>
+        </wsdl:operation>
+		
+		
+		
+		
         <wsdl:operation name="obtenerInformes">
                 
             <wsdl:documentation> 
@@ -2583,6 +2819,20 @@
                 <wsdlsoap:body use="literal"/>
             </wsdl:output>
        </wsdl:operation>         
+	   
+	   
+        <wsdl:operation name="informeOdeUsuarioPLUS">
+            <wsdlsoap:operation soapAction="informeOdeUsuarioPLUS" style="document"/>
+            <wsdl:input name="informeOdeUsuarioPLUS35Request">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="informeOdeUsuarioPLUS35Response">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+       </wsdl:operation>         
+
+	   
+	   
         <wsdl:operation name="informeOdeUsuarioOperacion">
             <wsdlsoap:operation soapAction="informeOdeUsuarioOperacion" style="document"/>
             <wsdl:input name="informeOdeUsuarioOperacion19Request">
@@ -2637,6 +2887,19 @@
                 <wsdlsoap:body use="literal"/>
             </wsdl:output>
        </wsdl:operation>         
+	   
+        <wsdl:operation name="reportSiteWideActivity">
+            <wsdlsoap:operation soapAction="reportSiteWideActivity" style="document"/>
+            <wsdl:input name="reportSiteWideActivity34Request">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="reportSiteWideActivity34Response">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+       </wsdl:operation>         
+	   	   
+	   
+	   
         <wsdl:operation name="obtenerInformes">
             <wsdlsoap:operation soapAction="obtenerInformes" style="document"/>
             <wsdl:input name="obtenerInformes25Request">

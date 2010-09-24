@@ -49,9 +49,12 @@ import es.agrega.soporte.agregaProperties.AgregaProperties;
 import es.agrega.soporte.agregaProperties.AgregaPropertiesImpl;
 import es.pode.adminusuarios.negocio.servicios.ParametroAuditoriaUsuariosVO;
 import es.pode.adminusuarios.negocio.servicios.UsuarioActivoVO;
+import es.pode.auditoria.negocio.dominio.BusquedaDao;
 import es.pode.auditoria.negocio.dominio.IdiomaOdeDesdeHastaCriteria;
 import es.pode.auditoria.negocio.dominio.Operacion;
+import es.pode.auditoria.negocio.dominio.OperacionDao;
 import es.pode.auditoria.negocio.dominio.TitulosOdePorUsuarioDesdeHastaCriteria;
+import es.pode.auditoria.negocio.dominio.ValoracionDao;
 import es.pode.fuentestaxonomicas.negocio.servicio.SrvTaxonomiaService;
 import es.pode.fuentestaxonomicas.negocio.servicio.TaxonConRutaVO;
 import es.pode.fuentestaxonomicas.negocio.servicio.TaxonPathVO;
@@ -650,6 +653,144 @@ public class SrvAuditoriaServicioImpl extends es.pode.auditoria.negocio.servicio
 		return informeOperacionOdeUsuarioVO;
 	}
 
+
+
+
+
+/**
+ *
+ * TODO: document it!
+ * @param parametroInformeVO
+ * @return
+ * @throws java.lang.Exception
+ */
+	protected es.pode.auditoria.negocio.servicios.InformeOdeUsuarioPLUSVO[] handleInformeOdeUsuarioPLUS(es.pode.auditoria.negocio.servicios.ParametrosInformeVO parametroInformeVO) throws java.lang.Exception
+        {
+
+		log.info("report OdeUsuarioPLUS");
+
+                String userId = parametroInformeVO.getIdUsuario();
+
+		SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+		format.setLenient(false);
+
+		log(" fechaDesde " + parametroInformeVO.getFechaDesde());
+		log(" fechaHasta " + parametroInformeVO.getFechaHasta());
+		if (parametroInformeVO == null)
+		{
+			log.error("Error running the user operations. There aren't paremeters.");
+			throw new Exception("Error running the user operations. There aren't paremeters.");
+		}
+		//Date validation
+
+		if(!(this.validarFechas(parametroInformeVO.getFechaDesde(), parametroInformeVO.getFechaHasta())).booleanValue())
+		{
+			log.error("Dates are wrong.");
+			throw new Exception("Error running the user operations. Dates are wrong.");
+		}
+
+
+                //Query Searches
+		log.info("report OdeUsuarioPLUS: Searches");
+                BusquedaDao busquedaDao = this.getBusquedaDao();
+                final java.util.List obj = (java.util.List)busquedaDao.listBusquedasDesdeHastaByUser(nivelAgregacionCatalogo, userId, parametroInformeVO.getFechaDesde(), parametroInformeVO.getFechaHasta());
+
+                
+                ArrayList<InformeOdeUsuarioPLUSVO> alresults = new ArrayList<InformeOdeUsuarioPLUSVO>();
+
+                final Iterator it = obj.iterator();
+                while (it.hasNext()) {
+                    Object[] twoItems = (Object[])it.next();
+                    String item = (String) twoItems[0];
+                    Long count = (Long) twoItems[1];
+
+                    alresults.add(new InformeOdeUsuarioPLUSVO("Searches",item,""+count));
+                }
+
+
+                //Query Previews
+                log.info("report OdeUsuarioPLUS: Previews");
+                OperacionDao operacionDao = this.getOperacionDao();
+                final java.util.List obj2= (java.util.List)operacionDao.findOdesTitleBetweenDatesByUserByOperation(nivelAgregacionCatalogo, userId, "previsualizado", parametroInformeVO.getFechaDesde(), parametroInformeVO.getFechaHasta());
+
+                final Iterator it2 = obj2.iterator();
+                while (it2.hasNext()) {
+                    Object[] twoItems = (Object[])it2.next();
+                    String item = (String) twoItems[0];
+                    Long count = (Long) twoItems[1];
+
+                    alresults.add(new InformeOdeUsuarioPLUSVO("Previewed",item,""+count));
+                }
+
+
+                //Query Downloads
+                //There are many kinds of Downloads
+                log.info("report OdeUsuarioPLUS: Downloads");               
+                final java.util.List obj3= (java.util.List)operacionDao.findOdesTitleBetweenDatesByUserByOperation(nivelAgregacionCatalogo, userId, "descargado_%", parametroInformeVO.getFechaDesde(), parametroInformeVO.getFechaHasta());
+
+                final Iterator it3 = obj3.iterator();
+                while (it3.hasNext()) {
+                    Object[] twoItems = (Object[])it3.next();
+                    String item = (String) twoItems[0];
+                    Long count = (Long) twoItems[1];
+
+                    alresults.add(new InformeOdeUsuarioPLUSVO("Downloaded",item,""+count));
+                }
+
+
+                //Query Sends
+                log.info("report OdeUsuarioPLUS: Sends");
+                final java.util.List obj4= (java.util.List)operacionDao.findOdesTitleBetweenDatesByUserByOperation(nivelAgregacionCatalogo, userId, "enviarCorreo", parametroInformeVO.getFechaDesde(), parametroInformeVO.getFechaHasta());
+
+                final Iterator it4 = obj4.iterator();
+                while (it4.hasNext()) {
+                    Object[] twoItems = (Object[])it4.next();
+                    String item = (String) twoItems[0];
+                    Long count = (Long) twoItems[1];
+
+                    alresults.add(new InformeOdeUsuarioPLUSVO("Sent",item,""+count));
+                }
+
+
+
+
+                //Query Ratings
+                log.info("report OdeUsuarioPLUS: Ratings");
+
+                ValoracionDao valoracionDao = this.getValoracionDao();
+                final java.util.List obj5= (java.util.List)valoracionDao.listarODEsValoradosDesdeHastaByUser(nivelAgregacionCatalogo, userId, parametroInformeVO.getFechaDesde(), parametroInformeVO.getFechaHasta());
+
+                final Iterator it5 = obj5.iterator();
+                while (it5.hasNext()) {
+                    Object[] twoItems = (Object[])it5.next();
+                    String item = (String) twoItems[0];
+                    Long count = (Long) twoItems[1];
+
+                    alresults.add(new InformeOdeUsuarioPLUSVO("Rated",item,""+count));
+                }
+
+
+
+
+                InformeOdeUsuarioPLUSVO[] ioupa = new InformeOdeUsuarioPLUSVO[alresults.size()];
+                ioupa = alresults.toArray(new InformeOdeUsuarioPLUSVO[]{});
+
+            return ioupa;
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
 	/**
 	 * Obtiene un array de InformeOperacionOdeUsuarioVO con el estado de todos los odes de la plataforma para un usuario concreto en un rango de fechas determinado
 	 * @param  parametrosInformeVO Clase con los parámetros que necesita el método
@@ -1116,6 +1257,40 @@ public class SrvAuditoriaServicioImpl extends es.pode.auditoria.negocio.servicio
 		
 		return informeUsuariosVO;
 	}
+
+
+
+
+
+
+
+        ////////////
+        protected es.pode.auditoria.negocio.servicios.ReportSiteWideActivityVO[] handleReportSiteWideActivity(es.pode.auditoria.negocio.servicios.ParametrosInformeVO parametrosInformeVO) throws java.lang.Exception
+        {
+            ReportSiteWideActivityVO[] arrayDeVO = new ReportSiteWideActivityVO[1];
+
+            ReportSiteWideActivityVO a = new ReportSiteWideActivityVO();
+
+            a.setNumberOfResourcesSent("8787");
+            a.setNumberOfResourcesTotal("888");
+            a.setNumberOfResourcesPublished("777");
+            a.setNumberOfResourcesPreviewed("666");
+            a.setNumberOfResourcesDownloaded("33");
+            a.setNumberOfComments("2");
+            a.setNumberOfResourcesSearched("1232");
+            a.setNumberOfResourcesRated("44");
+            arrayDeVO[0]=a;
+
+
+            return arrayDeVO;
+        }
+
+
+
+
+
+
+
 
 	/**
 	 * Obtiene los procesos planificados y su estado entre dos fechas concretas

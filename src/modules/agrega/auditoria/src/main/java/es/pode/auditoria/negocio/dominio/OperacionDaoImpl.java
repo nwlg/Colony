@@ -284,4 +284,7 @@ public class OperacionDaoImpl
             throw super.convertHibernateAccessException(ex);
         }
     }
+
+
+
 }

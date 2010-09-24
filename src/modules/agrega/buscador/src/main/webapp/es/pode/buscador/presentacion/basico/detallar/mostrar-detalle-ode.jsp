@@ -6,6 +6,7 @@
 <%@ taglib uri="/WEB-INF/tags/formato.tld" prefix="format" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="/WEB-INF/tags/rewriteTag.tld" prefix="rewrite" %>
+<%@ page import="es.pode.soporte.seguridad.ldap.LdapUserDetailsUtils" %>
 
 <tiles:insert definition="layout-sinlateral">
 
@@ -15,7 +16,7 @@
 
     <tiles:put name="body" type="string">
 	<%@ include file="/taglib-imports.jspf" %>
-	
+
 	<!-- Inicio plantilla contenido  -->
 	<div class="plantilla_contenido">
 		<jsp:include page="/layout/messages.jsp" flush="true" />
@@ -55,9 +56,9 @@
 
 <!-- Display all of the social networking links -->
 <social:social url="/${initParam.url_buscadorDetalleCorta}/${form.idioma}/${form.identificadorODE}" mostrarVuelta="${form.mostrarVuelta}" busquedaSimpleAvanzada="${form.busquedaSimpleAvanzada}" buscadorEmpaquetador="${form.tipoLayoutBuscador}" identificadorODE="${form.identificadorODE}" idioma="${form.idioma}" titulo="${form.titulo}" urlImagen="${form.imagen}"/>
-
 			</ul>
-		</div>		
+		</div>
+                <%-- --%>
 
 <!-- Clear div after the social tags -->
 <div style="clear: both;"></div>

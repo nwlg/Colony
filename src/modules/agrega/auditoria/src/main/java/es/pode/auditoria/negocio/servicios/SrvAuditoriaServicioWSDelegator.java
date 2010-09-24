@@ -97,6 +97,18 @@ public class SrvAuditoriaServicioWSDelegator
         return getSrvAuditoriaServicio().informeOdeUsuario(parametroInformeVO);
     }
 
+
+
+
+    public es.pode.auditoria.negocio.servicios.InformeOdeUsuarioPLUSVO[] informeOdeUsuarioPLUS(es.pode.auditoria.negocio.servicios.ParametrosInformeVO parametroInformeVO)
+    {
+        return getSrvAuditoriaServicio().informeOdeUsuarioPLUS(parametroInformeVO);
+    }
+
+
+
+
+
     /**
      * @see es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio#informeEstadoOdes(es.pode.auditoria.negocio.servicios.ParametrosInformeVO)
      */
@@ -128,6 +140,15 @@ public class SrvAuditoriaServicioWSDelegator
     {
         return getSrvAuditoriaServicio().informeUsuarios(parametroInformeVO);
     }
+
+    /////
+    public es.pode.auditoria.negocio.servicios.ReportSiteWideActivityVO[] reportSiteWideActivity(es.pode.auditoria.negocio.servicios.ParametrosInformeVO parametroInformeVO)
+    {
+        return getSrvAuditoriaServicio().reportSiteWideActivity(parametroInformeVO);
+    }
+
+
+
 
     /**
      * @see es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio#informeProcesosPlanificados(es.pode.auditoria.negocio.servicios.ParametrosInformeVO)

@@ -347,8 +347,8 @@ public abstract class BusquedaDaoBase
             queryObject.setParameter("fechaHasta", fechaHasta);
             queryObject.setParameter("ambito_busqueda", ambito_busqueda);
             java.util.List results = queryObject.list();
-            Object result = null;
-            if (results != null)
+            Object result = null; //TODO: review why this code was written in this way
+            if (results != null) 
             {
                 if (results.size() > 1)
                 {
@@ -369,6 +369,44 @@ public abstract class BusquedaDaoBase
             throw super.convertHibernateAccessException(ex);
         }
     }
+
+
+    //  21/09/2010  Fernando Garcia
+    public Object listBusquedasDesdeHastaByUser(int transform, String userId, java.util.Calendar fechaDesde, java.util.Calendar fechaHasta){
+        
+        return this.listBusquedasDesdeHastaByUser(transform,
+                " select terminoBuscado, count(*) from es.pode.auditoria.negocio.dominio.Busqueda as busqueda where busqueda.usuario=:userId AND :fechaHasta>=busqueda.fecha AND :fechaDesde<=busqueda.fecha "+
+                " group by terminoBuscado order by terminoBuscado",
+                userId, fechaDesde, fechaHasta);
+
+    }
+
+    //  21/09/2010  Fernando Garcia
+    public Object listBusquedasDesdeHastaByUser(int transform, String queryString, String userId, java.util.Calendar fechaDesde, java.util.Calendar fechaHasta){
+
+        try
+        {
+            org.hibernate.Query queryObject = super.getSession(false).createQuery(queryString);
+            queryObject.setParameter("fechaDesde", fechaDesde);
+            queryObject.setParameter("fechaHasta", fechaHasta);
+            queryObject.setParameter("userId", userId);
+            java.util.List results = queryObject.list();
+//            Object result = null;
+//            result = transformEntity(transform, (es.pode.auditoria.negocio.dominio.Busqueda)result);
+            return results;
+        }
+        catch (org.hibernate.HibernateException ex)
+        {
+            throw super.convertHibernateAccessException(ex);
+        }
+
+
+
+    }
+
+
+
+
 
     /**
      * @see es.pode.auditoria.negocio.dominio.Busqueda#obtenerNumTerminosBuscados(java.util.Calendar, java.util.Calendar, java.lang.String)

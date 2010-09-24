@@ -24,6 +24,38 @@
 <!-- Middle column -->
 
 <div id="contenido_central_middle">
+<%-- 08/09/2010 Fernando Garcia --%>
+<%--            This new block is to insert the random pictures jsp --%>
+<%--            it's in another webapp so another context is needed --%>
+<div><br><p style="font-size: 57%;">&nbsp;</p></div>
+<!-- Random pictures -->
+<div class="lb_bubble_topleft">
+        <div class="lb_bubble_bottomleft">
+                <div class="lb_bubble_topright">
+                        <div class="lb_bubble_bottomright">
+<%  //TODO: try to find another way to do it without scriptlets
+    request.getSession(true);
+    Object objForm = session.getAttribute("form");
+    int numObj = 0;
+    if (objForm instanceof es.pode.visualizador.presentacion.portada.PortadaFormImpl) {
+            numObj = new Integer (((es.pode.visualizador.presentacion.portada.PortadaFormImpl)objForm).getObjetos());
+    }
+
+    ServletContext thisContext = getServletContext();
+            ServletContext anotherContext = thisContext.getContext("/buscador");
+
+    anotherContext.getRequestDispatcher("/random-pics.jsp?numobj="+numObj).include(request, new org.apache.jasper.runtime.ServletResponseWrapperInclude (response, out));
+
+%>
+                        </div>
+                </div>
+        </div>
+</div>
+<!-- End Random pictures -->
+<p>&nbsp;</p>
+<%-- 08/09/2010 Fernando Garcia --%>
+<%--            End of block --%>
+
 <div class="heading_text heading_indent">search</div>
 
 <!-- Search box bubble -->
@@ -49,7 +81,7 @@
 	<p style="float:left; display:inline;">Keywords</p>
 	<div id="arrow_grey_right"/></div>
 
-	<input type="text" id="buscadorGeneral" class="caja_buscador" value="" title="<bean:message key="buscador.buscador.alt"/>" name="buscadorGeneral" />
+	<input style="border:1px solid #FFC20E;" type="text" id="buscadorGeneral" class="caja_buscador" value="" title="<bean:message key="buscador.buscador.alt"/>" name="buscadorGeneral" />
 
 	<br/>
 
@@ -72,7 +104,7 @@
 <div class="search_filter_bubble">
 
 <!-- Start of bubble -->
-<div class="lb_bubble_topleft"><div class="lb_bubble_bottomleft"><div class="lb_bubble_topright"><div class="lb_bubble_bottomright">
+<div class="lb_bubble_topleft" style="height: 130px;"><div class="lb_bubble_bottomleft" style="height: 130px;"><div class="lb_bubble_topright" style="height: 130px;"><div class="lb_bubble_bottomright" style="height: 130px;">
 
 <div class="lb_bubble_content">
 
@@ -146,54 +178,6 @@
 
 </form>
 
-
-<!-- News bubble -->
-<div class="heading_text heading_indent">news</div>
-<div class="news_bubble">
-
-<!-- Start of bubble -->
-<div class="lb_bubble_topleft"><div class="lb_bubble_bottomleft"><div class="lb_bubble_topright"><div class="lb_bubble_bottomright">
-
-<div class="lb_bubble_content">
-
-<display:table name="${form.noticias}"
-			requestURI="" export="false"
-			id="noticia"  style="border:1"
-			cellpadding="0" cellspacing="0"  sort="list"
-			partialList="False" pagesize="2">
-			
-			<display:column style="valign:top;" >
-				<ul id="lista_de_noticias">
-				<li>
-				<a href="<rewrite:rewrite url="${initParam.url_portada_noticias}"/>/${fn:replace(fn:replace(noticia.tituloCodex,"?", "_"),"&#37","_")}/${noticia.id }">${noticia.titulo}</a><br/>
-				<em><fmt:formatDate value="${noticia.fechaPublicacion.time}" pattern="dd/MM/yyyy"/></em>
-				<p>${noticia.resumen}<br/>
-				<span><bean:message key="mostrarNoticia.categoria"/> 
-				<a href="<rewrite:rewrite url="${initParam.url_noticias_categorias}"/>/${noticia.categoriaCodex}/${noticia.idCategoria}">${noticia.categoria}</a></span></p>
-				</li>
-				</ul>
-
-			</display:column>
-			<display:setProperty name="basic.msg.empty_list"> </display:setProperty>
-			<!-- sobreescribimos las propiedades del displayTag porque aqui no tenemos el div caja tabla  -->
-			<c:set var="paginacion"> <bean:message key="noticias.paginacion"/> </c:set>
-			<c:set var="anterior"> <bean:message key="noticias.anterior"/> </c:set>
-			<c:set var="siguiente"> <bean:message key="noticias.siguiente"/> </c:set>
-			
-			<display:setProperty name="paging.banner.full"> <hr/><strong class="oculto">${paginacion}:</strong><div class="paginacion"><ul id="navlist"></a><li><a href="{2}">${anterior}</a></li>{0}<li><a href="{3}">${siguiente}</a></li></ul></div> </display:setProperty>
-		    <display:setProperty name="paging.banner.first"> <hr/><strong class="oculto">${paginacion}:</strong><div class="paginacion" ><ul id="navlist">{0}<li><a href="{3}">${siguiente}</a></li></ul></div> </display:setProperty>
-		    <display:setProperty name="paging.banner.last"> <hr/><strong class="oculto">${paginacion}:</strong><div class="paginacion" ><ul id="navlist"><li><a href="{2}">${anterior}</a></li>{0}</ul></div> </display:setProperty>
-		    <display:setProperty name="paging.banner.onepage"> </display:setProperty>
-</display:table>
-
-</div>
-
-	</div></div></div></div>
-</div>
-<!-- End of bubble -->
-</div>
-<!-- End of news bubble -->
-
 </div>
 <!-- End of middle column -->
 
@@ -225,7 +209,7 @@
 <div id="search-menu-rhs">
 
 <div id="tagcloud">
-<div class="heading_text">social tags </div>
+<div class="heading_text">popular tags </div>
 <tiles:insert definition="agrega.tagcloud" flush="false"/>
 </div>
 

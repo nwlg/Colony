@@ -618,6 +618,9 @@ public abstract class OperacionDaoBase
         return this.obtenerNumeroOperacion(transform, "select count(*) as numero from es.pode.auditoria.negocio.dominio.Operacion as operacion where operacion.idOde=:idOde AND operacion.operacion LIKE :operacion", idOde, operacion);
     }
 
+
+
+
     /**
      * @see es.pode.auditoria.negocio.dominio.Operacion#obtenerNumeroOperacion(int, java.lang.String, java.lang.String, java.lang.String)
      */
@@ -785,5 +788,39 @@ public abstract class OperacionDaoBase
         this.getBeanMapper().map(vo, entity, DEF_MAPPING_OPERACIONVO_OPERACION);
     }
 		
-		
+
+    public Object findOdesTitleBetweenDatesByUserByOperation(int transform, String queryString, java.lang.String userId, java.lang.String operacion, java.util.Calendar fechaDesde, java.util.Calendar fechaHasta){
+
+        try
+        {
+            logger.debug("[findOdesTitleBetweenDatesByUserByOperation(queryString)]");
+            org.hibernate.Query queryObject = super.getSession(false).createQuery(queryString);
+			queryObject.setParameter("userId", userId);
+			queryObject.setParameter("operacion", operacion);
+			queryObject.setParameter("fechaDesde", fechaDesde);
+			queryObject.setParameter("fechaHasta", fechaHasta);
+			logger.debug("queryObject "+queryObject);
+            java.util.List results = queryObject.list();
+            logger.debug("results "+results);
+            return results;
+        }
+        catch (org.hibernate.HibernateException ex)
+        {
+            throw super.convertHibernateAccessException(ex);
+        }
+
+    }
+
+
+    public Object findOdesTitleBetweenDatesByUserByOperation(int transform, java.lang.String userId, java.lang.String operacion, java.util.Calendar fechaDesde, java.util.Calendar fechaHasta){
+        logger.debug("[findOdesTitleBetweenDatesByUserByOperation]");
+
+        return this.findOdesTitleBetweenDatesByUserByOperation(transform,
+                " select odepublicado.titulo, count(*) from es.pode.auditoria.negocio.dominio.Operacion as operacion, es.pode.auditoria.negocio.dominio.OdePublicado as odepublicado " +
+                " where operacion.idOde = odepublicado.idODE AND operacion.operacion like :operacion AND " +
+                " operacion.usuario=:userId AND :fechaHasta>=operacion.fecha AND :fechaDesde<=operacion.fecha " +
+                " group by odepublicado.titulo order by odepublicado.titulo",
+                userId, operacion, fechaDesde, fechaHasta);
+    }
+
 }

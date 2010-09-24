@@ -305,6 +305,18 @@ public interface BusquedaDao
      */
     public Object listarNumBusquedasDesdeHasta(int transform, String queryString, java.util.Calendar fechaDesde, java.util.Calendar fechaHasta, java.lang.String ambito_busqueda);
 
+
+
+
+    //21/09/2010    Fernando Garcia
+    public Object listBusquedasDesdeHastaByUser(int transform, String queryString, String userId, java.util.Calendar fechaDesde, java.util.Calendar fechaHasta);
+
+    //21/09/2010    Fernando Garcia
+    public Object listBusquedasDesdeHastaByUser(int transform, String userId, java.util.Calendar fechaDesde, java.util.Calendar fechaHasta);
+    
+
+
+
     public java.lang.Long obtenerNumTerminosBuscados(java.util.Calendar fechaDesde, java.util.Calendar fechaHasta, java.lang.String terminoBuscado);
 
     /**
