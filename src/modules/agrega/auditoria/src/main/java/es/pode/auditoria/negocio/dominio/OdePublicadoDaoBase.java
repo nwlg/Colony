@@ -6,6 +6,7 @@
 package es.pode.auditoria.negocio.dominio;
 
 import net.sf.dozer.util.mapping.MapperIF;
+import org.apache.log4j.Logger;
 
 /**
  * <p>
@@ -21,7 +22,7 @@ public abstract class OdePublicadoDaoBase
 {
 
 
-
+        protected static final Logger logger = Logger.getLogger(OdePublicadoDaoBase.class);
 	
 
 	/**
@@ -694,6 +695,7 @@ public abstract class OdePublicadoDaoBase
         return (java.lang.Long)this.obtenNumODEsPublicados(TRANSFORM_NONE, queryString);
     }
 
+
     /**
      * @see es.pode.auditoria.negocio.dominio.OdePublicado#obtenNumODEsPublicados(int)
      */
@@ -701,6 +703,43 @@ public abstract class OdePublicadoDaoBase
     {
         return this.obtenNumODEsPublicados(transform, "select count(*) from OdePublicadoImpl");
     }
+
+
+
+
+    public java.lang.Long obtenNumODEsPublicadosBetweenDates(java.util.Calendar fechaIni, java.util.Calendar fechaFin){
+        logger.debug("obtenNumODEsPublicadosBetweenDates");
+        return this.obtenNumODEsPublicadosBetweenDates(
+                "select count(*) from es.pode.auditoria.negocio.dominio.OdePublicado as odePublicado where :fechaFin>=odePublicado.fecha AND :fechaIni<=odePublicado.fecha"
+                , fechaIni, fechaFin);
+        
+    }
+
+    /**
+     * TODO: document it
+     * @param queryString
+     * @param fechaIni
+     * @param fechaFin
+     * @return
+     */
+    public java.lang.Long obtenNumODEsPublicadosBetweenDates(String queryString, java.util.Calendar fechaIni, java.util.Calendar fechaFin) {
+        logger.debug("obtenNumODEsPublicadosBetweenDates(queryString)");
+        try
+        {
+            org.hibernate.Query queryObject = super.getSession(false).createQuery(queryString);
+
+            queryObject.setParameter("fechaIni", fechaIni);
+            queryObject.setParameter("fechaFin", fechaFin);
+
+            java.util.List results = queryObject.list();
+            return (Long) results.get(0);
+        }
+        catch (org.hibernate.HibernateException ex)
+        {
+            throw super.convertHibernateAccessException(ex);
+        }
+    }
+
 
     /**
      * @see es.pode.auditoria.negocio.dominio.OdePublicado#obtenNumODEsPublicados(int, java.lang.String)

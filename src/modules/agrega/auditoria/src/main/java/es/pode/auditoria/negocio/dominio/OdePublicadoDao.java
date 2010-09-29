@@ -555,6 +555,28 @@ public interface OdePublicadoDao
      */
     public java.lang.Long obtenNumODEsPublicados(String queryString);
 
+
+    /**
+     * TODO: document it
+     * @param queryString
+     * @param fechaIni
+     * @param fechaFin
+     * @return
+     */
+    public java.lang.Long obtenNumODEsPublicadosBetweenDates(String queryString, java.util.Calendar fechaIni, java.util.Calendar fechaFin);
+
+
+
+    /**
+     * TODO: document it
+     * @param queryString
+     * @param fechaIni
+     * @param fechaFin
+     * @return
+     */
+    public java.lang.Long obtenNumODEsPublicadosBetweenDates(java.util.Calendar fechaIni, java.util.Calendar fechaFin);
+
+
     /**
      * <p>
      *   Does the same thing as {@link #obtenNumODEsPublicados()} with an

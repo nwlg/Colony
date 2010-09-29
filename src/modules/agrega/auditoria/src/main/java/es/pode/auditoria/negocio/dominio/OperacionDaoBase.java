@@ -292,6 +292,19 @@ public abstract class OperacionDaoBase
     }
 
     /**
+     * TODO: document it
+     * @param fechaDesde
+     * @param fechaHasta
+     * @param operacionLike
+     * @return
+     */
+    public Long obtenerNumOperacionesDesdeHastaLike(final java.util.Calendar fechaDesde, final java.util.Calendar fechaHasta, final java.lang.String operacionLike)
+    {
+        return  (java.lang.Long)this.obtenerNumOperacionesDesdeHasta(TRANSFORM_NONE, "select count(*) from es.pode.auditoria.negocio.dominio.Operacion as operacion where :fechaHasta>=operacion.fecha AND :fechaDesde<=operacion.fecha AND operacion.operacion like :operacion", fechaDesde, fechaHasta, operacionLike);
+    }
+
+
+    /**
      * @see es.pode.auditoria.negocio.dominio.Operacion#obtenerNumOperacionesDesdeHasta(int, java.lang.String, java.util.Calendar, java.util.Calendar, java.lang.String)
      */
     public Object obtenerNumOperacionesDesdeHasta(final int transform, final java.lang.String queryString, final java.util.Calendar fechaDesde, final java.util.Calendar fechaHasta, final java.lang.String operacion)

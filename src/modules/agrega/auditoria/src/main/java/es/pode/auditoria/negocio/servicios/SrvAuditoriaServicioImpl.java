@@ -50,7 +50,9 @@ import es.agrega.soporte.agregaProperties.AgregaPropertiesImpl;
 import es.pode.adminusuarios.negocio.servicios.ParametroAuditoriaUsuariosVO;
 import es.pode.adminusuarios.negocio.servicios.UsuarioActivoVO;
 import es.pode.auditoria.negocio.dominio.BusquedaDao;
+import es.pode.auditoria.negocio.dominio.ComentarioDao;
 import es.pode.auditoria.negocio.dominio.IdiomaOdeDesdeHastaCriteria;
+import es.pode.auditoria.negocio.dominio.OdePublicadoDao;
 import es.pode.auditoria.negocio.dominio.Operacion;
 import es.pode.auditoria.negocio.dominio.OperacionDao;
 import es.pode.auditoria.negocio.dominio.TitulosOdePorUsuarioDesdeHastaCriteria;
@@ -1264,25 +1266,115 @@ public class SrvAuditoriaServicioImpl extends es.pode.auditoria.negocio.servicio
 
 
 
-        ////////////
-        protected es.pode.auditoria.negocio.servicios.ReportSiteWideActivityVO[] handleReportSiteWideActivity(es.pode.auditoria.negocio.servicios.ParametrosInformeVO parametrosInformeVO) throws java.lang.Exception
+        /**
+         * TODO: document it
+         * @param parametroInformeVO
+         * @return
+         * @throws java.lang.Exception
+         */
+        protected es.pode.auditoria.negocio.servicios.ReportSiteWideActivityVO[] handleReportSiteWideActivity(es.pode.auditoria.negocio.servicios.ParametrosInformeVO parametroInformeVO) throws java.lang.Exception
         {
-            ReportSiteWideActivityVO[] arrayDeVO = new ReportSiteWideActivityVO[1];
-
-            ReportSiteWideActivityVO a = new ReportSiteWideActivityVO();
-
-            a.setNumberOfResourcesSent("8787");
-            a.setNumberOfResourcesTotal("888");
-            a.setNumberOfResourcesPublished("777");
-            a.setNumberOfResourcesPreviewed("666");
-            a.setNumberOfResourcesDownloaded("33");
-            a.setNumberOfComments("2");
-            a.setNumberOfResourcesSearched("1232");
-            a.setNumberOfResourcesRated("44");
-            arrayDeVO[0]=a;
+            log.info("handleReportSiteWideActivity");
+            ArrayList<ReportSiteWideActivityVO> allResults = new ArrayList<ReportSiteWideActivityVO>(8);
 
 
-            return arrayDeVO;
+            SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+            format.setLenient(false);
+
+            log(" fechaDesde " + parametroInformeVO.getFechaDesde());
+            log(" fechaHasta " + parametroInformeVO.getFechaHasta());
+            if (parametroInformeVO == null)
+            {
+                    log.error("Error running the user operations. There aren't paremeters.");
+                    throw new Exception("Error running the user operations. There aren't paremeters.");
+            }
+
+            //Date validation
+            if(!(this.validarFechas(parametroInformeVO.getFechaDesde(), parametroInformeVO.getFechaHasta())).booleanValue())
+            {
+                    log.error("Dates are wrong.");
+                    throw new Exception("Error running the user operations. Dates are wrong.");
+            }
+
+            //Query total live resouces
+            log.info("report siteWideActivity: Total number of resources");
+            OdePublicadoDao odePublicadoDao = this.getOdePublicadoDao();
+
+            final Long numOdesPublicados = odePublicadoDao.obtenNumODEsPublicados();
+
+            allResults.add(new ReportSiteWideActivityVO("Total number of resources",""+numOdesPublicados));
+
+
+            //Query total live resouces between dates
+            log.info("report siteWideActivity: Total number of resources between dates");
+
+            final Long numOdesPublicadosBetweenDates = odePublicadoDao.obtenNumODEsPublicadosBetweenDates(
+                    parametroInformeVO.getFechaDesde(), parametroInformeVO.getFechaHasta());
+
+            allResults.add(new ReportSiteWideActivityVO("Resources published",""+numOdesPublicadosBetweenDates));
+
+
+            //Query total searches between dates
+            log.info("report siteWideActivity: Total number of searches between dates");
+
+            BusquedaDao buscarDao = this.getBusquedaDao();
+
+            final Long numBusquedas = buscarDao.listarNumBusquedasDesdeHasta(parametroInformeVO.getFechaDesde(), parametroInformeVO.getFechaHasta(), "buscar_local");
+
+            allResults.add(new ReportSiteWideActivityVO("Searches",""+numBusquedas));
+
+
+
+            //Query total previews between dates
+            log.info("report siteWideActivity: Total number of previews between dates");
+
+            OperacionDao operacionDao = this.getOperacionDao();
+
+            final Long numPreviews = operacionDao.obtenerNumOperacionesDesdeHasta(parametroInformeVO.getFechaDesde(), parametroInformeVO.getFechaHasta(), "previsualizado");
+
+            allResults.add(new ReportSiteWideActivityVO("Previews",""+numPreviews));
+
+
+
+            //Query total downloads between dates
+            log.info("report siteWideActivity: Total number of downloads between dates");
+
+            final Long numDownloads = operacionDao.obtenerNumOperacionesDesdeHastaLike( parametroInformeVO.getFechaDesde(), parametroInformeVO.getFechaHasta(), "descargado_%");
+
+            allResults.add(new ReportSiteWideActivityVO("Downloads",""+numDownloads));
+
+
+
+            //Query total items sent between dates
+            log.info("report siteWideActivity: Total number of items sent between dates");
+
+            final Long numSents = operacionDao.obtenerNumOperacionesDesdeHasta(parametroInformeVO.getFechaDesde(), parametroInformeVO.getFechaHasta(), "enviarCorreo");
+
+            allResults.add(new ReportSiteWideActivityVO("Items sent",""+numSents));
+
+
+
+            //Query total items rated between dates
+            log.info("report siteWideActivity: Total number of items rated between dates");
+
+            ValoracionDao valoracionDao = this.getValoracionDao();
+            final Long numValoraciones = valoracionDao.totalValoracionesBetweenDates(parametroInformeVO.getFechaDesde(), parametroInformeVO.getFechaHasta());
+            allResults.add(new ReportSiteWideActivityVO("Ratings",""+numValoraciones));
+
+
+            //Query total comments between dates
+            log.info("report siteWideActivity: Total number of comments between dates");
+
+            ComentarioDao comentarioDao = this.getComentarioDao();
+            final Long numComments = comentarioDao.totalComentariosBetweenDates(parametroInformeVO.getFechaDesde(), parametroInformeVO.getFechaHasta());
+            allResults.add(new ReportSiteWideActivityVO("Comments",""+numComments));
+
+
+
+
+            return allResults.toArray(new ReportSiteWideActivityVO[]{});
+
+            
         }
 
 

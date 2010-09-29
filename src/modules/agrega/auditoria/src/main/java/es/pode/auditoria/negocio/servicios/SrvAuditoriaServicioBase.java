@@ -5,6 +5,8 @@
 //
 package es.pode.auditoria.negocio.servicios;
 
+import es.pode.auditoria.negocio.dominio.ComentarioDao;
+import es.pode.auditoria.negocio.dominio.OdePublicadoDao;
 import es.pode.auditoria.negocio.dominio.ValoracionDao;
 import net.sf.dozer.util.mapping.MapperIF;
 
@@ -272,6 +274,36 @@ public abstract class SrvAuditoriaServicioBase
     //  End
     
 
+
+
+    // 28/09/2010   Fernando Garcia
+    //We're going to manipulate odePublicado daos
+    private es.pode.auditoria.negocio.dominio.OdePublicadoDao odePublicadoDao;
+
+    public OdePublicadoDao getOdePublicadoDao() {
+        return odePublicadoDao;
+    }
+
+    public void setOdePublicadoDao(OdePublicadoDao odePublicadoDao) {
+        this.odePublicadoDao = odePublicadoDao;
+    }
+    // 28/09/2010   Fernando Garcia
+    //  End
+
+
+    // 29/09/2010   Fernando Garcia
+    //We're going to manipulate comentario daos
+    private es.pode.auditoria.negocio.dominio.ComentarioDao comentarioDao;
+
+    public ComentarioDao getComentarioDao() {
+        return comentarioDao;
+    }
+
+    public void setComentarioDao(ComentarioDao comentarioDao) {
+        this.comentarioDao = comentarioDao;
+    }
+    // 29/09/2010   Fernando Garcia
+    //  End
 
 
 

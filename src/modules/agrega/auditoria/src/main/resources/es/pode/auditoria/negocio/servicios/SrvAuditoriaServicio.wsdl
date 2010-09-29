@@ -1494,56 +1494,14 @@
                     </xsd:documentation>
                 </xsd:annotation>
                 <xsd:sequence>
-                    <xsd:element name="numberOfResourcesTotal" nillable="false" type="xsd:string">
+                    <xsd:element name="reportLine" nillable="false" type="xsd:string">
                         <xsd:annotation>     
                             <xsd:documentation> 
                                 
                             </xsd:documentation>
                         </xsd:annotation>
                     </xsd:element>
-                    <xsd:element name="numberOfResourcesPublished" nillable="false" type="xsd:string">
-                        <xsd:annotation>     
-                            <xsd:documentation> 
-                                
-                            </xsd:documentation>
-                        </xsd:annotation>
-                    </xsd:element>
-                    <xsd:element name="numberOfResourcesSearched" nillable="false" type="xsd:string">
-                        <xsd:annotation>     
-                            <xsd:documentation> 
-                                
-                            </xsd:documentation>
-                        </xsd:annotation>
-                    </xsd:element>
-                    <xsd:element name="numberOfResourcesPreviewed" nillable="false" type="xsd:string">
-                        <xsd:annotation>     
-                            <xsd:documentation> 
-                                
-                            </xsd:documentation>
-                        </xsd:annotation>
-                    </xsd:element>
-                    <xsd:element name="numberOfResourcesDownloaded" nillable="false" type="xsd:string">
-                        <xsd:annotation>     
-                            <xsd:documentation> 
-                                
-                            </xsd:documentation>
-                        </xsd:annotation>
-                    </xsd:element>
-                    <xsd:element name="numberOfResourcesSent" nillable="false" type="xsd:string">
-                        <xsd:annotation>     
-                            <xsd:documentation> 
-                                
-                            </xsd:documentation>
-                        </xsd:annotation>
-                    </xsd:element>
-                    <xsd:element name="numberOfResourcesRated" nillable="false" type="xsd:string">
-                        <xsd:annotation>     
-                            <xsd:documentation> 
-                                
-                            </xsd:documentation>
-                        </xsd:annotation>
-                    </xsd:element>
-                    <xsd:element name="numberOfComments" nillable="false" type="xsd:string">
+                    <xsd:element name="count" nillable="false" type="xsd:string">
                         <xsd:annotation>     
                             <xsd:documentation> 
                                 

@@ -250,6 +250,17 @@ public interface ValoracionDao
      */
     public void remove(java.util.Collection entities);
 
+
+    /**
+     * TODO: document it
+     * @param fechaIni
+     * @param fechaFin
+     * @return
+     */
+    public Long totalValoracionesBetweenDates(java.util.Calendar fechaIni, java.util.Calendar fechaFin );
+
+
+
   /**
    * <p>
    * Este metodo devuelve las valoraciones asociadas al criterio de

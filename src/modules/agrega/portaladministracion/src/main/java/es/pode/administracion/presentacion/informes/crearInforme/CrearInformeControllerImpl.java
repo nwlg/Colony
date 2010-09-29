@@ -69,7 +69,7 @@ public class CrearInformeControllerImpl extends CrearInformeController
 	        	throw new ValidatorException ("{errors.crearInformes.informeNulo}"); 
 	        }
 	       
-	        if(idInforme.equalsIgnoreCase("estadoOdes") || idInforme.equalsIgnoreCase("operacionesRealizadas") || idInforme.equalsIgnoreCase("nivelAgregacion") || idInforme.equalsIgnoreCase("coberturaCurricular") || idInforme.equalsIgnoreCase("odesLicencias") || idInforme.equalsIgnoreCase("usuarios") || idInforme.equalsIgnoreCase("procesosPlanificados"))
+	        if(idInforme.equalsIgnoreCase("siteWideActivity") || idInforme.equalsIgnoreCase("estadoOdes") || idInforme.equalsIgnoreCase("operacionesRealizadas") || idInforme.equalsIgnoreCase("nivelAgregacion") || idInforme.equalsIgnoreCase("coberturaCurricular") || idInforme.equalsIgnoreCase("odesLicencias") || idInforme.equalsIgnoreCase("usuarios") || idInforme.equalsIgnoreCase("procesosPlanificados"))
 	        {
 	        	if(log.isDebugEnabled())log.debug("cargo informe con fechas");	
 	        	tipoInforme = "fechas";

@@ -29,6 +29,7 @@
                 <value>es/pode/auditoria/negocio/dominio/Operacion.hbm.xml</value>
                 <value>es/pode/auditoria/negocio/dominio/OdePublicado.hbm.xml</value>
                 <value>es/pode/auditoria/negocio/dominio/Valoracion.hbm.xml</value>
+                <value>es/pode/auditoria/negocio/dominio/Comentario.hbm.xml</value>
             </list>
         </property>
         <property name="hibernateProperties">
@@ -101,6 +102,45 @@
     </bean>
 
 
+    <!-- OdePublicado Entity Proxy with inner OdePublicado Entity implementation -->
+    <bean id="odePublicadoDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.auditoria.negocio.dominio.OdePublicadoDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.auditoria.negocio.dominio.OdePublicadoDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+
+    <!-- OdePublicado Entity Proxy with inner OdePublicado Entity implementation -->
+    <bean id="comentarioDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.auditoria.negocio.dominio.ComentarioDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.auditoria.negocio.dominio.ComentarioDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+
+
     <!-- ========================= Start of SERVICE DEFINITIONS ========================= -->
 
       <!-- Service Transactional Interceptor -->
@@ -166,7 +206,9 @@
                 <property name="busquedaDao"><ref bean="busquedaDao"/></property>
                 <property name="operacionDao"><ref bean="operacionDao"/></property>
 		<property name="valoracionDao"><ref bean="valoracionDao"/></property>
-									            </bean>
+                <property name="odePublicadoDao"><ref bean="odePublicadoDao"/></property>
+                <property name="comentarioDao"><ref bean="comentarioDao"/></property>
+	     </bean>
         </property>
         <property name="proxyInterfaces">
             <value>es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio</value>

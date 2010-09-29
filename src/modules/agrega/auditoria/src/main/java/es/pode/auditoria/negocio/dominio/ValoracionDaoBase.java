@@ -279,6 +279,37 @@ public abstract class ValoracionDaoBase
         this.getHibernateTemplate().deleteAll(entities);
     }
 
+
+
+    /**
+     * TODO: document it
+     * @param fechaIni
+     * @param fechaFin
+     * @return
+     */
+    public Long totalValoracionesBetweenDates(java.util.Calendar fechaIni, java.util.Calendar fechaFin ){
+        try
+        {
+            org.hibernate.Query queryObject = super.getSession(false).createQuery(
+            "select count(*) from ValoracionImpl as val where :fechaFin>=val.fecha AND :fechaIni<=val.fecha"
+            );
+            queryObject.setParameter("fechaIni", fechaIni);
+            queryObject.setParameter("fechaFin", fechaFin);
+            java.util.List results = queryObject.list();
+            return (Long)results.get(0);
+
+        }
+        catch (org.hibernate.HibernateException ex)
+        {
+            throw super.convertHibernateAccessException(ex);
+        }
+
+
+
+    }
+
+
+
     /**
      * @see es.pode.auditoria.negocio.dominio.Valoracion#buscarValoracionesPorCriterioODE(es.pode.auditoria.negocio.dominio.IdODEFechaCriteria)
      */
@@ -286,6 +317,11 @@ public abstract class ValoracionDaoBase
     {
         return this.buscarValoracionesPorCriterioODE(TRANSFORM_NONE, criterio);
     }
+
+
+
+
+
 
     /**
      * @see es.pode.auditoria.negocio.dominio.Valoracion#buscarValoracionesPorCriterioODE(int, java.lang.String, es.pode.auditoria.negocio.dominio.IdODEFechaCriteria)

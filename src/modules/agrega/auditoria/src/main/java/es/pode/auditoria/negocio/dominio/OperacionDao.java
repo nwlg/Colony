@@ -225,6 +225,16 @@ public interface OperacionDao
      */
     public void remove(java.util.Collection entities);
 
+    /**
+     * TODO: document it
+     * @param transform
+     * @param fechaDesde
+     * @param fechaHasta
+     * @param operacion
+     * @return
+     */
+    public Long obtenerNumOperacionesDesdeHastaLike(final java.util.Calendar fechaDesde, final java.util.Calendar fechaHasta, final java.lang.String operacionLike);
+
     public java.lang.Long obtenerNumOperacionesDesdeHasta(java.util.Calendar fechaDesde, java.util.Calendar fechaHasta, java.lang.String operacion);
 
     /**
