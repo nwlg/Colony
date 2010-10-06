@@ -1,35 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.15" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 2.2.1.r22a_v20071101 Build &lt;2.2.1.v20071101-1439></property>
-    <property name="units">in</property>
-    <property name="includeResource">birt-application-resources</property>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.21" id="1">
     <property name="comments">Copyright (c) 2007 &lt;&lt;Your Company Name here>></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 2.6.0.v20100531 Build &lt;2.6.0.v20100609-1613></property>
     <html-property name="description">Creates a listing report with fields from the data source.</html-property>
+    <simple-property-list name="includeResource">
+        <value>birt-application-resources</value>
+    </simple-property-list>
+    <property name="units">in</property>
     <text-property name="displayName">Simple Listing</text-property>
     <property name="iconFile">/templates/simple_listing.gif</property>
     <property name="cheatSheet">org.eclipse.birt.report.designer.ui.cheatsheet.simplelisting</property>
     <property name="layoutPreference">auto layout</property>
     <parameters>
         <scalar-parameter name="RP_fechaDesde" id="52">
+            <text-property name="promptText">fechaDesde</text-property>
             <property name="valueType">static</property>
             <property name="dataType">string</property>
-            <property name="paramType">simple</property>
-            <text-property name="promptText">fechaDesde</text-property>
-            <property name="controlType">text-box</property>
-            <property name="defaultValue">01/12/2007</property>
             <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">01/12/2007</value>
+            </simple-property-list>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
             <structure name="format">
                 <property name="category">Unformatted</property>
             </structure>
         </scalar-parameter>
         <scalar-parameter name="RP_fechaHasta" id="53">
+            <text-property name="promptText">fechaHasta</text-property>
             <property name="valueType">static</property>
             <property name="dataType">string</property>
-            <property name="paramType">simple</property>
-            <text-property name="promptText">fechaHasta</text-property>
-            <property name="controlType">text-box</property>
-            <property name="defaultValue">31/12/2007</property>
             <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">31/12/2007</value>
+            </simple-property-list>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
             <structure name="format">
                 <property name="category">Unformatted</property>
             </structure>
@@ -37,10 +43,12 @@
         <scalar-parameter name="RP_Idioma" id="127">
             <property name="valueType">static</property>
             <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">es</value>
+            </simple-property-list>
             <property name="paramType">simple</property>
             <property name="controlType">text-box</property>
-            <property name="defaultValue">es</property>
-            <property name="distinct">true</property>
             <structure name="format">
                 <property name="category">Unformatted</property>
             </structure>
@@ -48,9 +56,9 @@
         <scalar-parameter name="RP_rangoFechas" id="175">
             <property name="valueType">static</property>
             <property name="dataType">string</property>
+            <property name="distinct">true</property>
             <property name="paramType">simple</property>
             <property name="controlType">text-box</property>
-            <property name="distinct">true</property>
             <structure name="format">
                 <property name="category">Unformatted</property>
             </structure>
@@ -71,21 +79,6 @@
     </data-sources>
     <data-sets>
         <oda-data-set extensionID="org.eclipse.datatools.enablement.oda.ws.dataSet" name="estadoFinalDataSet" id="126">
-            <structure name="cachedMetaData">
-                <list-property name="resultSet">
-                    <structure>
-                        <property name="position">1</property>
-                        <property name="name">estadoFinal</property>
-                        <property name="dataType">any</property>
-                    </structure>
-                    <structure>
-                        <property name="position">2</property>
-                        <property name="name">cantidad</property>
-                        <property name="dataType">any</property>
-                    </structure>
-                </list-property>
-            </structure>
-            <property name="dataSource">estadoOdesDataSource</property>
             <list-property name="parameters">
                 <structure>
                     <property name="name">fechaDesde</property>
@@ -124,6 +117,21 @@
                     <property name="isOutput">false</property>
                 </structure>
             </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">estadoFinal</property>
+                        <property name="dataType">any</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">cantidad</property>
+                        <property name="dataType">any</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">estadoOdesDataSource</property>
             <list-property name="resultSet">
                 <structure>
                     <property name="position">1</property>
@@ -140,26 +148,26 @@
                     <property name="nativeDataType">12</property>
                 </structure>
             </list-property>
-            <property name="queryText">&lt;?xml version="1.0"?>
-&lt;SOAP-ENV:Envelope
+            <xml-property name="queryText"><![CDATA[<?xml version="1.0"?>
+<SOAP-ENV:Envelope
 xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
 xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	&lt;SOAP-ENV:Body>
-		&lt;m:informeEstadoOdes xmlns:m="http://servicios.negocio.auditoria.pode.es">
-			&lt;m:parametrosInformeVO>
-				&lt;m:fechaDesde>&amp;?fechaDesde?&amp;&lt;/m:fechaDesde>
-				&lt;m:fechaHasta>&amp;?fechaHasta?&amp;&lt;/m:fechaHasta>
-				&lt;m:idioma xsi:type="xsd:string">&amp;?idioma?&amp;&lt;/m:idioma>
-				&lt;m:idNodo>
-				&lt;/m:idNodo>
-				&lt;m:idLicencia>
-				&lt;/m:idLicencia>
-			&lt;/m:parametrosInformeVO>
-		&lt;/m:informeEstadoOdes>
-	&lt;/SOAP-ENV:Body>
-&lt;/SOAP-ENV:Envelope></property>
+	<SOAP-ENV:Body>
+		<m:informeEstadoOdes xmlns:m="http://servicios.negocio.auditoria.pode.es">
+			<m:parametrosInformeVO>
+				<m:fechaDesde>&amp;?fechaDesde?&amp;</m:fechaDesde>
+				<m:fechaHasta>&amp;?fechaHasta?&amp;</m:fechaHasta>
+				<m:idioma xsi:type="xsd:string">&amp;?idioma?&amp;</m:idioma>
+				<m:idNodo>
+				</m:idNodo>
+				<m:idLicencia>
+				</m:idLicencia>
+			</m:parametrosInformeVO>
+		</m:informeEstadoOdes>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>]]></xml-property>
             <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
   <Version>1.0</Version>
@@ -276,21 +284,6 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
             </list-property>
         </oda-data-set>
         <oda-data-set extensionID="org.eclipse.datatools.enablement.oda.ws.dataSet" name="estadoTransitadoDataSet" id="149">
-            <structure name="cachedMetaData">
-                <list-property name="resultSet">
-                    <structure>
-                        <property name="position">1</property>
-                        <property name="name">estadoTransicion</property>
-                        <property name="dataType">any</property>
-                    </structure>
-                    <structure>
-                        <property name="position">2</property>
-                        <property name="name">cantidad</property>
-                        <property name="dataType">any</property>
-                    </structure>
-                </list-property>
-            </structure>
-            <property name="dataSource">estadoOdesDataSource</property>
             <list-property name="parameters">
                 <structure>
                     <property name="name">fechaDesde</property>
@@ -329,6 +322,21 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
                     <property name="isOutput">false</property>
                 </structure>
             </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">estadoTransicion</property>
+                        <property name="dataType">any</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">cantidad</property>
+                        <property name="dataType">any</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">estadoOdesDataSource</property>
             <list-property name="resultSet">
                 <structure>
                     <property name="position">1</property>
@@ -345,26 +353,26 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
                     <property name="nativeDataType">12</property>
                 </structure>
             </list-property>
-            <property name="queryText">&lt;?xml version="1.0"?>
-&lt;SOAP-ENV:Envelope
+            <xml-property name="queryText"><![CDATA[<?xml version="1.0"?>
+<SOAP-ENV:Envelope
 xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
 xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	&lt;SOAP-ENV:Body>
-		&lt;m:informeEstadoOdesTransicciones xmlns:m="http://servicios.negocio.auditoria.pode.es">
-			&lt;m:parametrosInformeVO>
-				&lt;m:fechaDesde>&amp;?fechaDesde?&amp;&lt;/m:fechaDesde>
-				&lt;m:fechaHasta>&amp;?fechaHasta?&amp;&lt;/m:fechaHasta>
-				&lt;m:idioma xsi:type="xsd:string">&amp;?idioma?&amp;&lt;/m:idioma>
-				&lt;m:idNodo>
-				&lt;/m:idNodo>
-				&lt;m:idLicencia>
-				&lt;/m:idLicencia>
-			&lt;/m:parametrosInformeVO>
-		&lt;/m:informeEstadoOdesTransicciones>
-	&lt;/SOAP-ENV:Body>
-&lt;/SOAP-ENV:Envelope></property>
+	<SOAP-ENV:Body>
+		<m:informeEstadoOdesTransicciones xmlns:m="http://servicios.negocio.auditoria.pode.es">
+			<m:parametrosInformeVO>
+				<m:fechaDesde>&amp;?fechaDesde?&amp;</m:fechaDesde>
+				<m:fechaHasta>&amp;?fechaHasta?&amp;</m:fechaHasta>
+				<m:idioma xsi:type="xsd:string">&amp;?idioma?&amp;</m:idioma>
+				<m:idNodo>
+				</m:idNodo>
+				<m:idLicencia>
+				</m:idLicencia>
+			</m:parametrosInformeVO>
+		</m:informeEstadoOdesTransicciones>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>]]></xml-property>
             <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
   <Version>1.0</Version>
@@ -526,7 +534,9 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     </styles>
     <page-setup>
         <simple-master-page name="Simple MasterPage" id="2">
+            <property name="topMargin">1in</property>
             <property name="leftMargin">1mm</property>
+            <property name="bottomMargin">1in</property>
             <property name="rightMargin">1mm</property>
         </simple-master-page>
     </page-setup>
@@ -674,11 +684,12 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
                 </structure>
                 <structure>
                     <property name="name">porcen</property>
-                    <property name="displayName">porcen</property>
+                    <text-property name="displayName">porcen</text-property>
                     <expression name="expression">Finance.percent(Total.sum(row["cantidad"]),row["cantidad"],0)</expression>
                     <property name="dataType">float</property>
                 </structure>
             </list-property>
+            <property name="pageBreakInterval">50</property>
             <column id="200"/>
             <column id="202"/>
             <column id="204"/>
@@ -692,6 +703,7 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
                     <property name="verticalAlign">middle</property>
                     <cell id="183">
                         <property name="backgroundColor">#EBF2F8</property>
+                        <property name="fontSize">medium</property>
                         <text id="211">
                             <property name="backgroundColor">#EBF2F8</property>
                             <property name="fontFamily">"Verdana"</property>
@@ -704,6 +716,7 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
                     </cell>
                     <cell id="185">
                         <property name="backgroundColor">#EBF2F8</property>
+                        <property name="fontSize">medium</property>
                         <text id="212">
                             <property name="backgroundColor">#EBF2F8</property>
                             <property name="fontFamily">"Verdana"</property>
@@ -716,6 +729,7 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
                     </cell>
                     <cell id="187">
                         <property name="backgroundColor">#EBF2F8</property>
+                        <property name="fontSize">medium</property>
                         <text id="209">
                             <property name="backgroundColor">#EBF2F8</property>
                             <property name="fontFamily">"Verdana"</property>
@@ -735,10 +749,13 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
                             <property name="operator">eq</property>
                             <property name="backgroundColor">#EFEFEF</property>
                             <expression name="testExpr">row[0]%2</expression>
-                            <expression name="value1">0</expression>
+                            <simple-property-list name="value1">
+                                <value>0</value>
+                            </simple-property-list>
                         </structure>
                     </list-property>
                     <cell id="189">
+                        <property name="fontSize">medium</property>
                         <data id="206">
                             <property name="fontFamily">"Verdana"</property>
                             <property name="fontSize">10px</property>
@@ -750,6 +767,7 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
                         </data>
                     </cell>
                     <cell id="191">
+                        <property name="fontSize">medium</property>
                         <data id="208">
                             <property name="fontFamily">"Verdana"</property>
                             <property name="fontSize">10px</property>
@@ -758,6 +776,7 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
                         </data>
                     </cell>
                     <cell id="193">
+                        <property name="fontSize">medium</property>
                         <data id="214">
                             <property name="fontFamily">"Verdana"</property>
                             <property name="fontSize">10px</property>
@@ -774,9 +793,15 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
             </detail>
             <footer>
                 <row id="194">
-                    <cell id="195"/>
-                    <cell id="197"/>
-                    <cell id="199"/>
+                    <cell id="195">
+                        <property name="fontSize">medium</property>
+                    </cell>
+                    <cell id="197">
+                        <property name="fontSize">medium</property>
+                    </cell>
+                    <cell id="199">
+                        <property name="fontSize">medium</property>
+                    </cell>
                 </row>
             </footer>
         </table>
@@ -832,11 +857,12 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
                 </structure>
                 <structure>
                     <property name="name">porce</property>
-                    <property name="displayName">porcen</property>
+                    <text-property name="displayName">porcen</text-property>
                     <expression name="expression">Finance.percent(Total.sum(row["cantidad"]),row["cantidad"],0)</expression>
                     <property name="dataType">float</property>
                 </structure>
             </list-property>
+            <property name="pageBreakInterval">50</property>
             <column id="234"/>
             <column id="236"/>
             <column id="238"/>
@@ -893,7 +919,9 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
                             <property name="operator">eq</property>
                             <property name="backgroundColor">#EFEFEF</property>
                             <expression name="testExpr">row[0]%2</expression>
-                            <expression name="value1">0</expression>
+                            <simple-property-list name="value1">
+                                <value>0</value>
+                            </simple-property-list>
                         </structure>
                     </list-property>
                     <cell id="223">
@@ -1168,8 +1196,8 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <Bounds>
       <Left>0.0</Left>
       <Top>0.0</Top>
-      <Width>430.7027027027027</Width>
-      <Height>202.3783783783784</Height>
+      <Width>431.28000000000003</Width>
+      <Height>202.464</Height>
     </Bounds>
     <Insets>
       <Top>3.0</Top>
@@ -1211,6 +1239,37 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <Enable>true</Enable>
     <LegendBehavior>None</LegendBehavior>
   </Interactivity>
+  <EmptyMessage>
+    <Caption>
+      <Value></Value>
+      <Font>
+        <Alignment/>
+      </Font>
+    </Caption>
+    <Background xsi:type="attribute:ColorDefinition">
+      <Transparency>0</Transparency>
+      <Red>255</Red>
+      <Green>255</Green>
+      <Blue>255</Blue>
+    </Background>
+    <Outline>
+      <Style>Solid</Style>
+      <Thickness>1</Thickness>
+      <Color>
+        <Transparency>255</Transparency>
+        <Red>0</Red>
+        <Green>0</Green>
+        <Blue>0</Blue>
+      </Color>
+    </Outline>
+    <Insets>
+      <Top>0.0</Top>
+      <Left>2.0</Left>
+      <Bottom>0.0</Bottom>
+      <Right>3.0</Right>
+    </Insets>
+    <Visible>false</Visible>
+  </EmptyMessage>
   <SeriesDefinitions>
     <Query>
       <Definition></Definition>
@@ -1704,7 +1763,7 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
       </Series>
       <Grouping>
         <Enabled>false</Enabled>
-        <GroupingInterval>2</GroupingInterval>
+        <GroupingInterval>2.0</GroupingInterval>
         <GroupType>Text</GroupType>
         <AggregateExpression>Sum</AggregateExpression>
       </Grouping>
@@ -1994,7 +2053,7 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     </Series>
     <Grouping>
       <Enabled>false</Enabled>
-      <GroupingInterval>2</GroupingInterval>
+      <GroupingInterval>2.0</GroupingInterval>
       <GroupType>Text</GroupType>
       <AggregateExpression>Sum</AggregateExpression>
     </Grouping>

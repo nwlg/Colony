@@ -41,8 +41,7 @@
 																	<input type="checkbox" id="${comentario.id}" name="idRowSelectionAsArray" value="${comentario.id}" class="boton_check" />
 					</logic:equal>
 
-					<em>${comentario.usuario}</em>
-
+<%-- <em>${comentario.usuario}</em> --%>
 					<strong><fmt:formatDate value="${comentario.fecha}" pattern="dd/MM/yyyy HH:mm:ss"/>&nbsp;</strong>
 
 					<p>${comentario.comentario}<br /></p>

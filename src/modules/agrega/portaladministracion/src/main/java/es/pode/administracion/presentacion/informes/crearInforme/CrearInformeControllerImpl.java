@@ -75,7 +75,7 @@ public class CrearInformeControllerImpl extends CrearInformeController
 	        	tipoInforme = "fechas";
 	        }else
 	        {
-	        	if(idInforme.equalsIgnoreCase("terminosBusqueda") ||  idInforme.equalsIgnoreCase("masValorado") || idInforme.equalsIgnoreCase("masMostrado") || idInforme.equalsIgnoreCase("masPrevisualizado") || idInforme.equalsIgnoreCase("masVisualizado") || idInforme.equalsIgnoreCase("masDescargado") || idInforme.equalsIgnoreCase("tamanio"))
+	        	if(idInforme.equalsIgnoreCase("mostActiveUsers") || idInforme.equalsIgnoreCase("terminosBusqueda") ||  idInforme.equalsIgnoreCase("masValorado") || idInforme.equalsIgnoreCase("masMostrado") || idInforme.equalsIgnoreCase("masPrevisualizado") || idInforme.equalsIgnoreCase("masVisualizado") || idInforme.equalsIgnoreCase("masDescargado") || idInforme.equalsIgnoreCase("tamanio"))
 	        	{
 	        		if(log.isDebugEnabled())log.debug("cargo informe con rango");
 	        		tipoInforme = "rango";
@@ -713,8 +713,9 @@ public class CrearInformeControllerImpl extends CrearInformeController
     	
 		List usuariosList = Arrays.asList(this.getSrvAdminUsuariosService().listarTodosUsuarios());
 		if(log.isDebugEnabled())log.debug("se recogen los usuarios de la aplicacion, estos son: " + usuariosList);
-		// Rellena el combo de usuarios
-		form.setUsuariosBackingList(usuariosList, "usuario", "usuario");
+		// 04/10/2010   Fernando Garcia
+                //              now you can personalize the user fields that will appear in combos (, is the separator character)
+		form.setUsuariosBackingList(usuariosList, "usuario", "nombre,apellido1,email");
     	
     }
          

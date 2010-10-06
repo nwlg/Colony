@@ -37,7 +37,7 @@
 				<!--		Columna de Informes		-->
 										
 				<display:column sortable="true" sortProperty="nombre" style="valign:top;" class="tar">
-					<a href="../../${form.pathInformes}${fila.nombre}" id="informe" target="blank">${fila.nombre}
+					<a style="text-decoration:none;color:#585858;font-size:90%;" href="../../${form.pathInformes}${fila.nombre}" id="informe" target="blank">${fila.nombre}
 					</a>
 				</display:column>
 				

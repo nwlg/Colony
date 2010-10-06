@@ -51,7 +51,7 @@
 			<logic:iterate name="form" property="comentarios" id="comentario">						
 														<div class="comment_list">
 			<div>
-															<label for="Comen01" class="etiq_invisible" ><bean:message key="introducir.comentarios.ode.seleccione"/></label>									<em>${comentario.usuario}</em>								<strong><fmt:formatDate value="${comentario.fecha}" pattern="dd/MM/yyyy HH:mm:ss"/>&nbsp;</strong>										<p>${comentario.comentario}<br /></p>
+															<label for="Comen01" class="etiq_invisible" ><bean:message key="introducir.comentarios.ode.seleccione"/></label>									<%-- <em>${comentario.usuario}</em>	--%>							<strong><fmt:formatDate value="${comentario.fecha}" pattern="dd/MM/yyyy HH:mm:ss"/>&nbsp;</strong>										<p>${comentario.comentario}<br /></p>
 			</div>
 			</div>
 														</logic:iterate>

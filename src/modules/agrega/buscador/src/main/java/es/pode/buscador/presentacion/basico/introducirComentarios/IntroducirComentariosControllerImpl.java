@@ -90,8 +90,8 @@ public class IntroducirComentariosControllerImpl extends IntroducirComentariosCo
 	        Comentario_VO_date[] comentariosDate= new Comentario_VO_date[0];
 	        ComentarioVO[] comentarios = null;
 	        try {
-	        	comentarios= this.getSrvValoracionService().obtenerComentarios(idODE);
-	        	
+                        comentarios= this.getSrvValoracionService().obtenerComentarios(idODE);
+
 	        	//Se comprueba el numero de comentarios
 	        	if(comentarios!=null && comentarios.length>0)
 	        		form.setListaVacia(new Boolean(false));

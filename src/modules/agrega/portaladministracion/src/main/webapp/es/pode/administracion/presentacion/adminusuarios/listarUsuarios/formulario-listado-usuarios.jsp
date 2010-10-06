@@ -88,11 +88,19 @@
 					<bean:define id="usuarioValue"><b><bean:message key="usuarios.cabecera"/></b></bean:define>
 					<display:column media="html" sortable="true" sortProperty="usuario" style="valign:top;" class="tar" title="${usuarioValue}">
 						<html:link action="/ListarUsuarios/FormularioListadoUsuariosVerUsuario?id=${fila.id}">
-							${fila.usuario}
+                                                         ${fila.nombre} ${fila.apellido1}
 						</html:link>	
 					</display:column>
 					
-					
+                                        <!--		Email column 	(html)	-->
+					<display:column media="html" sortable="true" sortProperty="usuario" style="valign:top;" class="tar" title="${usuarioValue}">
+						<html:link action="/ListarUsuarios/FormularioListadoUsuariosVerUsuario?id=${fila.id}">
+							${fila.email}
+						</html:link>
+					</display:column>
+
+
+
 					<!--		Columna de Modificar	(html)	-->
 					
 					<display:column media="html" style="valign:top;"> 

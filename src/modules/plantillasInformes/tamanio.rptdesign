@@ -37,7 +37,7 @@
         </scalar-parameter>
         <scalar-parameter name="RP_Rango" id="144">
             <property name="valueType">static</property>
-            <property name="dataType">string</property>
+            <property name="dataType">integer</property>
             <property name="paramType">simple</property>
             <property name="controlType">text-box</property>
             <property name="defaultValue">5</property>
@@ -90,12 +90,12 @@
                     <structure>
                         <property name="position">1</property>
                         <property name="name">tituloOde</property>
-                        <property name="dataType">any</property>
+                        <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">2</property>
                         <property name="name">tamanio</property>
-                        <property name="dataType">any</property>
+                        <property name="dataType">string</property>
                     </structure>
                 </list-property>
             </structure>
@@ -129,7 +129,7 @@
                     <property name="name">rango</property>
                     <property name="paramName">RP_Rango</property>
                     <property name="nativeName">rango</property>
-                    <property name="dataType">string</property>
+                    <property name="dataType">integer</property>
                     <property name="nativeDataType">1</property>
                     <property name="position">3</property>
                     <expression name="defaultValue">'5'</expression>
@@ -143,14 +143,14 @@
                     <property name="position">1</property>
                     <property name="name">tituloOde</property>
                     <property name="nativeName">tituloOde</property>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
                     <property name="position">2</property>
                     <property name="name">tamanio</property>
                     <property name="nativeName">tamanio</property>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
             </list-property>
@@ -299,22 +299,22 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
                     <structure>
                         <property name="position">1</property>
                         <property name="name">idODE</property>
-                        <property name="dataType">any</property>
+                        <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">2</property>
                         <property name="name">idioma</property>
-                        <property name="dataType">any</property>
+                        <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">3</property>
                         <property name="name">tamanio</property>
-                        <property name="dataType">any</property>
+                        <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">4</property>
                         <property name="name">tituloOde</property>
-                        <property name="dataType">any</property>
+                        <property name="dataType">string</property>
                     </structure>
                 </list-property>
             </structure>
@@ -348,7 +348,7 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
                     <property name="name">rango</property>
                     <property name="paramName">RP_Rango</property>
                     <property name="nativeName">rango</property>
-                    <property name="dataType">string</property>
+                    <property name="dataType">integer</property>
                     <property name="nativeDataType">1</property>
                     <property name="position">3</property>
                     <expression name="defaultValue">'10'</expression>
@@ -362,28 +362,28 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
                     <property name="position">1</property>
                     <property name="name">idODE</property>
                     <property name="nativeName">idODE</property>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
                     <property name="position">2</property>
                     <property name="name">idioma</property>
                     <property name="nativeName">idioma</property>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
                     <property name="position">3</property>
                     <property name="name">tamanio</property>
                     <property name="nativeName">tamanio</property>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
                     <property name="position">4</property>
                     <property name="name">tituloOde</property>
                     <property name="nativeName">tituloOde</property>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
             </list-property>
@@ -729,22 +729,22 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
                 <structure>
                     <property name="name">idODE</property>
                     <expression name="expression">dataSetRow["idODE"]</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">idioma</property>
                     <expression name="expression">dataSetRow["idioma"]</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">tamanio</property>
                     <expression name="expression">dataSetRow["tamanio"]</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">tituloOde</property>
                     <expression name="expression">dataSetRow["tituloOde"]</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
             </list-property>
             <column id="195">

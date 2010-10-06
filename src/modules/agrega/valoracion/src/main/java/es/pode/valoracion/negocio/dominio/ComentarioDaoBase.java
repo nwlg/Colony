@@ -5,6 +5,9 @@
 //
 package es.pode.valoracion.negocio.dominio;
 
+import es.pode.valoracion.negocio.servicios.ComentarioVO;
+import java.util.ArrayList;
+import java.util.Iterator;
 import net.sf.dozer.util.mapping.MapperIF;
 
 /**
@@ -281,27 +284,32 @@ public abstract class ComentarioDaoBase
     {
         try
         {
-            es.pode.CriteriaSearch criteriaSearch = new es.pode.CriteriaSearch(super.getSession(false), es.pode.valoracion.negocio.dominio.ComentarioImpl.class);
-            criteriaSearch.getConfiguration().setFirstResult(criterio.getFirstResult());
-            criteriaSearch.getConfiguration().setFetchSize(criterio.getFetchSize());
-            criteriaSearch.getConfiguration().setMaximumResultSize(criterio.getMaximumResultSize());
-						            es.pode.CriteriaSearchParameter parameter1 =
-                new es.pode.CriteriaSearchParameter(
-                    criterio.getIdODE(),
-                    "idODE", es.pode.CriteriaSearchParameter.EQUAL_COMPARATOR);
-            criteriaSearch.addParameter(parameter1);
-						            es.pode.CriteriaSearchParameter parameter2 =
-                new es.pode.CriteriaSearchParameter(
-                    criterio.getFecha(),
-                    "fecha");
-            parameter2.setOrderDirection(es.pode.CriteriaSearchParameter.ORDER_ASC);
-            parameter2.setOrderRelevance(1);
-            criteriaSearch.addParameter(parameter2);
-            // Call this method to include any modification to the criteria, default implementation is void.
-            criteriaSearch = modifybuscarComentariosPorCriterioODE(criteriaSearch);
-            java.util.List results = criteriaSearch.executeAsList();
-            transformEntities(transform, results);
-            return results;
+            // 05/10/2010   Fernando Garcia
+            //  now your get name and surname like part of the comment
+            //  I am trying that this will be compatible with all calls to this service
+            String queryString =
+                "select usuario.nombre||' '||usuario.apellido1, comentario.id, comentario.fecha ,comentario.idODE ,comentario.usuario ,comentario.comentario  from es.pode.valoracion.negocio.dominio.Comentario as comentario, es.pode.valoracion.negocio.dominio.Usuario as usuario where " +
+                " comentario.idODE = :idODE and usuario.usuario = comentario.usuario order by comentario.fecha desc  ";
+
+
+            org.hibernate.Query queryObject = super.getSession(false).createQuery(queryString);
+            queryObject.setParameter("idODE", criterio.getIdODE());
+
+            java.util.List result = queryObject.list();
+
+            ArrayList<ComentarioVO> listComments = new ArrayList<ComentarioVO>(result.size());
+
+            Iterator itResult = result.iterator();
+            while (itResult.hasNext()) {
+                Object[] comment = (Object[])itResult.next();
+                listComments.add(new ComentarioVO(comment[0] + ": " + comment[5], (java.util.Calendar)comment[2],
+                        ""+ comment[3] ,(Long)comment[1] ,"" + comment[4]));
+
+            }
+
+            return listComments;
+
+            
         }
         catch (org.hibernate.HibernateException ex)
         {

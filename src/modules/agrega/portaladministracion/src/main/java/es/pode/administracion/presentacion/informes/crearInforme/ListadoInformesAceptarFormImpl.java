@@ -1,6 +1,8 @@
 // license-header java merge-point
 package es.pode.administracion.presentacion.informes.crearInforme;
 
+import java.util.StringTokenizer;
+
 public class ListadoInformesAceptarFormImpl
     extends org.apache.struts.validator.ValidatorForm
     implements java.io.Serializable
@@ -1009,11 +1011,31 @@ public class ListadoInformesAceptarFormImpl
         this.usuariosLabelList = usuariosLabelList;
     }
 
+
+    // 04/10/2010   Fernando Garcia
+    //              We don't want to show the userids in the combos. Now it will be more flexible.
+    //              labelProperty will be tokenized by ',' and the label will be a new compound string will all the values
+    //
+    
+    /**
+     *
+     * @param items
+     * @param valueProperty
+     * @param labelProperty
+     */
     public void setUsuariosBackingList(java.util.Collection items, java.lang.String valueProperty, java.lang.String labelProperty)
     {
         if (valueProperty == null || labelProperty == null)
         {
             throw new IllegalArgumentException("ListadoInformesAceptarFormImpl.setUsuariosBackingList requires non-null property arguments");
+        }
+
+
+        StringTokenizer strTnk = new StringTokenizer(labelProperty,",");
+        String[] labels = new String[strTnk.countTokens()];
+        int i=0;
+        while (strTnk.hasMoreTokens()){
+            labels[i++]=strTnk.nextToken();
         }
 
         this.usuariosValueList = null;
@@ -1026,13 +1048,21 @@ public class ListadoInformesAceptarFormImpl
 
             try
             {
-                int i = 0;
+                i = 0;
                 for (java.util.Iterator iterator = items.iterator(); iterator.hasNext(); i++)
                 {
                     final java.lang.Object item = iterator.next();
 
                     this.usuariosValueList[i] = org.apache.commons.beanutils.PropertyUtils.getProperty(item, valueProperty);
-                    this.usuariosLabelList[i] = org.apache.commons.beanutils.PropertyUtils.getProperty(item, labelProperty);
+                    /* 
+                     * Changing labels
+                     */
+                    String labelValue = "";
+                    for (int j=0; j<labels.length;j++){
+                        labelValue = labelValue + org.apache.commons.beanutils.PropertyUtils.getProperty(item, labels[j]) + " ";
+                    }
+
+                    this.usuariosLabelList[i] = labelValue.trim();
                 }
             }
             catch (Exception ex)

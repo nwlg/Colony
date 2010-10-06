@@ -30,6 +30,8 @@
                 <value>es/pode/auditoria/negocio/dominio/OdePublicado.hbm.xml</value>
                 <value>es/pode/auditoria/negocio/dominio/Valoracion.hbm.xml</value>
                 <value>es/pode/auditoria/negocio/dominio/Comentario.hbm.xml</value>
+                <value>es/pode/auditoria/negocio/dominio/Localizador.hbm.xml</value>
+                <value>es/pode/auditoria/negocio/dominio/Usuario.hbm.xml</value>
             </list>
         </property>
         <property name="hibernateProperties">
@@ -141,6 +143,46 @@
 
 
 
+    <!-- Localizador Entity Proxy with inner Localizador Entity implementation -->
+    <bean id="localizadorDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.auditoria.negocio.dominio.LocalizadorDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.auditoria.negocio.dominio.LocalizadorDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+
+
+    <!-- Usuario Entity Proxy with inner Usuario Entity implementation -->
+    <bean id="usuarioDao" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target">
+            <bean class="es.pode.auditoria.negocio.dominio.UsuarioDaoImpl">
+                <property name="sessionFactory"><ref local="sessionFactory"/></property>
+                <property name="beanMapper"><ref bean="beanMapper"/></property>
+            </bean>
+        </property>
+        <property name="proxyInterfaces">
+            <value>es.pode.auditoria.negocio.dominio.UsuarioDao</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>hibernateInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+
+
     <!-- ========================= Start of SERVICE DEFINITIONS ========================= -->
 
       <!-- Service Transactional Interceptor -->
@@ -164,6 +206,7 @@
                 es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeLicenciasOdes=PROPAGATION_REQUIRED
                 es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeUsuarios=PROPAGATION_REQUIRED
                 es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.reportSiteWideActivity=PROPAGATION_REQUIRED
+                es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.mostActiveUsers=PROPAGATION_REQUIRED
                 es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeProcesosPlanificados=PROPAGATION_REQUIRED
                 es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeMasValorado=PROPAGATION_REQUIRED
                 es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.informeMasMostrado=PROPAGATION_REQUIRED
@@ -208,6 +251,9 @@
 		<property name="valoracionDao"><ref bean="valoracionDao"/></property>
                 <property name="odePublicadoDao"><ref bean="odePublicadoDao"/></property>
                 <property name="comentarioDao"><ref bean="comentarioDao"/></property>
+<!--                <property name="localizadorDao"><ref bean="localizadorDao"/></property>
+                <property name="usuarioDao"><ref bean="usuarioDao"/></property>
+-->
 	     </bean>
         </property>
         <property name="proxyInterfaces">

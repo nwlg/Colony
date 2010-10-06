@@ -27,6 +27,7 @@
             <list>
                 <value>es/pode/valoracion/negocio/dominio/Comentario.hbm.xml</value>
                 <value>es/pode/valoracion/negocio/dominio/Valoracion.hbm.xml</value>
+                <value>es/pode/valoracion/negocio/dominio/Usuario.hbm.xml</value>
                 <value>es/pode/tagging/negocio/dominio/Tagging.hbm.xml</value>
             </list>
         </property>

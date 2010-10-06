@@ -226,7 +226,7 @@
             
         </documentation>
         <namespace>http://es.pode.auditoria.negocio.servicios</namespace>
-        <parameter name="allowedMethods" value="crearGuardarInforme crearGuardarInformeFederado crearInforme crearInformeRepositorio crearInformesPortada informeCoberturaCurricular informeEstadoOdes informeEstadoOdesTransicciones informeLicenciasOdes informeMasDescargados informeMasEnviado informeMasMostrado informeMasPesados informeMasPrevisualizados informeMasValorado informeMasVisualizados informeNivelAgregacion informeOdeUsuario informeOdeUsuarioPLUS informeOdeUsuarioOperacion informeOperacionesRealizadas informeOperacionUsuario informeProcesosPlanificados informeTerminosBusqueda informeUsuarios reportSiteWideActivity obtenerInformes obtenNumeroOperaciones registrarBusqueda registrarOperacion registrarTrabajoFechaFinPlan registrarTrabajoHijoPlan registrarTrabajoInterrPlan registrarTrabajoPlan repositorio"/>
+        <parameter name="allowedMethods" value="crearGuardarInforme crearGuardarInformeFederado crearInforme crearInformeRepositorio crearInformesPortada informeCoberturaCurricular informeEstadoOdes informeEstadoOdesTransicciones informeLicenciasOdes informeMasDescargados informeMasEnviado informeMasMostrado informeMasPesados informeMasPrevisualizados informeMasValorado informeMasVisualizados informeNivelAgregacion informeOdeUsuario informeOdeUsuarioPLUS informeOdeUsuarioOperacion informeOperacionesRealizadas informeOperacionUsuario informeProcesosPlanificados informeTerminosBusqueda informeUsuarios mostActiveUsers reportSiteWideActivity obtenerInformes obtenNumeroOperaciones registrarBusqueda registrarOperacion registrarTrabajoFechaFinPlan registrarTrabajoHijoPlan registrarTrabajoInterrPlan registrarTrabajoPlan repositorio"/>
         <parameter name="className" value="es.pode.auditoria.negocio.servicios.SrvAuditoriaServicioWSDelegator" />
         <operation name="crearGuardarInforme">
             <parameter name="parametroCrearInformeVO"/>
@@ -302,6 +302,9 @@
             <parameter name="parametroInformeVO"/>
         </operation>
         <operation name="reportSiteWideActivity">
+            <parameter name="parametroInformeVO"/>
+        </operation>
+        <operation name="mostActiveUsers">
             <parameter name="parametroInformeVO"/>
         </operation>
         <operation name="obtenerInformes">
@@ -648,6 +651,18 @@
             </documentation>
         </typeMapping>
         <typeMapping
+            type="java:es.pode.auditoria.negocio.servicios.InformeUsuariosVO[]"
+            xmlns:ns27="http://es.pode.auditoria.negocio.servicios"
+            qname="ns27:ArrayOfInformeUsuariosVO"
+            serializer="org.apache.axis.encoding.ser.ArraySerializerFactory"
+            deserializer="org.apache.axis.encoding.ser.ArrayDeserializerFactory"
+            encodingStyle="">
+            <documentation>
+            
+            </documentation>
+        </typeMapping>
+
+        <typeMapping
             type="java:es.pode.auditoria.negocio.servicios.ReportSiteWideActivityVO"
             xmlns:ns38="http://es.pode.auditoria.negocio.servicios"
             qname="ns38:ReportSiteWideActivityVO"
@@ -659,20 +674,6 @@
             </documentation>
         </typeMapping>
 
-
-
-
-        <typeMapping
-            type="java:es.pode.auditoria.negocio.servicios.InformeUsuariosVO[]"
-            xmlns:ns27="http://es.pode.auditoria.negocio.servicios"
-            qname="ns27:ArrayOfInformeUsuariosVO"
-            serializer="org.apache.axis.encoding.ser.ArraySerializerFactory"
-            deserializer="org.apache.axis.encoding.ser.ArrayDeserializerFactory"
-            encodingStyle="">
-            <documentation>
-            
-            </documentation>
-        </typeMapping>
         <typeMapping
             type="java:es.pode.auditoria.negocio.servicios.ReportSiteWideActivityVO[]"
             xmlns:ns39="http://es.pode.auditoria.negocio.servicios"
@@ -686,6 +687,29 @@
         </typeMapping>
 
 
+        <typeMapping
+            type="java:es.pode.auditoria.negocio.servicios.MostActiveUsersVO"
+            xmlns:ns42="http://es.pode.auditoria.negocio.servicios"
+            qname="ns42:MostActiveUsersVO"
+            serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+            deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+            encodingStyle="">
+            <documentation>
+                TODO:
+            </documentation>
+        </typeMapping>
+
+        <typeMapping
+            type="java:es.pode.auditoria.negocio.servicios.MostActiveUsersVO[]"
+            xmlns:ns43="http://es.pode.auditoria.negocio.servicios"
+            qname="ns43:ArrayOfMostActiveUsersVO"
+            serializer="org.apache.axis.encoding.ser.ArraySerializerFactory"
+            deserializer="org.apache.axis.encoding.ser.ArrayDeserializerFactory"
+            encodingStyle="">
+            <documentation>
+                TODO:
+            </documentation>
+        </typeMapping>
 
 
 

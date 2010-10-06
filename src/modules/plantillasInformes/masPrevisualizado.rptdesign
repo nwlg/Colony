@@ -36,7 +36,7 @@
         </scalar-parameter>
         <scalar-parameter name="RP_Rango" id="144">
             <property name="valueType">static</property>
-            <property name="dataType">string</property>
+            <property name="dataType">integer</property>
             <property name="paramType">simple</property>
             <property name="controlType">text-box</property>
             <property name="defaultValue">10</property>
@@ -88,27 +88,27 @@
                     <structure>
                         <property name="position">1</property>
                         <property name="name">idOde</property>
-                        <property name="dataType">any</property>
+                        <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">2</property>
                         <property name="name">idioma</property>
-                        <property name="dataType">any</property>
+                        <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">3</property>
                         <property name="name">numVeces</property>
-                        <property name="dataType">any</property>
+                        <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">4</property>
                         <property name="name">tituloOde</property>
-                        <property name="dataType">any</property>
+                        <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">5</property>
                         <property name="name">urlImagen</property>
-                        <property name="dataType">any</property>
+                        <property name="dataType">string</property>
                     </structure>
                 </list-property>
             </structure>
@@ -142,7 +142,7 @@
                     <property name="name">rango</property>
                     <property name="paramName">RP_Rango</property>
                     <property name="nativeName">rango</property>
-                    <property name="dataType">string</property>
+                    <property name="dataType">integer</property>
                     <property name="nativeDataType">1</property>
                     <property name="position">3</property>
                     <expression name="defaultValue">'10'</expression>
@@ -156,35 +156,35 @@
                     <property name="position">1</property>
                     <property name="name">idOde</property>
                     <property name="nativeName">idOde</property>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
                     <property name="position">2</property>
                     <property name="name">idioma</property>
                     <property name="nativeName">idioma</property>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
                     <property name="position">3</property>
                     <property name="name">numVeces</property>
                     <property name="nativeName">numVeces</property>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
                     <property name="position">4</property>
                     <property name="name">tituloOde</property>
                     <property name="nativeName">tituloOde</property>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
                     <property name="position">5</property>
                     <property name="name">urlImagen</property>
                     <property name="nativeName">urlImagen</property>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
             </list-property>
@@ -532,27 +532,27 @@ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
                 <structure>
                     <property name="name">idOde</property>
                     <expression name="expression">dataSetRow["idOde"]</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">idioma</property>
                     <expression name="expression">dataSetRow["idioma"]</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">numVeces</property>
                     <expression name="expression">dataSetRow["numVeces"]</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">tituloOde</property>
                     <expression name="expression">dataSetRow["tituloOde"]</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
                     <property name="name">urlImagen</property>
                     <expression name="expression">dataSetRow["urlImagen"]</expression>
-                    <property name="dataType">any</property>
+                    <property name="dataType">string</property>
                 </structure>
             </list-property>
             <column id="329">
