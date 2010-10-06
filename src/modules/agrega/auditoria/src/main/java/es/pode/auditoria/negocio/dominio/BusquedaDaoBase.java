@@ -599,6 +599,51 @@ public abstract class BusquedaDaoBase
         //default mapping between VO and entity
         this.getBeanMapper().map(vo, entity, DEF_MAPPING_BUSQUEDAVO_BUSQUEDA);
     }
-		
-		
+
+
+
+
+    public java.util.List listTopUsersSearching(java.util.Calendar fechaDesde, java.util.Calendar fechaHasta) {
+        logger.info("listTopUsersSearching");
+
+        java.util.List result =  this.listTopUsersSearching(
+                "select nombre||' '||apellido1, count(*) as total, usuario.email from es.pode.auditoria.negocio.dominio.Busqueda as busqueda, es.pode.auditoria.negocio.dominio.Usuario as usuario where " +
+                " usuario.usuario=busqueda.usuario and :fechaHasta>=busqueda.fecha and busqueda.fecha>=:fechaDesde group by nombre||' '||apellido1, usuario.email order by count(*) desc"
+                , fechaDesde, fechaHasta);
+           ///Very weird this ... don't touch, magic
+           java.util.Iterator it = result.iterator();
+            while (it.hasNext()) {
+                Object[] values = (Object[])it.next();
+                logger.debug(">"+values);
+                logger.debug(">>"+values[0]);
+                logger.debug(">>"+values[1]);
+                logger.debug(">>"+values[2]);
+            }
+
+           return result;
+
+    }
+
+
+    public java.util.List listTopUsersSearching(String queryString , java.util.Calendar fechaDesde, java.util.Calendar fechaHasta) {
+        logger.info("listTopUsersSearching(queryString)");
+
+        try
+        {
+            org.hibernate.Query queryObject = super.getSession(false).createQuery(queryString);
+            queryObject.setParameter("fechaDesde", fechaDesde);
+            queryObject.setParameter("fechaHasta", fechaHasta);
+
+            java.util.List result = queryObject.list();
+            return result;
+
+        }
+        catch (org.hibernate.HibernateException ex)
+        {
+            throw super.convertHibernateAccessException(ex);
+        }
+
+
+    }
+
 }

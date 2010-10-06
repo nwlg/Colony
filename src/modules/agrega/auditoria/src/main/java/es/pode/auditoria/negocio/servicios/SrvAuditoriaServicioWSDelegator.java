@@ -141,12 +141,26 @@ public class SrvAuditoriaServicioWSDelegator
         return getSrvAuditoriaServicio().informeUsuarios(parametroInformeVO);
     }
 
-    /////
+    /**
+     * TODO: document it
+     * @param parametroInformeVO
+     * @return
+     */
     public es.pode.auditoria.negocio.servicios.ReportSiteWideActivityVO[] reportSiteWideActivity(es.pode.auditoria.negocio.servicios.ParametrosInformeVO parametroInformeVO)
     {
         return getSrvAuditoriaServicio().reportSiteWideActivity(parametroInformeVO);
     }
 
+
+    /**
+     * TODO: document it
+     * @param parametroInformeVO
+     * @return
+     */
+    public es.pode.auditoria.negocio.servicios.MostActiveUsersVO[] mostActiveUsers(es.pode.auditoria.negocio.servicios.ParametrosInformeVO parametroInformeVO)
+    {
+        return getSrvAuditoriaServicio().mostActiveUsers(parametroInformeVO);
+    }
 
 
 

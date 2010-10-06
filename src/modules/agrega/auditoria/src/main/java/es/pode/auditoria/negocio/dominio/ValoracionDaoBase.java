@@ -715,4 +715,66 @@ public abstract class ValoracionDaoBase
 
     }
 
+
+    /**
+     * TODO: document it
+     * @param fechaDesde
+     * @param fechaHasta
+     * @return
+     */    public java.util.List listTopUsersValoracion(java.util.Calendar fechaDesde, java.util.Calendar fechaHasta) {
+            logger.debug("[listTopUsersValoracion]");
+            
+            java.util.List result = this.listTopUsersValoracion(
+                "select nombre||' '||apellido1, count(*) as total, usuario.email from es.pode.auditoria.negocio.dominio.Valoracion as valoracion, es.pode.auditoria.negocio.dominio.Usuario as usuario where " +
+                " usuario.usuario=valoracion.autor and :fechaHasta>=valoracion.fecha and valoracion.fecha>=:fechaDesde group by nombre||' '||apellido1, usuario.email order by count(*) desc"
+
+                    , fechaDesde, fechaHasta);
+
+               ///Very weird this ... don't touch, magic
+       java.util.Iterator it = result.iterator();
+        while (it.hasNext()) {
+            Object[] values = (Object[])it.next();
+            logger.debug(">"+values);
+            logger.debug(">>"+values[0]);
+            logger.debug(">>"+values[1]);
+            logger.debug(">>"+values[2]);
+        }
+
+
+            return result;
+
+
+    }
+
+
+
+
+    /**
+     * TODO: document it
+     * @param queryString
+     * @param fechaDesde
+     * @param fechaHasta
+     * @return
+     */
+    public java.util.List listTopUsersValoracion(String queryString , java.util.Calendar fechaDesde, java.util.Calendar fechaHasta) {
+        logger.debug("[listTopUsersValoracion(queryString)]");
+        try
+        {
+
+            org.hibernate.Query queryObject = super.getSession(false).createQuery(queryString);
+			queryObject.setParameter("fechaDesde", fechaDesde);
+			queryObject.setParameter("fechaHasta", fechaHasta);
+			logger.debug("queryObject "+queryObject);
+            java.util.List results = queryObject.list();
+            logger.debug("results "+results);
+            return results;
+        }
+        catch (org.hibernate.HibernateException ex)
+        {
+            throw super.convertHibernateAccessException(ex);
+        }
+
+    }
+
+
 }

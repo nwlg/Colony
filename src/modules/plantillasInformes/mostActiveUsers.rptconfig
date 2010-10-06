@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.21" id="1">
+    <list-property name="configVars">
+        <structure>
+            <property name="name">__isdisplay__RP_fechaDesde_7_0</property>
+            <property name="value">2007-01-01T00:00:00+01:00</property>
+        </structure>
+        <structure>
+            <property name="name">__isdisplay__RP_fechaHasta_8_1</property>
+            <property name="value">2010-01-21T00:00:00+01:00</property>
+        </structure>
+        <structure>
+            <property name="name">__isdisplay__RP_Idioma_9_2</property>
+            <property name="value">en</property>
+        </structure>
+        <structure>
+            <property name="name">__isnull_10_3</property>
+            <property name="value">RP_Usuario_10</property>
+        </structure>
+        <structure>
+            <property name="name">RP_Usuario_10_type_</property>
+            <property name="value">string</property>
+        </structure>
+        <structure>
+            <property name="name">__isdisplay__RP_rangoFechas_60_4</property>
+            <property name="value">01/01/2007 - 31/01/2010</property>
+        </structure>
+        <structure>
+            <property name="name">RP_fechaDesde_7_5</property>
+            <property name="value">2007-01-01T00:00:00+01:00</property>
+        </structure>
+        <structure>
+            <property name="name">RP_fechaDesde_7_type_</property>
+            <property name="value">string</property>
+        </structure>
+        <structure>
+            <property name="name">RP_rangoFechas_60_6</property>
+            <property name="value">01/01/2007 - 31/01/2010</property>
+        </structure>
+        <structure>
+            <property name="name">RP_rangoFechas_60_type_</property>
+            <property name="value">string</property>
+        </structure>
+        <structure>
+            <property name="name">RP_Idioma_9_7</property>
+            <property name="value">en</property>
+        </structure>
+        <structure>
+            <property name="name">RP_Idioma_9_type_</property>
+            <property name="value">string</property>
+        </structure>
+        <structure>
+            <property name="name">RP_fechaHasta_8_8</property>
+            <property name="value">2010-01-21T00:00:00+01:00</property>
+        </structure>
+        <structure>
+            <property name="name">RP_fechaHasta_8_type_</property>
+            <property name="value">string</property>
+        </structure>
+    </list-property>
+</report>

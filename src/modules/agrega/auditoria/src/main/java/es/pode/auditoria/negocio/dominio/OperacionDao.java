@@ -486,6 +486,26 @@ public interface OperacionDao
 
 
 
+    /**
+     * TODO: document it
+     * @param transform
+     * @param userId
+     * @param operacion
+     * @param fechaDesde
+     * @param fechaHasta
+     * @return
+     */
     public Object findOdesTitleBetweenDatesByUserByOperation(int transform, java.lang.String userId, java.lang.String operacion, java.util.Calendar fechaDesde, java.util.Calendar fechaHasta);
+
+
+
+    /**
+     * TODO: document it
+     * @param fechaDesde
+     * @param fechaHasta
+     * @param operacion
+     * @return
+     */
+    public java.util.List listTopUsersOperacion(java.util.Calendar fechaDesde, java.util.Calendar fechaHasta, String operacion);
 
 }

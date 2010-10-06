@@ -604,6 +604,18 @@ public interface OdePublicadoDao
      */
     public Object obtenNumODEsPublicados(int transform, String queryString);
 
+
+    /**
+     * TODO: document it
+     * @param fechaIni
+     * @param fechaFin
+     * @return
+     */
+    public java.util.List getUsersAndResourcesPublishedBetweenDates(java.util.Calendar fechaIni, java.util.Calendar fechaFin);
+
+
+
+
     public void eliminaODEsPublicadosPorId(java.lang.String idODE);
 
 }

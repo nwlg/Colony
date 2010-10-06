@@ -6,7 +6,9 @@
 package es.pode.auditoria.negocio.servicios;
 
 import es.pode.auditoria.negocio.dominio.ComentarioDao;
+import es.pode.auditoria.negocio.dominio.LocalizadorDao;
 import es.pode.auditoria.negocio.dominio.OdePublicadoDao;
+import es.pode.auditoria.negocio.dominio.UsuarioDao;
 import es.pode.auditoria.negocio.dominio.ValoracionDao;
 import net.sf.dozer.util.mapping.MapperIF;
 
@@ -305,6 +307,32 @@ public abstract class SrvAuditoriaServicioBase
     // 29/09/2010   Fernando Garcia
     //  End
 
+
+    // 30/09/2010   Fernando Garcia
+    //We're going to manipulate comentario daos
+    private es.pode.auditoria.negocio.dominio.LocalizadorDao localizadorDao;
+
+    public LocalizadorDao getLocalizadorDao() {
+        return localizadorDao;
+    }
+
+    public void setLocalizacionDao(LocalizadorDao localizadorDao) {
+        this.localizadorDao = localizadorDao;
+    }
+
+
+    private es.pode.auditoria.negocio.dominio.UsuarioDao usuarioDao;
+
+    public UsuarioDao getUsuarioDao() {
+        return usuarioDao;
+    }
+
+    public void setUsuarioDao(UsuarioDao usuarioDao) {
+        this.usuarioDao = usuarioDao;
+    }
+
+    // 30/09/2010   Fernando Garcia
+    //  End
 
 
 
@@ -755,6 +783,11 @@ public abstract class SrvAuditoriaServicioBase
 
 
 
+    /**
+     * TODO: document it
+     * @param parametroInformeVO
+     * @return
+     */
 
     public es.pode.auditoria.negocio.servicios.ReportSiteWideActivityVO[] reportSiteWideActivity(es.pode.auditoria.negocio.servicios.ParametrosInformeVO parametroInformeVO)
     {
@@ -776,12 +809,45 @@ public abstract class SrvAuditoriaServicioBase
     }
 
      /**
-      * Performs the core logic for {@link #informeUsuarios(es.pode.auditoria.negocio.servicios.ParametrosInformeVO)}
+      * Performs the core logic for {@link #reportSiteWideActivity(es.pode.auditoria.negocio.servicios.ParametrosInformeVO)}
       */
     protected abstract es.pode.auditoria.negocio.servicios.ReportSiteWideActivityVO[] handleReportSiteWideActivity(es.pode.auditoria.negocio.servicios.ParametrosInformeVO parametroInformeVO)
         throws java.lang.Exception;
 
 
+
+
+
+    /**
+     * TODO: document it
+     * @param parametroInformeVO
+     * @return
+     */
+
+    public es.pode.auditoria.negocio.servicios.MostActiveUsersVO[] mostActiveUsers(es.pode.auditoria.negocio.servicios.ParametrosInformeVO parametroInformeVO)
+    {
+        if (parametroInformeVO == null)
+        {
+            throw new IllegalArgumentException(
+                "es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.mostActiveUsers(es.pode.auditoria.negocio.servicios.ParametrosInformeVO parametroInformeVO) - 'parametroInformeVO' can not be null");
+        }
+        try
+        {
+            return this.handleMostActiveUsers(parametroInformeVO);
+        }
+        catch (Throwable th)
+        {
+            throw new es.pode.auditoria.negocio.servicios.SrvAuditoriaServicioException(
+                "Error performing 'es.pode.auditoria.negocio.servicios.SrvAuditoriaServicio.mostActiveUsers(es.pode.auditoria.negocio.servicios.ParametrosInformeVO parametroInformeVO)' --> " + th,
+                th);
+        }
+    }
+
+     /**
+      * Performs the core logic for {@link #mostActiveUsers(es.pode.auditoria.negocio.servicios.ParametrosInformeVO)}
+      */
+    protected abstract es.pode.auditoria.negocio.servicios.MostActiveUsersVO[] handleMostActiveUsers(es.pode.auditoria.negocio.servicios.ParametrosInformeVO parametroInformeVO)
+        throws java.lang.Exception;
 
 
 

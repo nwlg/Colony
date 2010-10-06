@@ -153,9 +153,22 @@ public interface SrvAuditoriaServicio
 
 
 
-    //////////
+    /**
+     * TODO: document it
+     * @param parametroInformeVO
+     * @return
+     */
     public es.pode.auditoria.negocio.servicios.ReportSiteWideActivityVO[] reportSiteWideActivity(es.pode.auditoria.negocio.servicios.ParametrosInformeVO parametroInformeVO);
 
+
+
+
+    /**
+     * TODO: document it
+     * @param parametroInformeVO
+     * @return
+     */
+    public es.pode.auditoria.negocio.servicios.MostActiveUsersVO[] mostActiveUsers(es.pode.auditoria.negocio.servicios.ParametrosInformeVO parametroInformeVO);
 
 
 

@@ -266,4 +266,16 @@ public interface ComentarioDao
      */
     public java.util.List buscarComentariosPorCriterioODE(final int transform, final es.pode.auditoria.negocio.dominio.IdODEFechaCriteria criterio);
 
+
+    /**
+     * TODO: document it
+     * @param fechaDesde
+     * @param fechaHasta
+     * @return
+     */
+    public java.util.List listTopUsersComentario(java.util.Calendar fechaDesde, java.util.Calendar fechaHasta);
+
+
+
+
 }

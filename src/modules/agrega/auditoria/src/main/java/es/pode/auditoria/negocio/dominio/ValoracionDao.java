@@ -375,4 +375,17 @@ public interface ValoracionDao
      */
     public java.util.List listarODEsValoradosDesdeHastaByUser(int transform, String userId, java.util.Calendar fechaDesde, java.util.Calendar fechaHasta);
 
+
+
+    /**
+     * TODO: document it
+     * @param fechaDesde
+     * @param fechaHasta
+     * @return
+     */
+    public java.util.List listTopUsersValoracion(java.util.Calendar fechaDesde, java.util.Calendar fechaHasta);
+
+
+
+
 }

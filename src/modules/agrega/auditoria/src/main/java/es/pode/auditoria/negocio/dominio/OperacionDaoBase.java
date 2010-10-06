@@ -836,4 +836,52 @@ public abstract class OperacionDaoBase
                 userId, operacion, fechaDesde, fechaHasta);
     }
 
+
+
+
+    public java.util.List listTopUsersOperacion(java.util.Calendar fechaDesde, java.util.Calendar fechaHasta, String operacion){
+        logger.debug("[listTopUsersPreview]");
+
+        java.util.List result = this.listTopUsersOperacion(
+                "select nombre||' '||apellido1, count(*), usuario.email as total from es.pode.auditoria.negocio.dominio.Operacion as operacion, es.pode.auditoria.negocio.dominio.Usuario as usuario where " +
+                " usuario.usuario=operacion.usuario and operacion.operacion like :operacion and :fechaHasta>=operacion.fecha and operacion.fecha>=:fechaDesde group by nombre||' '||apellido1,usuario.email  order by count(*) desc"
+                , fechaDesde, fechaHasta, operacion);
+
+               ///Very weird this ... don't touch, magic
+       java.util.Iterator it = result.iterator();
+        while (it.hasNext()) {
+            Object[] values = (Object[])it.next();
+            logger.debug(">"+values);
+            logger.debug(">>"+values[0]);
+            logger.debug(">>"+values[1]);
+            logger.debug(">>"+values[2]);
+        }
+
+       return result;
+
+
+    }
+
+
+    public java.util.List listTopUsersOperacion(String queryString, java.util.Calendar fechaDesde, java.util.Calendar fechaHasta, String operacion){
+        logger.debug("[listTopUsersPreview](queryString)");
+
+        try
+        {
+            org.hibernate.Query queryObject = super.getSession(false).createQuery(queryString);
+            queryObject.setParameter("fechaDesde", fechaDesde);
+            queryObject.setParameter("fechaHasta", fechaHasta);
+            queryObject.setParameter("operacion", operacion);
+
+            java.util.List result = queryObject.list();
+            return result;
+
+        }
+        catch (org.hibernate.HibernateException ex)
+        {
+            throw super.convertHibernateAccessException(ex);
+        }
+
+    }
+
 }

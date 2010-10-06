@@ -706,7 +706,12 @@ public abstract class OdePublicadoDaoBase
 
 
 
-
+    /**
+     * TODO: document it
+     * @param fechaIni
+     * @param fechaFin
+     * @return
+     */
     public java.lang.Long obtenNumODEsPublicadosBetweenDates(java.util.Calendar fechaIni, java.util.Calendar fechaFin){
         logger.debug("obtenNumODEsPublicadosBetweenDates");
         return this.obtenNumODEsPublicadosBetweenDates(
@@ -739,6 +744,61 @@ public abstract class OdePublicadoDaoBase
             throw super.convertHibernateAccessException(ex);
         }
     }
+
+
+
+
+    /**
+     * TODO: document it
+     * @param fechaIni
+     * @param fechaFin
+     * @return
+     */
+    public java.util.List getUsersAndResourcesPublishedBetweenDates(java.util.Calendar fechaIni, java.util.Calendar fechaFin) {
+        logger.debug("getUsersAndResourcesPublishedBetweenDates");
+
+        java.util.List result =
+                this.getUsersAndResourcesPublishedBetweenDates(
+                "select nombre||' '||apellido1, count(*) as total, usuario.email from es.pode.auditoria.negocio.dominio.Localizador as localizador, es.pode.auditoria.negocio.dominio.Usuario as usuario, es.pode.auditoria.negocio.dominio.OdePublicado as odePublicado where " +
+                " identificador like :identificador and localizador.idUsuario=usuario.usuario and odePublicado.idODE=localizador.identificador  " +
+                " and :fechaFin>=odePublicado.fecha and odePublicado.fecha>=:fechaIni group by nombre||' '||apellido1, usuario.email order by count(*) desc"
+                , fechaIni, fechaFin);
+           ///Very weird this ... don't touch, magic
+           java.util.Iterator it = result.iterator();
+            while (it.hasNext()) {
+                Object[] values = (Object[])it.next();
+                logger.debug(">"+values);
+                logger.debug(">>"+values[0]);
+                logger.debug(">>"+values[1]);
+                logger.debug(">>"+values[2]);
+            }
+
+
+        return result;
+
+    }
+
+
+    public java.util.List getUsersAndResourcesPublishedBetweenDates(String queryString, java.util.Calendar fechaIni, java.util.Calendar fechaFin){
+        logger.debug("obtenNumODEsPublicadosBetweenDates(queryString)");
+        try
+        {
+            org.hibernate.Query queryObject = super.getSession(false).createQuery(queryString);
+            queryObject.setParameter("identificador", "es-%");
+            queryObject.setParameter("fechaIni", fechaIni);
+            queryObject.setParameter("fechaFin", fechaFin);
+
+            java.util.List result = queryObject.list();
+            return result;
+
+        }
+        catch (org.hibernate.HibernateException ex)
+        {
+            throw super.convertHibernateAccessException(ex);
+        }
+    }
+
+
 
 
     /**

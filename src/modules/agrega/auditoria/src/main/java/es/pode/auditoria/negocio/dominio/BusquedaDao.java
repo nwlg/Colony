@@ -357,4 +357,13 @@ public interface BusquedaDao
      */
     public Object obtenerNumTerminosBuscados(int transform, String queryString, java.util.Calendar fechaDesde, java.util.Calendar fechaHasta, java.lang.String terminoBuscado);
 
+
+    /**
+     * TODO: document it
+     * @param fechaDesde
+     * @param fechaHasta
+     * @return
+     */
+    public java.util.List listTopUsersSearching(java.util.Calendar fechaDesde, java.util.Calendar fechaHasta);
+
 }

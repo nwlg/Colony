@@ -1383,6 +1383,126 @@ public class SrvAuditoriaServicioImpl extends es.pode.auditoria.negocio.servicio
 
 
 
+        /**
+         * TODO: document it
+         * @param parametroInformeVO
+         * @return
+         * @throws java.lang.Exception
+         */
+        protected es.pode.auditoria.negocio.servicios.MostActiveUsersVO[] handleMostActiveUsers(es.pode.auditoria.negocio.servicios.ParametrosInformeVO parametroInformeVO) throws java.lang.Exception {
+
+
+
+            Integer howmanyPerCategory = parametroInformeVO.getRango();
+            if (howmanyPerCategory==null || howmanyPerCategory==0) howmanyPerCategory=15;
+
+            ArrayList<MostActiveUsersVO> results = new ArrayList<MostActiveUsersVO>(howmanyPerCategory*7);
+            
+
+            //top resources published
+            log.info("report mostActiveUsers: top resources published");
+            OdePublicadoDao odePublicadoDao = this.getOdePublicadoDao();
+            java.util.List listTopUsersPublishing = odePublicadoDao.getUsersAndResourcesPublishedBetweenDates(parametroInformeVO.getFechaDesde(), parametroInformeVO.getFechaHasta());
+
+            java.util.Iterator it = listTopUsersPublishing.iterator();
+            int numItems = 0;
+            while (it.hasNext() && numItems<howmanyPerCategory) {
+                Object[] values = (Object[])it.next();
+                results.add(new MostActiveUsersVO("Resources published",""+values[0],""+values[1],""+values[2]));
+                numItems++;
+            }
+
+            //top searches
+            log.info("report mostActiveUsers: top searches");
+            BusquedaDao buscarDao = this.getBusquedaDao();
+            java.util.List listTopUsersSearching = buscarDao.listTopUsersSearching(parametroInformeVO.getFechaDesde(), parametroInformeVO.getFechaHasta());
+
+            java.util.Iterator it2 = listTopUsersSearching.iterator();
+            numItems = 0;
+            while (it2.hasNext() && numItems<howmanyPerCategory) {
+                Object[] values = (Object[])it2.next();
+                results.add(new MostActiveUsersVO("Searches",""+values[0],""+values[1],""+values[2]));
+                numItems++;
+            }
+
+            //top previews
+            log.info("report mostActiveUsers: top previews");
+            OperacionDao operacionDao = this.getOperacionDao();
+            java.util.List listTopUsersPreview = operacionDao.listTopUsersOperacion(parametroInformeVO.getFechaDesde(), parametroInformeVO.getFechaHasta(),"previsualizado");
+
+            java.util.Iterator it3 = listTopUsersPreview.iterator();
+            numItems = 0;
+            while (it3.hasNext() && numItems<howmanyPerCategory) {
+                Object[] values = (Object[])it3.next();
+                results.add(new MostActiveUsersVO("Previews",""+values[0],""+values[1],""+values[2]));
+                numItems++;
+            }
+
+
+            //top downloads
+            log.info("report mostActiveUsers: top downloads");
+            java.util.List listTopUsersDownloads = operacionDao.listTopUsersOperacion(parametroInformeVO.getFechaDesde(), parametroInformeVO.getFechaHasta(),"descargado_%");
+
+            java.util.Iterator it4 = listTopUsersDownloads.iterator();
+            numItems = 0;
+            while (it4.hasNext() && numItems<howmanyPerCategory) {
+                Object[] values = (Object[])it4.next();
+                results.add(new MostActiveUsersVO("Downloads",""+values[0],""+values[1],""+values[2]));
+                numItems++;
+            }
+
+
+            //top items sent
+            log.info("report mostActiveUsers: top items sent");
+            java.util.List listTopUsersSent = operacionDao.listTopUsersOperacion(parametroInformeVO.getFechaDesde(), parametroInformeVO.getFechaHasta(),"enviarCorreo");
+
+            java.util.Iterator it5 = listTopUsersSent.iterator();
+            numItems = 0;
+            while (it5.hasNext() && numItems<howmanyPerCategory) {
+                Object[] values = (Object[])it5.next();
+                results.add(new MostActiveUsersVO("Items sent",""+values[0],""+values[1],""+values[2]));
+                numItems++;
+            }
+
+
+            //top ratings
+            ValoracionDao valoracionDao = this.getValoracionDao();
+            java.util.List listTopUsersValoracion = valoracionDao.listTopUsersValoracion(parametroInformeVO.getFechaDesde(), parametroInformeVO.getFechaHasta());
+
+            java.util.Iterator it6 = listTopUsersValoracion.iterator();
+            numItems = 0;
+            while (it6.hasNext() && numItems<howmanyPerCategory) {
+                Object[] values = (Object[])it6.next();
+                results.add(new MostActiveUsersVO("Ratings",""+values[0],""+values[1],""+values[2]));
+                numItems++;
+            }
+
+
+
+
+            //top comments
+            ComentarioDao comentarioDao = this.getComentarioDao();
+            java.util.List listTopUsersComentario = comentarioDao.listTopUsersComentario(parametroInformeVO.getFechaDesde(), parametroInformeVO.getFechaHasta());
+
+            java.util.Iterator it7 = listTopUsersComentario.iterator();
+            numItems = 0;
+            while (it7.hasNext() && numItems<howmanyPerCategory) {
+                Object[] values = (Object[])it7.next();
+                results.add(new MostActiveUsersVO("Comments",""+values[0],""+values[1],""+values[2]));
+                numItems++;
+            }
+
+            
+
+            return results.toArray(new MostActiveUsersVO[]{});
+
+
+        }
+
+
+
+
+
 
 	/**
 	 * Obtiene los procesos planificados y su estado entre dos fechas concretas
@@ -2173,7 +2293,7 @@ public class SrvAuditoriaServicioImpl extends es.pode.auditoria.negocio.servicio
 				
 			} else
 			{
-				if (informe.equalsIgnoreCase("terminosBusqueda") || informe.equalsIgnoreCase("masValorado") || informe.equalsIgnoreCase("masMostrado") || informe.equalsIgnoreCase("masPrevisualizado") || informe.equalsIgnoreCase("masVisualizado")
+				if (informe.equalsIgnoreCase("mostActiveUsers") || informe.equalsIgnoreCase("terminosBusqueda") || informe.equalsIgnoreCase("masValorado") || informe.equalsIgnoreCase("masMostrado") || informe.equalsIgnoreCase("masPrevisualizado") || informe.equalsIgnoreCase("masVisualizado")
 						|| informe.equalsIgnoreCase("masDescargado") || informe.equalsIgnoreCase("tamanio"))
 				{
 					log("El informe solicitado necesita fechas y rango");
