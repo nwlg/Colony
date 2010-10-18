@@ -15,6 +15,29 @@
 					<p class="parrafo_comun" id="separacion2"><bean:message key="catalogadorBasicPlus.Rellenar"/></p>
 			<!--  INICIO GLOBO GRIS   -->
 			<!--  INICIO GLOBO GRIS   -->
+<style type="text/css">
+#formulario label, #formulario_02 label, #formulario_03 label, .formu label {
+	color:#4B4B4B;
+	display:block;
+	font-size:125%;
+	padding-left:0;
+	padding-right:0;
+	padding-top:5px;
+	width:120px;
+}
+#formulario input, #formulario_02 input, #formulario_03 input, .formu input {
+	border:1px solid #8BA6BF;
+	color:#4B4B4B;
+	font-size:120%;
+	height:17px;
+	margin-bottom:10px;
+	margin-top:3px;
+	width:90%;
+}
+
+
+</style>
+
 				<div class="globo_gris">
 					<div class="globo_gris_01">
 						<div class="globo_gris_02">
@@ -80,7 +103,7 @@
 										</div>
 										<div class="contenedor_derecha">
 											<div class="text">
-												<textarea name="description" style="maxlength: 150; font-style: normal; font-size: 1em;" 
+												<textarea name="description" style="maxlength: 150; font-style: normal; font-size: 120%;" 
 												 rows="10" cols="40" class="ta_minimo_ancho"  id="Descripcion" title="<bean:message key="catalogadorBasicPlus.IntroduzcaDescripcion"/>">${form.description}</textarea>
 											</div>
 										</div>
@@ -194,11 +217,8 @@
 										</div><br class="oculto"/>
 									</div>
 									
-									<!-- Outline section -->
-									<div class="basicplus_outline">
-									
-										<div class="basicplus_outline_text">Technical Requirement</div>
-									
+<%-- /////////////// --%>
+
 										<!-- Format -->
 										<div class="fila_de_tabla">
 											<div class="contenedor_izquierda">
@@ -238,119 +258,7 @@
 											<div class="linea_separadora">
 											</div><br class="oculto"/>
 										</div>	
-
-										<!-- Technical Requirement OrComposite type -->
-										<div class="fila_de_tabla">
-											<div class="contenedor_izquierda">
-												<div class="text">
-												 <label for="TechnicalOrCompositeType"><bean:message key="catalogadorBasicPlus.TechnicalOrCompositeType"/></label>
-												</div>
-											</div>
-											<div class="contenedor_derecha">
-												<div class="text">											
-												                              
-												    <c:choose>
-					                                <c:when test="${!empty form.technicalOrCompositeTypeBackingList}">	
-	                                  					<html:select name="form" property="technicalOrCompositeType" titleKey="catalogadorBasicPlus.TechnicalOrCompositeType" >
-	                                  						<c:set var="colorblanco" value="true"/>
-	                                  					    <c:set var="long" value="${fn:length(form.technicalOrCompositeTypeLabelList)}"/>
-	                                  						<fmt:formatNumber var="longTechnicalOrCompositeTypeList" value="${long - 1 }" type="number"/>
-	                                  						<c:forEach  items="${form.technicalOrCompositeTypeBackingList}" var="technicalOrCompositeTypeList" begin ="0" end="${longTechnicalOrCompositeTypeList}">
-	                                  							<c:choose>
-	                                  							<c:when test="${colorblanco}">   
-	                                  								<html:option value="${technicalOrCompositeTypeList.value }">${technicalOrCompositeTypeList.label }</html:option>
-	                                  								<c:set var="colorblanco" value="${!colorblanco }"/>
-	                                  							</c:when>
-	                                  							<c:otherwise>
-	                                  								<html:option value="${technicalOrCompositeTypeList.value }" styleClass="oscura">${technicalOrCompositeTypeList.label }</html:option>
-	                                  								<c:set var="colorblanco" value="${!colorblanco }"/>
-	                                  							</c:otherwise>
-	                                  							</c:choose>	
-	                                  						</c:forEach>
-	                                  					</html:select>
-	                               					</c:when>
-	                               					<c:otherwise>
-	                                   					<html:select name="form" property="technicalOrCompositeTypeBackingList" />
-	                               					</c:otherwise>
-	                           						</c:choose>						 	
-												</div>
-											</div>
-											<div class="linea_separadora">
-											</div><br class="oculto"/>
-										</div>	
-	
-										<!-- Technical Requirement OrComposite name -->
-										<div class="fila_de_tabla">
-											<div class="contenedor_izquierda">
-												<div class="text">
-												 <label for="TechnicalOrCompositeName"><bean:message key="catalogadorBasicPlus.TechnicalOrCompositeName"/></label>
-												</div>
-											</div>
-											<div class="contenedor_derecha">
-												<div class="text">											
-												                              
-												    <c:choose>
-					                                <c:when test="${!empty form.technicalOrCompositeNameBackingList}">	
-	                                  					<html:select name="form" property="technicalOrCompositeName" titleKey="catalogadorBasicPlus.TechnicalOrCompositeName" >
-	                                  						<c:set var="colorblanco" value="true"/>
-	                                  					    <c:set var="long" value="${fn:length(form.technicalOrCompositeNameLabelList)}"/>
-	                                  						<fmt:formatNumber var="longTechnicalOrCompositeNameList" value="${long - 1 }" type="number"/>
-	                                  						<c:forEach  items="${form.technicalOrCompositeNameBackingList}" var="technicalOrCompositeNameList" begin ="0" end="${longTechnicalOrCompositeNameList}">
-	                                  							<c:choose>
-	                                  							<c:when test="${colorblanco}">   
-	                                  								<html:option value="${technicalOrCompositeNameList.value }">${technicalOrCompositeNameList.label }</html:option>
-	                                  								<c:set var="colorblanco" value="${!colorblanco }"/>
-	                                  							</c:when>
-	                                  							<c:otherwise>
-	                                  								<html:option value="${technicalOrCompositeNameList.value }" styleClass="oscura">${technicalOrCompositeNameList.label }</html:option>
-	                                  								<c:set var="colorblanco" value="${!colorblanco }"/>
-	                                  							</c:otherwise>
-	                                  							</c:choose>	
-	                                  						</c:forEach>
-	                                  					</html:select>
-	                               					</c:when>
-	                               					<c:otherwise>
-	                                   					<html:select name="form" property="technicalOrCompositeNameBackingList" />
-	                               					</c:otherwise>
-	                           						</c:choose>						 	
-												</div>
-											</div>
-											<div class="linea_separadora">
-											</div><br class="oculto"/>
-										</div>
-										
-										<!-- Technical Installation Notes -->
-										<div class="fila_de_tabla">
-											<div class="contenedor_izquierda">
-												<div class="text"><label for="installationNotes"><bean:message key="catalogadorBasicPlus.InstallationNotes"/></label>
-												</div>
-											</div>
-											<div class="contenedor_derecha">
-												<div class="text">																								
-													<html:text property="installationNotes" value="${form.installationNotes}" styleId="Titulo" maxlength="125" titleKey="catalogadorBasicPlus.InstallationNotes" />												
-												</div>
-											</div>
-											<div class="linea_separadora">
-											</div><br class="oculto"/>
-										</div>
-										
-										<!-- Technical Platform Requirements -->
-										<div class="fila_de_tabla">
-											<div class="contenedor_izquierda">
-												<div class="text"><label for="platformRequirements"><bean:message key="catalogadorBasicPlus.PlatformRequirements"/></label>
-												</div>
-											</div>
-											<div class="contenedor_derecha">
-												<div class="text">																								
-													<html:text property="platformRequirements" value="${form.platformRequirements}" styleId="Titulo" maxlength="125" titleKey="catalogadorBasicPlus.PlatformRequirements" />												
-												</div>
-											</div>
-											<div class="linea_separadora">
-											</div><br class="oculto"/>
-										</div>
-
-									</div>
-									<!-- End of outline -->
+<%-- /////////////// --%>
 
 
 									<!-- Technical Duration -->
@@ -580,7 +488,7 @@
 										</div>
 										<div class="contenedor_derecha">
 											<div class="text">
-												<textarea name="notes" style="maxlength: 150; font-style: normal; font-size: 1em;" 
+												<textarea name="notes" style="maxlength: 150; font-style: normal; font-size: 120%;" 
 												 rows="10" cols="40" class="ta_minimo_ancho"  id="Notes" title="<bean:message key="catalogadorBasicPlus.IntroduzcaNotes"/>">${form.notes}</textarea>
 											</div>
 										</div>
@@ -627,7 +535,9 @@
 										</div><br class="oculto"/>
 									</div>	
 									-->
-									
+
+
+
 								</div>	<!--  FIN CAJA DE FORMULARIO   -->
 							</div>
 						</div>
@@ -635,6 +545,18 @@
 				</div>	<!--  FIN GLOBO GRIS   -->
 	<!--  FIN GLOBO GRIS   -->
 <p class="parrafo_comun" id="separacion3"><bean:message key="catalogadorBasicPlus.frase"/></p>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- Curriculum Tree information -->
 
@@ -701,6 +623,42 @@
 			<!--  FIN CAPA TABLA PORTAPAPELES   -->	
 				</div>
 				<!--  FIN CAJA DE FORMULARIO   -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 			</div>
 		</div>
 
@@ -719,6 +677,161 @@
 </fieldset>
 
 <!-- Fin Botones  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%--									<!-- Outline section -->
+									<div class="basicplus_outline">
+									
+										<div class="basicplus_outline_text">Technical Requirement</div>
+--%>									
+<%-- // --%>
+
+										<!-- Technical Requirement OrComposite type -->
+										<div class="fila_de_tabla" style="visibility:hidden;height:1px">
+
+											<div class="contenedor_izquierda">
+												<div class="text">
+												 <label for="TechnicalOrCompositeType"><bean:message key="catalogadorBasicPlus.TechnicalOrCompositeType"/></label>
+												</div>
+											</div>
+
+											<div class="contenedor_derecha">
+												<div class="text">											
+												                              
+												    <c:choose>
+					                                <c:when test="${!empty form.technicalOrCompositeTypeBackingList}">	
+	                                  					<html:select name="form" property="technicalOrCompositeType" titleKey="catalogadorBasicPlus.TechnicalOrCompositeType" >
+	                                  						<c:set var="colorblanco" value="true"/>
+	                                  					    <c:set var="long" value="${fn:length(form.technicalOrCompositeTypeLabelList)}"/>
+	                                  						<fmt:formatNumber var="longTechnicalOrCompositeTypeList" value="${long - 1 }" type="number"/>
+	                                  						<c:forEach  items="${form.technicalOrCompositeTypeBackingList}" var="technicalOrCompositeTypeList" begin ="0" end="${longTechnicalOrCompositeTypeList}">
+	                                  							<c:choose>
+	                                  							<c:when test="${colorblanco}">   
+	                                  								<html:option value="${technicalOrCompositeTypeList.value }">${technicalOrCompositeTypeList.label }</html:option>
+	                                  								<c:set var="colorblanco" value="${!colorblanco }"/>
+	                                  							</c:when>
+	                                  							<c:otherwise>
+	                                  								<html:option value="${technicalOrCompositeTypeList.value }" styleClass="oscura">${technicalOrCompositeTypeList.label }</html:option>
+	                                  								<c:set var="colorblanco" value="${!colorblanco }"/>
+	                                  							</c:otherwise>
+	                                  							</c:choose>	
+	                                  						</c:forEach>
+	                                  					</html:select>
+	                               					</c:when>
+	                               					<c:otherwise> 
+	                                   					<html:select name="form" property="technicalOrCompositeTypeBackingList"  />
+	                               					</c:otherwise>
+	                           						</c:choose>						 	
+												</div>
+											</div>
+											<div class="linea_separadora">
+											</div><br class="oculto"/>
+										</div>	
+	
+										<!-- Technical Requirement OrComposite name -->
+										<div class="fila_de_tabla" style="visibility:hidden;height:1px">
+											<div class="contenedor_izquierda">
+												<div class="text">
+												 <label for="TechnicalOrCompositeName"><bean:message key="catalogadorBasicPlus.TechnicalOrCompositeName"/></label>
+												</div>
+											</div>
+											<div class="contenedor_derecha">
+												<div class="text">											
+												                              
+												    <c:choose>
+					                                <c:when test="${!empty form.technicalOrCompositeNameBackingList}">	
+	                                  					<html:select name="form" property="technicalOrCompositeName" titleKey="catalogadorBasicPlus.TechnicalOrCompositeName" >
+	                                  						<c:set var="colorblanco" value="true"/>
+	                                  					    <c:set var="long" value="${fn:length(form.technicalOrCompositeNameLabelList)}"/>
+	                                  						<fmt:formatNumber var="longTechnicalOrCompositeNameList" value="${long - 1 }" type="number"/>
+	                                  						<c:forEach  items="${form.technicalOrCompositeNameBackingList}" var="technicalOrCompositeNameList" begin ="0" end="${longTechnicalOrCompositeNameList}">
+	                                  							<c:choose>
+	                                  							<c:when test="${colorblanco}">   
+	                                  								<html:option value="${technicalOrCompositeNameList.value }">${technicalOrCompositeNameList.label }</html:option>
+	                                  								<c:set var="colorblanco" value="${!colorblanco }"/>
+	                                  							</c:when>
+	                                  							<c:otherwise>
+	                                  								<html:option value="${technicalOrCompositeNameList.value }" styleClass="oscura">${technicalOrCompositeNameList.label }</html:option>
+	                                  								<c:set var="colorblanco" value="${!colorblanco }"/>
+	                                  							</c:otherwise>
+	                                  							</c:choose>	
+	                                  						</c:forEach>
+	                                  					</html:select>
+	                               					</c:when>
+	                               					<c:otherwise>
+	                                   					<html:select name="form" property="technicalOrCompositeNameBackingList" />
+	                               					</c:otherwise>
+	                           						</c:choose>						 	
+												</div>
+											</div>
+											<div class="linea_separadora">
+											</div><br class="oculto"/>
+										</div>
+										
+										<!-- Technical Installation Notes -->
+										<div class="fila_de_tabla" style="visibility:hidden;height:1px">
+											<div class="contenedor_izquierda">
+												<div class="text"><label for="installationNotes"><bean:message key="catalogadorBasicPlus.InstallationNotes"/></label>
+												</div>
+											</div>
+											<div class="contenedor_derecha">
+												<div class="text">																								
+													<html:text property="installationNotes" value="${form.installationNotes}" styleId="Titulo" maxlength="125" titleKey="catalogadorBasicPlus.InstallationNotes" />												
+												</div>
+											</div>
+											<div class="linea_separadora">
+											</div><br class="oculto"/>
+										</div>
+										
+										<!-- Technical Platform Requirements -->
+										<div class="fila_de_tabla" style="visibility:hidden;height:1px">
+											<div class="contenedor_izquierda">
+												<div class="text"><label for="platformRequirements"><bean:message key="catalogadorBasicPlus.PlatformRequirements"/></label>
+												</div>
+											</div>
+											<div class="contenedor_derecha">
+												<div class="text">																								
+													<html:text property="platformRequirements" value="${form.platformRequirements}" styleId="Titulo" maxlength="125" titleKey="catalogadorBasicPlus.PlatformRequirements" />												
+												</div>
+											</div>
+											<div class="linea_separadora">
+											</div><br class="oculto"/>
+										</div>
+
+<%--
+									</div>
+									<!-- End of outline -->
+--%>
+
+
+
+
+
+
+
 
 			</form>
 		</div>	<!-- Fin plantilla contenido  -->
