@@ -2885,57 +2885,61 @@ public class SrvAuditoriaServicioImpl extends es.pode.auditoria.negocio.servicio
 				task.setRenderOption(options);
 				
 				task.run();
-				
-				//Calculamos los informes diasAnterioresInformesPortada
-				
-				log("Calculamos los informes de hace "+diasAnterioresInformesPortada);
-				fechaDesde = Calendar.getInstance();
-				fechaDesde.add(Calendar.DATE, - (new Integer(diasAnterioresInformesPortada)).intValue());
-				log("fechaDesde "+fechaDesde);
-				diaDesde = new Integer(fechaDesde.get(Calendar.DAY_OF_MONTH)).toString();
-				if(diaDesde.length() == 1)
-				{
-						diaDesde = "0" + diaDesde;
-				}
-				mesDesde = new Integer((fechaDesde.get(Calendar.MONTH))+1 ).toString();
-				if(mesDesde.length() == 1)
-				{
-						mesDesde = "0" + mesDesde;
-				}
-				fDesde = new Integer(fechaDesde.get(Calendar.YEAR)).toString()+"-"+ mesDesde +"-"+ diaDesde;
-				fechaHasta = Calendar.getInstance();
-				fechaHasta.add(Calendar.DATE, -1);
-				log("fechaDesde "+fechaHasta);
-				diaHasta = new Integer(fechaHasta.get(Calendar.DAY_OF_MONTH)).toString();
-				if(diaHasta.length() == 1)
-				{
-						diaHasta = "0" + diaHasta;
-				}
-				mesHasta = new Integer((fechaHasta.get(Calendar.MONTH))+1).toString();
-				if(mesHasta.length() == 1)
-				{
-						mesHasta = "0" + mesHasta;
-				}
-				fHasta = new Integer(fechaHasta.get(Calendar.YEAR)).toString()+"-"+ mesHasta +"-"+ diaHasta;
-				log("fDesde "+fDesde);
-				log("fHasta "+fHasta);
-				rangoFechas = fHasta+"-"+fDesde;
-				log("rangoFechas ->" + rangoFechas);
-				offSetDesde = this.getOffSetDate(new Integer(fechaDesde.get(Calendar.YEAR)).toString(), mesDesde, diaDesde);
-				offSetHasta = this.getOffSetDate(new Integer(fechaHasta.get(Calendar.YEAR)).toString(), mesHasta, diaHasta);
-				task.setParameterValue("RP_fechaHasta", fHasta + "T23:59:59+0" + offSetHasta + ":00");
-				task.setParameterValue("RP_fechaDesde", fDesde + "T00:00:00+0" + offSetDesde + ":00");
-				task.setParameterValue("RP_rangoFechas", rangoFechas);
-				
-				//Obtenemos el HTMLRenderOptions
-				nombreInformesMas =  informesMasDir + this.getAgregaPropertyValue(informe) +nombreInformesPortada1+".html";
-				log("nombreInformesMas semanal "+nombreInformesMas);
-				options = this.obtenerRenderOptions(nombreInformesMas);
-					
-				
-				task.setRenderOption(options);
-				
-				task.run();
+			
+                                String daysBeforeReports = this.getAgregaPropertyValue("daysBeforeReports");
+                                if (daysBeforeReports!=null && daysBeforeReports.toLowerCase().equals("yes")) {
+
+                                    //Calculamos los informes diasAnterioresInformesPortada
+
+                                    log("Calculamos los informes de hace "+diasAnterioresInformesPortada);
+                                    fechaDesde = Calendar.getInstance();
+                                    fechaDesde.add(Calendar.DATE, - (new Integer(diasAnterioresInformesPortada)).intValue());
+                                    log("fechaDesde "+fechaDesde);
+                                    diaDesde = new Integer(fechaDesde.get(Calendar.DAY_OF_MONTH)).toString();
+                                    if(diaDesde.length() == 1)
+                                    {
+                                                    diaDesde = "0" + diaDesde;
+                                    }
+                                    mesDesde = new Integer((fechaDesde.get(Calendar.MONTH))+1 ).toString();
+                                    if(mesDesde.length() == 1)
+                                    {
+                                                    mesDesde = "0" + mesDesde;
+                                    }
+                                    fDesde = new Integer(fechaDesde.get(Calendar.YEAR)).toString()+"-"+ mesDesde +"-"+ diaDesde;
+                                    fechaHasta = Calendar.getInstance();
+                                    fechaHasta.add(Calendar.DATE, -1);
+                                    log("fechaDesde "+fechaHasta);
+                                    diaHasta = new Integer(fechaHasta.get(Calendar.DAY_OF_MONTH)).toString();
+                                    if(diaHasta.length() == 1)
+                                    {
+                                                    diaHasta = "0" + diaHasta;
+                                    }
+                                    mesHasta = new Integer((fechaHasta.get(Calendar.MONTH))+1).toString();
+                                    if(mesHasta.length() == 1)
+                                    {
+                                                    mesHasta = "0" + mesHasta;
+                                    }
+                                    fHasta = new Integer(fechaHasta.get(Calendar.YEAR)).toString()+"-"+ mesHasta +"-"+ diaHasta;
+                                    log("fDesde "+fDesde);
+                                    log("fHasta "+fHasta);
+                                    rangoFechas = fHasta+"-"+fDesde;
+                                    log("rangoFechas ->" + rangoFechas);
+                                    offSetDesde = this.getOffSetDate(new Integer(fechaDesde.get(Calendar.YEAR)).toString(), mesDesde, diaDesde);
+                                    offSetHasta = this.getOffSetDate(new Integer(fechaHasta.get(Calendar.YEAR)).toString(), mesHasta, diaHasta);
+                                    task.setParameterValue("RP_fechaHasta", fHasta + "T23:59:59+0" + offSetHasta + ":00");
+                                    task.setParameterValue("RP_fechaDesde", fDesde + "T00:00:00+0" + offSetDesde + ":00");
+                                    task.setParameterValue("RP_rangoFechas", rangoFechas);
+
+                                    //Obtenemos el HTMLRenderOptions
+                                    nombreInformesMas =  informesMasDir + this.getAgregaPropertyValue(informe) +nombreInformesPortada1+".html";
+                                    log("nombreInformesMas semanal "+nombreInformesMas);
+                                    options = this.obtenerRenderOptions(nombreInformesMas);
+
+
+                                    task.setRenderOption(options);
+
+                                    task.run();
+                            }   //if (daysBeforeReports!=null && daysBeforeReports.toLowerCase().equals("yes")) 
 				
 				task.close();
 				
