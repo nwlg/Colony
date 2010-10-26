@@ -79,6 +79,7 @@ import es.pode.parseadorXML.castor.Manifest;
 import es.pode.parseadorXML.castor.Metadata;
 import es.pode.soporte.i18n.I18n;
 import es.pode.soporte.utiles.date.DateManager;
+import java.util.StringTokenizer;
 
 /**
  * @see es.pode.indexador.negocio.servicios.busqueda.SrvBuscadorService
@@ -1707,6 +1708,31 @@ public class SrvBuscadorServiceImpl extends
 		for (Object k : filters.keySet()) {
 			if (k instanceof String) {
 
+                                if(k.equals("campo_formato")) {
+
+                                    BooleanQuery queryFormato = new BooleanQuery();
+                                    queryFormato.setMaxClauseCount(Integer.parseInt(props.getProperty("maxClauseCount")));
+
+                                    Analyzer analyser = new StandardAnalyzer();
+
+                                    TokenStream stream = analyser.tokenStream(
+                                                    (String)k, new StringReader(filters.get(k).toString()));
+
+
+                                    while (true) {
+                                            Token tok = stream.next();
+                                            if (tok == null)
+                                                    break; // No more tokens for this filter field
+
+                                            queryFormato.add(new TermQuery(new Term(props.getProperty((String) k),
+                                                            tok.termText())),
+                                                            BooleanClause.Occur.SHOULD);
+                                    }
+
+                                    q.add(queryFormato,BooleanClause.Occur.MUST);
+
+                                } else {
+
 				// Each of these filtering fields is tokenised because it is
 				// made available for arbitrary search with "contains" behavior.
 				//
@@ -1736,9 +1762,13 @@ public class SrvBuscadorServiceImpl extends
 					// for which is in the properties configuration.
 
 					q.add(new TermQuery(new Term(props.getProperty((String) k),
-							tok.termText())), BooleanClause.Occur.MUST);
+							tok.termText())),
+                                                        BooleanClause.Occur.MUST);
 				}
+                            }//k.equals("campo_formato")
 			}
+
+
 		}
 	}
 	

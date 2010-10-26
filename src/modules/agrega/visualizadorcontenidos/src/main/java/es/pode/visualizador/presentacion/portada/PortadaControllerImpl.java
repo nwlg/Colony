@@ -10,6 +10,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Locale;
+import java.util.logging.Level;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -24,6 +25,7 @@ import es.pode.indexador.negocio.servicios.busqueda.ResultadosCountVO;
 import es.pode.indexador.negocio.servicios.busqueda.SrvBuscadorService;
 import es.pode.soporte.constantes.ConstantesAgrega;
 import es.pode.visualizador.presentacion.noticia.NoticiaCodex;
+import java.util.Hashtable;
 
 
 /**
@@ -33,6 +35,11 @@ public class PortadaControllerImpl extends PortadaController {
 
 	private java.util.Properties pSpringProperties = null;
 	private static Logger logger = Logger.getLogger(PortadaControllerImpl.class);
+
+
+        public static String FILTERFMTGROUPNAME = "filterFMTGroupName";
+        public static String FILTERFMTGROUPNAME_GRP = "filterFMTGroup";
+        public static String FILTERFMTGROUPNAME_FMT = "fmt";
 	
 	/**
 	 * @see es.pode.visualizador.presentacion.portada.PortadaController#obtenerNoticias(org.apache.struts.action.ActionMapping,
@@ -218,7 +225,37 @@ public class PortadaControllerImpl extends PortadaController {
 			
 			form.setIntendedEndUserRoleSearchFilterLabelList(intendedEndUserRoleFilterLabelList.toArray());
 			form.setIntendedEndUserRoleSearchFilterValueList(intendedEndUserRoleFilterValueList.toArray());
-			
+
+        //19/10/2010    Fernando Garcia
+        //              Adding a new filter for file mime types
+
+
+
+                        
+                        Hashtable<String,ArrayList<String>> fmtStructure = getFMTGroups();
+
+                        Collection intendedFMTFilterLabelList = new ArrayList();
+			Collection intendedFMTFilterValueList = new ArrayList();
+
+			// Add the default "All" entry
+			intendedFMTFilterLabelList.add(new String("All"));
+			intendedFMTFilterValueList.add(new String(""));
+
+                        int groupNumber = 1;
+                        String groupName = "";
+                        while(groupName!=null) {
+                            groupName = getPropertyValue(FILTERFMTGROUPNAME + groupNumber);
+                            if (groupName!=null) {
+                                intendedFMTFilterLabelList.add(groupName);
+                                intendedFMTFilterValueList.add( arrayListStr2String(fmtStructure.get(groupName)," "));
+                                groupNumber++;
+                            }
+                        }
+
+                        form.setIntendedFMTSearchFilterLabelList(intendedFMTFilterLabelList.toArray());
+                        form.setIntendedFMTSearchFilterValueList(intendedFMTFilterValueList.toArray());
+
+
 		} catch (Exception e)
 		{
 			logger.error("There was a problem loading search filter properties: " + e.getMessage());
@@ -254,5 +291,60 @@ public class PortadaControllerImpl extends PortadaController {
 			throw e;
 		}
 	}
+
+
+        //19/10/2010    Fernando Garcia
+        //              Adding a new filter for file mime types
+
+        /**
+         * Read all properties in spring_visualizadorcontenidos.properties needed to fill a java structure (hashtable)
+         * with this information
+         * @return
+         */
+        public Hashtable<String,ArrayList<String>> getFMTGroups(){
+
+            Hashtable<String,ArrayList<String>> result = new Hashtable<String,ArrayList<String>>();
+
+            try {
+                int groupNumber = 1;
+                String groupName = "";
+                while (groupName!=null) {
+                    groupName = getPropertyValue(FILTERFMTGROUPNAME + groupNumber);
+                    if (groupName!=null) {
+
+                        int fmtNumber = 1;
+                        ArrayList<String> aFilemimetypes = new ArrayList<String>();
+                        String filemimetype ="";
+
+                        while (filemimetype!=null) {
+                            filemimetype = getPropertyValue(FILTERFMTGROUPNAME_GRP + groupNumber +"." +
+                                FILTERFMTGROUPNAME_FMT + fmtNumber);
+                            if (filemimetype!=null) {
+                                aFilemimetypes.add(filemimetype);
+                                fmtNumber++;
+                            }
+                        }
+                        result.put(groupName, aFilemimetypes);
+                        groupNumber++;
+                    }
+                }
+            } catch (IOException ex) {
+                java.util.logging.Logger.getLogger(PortadaControllerImpl.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            return result;
+        }
+
+
+
+        private String arrayListStr2String(ArrayList<String> anArrayListStrm, String separator) {
+
+            StringBuffer strBuf = new StringBuffer("");
+            for (String val : anArrayListStrm) {
+                strBuf = strBuf.append(val + separator);
+            }
+            
+            return strBuf.toString().trim();
+        }
 
 }

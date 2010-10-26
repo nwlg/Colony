@@ -122,7 +122,8 @@ public class CatBasicPlusControllerImpl extends CatBasicPlusController {
 	private static Map<String, String> initMIMEToFormatLabelMap() {
 		Map fMap = new HashMap<String, String>();
 
-		fMap.put("application/exe"				 , "Application/exe");
+		fMap.put("application/x-www-form-urlencoded"		 , "Application/X-www-form-urlencoded");
+                fMap.put("application/exe"				 , "Application/exe");
 		fMap.put("application/java"				 , "Application/Java");
 		fMap.put("application/pdf"				 , "Text/PDF");
 		fMap.put("application/postscript"		 , "Image/PS");

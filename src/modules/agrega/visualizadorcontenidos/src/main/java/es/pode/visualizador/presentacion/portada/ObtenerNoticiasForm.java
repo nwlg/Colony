@@ -160,5 +160,19 @@ public interface ObtenerNoticiasForm
     public void setIntendedEndUserRoleSearchFilterLabelList(java.lang.Object[] intendedEndUserSearchFilterLabelList);
     public java.lang.Object[] getIntendedEndUserRoleSearchFilterBackingList();
 
+
+    //19/10/2010    Fernando Garcia
+    //              Adding a new filter for file mime types
+    /**
+     * Set the intended end user role search filter backing list
+     */
+    public void setIntendedFMTSearchFilter(java.lang.String intendedFMTSearchFilter);
+    public java.lang.String getIntendedFMTSearchFilter();
+    public java.lang.Object[] getIntendedFMTSearchFilterValueList();
+    public void setIntendedFMTSearchFilterValueList(java.lang.Object[] intendedFMTSearchFilterValueList);
+    public java.lang.Object[] getIntendedFMTSearchFilterLabelList();
+    public void setIntendedFMTSearchFilterLabelList(java.lang.Object[] intendedFMTSearchFilterLabelList);
+    public java.lang.Object[] getIntendedFMTSearchFilterBackingList();
+
     
 }

@@ -136,20 +136,27 @@
 		</div>
 		<div style="clear:left;"></div>
 	</div>
-	
-	<!-- Learning Time -->
+
+
+
+        <%--
+        //19/10/2010    Fernando Garcia
+        //              Adding a new filter for file mime types
+        --%>
+	<!-- Format -->
 	<div class="search_filter_row">
-		<div class="search_filter_name">Learning Time:</div>
+		<div class="search_filter_name">Format:</div>
 		<div class="search_filter_choice">
-			<html:select name="form" property="learningTimeSearchFilter" styleClass="search_filter_select">
-				<c:forEach items="${form.learningTimeSearchFilterBackingList}" var="listItem" begin="0" end="${fn:length(form.learningTimeSearchFilterLabelList)}">
+			<html:select name="form" property="intendedFMTSearchFilter" styleClass="search_filter_select">
+				<c:forEach items="${form.intendedFMTSearchFilterBackingList}" var="listItem" begin="0" end="${fn:length(form.intendedFMTSearchFilterLabelList)}">
 					<html:option value="${listItem.value}">${listItem.label}</html:option>
 				</c:forEach>
 			</html:select>
 		</div>
 		<div style="clear:left;"></div>
 	</div>
-	
+
+
 	<!-- End user -->
 	<div class="search_filter_row">
 		<div class="search_filter_name">End User:</div>
@@ -163,7 +170,12 @@
 		<div style="clear:left;"></div>
 	</div>
 	
-	</div>
+
+
+
+
+
+        </div>
 	<div style="clear:both;"></div>
 		
 </div>

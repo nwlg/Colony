@@ -42,6 +42,11 @@ public class PortadaFormImpl
     private java.lang.Object[] intendedEndUserRoleSearchFilterValueList;
     private java.lang.Object[] intendedEndUserRoleSearchFilterLabelList;
     
+    //19/10/2010    Fernando Garcia
+    //              Adding a new filter for file mime types
+    private String intendedFMTSearchFilter;
+    private java.lang.Object[] intendedFMTSearchFilterValueList;
+    private java.lang.Object[] intendedFMTSearchFilterLabelList;
     
     public PortadaFormImpl()
     {
@@ -1060,6 +1065,9 @@ public class PortadaFormImpl
         this.usuarios = 0;
         this.usuariosValueList = null;
         this.usuariosLabelList = null;
+    //19/10/2010    Fernando Garcia
+    //              Adding a new filter for file mime types
+        
     }
 
     /**
@@ -1098,6 +1106,66 @@ public class PortadaFormImpl
             }
         }
         return errors;
+    }
+
+
+    //19/10/2010    Fernando Garcia
+    //              Adding a new filter for file mime types
+  
+    public void setIntendedFMTSearchFilter(String intendedFMTSearchFilter) {
+        this.intendedFMTSearchFilter = intendedFMTSearchFilter;
+    }
+
+    
+    public String getIntendedFMTSearchFilter() {
+        return this.intendedFMTSearchFilter;
+    }
+
+    
+    public Object[] getIntendedFMTSearchFilterValueList() {
+        return this.intendedFMTSearchFilterValueList;
+    }
+
+    
+    public void setIntendedFMTSearchFilterValueList(Object[] intendedFMTSearchFilterValueList) {
+        this.intendedFMTSearchFilterValueList = intendedFMTSearchFilterValueList;
+    }
+
+    
+    public Object[] getIntendedFMTSearchFilterLabelList() {
+        return this.intendedFMTSearchFilterLabelList;
+    }
+
+    
+    public void setIntendedFMTSearchFilterLabelList(Object[] intendedFMTSearchFilterLabelList) {
+        this.intendedFMTSearchFilterLabelList = intendedFMTSearchFilterLabelList;
+    }
+
+
+    public Object[] getIntendedFMTSearchFilterBackingList() {
+        java.lang.Object[] values = this.intendedFMTSearchFilterValueList;
+        java.lang.Object[] labels = this.intendedFMTSearchFilterLabelList;
+
+        if (values == null || values.length == 0)
+        {
+            return values;
+        }
+
+        if (labels == null || labels.length == 0)
+        {
+            labels = values;
+        }
+
+        final int length = java.lang.Math.min(labels.length, values.length);
+        java.lang.Object[] backingList = new java.lang.Object[length];
+
+        for (int i=0; i<length; i++)
+        {
+            backingList[i] = new LabelValue(labels[i], values[i]);
+        }
+
+        return backingList;
+
     }
 
     public final static class LabelValue

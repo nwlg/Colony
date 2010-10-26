@@ -2030,5 +2030,16 @@ public interface EjecutarBusquedaAvanzadaForm
      * 
      */
     public java.lang.String getIntendedEndUserRoleSearchFilter();    
-    
+
+    //19/10/2010    Fernando Garcia
+    //              Adding a new filter for file mime types
+    public void setIntendedFMTSearchFilter(java.lang.String intendedEndUserRoleSearchFilter);
+
+    public java.lang.String getIntendedFMTSearchFilter();
+
+
+
+
+
+
 }

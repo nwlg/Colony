@@ -27,6 +27,7 @@ if (numObjStr!=null) {
                 session.removeAttribute("campo_keystage");
                 session.removeAttribute("campo_subject");
                 session.removeAttribute("campo_destinatarios");
+                session.removeAttribute("campo_formato");
 
 
 		//Set up structure to search

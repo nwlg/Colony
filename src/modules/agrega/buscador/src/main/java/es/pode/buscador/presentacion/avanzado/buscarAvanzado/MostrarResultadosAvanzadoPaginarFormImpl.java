@@ -204,6 +204,10 @@ public class MostrarResultadosAvanzadoPaginarFormImpl
     private java.lang.String keystageSearchFilter;
     private java.lang.String learningTimeSearchFilter;
     private java.lang.String intendedEndUserRoleSearchFilter;
+    //19/10/2010    Fernando Garcia
+    //              Adding a new filter for file mime types
+    private java.lang.String intendedFMTSearchFilter;
+
     
     
     public MostrarResultadosAvanzadoPaginarFormImpl()
@@ -6517,7 +6521,20 @@ public class MostrarResultadosAvanzadoPaginarFormImpl
         return this.intendedEndUserRoleSearchFilter;
     }
     
-    
+
+        //19/10/2010    Fernando Garcia
+    //              Adding a new filter for file mime types
+    public String getIntendedFMTSearchFilter() {
+        return intendedFMTSearchFilter;
+    }
+
+    public void setIntendedFMTSearchFilter(String intendedFMTSearchFilter) {
+        this.intendedFMTSearchFilter = intendedFMTSearchFilter;
+    }
+
+
+
+
     /**
      * @see org.apache.struts.validator.ValidatorForm#reset(org.apache.struts.action.ActionMapping,javax.servlet.http.HttpServletRequest)
      */

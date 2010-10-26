@@ -229,6 +229,9 @@ public class BuscarAvanzadoCUFormImpl
     private java.lang.String keystageSearchFilter;
     private java.lang.String learningTimeSearchFilter;
     private java.lang.String intendedEndUserRoleSearchFilter;
+    //19/10/2010    Fernando Garcia
+    //              Adding a new filter for file mime types
+    private java.lang.String intendedFMTSearchFilter;
     
     
     public BuscarAvanzadoCUFormImpl()
@@ -7272,6 +7275,14 @@ public class BuscarAvanzadoCUFormImpl
     public java.lang.String getIntendedEndUserRoleSearchFilter()
     {
         return this.intendedEndUserRoleSearchFilter;
+    }
+
+    public String getIntendedFMTSearchFilter() {
+        return intendedFMTSearchFilter;
+    }
+
+    public void setIntendedFMTSearchFilter(String intendedFMTSearchFilter) {
+        this.intendedFMTSearchFilter = intendedFMTSearchFilter;
     }
     
     

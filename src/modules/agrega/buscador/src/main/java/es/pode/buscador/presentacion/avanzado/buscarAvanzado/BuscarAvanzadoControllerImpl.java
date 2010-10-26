@@ -1768,6 +1768,16 @@ public class BuscarAvanzadoControllerImpl extends BuscarAvanzadoController{
 				"campo_destinatarios"
 		);
 
+
+		setFilterParam(
+				session,
+				sfMap,
+				form.getIntendedFMTSearchFilter(),
+				"campo_formato"
+		);
+
+
+
 		return sfMap;
 	}
 
