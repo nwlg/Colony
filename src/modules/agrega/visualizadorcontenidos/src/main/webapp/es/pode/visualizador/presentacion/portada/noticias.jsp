@@ -139,6 +139,21 @@
 
 
 
+
+        <!-- End user -->
+	<div class="search_filter_row">
+		<div class="search_filter_name">End User:</div>
+		<div class="search_filter_choice">
+			<html:select name="form" property="intendedEndUserRoleSearchFilter" styleClass="search_filter_select">
+				<c:forEach items="${form.intendedEndUserRoleSearchFilterBackingList}" var="listItem" begin="0" end="${fn:length(form.intendedEndUserRoleSearchFilterLabelList)}">
+					<html:option value="${listItem.value}">${listItem.label}</html:option>
+				</c:forEach>
+			</html:select>
+		</div>
+		<div style="clear:left;"></div>
+	</div>
+
+
         <%--
         //19/10/2010    Fernando Garcia
         //              Adding a new filter for file mime types
@@ -155,24 +170,6 @@
 		</div>
 		<div style="clear:left;"></div>
 	</div>
-
-
-	<!-- End user -->
-	<div class="search_filter_row">
-		<div class="search_filter_name">End User:</div>
-		<div class="search_filter_choice">
-			<html:select name="form" property="intendedEndUserRoleSearchFilter" styleClass="search_filter_select">
-				<c:forEach items="${form.intendedEndUserRoleSearchFilterBackingList}" var="listItem" begin="0" end="${fn:length(form.intendedEndUserRoleSearchFilterLabelList)}">
-					<html:option value="${listItem.value}">${listItem.label}</html:option>
-				</c:forEach>
-			</html:select>
-		</div>
-		<div style="clear:left;"></div>
-	</div>
-	
-
-
-
 
 
         </div>
