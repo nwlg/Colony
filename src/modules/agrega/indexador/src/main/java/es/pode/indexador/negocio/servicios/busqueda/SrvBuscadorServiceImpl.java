@@ -1669,7 +1669,7 @@ public class SrvBuscadorServiceImpl extends
 
 
 						}
-						andQueryClave.add(andQueryClaveInterna,BooleanClause.Occur.SHOULD);//original MUST
+						andQueryClave.add(andQueryClaveInterna,BooleanClause.Occur.MUST);//original MUST
 					}
 					// Add the filter TermQueries as clauses
 					addFiltersToQuery(paramBusq.getSearchFilters(),
