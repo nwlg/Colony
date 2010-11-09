@@ -79,6 +79,7 @@ import es.pode.parseadorXML.castor.Manifest;
 import es.pode.parseadorXML.castor.Metadata;
 import es.pode.soporte.i18n.I18n;
 import es.pode.soporte.utiles.date.DateManager;
+import java.util.Iterator;
 import java.util.StringTokenizer;
 
 /**
@@ -1455,9 +1456,23 @@ public class SrvBuscadorServiceImpl extends
 	
 //	Obtiene una query a partir del campo, valor de campo o palabra y tipo de configuraci n wildcard (simple/avanzada)
 	private Query getQuery(Object palabra, String clave, String tipoBusqueda) {
+		//String[] camposAccesibles = props.getProperty(tipoBusqueda).split(SEPARADOR_CLAVES);
+		//if((tipoBusqueda.equals(CAMPOS_PHRASE_AVANZADA) || tipoBusqueda.equals(CAMPOS_PHRASE_SIMPLE)) && getPhraseAccess(camposAccesibles, clave)) return getPhraseQuery(props.getProperty(clave), (List)palabra);
+		//return (getWildcardAccess(camposAccesibles, clave) && (this.contains(palabra.toString(), ASTERISK) || this.contains(palabra.toString(), QUESTIONMARK)))? getWildcardQuery(props.getProperty(clave), (getLowerCaseAccess(props.getProperty(CAMPOS_LOWER_CASE).split(SEPARADOR_CLAVES),clave))?palabra.toString().trim().toLowerCase():palabra.toString().trim()):getTermQuery(props.getProperty(clave), (getLowerCaseAccess(props.getProperty(CAMPOS_LOWER_CASE).split(SEPARADOR_CLAVES),clave))?palabra.toString().trim().toLowerCase():palabra.toString().trim());
+
 		String[] camposAccesibles = props.getProperty(tipoBusqueda).split(SEPARADOR_CLAVES);
-		if((tipoBusqueda.equals(CAMPOS_PHRASE_AVANZADA) || tipoBusqueda.equals(CAMPOS_PHRASE_SIMPLE)) && getPhraseAccess(camposAccesibles, clave)) return getPhraseQuery(props.getProperty(clave), (List)palabra);
-		return (getWildcardAccess(camposAccesibles, clave) && (this.contains(palabra.toString(), ASTERISK) || this.contains(palabra.toString(), QUESTIONMARK)))? getWildcardQuery(props.getProperty(clave), (getLowerCaseAccess(props.getProperty(CAMPOS_LOWER_CASE).split(SEPARADOR_CLAVES),clave))?palabra.toString().trim().toLowerCase():palabra.toString().trim()):getTermQuery(props.getProperty(clave), (getLowerCaseAccess(props.getProperty(CAMPOS_LOWER_CASE).split(SEPARADOR_CLAVES),clave))?palabra.toString().trim().toLowerCase():palabra.toString().trim());
+		if(
+(tipoBusqueda.equals(CAMPOS_PHRASE_AVANZADA) || tipoBusqueda.equals(CAMPOS_PHRASE_SIMPLE)) && getPhraseAccess(camposAccesibles, clave)
+) {
+
+                    Query q1 = getPhraseQuery(props.getProperty(clave), (List)palabra);
+                    logger.debug("** A getQuery="+tipoBusqueda+ " QueryFrase="+q1);
+                    return q1;
+  }
+		Query q1 = (getWildcardAccess(camposAccesibles, clave) && (this.contains(palabra.toString(), ASTERISK) || this.contains(palabra.toString(), QUESTIONMARK)))? getWildcardQuery(props.getProperty(clave), (getLowerCaseAccess(props.getProperty(CAMPOS_LOWER_CASE).split(SEPARADOR_CLAVES),clave))?palabra.toString().trim().toLowerCase():palabra.toString().trim()):getTermQuery(props.getProperty(clave), (getLowerCaseAccess(props.getProperty(CAMPOS_LOWER_CASE).split(SEPARADOR_CLAVES),clave))?palabra.toString().trim().toLowerCase():palabra.toString().trim());
+                logger.debug("** B getQuery="+tipoBusqueda+ " QueryFrase="+q1);
+                return q1;
+
 	}
 //	Concede o no acceso de tipo wildcard al indice en funci n de configuracion (simple/avanzada)
 	private boolean getWildcardAccess(String[] camposWildcard, String campoAcceder) {
@@ -1608,6 +1623,9 @@ public class SrvBuscadorServiceImpl extends
 					andQueryClavePrincipal.setMaxClauseCount(Integer.parseInt(props.getProperty("maxClauseCount")));
 					List andsList = (List) ands.get(0);
 					List orList = (List) ands.get(1);
+
+                                        // Two lists ... one with words with a + before andList
+                                        //               second one with rest of tokens (common words)   orList
 					BooleanQuery andQueryClave = new BooleanQuery();
 					andQueryClave.setMaxClauseCount(Integer.parseInt(props.getProperty("maxClauseCount")));
 					for(int k = 0; k < claves.length; k++) {
@@ -1630,14 +1648,28 @@ public class SrvBuscadorServiceImpl extends
 							}
 							andQueryClave.add(andQueryClaveInterna,BooleanClause.Occur.MUST);
 						}
-					}
+					} //until here it treats words in the query with + before
+                                        // and now is the treatment for orList
 					for (int j = 0; j < orList.size(); j++){
 						BooleanQuery andQueryClaveInterna = new BooleanQuery();
 						andQueryClaveInterna.setMaxClauseCount(Integer.parseInt(props.getProperty("maxClauseCount")));
 						for(int k = 0; k < claves.length; k++) {
-							andQueryClaveInterna.add((List.class.isInstance(orList.get(j)))?getQuery(orList.get(j),claves[k],CAMPOS_PHRASE_AVANZADA):getQuery(orList.get(j).toString(),claves[k],CAMPOS_WILDCARD_AVANZADA),BooleanClause.Occur.SHOULD);
+							//andQueryClaveInterna.add((List.class.isInstance(orList.get(j)))?getQuery(orList.get(j),claves[k],CAMPOS_PHRASE_AVANZADA):getQuery(orList.get(j).toString(),claves[k],CAMPOS_WILDCARD_AVANZADA),BooleanClause.Occur.SHOULD);
+
+        Query q1 = null;
+        if (List.class.isInstance(orList.get(j))) {
+            logger.debug("* CAMPOS_PHRASE_AVANZADA   j=" + j + "  orList.get(j))=" + orList.get(j));
+            q1 = getQuery(orList.get(j),claves[k],CAMPOS_PHRASE_AVANZADA);
+        } else {
+            logger.debug("* CAMPOS_WILDCARD_AVANZADA j=" + j + "  orList.get(j))=" + orList.get(j));
+            q1 = getQuery(orList.get(j).toString(), claves[k], CAMPOS_WILDCARD_AVANZADA);
+        }
+
+        andQueryClaveInterna.add(q1,BooleanClause.Occur.SHOULD);
+
+
 						}
-						andQueryClave.add(andQueryClaveInterna,BooleanClause.Occur.MUST);
+						andQueryClave.add(andQueryClaveInterna,BooleanClause.Occur.SHOULD);//original MUST
 					}
 					// Add the filter TermQueries as clauses
 					addFiltersToQuery(paramBusq.getSearchFilters(),
@@ -1684,6 +1716,18 @@ public class SrvBuscadorServiceImpl extends
 			}
 			if (logger.isDebugEnabled()) logger.debug("Consulta interna simple con query["+query.toString()+"]");
 			hits = searcher.search(andQuery, Sort.RELEVANCE);
+                        //hits = searcher.search(andQuery, new Sort("fechaPublicacion"));
+
+
+        Iterator it = hits.iterator();
+        int i = 1;
+        logger.debug("* Lucene results");
+        while (it.hasNext()) {
+            org.apache.lucene.search.Hit hit = (org.apache.lucene.search.Hit) it.next();
+            logger.debug("* FechaPublicacion="+hit.get("fechaPublicacion")+ " Id="+hit.getId()+" S="+hit.getScore()+ "->" +hit.get("title"));i++;
+        }
+        logger.debug("* "+ (i!=0?i-1:i) + " results");
+
 					//(paramBusq.getBusquedaSimpleAvanzada()!=null && paramBusq.getBusquedaSimpleAvanzada().equals(BUSCARRSS))?new Sort(new SortField(props.getProperty("campo_fechaPublicacion"),SortField.STRING,true)):new Sort(new SortField(props.getProperty("campo_nivelAgregacion"),SortField.STRING,true)));
 		}catch(java.lang.Exception e){
             logger.error("Search failed", e);
@@ -2021,7 +2065,7 @@ public class SrvBuscadorServiceImpl extends
 			hitToDoc.setHoraPublicacion(doc.get(props.getProperty("campo_horaPublicacion")));
 			hitToDoc.setIdentificadorODE(doc.get(props.getProperty("campo_identificadorODE")));
 			hitToDoc.setImagen((doc.get(props.getProperty("campo_imagen"))!=null)?doc.get(props.getProperty("campo_imagen")):"");
-			hitToDoc.setTamanio((doc.get(props.getProperty("campo_tamanio"))!=null)?doc.get(props.getProperty("campo_tamanio")):"");
+                        hitToDoc.setTamanio((doc.get(props.getProperty("campo_tamanio"))!=null)?doc.get(props.getProperty("campo_tamanio")):"");
 			//hitToDoc.setConSinSecuencia((doc.get(props.getProperty("campo_secuencia"))!=null)?new Boolean(doc.get(props.getProperty("campo_valoracion"))):new Boolean(false));
 			
 			//String sValuesTesauro[] = doc.getValues(props.getProperty("campo_idTesauro"));

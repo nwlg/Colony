@@ -240,9 +240,11 @@ public class TablaImagenes extends BodyTagSupport {
     			if(nodo!=null && !nodo.trim().equals("")){
     				urlImagenReturn = "http://"+nodo+urlImagenReturn.trim();
     				urlImagen="http://"+nodo+urlImagen.trim();
+                                logger.debug("**** TablaImagenes. "+getTitulo()+" NODO!=null urlImagen="+urlImagen);
     			}else{
     				urlImagenReturn = "http://"+LdapUserDetailsUtils.getHost()+LdapUserDetailsUtils.getSubdominio()+urlImagenReturn.trim();
     				urlImagen="http://"+LdapUserDetailsUtils.getHost()+LdapUserDetailsUtils.getSubdominio()+urlImagen.trim();
+                                logger.debug("**** TablaImagenes.  "+getTitulo()+" urlImagen="+urlImagen);
     			}
     	
 
@@ -277,8 +279,10 @@ public class TablaImagenes extends BodyTagSupport {
 
 			// Display the thumbnail 
     			if (esVisualizable.booleanValue()){
+                                logger.debug("**** TablaImagenes.  "+getTitulo()+" VISUALIZABLE urlImagen="+urlImagen);
     				out.println("<a href=\"" + "http://"+LdapUserDetailsUtils.getHost()+LdapUserDetailsUtils.getSubdominio()+url + "\" class=\"imagen_tab\"><img  src=\"" + urlImagen + "\" alt=\"Imagen&nbsp;" + numeroODE + "\" /></a>");
     			}else{
+                                logger.debug("**** TablaImagenes. "+getTitulo()+"  NOOO VISUALIZABLE urlImagen="+urlImagen);
     				out.println("<img  src=\"" + urlImagen + "\" alt=\"Imagen&nbsp;" + numeroODE + "\" />");
     			}
 			out.println("</div>");

@@ -1,6 +1,9 @@
 // license-header java merge-point
 package es.pode.buscador.presentacion.avanzado.buscarAvanzado;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 /**
  * 
  */
@@ -14,7 +17,29 @@ public final class MostrarResultadosImagenesPaginarImagenes extends org.apache.s
 
         try
         {
+
+            //  09/11/2010  Fernando Garcia
+            //  This will be for a future combo box to select different sorting
+            //  It will be hidden at mostrar-resultados-imagenes.jsp until I'll develop it
+            //  TODO: get this struture from a common place (same code at BuscarAvanzadoCU.java and more places)
+
+            Collection sortingMethodLabelList = new ArrayList();
+            Collection sortingMethodValueList = new ArrayList();
+
+            sortingMethodLabelList.add("Relevance");
+            sortingMethodValueList.add("RELEVANCE");
+
+            sortingMethodLabelList.add("Index Order");
+            sortingMethodValueList.add("Index");
+
+            specificForm.setSortingMethodLabelList(sortingMethodLabelList.toArray());
+            specificForm.setSortingMethodValueList(sortingMethodValueList.toArray());
+            
+            
+            
             forward = _concentradorBusqueda(mapping, form, request, response);
+
+
         }
         catch (java.lang.Exception exception)
         {

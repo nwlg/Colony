@@ -205,6 +205,14 @@ public class MostrarFormularioAvanzadoAnalizaPulsacionFormImpl
     private java.lang.Object[] tesaurosValueList;
     private java.lang.Object[] tesaurosLabelList;
 
+
+    //03/11/2010    Fernando Garcia
+    //              Adding sorting methods
+    private java.lang.String sortingMethod;
+    private java.lang.Object[] sortingMethodValueList;
+    private java.lang.Object[] sortingMethodLabelList;
+
+
     /*
      * Search filters
      */
@@ -6483,7 +6491,65 @@ public class MostrarFormularioAvanzadoAnalizaPulsacionFormImpl
         }
     }
 
-    
+
+
+    //03/11/2010    Fernando Garcia
+    //              Adding sorting methods
+
+    public String getSortingMethod() {
+        return sortingMethod;
+    }
+
+    public void setSortingMethod(String sortingMethod) {
+        this.sortingMethod = sortingMethod;
+    }
+
+    public Object[] getSortingMethodLabelList() {
+        return sortingMethodLabelList;
+    }
+
+    public void setSortingMethodLabelList(Object[] sortingMethodLabelList) {
+        this.sortingMethodLabelList = sortingMethodLabelList;
+    }
+
+    public Object[] getSortingMethodValueList() {
+        return sortingMethodValueList;
+    }
+
+    public void setSortingMethodValueList(Object[] sortingMethodValueList) {
+        this.sortingMethodValueList = sortingMethodValueList;
+    }
+
+
+ public Object[] getSortingMethodBackingList() {
+        java.lang.Object[] values = this.sortingMethodValueList;
+        java.lang.Object[] labels = this.sortingMethodLabelList;
+
+        if (values == null || values.length == 0)
+        {
+            return values;
+        }
+
+        if (labels == null || labels.length == 0)
+        {
+            labels = values;
+        }
+
+        final int length = java.lang.Math.min(labels.length, values.length);
+        java.lang.Object[] backingList = new java.lang.Object[length];
+
+        for (int i=0; i<length; i++)
+        {
+            backingList[i] = new LabelValue(labels[i], values[i]);
+        }
+
+        return backingList;
+
+    }
+
+
+
+
     /*
      * Search filters
      */

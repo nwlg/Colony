@@ -1,6 +1,8 @@
 // license-header java merge-point
 package es.pode.buscador.presentacion.avanzado.buscarAvanzado;
 
+import java.util.ArrayList;
+import java.util.Collection;
 /**
  * 
  */
@@ -22,6 +24,24 @@ public final class BuscarAvanzadoCU extends org.apache.struts.action.Action
             specificForm.setTipoLayoutBuscador(previousForm.getTipoLayoutBuscador());
             specificForm.setTipoBusqueda(previousForm.getTipoBusqueda());
             specificForm.setIdiomaBuscador(previousForm.getIdiomaBuscador());
+
+            //  09/11/2010  Fernando Garcia
+            //  This will be for a future combo box to select different sorting
+            //  It will be hidden at mostrar-resultados-imagenes.jsp until I'll develop it
+            //  TODO: get this struture from a common place (same code at serveral places)
+            
+            Collection sortingMethodLabelList = new ArrayList();
+            Collection sortingMethodValueList = new ArrayList();
+
+            sortingMethodLabelList.add("Relevance");
+            sortingMethodValueList.add("RELEVANCE");
+
+            sortingMethodLabelList.add("Index Order");
+            sortingMethodValueList.add("Index");
+
+            specificForm.setSortingMethodLabelList(sortingMethodLabelList.toArray());
+            specificForm.setSortingMethodValueList(sortingMethodValueList.toArray());
+            
         }
         else
         if (previousFormObject instanceof es.pode.buscador.presentacion.basico.detallar.MostrarDetalleODEVolverBusquedaFormImpl)

@@ -27,7 +27,7 @@ public class InformesPortada implements Job {
 	public void execute(JobExecutionContext context) throws JobExecutionException {
 		
 		String usuario = (String) context.getJobDetail().getJobDataMap().get(CtesPlanificador.USUARIO);
-		
+
 		/* Añadimos la seguridad al proceso */
 		log("Usuario que lanza la tarea: " + usuario);
         boolean contextoCargado = Autenticar.cargarContextoSeguridad(usuario);

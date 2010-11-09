@@ -42,9 +42,9 @@
     }
 
     ServletContext thisContext = getServletContext();
-            ServletContext anotherContext = thisContext.getContext("/buscador");
+          ServletContext anotherContext = thisContext.getContext("/indexador");
 
-    anotherContext.getRequestDispatcher("/random-pics.jsp?numobj="+numObj).include(request, new org.apache.jasper.runtime.ServletResponseWrapperInclude (response, out));
+    anotherContext.getRequestDispatcher("/random-pics.jsp").include(request, new org.apache.jasper.runtime.ServletResponseWrapperInclude (response, out));
 
 %>
                         </div>

@@ -34,7 +34,26 @@
 <div class="lb_bubble_topleft"><div class="lb_bubble_bottomleft"><div class="lb_bubble_topright"><div class="lb_bubble_bottomright">
 
 <!-- Display the search result total -->
-<div class="results_bubble_text"><bean:message key="listar.odecu.mostrar.resultados.consulta.cabecera.desdeHasta" arg0="${form.resultadosDesde}" arg1="${form.resultadosHasta}" arg2="${form.numMaxRes}"/></div>
+<div class="results_bubble_text">
+<table><tr><td width="25%">
+<bean:message key="listar.odecu.mostrar.resultados.consulta.cabecera.desdeHasta" arg0="${form.resultadosDesde}" arg1="${form.resultadosHasta}" arg2="${form.numMaxRes}"/>
+</td>
+<td width="75%">
+        <center>
+<%--
+//09/11/2010    Fernando Garcia
+//Temporary code for a combo to sort items
+<html:select name="form" property="sortingMethod" styleClass="search_filter_select">
+    <c:forEach items="${form.sortingMethodBackingList}" var="listItem" begin="0" end="${fn:length(form.sortingMethodLabelList)}">
+        <html:option value="${listItem.value}">${listItem.label}</html:option>
+    </c:forEach>
+</html:select>
+--%>
+        </center>
+</td>
+</tr>
+</table>
+</div>
 
 
 <!-- INICIO SUGERENCIAS -->
