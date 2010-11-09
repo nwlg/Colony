@@ -65,7 +65,7 @@
 			  									<div class="text"><label for="Nombre"><bean:message key="usuarios.nombre"/></label></div>
 			 								</div>
 											<div class="contenedor_derecha">
-												<div class="text"><input name="nombre" value="${form.nombre}" onblur="this.style.backgroundColor='#e1e1e1'" id="Nombre" maxlength="50" type="text" title="<bean:message key='usuarios.introduzcaNombre' />" /></div>
+												<div class="text"><input name="nombre" value="${form.nombre}" onblur="this.style.backgroundColor='#e1e1e1'" id="Nombre" maxlength="50" type="text" title="<bean:message key='usuarios.introduzcaNombre' />" style="background-color: rgb(225, 225, 225);" readonly="" /></div>
 											</div>
 											<div class="linea_separadora"></div>
 											<br class="oculto" />
@@ -79,7 +79,7 @@
 			  									<div class="text"><label for="Apellido1"><bean:message key="usuarios.apellido1"/></label></div>
 			 								</div>
 											<div class="contenedor_derecha">
-												<div class="text"><input name="apellido1" onblur="this.style.backgroundColor='#e1e1e1'" value="${form.apellido1}" id="Apellido1" maxlength="50" type="text" title="<bean:message key='usuarios.introduzcaApellido1'/>"  /></div>
+												<div class="text"><input name="apellido1" onblur="this.style.backgroundColor='#e1e1e1'" value="${form.apellido1}" id="Apellido1" maxlength="50" type="text" title="<bean:message key='usuarios.introduzcaApellido1'/>"  style="background-color: rgb(225, 225, 225);" readonly="" /></div>
 											</div>
 											<div class="linea_separadora"></div>
 											<br class="oculto" />
@@ -88,7 +88,7 @@
 										
 										<!-- 		CAMPO SEGUNDO APELLIDO		-->
 										
-										<div class="fila_de_tabla">
+										<div class="fila_de_tabla" style="margin: 0px 20px 0px 20px; display: none;">
 			  								<div class="contenedor_izquierda">
 			  									<div class="text"><label for="Apellido2"><bean:message key="usuarios.apellido2"/></label></div>
 			 								</div>
@@ -102,7 +102,7 @@
 										
 										<!-- 		CAMPO NIF		-->
 										
-										<div class="fila_de_tabla">
+										<div class="fila_de_tabla" style="margin: 0px 20px 0px 20px; display: none;">
 						  					<div class="contenedor_izquierda">
 					  							<div class="text"><label for="NIF" class="label_nif"><bean:message key="usuarios.NIF"/></label></div>
 					 						</div>
@@ -121,7 +121,7 @@
 					  							<div class="text"><label for="Email"><bean:message key="usuarios.mail"/></label></div>
 					 						</div>
 											<div class="contenedor_derecha">
-												<div class="text"><input name="email" onblur="this.style.backgroundColor='#e1e1e1'"  value="${form.email}" id="Email"  type="text" title="<bean:message key="usuarios.introduzcaMail"/>"  /></div>
+												<div class="text"><input name="email" onblur="this.style.backgroundColor='#e1e1e1'"  value="${form.email}" id="Email"  type="text" title="<bean:message key="usuarios.introduzcaMail"/>" style="background-color: rgb(225, 225, 225);" readonly=""  /></div>
 											</div>
 											<div class="linea_separadora"></div>
 											<br class="oculto" />
@@ -164,7 +164,7 @@
 	  											<div class="text"><label for="Usuario"><bean:message key="usuarios.usuario"/></label></div>
 	 										</div>
 											<div class="contenedor_derecha">
-												<div class="text"><input READONLY name="usuario" onblur="this.style.backgroundColor='#e1e1e1'" value="${form.usuario}" id="Usuario" style="background-color: #e1e1e1" maxlength="25" type="text" title="<bean:message key="usuarios.introduzcaUsuario"/> "  /></div>
+												<div class="text"><input READONLY name="usuario" onblur="this.style.backgroundColor='#e1e1e1'" value="${form.usuario}" id="Usuario" style="background-color: #e1e1e1" maxlength="25" type="text" title="<bean:message key="usuarios.introduzcaUsuario"/> "  style="background-color: rgb(225, 225, 225);" readonly="" /></div>
 											</div>
 											<div class="linea_separadora"></div>
 											<br class="oculto" />
@@ -178,7 +178,7 @@
 						  						<div class="text"><label for="Contrasenia"><bean:message key="usuarios.clave"/></label></div>
 						 					</div>
 											<div class="contenedor_derecha">
-												<div class="text"><input type="password" name="clave" value="" onblur="this.style.backgroundColor='#e1e1e1'" id="Contrasenia" maxlength="20" title="<bean:message key="usuarios.introduzcaClave"/>"  /></div>
+												<div class="text"><input type="password" name="clave" value="" onblur="this.style.backgroundColor='#e1e1e1'" id="Contrasenia" maxlength="20" title="<bean:message key="usuarios.introduzcaClave"/>"  style="background-color: rgb(225, 225, 225);" readonly="" /></div>
 											</div>
 											<div class="linea_separadora"></div>
 											<br class="oculto" />
@@ -187,7 +187,7 @@
 										
 										<!-- 		CAMPO DE CONFIRMACION CONTRASEÑA		-->
 										
-										<div class="fila_de_tabla">
+										<div class="fila_de_tabla" style="margin: 0px 20px 0px 20px; display: none;" >
 						  					<div class="contenedor_izquierda">
 						  						<div class="text"><label for="ConfContrasenia"><bean:message key="usuarios.confirmarClave"/></label></div>
 						 					</div>
@@ -200,7 +200,7 @@
 										
 										<!-- 		CAMPO DE IDENTIFICADOR OPENID		-->
 										
-										<div class="fila_de_tabla">
+										<div class="fila_de_tabla" style="margin: 0px 20px 0px 20px; display: none;" >
 						  					<div class="contenedor_izquierda">
 						  						<div class="text"><label for="openIdUrl"><bean:message key="usuarios.openIdUrl"/></label></div>
 						 					</div>
@@ -331,7 +331,7 @@
 											
 										<!--		CAMPO DE IDIOMA DE APLICACION		 -->
 										
-										<div class="fila_de_tabla">
+										<div class="fila_de_tabla" style="margin: 0px 20px 0px 20px; display: none;" >
 						  					<div class="contenedor_izquierda">
 						  						<div class="text"><label for="Idiomaaplicaciones"><bean:message key="usuarios.idiomaAplicacion"/></label></div>
 						 					</div>
@@ -357,7 +357,7 @@
 										
 										<!-- 		CAMPO DE IDIOMA DE CONSULTA			-->
 										
-										<div class="fila_de_tabla">
+										<div class="fila_de_tabla" style="margin: 0px 20px 0px 20px; display: none;" >
 						  					<div class="contenedor_izquierda">
 						  						<div class="text"><label for="Idiomaconsultas"><bean:message key="usuarios.idiomaConsultas"/></label></div>
 						 					</div>
