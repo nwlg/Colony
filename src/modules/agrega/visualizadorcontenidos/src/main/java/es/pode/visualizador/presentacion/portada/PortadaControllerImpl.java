@@ -26,6 +26,7 @@ import es.pode.indexador.negocio.servicios.busqueda.SrvBuscadorService;
 import es.pode.soporte.constantes.ConstantesAgrega;
 import es.pode.visualizador.presentacion.noticia.NoticiaCodex;
 import java.util.Hashtable;
+import java.util.StringTokenizer;
 
 
 /**
@@ -199,28 +200,51 @@ public class PortadaControllerImpl extends PortadaController {
 			String[] l_id = { 
 					getPropertyValue("filterIntendedEndUserRoleVocabulary")
 					};
-			
+
+
 			VocabularioVO[] vocabulario = this
 					.getSrvVocabulariosControladosService().obtenerCombos(l_id,
 							"en");
+
+        //10/11/2010    Fernando Garcia
+        //              Filtering the filter,   listEndUserRolesInFilter parameter at spring_visualizadorcontenidos.properties
+        //              point out which items will be included
+
+                        String listEndUserRolesInFilter = getPropertyValue("listEndUserRolesInFilter");
+                        ArrayList<String> als = new ArrayList<String>();
+                        if (listEndUserRolesInFilter!=null) {
+                            StringTokenizer strTkn = new StringTokenizer(listEndUserRolesInFilter,",");
+                            while (strTkn.hasMoreElements()) {
+                                als.add(strTkn.nextToken().trim().toLowerCase());
+                            }
+
+
+                        } else {
+                            //if no filterIntendedEndUserRoleVocabulary, we will show all
+                            als=null;
+                        }
+
+
 			
 			for (int j = 0; j < vocabulario.length; j++)
 			{
 				VocabularioVO thisVocabulary = vocabulario[j];
-				
-				for (int k = 0; k < thisVocabulary.getTerminos().length; k++)
-				{
-					TerminoVO thisTerm = thisVocabulary.getTerminos()[k];
-					
-					// Add the term text as both a label and value
-					intendedEndUserRoleFilterLabelList.add(
-						thisTerm.getNomTermino()
-						);
-					
-					intendedEndUserRoleFilterValueList.add(
-						thisTerm.getNomTermino()
-						);
-				}
+			
+                                    for (int k = 0; k < thisVocabulary.getTerminos().length; k++)
+                                    {
+                                        TerminoVO thisTerm = thisVocabulary.getTerminos()[k];
+                                        if ( als==null || als.indexOf(thisTerm.getIdTermino().trim().toLowerCase())!=-1 ) {
+
+                                            // Add the term text as both a label and value
+                                            intendedEndUserRoleFilterLabelList.add(
+                                                    thisTerm.getNomTermino()
+                                                    );
+
+                                            intendedEndUserRoleFilterValueList.add(
+                                                    thisTerm.getNomTermino()
+                                                    );
+                                        }//if
+                                    }
 			}
 			
 			form.setIntendedEndUserRoleSearchFilterLabelList(intendedEndUserRoleFilterLabelList.toArray());
