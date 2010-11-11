@@ -1,0 +1,91 @@
+
+
+
+11/11/2010
+	Fernando Garcia (bitvision@gmail.com)
+	
+	indexador.properties
+		several weight fixes and a no existent field was deleted
+
+	Minor appearance changes
+    		at catalogador basic plus, one text was in a bad place
+    		at random pics, removed blue line around thumbnails and fixed height
+
+    	Report activity of a user was modified.
+    		Now we have information about comments made by a user.
+
+    	Changes in auditoria web application:
+    		ComentarioDao has a new operation 'commentsPerUser'
+    		SrvAuditoriaServiceImpl use this new method to adquire the new information about comments
+    
+	New comments and tests at SrvBuscadorServicioImpl to try a new Analyzer (WhitespaceAnalyzer).
+
+
+10/11/2010
+	Fernando Garcia (bitvision@gmail.com)
+
+	Added a filter for the homepage filter End User.
+
+    	spring_visualizadorcontenidos.properties contains an ids list, separated by commas, declared by a listEndUserRolesInFilter parameter.
+    	The ids can be found at vocabLOMES_en.xml
+    	if no items are provided in the list, all end user roles will be shown at the combo
+
+
+09/11/2010
+	Fernando Garcia (bitvision@gmail.com)
+
+	Changed the general behaviour of the search engine. Now is doing a AND with search terms.09/11/2010
+
+    	portaladministracion.properties
+    		defaul start date for reports was changed to 2009/9/1
+    
+    	noticias.jsp
+    		filters End User and Format have moved and switched
+
+    	Profile form was modified hiding some fields and making readonly other ones
+    	Some labels were modified as well
+
+
+    	Added code for a new combo box to have a way to sort results in the main search
+    	It's a temporary code at the moment and the combo is hidden at mostrar-resultados-imagenes.jsp
+    
+    	Added extra logs in TablaImagenes
+    
+    	SrvBuscadorServiceImpl
+    		added many comments to improve the comprehend of how the search engine is working
+    
+    	indexador.properties
+    		updated weight and search field parameters
+    
+    	noticias.jsp
+    		now is calling to random-pics at another different location. Before at buscador, now at indexador webapp
+    		and we have random-pics at indexador to access directly to lucene index
+
+
+26/10/2010
+	Fernando Garcia (bitvision@gmail.com)
+
+    	Added the 'daysBeforeReports' parameter at agrega.properties to avoid the 'days before reports' generation of the planner (Informes Portada)
+    	Modified auditoria.properties to allow only two Informes Portada reports and change the 'from' date of the reports.
+
+    	x-www-form-urlencoded mime type non in capital letters. Now include in CatBasicPlusControllerImp.
+    
+    	Filter Learning Time was removed from main page
+    	New filter Format in main page
+    		Many class files were updated to include the new filter
+    		spring_visualizadorcontenidos.properties holds a list of groups that will appear
+    		in the new filter. Every group defines which mime types include.
+    		Filter campo_formato is stored in session like the rest of filters
+    		and removed in random-pics.jsp like the rest of filters.
+
+
+18/10/2010
+	Fernando Garcia (bitvision@gmail.com)
+
+    	CatalogadorBasicPlus form was changed.
+    		- New font size, now larger at fields name and textareas
+    		- Some technical requeriments fields were hidden :
+    			Type, Name , Installation remarks and Other platform requirements
+
+
+
