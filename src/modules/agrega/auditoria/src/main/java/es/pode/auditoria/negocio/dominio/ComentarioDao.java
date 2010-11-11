@@ -276,6 +276,15 @@ public interface ComentarioDao
     public java.util.List listTopUsersComentario(java.util.Calendar fechaDesde, java.util.Calendar fechaHasta);
 
 
+    /**
+     * TODO: document it
+     * @param fechaDesde
+     * @param fechaHasta
+     * @param userId
+     * @return
+     */
+    public java.util.List commentsPerUser(java.util.Calendar fechaDesde, java.util.Calendar fechaHasta, String userId);
+
 
 
 }

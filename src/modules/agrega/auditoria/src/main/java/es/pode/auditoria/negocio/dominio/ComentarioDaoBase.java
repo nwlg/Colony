@@ -507,8 +507,7 @@ public abstract class ComentarioDaoBase
     }
 
 
-
-    public java.util.List listTopUsersComentario(String queryString, java.util.Calendar fechaDesde, java.util.Calendar fechaHasta) {
+        public java.util.List listTopUsersComentario(String queryString, java.util.Calendar fechaDesde, java.util.Calendar fechaHasta) {
         logger.debug("[listTopUsersComentario](querySting)");
         try
         {
@@ -527,6 +526,60 @@ public abstract class ComentarioDaoBase
         }
 
     }
+
+
+    public java.util.List commentsPerUser(java.util.Calendar fechaDesde, java.util.Calendar fechaHasta, String userId) {
+
+            logger.debug("[commentsPerUser]");
+
+            java.util.List result = this.commentsPerUser(
+            "select distinct odepublicado.titulo, count(*) from es.pode.auditoria.negocio.dominio.Comentario as comentario, es.pode.auditoria.negocio.dominio.OdePublicado as odepublicado where comentario.idODE=odepublicado.idODE " +
+            "and comentario.usuario=:userId and :fechaHasta>=comentario.fecha and comentario.fecha>=:fechaDesde " +
+            "group by odepublicado.titulo order by odepublicado.titulo"
+                    ,fechaDesde, fechaHasta, userId );
+
+
+
+                           ///Very weird this ... don't touch it, magic
+       java.util.Iterator it = result.iterator();
+        while (it.hasNext()) {
+            Object[] values = (Object[])it.next();
+            logger.debug(">"+values);
+            logger.debug(">>"+values[0]);
+            logger.debug(">>"+values[1]);
+        }
+
+
+            return result;
+
+    }
+
+
+
+    public java.util.List commentsPerUser(String queryString, java.util.Calendar fechaDesde, java.util.Calendar fechaHasta, String userId) {
+        logger.debug("[commentsPerUser](querySting)");
+        try
+        {
+
+            org.hibernate.Query queryObject = super.getSession(false).createQuery(queryString);
+                        queryObject.setParameter("userId", userId);
+                        queryObject.setParameter("fechaDesde", fechaDesde);
+			queryObject.setParameter("fechaHasta", fechaHasta);
+			logger.debug("queryObject "+queryObject);
+            java.util.List results = queryObject.list();
+            logger.debug("results "+results);
+            return results;
+        }
+        catch (org.hibernate.HibernateException ex)
+        {
+            throw super.convertHibernateAccessException(ex);
+        }
+
+    }
+
+
+
+
 
 
 }

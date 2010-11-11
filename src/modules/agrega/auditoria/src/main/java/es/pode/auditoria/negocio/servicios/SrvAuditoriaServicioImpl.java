@@ -772,6 +772,22 @@ public class SrvAuditoriaServicioImpl extends es.pode.auditoria.negocio.servicio
                 }
 
 
+                //10/11/2010    Fernando Garcia
+                //              added comments ratings
+                log.info("report OdeUsuarioPLUS: Comments");
+
+                ComentarioDao comentarioDao = this.getComentarioDao();
+                final java.util.List obj6= (java.util.List)comentarioDao.commentsPerUser(parametroInformeVO.getFechaDesde(), parametroInformeVO.getFechaHasta(), userId);
+
+                final Iterator it6 = obj6.iterator();
+                while (it6.hasNext()) {
+                    Object[] twoItems = (Object[])it6.next();
+                    String item = (String) twoItems[0];
+                    Long count = (Long) twoItems[1];
+
+                    alresults.add(new InformeOdeUsuarioPLUSVO("Comments",item,""+count));
+                }
+
 
 
                 InformeOdeUsuarioPLUSVO[] ioupa = new InformeOdeUsuarioPLUSVO[alresults.size()];

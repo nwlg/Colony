@@ -81,6 +81,7 @@ import es.pode.soporte.i18n.I18n;
 import es.pode.soporte.utiles.date.DateManager;
 import java.util.Iterator;
 import java.util.StringTokenizer;
+import org.apache.lucene.analysis.WhitespaceAnalyzer;
 
 /**
  * @see es.pode.indexador.negocio.servicios.busqueda.SrvBuscadorService
@@ -1758,7 +1759,9 @@ public class SrvBuscadorServiceImpl extends
                                     queryFormato.setMaxClauseCount(Integer.parseInt(props.getProperty("maxClauseCount")));
 
                                     Analyzer analyser = new StandardAnalyzer();
-
+                                    /// We could change here the analyzer
+                                    //Analyzer analyser = new WhitespaceAnalyzer();
+                                    
                                     TokenStream stream = analyser.tokenStream(
                                                     (String)k, new StringReader(filters.get(k).toString()));
 
@@ -1786,7 +1789,9 @@ public class SrvBuscadorServiceImpl extends
 				// Note that if you ever need to add a filter corresponding to
 				// an non-analysed field DO NOT tokenise it.
 
-				Analyzer analyser = new StandardAnalyzer();
+                                Analyzer analyser = new StandardAnalyzer();
+                                /// We could change here the analyzer
+                                //Analyzer analyser = new WhitespaceAnalyzer();
 
 				// Invoke toString() instead of checking and casting.
 				// This would allow other Object types as values.
