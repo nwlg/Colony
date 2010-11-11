@@ -9,7 +9,7 @@
 
 	Minor appearance changes
     		at catalogador basic plus, one text was in a bad place
-    		at random pics, removed blue line around thumbnails and fixed height
+    		at random pics, removed blue line around thumbnails and fixed height but then added again
 
     	Report activity of a user was modified.
     		Now we have information about comments made by a user.
