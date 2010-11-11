@@ -283,6 +283,9 @@
 										</div><br class="oculto"/>
 									</div>
 
+                                                                        <div>
+                                                                            &nbsp;&nbsp;
+                                                                        </div>
 
 									<!-- Resource Type -->
 									<div class="fila_de_tabla">

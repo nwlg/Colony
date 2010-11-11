@@ -44,21 +44,21 @@ if (docVO1!=null && docVO2!=null && docVO3!=null) {
 <div>
 	<table width="100%" style="padding: 5px;">
 		<tr>
-			<td width="30%" style="border:1px solid #FFC20E;padding: 10px;background: white;">
+			<td width="30%" style="border:1px solid #FFC20E;padding: 10px;background: white; height: 140px;">
 				<a href='http://<%=LdapUserDetailsUtils.getHost()+""+LdapUserDetailsUtils.getSubdominio()%>/ODE/en/<%=docVO1.getIdentificadorODE()%>'>
-						<center><img style="border:1px solid #9DBEDD;" src='<%=imgODE1%>' alt='<%=docVO1.getTitulo()%>'/></center>
+						<center><img src='<%=imgODE1%>' alt='<%=docVO1.getTitulo()%>'/></center>
 				</a>
 			</td>
 			<td witdh="5%">&nbsp;</td>
-			<td width="30%" style="border:1px solid #FFC20E;padding: 10px;background: white;">
+			<td width="30%" style="border:1px solid #FFC20E;padding: 10px;background: white; height: 140px;">
 				<a href='http://<%=LdapUserDetailsUtils.getHost()+""+LdapUserDetailsUtils.getSubdominio()%>/ODE/en/<%=docVO2.getIdentificadorODE()%>'>
-						<center><img style="border:1px solid #9DBEDD;" src='<%=imgODE2%>' alt='<%=docVO2.getTitulo()%>'/></center>
+						<center><img src='<%=imgODE2%>' alt='<%=docVO2.getTitulo()%>'/></center>
 				</a>
 			</td>
 			<td witdh="5%">&nbsp;</td>
-			<td width="30%" style="border:1px solid #FFC20E;padding: 10px;background: white;">
+			<td width="30%" style="border:1px solid #FFC20E;padding: 10px;background: white; height: 140px;">
 				<a href='http://<%=LdapUserDetailsUtils.getHost()+""+LdapUserDetailsUtils.getSubdominio()%>/ODE/en/<%=docVO3.getIdentificadorODE()%>'>
-						<center><img style="border:1px solid #9DBEDD;" src='<%=imgODE3%>' alt='<%=docVO3.getTitulo()%>'/></center>
+						<center><img src='<%=imgODE3%>' alt='<%=docVO3.getTitulo()%>'/></center>
 				</a>
 			</td>
 		</tr>
