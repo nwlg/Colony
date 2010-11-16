@@ -1,3 +1,12 @@
+16/11/2010
+	Fernando Garcia	(bitivision@gmail.com)
+
+	BuscadorAvanzadoImpl.java was modified to don't remove dots and other characters that are important for internal queries
+
+	SrvBuscarServiceImpl.java, Agrega old way of sorting was commented and deactivated. Current sorting is only the lucene default sorting (RELEVANCE)
+		it was modified in two places, handleBuscarAvanzado and handleBusquedaFederadaLocal.  
+
+	Extra fixes with star and dot star queries
 
 
 

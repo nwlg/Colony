@@ -144,7 +144,10 @@ public class SrvBuscarServiceImpl
         		if(resultados!=null && resultados.getNumeroResultados().intValue() > 0){
 	        		String[] sugerencias = resultados.getSugerencias();
 	        		TaxonVO[] tesauros = resultados.getTesauros();
-	        		resultados = ordenarResultados(Arrays.asList(resultados));
+	        		// 16/11/2010   Fernando Garcia
+                                //              Removing the original Agrega Sorting. Only the lucene sorting is allowed
+                                //resultados = ordenarResultados(Arrays.asList(resultados));
+
 	        		resultados.setTesauros(tesauros);
 	        		resultados.setSugerencias(sugerencias);
         		}
@@ -321,7 +324,12 @@ public class SrvBuscarServiceImpl
 		if (logger.isDebugEnabled())logger.debug("SrvBuscarServiceImpl - handleBusquedaFederadaLocal :Se ordenan resultados o sugerencias y se devuelve resultado.");
 		DocumentosVO documentosSugerenciasTesauros= new DocumentosVO();
 	  	if((documentos!=null) && (documentos.size()>0) && existenResultados){
-	  		DocumentosVO resultadosOrdenados= ordenarResultados(documentos);
+
+                    // 16/11/2010   Fernando Garcia
+                    //              Default sorting of Lucene is enough
+                    // original line
+                    //DocumentosVO resultadosOrdenados= ordenarResultados(documentos);
+                        DocumentosVO resultadosOrdenados= documentos.get(0);
 	  		documentosSugerenciasTesauros.setNumDocumentosIndice(resultadosOrdenados.getNumDocumentosIndice());
 	  		documentosSugerenciasTesauros.setNumeroResultados(resultadosOrdenados.getNumeroResultados());
 	  		documentosSugerenciasTesauros.setResultados(resultadosOrdenados.getResultados());
@@ -370,7 +378,12 @@ public class SrvBuscarServiceImpl
 			if (logger.isDebugEnabled())logger.debug("SrvBuscarServiceImpl - handleBuscarSQI :Se ordenan resultados o sugerencias y se devuelve resultado.");
 		  	if((documentos!=null) && (documentos.size()>0) && existenResultados){
 	//	  		Habr� que ordenar los resultados de los difetentes nodos SQI.
-		  		resultadoCache= ordenarResultadosSQI(documentos);
+
+                            //  16/11/2010  Fernando Garcia
+                            //              We leave this ordenarResultadosSQI because is not doing a real sorting at the moment
+                            //              only a conversion of object types
+                            //              TODO:update this part
+                                resultadoCache= ordenarResultadosSQI(documentos);
 		  		cacheConfig.getHitsSQI().put(new Element(consulta.getPalabrasClave(), resultadoCache));
 		  	}else{
 		  		return new ResultadoBusquedaSQIVO(new LomEsVO[0],0);

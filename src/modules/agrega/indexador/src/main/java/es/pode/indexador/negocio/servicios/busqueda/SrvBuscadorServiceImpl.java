@@ -227,7 +227,12 @@ public class SrvBuscadorServiceImpl extends
 		long start = System.currentTimeMillis();
 		Object[] hits=null;
 		boolean resultadoUnico = false;
-		if (paramBusq.getPalabrasClave()!=null){
+
+                // Some fixing with "*" and ".*"
+		if (paramBusq.getPalabrasClave()!=null &&
+                        !paramBusq.getPalabrasClave().trim().equals("*") &&
+                        !paramBusq.getPalabrasClave().trim().equals(".*")
+                        ){
 			if (paramBusq.getPalabrasClave().trim().toLowerCase().startsWith(props.getProperty("agrega_admin") + " ")){
 				hits = new Hits[1];
 				hits = this.internaBusquedaQuery(paramBusq, paramBusq.getPalabrasClave().toLowerCase().trim().substring((props.getProperty("agrega_admin") + " ").length()), query, false, null);

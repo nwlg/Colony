@@ -557,7 +557,19 @@ public class BuscarAvanzadoControllerImpl extends BuscarAvanzadoController{
 	    		param.setIdiomaNavegacion(idiomaNavegacion);
 	    		param.setIdiomaBusqueda(form.getIdioma());
 	    		param.setOrigenPagina(new Integer(form.getPagina()));
-	    		param.setPalabrasClave(prepararTextoBusqueda(eliminarEspaciosBlanco(textoBusqueda)));
+
+
+                        // 16/11/2010   Fernando Garcia
+                        //              We don't want removing dots or other characters from the original query
+                        /*********************************/
+                        if (textoBusqueda.trim().equals(".*")) {
+                            param.setPalabrasClave("*");
+                        } else {
+                            param.setPalabrasClave(eliminarEspaciosBlanco(textoBusqueda));
+                        }
+                        // Original line
+                        //param.setPalabrasClave(prepararTextoBusqueda(eliminarEspaciosBlanco(textoBusqueda)));
+                        
 	    		param.setFormato(form.getFormato());
 	    		param.setKeyword(form.getKeyword());
 	    		param.setDestinatarios(form.getDestinatarios());
