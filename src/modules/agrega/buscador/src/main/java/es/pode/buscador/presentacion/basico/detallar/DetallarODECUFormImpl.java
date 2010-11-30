@@ -208,6 +208,13 @@ public class DetallarODECUFormImpl
     private java.lang.Object[] numeroResultadosValueList;
     private java.lang.Object[] numeroResultadosLabelList;
 
+
+    //24/11/2010    Fernando Garcia
+    //              Adding sorting method
+    private  java.lang.String sortingMethod;
+
+
+
     public DetallarODECUFormImpl()
     {
     }
@@ -6739,6 +6746,21 @@ public class DetallarODECUFormImpl
             }
         }
     }
+
+
+
+    //24/11/2010    Fernando Garcia
+    //              Adding sorting method
+
+    public String getSortingMethod() {
+        return sortingMethod;
+    }
+
+    public void setSortingMethod(String sortingMethod) {
+        this.sortingMethod = sortingMethod;
+    }
+
+
 
     /**
      * @see org.apache.struts.validator.ValidatorForm#reset(org.apache.struts.action.ActionMapping,javax.servlet.http.HttpServletRequest)

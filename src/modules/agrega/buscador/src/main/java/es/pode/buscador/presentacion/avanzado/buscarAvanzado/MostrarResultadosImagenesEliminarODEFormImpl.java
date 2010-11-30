@@ -214,9 +214,14 @@ public class MostrarResultadosImagenesEliminarODEFormImpl
     private java.lang.String learningTimeSearchFilter;
     private java.lang.String intendedEndUserRoleSearchFilter;
 
-        //19/10/2010    Fernando Garcia
+    //19/10/2010    Fernando Garcia
     //              Adding a new filter for file mime types
     private java.lang.String intendedFMTSearchFilter;
+
+
+    //18/11/2010    Fernando Garcia
+    //              Adding a sorting method
+    private java.lang.String sortingMethod;
 
     
     public MostrarResultadosImagenesEliminarODEFormImpl()
@@ -6742,6 +6747,18 @@ public class MostrarResultadosImagenesEliminarODEFormImpl
         this.intendedFMTSearchFilter = intendedFMTSearchFilter;
     }
 
+
+
+
+    //18/11/2010    Fernando Garcia
+    //              Sort method
+    public void setSortingMethod(java.lang.String sortingMethod) {
+        this.sortingMethod = sortingMethod;
+    }
+
+    public java.lang.String getSortingMethod(){
+        return sortingMethod;
+    }
 
 
     

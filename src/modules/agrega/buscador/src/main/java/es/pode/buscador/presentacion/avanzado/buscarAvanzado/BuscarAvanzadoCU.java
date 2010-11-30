@@ -1,13 +1,41 @@
 // license-header java merge-point
 package es.pode.buscador.presentacion.avanzado.buscarAvanzado;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Properties;
+import org.apache.log4j.Logger;
+
 /**
  * 
  */
 public final class BuscarAvanzadoCU extends org.apache.struts.action.Action
 {
+    private Logger logger = Logger.getLogger(this.getClass());
+
+    public static void loadSortingMethodCombo(Properties props, Collection sortingMethodLabelList,Collection sortingMethodValueList){
+
+            sortingMethodLabelList.add(props.getProperty("sortingMethod.relevance.label","sortingMethod.relevance.label"));
+            sortingMethodValueList.add("RELEVANCE");
+
+            int i=1;
+
+            String fieldname = props.getProperty("sortingMethod.field"+i);
+            String fieldlabel = props.getProperty("sortingMethod.field"+i+".label");
+            String fieldreverse = props.getProperty("sortingMethod.field"+i+".reverse");
+
+            while (fieldname!=null && fieldlabel!=null && fieldreverse!=null){
+                sortingMethodLabelList.add(fieldlabel);
+                sortingMethodValueList.add(fieldname+","+fieldreverse);
+                i++;
+                fieldname = props.getProperty("sortingMethod.field"+i);
+                fieldlabel = props.getProperty("sortingMethod.field"+i+".label");
+                fieldreverse = props.getProperty("sortingMethod.field"+i+".reverse");
+            }
+
+    }
+
     public org.apache.struts.action.ActionForward execute(org.apache.struts.action.ActionMapping mapping, org.apache.struts.action.ActionForm form, javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws java.lang.Exception
     {
         final BuscarAvanzadoCUFormImpl specificForm = (BuscarAvanzadoCUFormImpl)form;
@@ -29,15 +57,21 @@ public final class BuscarAvanzadoCU extends org.apache.struts.action.Action
             //  This will be for a future combo box to select different sorting
             //  It will be hidden at mostrar-resultados-imagenes.jsp until I'll develop it
             //  TODO: get this struture from a common place (same code at serveral places)
-            
+
+            Properties props = null;
+            try {
+                    props = new Properties();
+                    props.load(this.getClass().getResourceAsStream("/spring_buscador.properties"));
+            } catch (IOException e) {
+                    logger.error("ERROR: file not found: spring_buscador.properties",
+                                    e);
+                    throw new RuntimeException(e);
+            }
+
             Collection sortingMethodLabelList = new ArrayList();
             Collection sortingMethodValueList = new ArrayList();
 
-            sortingMethodLabelList.add("Relevance");
-            sortingMethodValueList.add("RELEVANCE");
-
-            sortingMethodLabelList.add("Index Order");
-            sortingMethodValueList.add("Index");
+            BuscarAvanzadoCU.loadSortingMethodCombo(props, sortingMethodLabelList,sortingMethodValueList);
 
             specificForm.setSortingMethodLabelList(sortingMethodLabelList.toArray());
             specificForm.setSortingMethodValueList(sortingMethodValueList.toArray());
@@ -67,6 +101,33 @@ public final class BuscarAvanzadoCU extends org.apache.struts.action.Action
             specificForm.setMesPublicacion(previousForm.getMesPublicacion());
             specificForm.setRecurso(previousForm.getRecurso());
             specificForm.setContexto(previousForm.getContexto());
+
+
+
+            //  24/11/2010  Fernando Garcia
+            //              Sorting Method combo values
+
+            Properties props = null;
+            try {
+                    props = new Properties();
+                    props.load(this.getClass().getResourceAsStream("/spring_buscador.properties"));
+            } catch (IOException e) {
+                    logger.error("ERROR: file not found: spring_buscador.properties",
+                                    e);
+                    throw new RuntimeException(e);
+            }
+
+            Collection sortingMethodLabelList = new ArrayList();
+            Collection sortingMethodValueList = new ArrayList();
+
+            BuscarAvanzadoCU.loadSortingMethodCombo(props, sortingMethodLabelList,sortingMethodValueList);
+
+            specificForm.setSortingMethodLabelList(sortingMethodLabelList.toArray());
+            specificForm.setSortingMethodValueList(sortingMethodValueList.toArray());
+
+
+
+
         }
         else
         if (previousFormObject instanceof es.pode.buscador.presentacion.basico.detallar.OdeAgregadoAgregarNuevoFormImpl)

@@ -35,21 +35,49 @@
 
 <!-- Display the search result total -->
 <div class="results_bubble_text">
-<table><tr><td width="25%">
+<table style="width: 100%;"><tr><td width="25%">
 <bean:message key="listar.odecu.mostrar.resultados.consulta.cabecera.desdeHasta" arg0="${form.resultadosDesde}" arg1="${form.resultadosHasta}" arg2="${form.numMaxRes}"/>
 </td>
-<td width="75%">
-        <center>
+<td width="75%" align="right">
 <%--
 //09/11/2010    Fernando Garcia
-//Temporary code for a combo to sort items
-<html:select name="form" property="sortingMethod" styleClass="search_filter_select">
-    <c:forEach items="${form.sortingMethodBackingList}" var="listItem" begin="0" end="${fn:length(form.sortingMethodLabelList)}">
-        <html:option value="${listItem.value}">${listItem.label}</html:option>
-    </c:forEach>
-</html:select>
+//              Combo to sort items
+
 --%>
-        </center>
+<form name="searchWithSorting" method="get" action="<rewrite:rewrite url="${initParam.url_buscador}"/>">
+Sort by: &nbsp;
+      <!-- SORT COMBO -->
+    <html:select name="form" property="sortingMethod" styleClass="search_filter_select" onchange="javascript:document.forms['searchWithSorting'].submit();" >
+        <c:forEach items="${form.sortingMethodBackingList}" var="listItem" begin="0" end="${fn:length(form.sortingMethodLabelList)}">
+            <html:option value="${listItem.value}"><bean:message key="${listItem.label}" /></html:option>
+        </c:forEach>
+    </html:select>
+
+    <input type="hidden" name="keyword" value="${form.keyword}" />
+    <input type="hidden" name="tipoBusqueda" value="${form.tipoBusqueda}" />
+    <input type="hidden" name="buscadorContenido" value="${form.buscadorContenido}" />
+
+    <%
+        if (!session.getAttribute("form").getClass().getName().equals("es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarQuisoDecirAvanzadoBuscarQuisoDecirFormImpl")
+         && !session.getAttribute("form").getClass().getName().equals("es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarResultadosImagenesPaginarImagenesFormImpl")
+                ) {
+    %>
+    <c:if test="${not empty form.buscadorGeneral}">
+        <input type="hidden" name="buscadorGeneral" value="${form.buscadorGeneral}" />
+    </c:if>
+    <c:if test="${empty form.buscadorGeneral}">
+        <input type="hidden" name="buscadorGeneral" value="${form.buscadorContenido}" />
+    </c:if>
+    <%
+        } else {
+    %>
+        <input type="hidden" name="buscadorGeneral" value="${form.buscadorContenido}" />
+    <%
+        }
+    %>
+
+&nbsp;&nbsp;
+</form>
 </td>
 </tr>
 </table>
@@ -108,7 +136,14 @@
 <form method="post" action="<html:rewrite action="/BuscarAvanzadoCU/MostrarResultadosImagenesEliminarODE.do"/>">
 	<!-- Inicio Resultados de Búsqueda -->
 	<!-- Inicio Resultados de Búsqueda -->
-			
+
+
+        <c:choose>
+            <c:when test="${empty form.sortingMethod}"><c:set var="finalSortingMethod" value="RELEVANCE" scope="page" /></c:when>
+            <c:otherwise><c:set var="finalSortingMethod" value="${form.sortingMethod}" scope="page" /></c:otherwise>
+        </c:choose>
+
+
 				<logic:iterate name="form" property="resultadosVO" id="resultados" indexId="idx">
 
 					<imagenes:imagenes
@@ -129,7 +164,7 @@
 					 contentProviders="${resultados.contentProviders}"
 					 autores="${resultados.authors}"
 					 typicalLearningTime="${resultados.typicalLearningTime}"
-                     url="/buscador/BuscarAvanzadoCU/MostrarResultadosImagenesPrepararRetornoDetalleImagenes.do?idioma=${form.idioma}&amp;buscadorContenido=${form.buscadorContenidoEnlace}&amp;pagina=${form.pagina}&amp;formato=${form.formato}&amp;recurso=${form.recurso}&amp;procesoCognitivo=${form.procesoCognitivo}&amp;contexto=${form.contexto}&amp;edad=${form.edad}&amp;autor=${form.autor}&amp;diaPublicacion=${form.diaPublicacion}&amp;mesPublicacion=${form.mesPublicacion}&amp;anyoPublicacion=${form.anyoPublicacion}&amp;c_s_secuencia=${form.c_s_secuencia}&amp;valoracion=${form.valoracion}&amp;areaCurricular=${form.areaCurricular}&amp;identificadorODE=${resultados.id}&amp;tipoVisualizacion=${form.tipoVisualizacion}&amp;nodoDestino=${resultados.nodo}&amp;enlaceComunidadesSeleccionadas=${form.enlaceComunidadesSeleccionadas}&amp;tipoBusqueda=${form.tipoBusqueda}&amp;enlaceTodoAgrega=${form.enlaceTodoAgrega}&amp;tipoLayoutBuscador=${form.tipoLayoutBuscador}&amp;idTesauro=${form.idTesauro}&amp;nomTesauros=${form.nomTesauros}&amp;idTesauroSugerencia=${form.idTesauroSugerencia}&amp;nivelAgregacion=${form.nivelAgregacion}&amp;destinatarios=${form.destinatarios}&amp;keyword=${form.keyword}&amp;numeroResultados=${form.numeroResultados}"/>
+                     url="/buscador/BuscarAvanzadoCU/MostrarResultadosImagenesPrepararRetornoDetalleImagenes.do?sortingMethod=${finalSortingMethod}&amp;idioma=${form.idioma}&amp;buscadorContenido=${form.buscadorContenidoEnlace}&amp;pagina=${form.pagina}&amp;formato=${form.formato}&amp;recurso=${form.recurso}&amp;procesoCognitivo=${form.procesoCognitivo}&amp;contexto=${form.contexto}&amp;edad=${form.edad}&amp;autor=${form.autor}&amp;diaPublicacion=${form.diaPublicacion}&amp;mesPublicacion=${form.mesPublicacion}&amp;anyoPublicacion=${form.anyoPublicacion}&amp;c_s_secuencia=${form.c_s_secuencia}&amp;valoracion=${form.valoracion}&amp;areaCurricular=${form.areaCurricular}&amp;identificadorODE=${resultados.id}&amp;tipoVisualizacion=${form.tipoVisualizacion}&amp;nodoDestino=${resultados.nodo}&amp;enlaceComunidadesSeleccionadas=${form.enlaceComunidadesSeleccionadas}&amp;tipoBusqueda=${form.tipoBusqueda}&amp;enlaceTodoAgrega=${form.enlaceTodoAgrega}&amp;tipoLayoutBuscador=${form.tipoLayoutBuscador}&amp;idTesauro=${form.idTesauro}&amp;nomTesauros=${form.nomTesauros}&amp;idTesauroSugerencia=${form.idTesauroSugerencia}&amp;nivelAgregacion=${form.nivelAgregacion}&amp;destinatarios=${form.destinatarios}&amp;keyword=${form.keyword}&amp;numeroResultados=${form.numeroResultados}"/>
 
 				</logic:iterate>					
 		<!--  -->

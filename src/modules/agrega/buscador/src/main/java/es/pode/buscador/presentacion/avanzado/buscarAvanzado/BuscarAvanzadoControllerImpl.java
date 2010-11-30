@@ -569,6 +569,11 @@ public class BuscarAvanzadoControllerImpl extends BuscarAvanzadoController{
                         }
                         // Original line
                         //param.setPalabrasClave(prepararTextoBusqueda(eliminarEspaciosBlanco(textoBusqueda)));
+
+                        // 19/11/2010   Fernando Garcia
+                        //              sendind sorting method to the webservice call
+                        param.setSortingMethod(form.getSortingMethod() );
+                        //
                         
 	    		param.setFormato(form.getFormato());
 	    		param.setKeyword(form.getKeyword());

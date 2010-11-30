@@ -41,6 +41,7 @@
     <input type="hidden" name="keystageSearchFilter" value="" />
     <input type="hidden" name="learningTimeSearchFilter" value="" />
     <input type="hidden" name="intendedEndUserRoleSearchFilter" value="" />
+    <input type="hidden" name="intendedFMTSearchFilter" value="" />
 
 	<input style="display:none;" type="submit" alt="<bean:message key="buscador.boton.buscar.alt"/>" class="buscar" value="<bean:message key="buscador.buscador.boton"/>" name="buscar" />
 

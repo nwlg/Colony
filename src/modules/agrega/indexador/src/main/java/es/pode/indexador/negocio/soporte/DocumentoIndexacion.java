@@ -34,6 +34,7 @@ public class DocumentoIndexacion {
 			logger.debug("Se va a generar el campo title = " + title + " args = "+ arg2 + " store = " + store + " index = " + index + " prioridad = " + prioridad);
 		Field field = new Field (title,arg2,store,index);
 		field.setBoost(prioridad);
+                field.setOmitNorms(true);//////removing norms!
 		
 		return field;		
 	}
@@ -52,7 +53,7 @@ public class DocumentoIndexacion {
 						Float.valueOf(props.getProperty("prioridad_palabraClave_secundario")).floatValue(), DocumentoIndexacion.INDEXADO_MIN);
 				if(DocumentoIndexacion.logger.isDebugEnabled())
 				DocumentoIndexacion.logger.debug("A adimos al documento el campo secundario campo_keywords_secundario ");
-
+                                
 				aniadeFieldaDocument(doc, props.getProperty("campo_title_secundario"),
 						lomESSecundario.getTitulo(), Field.Store.YES,Field.Index.TOKENIZED,
 						Float.valueOf(props.getProperty("prioridad_titulo_secundario")).floatValue(), DocumentoIndexacion.INDEXADO_MIN);

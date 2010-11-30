@@ -234,7 +234,13 @@ ${form.numVecesEnviado}</span>
 	<logic:notEqual name="form" property="busquedaSimpleAvanzada" value="BUSQUEDA_ARBOL">
 		<logic:notEqual name="form" property="busquedaSimpleAvanzada" value="">
 			<form style="display:none;" name="backtosearch" action="<html:rewrite action="/DetallarODECU/MostrarDetalleODEVolverBusqueda.do"/>" method="post">	
-			<input class="boton_125" id="ancho210" type="submit" value="<bean:message key="listarODE.arbolCurricular.resultados.busqueda"/>" /></form>
+			<input class="boton_125" id="ancho210" type="submit" value="<bean:message key="listarODE.arbolCurricular.resultados.busqueda"/>" />
+                        <%--
+    //24/11/2010    Fernando Garcia
+    //              Adding sorting method
+                        --%>
+                        <input type="hidden" name="sortingMethod" value="${form.sortingMethod}"/>
+                        </form>
 
 <div class="results_detail_back">
 <div class="db_bubble_topleft"><div class="db_bubble_bottomleft"><div class="db_bubble_topright"><div class="db_bubble_bottomright">
@@ -260,6 +266,12 @@ ${form.numVecesEnviado}</span>
 		<input type="hidden" name="identificadorODE" value="${form.identificadorODE}"/>
 		<input type="hidden" name="posicionamiento" value="${form.posicionamientoAnterior}"/>
 		<input type="hidden" name="tipoLayoutBuscador" value="${form.tipoLayoutBuscador}"/>
+                        <%--
+    //24/11/2010    Fernando Garcia
+    //              Adding sorting method
+                        --%>
+                <input type="hidden" name="sortingMethod" value="${form.sortingMethod}"/>
+
 	</form>
 
 <div class="results_detail_previous">
@@ -279,12 +291,18 @@ ${form.numVecesEnviado}</span>
 <logic:equal name="form" property="existeSesion" value="true">
 	<logic:equal name="form" property="mostrarVuelta" value="true">
 		<logic:notEmpty name="form" property="posicionamientoSiguiente">
-			<form name="next" style="display:none;" action="<html:rewrite action="/DetallarODECU/MostrarDetalleODEGestionarPosicionado.do"/>" method="post">
+		<form name="next" style="display:none;" action="<html:rewrite action="/DetallarODECU/MostrarDetalleODEGestionarPosicionado.do"/>" method="post">
 			<input class="boton_125_de_2" id="bot_flot_der" type="submit" value="<bean:message key="listar.odecu.mostrar.resultados.detalles.siguiente"/>" />
 			<input type="hidden" name="idioma" value="${form.idioma}"/>
 			<input type="hidden" name="nodoOrigen" value="${form.nodoOrigen}"/>
 			<input type="hidden" name="identificadorODE" value="${form.identificadorODE}"/>
-			<input type="hidden" name="posicionamiento" value="${form.posicionamientoSiguiente}"/>				<input type="hidden" name="tipoLayoutBuscador" value="${form.tipoLayoutBuscador}"/>
+			<input type="hidden" name="posicionamiento" value="${form.posicionamientoSiguiente}"/>				
+                        <input type="hidden" name="tipoLayoutBuscador" value="${form.tipoLayoutBuscador}"/>
+                        <%--
+    //24/11/2010    Fernando Garcia
+    //              Adding sorting method
+                        --%>
+                        <input type="hidden" name="sortingMethod" value="${form.sortingMethod}"/>
 			</form>
 
 <div class="results_detail_next">

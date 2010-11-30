@@ -539,8 +539,9 @@ public class DetallarControllerImpl extends DetallarController{
 		try{
 			BuscarSession sesion = this.getBuscarSession(request);
 			if(sesion.getPagina()!=null && form.getResultados().getResultadoBusqueda()!=null && form.getResultados().getResultadoBusqueda().length > 0){
-		        for(int i = 0; i < form.getResultados().getResultadoBusqueda().length; i++){
-		        	if(form.getResultados().getResultadoBusqueda()[i].getId()!=null && form.getResultados().getResultadoBusqueda()[i].getId().equals(form.getIdentificadorODE())){
+                            for(int i = 0; i < form.getResultados().getResultadoBusqueda().length; i++){
+                                logger.debug("<><><><>: "+ i + "-> " + form.getIdentificadorODE()+ "=? " + form.getResultados().getResultadoBusqueda()[i].getId());
+                                if(form.getResultados().getResultadoBusqueda()[i].getId()!=null && form.getResultados().getResultadoBusqueda()[i].getId().equals(form.getIdentificadorODE())){
 		        		form.setNodoDestino(form.getResultados().getResultadoBusqueda()[i].getNodo());
 		        		if(i==0 && sesion.getPagina().intValue()==1 && form.getResultados().getNumeroResultados().intValue()==1){
 		        			form.setPosicionamientoAnterior("");
@@ -823,6 +824,10 @@ public class DetallarControllerImpl extends DetallarController{
 		log("DetallarControllerImpl - cargarParametros");
 		BuscarSession sesion = this.getBuscarSession(request);
 		ParametrosBusquedaAvanzadaVO param = new ParametrosBusquedaAvanzadaVO();
+                // 24/11/2010   Fernando Garcia
+                //              Adding sortingMethod for this query
+                param.setSortingMethod(request.getParameter("sortingMethod"));
+                
 		param.setIdiomaNavegacion(((Locale)request.getSession().getAttribute(ConstantesAgrega.DEFAULT_LOCALE)).getLanguage());
 		param.setIdiomaBusqueda(idioma);
 		param.setOrigenPagina(pagina);

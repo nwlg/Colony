@@ -85,6 +85,11 @@
 
 	<br/>
 
+        <%-- 
+            // 18/11/2010   Fernando Garcia
+            //    Sorting method by default           --%>
+        <input type="hidden" name="sortingMethod" value="RELEVANCE" />
+
 	<input style="display:none;" type="submit" alt="<bean:message key="buscador.boton.buscar.alt"/>" class="buscar" value="<bean:message key="buscador.buscador.boton"/>" name="buscar" />
 
 	</div>

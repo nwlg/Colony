@@ -2040,6 +2040,11 @@ public interface EjecutarBusquedaAvanzadaForm
 
 
 
+    //18/11/2010    Fernando Garcia
+    //              Sort method
+    public void setSortingMethod(java.lang.String intendedEndUserRoleSearchFilter);
+
+    public java.lang.String getSortingMethod();
 
 
 }

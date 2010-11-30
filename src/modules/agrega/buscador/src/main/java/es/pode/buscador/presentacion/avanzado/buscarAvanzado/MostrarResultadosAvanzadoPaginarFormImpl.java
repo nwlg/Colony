@@ -208,7 +208,11 @@ public class MostrarResultadosAvanzadoPaginarFormImpl
     //              Adding a new filter for file mime types
     private java.lang.String intendedFMTSearchFilter;
 
-    
+    //18/11/2010    Fernando Garcia
+    //              Adding a sorting method
+    private java.lang.String sortingMethod;
+
+
     
     public MostrarResultadosAvanzadoPaginarFormImpl()
     {
@@ -6530,6 +6534,20 @@ public class MostrarResultadosAvanzadoPaginarFormImpl
 
     public void setIntendedFMTSearchFilter(String intendedFMTSearchFilter) {
         this.intendedFMTSearchFilter = intendedFMTSearchFilter;
+    }
+
+
+
+
+
+    //18/11/2010    Fernando Garcia
+    //              Sort method
+    public void setSortingMethod(java.lang.String sortingMethod) {
+        this.sortingMethod = sortingMethod;
+    }
+
+    public java.lang.String getSortingMethod(){
+        return sortingMethod;
     }
 
 

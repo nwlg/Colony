@@ -224,6 +224,9 @@ public class SrvBuscarServiceImpl
 		try {
 			if (logger.isDebugEnabled())logger.debug("SrvBuscarServiceImpl - handleBusquedaAvanzadaLocal:Comienzo");
 			ParamAvanzadoVO paramBusq = new ParamAvanzadoVO();
+                        //  19/11/2010  Fernando Garcia
+                        //              Sorting method is passed to the webservice
+                        paramBusq.setSortingMethod(parametros.getSortingMethod());
 			paramBusq.setIdiomaNavegacion(parametros.getIdiomaNavegacion());
 			paramBusq.setNumeroResultados(parametros.getNumeroResultados());
 			paramBusq.setPalabrasClave(parametros.getPalabrasClave());
@@ -514,6 +517,9 @@ public class SrvBuscarServiceImpl
     		}
     	}
         return 	""+
+                // 19/11/2010   Fernando Garcia
+                //              Sorting method cache parameter
+        (parametrosAvanzada.getSortingMethod() != null?parametrosAvanzada.getSortingMethod():"") +
         (parametrosAvanzada.getAutor() != null?parametrosAvanzada.getAutor():"") + 
          comunidades + 
         (parametrosAvanzada.getContexto() != null?parametrosAvanzada.getContexto():"") + 
@@ -942,7 +948,7 @@ public class SrvBuscarServiceImpl
 			//valoresBusquedaReturn[i].setUrlImagen(valoresBusquedaReturn[i].getUrlImagen());
 		}
 		if (logger.isDebugEnabled())logger.debug("SrvBuscarServiceImpl - generaPaginaResultadosBusqueda: Devolvemos ["+(hasta-desde+1)+"] resultados correspondientes a la pagina ["+pagina+"] con idBusqueda["+idCache+"]");
-		return new ResultadoBusquedaVO(valoresBusquedaReturn,
+                return new ResultadoBusquedaVO(valoresBusquedaReturn,
 				resultadoCache.getSugerencias(), 
 				new Integer(String.valueOf(resultadoCache.getNumeroResultados())), 
 				resultadoCache.getIdCache(),

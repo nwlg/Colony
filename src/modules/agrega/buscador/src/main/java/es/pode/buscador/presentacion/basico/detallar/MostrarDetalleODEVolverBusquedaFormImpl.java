@@ -79,6 +79,11 @@ public class MostrarDetalleODEVolverBusquedaFormImpl
     private java.lang.Object[] contextoValueList;
     private java.lang.Object[] contextoLabelList;
 
+
+    //23/11/2010    Fernando Garcia
+    //              in order to return a sortingMethod to the page with all results, I have added the attribute here
+    private java.lang.String sortingMethod;
+
     public MostrarDetalleODEVolverBusquedaFormImpl()
     {
     }
@@ -2394,6 +2399,18 @@ public class MostrarDetalleODEVolverBusquedaFormImpl
             }
         }
     }
+
+    
+    //23/11/2010    Fernando Garcia
+    //              SortingMethod
+    public String getSortingMethod() {
+        return sortingMethod;
+    }
+
+    public void setSortingMethod(String sortingMethod) {
+        this.sortingMethod = sortingMethod;
+    }
+
 
     /**
      * Resets the given <code>contexto</code>.

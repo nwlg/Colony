@@ -1,17 +1,42 @@
 // license-header java merge-point
 package es.pode.buscador.presentacion.avanzado.buscarAvanzado;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Properties;
+import org.apache.log4j.Logger;
 
 /**
  * 
  */
 public final class MostrarResultadosImagenesPaginarImagenes extends org.apache.struts.action.Action
 {
+    private Logger logger = Logger.getLogger(this.getClass());
+
     public org.apache.struts.action.ActionForward execute(org.apache.struts.action.ActionMapping mapping, org.apache.struts.action.ActionForm form, javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws java.lang.Exception
     {
         final MostrarResultadosImagenesPaginarImagenesFormImpl specificForm = (MostrarResultadosImagenesPaginarImagenesFormImpl)form;
+
+        final Object previousFormObject = request.getSession().getAttribute("form");
+
+        if (previousFormObject instanceof es.pode.buscador.presentacion.avanzado.buscarAvanzado.BuscarAvanzadoCUFormImpl){
+            es.pode.buscador.presentacion.avanzado.buscarAvanzado.BuscarAvanzadoCUFormImpl oldForm =
+                    (es.pode.buscador.presentacion.avanzado.buscarAvanzado.BuscarAvanzadoCUFormImpl)previousFormObject;
+
+            specificForm.setSortingMethod(oldForm.getSortingMethod());
+        } else
+
+        if (previousFormObject instanceof es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarResultadosImagenesPaginarImagenesFormImpl){
+            es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarResultadosImagenesPaginarImagenesFormImpl oldForm =
+                    (es.pode.buscador.presentacion.avanzado.buscarAvanzado.MostrarResultadosImagenesPaginarImagenesFormImpl)previousFormObject;
+
+            specificForm.setSortingMethod(oldForm.getSortingMethod());
+        }
+
+
+
+
 
         org.apache.struts.action.ActionForward forward = null;
 
@@ -23,14 +48,20 @@ public final class MostrarResultadosImagenesPaginarImagenes extends org.apache.s
             //  It will be hidden at mostrar-resultados-imagenes.jsp until I'll develop it
             //  TODO: get this struture from a common place (same code at BuscarAvanzadoCU.java and more places)
 
+           Properties props = null;
+            try {
+                    props = new Properties();
+                    props.load(this.getClass().getResourceAsStream("/spring_buscador.properties"));
+            } catch (IOException e) {
+                    logger.error("ERROR: file not found: spring_buscador.properties",
+                                    e);
+                    throw new RuntimeException(e);
+            }
+
             Collection sortingMethodLabelList = new ArrayList();
             Collection sortingMethodValueList = new ArrayList();
 
-            sortingMethodLabelList.add("Relevance");
-            sortingMethodValueList.add("RELEVANCE");
-
-            sortingMethodLabelList.add("Index Order");
-            sortingMethodValueList.add("Index");
+            BuscarAvanzadoCU.loadSortingMethodCombo(props, sortingMethodLabelList,sortingMethodValueList);
 
             specificForm.setSortingMethodLabelList(sortingMethodLabelList.toArray());
             specificForm.setSortingMethodValueList(sortingMethodValueList.toArray());

@@ -686,6 +686,15 @@
                             </xsd:documentation>
                         </xsd:annotation>
                     </xsd:element>
+
+                    <xsd:element name="sortingMethod" nillable="true" type="xsd:string">
+                        <xsd:annotation>
+                            <xsd:documentation>
+
+                            </xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:element>
+
                     <xsd:element name="searchFilters" nillable="true" type="apachesoap:Map">
                         <xsd:annotation>
                             <xsd:documentation>

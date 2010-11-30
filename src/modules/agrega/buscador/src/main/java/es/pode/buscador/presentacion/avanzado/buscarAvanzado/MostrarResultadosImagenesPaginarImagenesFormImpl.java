@@ -6581,6 +6581,8 @@ public class MostrarResultadosImagenesPaginarImagenesFormImpl
 
 
 
+
+
     //19/10/2010    Fernando Garcia
     //              Adding a new filter for file mime types
     public String getIntendedFMTSearchFilter() {

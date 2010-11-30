@@ -211,7 +211,14 @@ public class MostrarQuisoDecirAvanzadoBuscarQuisoDecirFormImpl
     //              Adding a new filter for file mime types
     private java.lang.String intendedFMTSearchFilter;
     
-    
+        //18/11/2010    Fernando Garcia
+    //              Adding a sorting method
+    private java.lang.String sortingMethod;
+    private java.lang.Object[] sortingMethodValueList;
+    private java.lang.Object[] sortingMethodLabelList;
+
+
+
     public MostrarQuisoDecirAvanzadoBuscarQuisoDecirFormImpl()
     {
     }
@@ -6535,7 +6542,59 @@ public class MostrarQuisoDecirAvanzadoBuscarQuisoDecirFormImpl
     }
 
 
+    //18/11/2010    Fernando Garcia
+    //              Sort method
+    public void setSortingMethod(java.lang.String sortingMethod) {
+        this.sortingMethod = sortingMethod;
+    }
 
+    public java.lang.String getSortingMethod(){
+        return sortingMethod;
+    }
+
+
+    public Object[] getSortingMethodLabelList() {
+        return sortingMethodLabelList;
+    }
+
+    public void setSortingMethodLabelList(Object[] sortingMethodLabelList) {
+        this.sortingMethodLabelList = sortingMethodLabelList;
+    }
+
+    public Object[] getSortingMethodValueList() {
+        return sortingMethodValueList;
+    }
+
+    public void setSortingMethodValueList(Object[] sortingMethodValueList) {
+        this.sortingMethodValueList = sortingMethodValueList;
+    }
+
+
+ public Object[] getSortingMethodBackingList() {
+        java.lang.Object[] values = this.sortingMethodValueList;
+        java.lang.Object[] labels = this.sortingMethodLabelList;
+
+        if (values == null || values.length == 0)
+        {
+            return values;
+        }
+
+        if (labels == null || labels.length == 0)
+        {
+            labels = values;
+        }
+
+        final int length = java.lang.Math.min(labels.length, values.length);
+        java.lang.Object[] backingList = new java.lang.Object[length];
+
+        for (int i=0; i<length; i++)
+        {
+            backingList[i] = new LabelValue(labels[i], values[i]);
+        }
+
+        return backingList;
+
+    }
 
 
     /**

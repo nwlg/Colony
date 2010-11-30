@@ -106,6 +106,11 @@ public class MostrarResultadosImagenesPrepararRetornoDetalleImagenesFormImpl
     private java.lang.Object[] mesPublicacionValueList;
     private java.lang.Object[] mesPublicacionLabelList;
 
+
+    //24/11/2010    Fernando Garcia
+    //              Adding sorting method
+    private  java.lang.String sortingMethod;
+
     public MostrarResultadosImagenesPrepararRetornoDetalleImagenesFormImpl()
     {
     }
@@ -3412,6 +3417,20 @@ public class MostrarResultadosImagenesPrepararRetornoDetalleImagenesFormImpl
             }
         }
     }
+
+
+
+  //24/11/2010    Fernando Garcia
+    //              Adding sorting method
+
+    public String getSortingMethod() {
+        return sortingMethod;
+    }
+
+    public void setSortingMethod(String sortingMethod) {
+        this.sortingMethod = sortingMethod;
+    }
+
 
     /**
      * @see org.apache.struts.validator.ValidatorForm#reset(org.apache.struts.action.ActionMapping,javax.servlet.http.HttpServletRequest)

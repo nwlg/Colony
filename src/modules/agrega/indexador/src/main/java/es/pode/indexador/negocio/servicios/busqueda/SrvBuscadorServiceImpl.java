@@ -82,6 +82,7 @@ import es.pode.soporte.utiles.date.DateManager;
 import java.util.Iterator;
 import java.util.StringTokenizer;
 import org.apache.lucene.analysis.WhitespaceAnalyzer;
+import org.apache.lucene.search.SortField;
 
 /**
  * @see es.pode.indexador.negocio.servicios.busqueda.SrvBuscadorService
@@ -1721,8 +1722,10 @@ public class SrvBuscadorServiceImpl extends
 				}
 			}
 			if (logger.isDebugEnabled()) logger.debug("Consulta interna simple con query["+query.toString()+"]");
-			hits = searcher.search(andQuery, Sort.RELEVANCE);
-                        //hits = searcher.search(andQuery, new Sort("fechaPublicacion"));
+
+                        Sort sortMethod = chooseSorter(paramBusq);
+                        logger.debug("About to do the search. It will be sorted with :" + sortMethod.toString());
+                        hits = searcher.search(andQuery, sortMethod);
 
 
         Iterator it = hits.iterator();
@@ -1746,6 +1749,37 @@ public class SrvBuscadorServiceImpl extends
 		}
 		return hits;
 	}
+
+        private Sort chooseSorter(es.pode.indexador.negocio.servicios.busqueda.ParamAvanzadoVO paramBusq) throws Exception{
+
+            Sort result = null;
+            
+            if ( paramBusq.getSortingMethod()==null || paramBusq.getSortingMethod().trim().toUpperCase().equals("RELEVANCE")  ) {
+                result = Sort.RELEVANCE;
+            } else
+            {
+                StringTokenizer strTnk = new StringTokenizer(paramBusq.getSortingMethod(),",");
+                int numTokens = strTnk.countTokens();
+                if (numTokens==1) {
+                    result = new Sort(
+                            new SortField(props.getProperty(strTnk.nextToken() ),new AlphabeticalSortComparatorSource())
+                            );
+                } else
+                if (numTokens==2) {
+                    result =
+                    result = new Sort(
+                            new SortField(props.getProperty(strTnk.nextToken() ),new AlphabeticalSortComparatorSource(),
+                            strTnk.nextToken().equalsIgnoreCase("n")?false:true)
+                            );
+                } else
+                    throw new Exception("Sorting paramerters bad formed. Please review spring_buscador.properties");
+            }
+
+            return result;
+        }
+
+
+
 
 	private void addFiltersToQuery(java.util.HashMap filters, BooleanQuery q)
 			throws IOException {

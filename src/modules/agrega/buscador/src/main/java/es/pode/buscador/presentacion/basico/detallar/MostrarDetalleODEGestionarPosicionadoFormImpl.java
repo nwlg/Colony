@@ -197,6 +197,11 @@ public class MostrarDetalleODEGestionarPosicionadoFormImpl
     private java.lang.Object[] agregacionCorrectaValueList;
     private java.lang.Object[] agregacionCorrectaLabelList;
 
+    //24/11/2010    Fernando Garcia
+    //              Adding sorting method
+    private  java.lang.String sortingMethod;
+
+
     public MostrarDetalleODEGestionarPosicionadoFormImpl()
     {
     }
@@ -6423,6 +6428,22 @@ public class MostrarDetalleODEGestionarPosicionadoFormImpl
             }
         }
     }
+
+
+    //24/11/2010    Fernando Garcia
+    //              Adding sorting method
+
+    public String getSortingMethod() {
+        return sortingMethod;
+    }
+
+    public void setSortingMethod(String sortingMethod) {
+        this.sortingMethod = sortingMethod;
+    }
+
+
+
+
 
     /**
      * @see org.apache.struts.validator.ValidatorForm#reset(org.apache.struts.action.ActionMapping,javax.servlet.http.HttpServletRequest)

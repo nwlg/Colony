@@ -51,6 +51,7 @@ public class ParametrosBusquedaAvanzadaVO
         java.lang.String destinatarios,
         java.lang.String keyword,
         java.lang.String ambito,
+        java.lang.String sortingMethod,
 		java.util.HashMap searchFilters)
 
     {
@@ -82,6 +83,7 @@ public class ParametrosBusquedaAvanzadaVO
         this.destinatarios = destinatarios;
         this.keyword = keyword;
         this.ambito = ambito;
+        this.sortingMethod = sortingMethod;
 		this.searchFilters = searchFilters;
     }
 
@@ -120,6 +122,7 @@ public class ParametrosBusquedaAvanzadaVO
             this.destinatarios = otherBean.getDestinatarios();
             this.keyword = otherBean.getKeyword();
             this.ambito = otherBean.getAmbito();
+            this.sortingMethod = otherBean.getSortingMethod();
 			this.searchFilters = otherBean.getSearchFilters();
         }
     }
@@ -587,6 +590,18 @@ public class ParametrosBusquedaAvanzadaVO
     {
         this.ambito = ambito;
     }
+
+
+    private java.lang.String sortingMethod;
+
+    public String getSortingMethod() {
+        return sortingMethod;
+    }
+
+    public void setSortingMethod(String sortingMethod) {
+        this.sortingMethod = sortingMethod;
+    }
+
 
     /* Search filters as key-value pairs. */
     private java.util.HashMap searchFilters;
