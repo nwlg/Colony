@@ -183,17 +183,21 @@ public  class TrueZipDaoImpl implements ZipDao {
                 } else {
                     for (int i=0; i<children.length; i++) { // we have to copy all contents inside the folder ITEM-* to the zip's root
                         String filename = children[i];
-                        File f = new File(dir + File.separator + filename + File.separator);
+                        try { //if error, keep the original content
+                            File f = new File(dir + File.separator + filename + File.separator);
+                        
+                            String[] children_inside_dir = f.list();
+                            for (int j=0; j<children_inside_dir.length; j++){
+                                    File f_inside = new File(dir + File.separator + filename + File.separator + children_inside_dir[j]);
+                                    f_inside.archiveCopyTo(new File(dir + File.separator + filename + "_" + children_inside_dir[j]));
+                            }
 
-                        String[] children_inside_dir = f.list();
-                        for (int j=0; j<children_inside_dir.length; j++){
-                        	File f_inside = new File(dir + File.separator + filename + File.separator + children_inside_dir[j]);
-                        	f_inside.archiveCopyTo(new File(dir + File.separator + filename + "_" + children_inside_dir[j]));
+                            //f.archiveCopyAllTo(dir,ArchiveDetector.NULL,ArchiveDetector.NULL); //old Fernando's version
+                            //then delete source (remember, it's a move action)
+                            f.deleteAll();
+                        } catch (Exception e) {
+                            logger.error(e);
                         }
-
-                        //f.archiveCopyAllTo(dir,ArchiveDetector.NULL,ArchiveDetector.NULL); //old Fernando's version
-                        //then delete source (remember, it's a move action)
-                        f.deleteAll();
 
                     }
                 }
