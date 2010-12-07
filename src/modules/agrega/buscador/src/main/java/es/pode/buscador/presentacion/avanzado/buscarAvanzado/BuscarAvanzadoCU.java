@@ -34,6 +34,9 @@ public final class BuscarAvanzadoCU extends org.apache.struts.action.Action
                 fieldreverse = props.getProperty("sortingMethod.field"+i+".reverse");
             }
 
+            sortingMethodLabelList.add(props.getProperty("sortingMethod.format.label","sortingMethod.format.label"));
+            sortingMethodValueList.add("FORMAT");
+            
     }
 
     public org.apache.struts.action.ActionForward execute(org.apache.struts.action.ActionMapping mapping, org.apache.struts.action.ActionForm form, javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws java.lang.Exception

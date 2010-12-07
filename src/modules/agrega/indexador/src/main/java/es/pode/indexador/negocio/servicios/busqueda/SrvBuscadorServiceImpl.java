@@ -1750,12 +1750,19 @@ public class SrvBuscadorServiceImpl extends
 		return hits;
 	}
 
+
+        //TODO:comment it
         private Sort chooseSorter(es.pode.indexador.negocio.servicios.busqueda.ParamAvanzadoVO paramBusq) throws Exception{
 
             Sort result = null;
             
             if ( paramBusq.getSortingMethod()==null || paramBusq.getSortingMethod().trim().toUpperCase().equals("RELEVANCE")  ) {
                 result = Sort.RELEVANCE;
+            } else
+            if ( paramBusq.getSortingMethod()==null || paramBusq.getSortingMethod().trim().toUpperCase().equals("FORMAT")  ) {
+                result = new Sort(
+                            new SortField("formato",new MimeTypeSortComparatorSource())
+                            );
             } else
             {
                 StringTokenizer strTnk = new StringTokenizer(paramBusq.getSortingMethod(),",");
