@@ -1,3 +1,75 @@
+09/12/2010
+	Fernando Garcia (bitvision@gmail.com)
+	
+   	www icon was changed
+
+   	Added some debug information in the reindex task
+	for future analisys
+
+
+	More file mime type were added (Open Office / Open Document support)
+		application/vnd.oasis.opendocument.presentation
+		application/vnd.ms-access
+		application/vnd.oasis.opendocument.database
+		application/vnd.oasis.opendocument.spreadsheet
+		application/vnd.oasis.opendocument.graphics
+		application/vnd.oasis.opendocument.text
+	
+		vocabLOMES_en.xml contains the new file mime types
+		CatBasicPlusControllerImpl.java the friendly labels
+		spring_visualizadorcontenidos.properties
+			this file contains the group definitions for format filter
+			two new groups
+				database and spreadsheet
+			new formats added to existent groups
+
+
+	Fixed a bug with some packages in the repository with a complex structure for the content download.
+	Now we prefer to keep the original package contents if the the structure of an item is weird and complex
+
+
+
+	Sorting by format customized with their own custom lucene sorter
+		now in spring_buscador.properties we only need to specify the label for the format sorting field
+		added en BuscarAvanzadoCU.java
+		MimeTypeSortComparatorSource is the class that has the sorting logic. Is getting from indexador.properties a list of priorities and labels
+	to look for at lucene index format field
+
+
+
+	Sorting filter
+		BuscarAvanzadoCU.loadSortingMethodCombo is used to load the different ways of sorting at the combobox that
+		is shown in results page.
+		spring_buscador.properties
+			contains the definitions of every sorting method.
+				.field name
+				.label id
+				.reverse sorting
+		buscador/.../application-resources_en.properties
+			contains the label for every label id
+	
+		sortingMethod is added in some forms implementations
+	
+		SrvBuscarService.wsdl
+			type ParametrosBusquedaAvanzadaVO
+			added sortingMethod
+	
+		SrvBuscadorService.wsdl
+			type ParamAvanzadoVO
+			added sortingMethod
+	
+		AlphabeticalSortComparatorSource.java
+			Custom sorting criteria. Alfabetical and empty o white space entries at the end(A B ... Z empty)
+	
+	noticias.jsp
+		Fixed a bug. The format filter now is removed in the right box search if it was previously selected
+	
+	DocumentoIndexacion
+			We have removed the norm calculus at lucene index because it was messing up our searching criterias
+
+
+
+
 16/11/2010
 	Fernando Garcia	(bitivision@gmail.com)
 
