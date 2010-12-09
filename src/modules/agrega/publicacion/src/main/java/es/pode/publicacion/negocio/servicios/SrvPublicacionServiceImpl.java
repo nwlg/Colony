@@ -1943,17 +1943,17 @@ public class SrvPublicacionServiceImpl extends es.pode.publicacion.negocio.servi
 																				// para
 																				// este
 																				// idioma
-			{
+			{logger.debug("+++++++++++++++ arrayOdePublicados.length=" + arrayOdePublicados.length);for (int h=0;h<arrayOdePublicados.length;h++){logger.debug("++++++++++++ "+h+"->"+arrayOdePublicados[h].getIdODE()+" <> " + arrayOdePublicados[h].getTitulo());}
 				arrayODEsIndice = new es.pode.indexador.negocio.servicios.indexado.IdODEVO[arrayOdePublicados.length];
 				// Cojemos todas las localizaciones para el array de
 				// odesPublicados que nos pasan
 				String[] arrayIds = new String[arrayOdePublicados.length];
 				for (int i = 0; i < arrayOdePublicados.length; i++) {
 					arrayIds[i] = arrayOdePublicados[i].getIdODE();
-				}
+				} logger.debug("------------------- arrayIds.length=" + arrayIds.length);for (int h=0;h<arrayIds.length;h++){logger.debug("--------- "+h+"->"+arrayIds[h]);}
 				// Obtengo el array de localizadores
 				LocalizadorVO[] arrayLocalizaciones = this.getSrvLocalizadorService()
-						.buscarLocalizadoresPorId(arrayIds);
+						.buscarLocalizadoresPorId(arrayIds); logger.debug("@@@@@@@@@@@@@@@@@@@@@@@@@@ arrayLocalizaciones.length=" + arrayLocalizaciones.length); for (int h=0;h<arrayLocalizaciones.length;h++){ logger.debug("@@@@@@@@@@@@@@@@@"+h+"->"+arrayLocalizaciones[h].getIdentificador() +" <MEC> " + arrayLocalizaciones[h].getMec() ); }
 				// Para cada localizador Parseo el objeto
 				ArrayList listIndexables = new ArrayList(10);
 				for (int j = 0; j < arrayLocalizaciones.length; j++) {
