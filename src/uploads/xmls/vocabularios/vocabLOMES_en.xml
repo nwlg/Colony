@@ -770,6 +770,50 @@
           </caption>
         </term>
 
+
+        <term>
+          <termIdentifier>4.1.35</termIdentifier>
+          <caption>
+            <langstring>application/vnd.oasis.opendocument.presentation</langstring>
+          </caption>
+        </term>
+
+        <term>
+          <termIdentifier>4.1.36</termIdentifier>
+          <caption>
+            <langstring>application/vnd.ms-access</langstring>
+          </caption>
+        </term>
+
+        <term>
+          <termIdentifier>4.1.37</termIdentifier>
+          <caption>
+            <langstring>application/vnd.oasis.opendocument.database</langstring>
+          </caption>
+        </term>
+
+        <term>
+          <termIdentifier>4.1.38</termIdentifier>
+          <caption>
+            <langstring>application/vnd.oasis.opendocument.spreadsheet</langstring>
+          </caption>
+        </term>
+
+        <term>
+          <termIdentifier>4.1.39</termIdentifier>
+          <caption>
+            <langstring>application/vnd.oasis.opendocument.graphics</langstring>
+          </caption>
+        </term>
+
+        <term>
+          <termIdentifier>4.1.40</termIdentifier>
+          <caption>
+            <langstring>application/vnd.oasis.opendocument.text</langstring>
+          </caption>
+        </term>
+
+
 	</term>
 	<term>
 		<termIdentifier>4.4.1.1</termIdentifier>

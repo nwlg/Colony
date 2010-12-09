@@ -122,25 +122,31 @@ public class CatBasicPlusControllerImpl extends CatBasicPlusController {
 	private static Map<String, String> initMIMEToFormatLabelMap() {
 		Map fMap = new HashMap<String, String>();
 
-		fMap.put("application/x-www-form-urlencoded"		 , "Application/X-www-form-urlencoded");
+		fMap.put("application/vnd.oasis.opendocument.presentation"	 , "Slideshow/Open Office presentation");
+		fMap.put("application/vnd.ms-access"                             , "Database/Microsoft Access");
+		fMap.put("application/vnd.oasis.opendocument.database"		 , "Database/Open Office database");
+		fMap.put("application/vnd.oasis.opendocument.spreadsheet"	 , "Spreadsheet/Open Office Spreadsheet");
+		fMap.put("application/vnd.oasis.opendocument.graphics"		 , "Image/Open Office graphics");
+		fMap.put("application/vnd.oasis.opendocument.text"		 , "Text/Open Office text document");
+                fMap.put("application/x-www-form-urlencoded"		 , "Application/X-www-form-urlencoded");
                 fMap.put("application/exe"				 , "Application/exe");
 		fMap.put("application/java"				 , "Application/Java");
 		fMap.put("application/pdf"				 , "Text/PDF");
-		fMap.put("application/postscript"		 , "Image/PS");
+		fMap.put("application/postscript"                        , "Image/PS");
 		fMap.put("application/rtf"				 , "Text/RTF");
 		fMap.put("application/tar"				 , "Application/TAR");
-		fMap.put("application/vnd.ms-excel"		 , "Spreadsheet/Excel");
-		fMap.put("application/vnd.ms-powerpoint" , "Slideshow/Powerpoint");
+		fMap.put("application/vnd.ms-excel"                      , "Spreadsheet/Excel");
+		fMap.put("application/vnd.ms-powerpoint"                 , "Slideshow/Powerpoint");
 		fMap.put("application/word"				 , "Text/Word");
-		fMap.put("application/x-director"		 , "Multimedia/Director");
-		fMap.put("application/x-shockwave-flash" , "Multimedia/Flash");
+		fMap.put("application/x-director"                        , "Multimedia/Director");
+		fMap.put("application/x-shockwave-flash"                 , "Multimedia/Flash");
 		fMap.put("application/zip"				 , "Application/ZIP");
 		fMap.put("audio/aiff"					 , "Audio/AIFF");
 		fMap.put("audio/basic"					 , "Audio/Sun");
 		fMap.put("audio/midi"					 , "Audio/Midi");
 		fMap.put("audio/mp3"					 , "Audio/MP3");
 		fMap.put("audio/ogg"					 , "Audio/ogg");
-		fMap.put("audio/vnd.rn-realaudio"		 , "Audio/Real");
+		fMap.put("audio/vnd.rn-realaudio"                        , "Audio/Real");
 		fMap.put("audio/wav"					 , "Audio/WAV");
 		fMap.put("audio/x-ms-wma"				 , "Audio/WMA");
 		fMap.put("image/bmp"					 , "Image/BMP");
@@ -150,7 +156,7 @@ public class CatBasicPlusControllerImpl extends CatBasicPlusController {
 		fMap.put("image/tiff"					 , "Image/TIFF");
 		fMap.put("text/html"					 , "Text/HTML");
 		fMap.put("text/plain"					 , "Text/Plain text");
-		fMap.put("text/xml"						 , "Text/XML");
+		fMap.put("text/xml"					 , "Text/XML");
 		fMap.put("video/avi"					 , "Video/AVI");
 		fMap.put("video/mp4v-es"				 , "Video/MP4");
 		fMap.put("video/mpeg"					 , "Video/MPEG");
