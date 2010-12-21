@@ -1,3 +1,9 @@
+21/12/2010
+	Fernando Garcia (bitvision@gmail.com)
+	
+	Project rename to Colony 1.0.0
+
+
 09/12/2010
 	Fernando Garcia (bitvision@gmail.com)
 	
